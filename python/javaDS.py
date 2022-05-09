@@ -1,13 +1,15 @@
+from datetime import date
+
 from pandas import DataFrame
 
 from common.commons import *
 from commitCollector import *
 from settings import *
 
-from otherDatasets import markBugFixingPatches
+from otherDatasets import markBugFixingPatches, prepareFiles
 
 
-DATASET_PATH = REPO_PATH
+DATASET_PATH = Path(REPO_PATH)
 DATASET = os.environ["dataset"]
 PROJECT_LIST = os.environ["PROJECT_LIST"]
 
@@ -28,15 +30,20 @@ def load_commits(repo: str, git_url: str, branch: str) -> DataFrame:
         return pd.read_pickle(commits_pickle)
 
     # Clone new commits
-    shellCallTemplate('git config --global http.postBuffer 157286400')
-    shellCallTemplate(f'git -C {DATASET_PATH} clone {git_url}')
-    logging.info(f'Git repo cloned: {repo}')
+    if not (DATASET_PATH / repo).exists():
+        shellCallTemplate('git config --global http.postBuffer 157286400')
+        shellCallTemplate(f'git -C {DATASET_PATH} clone {git_url}')
+        logging.info(f'Git repo cloned: {repo}')
 
     commits = getCommitFromRepo(join(REPO_PATH, repo), join(COMMIT_DFS, repo), branch)
     commits = markBugFixingPatches(commits, repo)
     commits.to_pickle(commits_pickle)
 
     return commits
+
+
+def filter_commits(commits: DataFrame, end_date: date) -> DataFrame:
+    return commits[commits.commitDate < end_date]
 
 
 def createDS(project_list: str = PROJECT_LIST):
@@ -48,8 +55,7 @@ def createDS(project_list: str = PROJECT_LIST):
     pjList: list[str] = project_list.split(',')
 
     # Ensure directories exist
-    if not os.path.exists(DATASET_PATH):
-        os.mkdir(DATASET_PATH)
+    DATASET_PATH.mkdir(exist_ok=True)
     if not os.path.exists(COMMIT_DFS):
         os.mkdir(COMMIT_DFS)
 
@@ -65,9 +71,10 @@ def createDS(project_list: str = PROJECT_LIST):
         logging.info(f'Processing {repo}')
         commits = load_commits(repo, src, branch)
 
-        commits = commits[commits.files.apply(lambda x: np.any([i == 'M' for i in x.values()]))]
-        # keep only commits that are changing c files (.c)
-        commits = commits[commits.files.apply(lambda x: np.all([i.endswith('.java') for i in x.keys()]))]
+        # keep only commits that has moves
+        commits = commits[[any(c == 'M' for c in dic.values()) for dic in commits.files]]
+        # keep only commits that are changing java files (.java)
+        commits = commits[[all(k.endswith('.java') for k in dic) for dic in commits.files]]
         # not a revert commit
         # commits = commits[~commits.log.apply(lambda x: x.startswith('Revert'))]
         # commits = commits[commits.files.apply(lambda x: len(x) == 1)]
@@ -81,7 +88,6 @@ def createDS(project_list: str = PROJECT_LIST):
         commits = commits[commits.commit.isin(fixes)]
         print(len(commits))
         # for s in a.commit.values.tolist():
-        from otherDatasets import prepareFiles
         parallelRun(prepareFiles, commits[['commit', 'files']].values.tolist(), repo)
 
     # # if job == 'clone':

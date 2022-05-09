@@ -1,6 +1,7 @@
 import logging
 import sys
 import gzip
+import traceback
 from typing import Union
 
 import numpy as np
@@ -86,7 +87,7 @@ def setEnv(args):
     #         cfg = yaml.load(ymlfile)
 
     with open(args.prop, 'r') as ymlfile:
-        cfg = yaml.load(ymlfile)
+        cfg = yaml.safe_load(ymlfile)
     # for section in cfg:
     #     print(section)
     # print(cfg['mysql'])
@@ -202,11 +203,11 @@ def shellCallTemplate(cmd, enc='utf-8'):
                 m = re.search('unknown revision or path not in the working tree', errors)
                 if not m:
                     raise CalledProcessError(errors, '-1')
-            output
     except CalledProcessError as e:
-        logging.error(errors)
+        print(f'Error while executing {cmd}\n> {errors}')
+        traceback.print_exc()
     except Exception as e:
-        logging.error(e)
+        traceback.print_exc()
     return output
 
 
@@ -423,7 +424,7 @@ def parallelRunNo(coreFun, elements, *args):
                     raise
 
         except Exception as e:
-            logging.error(e)
+            traceback.print_exc()
             executor.shutdown()
             raise
 
@@ -448,7 +449,7 @@ def parallelRun(coreFun, elements, *args, max_workers=os.cpu_count()):
                     logging.error('%r generated an exception: %s' % (url, exc))
                     raise
         except Exception as e:
-            logging.error(e)
+            traceback.print_exc()
             executor.shutdown()
             raise
 
