@@ -18,9 +18,9 @@ if __name__ == '__main__':
     print(job)
 
     if job == 'dataset4j':
-        from javaDS import createDS
+        from dataset4j import create_dataset
 
-        createDS()
+        create_dataset()
 
     elif job == 'dataset4c':
         from otherDatasets import core

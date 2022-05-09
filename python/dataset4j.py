@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from datetime import date
 
 from pandas import DataFrame
@@ -46,13 +48,14 @@ def filter_commits(commits: DataFrame, end_date: date) -> DataFrame:
     return commits[commits.commitDate < end_date]
 
 
-def createDS(project_list: str = PROJECT_LIST):
+def create_dataset(project_list: str = PROJECT_LIST):
     """
+    Create dataset
 
     :param project_list: Comma-separated list of git project names (projects must exist in dataset.csv)
     :return:
     """
-    pjList: list[str] = project_list.split(',')
+    pj_list: list[str] = project_list.split(',')
 
     # Ensure directories exist
     DATASET_PATH.mkdir(exist_ok=True)
@@ -60,16 +63,17 @@ def createDS(project_list: str = PROJECT_LIST):
         os.mkdir(COMMIT_DFS)
 
     # Find project repo urls in dataset.csv
-    subjects: DataFrame = pd.read_csv(join(ROOT_DIR, 'data', 'dataset.csv'))
-    if pjList == ['ALL']:
-        tuples = subjects[['Repo', 'GitRepo', 'Branch']].values.tolist()
+    dataset: DataFrame = pd.read_csv(join(ROOT_DIR, 'data', 'dataset.csv'))
+    if pj_list == ['ALL']:
+        repos = dataset[['Repo', 'GitRepo', 'Branch']].values.tolist()
     else:
-        tuples = subjects[subjects.Repo.isin(pjList)][['Repo', 'GitRepo', 'Branch']].values.tolist()
+        repos = dataset[dataset.Repo.isin(pj_list)][['Repo', 'GitRepo', 'Branch']].values.tolist()
 
     # Loop through repos
-    for repo, src, branch in tuples:
-        logging.info(f'Processing {repo}')
+    for repo, src, branch in repos:
+        print(f'Processing {repo}')
         commits = load_commits(repo, src, branch)
+        print(f'> Obtained {len(commits)} commits.')
 
         # keep only commits that has moves
         commits = commits[[any(c == 'M' for c in dic.values()) for dic in commits.files]]
@@ -86,6 +90,6 @@ def createDS(project_list: str = PROJECT_LIST):
         # bugs = set(fixes).union(links).union(coccis)
         # bugs = set(fixes)#.union(coccis)
         commits = commits[commits.commit.isin(fixes)]
-        print(len(commits))
-        # for s in a.commit.values.tolist():
+        print(f'> Has {len(commits)} comments after filtering')
+
         parallelRun(prepareFiles, commits[['commit', 'files']].values.tolist(), repo)
