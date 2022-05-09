@@ -1,4 +1,7 @@
+from __future__ import annotations
+
 import logging
+import shlex
 import sys
 import gzip
 import traceback
@@ -24,6 +27,7 @@ import concurrent.futures
 
 import time
 import math
+import yaml
 from collections import Counter
 
 import datetime
@@ -71,20 +75,8 @@ def setLogg():
 
 
 def setEnv(args):
-    # env = args.env
-
-    # logging.info('Environment: %s',env)
-
     os.environ["ROOT_DIR"] = args.root
     sys.path.append(args.root)
-
-    import yaml
-    # if os.uname().nodename != '':
-    #     with open(join(os.environ["ROOT_DIR"], os.uname().nodename + ".config.yml"), 'r') as ymlfile:
-    #         cfg = yaml.load(ymlfile)
-    # else:
-    #     with open(join(os.environ["ROOT_DIR"], "config.yml"), 'r') as ymlfile:
-    #         cfg = yaml.load(ymlfile)
 
     with open(args.prop, 'r') as ymlfile:
         cfg = yaml.safe_load(ymlfile)
@@ -93,70 +85,43 @@ def setEnv(args):
     # print(cfg['mysql'])
     # print(cfg['other'])
 
-    # os.environ["JDK7"] = cfg['java']['7home']
-    os.environ["JDK8"] = cfg['java']['8home']
-    os.environ["spinfer"] = cfg['spinfer']['home']
-    os.environ["coccinelle"] = cfg['coccinelle']['home']
-    os.environ["dataset"] = cfg['dataset']['inputPath']
-    os.environ["REPO_PATH"] = cfg['dataset']['repo']
-    os.environ["DATA_PATH"] = cfg['fixminer']['datapath']
-    os.environ["PROJECT_TYPE"] = cfg['fixminer']['projectType']
-    os.environ["PROJECT_LIST"] = cfg['fixminer']['projectList']
-    os.environ["REDIS_PORT"] = str(cfg['fixminer']['portDumps'])
+    env: dict[str, str] = {
+        "ROOT_DIR": args.root,
+        "JDK8": cfg['java']['8home'],
+        "spinfer": cfg['spinfer']['home'],
+        "coccinelle": cfg['coccinelle']['home'],
+        "dataset": cfg['dataset']['inputPath'],
+        "REPO_PATH": cfg['dataset']['repo'],
+        "DATA_PATH": cfg['fixminer']['datapath'],
+        "PROJECT_TYPE": cfg['fixminer']['projectType'],
+        "PROJECT_LIST": cfg['fixminer']['projectList'],
+        "REDIS_PORT": str(cfg['fixminer']['portDumps'])
+    }
 
-    # import yaml
-    #
-    # with open(join(os.environ["ROOT_DIR"],"config.yml"), 'r') as ymlfile:
-    #     cfg = yaml.load(ymlfile)
-    #
-    # # for section in cfg:
-    # #     print(section)
-    # # print(cfg['mysql'])
-    # # print(cfg['other'])
-    #
-    # os.environ["JDK7"] = cfg['java']['7home']
-    # os.environ["JDK8"] = cfg['java']['8home']
-    # os.environ["D4JHOME"] = cfg['defects4j']['home']
+    env["CODE_PATH"] = join(env["ROOT_DIR"], 'code/')
+    env["COMMIT_DFS"] = join(env["DATA_PATH"], 'commitsDF/')
+    env["SIMI_DIR"] = join(env["DATA_PATH"], 'simi/')
+    env["DTM_PATH"] = join(env["DATA_PATH"], 'dtm/')
+    env["SIMI_SINGLE"] = join(env["DATA_PATH"], 'simiSingle/')
+    env["FEATURE_DIR"] = join(env["DATA_PATH"], 'features/')
 
-    os.environ["CODE_PATH"] = join(os.environ["ROOT_DIR"], 'code/')
-    # os.environ["DATA_PATH"] = join(os.environ["ROOT_DIR"],'data/')
-    # os.environ["REPO_PATH"] = join(os.environ["DATA_PATH"], 'gitrepo/')
-    os.environ["COMMIT_DFS"] = join(os.environ["DATA_PATH"], 'commitsDF/')
-    os.environ["SIMI_DIR"] = join(os.environ["DATA_PATH"], 'simi/')
-    os.environ["DTM_PATH"] = join(os.environ["DATA_PATH"], 'dtm/')
-    os.environ["SIMI_SINGLE"] = join(os.environ["DATA_PATH"], 'simiSingle/')
-    os.environ["FEATURE_DIR"] = join(os.environ["DATA_PATH"], 'features/')
+    env["BUG_POINT"] = join(env["DATA_PATH"], 'bugPoints/')
+    env["DEFECTS4J"] = join(env["DATA_PATH"], 'defects4jdata/')
 
-    os.environ["BUG_POINT"] = join(os.environ["DATA_PATH"], 'bugPoints/')
-    os.environ["DEFECTS4J"] = join(os.environ["DATA_PATH"], 'defects4jdata/')
+    env["BUG_REPORT"] = join(env["DATA_PATH"], 'bugReports/')
+    env["BUG_REPORT_FEATURES"] = join(env["DATA_PATH"], 'bugReportFeatures/')
 
-    os.environ["BUG_REPORT"] = join(os.environ["DATA_PATH"], 'bugReports/')
-    os.environ["BUG_REPORT_FEATURES"] = join(os.environ["DATA_PATH"], 'bugReportFeatures/')
-    # os.environ["PARSED_DIR"] = join(os.environ["CODE_PATH"], 'parsedFilesSingle/')
-    # os.environ["PARSED_M_DIR"] = join(os.environ["CODE_PATH"], 'parsedFilesMulti/')
+    env["PARSED"] = join(env["DATA_PATH"], 'parsedPj/')
+    env["PARSED_DIR"] = join(env["DATA_PATH"], 'parsedFilesSingle/')
+    env["COMMIT_FOLDER"] = join(env["DATA_PATH"], 'commits/')
+    env["CLASSIFIER_DIR"] = join(env["DATA_PATH"], 'classifiers/')
+    env["PREDICTION_DIR"] = join(env["DATA_PATH"], 'predictions/')
+    env["DATASET_DIR"] = join(env["DATA_PATH"], 'datasets/')
+    env["REMOTE_PATH"] = '/Volumes/Samsung_T5/data'
 
-    os.environ["PARSED"] = join(os.environ["DATA_PATH"], 'parsedPj/')
-    os.environ["PARSED_DIR"] = join(os.environ["DATA_PATH"], 'parsedFilesSingle/')
-    os.environ["COMMIT_FOLDER"] = join(os.environ["DATA_PATH"], 'commits/')
-    os.environ["CLASSIFIER_DIR"] = join(os.environ["DATA_PATH"], 'classifiers/')
-    os.environ["PREDICTION_DIR"] = join(os.environ["DATA_PATH"], 'predictions/')
-    os.environ["DATASET_DIR"] = join(os.environ["DATA_PATH"], 'datasets/')
-    os.environ["REMOTE_PATH"] = '/Volumes/Samsung_T5/data'
+    os.environ.update(env)
 
-    logging.info('ROOT_DIR : %s', os.environ["ROOT_DIR"])
-    logging.info('REPO_PATH : %s', os.environ["REPO_PATH"])
-    logging.info('CODE_PATH : %s', os.environ["CODE_PATH"])
-    logging.info('COMMIT_DFS : %s', os.environ["COMMIT_DFS"])
-    # logging.info('SIMI_DIR : %s', os.environ["SIMI_DIR"])
-    logging.info('BUG_POINT : %s', os.environ["BUG_POINT"])
-    # logging.info('PARSED_DIR : %s', os.environ["PARSED_DIR"])
-    logging.info('COMMIT_FOLDER : %s', os.environ["COMMIT_FOLDER"])
-    # logging.info('DTM_PATH : %s', os.environ["DTM_PATH"])
-    # logging.info('SIMI_SINGLE : %s', os.environ["SIMI_SINGLE"])
-    logging.info('FEATURE_DIR : %s', os.environ["FEATURE_DIR"])
-    logging.info('CLASSIFIER_DIR : %s', os.environ["CLASSIFIER_DIR"])
-    logging.info('PREDICTION_DIR : %s', os.environ["PREDICTION_DIR"])
-    logging.info('DATASET_DIR : %s', os.environ["DATASET_DIR"])
+    return cfg, env
 
 
 def shellCallTemplate4jar(cmd, enc='utf-8'):
@@ -178,21 +143,29 @@ def shellCallTemplate4jar(cmd, enc='utf-8'):
 
 
 def shellCallTemplate(cmd, enc='utf-8'):
+    out, err = "", ""
     try:
         logging.info(cmd)
         with Popen(cmd, stdout=PIPE, stderr=PIPE, shell=True, encoding=enc) as p:
-            output, errors = p.communicate()
+            out, err = p.communicate()
             # print(output)
-            if errors:
-                m = re.search('unknown revision or path not in the working tree', errors)
+            if err:
+                m = re.search('unknown revision or path not in the working tree', err)
                 if not m:
-                    raise CalledProcessError(errors, '-1')
+                    raise CalledProcessError(err, '-1')
     except CalledProcessError as e:
-        print(f'Error while executing {cmd}\n> {errors}')
+        print(f'Error while executing {cmd}')
+        if out:
+            print(f'STDOUT:\n> {out}')
+        if err:
+            print(f'STDERR:\n> {err}')
         traceback.print_exc()
+        exit(e.returncode)
+
     except Exception as e:
         traceback.print_exc()
-    return output
+
+    return out
 
 
 def getChildMem(pid, children):
