@@ -44,21 +44,18 @@ def load_commits(repo: str, git_url: str, branch: str) -> DataFrame:
     return commits
 
 
-def filter_commits(commits: DataFrame, end_date: date) -> DataFrame:
-    return commits[commits.commitDate < end_date]
-
-
-def create_dataset(project_list: str = PROJECT_LIST):
+def create_dataset(cfg: dict, project_list: str = PROJECT_LIST):
     """
     Create dataset
 
+    :param cfg: config.yml dictionary
     :param project_list: Comma-separated list of git project names (projects must exist in dataset.csv)
     :return:
     """
     pj_list: list[str] = project_list.split(',')
 
     # Ensure directories exist
-    DATASET_PATH.mkdir(exist_ok=True)
+    DATASET_PATH.mkdir(exist_ok=True, parents=True)
     if not os.path.exists(COMMIT_DFS):
         os.mkdir(COMMIT_DFS)
 
@@ -85,10 +82,23 @@ def create_dataset(project_list: str = PROJECT_LIST):
         # commits['cocci'] = commits.log.apply(lambda x: True if re.search('cocci|coccinelle', x) else False)
         # coccis = commits[commits.cocci].commit.values.tolist()
         fixes = commits[commits.fixes.str.len() != 0].commit.values.tolist()
-        # links = commits[commits.links.str.len()!=0].commit.values.tolist()
 
-        # bugs = set(fixes).union(links).union(coccis)
-        # bugs = set(fixes)#.union(coccis)
+        # Filter end dates if configured
+        if 'limitCommitsBeforeDays' in cfg['fixminer']:
+            value = eval(str(cfg['fixminer']['limitCommitsBeforeDays']))
+            latest_commit = commits.commitDate.iloc[0]
+
+            if isinstance(value, datetime.timedelta):
+                end_date = latest_commit - value
+            elif isinstance(value, float) or isinstance(value, int):
+                end_date = latest_commit - datetime.timedelta(days=value)
+            else:
+                raise NotImplementedError(f'Unknown limitCommitsBeforeDays type: {type(value)}. '
+                                          f'Only timedelta and int/float (days) are supported.')
+
+            print(f'> Has {len(commits)} comments before filtering for date < {end_date}')
+            commits = commits[commits.commitDate < end_date]
+
         commits = commits[commits.commit.isin(fixes)]
         print(f'> Has {len(commits)} comments after filtering')
 

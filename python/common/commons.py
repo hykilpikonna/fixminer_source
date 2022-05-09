@@ -148,8 +148,9 @@ def shellCallTemplate(cmd, enc='utf-8'):
         logging.info(cmd)
         with Popen(cmd, stdout=PIPE, stderr=PIPE, shell=True, encoding=enc) as p:
             out, err = p.communicate()
+            ret = p.returncode
             # print(output)
-            if err:
+            if ret != 0 and err:
                 m = re.search('unknown revision or path not in the working tree', err)
                 if not m:
                     raise CalledProcessError(err, '-1')

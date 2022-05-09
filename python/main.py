@@ -35,7 +35,7 @@ def job_dataset4c():
 def job_richedit():
     dbDir = join(DATA_PATH, 'redis')
     stopDB(dbDir, REDIS_PORT)
-    cmd = f"JAVA_HOME='{jdk8}' java -jar {JAR_PATH} {args.prop} RICHEDITSCRIPT "
+    cmd = f"JAVA_HOME='{jdk8}' java -jar '{JAR_PATH}' {args.prop} RICHEDITSCRIPT "
     output = shellCallTemplate(cmd)
     logging.info(output)
 
@@ -53,7 +53,7 @@ def job_compare():
     # -Dexec.mainClass='edu.lu.uni.serval.richedit.akka.compare.CompareTrees'
     # -Dexec.args='"+ " shape " + join(DATA_PATH,"redis") +" ALLdumps-gumInput.rdb " +
     # "clusterl0-gumInputALL.rdb /data/richedit-core/python/data/richEditScript'"
-    cmd = f"JAVA_HOME='{jdk8}' java -jar {JAR_PATH} {args.prop} COMPARE "
+    cmd = f"JAVA_HOME='{jdk8}' java -jar '{JAR_PATH}' {args.prop} COMPARE "
     output = shellCallTemplate4jar(cmd)
     logging.info(output)
 
