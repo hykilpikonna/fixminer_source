@@ -1,46 +1,70 @@
+from pandas import DataFrame
+
 from common.commons import *
 from commitCollector import *
-from python.settings import *
+from settings import *
 
 from otherDatasets import markBugFixingPatches
+
 
 DATASET_PATH = REPO_PATH
 DATASET = os.environ["dataset"]
 PROJECT_LIST = os.environ["PROJECT_LIST"]
 
 
-def createDS():
-    pjList = PROJECT_LIST.split(',')
+def load_commits(repo: str, git_url: str, branch: str) -> DataFrame:
+    """
+    Load commits of a repo
+
+    :param repo: Repo name (e.g. "fuse")
+    :param git_url: Git clone url (e.g. "https://github.com/jboss-fuse/fuse.git")
+    :param branch: Git branch (e.g. "6.3.0.redhat")
+    :return: Commits DataFrame
+    """
+    commits_pickle = Path(join(COMMIT_DFS, f'{repo}-fix.pickle.gz'))
+
+    # Load existing commits
+    if commits_pickle.is_file():
+        return pd.read_pickle(commits_pickle)
+
+    # Clone new commits
+    shellCallTemplate('git config --global http.postBuffer 157286400')
+    shellCallTemplate(f'git -C {DATASET_PATH} clone {git_url}')
+    logging.info(f'Git repo cloned: {repo}')
+
+    commits = getCommitFromRepo(join(REPO_PATH, repo), join(COMMIT_DFS, repo), branch)
+    commits = markBugFixingPatches(commits, repo)
+    commits.to_pickle(commits_pickle)
+
+    return commits
+
+
+def createDS(project_list: str = PROJECT_LIST):
+    """
+
+    :param project_list: Comma-separated list of git project names (projects must exist in dataset.csv)
+    :return:
+    """
+    pjList: list[str] = project_list.split(',')
+
+    # Ensure directories exist
     if not os.path.exists(DATASET_PATH):
         os.mkdir(DATASET_PATH)
     if not os.path.exists(COMMIT_DFS):
         os.mkdir(COMMIT_DFS)
 
-    subjects = pd.read_csv(join(ROOT_DIR, 'data', 'dataset.csv'))
-
+    # Find project repo urls in dataset.csv
+    subjects: DataFrame = pd.read_csv(join(ROOT_DIR, 'data', 'dataset.csv'))
     if pjList == ['ALL']:
         tuples = subjects[['Repo', 'GitRepo', 'Branch']].values.tolist()
     else:
-        # repos = subjects.query("Subject == '{0}'".format(subject)).Repo.tolist()
         tuples = subjects[subjects.Repo.isin(pjList)][['Repo', 'GitRepo', 'Branch']].values.tolist()
 
-    for t in tuples:
-        repo, src, branch = t
-        logging.info(repo)
-        if isfile(join(COMMIT_DFS, repo + 'Fix.pickle')):
-            commits = load_zipped_pickle(join(COMMIT_DFS, repo + 'Fix.pickle'))
-        else:
-            cmd = 'git config --global http.postBuffer 157286400'
-            shellCallTemplate(cmd)
-            cmd = 'git -C ' + DATASET_PATH + ' clone ' + src
-            shellCallTemplate(cmd)
-            logging.info(repo)
-            getCommitFromRepo(join(REPO_PATH, repo), join(COMMIT_DFS, repo), branch)
-            rDF = makeDF(join(COMMIT_DFS, repo + '.commits'))
-            save_zipped_pickle(rDF, join(COMMIT_DFS, repo + ".pickle"))
-            # return rDF
-            commits = rDF
-            commits = markBugFixingPatches(commits, repo)
+    # Loop through repos
+    for repo, src, branch in tuples:
+        logging.info(f'Processing {repo}')
+        commits = load_commits(repo, src, branch)
+
         commits = commits[commits.files.apply(lambda x: np.any([i == 'M' for i in x.values()]))]
         # keep only commits that are changing c files (.c)
         commits = commits[commits.files.apply(lambda x: np.all([i.endswith('.java') for i in x.keys()]))]
