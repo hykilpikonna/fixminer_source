@@ -1,7 +1,24 @@
 from common.commons import *
+import argparse
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='')
+    parser.add_argument('prop', help='config.yml file path')
+    parser.add_argument('job', help='job name')
+
+    args = parser.parse_args()
+
+    args.root = str(Path(__file__).parent.absolute())
+
+    if args.root is None or args.job is None or args.prop is None:
+        parser.print_help()
+        exit(-1)
+    return args
+
 
 if __name__ == '__main__':
-    args = getRun()
+    args = parse_args()
     setLogg()
 
     setEnv(args)
@@ -9,13 +26,9 @@ if __name__ == '__main__':
     job = args.job
 
     from python.settings import *
-    # job = "cluster"
     pd.options.mode.chained_assignment = None
 
-    # subject = 'ALL'
-    # rootType = 'if'
-
-    print(job)
+    print(f'Executing {job}...')
 
     if job == 'dataset4j':
         from dataset4j import create_dataset

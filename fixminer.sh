@@ -1,6 +1,7 @@
 #!/bin/bash
+# conda activate fixminerEnv
 
+expop PYTHONPATH=$(pwd)
+export PYTHONPATH
 
-source activate fixminerEnv
-
-PYTHONPATH=$(pwd) python -u python/main.py -root $(pwd)/python -job $2 -prop $1
+python -u python/main.py "$@"

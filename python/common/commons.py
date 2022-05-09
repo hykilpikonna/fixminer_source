@@ -159,22 +159,6 @@ def setEnv(args):
     logging.info('DATASET_DIR : %s', os.environ["DATASET_DIR"])
 
 
-def getRun():
-    import argparse
-    parser = argparse.ArgumentParser(description='')
-    # parser.add_argument('-subject', dest='subject', help='Environment')
-    parser.add_argument('-root', dest='root', help='root folder')
-    parser.add_argument('-job', dest='job', help='job name')
-    parser.add_argument('-prop', dest='prop', help='property file')
-
-    args = parser.parse_args()
-
-    if args.root is None or args.job is None or args.prop is None:
-        parser.print_help()
-        raise AttributeError
-    return args
-
-
 def shellCallTemplate4jar(cmd, enc='utf-8'):
     process = subprocess.Popen(cmd,
                                stdout=subprocess.PIPE, stderr=PIPE, shell=True, encoding=enc,
