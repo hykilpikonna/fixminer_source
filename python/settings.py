@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 
 ROOT_DIR = os.environ["ROOT_DIR"]
 REPO_PATH = os.environ["REPO_PATH"]
@@ -12,3 +13,5 @@ DATASET_DIR = os.environ["DATASET_DIR"]
 PROJECT_TYPE = os.environ["PROJECT_TYPE"]
 REDIS_PORT = os.environ["REDIS_PORT"]
 jdk8 = os.environ["JDK8"]
+
+JAR_PATH = Path(ROOT_DIR).parent / 'target/FixPatternMiner-1.0.0-jar-with-dependencies.jar'

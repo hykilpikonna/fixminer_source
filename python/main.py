@@ -26,26 +26,19 @@ if __name__ == '__main__':
         from otherDatasets import core
 
         core()
+
     elif job == 'richedit':
         dbDir = join(DATA_PATH, 'redis')
         stopDB(dbDir, REDIS_PORT)
-        cmd = "JAVA_HOME='" + jdk8 + "' java  -jar " + join(Path(ROOT_DIR).parent, 'target',
-                                                            'FixPatternMiner-1.0.0-jar-with-dependencies.jar') + " " + args.prop + " RICHEDITSCRIPT "
+        cmd = f"JAVA_HOME='{jdk8}' java -jar {JAR_PATH} {args.prop} RICHEDITSCRIPT "
         output = shellCallTemplate(cmd)
         logging.info(output)
 
-
     elif job == 'actionSI':
-        from pairs import actionPairs
+        from pairs import actionPairs, createPairs, importAction
 
         matches = actionPairs()
-
-        from pairs import createPairs
-
         createPairs(matches)
-
-        from pairs import importAction
-
         importAction()
 
     elif job == 'compare':
@@ -53,11 +46,9 @@ if __name__ == '__main__':
         # -Dexec.mainClass='edu.lu.uni.serval.richedit.akka.compare.CompareTrees'
         # -Dexec.args='"+ " shape " + join(DATA_PATH,"redis") +" ALLdumps-gumInput.rdb " +
         # "clusterl0-gumInputALL.rdb /data/richedit-core/python/data/richEditScript'"
-        cmd = "JAVA_HOME='" + jdk8 + "' java  -jar " + join(Path(ROOT_DIR).parent, 'target',
-                                                            'FixPatternMiner-1.0.0-jar-with-dependencies.jar') + " " + args.prop + " COMPARE "
+        cmd = f"JAVA_HOME='{jdk8}' java -jar {JAR_PATH} {args.prop} COMPARE "
         output = shellCallTemplate4jar(cmd)
         logging.info(output)
-
 
     elif job == 'cluster':
         from abstractPatch import cluster
@@ -67,12 +58,9 @@ if __name__ == '__main__':
         cluster(join(DATA_PATH, 'actions'), join(DATA_PATH, 'pairs'), 'actions')
 
     elif job == 'tokenSI':
-        from pairs import tokenPairs
+        from pairs import tokenPairs, importTokens
 
         tokenPairs()
-
-        from pairs import importTokens
-
         importTokens()
 
     elif job == 'clusterTokens':
@@ -82,26 +70,17 @@ if __name__ == '__main__':
         startDB(dbDir, REDIS_PORT, PROJECT_TYPE)
         cluster(join(DATA_PATH, 'tokens'), join(DATA_PATH, 'pairsToken'), 'tokens')
 
-
     elif job == 'codeflaws':
         from otherDatasets import codeflaws
 
         codeflaws()
 
-
     elif job == 'indexClusters':
-        from sprinferIndex import runSpinfer
+        from sprinferIndex import runSpinfer, test, divideCoccis, removeDuplicates
 
         runSpinfer()
-
-        from sprinferIndex import test
-
         test()
-        from sprinferIndex import divideCoccis
-
         divideCoccis()
-        from sprinferIndex import removeDuplicates
-
         removeDuplicates()
 
         # from patchManyBugs import patchCore
@@ -118,6 +97,7 @@ if __name__ == '__main__':
         from sprinferIndex import patternOperations
 
         patternOperations()
+
     elif job == 'patchManyBugs':
         from patchManyBugs import buildAll
 
@@ -145,10 +125,12 @@ if __name__ == '__main__':
         from test_patched_file import patch_validate
 
         patch_validate()
+
     elif job == 'checkCorrectIntro':
         from test_patched_file import checkCorrect
 
         checkCorrect()
+
     elif job == 'manybugs':
         from getManybugs import export
 
@@ -169,7 +151,6 @@ if __name__ == '__main__':
 
         statsNormal(True)
 
-
     elif job == 'datasetDefects4J':
         from defects4JDataset import core
 
@@ -179,15 +160,16 @@ if __name__ == '__main__':
         from bugstats import bStats
 
         bStats()
+
     elif job == 'defects4j':
         from stats import defects4jStats
 
         defects4jStats()
+
     elif job == 'patterns':
         from stats import exportAbstractPatterns
 
         exportAbstractPatterns()
-
 
     else:
         logging.error('Unknown job %s', job)
