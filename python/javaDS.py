@@ -1,60 +1,55 @@
 from common.commons import *
 from commitCollector import *
-DATA_PATH = os.environ["DATA_PATH"]
-COMMIT_DFS = os.environ["COMMIT_DFS"]
-# DATASET_PATH = '/Users/anilkoyuncu/projects/datasets'
-REPO_PATH = os.environ["REPO_PATH"]
-DATASET_PATH = os.environ["REPO_PATH"]
-DATASET = os.environ["dataset"]
-ROOT = os.environ["ROOT_DIR"]
-PROJECT_LIST = os.environ["PROJECT_LIST"]
+from python.settings import *
 
 from otherDatasets import markBugFixingPatches
 
+DATASET_PATH = REPO_PATH
+DATASET = os.environ["dataset"]
+PROJECT_LIST = os.environ["PROJECT_LIST"]
+
 
 def createDS():
-
     pjList = PROJECT_LIST.split(',')
     if not os.path.exists(DATASET_PATH):
         os.mkdir(DATASET_PATH)
     if not os.path.exists(COMMIT_DFS):
         os.mkdir(COMMIT_DFS)
 
-    subjects = pd.read_csv(join(ROOT,'data', 'dataset.csv'))
-
+    subjects = pd.read_csv(join(ROOT_DIR, 'data', 'dataset.csv'))
 
     if pjList == ['ALL']:
-        tuples = subjects[['Repo','GitRepo','Branch']].values.tolist()
+        tuples = subjects[['Repo', 'GitRepo', 'Branch']].values.tolist()
     else:
         # repos = subjects.query("Subject == '{0}'".format(subject)).Repo.tolist()
-        tuples = subjects[subjects.Repo.isin(pjList)][['Repo', 'GitRepo','Branch']].values.tolist()
+        tuples = subjects[subjects.Repo.isin(pjList)][['Repo', 'GitRepo', 'Branch']].values.tolist()
 
     for t in tuples:
-        repo,src,branch = t
+        repo, src, branch = t
         logging.info(repo)
-        if isfile(join(COMMIT_DFS,repo+'Fix.pickle')):
-            commits = load_zipped_pickle(join(COMMIT_DFS,repo+'Fix.pickle'))
+        if isfile(join(COMMIT_DFS, repo + 'Fix.pickle')):
+            commits = load_zipped_pickle(join(COMMIT_DFS, repo + 'Fix.pickle'))
         else:
             cmd = 'git config --global http.postBuffer 157286400'
             shellCallTemplate(cmd)
             cmd = 'git -C ' + DATASET_PATH + ' clone ' + src
             shellCallTemplate(cmd)
             logging.info(repo)
-            getCommitFromRepo(join(REPO_PATH, repo), join(COMMIT_DFS, repo),branch)
-            rDF = makeDF(join(COMMIT_DFS,repo + '.commits'))
+            getCommitFromRepo(join(REPO_PATH, repo), join(COMMIT_DFS, repo), branch)
+            rDF = makeDF(join(COMMIT_DFS, repo + '.commits'))
             save_zipped_pickle(rDF, join(COMMIT_DFS, repo + ".pickle"))
             # return rDF
             commits = rDF
-            commits = markBugFixingPatches(commits,repo)
+            commits = markBugFixingPatches(commits, repo)
         commits = commits[commits.files.apply(lambda x: np.any([i == 'M' for i in x.values()]))]
         # keep only commits that are changing c files (.c)
         commits = commits[commits.files.apply(lambda x: np.all([i.endswith('.java') for i in x.keys()]))]
-        #not a revert commit
+        # not a revert commit
         # commits = commits[~commits.log.apply(lambda x: x.startswith('Revert'))]
         # commits = commits[commits.files.apply(lambda x: len(x) == 1)]
         # commits['cocci'] = commits.log.apply(lambda x: True if re.search('cocci|coccinelle', x) else False)
         # coccis = commits[commits.cocci].commit.values.tolist()
-        fixes = commits[commits.fixes.str.len()!=0].commit.values.tolist()
+        fixes = commits[commits.fixes.str.len() != 0].commit.values.tolist()
         # links = commits[commits.links.str.len()!=0].commit.values.tolist()
 
         # bugs = set(fixes).union(links).union(coccis)
@@ -63,7 +58,7 @@ def createDS():
         print(len(commits))
         # for s in a.commit.values.tolist():
         from otherDatasets import prepareFiles
-        parallelRun(prepareFiles,commits[['commit','files']].values.tolist(),repo)
+        parallelRun(prepareFiles, commits[['commit', 'files']].values.tolist(), repo)
 
     # # if job == 'clone':
     # for repo,src in subjects[['Repo','GitRepo']].values.tolist():
