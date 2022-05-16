@@ -77,7 +77,7 @@ In order to launch FixMiner, execute [fixminer.sh](python/fixminer.sh)
 
 * Install the project with maven from root. (usage [pom.xml](pom.xml))
   ```powershell
-  mvn clean install
+  mvn clean package
   ```
 * Active the conda environment from shell
   ```powershell

@@ -12,7 +12,6 @@
             <groupId>edu.lu.uni.serval</groupId>
             <artifactId>RichEdit</artifactId>
             <version>1.0.0</version>
-<!--            <scope>compile</scope>-->
         </dependency>
         <dependency>
             <groupId>org.yaml</groupId>
