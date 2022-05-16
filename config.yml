@@ -1,0 +1,30 @@
+java:
+    8home:  /usr/lib/jvm/java-8-openjdk
+spinfer:
+    home:   /usr/local/bin/spinfer
+coccinelle:
+    home:   /usr/local/share/spinfer/statics
+
+dataset:
+    inputPath : /workspace/EECS-Research/data/1080/patches
+    repo:   /workspace/EECS-Research/data/1080/datasets
+
+fixminer:
+    srcPath: /workspace/EECS-Research/fixminer_source
+    projectType : java
+    datapath: /workspace/EECS-Research/data/1080
+
+    pjName : patches
+    portDumps : 6399
+    numOfWorkers : 14
+    hostname : localhost
+    hunkLimit : 2
+    patchSize : 50
+
+    projectList : fuse
+    inputPath : /workspace/EECS-Research/data/1080/patches
+    redisPath : /workspace/EECS-Research/data/1080/redis
+    srcMLPath :  /usr/bin/srcml
+
+    limitCommitsBeforeDays: 1080
+
