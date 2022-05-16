@@ -48,6 +48,7 @@ def job_richedit():
 def job_actionSI():
     from pairs import actionPairs, createPairs, importAction
 
+    job_start_redis()
     matches = actionPairs()
     createPairs(matches)
     importAction()
