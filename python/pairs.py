@@ -12,7 +12,7 @@ def importTokens():
     # portInner = '6380'
     # startDB(dbDir, portInner, "clusterl1-gumInputALL.rdb")
     portInner = REDIS_PORT
-    startDB(dbDir, portInner, PROJECT_TYPE)
+    redis_start(dbDir, portInner, PROJECT_TYPE)
 
     import redis
     # import pairs
@@ -48,7 +48,7 @@ def importAction():
     # startDB(dbDir, portInner, "clusterl0-gumInputALL.rdb")
 
     portInner = REDIS_PORT
-    startDB(dbDir, portInner, PROJECT_TYPE)
+    redis_start(dbDir, portInner, PROJECT_TYPE)
 
     import redis
     pairsShapes = join(DATA_PATH, 'pairs')
@@ -140,7 +140,7 @@ def actionPairs():
     dbDir = join(INNER_DATA_PATH, 'redis')
 
     portInner = REDIS_PORT
-    startDB(dbDir, portInner, PROJECT_TYPE)
+    redis_start(dbDir, portInner, PROJECT_TYPE)
 
     import redis
     redis_db = redis.StrictRedis(host="localhost", port=portInner, db=0)

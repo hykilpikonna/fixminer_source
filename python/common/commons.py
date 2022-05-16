@@ -493,20 +493,24 @@ def get_class_weights(y):
     return {cls: round(float(majority) / float(count), 2) for cls, count in counter.items()}
 
 
-def stopDB(dbDir, portInner):
-    # cmd = "bash " + dbDir + "/" + "stopServer.sh " + " " + portInner;
-    cmd = "redis-cli -p " + portInner + " shutdown save"
+def redis_shutdown(port: int):
+    print(f'Shutting down redis {port}...')
+    cmd = f"redis-cli -p {port} shutdown save"
     o, e = shellGitCheckout(cmd)
     logging.info(o)
+    print('> Shutdown complete.')
 
 
-def startDB(dbDir, portInner, projectType):
-    dbName = "dumps-" + projectType + ".rdb"
-    # portInner = '6380'
-    cmd = "bash " + dbDir + "/" + "startServer.sh " + dbDir + " " + dbName + " " + portInner;
+def redis_start(root_dir: str, db_dir: str, port: int):
+    Path(db_dir).mkdir(exist_ok=True, parents=True)
+
+    print(f'Starting redis {port}...')
+    cmd = f"redis-server {root_dir}/redis.conf --dir {db_dir} --dbfilename redis.rdb --port {port} --daemonize yes"
 
     o, e = shellGitCheckout(cmd)
-    ping = "redis-cli -p " + portInner + " ping"
+    assert not e, e
+
+    ping = f"redis-cli -p {port} ping"
     o, e = shellGitCheckout(ping)
     m = re.search('PONG', o)
 
@@ -515,7 +519,8 @@ def startDB(dbDir, portInner, projectType):
         logging.info('Waiting for checkout')
         o, e = shellGitCheckout(ping)
         m = re.search('PONG', o)
-    print(o)
+
+    print('> Redis started.')
 
 
 def unique_everseen(iterable, key=None):

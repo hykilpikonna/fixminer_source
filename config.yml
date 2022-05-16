@@ -10,7 +10,6 @@ dataset:
     repo:   /workspace/EECS-Research/data/1080/datasets
 
 fixminer:
-    srcPath: /workspace/EECS-Research/fixminer_source
     projectType : java
     datapath: /workspace/EECS-Research/data/1080
 

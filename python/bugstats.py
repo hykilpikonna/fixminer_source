@@ -13,7 +13,7 @@ def bStats():
         dbDir = join(DATA_PATH, 'redis')
 
         portInner = '6399'
-        startDB(dbDir, portInner, PROJECT_TYPE)
+        redis_start(dbDir, portInner, PROJECT_TYPE)
 
         import redis
 

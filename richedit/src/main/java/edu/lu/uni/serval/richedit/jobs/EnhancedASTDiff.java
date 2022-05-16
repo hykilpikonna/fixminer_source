@@ -33,10 +33,6 @@ public class EnhancedASTDiff
         String parameters = String.format("\nInput path %s", inputPath);
         log.info(parameters);
 
-        // Run Redis
-        String cmd = String.format("redis-server %s/redis.conf --dir %s --dbfilename redis.rdb --port %s --daemonize yes", srcPath, dbDir, redisPort);
-        CallShell.runShell(cmd, redisPort);
-
         JedisPool innerPool = new JedisPool(PoolBuilder.getPoolConfig(), "127.0.0.1", Integer.parseInt(redisPort), 20000000);
 
         boolean isJava = projectType.equals("java");

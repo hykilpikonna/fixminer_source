@@ -23,16 +23,9 @@ public class CompareTrees
 {
     private static final Logger log = LoggerFactory.getLogger(CompareTrees.class);
 
-    public static void main(String redisPath, String portDumps, String dumpsName, String numOfWorkers) throws Exception
+    public static void main(String redisPath, String port, String dumpsName, String numOfWorkers) throws Exception
     {
-        String port = portDumps; //"6399";
-        CallShell cs = new CallShell();
-        String cmd = "bash " + redisPath + "/" + "startServer.sh" + " %s %s %s";
-        cmd = String.format(cmd, redisPath, dumpsName, Integer.valueOf(port));
-        log.info(cmd);
-        CallShell.runShell(cmd, port);
-
-        final JedisPool outerPool = new JedisPool(PoolBuilder.getPoolConfig(), "localhost", Integer.valueOf(port), 20000000);
+        final JedisPool outerPool = new JedisPool(PoolBuilder.getPoolConfig(), "localhost", Integer.parseInt(port), 20000000);
 
         HashMap<String, String> filenames = getFilenames(outerPool);
         String job = getLevel(outerPool);
@@ -46,12 +39,11 @@ public class CompareTrees
         }
         IntStream stream = IntStream.range(0, compare.intValue());
 
-        String finalJob = job;
         ProgressBar.wrap(stream.parallel(), "Task").forEach(m ->
-                {
-                    newCoreCompare(finalJob, errorPairs, filenames, outerPool);
-                }
-            );
+            {
+                newCoreCompare(job, errorPairs, filenames, outerPool);
+            }
+        );
 
         log.info("End process");
     }

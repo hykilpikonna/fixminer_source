@@ -266,7 +266,7 @@ def defects4jStats(isFixminer=False):
         dbDir = join(DATA_PATH, 'redis')
 
         portInner = REDIS_PORT
-        startDB(dbDir, portInner, PROJECT_TYPE )
+        redis_start(dbDir, portInner, PROJECT_TYPE)
 
         import redis
 

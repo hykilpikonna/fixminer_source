@@ -32,10 +32,15 @@ def job_dataset4c():
     core()
 
 
+def job_start_redis():
+    db_dir = join(DATA_PATH, 'redis')
+    redis_shutdown(REDIS_PORT)
+    redis_start(ROOT_DIR, db_dir, REDIS_PORT)
+
+
 def job_richedit():
-    dbDir = join(DATA_PATH, 'redis')
-    stopDB(dbDir, REDIS_PORT)
-    cmd = f"JAVA_HOME='{jdk8}' java -jar '{JAR_PATH}' {args.prop} RICHEDITSCRIPT "
+    job_start_redis()
+    cmd = f"JAVA_HOME='{jdk8}' java -jar '{JAR_PATH}' {args.prop} RICHEDITSCRIPT"
     output = shellCallTemplate(cmd)
     logging.info(output)
 
@@ -49,11 +54,8 @@ def job_actionSI():
 
 
 def job_compare():
-    # cmd = "mvn exec:java -f '/data/fixminer_source/'
-    # -Dexec.mainClass='edu.lu.uni.serval.richedit.akka.compare.CompareTrees'
-    # -Dexec.args='"+ " shape " + join(DATA_PATH,"redis") +" ALLdumps-gumInput.rdb " +
-    # "clusterl0-gumInputALL.rdb /data/richedit-core/python/data/richEditScript'"
-    cmd = f"JAVA_HOME='{jdk8}' java -jar '{JAR_PATH}' {args.prop} COMPARE "
+    job_start_redis()
+    cmd = f"JAVA_HOME='{jdk8}' java -jar '{JAR_PATH}' {args.prop} COMPARE"
     output = shellCallTemplate4jar(cmd)
     logging.info(output)
 
@@ -62,7 +64,7 @@ def job_cluster():
     from abstractPatch import cluster
 
     dbDir = join(DATA_PATH, 'redis')
-    startDB(dbDir, REDIS_PORT, PROJECT_TYPE)
+    redis_start(dbDir, REDIS_PORT, PROJECT_TYPE)
     cluster(join(DATA_PATH, 'actions'), join(DATA_PATH, 'pairs'), 'actions')
 
 
@@ -77,7 +79,7 @@ def job_clusterTokens():
     from abstractPatch import cluster
 
     dbDir = join(DATA_PATH, 'redis')
-    startDB(dbDir, REDIS_PORT, PROJECT_TYPE)
+    redis_start(dbDir, REDIS_PORT, PROJECT_TYPE)
     cluster(join(DATA_PATH, 'tokens'), join(DATA_PATH, 'pairsToken'), 'tokens')
 
 
@@ -95,16 +97,6 @@ def job_indexClusters():
     divideCoccis()
     removeDuplicates()
 
-    # from patchManyBugs import patchCore
-    # patchCore()
-    # # from patchManyBugs import patched
-    # # patched()
-    # from patchManyBugs import exportSosPatches
-    # exportSosPatches()
-    # from validate_manybugs import validate
-    #
-    # validate()
-
 
 def job_patternOperations():
     from sprinferIndex import patternOperations
@@ -117,27 +109,14 @@ def job_patchManyBugs():
 
     buildAll()
 
-    # from patchManyBugs import patchCore
-    # patchCore()
-    # # from patch_validate import patch_validate_mine
-    # # patch_validate_mine()
-    # from patchManyBugs import patched
-    # patched()
-    # from patchManyBugs import exportSosPatches
-    # exportSosPatches()
-
 
 def job_patchIntro():
     from sprinferIndex import patchCoreIntro
 
     patchCoreIntro()
-    # from sprinferIndex import patched
-    # patched()
 
 
 def job_validateIntro():
-    # from patch_validate_introClass2 import patch_validate
-    # patch_validate()
     from test_patched_file import patch_validate
 
     patch_validate()
