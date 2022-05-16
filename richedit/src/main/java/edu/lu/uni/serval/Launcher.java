@@ -3,7 +3,6 @@ package edu.lu.uni.serval;
 
 import edu.lu.uni.serval.richedit.jobs.CompareTrees;
 import edu.lu.uni.serval.richedit.jobs.EnhancedASTDiff;
-import edu.lu.uni.serval.utils.ClusterToPattern;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.yaml.snakeyaml.Yaml;
@@ -18,7 +17,6 @@ import java.util.Properties;
  */
 public class Launcher
 {
-
     private static Logger log = LoggerFactory.getLogger(Launcher.class);
 
     public static void main(String[] args) throws IOException
@@ -49,13 +47,16 @@ public class Launcher
         String input = (String) fixminer.get("inputPath");
         String redisPath = (String) fixminer.get("redisPath");
         String srcMLPath = (String) fixminer.get("srcMLPath");
+        String srcPath = (String) fixminer.get("srcPath");
 
         String jobType = args[1];
 
-        mainLaunch(numOfWorkers, jobType, portDumps, projectType, input, redisPath, srcMLPath, hunkLimit, projectList, patchSize);
+        mainLaunch(numOfWorkers, jobType, portDumps, projectType, input, redisPath, srcMLPath, hunkLimit, projectList, patchSize, srcPath);
     }
 
-    public static void mainLaunch(String numOfWorkers, String jobType, String portDumps, String projectType, String input, String redisPath, String srcMLPath, String hunkLimit, String[] projectList, String patchSize)
+    public static void mainLaunch(String numOfWorkers, String jobType, String portDumps, String projectType, String input,
+                                  String redisPath, String srcMLPath, String hunkLimit, String[] projectList, String patchSize,
+                                  String srcPath)
     {
         String dbDir;
         String dumpsName;
@@ -71,12 +72,13 @@ public class Launcher
             switch (jobType)
             {
                 case "RICHEDITSCRIPT":
-                    EnhancedASTDiff.main(gumInput, portDumps, dbDir, dumpsName, srcMLPath, hunkLimit, projectList, patchSize, projectType);
+                    EnhancedASTDiff.main(gumInput, portDumps, dbDir, dumpsName, srcMLPath, hunkLimit, projectList, patchSize, projectType, srcPath);
                     break;
 
                 case "COMPARE":
                     CompareTrees.main(redisPath, portDumps, dumpsName, numOfWorkers);
                     break;
+
                 default:
                     throw new Error("unknown Job");
             }
