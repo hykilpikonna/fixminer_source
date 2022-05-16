@@ -96,7 +96,7 @@ def create_dataset(cfg: dict, project_list: str = PROJECT_LIST):
                 raise NotImplementedError(f'Unknown limitCommitsBeforeDays type: {type(value)}. '
                                           f'Only timedelta and int/float (days) are supported.')
 
-            print(f'> Has {len(commits)} comments before filtering for date < {end_date}')
+            print(f'> Has {len(commits)} commits before filtering for date < {end_date}')
             commits = commits[commits.commitDate < end_date]
 
         commits = commits[commits.commit.isin(fixes)]
