@@ -17,7 +17,7 @@ import java.util.Properties;
  */
 public class Launcher
 {
-    private static Logger log = LoggerFactory.getLogger(Launcher.class);
+    private static final Logger log = LoggerFactory.getLogger(Launcher.class);
 
     public static void main(String[] args) throws IOException
     {

@@ -9,203 +9,256 @@ import java.util.List;
 
 /**
  * Hierarchical-level results of GumTree results
- * 
- * @author kui.liu
  *
+ * @author kui.liu
  */
-public class HierarchicalActionSet implements Comparable<HierarchicalActionSet>,Serializable {
-	
-	private String astNodeType;
-	private Action action;
-	private Action parentAction;
-	private String actionString;
-	private Integer startPosition;
-	private Integer length;
-	private int bugStartLineNum = 0;
-	private int bugEndLineNum;
-	private int fixStartLineNum;
-	private int fixEndLineNum;
-	private HierarchicalActionSet parent = null;
-	private List<HierarchicalActionSet>	subActions = new ArrayList<>();
-	
-	private ITree node;
-         // source code tree.
+public class HierarchicalActionSet implements Comparable<HierarchicalActionSet>, Serializable
+{
 
-	public int getBugEndPosition() {
-		return bugEndPosition;
-	}
+    private String astNodeType;
 
-	public int getFixEndPosition() {
-		return fixEndPosition;
-	}
+    private Action action;
 
-	private int bugEndPosition;
-	private int fixEndPosition;
+    private Action parentAction;
 
-	public ITree getNode() {
-		return node;
-	}
+    private String actionString;
 
-	public void setNode(ITree node) {
-		this.node = node;
-	}
+    private Integer startPosition;
 
-	public void setAstNodeType(String astNodeType) {
-		this.astNodeType = astNodeType;
-	}
-	
-	public String getAstNodeType() {
-		return astNodeType;
-	}
+    private Integer length;
 
-	public Action getAction() {
-		return action;
-	}
+    private int bugStartLineNum = 0;
 
-	public void setAction(Action action) {
-		this.action = action;
-	}
+    private int bugEndLineNum;
 
-	public Action getParentAction() {
-		return parentAction;
-	}
+    private int fixStartLineNum;
 
-	public void setParentAction(Action parentAction) {
-		this.parentAction = parentAction;
-	}
+    private int fixEndLineNum;
 
-	public String getActionString() {
-		return actionString;
-	}
+    private HierarchicalActionSet parent = null;
 
-	public void setActionString(String actionString) {
-		this.actionString = actionString;
-		
-		int atIndex = actionString.indexOf("@AT@") + 4;
-		int lengthIndex = actionString.indexOf("@LENGTH@");
-		if (lengthIndex == -1) {
-			this.startPosition = Integer.parseInt(actionString.substring(atIndex).trim());
-			this.length = 0;
-		} else {
-			this.startPosition = Integer.parseInt(actionString.substring(atIndex, lengthIndex).trim());
-			this.length = Integer.parseInt(actionString.substring(lengthIndex + 8).trim());
-		}
-		
-		String nodeType = actionString.substring(0, actionString.indexOf("@@"));
-		nodeType = nodeType.substring(nodeType.indexOf(" ")  + 1);
-		this.astNodeType = nodeType;
-	}
+    private List<HierarchicalActionSet> subActions = new ArrayList<>();
 
-	public int getStartPosition() {
-		return startPosition;
-	}
+    private ITree node;
+    // source code tree.
 
-	public int getLength() {
-		return length;
-	}
+    public int getBugEndPosition()
+    {
+        return bugEndPosition;
+    }
 
-	public int getBugStartLineNum() {
-		return bugStartLineNum;
-	}
+    public int getFixEndPosition()
+    {
+        return fixEndPosition;
+    }
 
-	public void setBugStartLineNum(int bugStartLineNum) {
-		this.bugStartLineNum = bugStartLineNum;
-	}
+    private int bugEndPosition;
 
-	public int getBugEndLineNum() {
-		return bugEndLineNum;
-	}
+    private int fixEndPosition;
 
-	public void setBugEndLineNum(int bugEndLineNum) {
-		this.bugEndLineNum = bugEndLineNum;
-	}
+    public ITree getNode()
+    {
+        return node;
+    }
 
-	public int getFixStartLineNum() {
-		return fixStartLineNum;
-	}
+    public void setNode(ITree node)
+    {
+        this.node = node;
+    }
 
-	public void setFixStartLineNum(int fixStartLineNum) {
-		this.fixStartLineNum = fixStartLineNum;
-	}
+    public void setAstNodeType(String astNodeType)
+    {
+        this.astNodeType = astNodeType;
+    }
 
-	public int getFixEndLineNum() {
-		return fixEndLineNum;
-	}
+    public String getAstNodeType()
+    {
+        return astNodeType;
+    }
 
-	public void setFixEndLineNum(int fixEndLineNum) {
-		this.fixEndLineNum = fixEndLineNum;
-	}
+    public Action getAction()
+    {
+        return action;
+    }
 
-	public HierarchicalActionSet getParent() {
-		return parent;
-	}
+    public void setAction(Action action)
+    {
+        this.action = action;
+    }
 
-	public void setParent(HierarchicalActionSet parent) {
-		this.parent = parent;
-	}
+    public Action getParentAction()
+    {
+        return parentAction;
+    }
 
-	public List<HierarchicalActionSet> getSubActions() {
-		return subActions;
-	}
+    public void setParentAction(Action parentAction)
+    {
+        this.parentAction = parentAction;
+    }
 
-	public void setSubActions(List<HierarchicalActionSet> subActions) {
-		this.subActions = subActions;
-	}
+    public String getActionString()
+    {
+        return actionString;
+    }
+
+    public void setActionString(String actionString)
+    {
+        this.actionString = actionString;
+
+        int atIndex = actionString.indexOf("@AT@") + 4;
+        int lengthIndex = actionString.indexOf("@LENGTH@");
+        if (lengthIndex == -1)
+        {
+            this.startPosition = Integer.parseInt(actionString.substring(atIndex).trim());
+            this.length = 0;
+        }
+        else
+        {
+            this.startPosition = Integer.parseInt(actionString.substring(atIndex, lengthIndex).trim());
+            this.length = Integer.parseInt(actionString.substring(lengthIndex + 8).trim());
+        }
+
+        String nodeType = actionString.substring(0, actionString.indexOf("@@"));
+        nodeType = nodeType.substring(nodeType.indexOf(" ") + 1);
+        this.astNodeType = nodeType;
+    }
+
+    public int getStartPosition()
+    {
+        return startPosition;
+    }
+
+    public int getLength()
+    {
+        return length;
+    }
+
+    public int getBugStartLineNum()
+    {
+        return bugStartLineNum;
+    }
+
+    public void setBugStartLineNum(int bugStartLineNum)
+    {
+        this.bugStartLineNum = bugStartLineNum;
+    }
+
+    public int getBugEndLineNum()
+    {
+        return bugEndLineNum;
+    }
+
+    public void setBugEndLineNum(int bugEndLineNum)
+    {
+        this.bugEndLineNum = bugEndLineNum;
+    }
+
+    public int getFixStartLineNum()
+    {
+        return fixStartLineNum;
+    }
+
+    public void setFixStartLineNum(int fixStartLineNum)
+    {
+        this.fixStartLineNum = fixStartLineNum;
+    }
+
+    public int getFixEndLineNum()
+    {
+        return fixEndLineNum;
+    }
+
+    public void setFixEndLineNum(int fixEndLineNum)
+    {
+        this.fixEndLineNum = fixEndLineNum;
+    }
+
+    public HierarchicalActionSet getParent()
+    {
+        return parent;
+    }
+
+    public void setParent(HierarchicalActionSet parent)
+    {
+        this.parent = parent;
+    }
+
+    public List<HierarchicalActionSet> getSubActions()
+    {
+        return subActions;
+    }
+
+    public void setSubActions(List<HierarchicalActionSet> subActions)
+    {
+        this.subActions = subActions;
+    }
 
 
-	public void setBugEndPosition(int bugEndPosition) {
-		this.bugEndPosition = bugEndPosition;
-	}
+    public void setBugEndPosition(int bugEndPosition)
+    {
+        this.bugEndPosition = bugEndPosition;
+    }
 
 
+    public void setFixEndPosition(int fixEndPosition)
+    {
+        this.fixEndPosition = fixEndPosition;
+    }
 
-	public void setFixEndPosition(int fixEndPosition) {
-		this.fixEndPosition = fixEndPosition;
-	}
+    @Override
+    public int compareTo(HierarchicalActionSet o)
+    {
 
-	@Override
-	public int compareTo(HierarchicalActionSet o) {
+        return this.startPosition.compareTo(o.startPosition);//this.action.compareTo(o.action);
+    }
 
-		return this.startPosition.compareTo(o.startPosition);//this.action.compareTo(o.action);
-	}
+    private final List<String> strList = new ArrayList<>();
 
-	private List<String> strList = new ArrayList<>();
+    public int getActionSize()
+    {
+        return strList.size();
+    }
 
-	public int getActionSize(){
-		return strList.size();
-	}
+    @Override
+    public String toString()
+    {
+        String str = actionString;
+        if (strList.size() == 0)
+        {
+            strList.add(str);
+            for (HierarchicalActionSet actionSet : subActions)
+            {
+                actionSet.toString();
+                List<String> strList1 = actionSet.strList;
+                for (String str1 : strList1)
+                {
+                    strList.add("---" + str1);
+                }
+            }
+        }
+        else
+        {
+            strList.clear();
+            strList.add(str);
+            for (HierarchicalActionSet actionSet : subActions)
+            {
+                actionSet.toString();
+                List<String> strList1 = actionSet.strList;
+                for (String str1 : strList1)
+                {
+                    strList.add("---" + str1);
+                }
+            }
+        }
 
-	@Override
-	public String toString() {
-		String str = actionString;
-		if (strList.size() == 0) {
-			strList.add(str);
-			for (HierarchicalActionSet actionSet : subActions) {
-				actionSet.toString();
-				List<String> strList1 = actionSet.strList;
-				for (String str1 : strList1) {
-					strList.add("---" + str1);
-				}
-			}
-		} else {
-			strList.clear();
-			strList.add(str);
-			for (HierarchicalActionSet actionSet : subActions) {
-				actionSet.toString();
-				List<String> strList1 = actionSet.strList;
-				for (String str1 : strList1) {
-					strList.add("---" + str1);
-				}
-			}
-		}
-		
-		str = "";
-		for (String str1 : strList) {
-			str += str1 + "\n";
-		}
-		 
-		return str;
-	}
-	
+        str = "";
+        for (String str1 : strList)
+        {
+            str += str1 + "\n";
+        }
+
+        return str;
+    }
+
 
 }
