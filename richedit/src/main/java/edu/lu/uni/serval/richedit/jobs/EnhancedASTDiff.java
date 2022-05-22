@@ -30,18 +30,16 @@ public class EnhancedASTDiff
     public static void main(String inputPath, String redisPort, String dbDir, String chunkName, String srcMLPath, String hunkLimit,
                             String[] projectList, String patchSize, String projectType, String srcPath) throws Exception
     {
-        String parameters = String.format("\nInput path %s", inputPath);
-        log.info(parameters);
+        log.info("Input path {}", inputPath);
 
         JedisPool innerPool = new JedisPool(PoolBuilder.getPoolConfig(), "127.0.0.1", Integer.parseInt(redisPort), 20000000);
 
         boolean isJava = projectType.equals("java");
+
+        // Find patches
         File folder = new File(inputPath);
         File[] listOfFiles = folder.listFiles();
-        if (listOfFiles == null)
-        {
-            throw new Exception("No projects found, please verify the projects in the input path");
-        }
+        if (listOfFiles == null) throw new Exception("No projects found, please verify the projects in the input path");
         Stream<File> stream = Arrays.stream(listOfFiles);
         List<File> folders;
         if (projectList.length == 1 && projectList[0].equals("ALL"))
@@ -57,6 +55,7 @@ public class EnhancedASTDiff
             List<Predicate<File>> allPredicates = new ArrayList<Predicate<File>>();
             for (String s : projectList)
             {
+                log.info("processing {}", s);
                 Predicate<File> predicate = x -> x.getName().endsWith(s);
                 allPredicates.add(predicate);
             }
@@ -68,6 +67,7 @@ public class EnhancedASTDiff
                 .collect(Collectors.toList());
         }
 
+        // Get message files
         String project = folder.getName();
         List<MessageFile> allMessageFiles = new ArrayList<>();
         for (File target : folders)
@@ -92,15 +92,15 @@ public class EnhancedASTDiff
         {
             log.info("{} files already process ...", diffEntry.size());
             allMessageFiles = allMessageFiles.stream().filter(f -> !diffEntry.containsKey(f.getProject() + "_" + f.getDiffEntryFile().getName())).collect(Collectors.toList());
-            log.info("{} files to process ...", allMessageFiles.size());
+            log.info("{} files to process ...",allMessageFiles.size());
         }
-        boolean finalIsJava = isJava;
+
         ProgressBar.wrap(allMessageFiles.stream().parallel(), "Task").forEach(m ->
-                {
-                    EDiffHunkParser parser = new EDiffHunkParser();
-                    parser.parseFixPatterns(m.getPrevFile(), m.getRevFile(), m.getDiffEntryFile(), project, innerPool, srcMLPath, hunkLimit, finalIsJava);
-                }
-            );
+            {
+                EDiffHunkParser parser = new EDiffHunkParser();
+                parser.parseFixPatterns(m.getPrevFile(), m.getRevFile(), m.getDiffEntryFile(), project, innerPool, srcMLPath, hunkLimit, isJava);
+            }
+        );
     }
 
 

@@ -64,8 +64,7 @@ def job_compare():
 def job_cluster():
     from abstractPatch import cluster
 
-    dbDir = join(DATA_PATH, 'redis')
-    redis_start(dbDir, REDIS_PORT, PROJECT_TYPE)
+    job_start_redis()
     cluster(join(DATA_PATH, 'actions'), join(DATA_PATH, 'pairs'), 'actions')
 
 

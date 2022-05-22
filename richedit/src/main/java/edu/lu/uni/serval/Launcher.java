@@ -21,6 +21,7 @@ public class Launcher
 
     public static void main(String[] args) throws IOException
     {
+
         Properties appProps = new Properties();
 
         if (args.length != 2)
@@ -66,7 +67,6 @@ public class Launcher
 
         gumInput = input;
         dbDir = redisPath;
-
         try
         {
             switch (jobType)

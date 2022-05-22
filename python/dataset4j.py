@@ -53,7 +53,7 @@ def create_dataset(cfg: dict, project_list: str = PROJECT_LIST):
     :return:
     """
     pj_list: list[str] = project_list.split(',')
-
+    print(f'processed datasets {pj_list}')
     # Ensure directories exist
     DATASET_PATH.mkdir(exist_ok=True, parents=True)
     if not os.path.exists(COMMIT_DFS):
@@ -82,12 +82,12 @@ def create_dataset(cfg: dict, project_list: str = PROJECT_LIST):
         # commits['cocci'] = commits.log.apply(lambda x: True if re.search('cocci|coccinelle', x) else False)
         # coccis = commits[commits.cocci].commit.values.tolist()
         fixes = commits[commits.fixes.str.len() != 0].commit.values.tolist()
-
+        print(f'> Obtained {len(fixes)} fixes.')
         # Filter end dates if configured
         if 'limitCommitsBeforeDays' in cfg['fixminer']:
             value = eval(str(cfg['fixminer']['limitCommitsBeforeDays']))
             latest_commit = commits.commitDate.iloc[0]
-
+            print(f'> Project {repo} last commit at {latest_commit}')
             if isinstance(value, datetime.timedelta):
                 end_date = latest_commit - value
             elif isinstance(value, float) or isinstance(value, int):
@@ -97,9 +97,9 @@ def create_dataset(cfg: dict, project_list: str = PROJECT_LIST):
                                           f'Only timedelta and int/float (days) are supported.')
 
             print(f'> Has {len(commits)} commits before filtering for date < {end_date}')
-            commits = commits[commits.commitDate < end_date]
-
+            commits = commits[commits.commitDate <= end_date]
+            print(f'> Has {len(commits)} commits after filtering')
         commits = commits[commits.commit.isin(fixes)]
-        print(f'> Has {len(commits)} comments after filtering')
+        print(f'> Has {len(commits)} fixes after filtering')
 
         parallelRun(prepareFiles, commits[['commit', 'files']].values.tolist(), repo)
