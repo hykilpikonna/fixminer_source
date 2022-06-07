@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import datetime
 from datetime import date
 
 from pandas import DataFrame
@@ -56,8 +57,7 @@ def create_dataset(cfg: dict, project_list: str = PROJECT_LIST):
     print(f'processed datasets {pj_list}')
     # Ensure directories exist
     DATASET_PATH.mkdir(exist_ok=True, parents=True)
-    if not os.path.exists(COMMIT_DFS):
-        os.mkdir(COMMIT_DFS)
+    Path(COMMIT_DFS).mkdir(exist_ok=True, parents=True)
 
     # Find project repo urls in dataset.csv
     dataset: DataFrame = pd.read_csv(join(ROOT_DIR, 'data', 'dataset.csv'))
@@ -84,22 +84,33 @@ def create_dataset(cfg: dict, project_list: str = PROJECT_LIST):
         fixes = commits[commits.fixes.str.len() != 0].commit.values.tolist()
         print(f'> Obtained {len(fixes)} fixes.')
         # Filter end dates if configured
-        if 'limitCommitsBeforeDays' in cfg['fixminer']:
-            value = eval(str(cfg['fixminer']['limitCommitsBeforeDays']))
-            latest_commit = commits.commitDate.iloc[0]
-            print(f'> Project {repo} last commit at {latest_commit}')
-            if isinstance(value, datetime.timedelta):
-                end_date = latest_commit - value
-            elif isinstance(value, float) or isinstance(value, int):
-                end_date = latest_commit - datetime.timedelta(days=value)
-            else:
-                raise NotImplementedError(f'Unknown limitCommitsBeforeDays type: {type(value)}. '
-                                          f'Only timedelta and int/float (days) are supported.')
+        latest_commit = commits.commitDate.iloc[0]
+        print(f'> Project {repo} last commit at {latest_commit}')
 
+        # Commit time limiting
+        limit_rel = cfg.get('limitCommitsBeforeDays')
+        limit_abs = cfg.get('limitCommitsAbsoluteDate')
+        assert not (limit_rel and limit_abs), 'In the config, you should not define both limitCommitsBeforeDays and limitCommitsAbsoluteDate'
+
+        end_date = None
+        if limit_rel:
+            print("> Using relative date")
+            end_date = latest_commit - datetime.timedelta(days=int(limit_rel))
+
+        elif limit_abs:
+            print("> Using absolute date")
+            end_date = datetime.datetime.strptime(limit_abs, '%Y-%m-%d')
+
+        if end_date:
             print(f'> Has {len(commits)} commits before filtering for date < {end_date}')
             commits = commits[commits.commitDate <= end_date]
-            print(f'> Has {len(commits)} commits after filtering')
+            print(f'> Has {len(commits)} commits after filtering for date')
+
         commits = commits[commits.commit.isin(fixes)]
-        print(f'> Has {len(commits)} fixes after filtering')
+        print(f'> Has {len(commits)} fixes after filtering for fixes')
 
         parallelRun(prepareFiles, commits[['commit', 'files']].values.tolist(), repo)
+
+
+def commit_stats():
+
