@@ -31,9 +31,11 @@ public class GumTreeCComparer {
 			newTree = new SrcmlCTreeGenerator(srcmlPath).generateFromFile(revFile).getRoot();
         } catch (Exception e) {
             if (oldTree == null) {
+                e.printStackTrace();
                 log.info("Null GumTree of Previous File: " + prevFile.getPath());
                 throw new NullPointerException(prevFile.getPath());
             } else if (newTree == null) {
+                e.printStackTrace();
                 log.info("Null GumTree of Revised File: " + revFile.getPath());
                 throw new NullPointerException(revFile.getPath());
             }

@@ -36,19 +36,16 @@ public class GumTreeComparer {
 				log.info("Null GumTree of Revised File: " + revFile.getPath());
 				throw new NullPointerException(revFile.getPath());
 			}
-
 		}
-		if (oldTree != null && newTree != null) {
-			Matcher m = Matchers.getInstance().getMatcher(oldTree, newTree);
-			m.match();
-			ActionGenerator ag = new ActionGenerator(oldTree, newTree, m.getMappings());
-			ag.generate();
-			List<Action> actions = ag.getActions(); // change actions from bug to patch
+		if (oldTree == null || newTree == null) return null;
 
-			return actions;
-		}
+		Matcher m = Matchers.getInstance().getMatcher(oldTree, newTree);
+		m.match();
+		ActionGenerator ag = new ActionGenerator(oldTree, newTree, m.getMappings());
+		ag.generate();
+		List<Action> actions = ag.getActions(); // change actions from bug to patch
 
-		return null;
+		return actions;
 	}
 
 	public List<Action> compareCFilesWithGumTree(File prevFile, File revFile) {
