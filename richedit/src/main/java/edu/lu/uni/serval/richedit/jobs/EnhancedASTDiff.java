@@ -2,7 +2,6 @@ package edu.lu.uni.serval.richedit.jobs;
 
 import edu.lu.uni.serval.richedit.ediff.EDiffHunkParser;
 import edu.lu.uni.serval.richedit.ediff.MessageFile;
-import edu.lu.uni.serval.utils.CallShell;
 import edu.lu.uni.serval.utils.FileHelper;
 import edu.lu.uni.serval.utils.PoolBuilder;
 import me.tongfei.progressbar.ProgressBar;
@@ -12,10 +11,8 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.concurrent.*;
 import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -39,7 +36,10 @@ public class EnhancedASTDiff
         // Find patches
         File folder = new File(inputPath);
         File[] listOfFiles = folder.listFiles();
-        if (listOfFiles == null) throw new Exception("No projects found, please verify the projects in the input path");
+        if (listOfFiles == null)
+        {
+            throw new Exception("No projects found, please verify the projects in the input path");
+        }
         Stream<File> stream = Arrays.stream(listOfFiles);
         List<File> folders;
         if (projectList.length == 1 && projectList[0].equals("ALL"))
@@ -92,22 +92,63 @@ public class EnhancedASTDiff
         {
             log.info("{} files already process ...", diffEntry.size());
             allMessageFiles = allMessageFiles.stream().filter(f -> !diffEntry.containsKey(f.getProject() + "_" + f.getDiffEntryFile().getName())).collect(Collectors.toList());
-            log.info("{} files to process ...",allMessageFiles.size());
+            log.info("{} files to process ...", allMessageFiles.size());
         }
 
-        ProgressBar.wrap(allMessageFiles.stream().parallel(), "Task").forEach(m ->
+//        try (ProgressBar pb = new ProgressBar("Task", allMessageFiles.size()))
+        {
+            ExecutorService executor = Executors.newScheduledThreadPool(36);
+
+            allMessageFiles.forEach(m ->
             {
-                EDiffHunkParser parser = new EDiffHunkParser();
-                parser.parseFixPatterns(m.getPrevFile(), m.getRevFile(), m.getDiffEntryFile(), project, innerPool, srcMLPath, hunkLimit, isJava);
-            }
-        );
+                String id = UUID.randomUUID().toString();
+                Future<?> future = executor.submit(() ->
+                {
+                    Thread cur = Thread.currentThread();
+
+                    // Monitor thread
+                    Thread monitor = new Thread(() ->
+                    {
+                        try
+                        {
+                            Thread.sleep(60 * 1000);
+                            cur.stop();
+                            log.info("Cancelled {} because of timeout", cur.getName());
+
+                            // Update progress bar
+//                            pb.step();
+                        }
+                        catch (InterruptedException ignored) {}
+                    });
+                    monitor.start();
+
+                    // Parse
+                    EDiffHunkParser parser = new EDiffHunkParser();
+                    parser.parseFixPatterns(m.getPrevFile(), m.getRevFile(), m.getDiffEntryFile(), project, innerPool, srcMLPath, hunkLimit, isJava);
+
+                    // Update progress bar
+//                    pb.step();
+                    System.out.print(".");
+
+                    // Stop monitoring thread
+                    monitor.interrupt();
+                });
+            });
+
+            executor.shutdown();
+        }
+//        ProgressBar.wrap(allMessageFiles.stream().parallel(), "Task").forEach(m ->
+//            {
+//                EDiffHunkParser parser = new EDiffHunkParser();
+//                parser.parseFixPatterns(m.getPrevFile(), m.getRevFile(), m.getDiffEntryFile(), project, innerPool, srcMLPath, hunkLimit, isJava);
+//            }
+//        );
     }
 
 
     private static List<MessageFile> getMessageFiles(String gumTreeInput, String datasetName, String patchSize, boolean isJava)
     {
-        String inputPath = gumTreeInput; // prevFiles  revFiles diffentryFile positionsFile
-        File revFilesPath = new File(inputPath + "revFiles/");
+        File revFilesPath = new File(gumTreeInput + "revFiles/");
         log.info(revFilesPath.getPath());
         File[] revFiles = revFilesPath.listFiles();
         if (revFiles != null)
@@ -128,7 +169,10 @@ public class EnhancedASTDiff
                 {
                     count++;
                 }
-                if (count >= Integer.valueOf(patchSize)) continue;
+                if (count >= Integer.parseInt(patchSize))
+                {
+                    continue;
+                }
                 String[] split1 = diffentryFile.getParent().split(datasetName);
                 String root = split1[0];
                 String pj = split1[1].split("/")[1];
@@ -140,6 +184,9 @@ public class EnhancedASTDiff
 
             return msgFiles;
         }
-        else return null;
+        else
+        {
+            return null;
+        }
     }
 }

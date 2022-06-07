@@ -2,9 +2,12 @@ package edu.lu.uni.serval.richedit.ediff;
 
 import com.github.gumtreediff.actions.model.Action;
 import com.github.gumtreediff.tree.ITree;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -14,6 +17,7 @@ import java.util.List;
  */
 public class HierarchicalActionSet implements Comparable<HierarchicalActionSet>, Serializable
 {
+    private static final Logger log = LoggerFactory.getLogger(EDiffHunkParser.class);
 
     private String astNodeType;
 
@@ -212,46 +216,51 @@ public class HierarchicalActionSet implements Comparable<HierarchicalActionSet>,
         return this.startPosition.compareTo(o.startPosition);//this.action.compareTo(o.action);
     }
 
-    private final List<String> strList = new ArrayList<>();
+    final List<String> strList = new ArrayList<>();
 
-    public int getActionSize()
+//    public int getActionSize()
+//    {
+//        return strList.size();
+//    }
+
+    private Integer size = null;
+
+    public int getActionSizeRec(int maxSize)
     {
-        return strList.size();
+        if (this.size != null) return this.size;
+
+        int size = 1;
+        for (HierarchicalActionSet s : subActions)
+        {
+            size += s.getActionSizeRec(maxSize);
+            if (size > maxSize) return maxSize + 1;
+        }
+
+        return this.size = size;
     }
 
     @Override
     public String toString()
     {
-        String str = actionString;
+//        log.info("Calling toString on {}", actionString);
         if (strList.size() == 0)
         {
-            strList.add(str);
+            strList.add(actionString);
+
+            // TODO: Can we use unique subActions instead of full subActions with many duplicates?
+//            List<HierarchicalActionSet> usedSubActions = subActions.size() > 20 ? new ArrayList<>(new HashSet<>(subActions)) : subActions;
+
             for (HierarchicalActionSet actionSet : subActions)
             {
                 actionSet.toString();
-                List<String> strList1 = actionSet.strList;
-                for (String str1 : strList1)
-                {
-                    strList.add("---" + str1);
-                }
-            }
-        }
-        else
-        {
-            strList.clear();
-            strList.add(str);
-            for (HierarchicalActionSet actionSet : subActions)
-            {
-                actionSet.toString();
-                List<String> strList1 = actionSet.strList;
-                for (String str1 : strList1)
+                for (String str1 : actionSet.strList)
                 {
                     strList.add("---" + str1);
                 }
             }
         }
 
-        str = "";
+        String str = "";
         for (String str1 : strList)
         {
             str += str1 + "\n";
@@ -259,6 +268,4 @@ public class HierarchicalActionSet implements Comparable<HierarchicalActionSet>,
 
         return str;
     }
-
-
 }

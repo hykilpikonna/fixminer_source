@@ -1,5 +1,6 @@
 package edu.lu.uni.serval.richedit.jobs;
 
+import edu.lu.uni.serval.richedit.ediff.EDiffHunkParser;
 import edu.lu.uni.serval.utils.CallShell;
 import edu.lu.uni.serval.utils.EDiffHelper;
 import edu.lu.uni.serval.utils.PoolBuilder;
@@ -13,6 +14,10 @@ import redis.clients.jedis.JedisPool;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -38,12 +43,51 @@ public class CompareTrees
             compare = inner.scard("compare");
         }
         IntStream stream = IntStream.range(0, compare.intValue());
+        {
+            ExecutorService executor = Executors.newScheduledThreadPool(36);
 
-        ProgressBar.wrap(stream.parallel(), "Task").forEach(m ->
+            stream.forEach(m ->
             {
-                newCoreCompare(job, errorPairs, filenames, outerPool);
-            }
-        );
+                String id = UUID.randomUUID().toString();
+                Future<?> future = executor.submit(() ->
+                {
+                    Thread cur = Thread.currentThread();
+
+                    // Monitor thread
+                    Thread monitor = new Thread(() ->
+                    {
+                        try
+                        {
+                            Thread.sleep(60 * 1000);
+                            cur.stop();
+                            log.info("Cancelled {} because of timeout", cur.getName());
+
+                            // Update progress bar
+                            //                            pb.step();
+                        }
+                        catch (InterruptedException ignored) {}
+                    });
+                    monitor.start();
+
+                    // Parse
+                    newCoreCompare(job, errorPairs, filenames, outerPool);
+
+                    // Update progress bar
+                    //                    pb.step();
+                    System.out.print(".");
+
+                    // Stop monitoring thread
+                    monitor.interrupt();
+                });
+            });
+
+            executor.shutdown();
+        }
+//        ProgressBar.wrap(stream.parallel(), "Task").forEach(m ->
+//            {
+//                newCoreCompare(job, errorPairs, filenames, outerPool);
+//            }
+//        );
 
         log.info("End process");
     }
@@ -74,7 +118,7 @@ public class CompareTrees
             }
             Map<String, String> oldTreeString = EDiffHelper.getTreeString(keyName, i, outerPool, filenames);
             Map<String, String> newTreeString = EDiffHelper.getTreeString(keyName, j, outerPool, filenames);
-
+            //log.info("start switching");
             switch (treeType)
             {
                 case "single":
