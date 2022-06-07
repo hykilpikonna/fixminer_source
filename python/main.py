@@ -1,4 +1,5 @@
 import inspect
+import requests
 
 from common.commons import *
 import argparse
@@ -41,7 +42,8 @@ def job_start_redis():
 def job_richedit():
     job_start_redis()
     cmd = f"JAVA_HOME='{jdk8}' java -jar '{JAR_PATH}' {args.prop} RICHEDITSCRIPT"
-    output = shellCallTemplate(cmd)
+    print(f"Running command: {cmd}")
+    output = os.system(cmd)
     logging.info(output)
 
 
