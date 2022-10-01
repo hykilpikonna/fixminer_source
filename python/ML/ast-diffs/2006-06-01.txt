@@ -1,0 +1,573 @@
+UPD VariableDeclarationStatement@@MockHttpSession session=new MockHttpSession(); @TO@ MockHttpSession session=new MockHttpSession(servletContext); @AT@ 2854 @LENGTH@ 48
+---UPD VariableDeclarationFragment@@session=new MockHttpSession() @TO@ session=new MockHttpSession(servletContext) @AT@ 2870 @LENGTH@ 31
+------UPD ClassInstanceCreation@@MockHttpSession[] @TO@ MockHttpSession[servletContext] @AT@ 2880 @LENGTH@ 21
+---------INS SimpleName@@servletContext @TO@ ClassInstanceCreation@@MockHttpSession[] @AT@ 2485 @LENGTH@ 14
+
+
+UPD MethodDeclaration@@public, void, MethodName:setLayout, PropertiesConfigurationLayout layout,  @TO@ public, synchronized, void, MethodName:setLayout, PropertiesConfigurationLayout layout,  @AT@ 11443 @LENGTH@ 101
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@public, void, MethodName:setLayout, PropertiesConfigurationLayout layout,  @AT@ 11450 @LENGTH@ 12
+
+
+UPD Block@@ElseBody:if (value instanceof boolean[]) {  boolean[] array=(boolean[])value;  value=array.length == 0 ? null : new Boolean(array[0]);} else if (value instanceof byte[]) {  byte[] array=(byte[])value;  value=array.length == 0 ? null : new Byte(array[0]);} else if (value instanceof short[]) {  short[] array=(short[])value;  value=array.length == 0 ? null : new Short(array[0]);} else if (value instanceof int[]) {  int[] array=(int[])value;  value=array.length == 0 ? null : new Integer(array[0]);} else if (value instanceof long[]) {  long[] array=(long[])value;  value=array.length == 0 ? null : new Long(array[0]);} else if (value instanceof float[]) {  float[] array=(float[])value;  value=array.length == 0 ? null : new Float(array[0]);} else if (value instanceof double[]) {  double[] array=(double[])value;  value=array.length == 0 ? null : new Double(array[0]);} @TO@ ElseBody:if (value instanceof boolean[]) {  boolean[] array=(boolean[])value;  value=array.length == 0 ? null : array[0] ? Boolean.TRUE : Boolean.FALSE;} else if (value instanceof byte[]) {  byte[] array=(byte[])value;  value=array.length == 0 ? null : new Byte(array[0]);} else if (value instanceof short[]) {  short[] array=(short[])value;  value=array.length == 0 ? null : new Short(array[0]);} else if (value instanceof int[]) {  int[] array=(int[])value;  value=array.length == 0 ? null : new Integer(array[0]);} else if (value instanceof long[]) {  long[] array=(long[])value;  value=array.length == 0 ? null : new Long(array[0]);} else if (value instanceof float[]) {  float[] array=(float[])value;  value=array.length == 0 ? null : new Float(array[0]);} else if (value instanceof double[]) {  double[] array=(double[])value;  value=array.length == 0 ? null : new Double(array[0]);} @AT@ 28443 @LENGTH@ 1354
+---UPD IfStatement@@if (value instanceof boolean[]) {  boolean[] array=(boolean[])value;  value=array.length == 0 ? null : new Boolean(array[0]);} else if (value instanceof byte[]) {  byte[] array=(byte[])value;  value=array.length == 0 ? null : new Byte(array[0]);} else if (value instanceof short[]) {  short[] array=(short[])value;  value=array.length == 0 ? null : new Short(array[0]);} else if (value instanceof int[]) {  int[] array=(int[])value;  value=array.length == 0 ? null : new Integer(array[0]);} else if (value instanceof long[]) {  long[] array=(long[])value;  value=array.length == 0 ? null : new Long(array[0]);} else if (value instanceof float[]) {  float[] array=(float[])value;  value=array.length == 0 ? null : new Float(array[0]);} else if (value instanceof double[]) {  double[] array=(double[])value;  value=array.length == 0 ? null : new Double(array[0]);} @TO@ if (value instanceof boolean[]) {  boolean[] array=(boolean[])value;  value=array.length == 0 ? null : array[0] ? Boolean.TRUE : Boolean.FALSE;} else if (value instanceof byte[]) {  byte[] array=(byte[])value;  value=array.length == 0 ? null : new Byte(array[0]);} else if (value instanceof short[]) {  short[] array=(short[])value;  value=array.length == 0 ? null : new Short(array[0]);} else if (value instanceof int[]) {  int[] array=(int[])value;  value=array.length == 0 ? null : new Integer(array[0]);} else if (value instanceof long[]) {  long[] array=(long[])value;  value=array.length == 0 ? null : new Long(array[0]);} else if (value instanceof float[]) {  float[] array=(float[])value;  value=array.length == 0 ? null : new Float(array[0]);} else if (value instanceof double[]) {  double[] array=(double[])value;  value=array.length == 0 ? null : new Double(array[0]);} @AT@ 28443 @LENGTH@ 1354
+------UPD Block@@ThenBody:{  boolean[] array=(boolean[])value;  value=array.length == 0 ? null : new Boolean(array[0]);} @TO@ ThenBody:{  boolean[] array=(boolean[])value;  value=array.length == 0 ? null : array[0] ? Boolean.TRUE : Boolean.FALSE;} @AT@ 28487 @LENGTH@ 142
+---------UPD ExpressionStatement@@Assignment:value=array.length == 0 ? null : new Boolean(array[0]) @TO@ Assignment:value=array.length == 0 ? null : array[0] ? Boolean.TRUE : Boolean.FALSE @AT@ 28558 @LENGTH@ 57
+------------UPD Assignment@@value=array.length == 0 ? null : new Boolean(array[0]) @TO@ value=array.length == 0 ? null : array[0] ? Boolean.TRUE : Boolean.FALSE @AT@ 28558 @LENGTH@ 56
+---------------UPD ConditionalExpression@@array.length == 0 ? null : new Boolean(array[0]) @TO@ array.length == 0 ? null : array[0] ? Boolean.TRUE : Boolean.FALSE @AT@ 28566 @LENGTH@ 48
+------------------INS ConditionalExpression@@array[0] ? Boolean.TRUE : Boolean.FALSE @TO@ ConditionalExpression@@array.length == 0 ? null : new Boolean(array[0]) @AT@ 28593 @LENGTH@ 39
+---------------------INS ArrayAccess@@array[0] @TO@ ConditionalExpression@@array[0] ? Boolean.TRUE : Boolean.FALSE @AT@ 28593 @LENGTH@ 8
+------------------------MOV SimpleName@@array @TO@ ArrayAccess@@array[0] @AT@ 28605 @LENGTH@ 5
+------------------------MOV NumberLiteral@@0 @TO@ ArrayAccess@@array[0] @AT@ 28611 @LENGTH@ 1
+---------------------INS QualifiedName@@Boolean.TRUE @TO@ ConditionalExpression@@array[0] ? Boolean.TRUE : Boolean.FALSE @AT@ 28604 @LENGTH@ 12
+------------------------INS SimpleName@@Boolean @TO@ QualifiedName@@Boolean.TRUE @AT@ 28604 @LENGTH@ 7
+------------------------INS SimpleName@@TRUE @TO@ QualifiedName@@Boolean.TRUE @AT@ 28612 @LENGTH@ 4
+---------------------INS QualifiedName@@Boolean.FALSE @TO@ ConditionalExpression@@array[0] ? Boolean.TRUE : Boolean.FALSE @AT@ 28619 @LENGTH@ 13
+------------------------INS SimpleName@@Boolean @TO@ QualifiedName@@Boolean.FALSE @AT@ 28619 @LENGTH@ 7
+------------------------INS SimpleName@@FALSE @TO@ QualifiedName@@Boolean.FALSE @AT@ 28627 @LENGTH@ 5
+------------------DEL ClassInstanceCreation@@Boolean[array[0]] @AT@ 28593 @LENGTH@ 21
+---------------------DEL New@@new @AT@ 28593 @LENGTH@ 3
+---------------------DEL SimpleType@@Boolean @AT@ 28597 @LENGTH@ 7
+---------------------DEL ArrayAccess@@array[0] @AT@ 28605 @LENGTH@ 8
+---UPD IfStatement@@if (value instanceof boolean[]) {  boolean[] array=(boolean[])value;  value=array.length == 0 ? null : new Boolean(array[0]);} else if (value instanceof byte[]) {  byte[] array=(byte[])value;  value=array.length == 0 ? null : new Byte(array[0]);} else if (value instanceof short[]) {  short[] array=(short[])value;  value=array.length == 0 ? null : new Short(array[0]);} else if (value instanceof int[]) {  int[] array=(int[])value;  value=array.length == 0 ? null : new Integer(array[0]);} else if (value instanceof long[]) {  long[] array=(long[])value;  value=array.length == 0 ? null : new Long(array[0]);} else if (value instanceof float[]) {  float[] array=(float[])value;  value=array.length == 0 ? null : new Float(array[0]);} else if (value instanceof double[]) {  double[] array=(double[])value;  value=array.length == 0 ? null : new Double(array[0]);} @TO@ if (value instanceof boolean[]) {  boolean[] array=(boolean[])value;  value=array.length == 0 ? null : array[0] ? Boolean.TRUE : Boolean.FALSE;} else if (value instanceof byte[]) {  byte[] array=(byte[])value;  value=array.length == 0 ? null : new Byte(array[0]);} else if (value instanceof short[]) {  short[] array=(short[])value;  value=array.length == 0 ? null : new Short(array[0]);} else if (value instanceof int[]) {  int[] array=(int[])value;  value=array.length == 0 ? null : new Integer(array[0]);} else if (value instanceof long[]) {  long[] array=(long[])value;  value=array.length == 0 ? null : new Long(array[0]);} else if (value instanceof float[]) {  float[] array=(float[])value;  value=array.length == 0 ? null : new Float(array[0]);} else if (value instanceof double[]) {  double[] array=(double[])value;  value=array.length == 0 ? null : new Double(array[0]);} @AT@ 28443 @LENGTH@ 1354
+------UPD Block@@ThenBody:{  boolean[] array=(boolean[])value;  value=array.length == 0 ? null : new Boolean(array[0]);} @TO@ ThenBody:{  boolean[] array=(boolean[])value;  value=array.length == 0 ? null : array[0] ? Boolean.TRUE : Boolean.FALSE;} @AT@ 28487 @LENGTH@ 142
+---------UPD ExpressionStatement@@Assignment:value=array.length == 0 ? null : new Boolean(array[0]) @TO@ Assignment:value=array.length == 0 ? null : array[0] ? Boolean.TRUE : Boolean.FALSE @AT@ 28558 @LENGTH@ 57
+------------UPD Assignment@@value=array.length == 0 ? null : new Boolean(array[0]) @TO@ value=array.length == 0 ? null : array[0] ? Boolean.TRUE : Boolean.FALSE @AT@ 28558 @LENGTH@ 56
+---------------UPD ConditionalExpression@@array.length == 0 ? null : new Boolean(array[0]) @TO@ array.length == 0 ? null : array[0] ? Boolean.TRUE : Boolean.FALSE @AT@ 28566 @LENGTH@ 48
+------------------INS ConditionalExpression@@array[0] ? Boolean.TRUE : Boolean.FALSE @TO@ ConditionalExpression@@array.length == 0 ? null : new Boolean(array[0]) @AT@ 28593 @LENGTH@ 39
+---------------------INS ArrayAccess@@array[0] @TO@ ConditionalExpression@@array[0] ? Boolean.TRUE : Boolean.FALSE @AT@ 28593 @LENGTH@ 8
+------------------------MOV SimpleName@@array @TO@ ArrayAccess@@array[0] @AT@ 28605 @LENGTH@ 5
+------------------------MOV NumberLiteral@@0 @TO@ ArrayAccess@@array[0] @AT@ 28611 @LENGTH@ 1
+---------------------INS QualifiedName@@Boolean.TRUE @TO@ ConditionalExpression@@array[0] ? Boolean.TRUE : Boolean.FALSE @AT@ 28604 @LENGTH@ 12
+------------------------INS SimpleName@@Boolean @TO@ QualifiedName@@Boolean.TRUE @AT@ 28604 @LENGTH@ 7
+------------------------INS SimpleName@@TRUE @TO@ QualifiedName@@Boolean.TRUE @AT@ 28612 @LENGTH@ 4
+---------------------INS QualifiedName@@Boolean.FALSE @TO@ ConditionalExpression@@array[0] ? Boolean.TRUE : Boolean.FALSE @AT@ 28619 @LENGTH@ 13
+------------------------INS SimpleName@@Boolean @TO@ QualifiedName@@Boolean.FALSE @AT@ 28619 @LENGTH@ 7
+------------------------INS SimpleName@@FALSE @TO@ QualifiedName@@Boolean.FALSE @AT@ 28627 @LENGTH@ 5
+------------------DEL ClassInstanceCreation@@Boolean[array[0]] @AT@ 28593 @LENGTH@ 21
+---------------------DEL New@@new @AT@ 28593 @LENGTH@ 3
+---------------------DEL SimpleType@@Boolean @AT@ 28597 @LENGTH@ 7
+---------------------DEL ArrayAccess@@array[0] @AT@ 28605 @LENGTH@ 8
+
+
+UPD ReturnStatement@@MethodInvocation:Character.isWhitespace((char)c) @TO@ InfixExpression:Character.isWhitespace((char)c) && (c != strategy.getDelimiter()) @AT@ 18091 @LENGTH@ 40
+---INS InfixExpression@@Character.isWhitespace((char)c) && (c != strategy.getDelimiter()) @TO@ ReturnStatement@@MethodInvocation:Character.isWhitespace((char)c) @AT@ 18098 @LENGTH@ 66
+------MOV MethodInvocation@@Character.isWhitespace((char)c) @TO@ InfixExpression@@Character.isWhitespace((char)c) && (c != strategy.getDelimiter()) @AT@ 18098 @LENGTH@ 32
+------INS Operator@@&& @TO@ InfixExpression@@Character.isWhitespace((char)c) && (c != strategy.getDelimiter()) @AT@ 18130 @LENGTH@ 2
+------INS ParenthesizedExpression@@(c != strategy.getDelimiter()) @TO@ InfixExpression@@Character.isWhitespace((char)c) && (c != strategy.getDelimiter()) @AT@ 18134 @LENGTH@ 30
+---------INS InfixExpression@@c != strategy.getDelimiter() @TO@ ParenthesizedExpression@@(c != strategy.getDelimiter()) @AT@ 18135 @LENGTH@ 28
+------------INS SimpleName@@c @TO@ InfixExpression@@c != strategy.getDelimiter() @AT@ 18135 @LENGTH@ 1
+------------INS Operator@@!= @TO@ InfixExpression@@c != strategy.getDelimiter() @AT@ 18136 @LENGTH@ 2
+------------INS MethodInvocation@@strategy.getDelimiter() @TO@ InfixExpression@@c != strategy.getDelimiter() @AT@ 18140 @LENGTH@ 23
+---------------INS SimpleName@@Name:strategy @TO@ MethodInvocation@@strategy.getDelimiter() @AT@ 18140 @LENGTH@ 8
+---------------INS SimpleName@@MethodName:getDelimiter:[] @TO@ MethodInvocation@@strategy.getDelimiter() @AT@ 18149 @LENGTH@ 14
+
+
+INS MethodDeclaration@@public, Result, MethodName:getResult,  @TO@ TypeDeclaration@@Saaj12SoapFaultDetail, [SoapFaultDetail] @AT@ 1808 @LENGTH@ 75
+---INS Modifier@@public @TO@ MethodDeclaration@@public, Result, MethodName:getResult,  @AT@ 1808 @LENGTH@ 6
+---INS SimpleType@@Result @TO@ MethodDeclaration@@public, Result, MethodName:getResult,  @AT@ 1815 @LENGTH@ 6
+---INS SimpleName@@MethodName:getResult @TO@ MethodDeclaration@@public, Result, MethodName:getResult,  @AT@ 1822 @LENGTH@ 9
+---INS ReturnStatement@@ClassInstanceCreation:new DOMResult(saajDetail) @TO@ MethodDeclaration@@public, Result, MethodName:getResult,  @AT@ 1844 @LENGTH@ 33
+------INS ClassInstanceCreation@@DOMResult[saajDetail] @TO@ ReturnStatement@@ClassInstanceCreation:new DOMResult(saajDetail) @AT@ 1851 @LENGTH@ 25
+---------INS New@@new @TO@ ClassInstanceCreation@@DOMResult[saajDetail] @AT@ 1851 @LENGTH@ 3
+---------INS SimpleType@@DOMResult @TO@ ClassInstanceCreation@@DOMResult[saajDetail] @AT@ 1855 @LENGTH@ 9
+---------INS SimpleName@@saajDetail @TO@ ClassInstanceCreation@@DOMResult[saajDetail] @AT@ 1865 @LENGTH@ 10
+
+
+MOV VariableDeclarationStatement@@String faultString="faultString"; @TO@ MethodDeclaration@@public, void, MethodName:testAddFault, Exception,  @AT@ 3538 @LENGTH@ 35
+
+
+INS MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @TO@ TypeDeclaration@@[public, abstract]AbstractSoap12BodyTestCase, AbstractSoapBodyTestCase @AT@ 5742 @LENGTH@ 1169
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 5742 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 5749 @LENGTH@ 4
+---INS SimpleName@@MethodName:testAddFaultWithDetailResult @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 5754 @LENGTH@ 28
+---INS SimpleType@@Exception @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 5792 @LENGTH@ 9
+---INS VariableDeclarationStatement@@SoapFault fault=soapBody.addServerOrReceiverFault("faultString",Locale.ENGLISH); @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 5812 @LENGTH@ 83
+------INS SimpleType@@SoapFault @TO@ VariableDeclarationStatement@@SoapFault fault=soapBody.addServerOrReceiverFault("faultString",Locale.ENGLISH); @AT@ 5812 @LENGTH@ 9
+------INS VariableDeclarationFragment@@fault=soapBody.addServerOrReceiverFault("faultString",Locale.ENGLISH) @TO@ VariableDeclarationStatement@@SoapFault fault=soapBody.addServerOrReceiverFault("faultString",Locale.ENGLISH); @AT@ 5822 @LENGTH@ 72
+---------INS SimpleName@@fault @TO@ VariableDeclarationFragment@@fault=soapBody.addServerOrReceiverFault("faultString",Locale.ENGLISH) @AT@ 5822 @LENGTH@ 5
+---------INS MethodInvocation@@soapBody.addServerOrReceiverFault("faultString",Locale.ENGLISH) @TO@ VariableDeclarationFragment@@fault=soapBody.addServerOrReceiverFault("faultString",Locale.ENGLISH) @AT@ 5830 @LENGTH@ 64
+------------INS SimpleName@@Name:soapBody @TO@ MethodInvocation@@soapBody.addServerOrReceiverFault("faultString",Locale.ENGLISH) @AT@ 5830 @LENGTH@ 8
+------------INS SimpleName@@MethodName:addServerOrReceiverFault:["faultString", Locale.ENGLISH] @TO@ MethodInvocation@@soapBody.addServerOrReceiverFault("faultString",Locale.ENGLISH) @AT@ 5839 @LENGTH@ 55
+---------------INS StringLiteral@@"faultString" @TO@ SimpleName@@MethodName:addServerOrReceiverFault:["faultString", Locale.ENGLISH] @AT@ 5864 @LENGTH@ 13
+---------------INS QualifiedName@@Locale.ENGLISH @TO@ SimpleName@@MethodName:addServerOrReceiverFault:["faultString", Locale.ENGLISH] @AT@ 5879 @LENGTH@ 14
+------------------INS SimpleName@@Locale @TO@ QualifiedName@@Locale.ENGLISH @AT@ 5879 @LENGTH@ 6
+------------------INS SimpleName@@ENGLISH @TO@ QualifiedName@@Locale.ENGLISH @AT@ 5886 @LENGTH@ 7
+---INS VariableDeclarationStatement@@SoapFaultDetail detail=fault.addFaultDetail(); @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 5904 @LENGTH@ 48
+------INS SimpleType@@SoapFaultDetail @TO@ VariableDeclarationStatement@@SoapFaultDetail detail=fault.addFaultDetail(); @AT@ 5904 @LENGTH@ 15
+------INS VariableDeclarationFragment@@detail=fault.addFaultDetail() @TO@ VariableDeclarationStatement@@SoapFaultDetail detail=fault.addFaultDetail(); @AT@ 5920 @LENGTH@ 31
+---------INS SimpleName@@detail @TO@ VariableDeclarationFragment@@detail=fault.addFaultDetail() @AT@ 5920 @LENGTH@ 6
+---------INS MethodInvocation@@fault.addFaultDetail() @TO@ VariableDeclarationFragment@@detail=fault.addFaultDetail() @AT@ 5929 @LENGTH@ 22
+------------INS SimpleName@@Name:fault @TO@ MethodInvocation@@fault.addFaultDetail() @AT@ 5929 @LENGTH@ 5
+------------INS SimpleName@@MethodName:addFaultDetail:[] @TO@ MethodInvocation@@fault.addFaultDetail() @AT@ 5935 @LENGTH@ 16
+---INS ExpressionStatement@@MethodInvocation:transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 5961 @LENGTH@ 99
+------INS MethodInvocation@@transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @TO@ ExpressionStatement@@MethodInvocation:transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @AT@ 5961 @LENGTH@ 98
+---------INS SimpleName@@Name:transformer @TO@ MethodInvocation@@transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @AT@ 5961 @LENGTH@ 11
+---------INS SimpleName@@MethodName:transform:[new StringSource("<detailContents xmlns='namespace'/>"), detail.getResult()] @TO@ MethodInvocation@@transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @AT@ 5973 @LENGTH@ 86
+------------INS ClassInstanceCreation@@StringSource["<detailContents xmlns='namespace'/>"] @TO@ SimpleName@@MethodName:transform:[new StringSource("<detailContents xmlns='namespace'/>"), detail.getResult()] @AT@ 5983 @LENGTH@ 55
+---------------INS New@@new @TO@ ClassInstanceCreation@@StringSource["<detailContents xmlns='namespace'/>"] @AT@ 5983 @LENGTH@ 3
+---------------INS SimpleType@@StringSource @TO@ ClassInstanceCreation@@StringSource["<detailContents xmlns='namespace'/>"] @AT@ 5987 @LENGTH@ 12
+---------------INS StringLiteral@@"<detailContents xmlns='namespace'/>" @TO@ ClassInstanceCreation@@StringSource["<detailContents xmlns='namespace'/>"] @AT@ 6000 @LENGTH@ 37
+------------INS MethodInvocation@@detail.getResult() @TO@ SimpleName@@MethodName:transform:[new StringSource("<detailContents xmlns='namespace'/>"), detail.getResult()] @AT@ 6040 @LENGTH@ 18
+---------------INS SimpleName@@Name:detail @TO@ MethodInvocation@@detail.getResult() @AT@ 6040 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:getResult:[] @TO@ MethodInvocation@@detail.getResult() @AT@ 6047 @LENGTH@ 11
+---INS ExpressionStatement@@MethodInvocation:transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 6069 @LENGTH@ 99
+------INS MethodInvocation@@transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @TO@ ExpressionStatement@@MethodInvocation:transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @AT@ 6069 @LENGTH@ 98
+---------INS SimpleName@@Name:transformer @TO@ MethodInvocation@@transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @AT@ 6069 @LENGTH@ 11
+---------INS SimpleName@@MethodName:transform:[new StringSource("<detailContents xmlns='namespace'/>"), detail.getResult()] @TO@ MethodInvocation@@transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @AT@ 6081 @LENGTH@ 86
+------------INS ClassInstanceCreation@@StringSource["<detailContents xmlns='namespace'/>"] @TO@ SimpleName@@MethodName:transform:[new StringSource("<detailContents xmlns='namespace'/>"), detail.getResult()] @AT@ 6091 @LENGTH@ 55
+---------------INS New@@new @TO@ ClassInstanceCreation@@StringSource["<detailContents xmlns='namespace'/>"] @AT@ 6091 @LENGTH@ 3
+---------------INS SimpleType@@StringSource @TO@ ClassInstanceCreation@@StringSource["<detailContents xmlns='namespace'/>"] @AT@ 6095 @LENGTH@ 12
+---------------INS StringLiteral@@"<detailContents xmlns='namespace'/>" @TO@ ClassInstanceCreation@@StringSource["<detailContents xmlns='namespace'/>"] @AT@ 6108 @LENGTH@ 37
+------------INS MethodInvocation@@detail.getResult() @TO@ SimpleName@@MethodName:transform:[new StringSource("<detailContents xmlns='namespace'/>"), detail.getResult()] @AT@ 6148 @LENGTH@ 18
+---------------INS SimpleName@@Name:detail @TO@ MethodInvocation@@detail.getResult() @AT@ 6148 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:getResult:[] @TO@ MethodInvocation@@detail.getResult() @AT@ 6155 @LENGTH@ 11
+---INS VariableDeclarationStatement@@StringResult result=new StringResult(); @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 6177 @LENGTH@ 41
+------INS SimpleType@@StringResult @TO@ VariableDeclarationStatement@@StringResult result=new StringResult(); @AT@ 6177 @LENGTH@ 12
+------INS VariableDeclarationFragment@@result=new StringResult() @TO@ VariableDeclarationStatement@@StringResult result=new StringResult(); @AT@ 6190 @LENGTH@ 27
+---------INS SimpleName@@result @TO@ VariableDeclarationFragment@@result=new StringResult() @AT@ 6190 @LENGTH@ 6
+---------INS ClassInstanceCreation@@StringResult[] @TO@ VariableDeclarationFragment@@result=new StringResult() @AT@ 6199 @LENGTH@ 18
+------------INS New@@new @TO@ ClassInstanceCreation@@StringResult[] @AT@ 6199 @LENGTH@ 3
+------------INS SimpleType@@StringResult @TO@ ClassInstanceCreation@@StringResult[] @AT@ 6203 @LENGTH@ 12
+---INS ExpressionStatement@@MethodInvocation:transformer.transform(fault.getSource(),result) @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 6227 @LENGTH@ 49
+------INS MethodInvocation@@transformer.transform(fault.getSource(),result) @TO@ ExpressionStatement@@MethodInvocation:transformer.transform(fault.getSource(),result) @AT@ 6227 @LENGTH@ 48
+---------INS SimpleName@@Name:transformer @TO@ MethodInvocation@@transformer.transform(fault.getSource(),result) @AT@ 6227 @LENGTH@ 11
+---------INS SimpleName@@MethodName:transform:[fault.getSource(), result] @TO@ MethodInvocation@@transformer.transform(fault.getSource(),result) @AT@ 6239 @LENGTH@ 36
+------------INS MethodInvocation@@fault.getSource() @TO@ SimpleName@@MethodName:transform:[fault.getSource(), result] @AT@ 6249 @LENGTH@ 17
+---------------INS SimpleName@@Name:fault @TO@ MethodInvocation@@fault.getSource() @AT@ 6249 @LENGTH@ 5
+---------------INS SimpleName@@MethodName:getSource:[] @TO@ MethodInvocation@@fault.getSource() @AT@ 6255 @LENGTH@ 11
+------------INS SimpleName@@result @TO@ SimpleName@@MethodName:transform:[fault.getSource(), result] @AT@ 6268 @LENGTH@ 6
+---INS ExpressionStatement@@MethodInvocation:assertXMLEqual("Invalid source for body","<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" + soapBody.getName().getPrefix() + ":Receiver</soapenv:Value>"+ "</soapenv:Code>"+ "<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>"+ "<soapenv:Detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</soapenv:Detail></soapenv:Fault>",result.toString()) @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 6285 @LENGTH@ 620
+------INS MethodInvocation@@assertXMLEqual("Invalid source for body","<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" + soapBody.getName().getPrefix() + ":Receiver</soapenv:Value>"+ "</soapenv:Code>"+ "<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>"+ "<soapenv:Detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</soapenv:Detail></soapenv:Fault>",result.toString()) @TO@ ExpressionStatement@@MethodInvocation:assertXMLEqual("Invalid source for body","<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" + soapBody.getName().getPrefix() + ":Receiver</soapenv:Value>"+ "</soapenv:Code>"+ "<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>"+ "<soapenv:Detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</soapenv:Detail></soapenv:Fault>",result.toString()) @AT@ 6285 @LENGTH@ 619
+---------INS SimpleName@@MethodName:assertXMLEqual:["Invalid source for body", "<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" + soapBody.getName().getPrefix() + ":Receiver</soapenv:Value>"+ "</soapenv:Code>"+ "<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>"+ "<soapenv:Detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</soapenv:Detail></soapenv:Fault>", result.toString()] @TO@ MethodInvocation@@assertXMLEqual("Invalid source for body","<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" + soapBody.getName().getPrefix() + ":Receiver</soapenv:Value>"+ "</soapenv:Code>"+ "<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>"+ "<soapenv:Detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</soapenv:Detail></soapenv:Fault>",result.toString()) @AT@ 6285 @LENGTH@ 619
+------------INS StringLiteral@@"Invalid source for body" @TO@ SimpleName@@MethodName:assertXMLEqual:["Invalid source for body", "<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" + soapBody.getName().getPrefix() + ":Receiver</soapenv:Value>"+ "</soapenv:Code>"+ "<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>"+ "<soapenv:Detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</soapenv:Detail></soapenv:Fault>", result.toString()] @AT@ 6300 @LENGTH@ 25
+------------INS InfixExpression@@"<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" + soapBody.getName().getPrefix() + ":Receiver</soapenv:Value>"+ "</soapenv:Code>"+ "<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>"+ "<soapenv:Detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</soapenv:Detail></soapenv:Fault>" @TO@ SimpleName@@MethodName:assertXMLEqual:["Invalid source for body", "<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" + soapBody.getName().getPrefix() + ":Receiver</soapenv:Value>"+ "</soapenv:Code>"+ "<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>"+ "<soapenv:Detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</soapenv:Detail></soapenv:Fault>", result.toString()] @AT@ 6343 @LENGTH@ 541
+---------------INS InfixExpression@@"<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" @TO@ InfixExpression@@"<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" + soapBody.getName().getPrefix() + ":Receiver</soapenv:Value>"+ "</soapenv:Code>"+ "<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>"+ "<soapenv:Detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</soapenv:Detail></soapenv:Fault>" @AT@ 6343 @LENGTH@ 131
+------------------INS StringLiteral@@"<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" @TO@ InfixExpression@@"<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" @AT@ 6343 @LENGTH@ 73
+------------------INS Operator@@+ @TO@ InfixExpression@@"<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" @AT@ 6416 @LENGTH@ 1
+------------------INS StringLiteral@@"<soapenv:Code><soapenv:Value>" @TO@ InfixExpression@@"<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" @AT@ 6443 @LENGTH@ 31
+---------------INS Operator@@+ @TO@ InfixExpression@@"<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" + soapBody.getName().getPrefix() + ":Receiver</soapenv:Value>"+ "</soapenv:Code>"+ "<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>"+ "<soapenv:Detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</soapenv:Detail></soapenv:Fault>" @AT@ 6474 @LENGTH@ 1
+---------------INS MethodInvocation@@soapBody.getName().getPrefix() @TO@ InfixExpression@@"<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" + soapBody.getName().getPrefix() + ":Receiver</soapenv:Value>"+ "</soapenv:Code>"+ "<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>"+ "<soapenv:Detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</soapenv:Detail></soapenv:Fault>" @AT@ 6477 @LENGTH@ 30
+------------------INS MethodInvocation@@MethodName:getName:[] @TO@ MethodInvocation@@soapBody.getName().getPrefix() @AT@ 6477 @LENGTH@ 18
+------------------INS SimpleName@@Name:soapBody @TO@ MethodInvocation@@soapBody.getName().getPrefix() @AT@ 6477 @LENGTH@ 8
+------------------INS SimpleName@@MethodName:getPrefix:[] @TO@ MethodInvocation@@soapBody.getName().getPrefix() @AT@ 6496 @LENGTH@ 11
+---------------INS StringLiteral@@":Receiver</soapenv:Value>" @TO@ InfixExpression@@"<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" + soapBody.getName().getPrefix() + ":Receiver</soapenv:Value>"+ "</soapenv:Code>"+ "<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>"+ "<soapenv:Detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</soapenv:Detail></soapenv:Fault>" @AT@ 6510 @LENGTH@ 27
+---------------INS StringLiteral@@"</soapenv:Code>" @TO@ InfixExpression@@"<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" + soapBody.getName().getPrefix() + ":Receiver</soapenv:Value>"+ "</soapenv:Code>"+ "<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>"+ "<soapenv:Detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</soapenv:Detail></soapenv:Fault>" @AT@ 6564 @LENGTH@ 17
+---------------INS StringLiteral@@"<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>" @TO@ InfixExpression@@"<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" + soapBody.getName().getPrefix() + ":Receiver</soapenv:Value>"+ "</soapenv:Code>"+ "<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>"+ "<soapenv:Detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</soapenv:Detail></soapenv:Fault>" @AT@ 6608 @LENGTH@ 89
+---------------INS StringLiteral@@"<soapenv:Detail>" @TO@ InfixExpression@@"<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" + soapBody.getName().getPrefix() + ":Receiver</soapenv:Value>"+ "</soapenv:Code>"+ "<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>"+ "<soapenv:Detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</soapenv:Detail></soapenv:Fault>" @AT@ 6724 @LENGTH@ 18
+---------------INS StringLiteral@@"<detailContents xmlns='namespace'/>" @TO@ InfixExpression@@"<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" + soapBody.getName().getPrefix() + ":Receiver</soapenv:Value>"+ "</soapenv:Code>"+ "<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>"+ "<soapenv:Detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</soapenv:Detail></soapenv:Fault>" @AT@ 6745 @LENGTH@ 37
+---------------INS StringLiteral@@"<detailContents xmlns='namespace'/>" @TO@ InfixExpression@@"<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" + soapBody.getName().getPrefix() + ":Receiver</soapenv:Value>"+ "</soapenv:Code>"+ "<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>"+ "<soapenv:Detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</soapenv:Detail></soapenv:Fault>" @AT@ 6809 @LENGTH@ 37
+---------------INS StringLiteral@@"</soapenv:Detail></soapenv:Fault>" @TO@ InfixExpression@@"<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" + soapBody.getName().getPrefix() + ":Receiver</soapenv:Value>"+ "</soapenv:Code>"+ "<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>"+ "<soapenv:Detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</soapenv:Detail></soapenv:Fault>" @AT@ 6849 @LENGTH@ 35
+------------INS MethodInvocation@@result.toString() @TO@ SimpleName@@MethodName:assertXMLEqual:["Invalid source for body", "<soapenv:Fault xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope'>" + "<soapenv:Code><soapenv:Value>" + soapBody.getName().getPrefix() + ":Receiver</soapenv:Value>"+ "</soapenv:Code>"+ "<soapenv:Reason><soapenv:Text xml:lang='en'>faultString</soapenv:Text></soapenv:Reason>"+ "<soapenv:Detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</soapenv:Detail></soapenv:Fault>", result.toString()] @AT@ 6886 @LENGTH@ 17
+---------------INS SimpleName@@Name:result @TO@ MethodInvocation@@result.toString() @AT@ 6886 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:toString:[] @TO@ MethodInvocation@@result.toString() @AT@ 6893 @LENGTH@ 10
+
+
+INS TryStatement@@try {  trans.transform(source,result);} catch (NoSuchMethodError ex) {  return;} @TO@ MethodDeclaration@@public, void, MethodName:testParse, Exception,  @AT@ 1804 @LENGTH@ 284
+---MOV ExpressionStatement@@MethodInvocation:trans.transform(source,result) @TO@ TryStatement@@try {  trans.transform(source,result);} catch (NoSuchMethodError ex) {  return;} @AT@ 1804 @LENGTH@ 32
+---INS CatchClause@@catch (NoSuchMethodError ex) {  return;} @TO@ TryStatement@@try {  trans.transform(source,result);} catch (NoSuchMethodError ex) {  return;} @AT@ 2021 @LENGTH@ 67
+------INS SingleVariableDeclaration@@NoSuchMethodError ex @TO@ CatchClause@@catch (NoSuchMethodError ex) {  return;} @AT@ 2027 @LENGTH@ 20
+---------INS SimpleType@@NoSuchMethodError @TO@ SingleVariableDeclaration@@NoSuchMethodError ex @AT@ 2027 @LENGTH@ 17
+---------INS SimpleName@@ex @TO@ SingleVariableDeclaration@@NoSuchMethodError ex @AT@ 2045 @LENGTH@ 2
+------INS ReturnStatement@@ @TO@ CatchClause@@catch (NoSuchMethodError ex) {  return;} @AT@ 2071 @LENGTH@ 7
+
+
+UPD VariableDeclarationStatement@@MethodInvocation mi=MethodInvocationUtils.createFromClass(ITargetObject.class,"makeLowerCase",new Class[]{String.class}); @TO@ MethodInvocation mi=MethodInvocationUtils.createFromClass(ITargetObject.class,"makeLowerCase",new Class[]{String.class},new Object[]{"Hello world"}); @AT@ 3568 @LENGTH@ 142
+---UPD VariableDeclarationFragment@@mi=MethodInvocationUtils.createFromClass(ITargetObject.class,"makeLowerCase",new Class[]{String.class}) @TO@ mi=MethodInvocationUtils.createFromClass(ITargetObject.class,"makeLowerCase",new Class[]{String.class},new Object[]{"Hello world"}) @AT@ 3585 @LENGTH@ 124
+------UPD MethodInvocation@@MethodInvocationUtils.createFromClass(ITargetObject.class,"makeLowerCase",new Class[]{String.class}) @TO@ MethodInvocationUtils.createFromClass(ITargetObject.class,"makeLowerCase",new Class[]{String.class},new Object[]{"Hello world"}) @AT@ 3590 @LENGTH@ 119
+---------UPD SimpleName@@MethodName:createFromClass:[ITargetObject.class, "makeLowerCase", new Class[]{String.class}] @TO@ MethodName:createFromClass:[ITargetObject.class, "makeLowerCase", new Class[]{String.class}, new Object[]{"Hello world"}] @AT@ 3612 @LENGTH@ 97
+------------INS ArrayCreation@@new Object[]{"Hello world"} @TO@ SimpleName@@MethodName:createFromClass:[ITargetObject.class, "makeLowerCase", new Class[]{String.class}] @AT@ 3710 @LENGTH@ 28
+---------------INS ArrayType@@Object[] @TO@ ArrayCreation@@new Object[]{"Hello world"} @AT@ 3714 @LENGTH@ 8
+------------------INS SimpleType@@Object @TO@ ArrayType@@Object[] @AT@ 3714 @LENGTH@ 6
+---------------INS ArrayInitializer@@{"Hello world"} @TO@ ArrayCreation@@new Object[]{"Hello world"} @AT@ 3723 @LENGTH@ 15
+------------------INS StringLiteral@@"Hello world" @TO@ ArrayInitializer@@{"Hello world"} @AT@ 3724 @LENGTH@ 13
+
+
+UPD MethodDeclaration@@protected, SOAPMessage, MethodName:loadSaajMessage, String fileName, SOAPException, IOException,  @TO@ protected, SaajSoapMessage, MethodName:loadSaajMessage, String fileName, SOAPException, IOException,  @AT@ 3185 @LENGTH@ 570
+---UPD SimpleType@@SOAPMessage @TO@ SaajSoapMessage @AT@ 3195 @LENGTH@ 11
+---UPD TryStatement@@try {  is=getClass().getResourceAsStream(fileName);  assertNotNull("Could not load SAAJ message with name [" + fileName + "]",is);  return messageFactory.createMessage(mimeHeaders,is);}  finally {  if (is != null) {    is.close();  }} @TO@ try {  is=getClass().getResourceAsStream(fileName);  assertNotNull("Could not load SAAJ message with name [" + fileName + "]",is);  return new Saaj13SoapMessage(messageFactory.createMessage(mimeHeaders,is));}  finally {  if (is != null) {    is.close();  }} @AT@ 3427 @LENGTH@ 322
+------UPD ReturnStatement@@MethodInvocation:messageFactory.createMessage(mimeHeaders,is) @TO@ ClassInstanceCreation:new Saaj13SoapMessage(messageFactory.createMessage(mimeHeaders,is)) @AT@ 3586 @LENGTH@ 53
+---------INS ClassInstanceCreation@@Saaj13SoapMessage[messageFactory.createMessage(mimeHeaders,is)] @TO@ ReturnStatement@@MethodInvocation:messageFactory.createMessage(mimeHeaders,is) @AT@ 3727 @LENGTH@ 68
+------------MOV MethodInvocation@@messageFactory.createMessage(mimeHeaders,is) @TO@ ClassInstanceCreation@@Saaj13SoapMessage[messageFactory.createMessage(mimeHeaders,is)] @AT@ 3593 @LENGTH@ 45
+------------INS New@@new @TO@ ClassInstanceCreation@@Saaj13SoapMessage[messageFactory.createMessage(mimeHeaders,is)] @AT@ 3727 @LENGTH@ 3
+------------INS SimpleType@@Saaj13SoapMessage @TO@ ClassInstanceCreation@@Saaj13SoapMessage[messageFactory.createMessage(mimeHeaders,is)] @AT@ 3731 @LENGTH@ 17
+
+
+UPD IfStatement@@if ((attribute.getAttribute() != null) && attribute.getAttribute().startsWith(getProcessConfigAttribute())) {  return true;} else {  return false;} @TO@ if ((attribute.getAttribute() != null) && attribute.getAttribute().equals(getProcessConfigAttribute())) {  return true;} else {  return false;} @AT@ 7790 @LENGTH@ 187
+---UPD InfixExpression@@(attribute.getAttribute() != null) && attribute.getAttribute().startsWith(getProcessConfigAttribute()) @TO@ (attribute.getAttribute() != null) && attribute.getAttribute().equals(getProcessConfigAttribute()) @AT@ 7794 @LENGTH@ 102
+------UPD MethodInvocation@@attribute.getAttribute().startsWith(getProcessConfigAttribute()) @TO@ attribute.getAttribute().equals(getProcessConfigAttribute()) @AT@ 7832 @LENGTH@ 64
+---------UPD SimpleName@@MethodName:startsWith:[getProcessConfigAttribute()] @TO@ MethodName:equals:[getProcessConfigAttribute()] @AT@ 7857 @LENGTH@ 39
+
+
+INS MethodDeclaration@@Result, MethodName:getResult,  @TO@ TypeDeclaration@@[public]SoapFaultDetail, [SoapElement] @AT@ 1607 @LENGTH@ 12
+---INS SimpleType@@Result @TO@ MethodDeclaration@@Result, MethodName:getResult,  @AT@ 1600 @LENGTH@ 6
+---INS SimpleName@@MethodName:getResult @TO@ MethodDeclaration@@Result, MethodName:getResult,  @AT@ 1607 @LENGTH@ 9
+
+
+UPD IfStatement@@if (child != null) {  parent=child.getParentNode();} @TO@ if (child != null) {  parent=child.getParentNode();  super.addChild(child);  child.setParentNode(parent);} else {  throw new IllegalArgumentException("Child node must not be null!");} @AT@ 2196 @LENGTH@ 82
+---UPD Block@@ThenBody:{  parent=child.getParentNode();} @TO@ ThenBody:{  parent=child.getParentNode();  super.addChild(child);  child.setParentNode(parent);} @AT@ 2223 @LENGTH@ 55
+------MOV ExpressionStatement@@SuperMethodInvocation:super.addChild(child) @TO@ Block@@ThenBody:{  parent=child.getParentNode();} @AT@ 2287 @LENGTH@ 22
+------MOV ExpressionStatement@@MethodInvocation:child.setParentNode(parent) @TO@ Block@@ThenBody:{  parent=child.getParentNode();} @AT@ 2318 @LENGTH@ 28
+---INS Block@@ElseBody:{  throw new IllegalArgumentException("Child node must not be null!");} @TO@ IfStatement@@if (child != null) {  parent=child.getParentNode();} @AT@ 2501 @LENGTH@ 91
+------INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Child node must not be null!") @TO@ Block@@ElseBody:{  throw new IllegalArgumentException("Child node must not be null!");} @AT@ 2515 @LENGTH@ 67
+---------INS ClassInstanceCreation@@IllegalArgumentException["Child node must not be null!"] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Child node must not be null!") @AT@ 2521 @LENGTH@ 60
+------------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Child node must not be null!"] @AT@ 2521 @LENGTH@ 3
+------------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Child node must not be null!"] @AT@ 2525 @LENGTH@ 24
+------------INS StringLiteral@@"Child node must not be null!" @TO@ ClassInstanceCreation@@IllegalArgumentException["Child node must not be null!"] @AT@ 2550 @LENGTH@ 30
+
+
+UPD VariableDeclarationStatement@@Marshaller marshaller=new Marshaller(node); @TO@ ContentHandler contentHandler=new DomContentHandler(node); @AT@ 8233 @LENGTH@ 45
+---UPD SimpleType@@Marshaller @TO@ ContentHandler @AT@ 8233 @LENGTH@ 10
+---UPD VariableDeclarationFragment@@marshaller=new Marshaller(node) @TO@ contentHandler=new DomContentHandler(node) @AT@ 8244 @LENGTH@ 33
+------UPD SimpleName@@marshaller @TO@ contentHandler @AT@ 8244 @LENGTH@ 10
+------UPD ClassInstanceCreation@@Marshaller[node] @TO@ DomContentHandler[node] @AT@ 8257 @LENGTH@ 20
+---------UPD SimpleType@@Marshaller @TO@ DomContentHandler @AT@ 8261 @LENGTH@ 10
+
+
+INS MethodDeclaration@@public, Result, MethodName:getResult,  @TO@ TypeDeclaration@@Saaj13SoapFaultDetail, [SoapFaultDetail] @AT@ 1570 @LENGTH@ 75
+---INS Modifier@@public @TO@ MethodDeclaration@@public, Result, MethodName:getResult,  @AT@ 1570 @LENGTH@ 6
+---INS SimpleType@@Result @TO@ MethodDeclaration@@public, Result, MethodName:getResult,  @AT@ 1577 @LENGTH@ 6
+---INS SimpleName@@MethodName:getResult @TO@ MethodDeclaration@@public, Result, MethodName:getResult,  @AT@ 1584 @LENGTH@ 9
+---INS ReturnStatement@@ClassInstanceCreation:new DOMResult(saajDetail) @TO@ MethodDeclaration@@public, Result, MethodName:getResult,  @AT@ 1606 @LENGTH@ 33
+------INS ClassInstanceCreation@@DOMResult[saajDetail] @TO@ ReturnStatement@@ClassInstanceCreation:new DOMResult(saajDetail) @AT@ 1613 @LENGTH@ 25
+---------INS New@@new @TO@ ClassInstanceCreation@@DOMResult[saajDetail] @AT@ 1613 @LENGTH@ 3
+---------INS SimpleType@@DOMResult @TO@ ClassInstanceCreation@@DOMResult[saajDetail] @AT@ 1617 @LENGTH@ 9
+---------INS SimpleName@@saajDetail @TO@ ClassInstanceCreation@@DOMResult[saajDetail] @AT@ 1627 @LENGTH@ 10
+
+
+UPD IfStatement@@if (callback instanceof PasswordValidationCallback) {  PasswordValidationCallback passwordCallback=(PasswordValidationCallback)callback;  if (passwordCallback.getRequest() instanceof PasswordValidationCallback.PlainTextPasswordRequest) {    passwordCallback.setValidator(new SimplePlainTextPasswordValidator());  } else   if (passwordCallback.getRequest() instanceof PasswordValidationCallback.DigestPasswordRequest) {    PasswordValidationCallback.DigestPasswordRequest digestPasswordRequest=(PasswordValidationCallback.DigestPasswordRequest)passwordCallback.getRequest();    String password=users.getProperty(digestPasswordRequest.getUsername());    digestPasswordRequest.setPassword(password);    passwordCallback.setValidator(new PasswordValidationCallback.DigestPasswordValidator());  }  passwordCallback.setValidator(new SimplePlainTextPasswordValidator());} else if (callback instanceof TimestampValidationCallback) {  TimestampValidationCallback timestampCallback=(TimestampValidationCallback)callback;  timestampCallback.setValidator(new DefaultTimestampValidator());} else {  throw new UnsupportedCallbackException(callback);} @TO@ if (callback instanceof PasswordValidationCallback) {  PasswordValidationCallback passwordCallback=(PasswordValidationCallback)callback;  if (passwordCallback.getRequest() instanceof PasswordValidationCallback.PlainTextPasswordRequest) {    passwordCallback.setValidator(new SimplePlainTextPasswordValidator());  } else   if (passwordCallback.getRequest() instanceof PasswordValidationCallback.DigestPasswordRequest) {    PasswordValidationCallback.DigestPasswordRequest digestPasswordRequest=(PasswordValidationCallback.DigestPasswordRequest)passwordCallback.getRequest();    String password=users.getProperty(digestPasswordRequest.getUsername());    digestPasswordRequest.setPassword(password);    passwordCallback.setValidator(new PasswordValidationCallback.DigestPasswordValidator());  }} else if (callback instanceof TimestampValidationCallback) {  TimestampValidationCallback timestampCallback=(TimestampValidationCallback)callback;  timestampCallback.setValidator(new DefaultTimestampValidator());} else {  throw new UnsupportedCallbackException(callback);} @AT@ 2107 @LENGTH@ 1377
+---UPD Block@@ThenBody:{  PasswordValidationCallback passwordCallback=(PasswordValidationCallback)callback;  if (passwordCallback.getRequest() instanceof PasswordValidationCallback.PlainTextPasswordRequest) {    passwordCallback.setValidator(new SimplePlainTextPasswordValidator());  } else   if (passwordCallback.getRequest() instanceof PasswordValidationCallback.DigestPasswordRequest) {    PasswordValidationCallback.DigestPasswordRequest digestPasswordRequest=(PasswordValidationCallback.DigestPasswordRequest)passwordCallback.getRequest();    String password=users.getProperty(digestPasswordRequest.getUsername());    digestPasswordRequest.setPassword(password);    passwordCallback.setValidator(new PasswordValidationCallback.DigestPasswordValidator());  }  passwordCallback.setValidator(new SimplePlainTextPasswordValidator());} @TO@ ThenBody:{  PasswordValidationCallback passwordCallback=(PasswordValidationCallback)callback;  if (passwordCallback.getRequest() instanceof PasswordValidationCallback.PlainTextPasswordRequest) {    passwordCallback.setValidator(new SimplePlainTextPasswordValidator());  } else   if (passwordCallback.getRequest() instanceof PasswordValidationCallback.DigestPasswordRequest) {    PasswordValidationCallback.DigestPasswordRequest digestPasswordRequest=(PasswordValidationCallback.DigestPasswordRequest)passwordCallback.getRequest();    String password=users.getProperty(digestPasswordRequest.getUsername());    digestPasswordRequest.setPassword(password);    passwordCallback.setValidator(new PasswordValidationCallback.DigestPasswordValidator());  }} @AT@ 2159 @LENGTH@ 983
+------DEL ExpressionStatement@@MethodInvocation:passwordCallback.setValidator(new SimplePlainTextPasswordValidator()) @AT@ 3062 @LENGTH@ 70
+---------DEL MethodInvocation@@passwordCallback.setValidator(new SimplePlainTextPasswordValidator()) @AT@ 3062 @LENGTH@ 69
+------------DEL SimpleName@@Name:passwordCallback @AT@ 3062 @LENGTH@ 16
+------------DEL SimpleName@@MethodName:setValidator:[new SimplePlainTextPasswordValidator()] @AT@ 3079 @LENGTH@ 52
+---------------DEL ClassInstanceCreation@@SimplePlainTextPasswordValidator[] @AT@ 3092 @LENGTH@ 38
+------------------DEL New@@new @AT@ 3092 @LENGTH@ 3
+------------------DEL SimpleType@@SimplePlainTextPasswordValidator @AT@ 3096 @LENGTH@ 32
+
+
+UPD ExpressionStatement@@MethodInvocation:getAccessibleField(clazz.getSuperclass(),protectedField) @TO@ Assignment:field=getAccessibleField(clazz.getSuperclass(),protectedField) @AT@ 11036 @LENGTH@ 58
+---INS Assignment@@field=getAccessibleField(clazz.getSuperclass(),protectedField) @TO@ ExpressionStatement@@MethodInvocation:getAccessibleField(clazz.getSuperclass(),protectedField) @AT@ 11066 @LENGTH@ 65
+------MOV MethodInvocation@@getAccessibleField(clazz.getSuperclass(),protectedField) @TO@ Assignment@@field=getAccessibleField(clazz.getSuperclass(),protectedField) @AT@ 11036 @LENGTH@ 57
+------INS SimpleName@@field @TO@ Assignment@@field=getAccessibleField(clazz.getSuperclass(),protectedField) @AT@ 11066 @LENGTH@ 5
+------INS Operator@@= @TO@ Assignment@@field=getAccessibleField(clazz.getSuperclass(),protectedField) @AT@ 11071 @LENGTH@ 1
+
+
+INS MethodDeclaration@@public, boolean, MethodName:isValidating,  @TO@ TypeDeclaration@@[public, abstract]AbstractMarshaller, [Marshaller, Unmarshaller] @AT@ 3079 @LENGTH@ 64
+---INS Modifier@@public @TO@ MethodDeclaration@@public, boolean, MethodName:isValidating,  @AT@ 3079 @LENGTH@ 6
+---INS PrimitiveType@@boolean @TO@ MethodDeclaration@@public, boolean, MethodName:isValidating,  @AT@ 3086 @LENGTH@ 7
+---INS SimpleName@@MethodName:isValidating @TO@ MethodDeclaration@@public, boolean, MethodName:isValidating,  @AT@ 3094 @LENGTH@ 12
+---INS ReturnStatement@@SimpleName:validating @TO@ MethodDeclaration@@public, boolean, MethodName:isValidating,  @AT@ 3119 @LENGTH@ 18
+------INS SimpleName@@validating @TO@ ReturnStatement@@SimpleName:validating @AT@ 3126 @LENGTH@ 10
+
+
+UPD TryStatement@@try {  unmarshaller.unmarshal(new StringSource(invalidInput));  fail("Expected a XmlBeansValidationFailureException");} catch (XmlBeansValidationFailureException ex) {} @TO@ try {  String invalidInput="<tns:flights xmlns:tns=\"http://samples.springframework.org/flight\">" + "<tns:flight><tns:number>abc</tns:number></tns:flight></tns:flights>";  unmarshaller.unmarshal(new StringSource(invalidInput));  fail("Expected a XmlBeansValidationFailureException");} catch (XmlBeansValidationFailureException ex) {} @AT@ 2008 @LENGTH@ 240
+---MOV VariableDeclarationStatement@@String invalidInput="<tns:flights xmlns:tns=\"http://samples.springframework.org/flight\">" + "<tns:flight><tns:number>abc</tns:number></tns:flight></tns:flights>"; @TO@ TryStatement@@try {  unmarshaller.unmarshal(new StringSource(invalidInput));  fail("Expected a XmlBeansValidationFailureException");} catch (XmlBeansValidationFailureException ex) {} @AT@ 1816 @LENGTH@ 182
+
+
+UPD ThrowStatement@@ClassInstanceCreation:new IllegalStateException("Could not obtain AclImpl.ace field",ex) @TO@ ClassInstanceCreation:new IllegalStateException("Could not obtain AclImpl.ace field: cause[" + ex.getMessage() + "]") @AT@ 10380 @LENGTH@ 74
+---UPD ClassInstanceCreation@@IllegalStateException["Could not obtain AclImpl.ace field", ex] @TO@ IllegalStateException["Could not obtain AclImpl.ace field: cause[" + ex.getMessage() + "]"] @AT@ 10386 @LENGTH@ 67
+------INS InfixExpression@@"Could not obtain AclImpl.ace field: cause[" + ex.getMessage() + "]" @TO@ ClassInstanceCreation@@IllegalStateException["Could not obtain AclImpl.ace field", ex] @AT@ 10412 @LENGTH@ 68
+---------INS StringLiteral@@"Could not obtain AclImpl.ace field: cause[" @TO@ InfixExpression@@"Could not obtain AclImpl.ace field: cause[" + ex.getMessage() + "]" @AT@ 10412 @LENGTH@ 44
+---------INS Operator@@+ @TO@ InfixExpression@@"Could not obtain AclImpl.ace field: cause[" + ex.getMessage() + "]" @AT@ 10456 @LENGTH@ 1
+---------INS MethodInvocation@@ex.getMessage() @TO@ InfixExpression@@"Could not obtain AclImpl.ace field: cause[" + ex.getMessage() + "]" @AT@ 10459 @LENGTH@ 15
+------------INS SimpleName@@Name:ex @TO@ MethodInvocation@@ex.getMessage() @AT@ 10459 @LENGTH@ 2
+------------INS SimpleName@@MethodName:getMessage:[] @TO@ MethodInvocation@@ex.getMessage() @AT@ 10462 @LENGTH@ 12
+---------INS StringLiteral@@"]" @TO@ InfixExpression@@"Could not obtain AclImpl.ace field: cause[" + ex.getMessage() + "]" @AT@ 10477 @LENGTH@ 3
+------DEL StringLiteral@@"Could not obtain AclImpl.ace field" @AT@ 10412 @LENGTH@ 36
+------DEL SimpleName@@ex @AT@ 10450 @LENGTH@ 2
+
+
+UPD Block@@ThenBody:{  Object domainObject=getDomainObjectInstance(object);  if (domainObject == null) {    if (logger.isDebugEnabled()) {      logger.debug("Voting to abstain - domainObject is null");    }    return AccessDecisionVoter.ACCESS_ABSTAIN;  }  if ((internalMethod != null) && !"".equals(internalMethod)) {    try {      Class clazz=domainObject.getClass();      Method method=clazz.getMethod(internalMethod,new Class[]{});      domainObject=method.invoke(domainObject,new Object[]{});    } catch (    NoSuchMethodException nsme) {      throw new AuthorizationServiceException("Object of class '" + domainObject.getClass() + "' does not provide the requested internalMethod: "+ internalMethod);    }catch (    IllegalAccessException iae) {      if (logger.isDebugEnabled()) {        logger.debug("IllegalAccessException",iae);        if (iae.getCause() != null) {          logger.debug("Cause: " + iae.getCause().getMessage(),iae.getCause());        }      }      throw new AuthorizationServiceException("Problem invoking internalMethod: " + internalMethod + " for object: "+ domainObject);    }catch (    InvocationTargetException ite) {      if (logger.isDebugEnabled()) {        logger.debug("InvocationTargetException",ite);        if (ite.getCause() != null) {          logger.debug("Cause: " + ite.getCause().getMessage(),ite.getCause());        }      }      throw new AuthorizationServiceException("Problem invoking internalMethod: " + internalMethod + " for object: "+ domainObject);    }  }  ObjectIdentity objectIdentity=objectIdentityRetrievalStrategy.getObjectIdentity(domainObject);  Sid[] sids=sidRetrievalStrategy.getSids(authentication);  Acl acl;  try {    acl=aclService.readAclById(objectIdentity,sids);  } catch (  NotFoundException nfe) {    if (logger.isDebugEnabled()) {      logger.debug("Voting to deny access - no ACLs apply for this principal");    }    return AccessDecisionVoter.ACCESS_DENIED;  }  try {    if (acl.isGranted(requirePermission,sids,false)) {      if (logger.isDebugEnabled()) {        logger.debug("Voting to grant access");      }      return AccessDecisionVoter.ACCESS_GRANTED;    } else {      if (logger.isDebugEnabled()) {        logger.debug("Voting to deny access - ACLs returned, but insufficient permissions for this principal");      }      return AccessDecisionVoter.ACCESS_DENIED;    }  } catch (  NotFoundException nfe) {    if (logger.isDebugEnabled()) {      logger.debug("Voting to deny access - no ACLs apply for this principal");    }    return AccessDecisionVoter.ACCESS_DENIED;  }} @TO@ ThenBody:{  Object domainObject=getDomainObjectInstance(object);  if (domainObject != null && internalMethod != null && (!"".equals(internalMethod))) {    try {      Class clazz=domainObject.getClass();      Method method=clazz.getMethod(internalMethod,new Class[]{});      domainObject=method.invoke(domainObject,new Object[]{});    } catch (    NoSuchMethodException nsme) {      throw new AuthorizationServiceException("Object of class '" + domainObject.getClass() + "' does not provide the requested internalMethod: "+ internalMethod);    }catch (    IllegalAccessException iae) {      if (logger.isDebugEnabled()) {        logger.debug("IllegalAccessException",iae);        if (iae.getCause() != null) {          logger.debug("Cause: " + iae.getCause().getMessage(),iae.getCause());        }      }      throw new AuthorizationServiceException("Problem invoking internalMethod: " + internalMethod + " for object: "+ domainObject);    }catch (    InvocationTargetException ite) {      if (logger.isDebugEnabled()) {        logger.debug("InvocationTargetException",ite);        if (ite.getCause() != null) {          logger.debug("Cause: " + ite.getCause().getMessage(),ite.getCause());        }      }      throw new AuthorizationServiceException("Problem invoking internalMethod: " + internalMethod + " for object: "+ domainObject);    }  }  if (domainObject == null) {    if (logger.isDebugEnabled()) {      logger.debug("Voting to abstain - domainObject is null");    }    return AccessDecisionVoter.ACCESS_ABSTAIN;  }  ObjectIdentity objectIdentity=objectIdentityRetrievalStrategy.getObjectIdentity(domainObject);  Sid[] sids=sidRetrievalStrategy.getSids(authentication);  Acl acl;  try {    acl=aclService.readAclById(objectIdentity,sids);  } catch (  NotFoundException nfe) {    if (logger.isDebugEnabled()) {      logger.debug("Voting to deny access - no ACLs apply for this principal");    }    return AccessDecisionVoter.ACCESS_DENIED;  }  try {    if (acl.isGranted(requirePermission,sids,false)) {      if (logger.isDebugEnabled()) {        logger.debug("Voting to grant access");      }      return AccessDecisionVoter.ACCESS_GRANTED;    } else {      if (logger.isDebugEnabled()) {        logger.debug("Voting to deny access - ACLs returned, but insufficient permissions for this principal");      }      return AccessDecisionVoter.ACCESS_DENIED;    }  } catch (  NotFoundException nfe) {    if (logger.isDebugEnabled()) {      logger.debug("Voting to deny access - no ACLs apply for this principal");    }    return AccessDecisionVoter.ACCESS_DENIED;  }} @AT@ 8145 @LENGTH@ 4271
+---MOV IfStatement@@if (domainObject == null) {  if (logger.isDebugEnabled()) {    logger.debug("Voting to abstain - domainObject is null");  }  return AccessDecisionVoter.ACCESS_ABSTAIN;} @TO@ Block@@ThenBody:{  Object domainObject=getDomainObjectInstance(object);  if (domainObject == null) {    if (logger.isDebugEnabled()) {      logger.debug("Voting to abstain - domainObject is null");    }    return AccessDecisionVoter.ACCESS_ABSTAIN;  }  if ((internalMethod != null) && !"".equals(internalMethod)) {    try {      Class clazz=domainObject.getClass();      Method method=clazz.getMethod(internalMethod,new Class[]{});      domainObject=method.invoke(domainObject,new Object[]{});    } catch (    NoSuchMethodException nsme) {      throw new AuthorizationServiceException("Object of class '" + domainObject.getClass() + "' does not provide the requested internalMethod: "+ internalMethod);    }catch (    IllegalAccessException iae) {      if (logger.isDebugEnabled()) {        logger.debug("IllegalAccessException",iae);        if (iae.getCause() != null) {          logger.debug("Cause: " + iae.getCause().getMessage(),iae.getCause());        }      }      throw new AuthorizationServiceException("Problem invoking internalMethod: " + internalMethod + " for object: "+ domainObject);    }catch (    InvocationTargetException ite) {      if (logger.isDebugEnabled()) {        logger.debug("InvocationTargetException",ite);        if (ite.getCause() != null) {          logger.debug("Cause: " + ite.getCause().getMessage(),ite.getCause());        }      }      throw new AuthorizationServiceException("Problem invoking internalMethod: " + internalMethod + " for object: "+ domainObject);    }  }  ObjectIdentity objectIdentity=objectIdentityRetrievalStrategy.getObjectIdentity(domainObject);  Sid[] sids=sidRetrievalStrategy.getSids(authentication);  Acl acl;  try {    acl=aclService.readAclById(objectIdentity,sids);  } catch (  NotFoundException nfe) {    if (logger.isDebugEnabled()) {      logger.debug("Voting to deny access - no ACLs apply for this principal");    }    return AccessDecisionVoter.ACCESS_DENIED;  }  try {    if (acl.isGranted(requirePermission,sids,false)) {      if (logger.isDebugEnabled()) {        logger.debug("Voting to grant access");      }      return AccessDecisionVoter.ACCESS_GRANTED;    } else {      if (logger.isDebugEnabled()) {        logger.debug("Voting to deny access - ACLs returned, but insufficient permissions for this principal");      }      return AccessDecisionVoter.ACCESS_DENIED;    }  } catch (  NotFoundException nfe) {    if (logger.isDebugEnabled()) {      logger.debug("Voting to deny access - no ACLs apply for this principal");    }    return AccessDecisionVoter.ACCESS_DENIED;  }} @AT@ 8441 @LENGTH@ 264
+---UPD IfStatement@@if ((internalMethod != null) && !"".equals(internalMethod)) {  try {    Class clazz=domainObject.getClass();    Method method=clazz.getMethod(internalMethod,new Class[]{});    domainObject=method.invoke(domainObject,new Object[]{});  } catch (  NoSuchMethodException nsme) {    throw new AuthorizationServiceException("Object of class '" + domainObject.getClass() + "' does not provide the requested internalMethod: "+ internalMethod);  }catch (  IllegalAccessException iae) {    if (logger.isDebugEnabled()) {      logger.debug("IllegalAccessException",iae);      if (iae.getCause() != null) {        logger.debug("Cause: " + iae.getCause().getMessage(),iae.getCause());      }    }    throw new AuthorizationServiceException("Problem invoking internalMethod: " + internalMethod + " for object: "+ domainObject);  }catch (  InvocationTargetException ite) {    if (logger.isDebugEnabled()) {      logger.debug("InvocationTargetException",ite);      if (ite.getCause() != null) {        logger.debug("Cause: " + ite.getCause().getMessage(),ite.getCause());      }    }    throw new AuthorizationServiceException("Problem invoking internalMethod: " + internalMethod + " for object: "+ domainObject);  }} @TO@ if (domainObject != null && internalMethod != null && (!"".equals(internalMethod))) {  try {    Class clazz=domainObject.getClass();    Method method=clazz.getMethod(internalMethod,new Class[]{});    domainObject=method.invoke(domainObject,new Object[]{});  } catch (  NoSuchMethodException nsme) {    throw new AuthorizationServiceException("Object of class '" + domainObject.getClass() + "' does not provide the requested internalMethod: "+ internalMethod);  }catch (  IllegalAccessException iae) {    if (logger.isDebugEnabled()) {      logger.debug("IllegalAccessException",iae);      if (iae.getCause() != null) {        logger.debug("Cause: " + iae.getCause().getMessage(),iae.getCause());      }    }    throw new AuthorizationServiceException("Problem invoking internalMethod: " + internalMethod + " for object: "+ domainObject);  }catch (  InvocationTargetException ite) {    if (logger.isDebugEnabled()) {      logger.debug("InvocationTargetException",ite);      if (ite.getCause() != null) {        logger.debug("Cause: " + ite.getCause().getMessage(),ite.getCause());      }    }    throw new AuthorizationServiceException("Problem invoking internalMethod: " + internalMethod + " for object: "+ domainObject);  }} @AT@ 8800 @LENGTH@ 1812
+------UPD InfixExpression@@(internalMethod != null) && !"".equals(internalMethod) @TO@ domainObject != null && internalMethod != null && (!"".equals(internalMethod)) @AT@ 8804 @LENGTH@ 54
+---------INS InfixExpression@@domainObject != null && internalMethod != null @TO@ InfixExpression@@(internalMethod != null) && !"".equals(internalMethod) @AT@ 8453 @LENGTH@ 46
+------------INS InfixExpression@@domainObject != null @TO@ InfixExpression@@domainObject != null && internalMethod != null @AT@ 8453 @LENGTH@ 20
+---------------INS SimpleName@@domainObject @TO@ InfixExpression@@domainObject != null @AT@ 8453 @LENGTH@ 12
+---------------INS Operator@@!= @TO@ InfixExpression@@domainObject != null @AT@ 8465 @LENGTH@ 2
+---------------INS NullLiteral@@null @TO@ InfixExpression@@domainObject != null @AT@ 8469 @LENGTH@ 4
+------------INS Operator@@&& @TO@ InfixExpression@@domainObject != null && internalMethod != null @AT@ 8473 @LENGTH@ 2
+------------INS InfixExpression@@internalMethod != null @TO@ InfixExpression@@domainObject != null && internalMethod != null @AT@ 8477 @LENGTH@ 22
+---------------MOV SimpleName@@internalMethod @TO@ InfixExpression@@internalMethod != null @AT@ 8805 @LENGTH@ 14
+---------------MOV Operator@@!= @TO@ InfixExpression@@internalMethod != null @AT@ 8819 @LENGTH@ 2
+---------------MOV NullLiteral@@null @TO@ InfixExpression@@internalMethod != null @AT@ 8823 @LENGTH@ 4
+---------INS ParenthesizedExpression@@(!"".equals(internalMethod)) @TO@ InfixExpression@@(internalMethod != null) && !"".equals(internalMethod) @AT@ 8503 @LENGTH@ 28
+------------MOV PrefixExpression@@!"".equals(internalMethod) @TO@ ParenthesizedExpression@@(!"".equals(internalMethod)) @AT@ 8832 @LENGTH@ 26
+---------DEL ParenthesizedExpression@@(internalMethod != null) @AT@ 8804 @LENGTH@ 24
+------------DEL InfixExpression@@internalMethod != null @AT@ 8805 @LENGTH@ 22
+
+
+UPD IfStatement@@if ((attribute.getAttribute() != null) && attribute.getAttribute().startsWith(getProcessConfigAttribute())) {  return true;} else {  return false;} @TO@ if ((attribute.getAttribute() != null) && attribute.getAttribute().equals(getProcessConfigAttribute())) {  return true;} else {  return false;} @AT@ 7656 @LENGTH@ 187
+---UPD InfixExpression@@(attribute.getAttribute() != null) && attribute.getAttribute().startsWith(getProcessConfigAttribute()) @TO@ (attribute.getAttribute() != null) && attribute.getAttribute().equals(getProcessConfigAttribute()) @AT@ 7660 @LENGTH@ 102
+------UPD MethodInvocation@@attribute.getAttribute().startsWith(getProcessConfigAttribute()) @TO@ attribute.getAttribute().equals(getProcessConfigAttribute()) @AT@ 7698 @LENGTH@ 64
+---------UPD SimpleName@@MethodName:startsWith:[getProcessConfigAttribute()] @TO@ MethodName:equals:[getProcessConfigAttribute()] @AT@ 7723 @LENGTH@ 39
+
+
+UPD Block@@ThenBody:{  TimestampValidationCallback.UTCTimestampRequest utcRequest=((TimestampValidationCallback.UTCTimestampRequest)request);  Date created=parseDate(utcRequest.getCreated());  Date expired=parseDate(utcRequest.getExpired());  validateCreationTime(created,utcRequest.getMaxClockSkew(),utcRequest.getTimestampFreshnessLimit());  if (expired != null) {    validateExpirationTime(expired,utcRequest.getMaxClockSkew());  }} @TO@ ThenBody:{  TimestampValidationCallback.UTCTimestampRequest utcRequest=(TimestampValidationCallback.UTCTimestampRequest)request;  Date created=parseDate(utcRequest.getCreated());  validateCreationTime(created,utcRequest.getMaxClockSkew(),utcRequest.getTimestampFreshnessLimit());  if (utcRequest.getExpired() != null) {    Date expired=parseDate(utcRequest.getExpired());    validateExpirationTime(expired,utcRequest.getMaxClockSkew());  }} @AT@ 1408 @LENGTH@ 535
+---UPD VariableDeclarationStatement@@TimestampValidationCallback.UTCTimestampRequest utcRequest=((TimestampValidationCallback.UTCTimestampRequest)request); @TO@ TimestampValidationCallback.UTCTimestampRequest utcRequest=(TimestampValidationCallback.UTCTimestampRequest)request; @AT@ 1422 @LENGTH@ 141
+------UPD VariableDeclarationFragment@@utcRequest=((TimestampValidationCallback.UTCTimestampRequest)request) @TO@ utcRequest=(TimestampValidationCallback.UTCTimestampRequest)request @AT@ 1470 @LENGTH@ 92
+---------DEL ParenthesizedExpression@@((TimestampValidationCallback.UTCTimestampRequest)request) @AT@ 1503 @LENGTH@ 59
+------------DEL CastExpression@@(TimestampValidationCallback.UTCTimestampRequest)request @AT@ 1504 @LENGTH@ 57
+---------INS CastExpression@@(TimestampValidationCallback.UTCTimestampRequest)request @TO@ VariableDeclarationFragment@@utcRequest=((TimestampValidationCallback.UTCTimestampRequest)request) @AT@ 1503 @LENGTH@ 57
+------------MOV SimpleType@@TimestampValidationCallback.UTCTimestampRequest @TO@ CastExpression@@(TimestampValidationCallback.UTCTimestampRequest)request @AT@ 1505 @LENGTH@ 47
+------------MOV SimpleName@@request @TO@ CastExpression@@(TimestampValidationCallback.UTCTimestampRequest)request @AT@ 1554 @LENGTH@ 7
+---UPD IfStatement@@if (expired != null) {  validateExpirationTime(expired,utcRequest.getMaxClockSkew());} @TO@ if (utcRequest.getExpired() != null) {  Date expired=parseDate(utcRequest.getExpired());  validateExpirationTime(expired,utcRequest.getMaxClockSkew());} @AT@ 1818 @LENGTH@ 115
+------UPD InfixExpression@@expired != null @TO@ utcRequest.getExpired() != null @AT@ 1822 @LENGTH@ 15
+---------INS MethodInvocation@@utcRequest.getExpired() @TO@ InfixExpression@@expired != null @AT@ 1757 @LENGTH@ 23
+------------INS SimpleName@@Name:utcRequest @TO@ MethodInvocation@@utcRequest.getExpired() @AT@ 1757 @LENGTH@ 10
+------------INS SimpleName@@MethodName:getExpired:[] @TO@ MethodInvocation@@utcRequest.getExpired() @AT@ 1768 @LENGTH@ 12
+---------DEL SimpleName@@expired @AT@ 1822 @LENGTH@ 7
+------UPD Block@@ThenBody:{  validateExpirationTime(expired,utcRequest.getMaxClockSkew());} @TO@ ThenBody:{  Date expired=parseDate(utcRequest.getExpired());  validateExpirationTime(expired,utcRequest.getMaxClockSkew());} @AT@ 1839 @LENGTH@ 94
+---------MOV VariableDeclarationStatement@@Date expired=parseDate(utcRequest.getExpired()); @TO@ Block@@ThenBody:{  validateExpirationTime(expired,utcRequest.getMaxClockSkew());} @AT@ 1639 @LENGTH@ 50
+
+
+INS TryStatement@@try {  trans.transform(source,result);} catch (NoSuchMethodError ex) {  return;} @TO@ MethodDeclaration@@private, void, MethodName:checkDocument, BaseConfigurationXMLReader creader, String rootName, Exception,  @AT@ 3726 @LENGTH@ 284
+---MOV ExpressionStatement@@MethodInvocation:trans.transform(source,result) @TO@ TryStatement@@try {  trans.transform(source,result);} catch (NoSuchMethodError ex) {  return;} @AT@ 3726 @LENGTH@ 32
+---INS CatchClause@@catch (NoSuchMethodError ex) {  return;} @TO@ TryStatement@@try {  trans.transform(source,result);} catch (NoSuchMethodError ex) {  return;} @AT@ 3943 @LENGTH@ 67
+------INS SingleVariableDeclaration@@NoSuchMethodError ex @TO@ CatchClause@@catch (NoSuchMethodError ex) {  return;} @AT@ 3949 @LENGTH@ 20
+---------INS SimpleType@@NoSuchMethodError @TO@ SingleVariableDeclaration@@NoSuchMethodError ex @AT@ 3949 @LENGTH@ 17
+---------INS SimpleName@@ex @TO@ SingleVariableDeclaration@@NoSuchMethodError ex @AT@ 3967 @LENGTH@ 2
+------INS ReturnStatement@@ @TO@ CatchClause@@catch (NoSuchMethodError ex) {  return;} @AT@ 3993 @LENGTH@ 7
+
+
+UPD VariableDeclarationStatement@@MethodInvocation mi=MethodInvocationUtils.createFromClass(ITargetObject.class,"makeLowerCase",new Class[]{String.class}); @TO@ MethodInvocation mi=MethodInvocationUtils.createFromClass(ITargetObject.class,"makeLowerCase",new Class[]{String.class},new Object[]{"helloWorld"}); @AT@ 5037 @LENGTH@ 142
+---UPD VariableDeclarationFragment@@mi=MethodInvocationUtils.createFromClass(ITargetObject.class,"makeLowerCase",new Class[]{String.class}) @TO@ mi=MethodInvocationUtils.createFromClass(ITargetObject.class,"makeLowerCase",new Class[]{String.class},new Object[]{"helloWorld"}) @AT@ 5054 @LENGTH@ 124
+------UPD MethodInvocation@@MethodInvocationUtils.createFromClass(ITargetObject.class,"makeLowerCase",new Class[]{String.class}) @TO@ MethodInvocationUtils.createFromClass(ITargetObject.class,"makeLowerCase",new Class[]{String.class},new Object[]{"helloWorld"}) @AT@ 5059 @LENGTH@ 119
+---------UPD SimpleName@@MethodName:createFromClass:[ITargetObject.class, "makeLowerCase", new Class[]{String.class}] @TO@ MethodName:createFromClass:[ITargetObject.class, "makeLowerCase", new Class[]{String.class}, new Object[]{"helloWorld"}] @AT@ 5081 @LENGTH@ 97
+------------INS ArrayCreation@@new Object[]{"helloWorld"} @TO@ SimpleName@@MethodName:createFromClass:[ITargetObject.class, "makeLowerCase", new Class[]{String.class}] @AT@ 5209 @LENGTH@ 27
+---------------INS ArrayType@@Object[] @TO@ ArrayCreation@@new Object[]{"helloWorld"} @AT@ 5213 @LENGTH@ 8
+------------------INS SimpleType@@Object @TO@ ArrayType@@Object[] @AT@ 5213 @LENGTH@ 6
+---------------INS ArrayInitializer@@{"helloWorld"} @TO@ ArrayCreation@@new Object[]{"helloWorld"} @AT@ 5222 @LENGTH@ 14
+------------------INS StringLiteral@@"helloWorld" @TO@ ArrayInitializer@@{"helloWorld"} @AT@ 5223 @LENGTH@ 12
+
+
+UPD ExpressionStatement@@MethodInvocation:setValue(source) @TO@ MethodInvocation:setValue(source.getDecorated()) @AT@ 7730 @LENGTH@ 17
+---UPD MethodInvocation@@setValue(source) @TO@ setValue(source.getDecorated()) @AT@ 7730 @LENGTH@ 16
+------UPD SimpleName@@MethodName:setValue:[source] @TO@ MethodName:setValue:[source.getDecorated()] @AT@ 7730 @LENGTH@ 16
+---------INS MethodInvocation@@source.getDecorated() @TO@ SimpleName@@MethodName:setValue:[source] @AT@ 7739 @LENGTH@ 21
+------------INS SimpleName@@Name:source @TO@ MethodInvocation@@source.getDecorated() @AT@ 7739 @LENGTH@ 6
+------------INS SimpleName@@MethodName:getDecorated:[] @TO@ MethodInvocation@@source.getDecorated() @AT@ 7746 @LENGTH@ 14
+---------DEL SimpleName@@source @AT@ 7739 @LENGTH@ 6
+
+
+DEL MethodDeclaration@@public, void, MethodName:testGetContextThrowsExceptionIfContextNotSet,  @AT@ 1729 @LENGTH@ 409
+---DEL Modifier@@public @AT@ 1729 @LENGTH@ 6
+---DEL PrimitiveType@@void @AT@ 1736 @LENGTH@ 4
+---DEL SimpleName@@MethodName:testGetContextThrowsExceptionIfContextNotSet @AT@ 1741 @LENGTH@ 44
+---DEL VariableDeclarationStatement@@HttpSessionEventPublisher publisher=new HttpSessionEventPublisher(); @AT@ 1798 @LENGTH@ 70
+------DEL SimpleType@@HttpSessionEventPublisher @AT@ 1798 @LENGTH@ 25
+------DEL VariableDeclarationFragment@@publisher=new HttpSessionEventPublisher() @AT@ 1824 @LENGTH@ 43
+---------DEL SimpleName@@publisher @AT@ 1824 @LENGTH@ 9
+---------DEL ClassInstanceCreation@@HttpSessionEventPublisher[] @AT@ 1836 @LENGTH@ 31
+------------DEL New@@new @AT@ 1836 @LENGTH@ 3
+------------DEL SimpleType@@HttpSessionEventPublisher @AT@ 1840 @LENGTH@ 25
+---DEL ExpressionStatement@@MethodInvocation:publisher.contextInitialized(new ServletContextEvent(new MockServletContext())) @AT@ 1877 @LENGTH@ 80
+------DEL MethodInvocation@@publisher.contextInitialized(new ServletContextEvent(new MockServletContext())) @AT@ 1877 @LENGTH@ 79
+---------DEL SimpleName@@Name:publisher @AT@ 1877 @LENGTH@ 9
+---------DEL SimpleName@@MethodName:contextInitialized:[new ServletContextEvent(new MockServletContext())] @AT@ 1887 @LENGTH@ 69
+------------DEL ClassInstanceCreation@@ServletContextEvent[new MockServletContext()] @AT@ 1906 @LENGTH@ 49
+---------------DEL New@@new @AT@ 1906 @LENGTH@ 3
+---------------DEL SimpleType@@ServletContextEvent @AT@ 1910 @LENGTH@ 19
+---------------DEL ClassInstanceCreation@@MockServletContext[] @AT@ 1930 @LENGTH@ 24
+------------------DEL New@@new @AT@ 1930 @LENGTH@ 3
+------------------DEL SimpleType@@MockServletContext @AT@ 1934 @LENGTH@ 18
+---DEL TryStatement@@try {  publisher.getContext();  fail("IllegalStateException expected when no context set");} catch (IllegalStateException expected) {} @AT@ 1967 @LENGTH@ 165
+------DEL ExpressionStatement@@MethodInvocation:publisher.getContext() @AT@ 1985 @LENGTH@ 23
+---------DEL MethodInvocation@@publisher.getContext() @AT@ 1985 @LENGTH@ 22
+------------DEL SimpleName@@Name:publisher @AT@ 1985 @LENGTH@ 9
+------------DEL SimpleName@@MethodName:getContext:[] @AT@ 1995 @LENGTH@ 12
+------DEL ExpressionStatement@@MethodInvocation:fail("IllegalStateException expected when no context set") @AT@ 2021 @LENGTH@ 59
+---------DEL MethodInvocation@@fail("IllegalStateException expected when no context set") @AT@ 2021 @LENGTH@ 58
+------------DEL SimpleName@@MethodName:fail:["IllegalStateException expected when no context set"] @AT@ 2021 @LENGTH@ 58
+---------------DEL StringLiteral@@"IllegalStateException expected when no context set" @AT@ 2026 @LENGTH@ 52
+------DEL CatchClause@@catch (IllegalStateException expected) {} @AT@ 2091 @LENGTH@ 41
+---------DEL SingleVariableDeclaration@@IllegalStateException expected @AT@ 2098 @LENGTH@ 30
+------------DEL SimpleType@@IllegalStateException @AT@ 2098 @LENGTH@ 21
+------------DEL SimpleName@@expected @AT@ 2120 @LENGTH@ 8
+
+
+UPD IfStatement@@if (attr != null) {  parent=attr.getParentNode();} @TO@ if (attr != null) {  parent=attr.getParentNode();  super.addAttribute(attr);  attr.setParentNode(parent);} else {  throw new IllegalArgumentException("Attribute node must not be null!");} @AT@ 1768 @LENGTH@ 80
+---UPD Block@@ThenBody:{  parent=attr.getParentNode();} @TO@ ThenBody:{  parent=attr.getParentNode();  super.addAttribute(attr);  attr.setParentNode(parent);} @AT@ 1794 @LENGTH@ 54
+------MOV ExpressionStatement@@SuperMethodInvocation:super.addAttribute(attr) @TO@ Block@@ThenBody:{  parent=attr.getParentNode();} @AT@ 1857 @LENGTH@ 25
+------MOV ExpressionStatement@@MethodInvocation:attr.setParentNode(parent) @TO@ Block@@ThenBody:{  parent=attr.getParentNode();} @AT@ 1891 @LENGTH@ 27
+---INS Block@@ElseBody:{  throw new IllegalArgumentException("Attribute node must not be null!");} @TO@ IfStatement@@if (attr != null) {  parent=attr.getParentNode();} @AT@ 1948 @LENGTH@ 95
+------INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Attribute node must not be null!") @TO@ Block@@ElseBody:{  throw new IllegalArgumentException("Attribute node must not be null!");} @AT@ 1962 @LENGTH@ 71
+---------INS ClassInstanceCreation@@IllegalArgumentException["Attribute node must not be null!"] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Attribute node must not be null!") @AT@ 1968 @LENGTH@ 64
+------------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Attribute node must not be null!"] @AT@ 1968 @LENGTH@ 3
+------------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Attribute node must not be null!"] @AT@ 1972 @LENGTH@ 24
+------------INS StringLiteral@@"Attribute node must not be null!" @TO@ ClassInstanceCreation@@IllegalArgumentException["Attribute node must not be null!"] @AT@ 1997 @LENGTH@ 34
+
+
+INS MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @TO@ TypeDeclaration@@[public, abstract]AbstractSoap11BodyTestCase, AbstractSoapBodyTestCase @AT@ 5618 @LENGTH@ 864
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 5618 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 5625 @LENGTH@ 4
+---INS SimpleName@@MethodName:testAddFaultWithDetailResult @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 5630 @LENGTH@ 28
+---INS SimpleType@@Exception @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 5668 @LENGTH@ 9
+---INS VariableDeclarationStatement@@SoapFault fault=((Soap11Body)soapBody).addFault(new QName("namespace","localPart","prefix"),"Fault",null); @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 5688 @LENGTH@ 130
+------INS SimpleType@@SoapFault @TO@ VariableDeclarationStatement@@SoapFault fault=((Soap11Body)soapBody).addFault(new QName("namespace","localPart","prefix"),"Fault",null); @AT@ 5688 @LENGTH@ 9
+------INS VariableDeclarationFragment@@fault=((Soap11Body)soapBody).addFault(new QName("namespace","localPart","prefix"),"Fault",null) @TO@ VariableDeclarationStatement@@SoapFault fault=((Soap11Body)soapBody).addFault(new QName("namespace","localPart","prefix"),"Fault",null); @AT@ 5698 @LENGTH@ 119
+---------INS SimpleName@@fault @TO@ VariableDeclarationFragment@@fault=((Soap11Body)soapBody).addFault(new QName("namespace","localPart","prefix"),"Fault",null) @AT@ 5698 @LENGTH@ 5
+---------INS MethodInvocation@@((Soap11Body)soapBody).addFault(new QName("namespace","localPart","prefix"),"Fault",null) @TO@ VariableDeclarationFragment@@fault=((Soap11Body)soapBody).addFault(new QName("namespace","localPart","prefix"),"Fault",null) @AT@ 5706 @LENGTH@ 111
+------------INS ParenthesizedExpression@@((Soap11Body)soapBody) @TO@ MethodInvocation@@((Soap11Body)soapBody).addFault(new QName("namespace","localPart","prefix"),"Fault",null) @AT@ 5706 @LENGTH@ 23
+---------------INS CastExpression@@(Soap11Body)soapBody @TO@ ParenthesizedExpression@@((Soap11Body)soapBody) @AT@ 5707 @LENGTH@ 21
+------------------INS SimpleType@@Soap11Body @TO@ CastExpression@@(Soap11Body)soapBody @AT@ 5708 @LENGTH@ 10
+------------------INS SimpleName@@soapBody @TO@ CastExpression@@(Soap11Body)soapBody @AT@ 5720 @LENGTH@ 8
+------------INS SimpleName@@MethodName:addFault:[new QName("namespace","localPart","prefix"), "Fault", null] @TO@ MethodInvocation@@((Soap11Body)soapBody).addFault(new QName("namespace","localPart","prefix"),"Fault",null) @AT@ 5747 @LENGTH@ 70
+---------------INS ClassInstanceCreation@@QName["namespace", "localPart", "prefix"] @TO@ SimpleName@@MethodName:addFault:[new QName("namespace","localPart","prefix"), "Fault", null] @AT@ 5756 @LENGTH@ 45
+------------------INS New@@new @TO@ ClassInstanceCreation@@QName["namespace", "localPart", "prefix"] @AT@ 5756 @LENGTH@ 3
+------------------INS SimpleType@@QName @TO@ ClassInstanceCreation@@QName["namespace", "localPart", "prefix"] @AT@ 5760 @LENGTH@ 5
+------------------INS StringLiteral@@"namespace" @TO@ ClassInstanceCreation@@QName["namespace", "localPart", "prefix"] @AT@ 5766 @LENGTH@ 11
+------------------INS StringLiteral@@"localPart" @TO@ ClassInstanceCreation@@QName["namespace", "localPart", "prefix"] @AT@ 5779 @LENGTH@ 11
+------------------INS StringLiteral@@"prefix" @TO@ ClassInstanceCreation@@QName["namespace", "localPart", "prefix"] @AT@ 5792 @LENGTH@ 8
+---------------INS StringLiteral@@"Fault" @TO@ SimpleName@@MethodName:addFault:[new QName("namespace","localPart","prefix"), "Fault", null] @AT@ 5803 @LENGTH@ 7
+---------------INS NullLiteral@@null @TO@ SimpleName@@MethodName:addFault:[new QName("namespace","localPart","prefix"), "Fault", null] @AT@ 5812 @LENGTH@ 4
+---INS VariableDeclarationStatement@@SoapFaultDetail detail=fault.addFaultDetail(); @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 5827 @LENGTH@ 48
+------INS SimpleType@@SoapFaultDetail @TO@ VariableDeclarationStatement@@SoapFaultDetail detail=fault.addFaultDetail(); @AT@ 5827 @LENGTH@ 15
+------INS VariableDeclarationFragment@@detail=fault.addFaultDetail() @TO@ VariableDeclarationStatement@@SoapFaultDetail detail=fault.addFaultDetail(); @AT@ 5843 @LENGTH@ 31
+---------INS SimpleName@@detail @TO@ VariableDeclarationFragment@@detail=fault.addFaultDetail() @AT@ 5843 @LENGTH@ 6
+---------INS MethodInvocation@@fault.addFaultDetail() @TO@ VariableDeclarationFragment@@detail=fault.addFaultDetail() @AT@ 5852 @LENGTH@ 22
+------------INS SimpleName@@Name:fault @TO@ MethodInvocation@@fault.addFaultDetail() @AT@ 5852 @LENGTH@ 5
+------------INS SimpleName@@MethodName:addFaultDetail:[] @TO@ MethodInvocation@@fault.addFaultDetail() @AT@ 5858 @LENGTH@ 16
+---INS ExpressionStatement@@MethodInvocation:transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 5884 @LENGTH@ 99
+------INS MethodInvocation@@transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @TO@ ExpressionStatement@@MethodInvocation:transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @AT@ 5884 @LENGTH@ 98
+---------INS SimpleName@@Name:transformer @TO@ MethodInvocation@@transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @AT@ 5884 @LENGTH@ 11
+---------INS SimpleName@@MethodName:transform:[new StringSource("<detailContents xmlns='namespace'/>"), detail.getResult()] @TO@ MethodInvocation@@transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @AT@ 5896 @LENGTH@ 86
+------------INS ClassInstanceCreation@@StringSource["<detailContents xmlns='namespace'/>"] @TO@ SimpleName@@MethodName:transform:[new StringSource("<detailContents xmlns='namespace'/>"), detail.getResult()] @AT@ 5906 @LENGTH@ 55
+---------------INS New@@new @TO@ ClassInstanceCreation@@StringSource["<detailContents xmlns='namespace'/>"] @AT@ 5906 @LENGTH@ 3
+---------------INS SimpleType@@StringSource @TO@ ClassInstanceCreation@@StringSource["<detailContents xmlns='namespace'/>"] @AT@ 5910 @LENGTH@ 12
+---------------INS StringLiteral@@"<detailContents xmlns='namespace'/>" @TO@ ClassInstanceCreation@@StringSource["<detailContents xmlns='namespace'/>"] @AT@ 5923 @LENGTH@ 37
+------------INS MethodInvocation@@detail.getResult() @TO@ SimpleName@@MethodName:transform:[new StringSource("<detailContents xmlns='namespace'/>"), detail.getResult()] @AT@ 5963 @LENGTH@ 18
+---------------INS SimpleName@@Name:detail @TO@ MethodInvocation@@detail.getResult() @AT@ 5963 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:getResult:[] @TO@ MethodInvocation@@detail.getResult() @AT@ 5970 @LENGTH@ 11
+---INS ExpressionStatement@@MethodInvocation:transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 5992 @LENGTH@ 99
+------INS MethodInvocation@@transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @TO@ ExpressionStatement@@MethodInvocation:transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @AT@ 5992 @LENGTH@ 98
+---------INS SimpleName@@Name:transformer @TO@ MethodInvocation@@transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @AT@ 5992 @LENGTH@ 11
+---------INS SimpleName@@MethodName:transform:[new StringSource("<detailContents xmlns='namespace'/>"), detail.getResult()] @TO@ MethodInvocation@@transformer.transform(new StringSource("<detailContents xmlns='namespace'/>"),detail.getResult()) @AT@ 6004 @LENGTH@ 86
+------------INS ClassInstanceCreation@@StringSource["<detailContents xmlns='namespace'/>"] @TO@ SimpleName@@MethodName:transform:[new StringSource("<detailContents xmlns='namespace'/>"), detail.getResult()] @AT@ 6014 @LENGTH@ 55
+---------------INS New@@new @TO@ ClassInstanceCreation@@StringSource["<detailContents xmlns='namespace'/>"] @AT@ 6014 @LENGTH@ 3
+---------------INS SimpleType@@StringSource @TO@ ClassInstanceCreation@@StringSource["<detailContents xmlns='namespace'/>"] @AT@ 6018 @LENGTH@ 12
+---------------INS StringLiteral@@"<detailContents xmlns='namespace'/>" @TO@ ClassInstanceCreation@@StringSource["<detailContents xmlns='namespace'/>"] @AT@ 6031 @LENGTH@ 37
+------------INS MethodInvocation@@detail.getResult() @TO@ SimpleName@@MethodName:transform:[new StringSource("<detailContents xmlns='namespace'/>"), detail.getResult()] @AT@ 6071 @LENGTH@ 18
+---------------INS SimpleName@@Name:detail @TO@ MethodInvocation@@detail.getResult() @AT@ 6071 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:getResult:[] @TO@ MethodInvocation@@detail.getResult() @AT@ 6078 @LENGTH@ 11
+---INS ExpressionStatement@@MethodInvocation:assertPayloadEqual("<SOAP-ENV:Fault xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>" + "<faultcode xmlns:prefix='namespace'>prefix:localPart</faultcode>" + "<faultstring>Fault</faultstring>"+ "<detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</detail></SOAP-ENV:Fault>") @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 6100 @LENGTH@ 376
+------INS MethodInvocation@@assertPayloadEqual("<SOAP-ENV:Fault xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>" + "<faultcode xmlns:prefix='namespace'>prefix:localPart</faultcode>" + "<faultstring>Fault</faultstring>"+ "<detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</detail></SOAP-ENV:Fault>") @TO@ ExpressionStatement@@MethodInvocation:assertPayloadEqual("<SOAP-ENV:Fault xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>" + "<faultcode xmlns:prefix='namespace'>prefix:localPart</faultcode>" + "<faultstring>Fault</faultstring>"+ "<detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</detail></SOAP-ENV:Fault>") @AT@ 6100 @LENGTH@ 375
+---------INS SimpleName@@MethodName:assertPayloadEqual:["<SOAP-ENV:Fault xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>" + "<faultcode xmlns:prefix='namespace'>prefix:localPart</faultcode>" + "<faultstring>Fault</faultstring>"+ "<detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</detail></SOAP-ENV:Fault>"] @TO@ MethodInvocation@@assertPayloadEqual("<SOAP-ENV:Fault xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>" + "<faultcode xmlns:prefix='namespace'>prefix:localPart</faultcode>" + "<faultstring>Fault</faultstring>"+ "<detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</detail></SOAP-ENV:Fault>") @AT@ 6100 @LENGTH@ 375
+------------INS InfixExpression@@"<SOAP-ENV:Fault xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>" + "<faultcode xmlns:prefix='namespace'>prefix:localPart</faultcode>" + "<faultstring>Fault</faultstring>"+ "<detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</detail></SOAP-ENV:Fault>" @TO@ SimpleName@@MethodName:assertPayloadEqual:["<SOAP-ENV:Fault xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>" + "<faultcode xmlns:prefix='namespace'>prefix:localPart</faultcode>" + "<faultstring>Fault</faultstring>"+ "<detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</detail></SOAP-ENV:Fault>"] @AT@ 6119 @LENGTH@ 355
+---------------INS StringLiteral@@"<SOAP-ENV:Fault xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>" @TO@ InfixExpression@@"<SOAP-ENV:Fault xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>" + "<faultcode xmlns:prefix='namespace'>prefix:localPart</faultcode>" + "<faultstring>Fault</faultstring>"+ "<detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</detail></SOAP-ENV:Fault>" @AT@ 6119 @LENGTH@ 77
+---------------INS Operator@@+ @TO@ InfixExpression@@"<SOAP-ENV:Fault xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>" + "<faultcode xmlns:prefix='namespace'>prefix:localPart</faultcode>" + "<faultstring>Fault</faultstring>"+ "<detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</detail></SOAP-ENV:Fault>" @AT@ 6196 @LENGTH@ 1
+---------------INS StringLiteral@@"<faultcode xmlns:prefix='namespace'>prefix:localPart</faultcode>" @TO@ InfixExpression@@"<SOAP-ENV:Fault xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>" + "<faultcode xmlns:prefix='namespace'>prefix:localPart</faultcode>" + "<faultstring>Fault</faultstring>"+ "<detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</detail></SOAP-ENV:Fault>" @AT@ 6215 @LENGTH@ 66
+---------------INS StringLiteral@@"<faultstring>Fault</faultstring>" @TO@ InfixExpression@@"<SOAP-ENV:Fault xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>" + "<faultcode xmlns:prefix='namespace'>prefix:localPart</faultcode>" + "<faultstring>Fault</faultstring>"+ "<detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</detail></SOAP-ENV:Fault>" @AT@ 6300 @LENGTH@ 34
+---------------INS StringLiteral@@"<detail>" @TO@ InfixExpression@@"<SOAP-ENV:Fault xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>" + "<faultcode xmlns:prefix='namespace'>prefix:localPart</faultcode>" + "<faultstring>Fault</faultstring>"+ "<detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</detail></SOAP-ENV:Fault>" @AT@ 6337 @LENGTH@ 10
+---------------INS StringLiteral@@"<detailContents xmlns='namespace'/>" @TO@ InfixExpression@@"<SOAP-ENV:Fault xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>" + "<faultcode xmlns:prefix='namespace'>prefix:localPart</faultcode>" + "<faultstring>Fault</faultstring>"+ "<detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</detail></SOAP-ENV:Fault>" @AT@ 6350 @LENGTH@ 37
+---------------INS StringLiteral@@"<detailContents xmlns='namespace'/>" @TO@ InfixExpression@@"<SOAP-ENV:Fault xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>" + "<faultcode xmlns:prefix='namespace'>prefix:localPart</faultcode>" + "<faultstring>Fault</faultstring>"+ "<detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</detail></SOAP-ENV:Fault>" @AT@ 6406 @LENGTH@ 37
+---------------INS StringLiteral@@"</detail></SOAP-ENV:Fault>" @TO@ InfixExpression@@"<SOAP-ENV:Fault xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>" + "<faultcode xmlns:prefix='namespace'>prefix:localPart</faultcode>" + "<faultstring>Fault</faultstring>"+ "<detail>"+ "<detailContents xmlns='namespace'/>"+ "<detailContents xmlns='namespace'/>"+ "</detail></SOAP-ENV:Fault>" @AT@ 6446 @LENGTH@ 28
+
+
+INS MethodDeclaration@@String, MethodName:convertCase, String str,  @TO@ TypeDeclaration@@[public, final]IOCase, [Serializable] @AT@ 7064 @LENGTH@ 145
+---INS SimpleType@@String @TO@ MethodDeclaration@@String, MethodName:convertCase, String str,  @AT@ 7057 @LENGTH@ 6
+---INS SimpleName@@MethodName:convertCase @TO@ MethodDeclaration@@String, MethodName:convertCase, String str,  @AT@ 7064 @LENGTH@ 11
+---INS SingleVariableDeclaration@@String str @TO@ MethodDeclaration@@String, MethodName:convertCase, String str,  @AT@ 7076 @LENGTH@ 10
+------INS SimpleType@@String @TO@ SingleVariableDeclaration@@String str @AT@ 7076 @LENGTH@ 6
+------INS SimpleName@@str @TO@ SingleVariableDeclaration@@String str @AT@ 7083 @LENGTH@ 3
+---INS IfStatement@@if (str == null) {  return null;} @TO@ MethodDeclaration@@String, MethodName:convertCase, String str,  @AT@ 7098 @LENGTH@ 53
+------INS InfixExpression@@str == null @TO@ IfStatement@@if (str == null) {  return null;} @AT@ 7102 @LENGTH@ 11
+---------INS SimpleName@@str @TO@ InfixExpression@@str == null @AT@ 7102 @LENGTH@ 3
+---------INS Operator@@== @TO@ InfixExpression@@str == null @AT@ 7105 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@str == null @AT@ 7109 @LENGTH@ 4
+------INS Block@@ThenBody:{  return null;} @TO@ IfStatement@@if (str == null) {  return null;} @AT@ 7115 @LENGTH@ 36
+---------INS ReturnStatement@@NullLiteral:null @TO@ Block@@ThenBody:{  return null;} @AT@ 7129 @LENGTH@ 12
+------------INS NullLiteral@@null @TO@ ReturnStatement@@NullLiteral:null @AT@ 7136 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:sensitive ? str : str.toLowerCase() @TO@ MethodDeclaration@@String, MethodName:convertCase, String str,  @AT@ 7160 @LENGTH@ 43
+------INS ConditionalExpression@@sensitive ? str : str.toLowerCase() @TO@ ReturnStatement@@ConditionalExpression:sensitive ? str : str.toLowerCase() @AT@ 7167 @LENGTH@ 35
+---------INS SimpleName@@sensitive @TO@ ConditionalExpression@@sensitive ? str : str.toLowerCase() @AT@ 7167 @LENGTH@ 9
+---------INS SimpleName@@str @TO@ ConditionalExpression@@sensitive ? str : str.toLowerCase() @AT@ 7179 @LENGTH@ 3
+---------INS MethodInvocation@@str.toLowerCase() @TO@ ConditionalExpression@@sensitive ? str : str.toLowerCase() @AT@ 7185 @LENGTH@ 17
+------------INS SimpleName@@Name:str @TO@ MethodInvocation@@str.toLowerCase() @AT@ 7185 @LENGTH@ 3
+------------INS SimpleName@@MethodName:toLowerCase:[] @TO@ MethodInvocation@@str.toLowerCase() @AT@ 7189 @LENGTH@ 13
+
+
+UPD ExpressionStatement@@MethodInvocation:assertEquals("AuthenticationDao returned null, which is an interface contract violation",expected.getMessage()) @TO@ MethodInvocation:assertEquals("UserDetailsService returned null, which is an interface contract violation",expected.getMessage()) @AT@ 14618 @LENGTH@ 129
+---UPD MethodInvocation@@assertEquals("AuthenticationDao returned null, which is an interface contract violation",expected.getMessage()) @TO@ assertEquals("UserDetailsService returned null, which is an interface contract violation",expected.getMessage()) @AT@ 14618 @LENGTH@ 128
+------UPD SimpleName@@MethodName:assertEquals:["AuthenticationDao returned null, which is an interface contract violation", expected.getMessage()] @TO@ MethodName:assertEquals:["UserDetailsService returned null, which is an interface contract violation", expected.getMessage()] @AT@ 14618 @LENGTH@ 128
+---------UPD StringLiteral@@"AuthenticationDao returned null, which is an interface contract violation" @TO@ "UserDetailsService returned null, which is an interface contract violation" @AT@ 14631 @LENGTH@ 75
+
+
+INS MethodDeclaration@@public, Result, MethodName:getResult,  @TO@ TypeDeclaration@@AxiomSoapFaultDetail, [SoapFaultDetail] @AT@ 2613 @LENGTH@ 106
+---INS Modifier@@public @TO@ MethodDeclaration@@public, Result, MethodName:getResult,  @AT@ 2613 @LENGTH@ 6
+---INS SimpleType@@Result @TO@ MethodDeclaration@@public, Result, MethodName:getResult,  @AT@ 2620 @LENGTH@ 6
+---INS SimpleName@@MethodName:getResult @TO@ MethodDeclaration@@public, Result, MethodName:getResult,  @AT@ 2627 @LENGTH@ 9
+---INS ReturnStatement@@ClassInstanceCreation:new SAXResult(new AxiomContentHandler(axiomFaultDetail)) @TO@ MethodDeclaration@@public, Result, MethodName:getResult,  @AT@ 2649 @LENGTH@ 64
+------INS ClassInstanceCreation@@SAXResult[new AxiomContentHandler(axiomFaultDetail)] @TO@ ReturnStatement@@ClassInstanceCreation:new SAXResult(new AxiomContentHandler(axiomFaultDetail)) @AT@ 2656 @LENGTH@ 56
+---------INS New@@new @TO@ ClassInstanceCreation@@SAXResult[new AxiomContentHandler(axiomFaultDetail)] @AT@ 2656 @LENGTH@ 3
+---------INS SimpleType@@SAXResult @TO@ ClassInstanceCreation@@SAXResult[new AxiomContentHandler(axiomFaultDetail)] @AT@ 2660 @LENGTH@ 9
+---------INS ClassInstanceCreation@@AxiomContentHandler[axiomFaultDetail] @TO@ ClassInstanceCreation@@SAXResult[new AxiomContentHandler(axiomFaultDetail)] @AT@ 2670 @LENGTH@ 41
+------------INS New@@new @TO@ ClassInstanceCreation@@AxiomContentHandler[axiomFaultDetail] @AT@ 2670 @LENGTH@ 3
+------------INS SimpleType@@AxiomContentHandler @TO@ ClassInstanceCreation@@AxiomContentHandler[axiomFaultDetail] @AT@ 2674 @LENGTH@ 19
+------------INS SimpleName@@axiomFaultDetail @TO@ ClassInstanceCreation@@AxiomContentHandler[axiomFaultDetail] @AT@ 2694 @LENGTH@ 16
+
+
+UPD ExpressionStatement@@MethodInvocation:marshal(graph,marshaller) @TO@ MethodInvocation:marshalSaxHandlers(graph,contentHandler,null) @AT@ 8287 @LENGTH@ 27
+---UPD MethodInvocation@@marshal(graph,marshaller) @TO@ marshalSaxHandlers(graph,contentHandler,null) @AT@ 8287 @LENGTH@ 26
+------UPD SimpleName@@MethodName:marshal:[graph, marshaller] @TO@ MethodName:marshalSaxHandlers:[graph, contentHandler, null] @AT@ 8287 @LENGTH@ 26
+---------UPD SimpleName@@marshaller @TO@ contentHandler @AT@ 8302 @LENGTH@ 10
+---------INS NullLiteral@@null @TO@ SimpleName@@MethodName:marshal:[graph, marshaller] @AT@ 8398 @LENGTH@ 4
+
+
+UPD ExpressionStatement@@MethodInvocation:conf.propertyLoaded(PropertiesConfiguration.getInclude(),"testClassPath.properties,testEqual.properties") @TO@ MethodInvocation:conf.propertyLoaded(PropertiesConfiguration.getInclude(),"testClasspath.properties,testEqual.properties") @AT@ 17342 @LENGTH@ 123
+---UPD MethodInvocation@@conf.propertyLoaded(PropertiesConfiguration.getInclude(),"testClassPath.properties,testEqual.properties") @TO@ conf.propertyLoaded(PropertiesConfiguration.getInclude(),"testClasspath.properties,testEqual.properties") @AT@ 17342 @LENGTH@ 122
+------UPD SimpleName@@MethodName:propertyLoaded:[PropertiesConfiguration.getInclude(), "testClassPath.properties,testEqual.properties"] @TO@ MethodName:propertyLoaded:[PropertiesConfiguration.getInclude(), "testClasspath.properties,testEqual.properties"] @AT@ 17347 @LENGTH@ 117
+---------UPD StringLiteral@@"testClassPath.properties,testEqual.properties" @TO@ "testClasspath.properties,testEqual.properties" @AT@ 17416 @LENGTH@ 47
+
+
+UPD Block@@WhileBody:{  String paramName=(String)paramNames.next();  String[] paramValues=(String[])parameters.get(paramName);  this.addParameter(paramName,paramValues);} @TO@ WhileBody:{  String paramName=(String)paramNames.next();  Object o=parameters.get(paramName);  if (o instanceof String[]) {    String[] paramValues=(String[])o;    this.addParameter(paramName,paramValues);  } else {    if (logger.isWarnEnabled()) {      logger.warn("ServletRequest.getParameterMap() returned non-String array");    }  }} @AT@ 4309 @LENGTH@ 202
+---UPD VariableDeclarationStatement@@String[] paramValues=(String[])parameters.get(paramName); @TO@ Object o=parameters.get(paramName); @AT@ 4384 @LENGTH@ 60
+------DEL ArrayType@@String[] @AT@ 4384 @LENGTH@ 8
+---------DEL SimpleType@@String @AT@ 4384 @LENGTH@ 6
+------INS SimpleType@@Object @TO@ VariableDeclarationStatement@@String[] paramValues=(String[])parameters.get(paramName); @AT@ 4384 @LENGTH@ 6
+------UPD VariableDeclarationFragment@@paramValues=(String[])parameters.get(paramName) @TO@ o=parameters.get(paramName) @AT@ 4393 @LENGTH@ 50
+---------UPD SimpleName@@paramValues @TO@ o @AT@ 4393 @LENGTH@ 11
+---------DEL CastExpression@@(String[])parameters.get(paramName) @AT@ 4407 @LENGTH@ 36
+------------DEL ArrayType@@String[] @AT@ 4408 @LENGTH@ 8
+---------------DEL SimpleType@@String @AT@ 4408 @LENGTH@ 6
+---------MOV MethodInvocation@@parameters.get(paramName) @TO@ VariableDeclarationFragment@@paramValues=(String[])parameters.get(paramName) @AT@ 4418 @LENGTH@ 25
+---INS IfStatement@@if (o instanceof String[]) {  String[] paramValues=(String[])o;  this.addParameter(paramName,paramValues);} else {  if (logger.isWarnEnabled()) {    logger.warn("ServletRequest.getParameterMap() returned non-String array");  }} @TO@ Block@@WhileBody:{  String paramName=(String)paramNames.next();  String[] paramValues=(String[])parameters.get(paramName);  this.addParameter(paramName,paramValues);} @AT@ 4435 @LENGTH@ 332
+------INS InstanceofExpression@@o instanceof String[] @TO@ IfStatement@@if (o instanceof String[]) {  String[] paramValues=(String[])o;  this.addParameter(paramName,paramValues);} else {  if (logger.isWarnEnabled()) {    logger.warn("ServletRequest.getParameterMap() returned non-String array");  }} @AT@ 4439 @LENGTH@ 21
+---------INS SimpleName@@o @TO@ InstanceofExpression@@o instanceof String[] @AT@ 4439 @LENGTH@ 1
+---------INS Instanceof@@instanceof @TO@ InstanceofExpression@@o instanceof String[] @AT@ 4441 @LENGTH@ 10
+---------INS ArrayType@@String[] @TO@ InstanceofExpression@@o instanceof String[] @AT@ 4452 @LENGTH@ 8
+------------INS SimpleType@@String @TO@ ArrayType@@String[] @AT@ 4452 @LENGTH@ 6
+------INS Block@@ThenBody:{  String[] paramValues=(String[])o;  this.addParameter(paramName,paramValues);} @TO@ IfStatement@@if (o instanceof String[]) {  String[] paramValues=(String[])o;  this.addParameter(paramName,paramValues);} else {  if (logger.isWarnEnabled()) {    logger.warn("ServletRequest.getParameterMap() returned non-String array");  }} @AT@ 4462 @LENGTH@ 130
+---------MOV ExpressionStatement@@MethodInvocation:this.addParameter(paramName,paramValues) @TO@ Block@@ThenBody:{  String[] paramValues=(String[])o;  this.addParameter(paramName,paramValues);} @AT@ 4458 @LENGTH@ 42
+---------INS VariableDeclarationStatement@@String[] paramValues=(String[])o; @TO@ Block@@ThenBody:{  String[] paramValues=(String[])o;  this.addParameter(paramName,paramValues);} @AT@ 4481 @LENGTH@ 36
+------------INS ArrayType@@String[] @TO@ VariableDeclarationStatement@@String[] paramValues=(String[])o; @AT@ 4481 @LENGTH@ 8
+---------------INS SimpleType@@String @TO@ ArrayType@@String[] @AT@ 4481 @LENGTH@ 6
+------------INS VariableDeclarationFragment@@paramValues=(String[])o @TO@ VariableDeclarationStatement@@String[] paramValues=(String[])o; @AT@ 4490 @LENGTH@ 26
+---------------INS SimpleName@@paramValues @TO@ VariableDeclarationFragment@@paramValues=(String[])o @AT@ 4490 @LENGTH@ 11
+---------------INS CastExpression@@(String[])o @TO@ VariableDeclarationFragment@@paramValues=(String[])o @AT@ 4504 @LENGTH@ 12
+------------------INS ArrayType@@String[] @TO@ CastExpression@@(String[])o @AT@ 4505 @LENGTH@ 8
+---------------------INS SimpleType@@String @TO@ ArrayType@@String[] @AT@ 4505 @LENGTH@ 6
+------------------INS SimpleName@@o @TO@ CastExpression@@(String[])o @AT@ 4515 @LENGTH@ 1
+------INS Block@@ElseBody:{  if (logger.isWarnEnabled()) {    logger.warn("ServletRequest.getParameterMap() returned non-String array");  }} @TO@ IfStatement@@if (o instanceof String[]) {  String[] paramValues=(String[])o;  this.addParameter(paramName,paramValues);} else {  if (logger.isWarnEnabled()) {    logger.warn("ServletRequest.getParameterMap() returned non-String array");  }} @AT@ 4598 @LENGTH@ 169
+---------INS IfStatement@@if (logger.isWarnEnabled()) {  logger.warn("ServletRequest.getParameterMap() returned non-String array");} @TO@ Block@@ElseBody:{  if (logger.isWarnEnabled()) {    logger.warn("ServletRequest.getParameterMap() returned non-String array");  }} @AT@ 4614 @LENGTH@ 138
+------------INS MethodInvocation@@logger.isWarnEnabled() @TO@ IfStatement@@if (logger.isWarnEnabled()) {  logger.warn("ServletRequest.getParameterMap() returned non-String array");} @AT@ 4618 @LENGTH@ 22
+---------------INS SimpleName@@Name:logger @TO@ MethodInvocation@@logger.isWarnEnabled() @AT@ 4618 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:isWarnEnabled:[] @TO@ MethodInvocation@@logger.isWarnEnabled() @AT@ 4625 @LENGTH@ 15
+------------INS Block@@ThenBody:{  logger.warn("ServletRequest.getParameterMap() returned non-String array");} @TO@ IfStatement@@if (logger.isWarnEnabled()) {  logger.warn("ServletRequest.getParameterMap() returned non-String array");} @AT@ 4642 @LENGTH@ 110
+---------------INS ExpressionStatement@@MethodInvocation:logger.warn("ServletRequest.getParameterMap() returned non-String array") @TO@ Block@@ThenBody:{  logger.warn("ServletRequest.getParameterMap() returned non-String array");} @AT@ 4662 @LENGTH@ 74
+------------------INS MethodInvocation@@logger.warn("ServletRequest.getParameterMap() returned non-String array") @TO@ ExpressionStatement@@MethodInvocation:logger.warn("ServletRequest.getParameterMap() returned non-String array") @AT@ 4662 @LENGTH@ 73
+---------------------INS SimpleName@@Name:logger @TO@ MethodInvocation@@logger.warn("ServletRequest.getParameterMap() returned non-String array") @AT@ 4662 @LENGTH@ 6
+---------------------INS SimpleName@@MethodName:warn:["ServletRequest.getParameterMap() returned non-String array"] @TO@ MethodInvocation@@logger.warn("ServletRequest.getParameterMap() returned non-String array") @AT@ 4669 @LENGTH@ 66
+------------------------INS StringLiteral@@"ServletRequest.getParameterMap() returned non-String array" @TO@ SimpleName@@MethodName:warn:["ServletRequest.getParameterMap() returned non-String array"] @AT@ 4674 @LENGTH@ 60
+
+
+UPD ExpressionStatement@@MethodInvocation:assertFalse("Authenticated",authenticated) @TO@ MethodInvocation:assertTrue("Authenticated",authenticated) @AT@ 3242 @LENGTH@ 44
+---UPD MethodInvocation@@assertFalse("Authenticated",authenticated) @TO@ assertTrue("Authenticated",authenticated) @AT@ 3242 @LENGTH@ 43
+------UPD SimpleName@@MethodName:assertFalse:["Authenticated", authenticated] @TO@ MethodName:assertTrue:["Authenticated", authenticated] @AT@ 3242 @LENGTH@ 43
+
+
+INS MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @TO@ TypeDeclaration@@[public]AxiomSoap11BodyTest, AbstractSoap11BodyTestCase @AT@ 1320 @LENGTH@ 149
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 1320 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 1327 @LENGTH@ 4
+---INS SimpleName@@MethodName:testAddFaultWithDetailResult @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 1332 @LENGTH@ 28
+---INS SimpleType@@Exception @TO@ MethodDeclaration@@public, void, MethodName:testAddFaultWithDetailResult, Exception,  @AT@ 1370 @LENGTH@ 9

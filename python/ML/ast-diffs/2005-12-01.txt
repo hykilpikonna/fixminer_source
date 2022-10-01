@@ -1,0 +1,910 @@
+INS MethodDeclaration@@protected, InitialDirContextFactory, MethodName:getInitialDirContextFactory,  @TO@ TypeDeclaration@@[public]DefaultLdapAuthoritiesPopulator, [LdapAuthoritiesPopulator] @AT@ 11620 @LENGTH@ 113
+---INS Modifier@@protected @TO@ MethodDeclaration@@protected, InitialDirContextFactory, MethodName:getInitialDirContextFactory,  @AT@ 11620 @LENGTH@ 9
+---INS SimpleType@@InitialDirContextFactory @TO@ MethodDeclaration@@protected, InitialDirContextFactory, MethodName:getInitialDirContextFactory,  @AT@ 11630 @LENGTH@ 24
+---INS SimpleName@@MethodName:getInitialDirContextFactory @TO@ MethodDeclaration@@protected, InitialDirContextFactory, MethodName:getInitialDirContextFactory,  @AT@ 11655 @LENGTH@ 27
+---INS ReturnStatement@@SimpleName:initialDirContextFactory @TO@ MethodDeclaration@@protected, InitialDirContextFactory, MethodName:getInitialDirContextFactory,  @AT@ 11695 @LENGTH@ 32
+------INS SimpleName@@initialDirContextFactory @TO@ ReturnStatement@@SimpleName:initialDirContextFactory @AT@ 11702 @LENGTH@ 24
+
+
+UPD FieldDeclaration@@private, String, [managerPassword=null] @TO@ private, String, [managerPassword="manager_password_not_set"] @AT@ 3703 @LENGTH@ 38
+---UPD VariableDeclarationFragment@@managerPassword=null @TO@ managerPassword="manager_password_not_set" @AT@ 3718 @LENGTH@ 22
+------INS StringLiteral@@"manager_password_not_set" @TO@ VariableDeclarationFragment@@managerPassword=null @AT@ 3736 @LENGTH@ 26
+------DEL NullLiteral@@null @AT@ 3736 @LENGTH@ 4
+
+
+INS MethodDeclaration@@public, void, MethodName:tearDown,  @TO@ TypeDeclaration@@[public]CaptchaChannelProcessorTemplateTests, TestCase @AT@ 1496 @LENGTH@ 76
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:tearDown,  @AT@ 1496 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:tearDown,  @AT@ 1503 @LENGTH@ 4
+---INS SimpleName@@MethodName:tearDown @TO@ MethodDeclaration@@public, void, MethodName:tearDown,  @AT@ 1508 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:SecurityContextHolder.clearContext() @TO@ MethodDeclaration@@public, void, MethodName:tearDown,  @AT@ 1529 @LENGTH@ 37
+------INS MethodInvocation@@SecurityContextHolder.clearContext() @TO@ ExpressionStatement@@MethodInvocation:SecurityContextHolder.clearContext() @AT@ 1529 @LENGTH@ 36
+---------INS SimpleName@@Name:SecurityContextHolder @TO@ MethodInvocation@@SecurityContextHolder.clearContext() @AT@ 1529 @LENGTH@ 21
+---------INS SimpleName@@MethodName:clearContext:[] @TO@ MethodInvocation@@SecurityContextHolder.clearContext() @AT@ 1551 @LENGTH@ 14
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 1807 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 1807 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 1829 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 1840 @LENGTH@ 25
+------------DEL New@@new @AT@ 1840 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 1844 @LENGTH@ 19
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 4816 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 4816 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 4838 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 4849 @LENGTH@ 25
+------------DEL New@@new @AT@ 4849 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 4853 @LENGTH@ 19
+
+
+UPD ExpressionStatement@@MethodInvocation:authRequest.setDetails(new WebAuthenticationDetails(request)) @TO@ MethodInvocation:authRequest.setDetails(new WebAuthenticationDetails(request,false)) @AT@ 8669 @LENGTH@ 62
+---UPD MethodInvocation@@authRequest.setDetails(new WebAuthenticationDetails(request)) @TO@ authRequest.setDetails(new WebAuthenticationDetails(request,false)) @AT@ 8669 @LENGTH@ 61
+------UPD SimpleName@@MethodName:setDetails:[new WebAuthenticationDetails(request)] @TO@ MethodName:setDetails:[new WebAuthenticationDetails(request,false)] @AT@ 8681 @LENGTH@ 49
+---------UPD ClassInstanceCreation@@WebAuthenticationDetails[request] @TO@ WebAuthenticationDetails[request, false] @AT@ 8692 @LENGTH@ 37
+------------INS BooleanLiteral@@false @TO@ ClassInstanceCreation@@WebAuthenticationDetails[request] @AT@ 8730 @LENGTH@ 5
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 9950 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 9950 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 9972 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 9983 @LENGTH@ 25
+------------DEL New@@new @AT@ 9983 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 9987 @LENGTH@ 19
+
+
+INS IfStatement@@if (context == null) {  log.debug("The destroyed session has no SecurityContext");  return;} @TO@ MethodDeclaration@@protected, void, MethodName:handleLogout, HttpSessionDestroyedEvent event,  @AT@ 16834 @LENGTH@ 123
+---INS InfixExpression@@context == null @TO@ IfStatement@@if (context == null) {  log.debug("The destroyed session has no SecurityContext");  return;} @AT@ 16838 @LENGTH@ 15
+------INS SimpleName@@context @TO@ InfixExpression@@context == null @AT@ 16838 @LENGTH@ 7
+------INS Operator@@== @TO@ InfixExpression@@context == null @AT@ 16845 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@context == null @AT@ 16849 @LENGTH@ 4
+---INS Block@@ThenBody:{  log.debug("The destroyed session has no SecurityContext");  return;} @TO@ IfStatement@@if (context == null) {  log.debug("The destroyed session has no SecurityContext");  return;} @AT@ 16855 @LENGTH@ 102
+------INS ExpressionStatement@@MethodInvocation:log.debug("The destroyed session has no SecurityContext") @TO@ Block@@ThenBody:{  log.debug("The destroyed session has no SecurityContext");  return;} @AT@ 16869 @LENGTH@ 58
+---------INS MethodInvocation@@log.debug("The destroyed session has no SecurityContext") @TO@ ExpressionStatement@@MethodInvocation:log.debug("The destroyed session has no SecurityContext") @AT@ 16869 @LENGTH@ 57
+------------INS SimpleName@@Name:log @TO@ MethodInvocation@@log.debug("The destroyed session has no SecurityContext") @AT@ 16869 @LENGTH@ 3
+------------INS SimpleName@@MethodName:debug:["The destroyed session has no SecurityContext"] @TO@ MethodInvocation@@log.debug("The destroyed session has no SecurityContext") @AT@ 16873 @LENGTH@ 53
+---------------INS StringLiteral@@"The destroyed session has no SecurityContext" @TO@ SimpleName@@MethodName:debug:["The destroyed session has no SecurityContext"] @AT@ 16879 @LENGTH@ 46
+------INS ReturnStatement@@ @TO@ Block@@ThenBody:{  log.debug("The destroyed session has no SecurityContext");  return;} @AT@ 16940 @LENGTH@ 7
+
+
+UPD IfStatement@@if (auth instanceof JaasAuthenticationToken) {  JaasAuthenticationToken token=(JaasAuthenticationToken)auth;  try {    LoginContext loginContext=token.getLoginContext();    if (loginContext != null) {      log.debug("Logging principal: [" + token.getPrincipal() + "] out of LoginContext");      loginContext.logout();    } else {      log.debug("Cannot logout principal: [" + token.getPrincipal() + "] from LoginContext. "+ "The LoginContext is unavailable");    }  } catch (  LoginException e) {    log.warn("Error error logging out of LoginContext",e);  }} @TO@ if ((auth != null) && (auth instanceof JaasAuthenticationToken)) {  JaasAuthenticationToken token=(JaasAuthenticationToken)auth;  try {    LoginContext loginContext=token.getLoginContext();    if (loginContext != null) {      log.debug("Logging principal: [" + token.getPrincipal() + "] out of LoginContext");      loginContext.logout();    } else {      log.debug("Cannot logout principal: [" + token.getPrincipal() + "] from LoginContext. "+ "The LoginContext is unavailable");    }  } catch (  LoginException e) {    log.warn("Error error logging out of LoginContext",e);  }} @AT@ 16893 @LENGTH@ 754
+---DEL InstanceofExpression@@auth instanceof JaasAuthenticationToken @AT@ 16897 @LENGTH@ 39
+---INS InfixExpression@@(auth != null) && (auth instanceof JaasAuthenticationToken) @TO@ IfStatement@@if (auth instanceof JaasAuthenticationToken) {  JaasAuthenticationToken token=(JaasAuthenticationToken)auth;  try {    LoginContext loginContext=token.getLoginContext();    if (loginContext != null) {      log.debug("Logging principal: [" + token.getPrincipal() + "] out of LoginContext");      loginContext.logout();    } else {      log.debug("Cannot logout principal: [" + token.getPrincipal() + "] from LoginContext. "+ "The LoginContext is unavailable");    }  } catch (  LoginException e) {    log.warn("Error error logging out of LoginContext",e);  }} @AT@ 17029 @LENGTH@ 59
+------INS ParenthesizedExpression@@(auth != null) @TO@ InfixExpression@@(auth != null) && (auth instanceof JaasAuthenticationToken) @AT@ 17029 @LENGTH@ 14
+---------INS InfixExpression@@auth != null @TO@ ParenthesizedExpression@@(auth != null) @AT@ 17030 @LENGTH@ 12
+------------INS SimpleName@@auth @TO@ InfixExpression@@auth != null @AT@ 17030 @LENGTH@ 4
+------------INS Operator@@!= @TO@ InfixExpression@@auth != null @AT@ 17034 @LENGTH@ 2
+------------INS NullLiteral@@null @TO@ InfixExpression@@auth != null @AT@ 17038 @LENGTH@ 4
+------INS Operator@@&& @TO@ InfixExpression@@(auth != null) && (auth instanceof JaasAuthenticationToken) @AT@ 17043 @LENGTH@ 2
+------INS ParenthesizedExpression@@(auth instanceof JaasAuthenticationToken) @TO@ InfixExpression@@(auth != null) && (auth instanceof JaasAuthenticationToken) @AT@ 17047 @LENGTH@ 41
+---------INS InstanceofExpression@@auth instanceof JaasAuthenticationToken @TO@ ParenthesizedExpression@@(auth instanceof JaasAuthenticationToken) @AT@ 17048 @LENGTH@ 39
+------------MOV SimpleName@@auth @TO@ InstanceofExpression@@auth instanceof JaasAuthenticationToken @AT@ 16897 @LENGTH@ 4
+------------MOV Instanceof@@instanceof @TO@ InstanceofExpression@@auth instanceof JaasAuthenticationToken @AT@ 16902 @LENGTH@ 10
+------------MOV SimpleType@@JaasAuthenticationToken @TO@ InstanceofExpression@@auth instanceof JaasAuthenticationToken @AT@ 16913 @LENGTH@ 23
+
+
+UPD ExpressionStatement@@Assignment:components[i]=Integer.parseInt(color.substring(i,i + 2),HEX_RADIX) @TO@ Assignment:components[i]=Integer.parseInt(color.substring(2 * i,2 * i + 2),HEX_RADIX) @AT@ 17023 @LENGTH@ 71
+---UPD Assignment@@components[i]=Integer.parseInt(color.substring(i,i + 2),HEX_RADIX) @TO@ components[i]=Integer.parseInt(color.substring(2 * i,2 * i + 2),HEX_RADIX) @AT@ 17023 @LENGTH@ 70
+------UPD MethodInvocation@@Integer.parseInt(color.substring(i,i + 2),HEX_RADIX) @TO@ Integer.parseInt(color.substring(2 * i,2 * i + 2),HEX_RADIX) @AT@ 17039 @LENGTH@ 54
+---------UPD SimpleName@@MethodName:parseInt:[color.substring(i,i + 2), HEX_RADIX] @TO@ MethodName:parseInt:[color.substring(2 * i,2 * i + 2), HEX_RADIX] @AT@ 17047 @LENGTH@ 46
+------------UPD MethodInvocation@@color.substring(i,i + 2) @TO@ color.substring(2 * i,2 * i + 2) @AT@ 17056 @LENGTH@ 25
+---------------UPD SimpleName@@MethodName:substring:[i, i + 2] @TO@ MethodName:substring:[2 * i, 2 * i + 2] @AT@ 17062 @LENGTH@ 19
+------------------INS InfixExpression@@2 * i @TO@ SimpleName@@MethodName:substring:[i, i + 2] @AT@ 17072 @LENGTH@ 5
+---------------------INS NumberLiteral@@2 @TO@ InfixExpression@@2 * i @AT@ 17072 @LENGTH@ 1
+---------------------INS Operator@@* @TO@ InfixExpression@@2 * i @AT@ 17073 @LENGTH@ 1
+---------------------INS SimpleName@@i @TO@ InfixExpression@@2 * i @AT@ 17076 @LENGTH@ 1
+------------------DEL SimpleName@@i @AT@ 17072 @LENGTH@ 1
+------------------UPD InfixExpression@@i + 2 @TO@ 2 * i + 2 @AT@ 17075 @LENGTH@ 5
+---------------------INS InfixExpression@@2 * i @TO@ InfixExpression@@i + 2 @AT@ 17079 @LENGTH@ 5
+------------------------MOV SimpleName@@i @TO@ InfixExpression@@2 * i @AT@ 17075 @LENGTH@ 1
+------------------------MOV SimpleName@@i @TO@ InfixExpression@@2 * i @AT@ 17075 @LENGTH@ 1
+------------------------INS NumberLiteral@@2 @TO@ InfixExpression@@2 * i @AT@ 17079 @LENGTH@ 1
+------------------------INS Operator@@* @TO@ InfixExpression@@2 * i @AT@ 17080 @LENGTH@ 1
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 3616 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 3616 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 3638 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 3649 @LENGTH@ 25
+------------DEL New@@new @AT@ 3649 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 3653 @LENGTH@ 19
+
+
+INS MethodDeclaration@@public, static, void, MethodName:clearContext,  @TO@ TypeDeclaration@@[public]SecurityContextHolder,  @AT@ 3115 @LENGTH@ 179
+---INS Modifier@@public @TO@ MethodDeclaration@@public, static, void, MethodName:clearContext,  @AT@ 3115 @LENGTH@ 6
+---INS Modifier@@static @TO@ MethodDeclaration@@public, static, void, MethodName:clearContext,  @AT@ 3122 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, static, void, MethodName:clearContext,  @AT@ 3129 @LENGTH@ 4
+---INS SimpleName@@MethodName:clearContext @TO@ MethodDeclaration@@public, static, void, MethodName:clearContext,  @AT@ 3134 @LENGTH@ 12
+---INS ExpressionStatement@@MethodInvocation:contextHolder.set(null) @TO@ MethodDeclaration@@public, static, void, MethodName:clearContext,  @AT@ 3264 @LENGTH@ 24
+------INS MethodInvocation@@contextHolder.set(null) @TO@ ExpressionStatement@@MethodInvocation:contextHolder.set(null) @AT@ 3264 @LENGTH@ 23
+---------INS SimpleName@@Name:contextHolder @TO@ MethodInvocation@@contextHolder.set(null) @AT@ 3264 @LENGTH@ 13
+---------INS SimpleName@@MethodName:set:[null] @TO@ MethodInvocation@@contextHolder.set(null) @AT@ 3278 @LENGTH@ 9
+------------INS NullLiteral@@null @TO@ SimpleName@@MethodName:set:[null] @AT@ 3282 @LENGTH@ 4
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 3912 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 3912 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 3934 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 3945 @LENGTH@ 25
+------------DEL New@@new @AT@ 3945 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 3949 @LENGTH@ 19
+
+
+INS IfStatement@@if (predicates.length == 1) {  return predicates[0];} @TO@ MethodDeclaration@@public, static, Predicate, MethodName:getInstance, Predicate[] predicates,  @AT@ 1917 @LENGTH@ 73
+---INS InfixExpression@@predicates.length == 1 @TO@ IfStatement@@if (predicates.length == 1) {  return predicates[0];} @AT@ 1921 @LENGTH@ 22
+------INS QualifiedName@@predicates.length @TO@ InfixExpression@@predicates.length == 1 @AT@ 1921 @LENGTH@ 17
+---------INS SimpleName@@predicates @TO@ QualifiedName@@predicates.length @AT@ 1921 @LENGTH@ 10
+---------INS SimpleName@@length @TO@ QualifiedName@@predicates.length @AT@ 1932 @LENGTH@ 6
+------INS Operator@@== @TO@ InfixExpression@@predicates.length == 1 @AT@ 1938 @LENGTH@ 2
+------INS NumberLiteral@@1 @TO@ InfixExpression@@predicates.length == 1 @AT@ 1942 @LENGTH@ 1
+---INS Block@@ThenBody:{  return predicates[0];} @TO@ IfStatement@@if (predicates.length == 1) {  return predicates[0];} @AT@ 1945 @LENGTH@ 45
+------INS ReturnStatement@@ArrayAccess:predicates[0] @TO@ Block@@ThenBody:{  return predicates[0];} @AT@ 1959 @LENGTH@ 21
+---------INS ArrayAccess@@predicates[0] @TO@ ReturnStatement@@ArrayAccess:predicates[0] @AT@ 1966 @LENGTH@ 13
+------------INS SimpleName@@predicates @TO@ ArrayAccess@@predicates[0] @AT@ 1966 @LENGTH@ 10
+------------INS NumberLiteral@@0 @TO@ ArrayAccess@@predicates[0] @AT@ 1977 @LENGTH@ 1
+
+
+INS IfStatement@@if (groupSearchBase.length() == 0) {  logger.info("groupSearchBase is empty. Searches will be performed from the root: " + initialDirContextFactory.getRootDn());} @TO@ MethodDeclaration@@public, voidMethodName:DefaultLdapAuthoritiesPopulator, InitialDirContextFactory initialDirContextFactory, String groupSearchBase,  @AT@ 7198 @LENGTH@ 201
+---INS InfixExpression@@groupSearchBase.length() == 0 @TO@ IfStatement@@if (groupSearchBase.length() == 0) {  logger.info("groupSearchBase is empty. Searches will be performed from the root: " + initialDirContextFactory.getRootDn());} @AT@ 7201 @LENGTH@ 29
+------INS MethodInvocation@@groupSearchBase.length() @TO@ InfixExpression@@groupSearchBase.length() == 0 @AT@ 7201 @LENGTH@ 24
+---------INS SimpleName@@Name:groupSearchBase @TO@ MethodInvocation@@groupSearchBase.length() @AT@ 7201 @LENGTH@ 15
+---------INS SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@groupSearchBase.length() @AT@ 7217 @LENGTH@ 8
+------INS Operator@@== @TO@ InfixExpression@@groupSearchBase.length() == 0 @AT@ 7225 @LENGTH@ 2
+------INS NumberLiteral@@0 @TO@ InfixExpression@@groupSearchBase.length() == 0 @AT@ 7229 @LENGTH@ 1
+---INS Block@@ThenBody:{  logger.info("groupSearchBase is empty. Searches will be performed from the root: " + initialDirContextFactory.getRootDn());} @TO@ IfStatement@@if (groupSearchBase.length() == 0) {  logger.info("groupSearchBase is empty. Searches will be performed from the root: " + initialDirContextFactory.getRootDn());} @AT@ 7232 @LENGTH@ 167
+------INS ExpressionStatement@@MethodInvocation:logger.info("groupSearchBase is empty. Searches will be performed from the root: " + initialDirContextFactory.getRootDn()) @TO@ Block@@ThenBody:{  logger.info("groupSearchBase is empty. Searches will be performed from the root: " + initialDirContextFactory.getRootDn());} @AT@ 7246 @LENGTH@ 143
+---------INS MethodInvocation@@logger.info("groupSearchBase is empty. Searches will be performed from the root: " + initialDirContextFactory.getRootDn()) @TO@ ExpressionStatement@@MethodInvocation:logger.info("groupSearchBase is empty. Searches will be performed from the root: " + initialDirContextFactory.getRootDn()) @AT@ 7246 @LENGTH@ 142
+------------INS SimpleName@@Name:logger @TO@ MethodInvocation@@logger.info("groupSearchBase is empty. Searches will be performed from the root: " + initialDirContextFactory.getRootDn()) @AT@ 7246 @LENGTH@ 6
+------------INS SimpleName@@MethodName:info:["groupSearchBase is empty. Searches will be performed from the root: " + initialDirContextFactory.getRootDn()] @TO@ MethodInvocation@@logger.info("groupSearchBase is empty. Searches will be performed from the root: " + initialDirContextFactory.getRootDn()) @AT@ 7253 @LENGTH@ 135
+---------------INS InfixExpression@@"groupSearchBase is empty. Searches will be performed from the root: " + initialDirContextFactory.getRootDn() @TO@ SimpleName@@MethodName:info:["groupSearchBase is empty. Searches will be performed from the root: " + initialDirContextFactory.getRootDn()] @AT@ 7258 @LENGTH@ 129
+------------------INS StringLiteral@@"groupSearchBase is empty. Searches will be performed from the root: " @TO@ InfixExpression@@"groupSearchBase is empty. Searches will be performed from the root: " + initialDirContextFactory.getRootDn() @AT@ 7258 @LENGTH@ 70
+------------------INS Operator@@+ @TO@ InfixExpression@@"groupSearchBase is empty. Searches will be performed from the root: " + initialDirContextFactory.getRootDn() @AT@ 7328 @LENGTH@ 1
+------------------INS MethodInvocation@@initialDirContextFactory.getRootDn() @TO@ InfixExpression@@"groupSearchBase is empty. Searches will be performed from the root: " + initialDirContextFactory.getRootDn() @AT@ 7351 @LENGTH@ 36
+---------------------INS SimpleName@@Name:initialDirContextFactory @TO@ MethodInvocation@@initialDirContextFactory.getRootDn() @AT@ 7351 @LENGTH@ 24
+---------------------INS SimpleName@@MethodName:getRootDn:[] @TO@ MethodInvocation@@initialDirContextFactory.getRootDn() @AT@ 7376 @LENGTH@ 11
+
+
+UPD MethodDeclaration@@public, void, MethodName:testNoArgConstructor,  @TO@ public, void, MethodName:testNoArgConstructorDoesntExist,  @AT@ 2308 @LENGTH@ 261
+---UPD SimpleName@@MethodName:testNoArgConstructor @TO@ MethodName:testNoArgConstructorDoesntExist @AT@ 2320 @LENGTH@ 20
+---UPD TryStatement@@try {  new TestingAuthenticationToken();  fail("Should have thrown IllegalArgumentException");} catch (IllegalArgumentException expected) {  assertTrue(true);} @TO@ try {  clazz.getDeclaredConstructor((Class[])null);  fail("Should have thrown NoSuchMethodException");} catch (NoSuchMethodException expected) {  assertTrue(true);} @AT@ 2353 @LENGTH@ 210
+------UPD ExpressionStatement@@ClassInstanceCreation:new TestingAuthenticationToken() @TO@ MethodInvocation:clazz.getDeclaredConstructor((Class[])null) @AT@ 2371 @LENGTH@ 33
+---------DEL ClassInstanceCreation@@TestingAuthenticationToken[] @AT@ 2371 @LENGTH@ 32
+------------DEL New@@new @AT@ 2371 @LENGTH@ 3
+------------DEL SimpleType@@TestingAuthenticationToken @AT@ 2375 @LENGTH@ 26
+---------INS MethodInvocation@@clazz.getDeclaredConstructor((Class[])null) @TO@ ExpressionStatement@@ClassInstanceCreation:new TestingAuthenticationToken() @AT@ 2516 @LENGTH@ 43
+------------INS SimpleName@@Name:clazz @TO@ MethodInvocation@@clazz.getDeclaredConstructor((Class[])null) @AT@ 2516 @LENGTH@ 5
+------------INS SimpleName@@MethodName:getDeclaredConstructor:[(Class[])null] @TO@ MethodInvocation@@clazz.getDeclaredConstructor((Class[])null) @AT@ 2522 @LENGTH@ 37
+---------------INS CastExpression@@(Class[])null @TO@ SimpleName@@MethodName:getDeclaredConstructor:[(Class[])null] @AT@ 2545 @LENGTH@ 13
+------------------INS ArrayType@@Class[] @TO@ CastExpression@@(Class[])null @AT@ 2546 @LENGTH@ 7
+---------------------INS SimpleType@@Class @TO@ ArrayType@@Class[] @AT@ 2546 @LENGTH@ 5
+------------------INS NullLiteral@@null @TO@ CastExpression@@(Class[])null @AT@ 2554 @LENGTH@ 4
+------UPD ExpressionStatement@@MethodInvocation:fail("Should have thrown IllegalArgumentException") @TO@ MethodInvocation:fail("Should have thrown NoSuchMethodException") @AT@ 2417 @LENGTH@ 52
+---------UPD MethodInvocation@@fail("Should have thrown IllegalArgumentException") @TO@ fail("Should have thrown NoSuchMethodException") @AT@ 2417 @LENGTH@ 51
+------------UPD SimpleName@@MethodName:fail:["Should have thrown IllegalArgumentException"] @TO@ MethodName:fail:["Should have thrown NoSuchMethodException"] @AT@ 2417 @LENGTH@ 51
+---------------UPD StringLiteral@@"Should have thrown IllegalArgumentException" @TO@ "Should have thrown NoSuchMethodException" @AT@ 2422 @LENGTH@ 45
+------UPD CatchClause@@catch (IllegalArgumentException expected) {  assertTrue(true);} @TO@ catch (NoSuchMethodException expected) {  assertTrue(true);} @AT@ 2480 @LENGTH@ 83
+---------UPD SingleVariableDeclaration@@IllegalArgumentException expected @TO@ NoSuchMethodException expected @AT@ 2487 @LENGTH@ 33
+------------UPD SimpleType@@IllegalArgumentException @TO@ NoSuchMethodException @AT@ 2487 @LENGTH@ 24
+---INS VariableDeclarationStatement@@Class clazz=TestingAuthenticationToken.class; @TO@ MethodDeclaration@@public, void, MethodName:testNoArgConstructor,  @AT@ 2441 @LENGTH@ 47
+------INS SimpleType@@Class @TO@ VariableDeclarationStatement@@Class clazz=TestingAuthenticationToken.class; @AT@ 2441 @LENGTH@ 5
+------INS VariableDeclarationFragment@@clazz=TestingAuthenticationToken.class @TO@ VariableDeclarationStatement@@Class clazz=TestingAuthenticationToken.class; @AT@ 2447 @LENGTH@ 40
+---------INS SimpleName@@clazz @TO@ VariableDeclarationFragment@@clazz=TestingAuthenticationToken.class @AT@ 2447 @LENGTH@ 5
+---------INS TypeLiteral@@TestingAuthenticationToken.class @TO@ VariableDeclarationFragment@@clazz=TestingAuthenticationToken.class @AT@ 2455 @LENGTH@ 32
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 3976 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 3976 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 3998 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 4009 @LENGTH@ 25
+------------DEL New@@new @AT@ 4009 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 4013 @LENGTH@ 19
+
+
+UPD MethodDeclaration@@public, GrantedAuthority[], MethodName:getAuthorities,  @TO@ public, voidMethodName:MockRunAsAuthenticationToken,  @AT@ 1349 @LENGTH@ 71
+---INS SuperConstructorInvocation@@super(null);
+ @TO@ MethodDeclaration@@public, GrantedAuthority[], MethodName:getAuthorities,  @AT@ 1213 @LENGTH@ 12
+------INS NullLiteral@@null @TO@ SuperConstructorInvocation@@super(null);
+ @AT@ 1219 @LENGTH@ 4
+---DEL ArrayType@@GrantedAuthority[] @AT@ 1356 @LENGTH@ 18
+------DEL SimpleType@@GrantedAuthority @AT@ 1356 @LENGTH@ 16
+---UPD SimpleName@@MethodName:getAuthorities @TO@ MethodName:MockRunAsAuthenticationToken @AT@ 1375 @LENGTH@ 14
+---DEL ReturnStatement@@NullLiteral:null @AT@ 1402 @LENGTH@ 12
+------DEL NullLiteral@@null @AT@ 1409 @LENGTH@ 4
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 1760 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 1760 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 1782 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 1793 @LENGTH@ 25
+------------DEL New@@new @AT@ 1793 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 1797 @LENGTH@ 19
+
+
+UPD ExpressionStatement@@MethodInvocation:Assert.hasLength(groupSearchBase,"The groupSearchBase (name to search under), must be specified.") @TO@ MethodInvocation:Assert.notNull(groupSearchBase,"The groupSearchBase (name to search under), must not be null.") @AT@ 6977 @LENGTH@ 100
+---UPD MethodInvocation@@Assert.hasLength(groupSearchBase,"The groupSearchBase (name to search under), must be specified.") @TO@ Assert.notNull(groupSearchBase,"The groupSearchBase (name to search under), must not be null.") @AT@ 6977 @LENGTH@ 99
+------UPD SimpleName@@MethodName:hasLength:[groupSearchBase, "The groupSearchBase (name to search under), must be specified."] @TO@ MethodName:notNull:[groupSearchBase, "The groupSearchBase (name to search under), must not be null."] @AT@ 6984 @LENGTH@ 92
+---------UPD StringLiteral@@"The groupSearchBase (name to search under), must be specified." @TO@ "The groupSearchBase (name to search under), must not be null." @AT@ 7011 @LENGTH@ 64
+
+
+DEL MethodDeclaration@@public, void, MethodName:testWaitFor,  @AT@ 3409 @LENGTH@ 123
+---DEL Modifier@@public @AT@ 3409 @LENGTH@ 6
+---DEL PrimitiveType@@void @AT@ 3416 @LENGTH@ 4
+---DEL SimpleName@@MethodName:testWaitFor @AT@ 3421 @LENGTH@ 11
+---DEL ExpressionStatement@@MethodInvocation:FileUtils.waitFor(new File(""),-1) @AT@ 3445 @LENGTH@ 36
+------DEL MethodInvocation@@FileUtils.waitFor(new File(""),-1) @AT@ 3445 @LENGTH@ 35
+---------DEL SimpleName@@Name:FileUtils @AT@ 3445 @LENGTH@ 9
+---------DEL SimpleName@@MethodName:waitFor:[new File(""), -1] @AT@ 3455 @LENGTH@ 25
+------------DEL ClassInstanceCreation@@File[""] @AT@ 3463 @LENGTH@ 12
+---------------DEL New@@new @AT@ 3463 @LENGTH@ 3
+---------------DEL SimpleType@@File @AT@ 3467 @LENGTH@ 4
+---------------DEL StringLiteral@@"" @AT@ 3472 @LENGTH@ 2
+------------DEL PrefixExpression@@-1 @AT@ 3477 @LENGTH@ 2
+---------------DEL Operator@@- @AT@ 3477 @LENGTH@ 1
+---------------DEL NumberLiteral@@1 @AT@ 3478 @LENGTH@ 1
+---DEL ExpressionStatement@@MethodInvocation:FileUtils.waitFor(new File(""),2) @AT@ 3491 @LENGTH@ 35
+------DEL MethodInvocation@@FileUtils.waitFor(new File(""),2) @AT@ 3491 @LENGTH@ 34
+---------DEL SimpleName@@Name:FileUtils @AT@ 3491 @LENGTH@ 9
+---------DEL SimpleName@@MethodName:waitFor:[new File(""), 2] @AT@ 3501 @LENGTH@ 24
+------------DEL ClassInstanceCreation@@File[""] @AT@ 3509 @LENGTH@ 12
+---------------DEL New@@new @AT@ 3509 @LENGTH@ 3
+---------------DEL SimpleType@@File @AT@ 3513 @LENGTH@ 4
+---------------DEL StringLiteral@@"" @AT@ 3518 @LENGTH@ 2
+------------DEL NumberLiteral@@2 @AT@ 3523 @LENGTH@ 1
+
+
+UPD MethodDeclaration@@public, void, MethodName:testNoArgConstructor,  @TO@ public, void, MethodName:testNoArgConstructorDoesntExist,  @AT@ 4600 @LENGTH@ 264
+---UPD SimpleName@@MethodName:testNoArgConstructor @TO@ MethodName:testNoArgConstructorDoesntExist @AT@ 4612 @LENGTH@ 20
+---UPD TryStatement@@try {  new RememberMeAuthenticationToken();  fail("Should have thrown IllegalArgumentException");} catch (IllegalArgumentException expected) {  assertTrue(true);} @TO@ try {  clazz.getDeclaredConstructor((Class[])null);  fail("Should have thrown NoSuchMethodException");} catch (NoSuchMethodException expected) {  assertTrue(true);} @AT@ 4645 @LENGTH@ 213
+------UPD ExpressionStatement@@ClassInstanceCreation:new RememberMeAuthenticationToken() @TO@ MethodInvocation:clazz.getDeclaredConstructor((Class[])null) @AT@ 4663 @LENGTH@ 36
+---------DEL ClassInstanceCreation@@RememberMeAuthenticationToken[] @AT@ 4663 @LENGTH@ 35
+------------DEL New@@new @AT@ 4663 @LENGTH@ 3
+------------DEL SimpleType@@RememberMeAuthenticationToken @AT@ 4667 @LENGTH@ 29
+---------INS MethodInvocation@@clazz.getDeclaredConstructor((Class[])null) @TO@ ExpressionStatement@@ClassInstanceCreation:new RememberMeAuthenticationToken() @AT@ 4734 @LENGTH@ 43
+------------INS SimpleName@@Name:clazz @TO@ MethodInvocation@@clazz.getDeclaredConstructor((Class[])null) @AT@ 4734 @LENGTH@ 5
+------------INS SimpleName@@MethodName:getDeclaredConstructor:[(Class[])null] @TO@ MethodInvocation@@clazz.getDeclaredConstructor((Class[])null) @AT@ 4740 @LENGTH@ 37
+---------------INS CastExpression@@(Class[])null @TO@ SimpleName@@MethodName:getDeclaredConstructor:[(Class[])null] @AT@ 4763 @LENGTH@ 13
+------------------INS ArrayType@@Class[] @TO@ CastExpression@@(Class[])null @AT@ 4764 @LENGTH@ 7
+---------------------INS SimpleType@@Class @TO@ ArrayType@@Class[] @AT@ 4764 @LENGTH@ 5
+------------------INS NullLiteral@@null @TO@ CastExpression@@(Class[])null @AT@ 4772 @LENGTH@ 4
+------UPD ExpressionStatement@@MethodInvocation:fail("Should have thrown IllegalArgumentException") @TO@ MethodInvocation:fail("Should have thrown NoSuchMethodException") @AT@ 4712 @LENGTH@ 52
+---------UPD MethodInvocation@@fail("Should have thrown IllegalArgumentException") @TO@ fail("Should have thrown NoSuchMethodException") @AT@ 4712 @LENGTH@ 51
+------------UPD SimpleName@@MethodName:fail:["Should have thrown IllegalArgumentException"] @TO@ MethodName:fail:["Should have thrown NoSuchMethodException"] @AT@ 4712 @LENGTH@ 51
+---------------UPD StringLiteral@@"Should have thrown IllegalArgumentException" @TO@ "Should have thrown NoSuchMethodException" @AT@ 4717 @LENGTH@ 45
+------UPD CatchClause@@catch (IllegalArgumentException expected) {  assertTrue(true);} @TO@ catch (NoSuchMethodException expected) {  assertTrue(true);} @AT@ 4775 @LENGTH@ 83
+---------UPD SingleVariableDeclaration@@IllegalArgumentException expected @TO@ NoSuchMethodException expected @AT@ 4782 @LENGTH@ 33
+------------UPD SimpleType@@IllegalArgumentException @TO@ NoSuchMethodException @AT@ 4782 @LENGTH@ 24
+---INS VariableDeclarationStatement@@Class clazz=RememberMeAuthenticationToken.class; @TO@ MethodDeclaration@@public, void, MethodName:testNoArgConstructor,  @AT@ 4656 @LENGTH@ 50
+------INS SimpleType@@Class @TO@ VariableDeclarationStatement@@Class clazz=RememberMeAuthenticationToken.class; @AT@ 4656 @LENGTH@ 5
+------INS VariableDeclarationFragment@@clazz=RememberMeAuthenticationToken.class @TO@ VariableDeclarationStatement@@Class clazz=RememberMeAuthenticationToken.class; @AT@ 4662 @LENGTH@ 43
+---------INS SimpleName@@clazz @TO@ VariableDeclarationFragment@@clazz=RememberMeAuthenticationToken.class @AT@ 4662 @LENGTH@ 5
+---------INS TypeLiteral@@RememberMeAuthenticationToken.class @TO@ VariableDeclarationFragment@@clazz=RememberMeAuthenticationToken.class @AT@ 4670 @LENGTH@ 35
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 4660 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 4660 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 4682 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 4693 @LENGTH@ 25
+------------DEL New@@new @AT@ 4693 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 4697 @LENGTH@ 19
+
+
+INS IfStatement@@if (predicates.length == 0) {  return FalsePredicate.INSTANCE;} @TO@ MethodDeclaration@@public, static, Predicate, MethodName:getInstance, Predicate[] predicates,  @AT@ 1825 @LENGTH@ 83
+---INS InfixExpression@@predicates.length == 0 @TO@ IfStatement@@if (predicates.length == 0) {  return FalsePredicate.INSTANCE;} @AT@ 1829 @LENGTH@ 22
+------INS QualifiedName@@predicates.length @TO@ InfixExpression@@predicates.length == 0 @AT@ 1829 @LENGTH@ 17
+---------INS SimpleName@@predicates @TO@ QualifiedName@@predicates.length @AT@ 1829 @LENGTH@ 10
+---------INS SimpleName@@length @TO@ QualifiedName@@predicates.length @AT@ 1840 @LENGTH@ 6
+------INS Operator@@== @TO@ InfixExpression@@predicates.length == 0 @AT@ 1846 @LENGTH@ 2
+------INS NumberLiteral@@0 @TO@ InfixExpression@@predicates.length == 0 @AT@ 1850 @LENGTH@ 1
+---INS Block@@ThenBody:{  return FalsePredicate.INSTANCE;} @TO@ IfStatement@@if (predicates.length == 0) {  return FalsePredicate.INSTANCE;} @AT@ 1853 @LENGTH@ 55
+------INS ReturnStatement@@QualifiedName:FalsePredicate.INSTANCE @TO@ Block@@ThenBody:{  return FalsePredicate.INSTANCE;} @AT@ 1867 @LENGTH@ 31
+---------INS QualifiedName@@FalsePredicate.INSTANCE @TO@ ReturnStatement@@QualifiedName:FalsePredicate.INSTANCE @AT@ 1874 @LENGTH@ 23
+------------INS SimpleName@@FalsePredicate @TO@ QualifiedName@@FalsePredicate.INSTANCE @AT@ 1874 @LENGTH@ 14
+------------INS SimpleName@@INSTANCE @TO@ QualifiedName@@FalsePredicate.INSTANCE @AT@ 1889 @LENGTH@ 8
+
+
+INS ExpressionStatement@@Assignment:sourceURL=url @TO@ MethodDeclaration@@public, void, MethodName:setURL, URL url,  @AT@ 19070 @LENGTH@ 16
+---INS Assignment@@sourceURL=url @TO@ ExpressionStatement@@Assignment:sourceURL=url @AT@ 19070 @LENGTH@ 15
+------INS SimpleName@@sourceURL @TO@ Assignment@@sourceURL=url @AT@ 19070 @LENGTH@ 9
+------INS Operator@@= @TO@ Assignment@@sourceURL=url @AT@ 19079 @LENGTH@ 1
+------INS SimpleName@@url @TO@ Assignment@@sourceURL=url @AT@ 19082 @LENGTH@ 3
+
+
+UPD IfStatement@@if (url.startsWith("ldap:")) {  URI uri=LdapUtils.parseLdapUrl(url);  rootDn=uri.getPath();} else {  rootDn=url;} @TO@ if (url.startsWith("ldap:") || url.startsWith("ldaps:")) {  URI uri=LdapUtils.parseLdapUrl(url);  rootDn=uri.getPath();} else {  rootDn=url;} @AT@ 4726 @LENGTH@ 219
+---INS InfixExpression@@url.startsWith("ldap:") || url.startsWith("ldaps:") @TO@ IfStatement@@if (url.startsWith("ldap:")) {  URI uri=LdapUtils.parseLdapUrl(url);  rootDn=uri.getPath();} else {  rootDn=url;} @AT@ 4730 @LENGTH@ 51
+------MOV MethodInvocation@@url.startsWith("ldap:") @TO@ InfixExpression@@url.startsWith("ldap:") || url.startsWith("ldaps:") @AT@ 4730 @LENGTH@ 23
+------INS Operator@@|| @TO@ InfixExpression@@url.startsWith("ldap:") || url.startsWith("ldaps:") @AT@ 4753 @LENGTH@ 2
+------INS MethodInvocation@@url.startsWith("ldaps:") @TO@ InfixExpression@@url.startsWith("ldap:") || url.startsWith("ldaps:") @AT@ 4757 @LENGTH@ 24
+---------INS SimpleName@@Name:url @TO@ MethodInvocation@@url.startsWith("ldaps:") @AT@ 4757 @LENGTH@ 3
+---------INS SimpleName@@MethodName:startsWith:["ldaps:"] @TO@ MethodInvocation@@url.startsWith("ldaps:") @AT@ 4761 @LENGTH@ 20
+------------INS StringLiteral@@"ldaps:" @TO@ SimpleName@@MethodName:startsWith:["ldaps:"] @AT@ 4772 @LENGTH@ 8
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 17833 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 17833 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 17855 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 17866 @LENGTH@ 25
+------------DEL New@@new @AT@ 17866 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 17870 @LENGTH@ 19
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 2605 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 2605 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 2627 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 2638 @LENGTH@ 25
+------------DEL New@@new @AT@ 2638 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 2642 @LENGTH@ 19
+
+
+UPD TryStatement@@try {  authenticationManager.authenticate(rememberMeAuth);} catch (AuthenticationException authenticationException) {  if (logger.isDebugEnabled()) {    logger.debug("SecurityContextHolder not populated with remember-me token, as AuthenticationManager rejected Authentication returned by RememberMeServices: '" + rememberMeAuth + "'; invalidating remember-me token",authenticationException);  }  rememberMeServices.loginFail(httpRequest,httpResponse);  chain.doFilter(request,response);} @TO@ try {  authenticationManager.authenticate(rememberMeAuth);  SecurityContextHolder.getContext().setAuthentication(rememberMeAuth);  if (logger.isDebugEnabled()) {    logger.debug("SecurityContextHolder populated with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");  }  if (this.eventPublisher != null) {    eventPublisher.publishEvent(new InteractiveAuthenticationSuccessEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));  }} catch (AuthenticationException authenticationException) {  if (logger.isDebugEnabled()) {    logger.debug("SecurityContextHolder not populated with remember-me token, as AuthenticationManager rejected Authentication returned by RememberMeServices: '" + rememberMeAuth + "'; invalidating remember-me token",authenticationException);  }  rememberMeServices.loginFail(httpRequest,httpResponse);} @AT@ 5031 @LENGTH@ 754
+---UPD CatchClause@@catch (AuthenticationException authenticationException) {  if (logger.isDebugEnabled()) {    logger.debug("SecurityContextHolder not populated with remember-me token, as AuthenticationManager rejected Authentication returned by RememberMeServices: '" + rememberMeAuth + "'; invalidating remember-me token",authenticationException);  }  rememberMeServices.loginFail(httpRequest,httpResponse);  chain.doFilter(request,response);} @TO@ catch (AuthenticationException authenticationException) {  if (logger.isDebugEnabled()) {    logger.debug("SecurityContextHolder not populated with remember-me token, as AuthenticationManager rejected Authentication returned by RememberMeServices: '" + rememberMeAuth + "'; invalidating remember-me token",authenticationException);  }  rememberMeServices.loginFail(httpRequest,httpResponse);} @AT@ 5127 @LENGTH@ 658
+------DEL ExpressionStatement@@MethodInvocation:chain.doFilter(request,response) @AT@ 5733 @LENGTH@ 34
+---------DEL MethodInvocation@@chain.doFilter(request,response) @AT@ 5733 @LENGTH@ 33
+------------DEL SimpleName@@Name:chain @AT@ 5733 @LENGTH@ 5
+------------DEL SimpleName@@MethodName:doFilter:[request, response] @AT@ 5739 @LENGTH@ 27
+---------------DEL SimpleName@@request @AT@ 5748 @LENGTH@ 7
+---------------DEL SimpleName@@response @AT@ 5757 @LENGTH@ 8
+---MOV ExpressionStatement@@MethodInvocation:SecurityContextHolder.getContext().setAuthentication(rememberMeAuth) @TO@ TryStatement@@try {  authenticationManager.authenticate(rememberMeAuth);} catch (AuthenticationException authenticationException) {  if (logger.isDebugEnabled()) {    logger.debug("SecurityContextHolder not populated with remember-me token, as AuthenticationManager rejected Authentication returned by RememberMeServices: '" + rememberMeAuth + "'; invalidating remember-me token",authenticationException);  }  rememberMeServices.loginFail(httpRequest,httpResponse);  chain.doFilter(request,response);} @AT@ 5853 @LENGTH@ 107
+---MOV IfStatement@@if (logger.isDebugEnabled()) {  logger.debug("SecurityContextHolder populated with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");} @TO@ TryStatement@@try {  authenticationManager.authenticate(rememberMeAuth);} catch (AuthenticationException authenticationException) {  if (logger.isDebugEnabled()) {    logger.debug("SecurityContextHolder not populated with remember-me token, as AuthenticationManager rejected Authentication returned by RememberMeServices: '" + rememberMeAuth + "'; invalidating remember-me token",authenticationException);  }  rememberMeServices.loginFail(httpRequest,httpResponse);  chain.doFilter(request,response);} @AT@ 5978 @LENGTH@ 279
+---MOV IfStatement@@if (this.eventPublisher != null) {  eventPublisher.publishEvent(new InteractiveAuthenticationSuccessEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));} @TO@ TryStatement@@try {  authenticationManager.authenticate(rememberMeAuth);} catch (AuthenticationException authenticationException) {  if (logger.isDebugEnabled()) {    logger.debug("SecurityContextHolder not populated with remember-me token, as AuthenticationManager rejected Authentication returned by RememberMeServices: '" + rememberMeAuth + "'; invalidating remember-me token",authenticationException);  }  rememberMeServices.loginFail(httpRequest,httpResponse);  chain.doFilter(request,response);} @AT@ 6305 @LENGTH@ 324
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 7211 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 7211 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 7233 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 7244 @LENGTH@ 25
+------------DEL New@@new @AT@ 7244 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 7248 @LENGTH@ 19
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 4151 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 4151 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 4173 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 4184 @LENGTH@ 25
+------------DEL New@@new @AT@ 4184 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 4188 @LENGTH@ 19
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 3094 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 3094 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 3116 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 3127 @LENGTH@ 25
+------------DEL New@@new @AT@ 3127 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 3131 @LENGTH@ 19
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 4276 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 4276 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 4298 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 4309 @LENGTH@ 25
+------------DEL New@@new @AT@ 4309 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 4313 @LENGTH@ 19
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(generateNewContext()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 12367 @LENGTH@ 55
+---UPD MethodInvocation@@SecurityContextHolder.setContext(generateNewContext()) @TO@ SecurityContextHolder.clearContext() @AT@ 12367 @LENGTH@ 54
+------UPD SimpleName@@MethodName:setContext:[generateNewContext()] @TO@ MethodName:clearContext:[] @AT@ 12389 @LENGTH@ 32
+---------DEL MethodInvocation@@MethodName:generateNewContext:[] @AT@ 12400 @LENGTH@ 20
+
+
+UPD Block@@ThenBody:{  Authentication rememberMeAuth=rememberMeServices.autoLogin(httpRequest,httpResponse);  if (rememberMeAuth != null) {    try {      authenticationManager.authenticate(rememberMeAuth);    } catch (    AuthenticationException authenticationException) {      if (logger.isDebugEnabled()) {        logger.debug("SecurityContextHolder not populated with remember-me token, as AuthenticationManager rejected Authentication returned by RememberMeServices: '" + rememberMeAuth + "'; invalidating remember-me token",authenticationException);      }      rememberMeServices.loginFail(httpRequest,httpResponse);      chain.doFilter(request,response);    }    SecurityContextHolder.getContext().setAuthentication(rememberMeAuth);    if (logger.isDebugEnabled()) {      logger.debug("SecurityContextHolder populated with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");    }    if (this.eventPublisher != null) {      eventPublisher.publishEvent(new InteractiveAuthenticationSuccessEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));    }    chain.doFilter(request,response);  }} @TO@ ThenBody:{  Authentication rememberMeAuth=rememberMeServices.autoLogin(httpRequest,httpResponse);  if (rememberMeAuth != null) {    try {      authenticationManager.authenticate(rememberMeAuth);    } catch (    AuthenticationException authenticationException) {      if (logger.isDebugEnabled()) {        logger.debug("SecurityContextHolder not populated with remember-me token, as AuthenticationManager rejected Authentication returned by RememberMeServices: '" + rememberMeAuth + "'; invalidating remember-me token",authenticationException);      }      rememberMeServices.loginFail(httpRequest,httpResponse);      chain.doFilter(request,response);    }    SecurityContextHolder.getContext().setAuthentication(rememberMeAuth);    if (logger.isDebugEnabled()) {      logger.debug("SecurityContextHolder populated with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");    }    if (this.eventPublisher != null) {      eventPublisher.publishEvent(new InteractiveAuthenticationSuccessEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));    }  }  chain.doFilter(request,response);} @AT@ 4782 @LENGTH@ 1923
+---UPD IfStatement@@if (rememberMeAuth != null) {  try {    authenticationManager.authenticate(rememberMeAuth);  } catch (  AuthenticationException authenticationException) {    if (logger.isDebugEnabled()) {      logger.debug("SecurityContextHolder not populated with remember-me token, as AuthenticationManager rejected Authentication returned by RememberMeServices: '" + rememberMeAuth + "'; invalidating remember-me token",authenticationException);    }    rememberMeServices.loginFail(httpRequest,httpResponse);    chain.doFilter(request,response);  }  SecurityContextHolder.getContext().setAuthentication(rememberMeAuth);  if (logger.isDebugEnabled()) {    logger.debug("SecurityContextHolder populated with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");  }  if (this.eventPublisher != null) {    eventPublisher.publishEvent(new InteractiveAuthenticationSuccessEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));  }  chain.doFilter(request,response);} @TO@ if (rememberMeAuth != null) {  try {    authenticationManager.authenticate(rememberMeAuth);  } catch (  AuthenticationException authenticationException) {    if (logger.isDebugEnabled()) {      logger.debug("SecurityContextHolder not populated with remember-me token, as AuthenticationManager rejected Authentication returned by RememberMeServices: '" + rememberMeAuth + "'; invalidating remember-me token",authenticationException);    }    rememberMeServices.loginFail(httpRequest,httpResponse);    chain.doFilter(request,response);  }  SecurityContextHolder.getContext().setAuthentication(rememberMeAuth);  if (logger.isDebugEnabled()) {    logger.debug("SecurityContextHolder populated with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");  }  if (this.eventPublisher != null) {    eventPublisher.publishEvent(new InteractiveAuthenticationSuccessEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));  }} @AT@ 4918 @LENGTH@ 1777
+------UPD Block@@ThenBody:{  try {    authenticationManager.authenticate(rememberMeAuth);  } catch (  AuthenticationException authenticationException) {    if (logger.isDebugEnabled()) {      logger.debug("SecurityContextHolder not populated with remember-me token, as AuthenticationManager rejected Authentication returned by RememberMeServices: '" + rememberMeAuth + "'; invalidating remember-me token",authenticationException);    }    rememberMeServices.loginFail(httpRequest,httpResponse);    chain.doFilter(request,response);  }  SecurityContextHolder.getContext().setAuthentication(rememberMeAuth);  if (logger.isDebugEnabled()) {    logger.debug("SecurityContextHolder populated with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");  }  if (this.eventPublisher != null) {    eventPublisher.publishEvent(new InteractiveAuthenticationSuccessEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));  }  chain.doFilter(request,response);} @TO@ ThenBody:{  try {    authenticationManager.authenticate(rememberMeAuth);  } catch (  AuthenticationException authenticationException) {    if (logger.isDebugEnabled()) {      logger.debug("SecurityContextHolder not populated with remember-me token, as AuthenticationManager rejected Authentication returned by RememberMeServices: '" + rememberMeAuth + "'; invalidating remember-me token",authenticationException);    }    rememberMeServices.loginFail(httpRequest,httpResponse);    chain.doFilter(request,response);  }  SecurityContextHolder.getContext().setAuthentication(rememberMeAuth);  if (logger.isDebugEnabled()) {    logger.debug("SecurityContextHolder populated with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");  }  if (this.eventPublisher != null) {    eventPublisher.publishEvent(new InteractiveAuthenticationSuccessEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));  }} @AT@ 4946 @LENGTH@ 1749
+---MOV ExpressionStatement@@MethodInvocation:chain.doFilter(request,response) @TO@ Block@@ThenBody:{  Authentication rememberMeAuth=rememberMeServices.autoLogin(httpRequest,httpResponse);  if (rememberMeAuth != null) {    try {      authenticationManager.authenticate(rememberMeAuth);    } catch (    AuthenticationException authenticationException) {      if (logger.isDebugEnabled()) {        logger.debug("SecurityContextHolder not populated with remember-me token, as AuthenticationManager rejected Authentication returned by RememberMeServices: '" + rememberMeAuth + "'; invalidating remember-me token",authenticationException);      }      rememberMeServices.loginFail(httpRequest,httpResponse);      chain.doFilter(request,response);    }    SecurityContextHolder.getContext().setAuthentication(rememberMeAuth);    if (logger.isDebugEnabled()) {      logger.debug("SecurityContextHolder populated with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");    }    if (this.eventPublisher != null) {      eventPublisher.publishEvent(new InteractiveAuthenticationSuccessEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));    }    chain.doFilter(request,response);  }} @AT@ 6647 @LENGTH@ 34
+
+
+UPD ExpressionStatement@@Assignment:this.classname=(getPackageName(object.getClass().getName()) == null) ? ClassUtils.getShortName(object.getClass()) : getPackageName(object.getClass().getName() + "." + ClassUtils.getShortName(object.getClass())) @TO@ Assignment:this.classname=(getPackageName(object.getClass().getName()) == null) ? ClassUtils.getShortName(object.getClass()) : getPackageName(object.getClass().getName()) + "." + ClassUtils.getShortName(object.getClass()) @AT@ 2223 @LENGTH@ 253
+---UPD Assignment@@this.classname=(getPackageName(object.getClass().getName()) == null) ? ClassUtils.getShortName(object.getClass()) : getPackageName(object.getClass().getName() + "." + ClassUtils.getShortName(object.getClass())) @TO@ this.classname=(getPackageName(object.getClass().getName()) == null) ? ClassUtils.getShortName(object.getClass()) : getPackageName(object.getClass().getName()) + "." + ClassUtils.getShortName(object.getClass()) @AT@ 2223 @LENGTH@ 252
+------UPD ConditionalExpression@@(getPackageName(object.getClass().getName()) == null) ? ClassUtils.getShortName(object.getClass()) : getPackageName(object.getClass().getName() + "." + ClassUtils.getShortName(object.getClass())) @TO@ (getPackageName(object.getClass().getName()) == null) ? ClassUtils.getShortName(object.getClass()) : getPackageName(object.getClass().getName()) + "." + ClassUtils.getShortName(object.getClass()) @AT@ 2240 @LENGTH@ 235
+---------DEL MethodInvocation@@getPackageName(object.getClass().getName() + "." + ClassUtils.getShortName(object.getClass())) @AT@ 2365 @LENGTH@ 110
+------------DEL SimpleName@@MethodName:getPackageName:[object.getClass().getName() + "." + ClassUtils.getShortName(object.getClass())] @AT@ 2365 @LENGTH@ 110
+---------MOV InfixExpression@@object.getClass().getName() + "." + ClassUtils.getShortName(object.getClass()) @TO@ ConditionalExpression@@(getPackageName(object.getClass().getName()) == null) ? ClassUtils.getShortName(object.getClass()) : getPackageName(object.getClass().getName() + "." + ClassUtils.getShortName(object.getClass())) @AT@ 2380 @LENGTH@ 94
+------------INS MethodInvocation@@getPackageName(object.getClass().getName()) @TO@ InfixExpression@@object.getClass().getName() + "." + ClassUtils.getShortName(object.getClass()) @AT@ 2359 @LENGTH@ 43
+---------------INS SimpleName@@MethodName:getPackageName:[object.getClass().getName()] @TO@ MethodInvocation@@getPackageName(object.getClass().getName()) @AT@ 2359 @LENGTH@ 43
+------------------INS MethodInvocation@@object.getClass().getName() @TO@ SimpleName@@MethodName:getPackageName:[object.getClass().getName()] @AT@ 2374 @LENGTH@ 27
+---------------------MOV MethodInvocation@@MethodName:getClass:[] @TO@ MethodInvocation@@object.getClass().getName() @AT@ 2380 @LENGTH@ 17
+---------------------MOV SimpleName@@Name:object @TO@ MethodInvocation@@object.getClass().getName() @AT@ 2380 @LENGTH@ 6
+---------------------MOV SimpleName@@MethodName:getName:[] @TO@ MethodInvocation@@object.getClass().getName() @AT@ 2398 @LENGTH@ 9
+------------DEL MethodInvocation@@object.getClass().getName() @AT@ 2380 @LENGTH@ 27
+
+
+INS MethodDeclaration@@public, void, MethodName:testAttributeKeyWithIndex,  @TO@ TypeDeclaration@@[public]TestConfigurationKey, TestCase @AT@ 7519 @LENGTH@ 689
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testAttributeKeyWithIndex,  @AT@ 7519 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testAttributeKeyWithIndex,  @AT@ 7526 @LENGTH@ 4
+---INS SimpleName@@MethodName:testAttributeKeyWithIndex @TO@ MethodDeclaration@@public, void, MethodName:testAttributeKeyWithIndex,  @AT@ 7531 @LENGTH@ 25
+---INS VariableDeclarationStatement@@ConfigurationKey k=new ConfigurationKey(TESTATTR); @TO@ MethodDeclaration@@public, void, MethodName:testAttributeKeyWithIndex,  @AT@ 7573 @LENGTH@ 52
+------INS SimpleType@@ConfigurationKey @TO@ VariableDeclarationStatement@@ConfigurationKey k=new ConfigurationKey(TESTATTR); @AT@ 7573 @LENGTH@ 16
+------INS VariableDeclarationFragment@@k=new ConfigurationKey(TESTATTR) @TO@ VariableDeclarationStatement@@ConfigurationKey k=new ConfigurationKey(TESTATTR); @AT@ 7590 @LENGTH@ 34
+---------INS SimpleName@@k @TO@ VariableDeclarationFragment@@k=new ConfigurationKey(TESTATTR) @AT@ 7590 @LENGTH@ 1
+---------INS ClassInstanceCreation@@ConfigurationKey[TESTATTR] @TO@ VariableDeclarationFragment@@k=new ConfigurationKey(TESTATTR) @AT@ 7594 @LENGTH@ 30
+------------INS New@@new @TO@ ClassInstanceCreation@@ConfigurationKey[TESTATTR] @AT@ 7594 @LENGTH@ 3
+------------INS SimpleType@@ConfigurationKey @TO@ ClassInstanceCreation@@ConfigurationKey[TESTATTR] @AT@ 7598 @LENGTH@ 16
+------------INS SimpleName@@TESTATTR @TO@ ClassInstanceCreation@@ConfigurationKey[TESTATTR] @AT@ 7615 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:k.appendIndex(0) @TO@ MethodDeclaration@@public, void, MethodName:testAttributeKeyWithIndex,  @AT@ 7634 @LENGTH@ 17
+------INS MethodInvocation@@k.appendIndex(0) @TO@ ExpressionStatement@@MethodInvocation:k.appendIndex(0) @AT@ 7634 @LENGTH@ 16
+---------INS SimpleName@@Name:k @TO@ MethodInvocation@@k.appendIndex(0) @AT@ 7634 @LENGTH@ 1
+---------INS SimpleName@@MethodName:appendIndex:[0] @TO@ MethodInvocation@@k.appendIndex(0) @AT@ 7636 @LENGTH@ 14
+------------INS NumberLiteral@@0 @TO@ SimpleName@@MethodName:appendIndex:[0] @AT@ 7648 @LENGTH@ 1
+---INS ExpressionStatement@@MethodInvocation:assertEquals("Wrong attribute key with index",TESTATTR + "(0)",k.toString()) @TO@ MethodDeclaration@@public, void, MethodName:testAttributeKeyWithIndex,  @AT@ 7660 @LENGTH@ 79
+------INS MethodInvocation@@assertEquals("Wrong attribute key with index",TESTATTR + "(0)",k.toString()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals("Wrong attribute key with index",TESTATTR + "(0)",k.toString()) @AT@ 7660 @LENGTH@ 78
+---------INS SimpleName@@MethodName:assertEquals:["Wrong attribute key with index", TESTATTR + "(0)", k.toString()] @TO@ MethodInvocation@@assertEquals("Wrong attribute key with index",TESTATTR + "(0)",k.toString()) @AT@ 7660 @LENGTH@ 78
+------------INS StringLiteral@@"Wrong attribute key with index" @TO@ SimpleName@@MethodName:assertEquals:["Wrong attribute key with index", TESTATTR + "(0)", k.toString()] @AT@ 7673 @LENGTH@ 32
+------------INS InfixExpression@@TESTATTR + "(0)" @TO@ SimpleName@@MethodName:assertEquals:["Wrong attribute key with index", TESTATTR + "(0)", k.toString()] @AT@ 7707 @LENGTH@ 16
+---------------INS SimpleName@@TESTATTR @TO@ InfixExpression@@TESTATTR + "(0)" @AT@ 7707 @LENGTH@ 8
+---------------INS Operator@@+ @TO@ InfixExpression@@TESTATTR + "(0)" @AT@ 7715 @LENGTH@ 1
+---------------INS StringLiteral@@"(0)" @TO@ InfixExpression@@TESTATTR + "(0)" @AT@ 7718 @LENGTH@ 5
+------------INS MethodInvocation@@k.toString() @TO@ SimpleName@@MethodName:assertEquals:["Wrong attribute key with index", TESTATTR + "(0)", k.toString()] @AT@ 7725 @LENGTH@ 12
+---------------INS SimpleName@@Name:k @TO@ MethodInvocation@@k.toString() @AT@ 7725 @LENGTH@ 1
+---------------INS SimpleName@@MethodName:toString:[] @TO@ MethodInvocation@@k.toString() @AT@ 7727 @LENGTH@ 10
+---INS VariableDeclarationStatement@@ConfigurationKey.KeyIterator it=k.iterator(); @TO@ MethodDeclaration@@public, void, MethodName:testAttributeKeyWithIndex,  @AT@ 7757 @LENGTH@ 47
+------INS SimpleType@@ConfigurationKey.KeyIterator @TO@ VariableDeclarationStatement@@ConfigurationKey.KeyIterator it=k.iterator(); @AT@ 7757 @LENGTH@ 28
+------INS VariableDeclarationFragment@@it=k.iterator() @TO@ VariableDeclarationStatement@@ConfigurationKey.KeyIterator it=k.iterator(); @AT@ 7786 @LENGTH@ 17
+---------INS SimpleName@@it @TO@ VariableDeclarationFragment@@it=k.iterator() @AT@ 7786 @LENGTH@ 2
+---------INS MethodInvocation@@k.iterator() @TO@ VariableDeclarationFragment@@it=k.iterator() @AT@ 7791 @LENGTH@ 12
+------------INS SimpleName@@Name:k @TO@ MethodInvocation@@k.iterator() @AT@ 7791 @LENGTH@ 1
+------------INS SimpleName@@MethodName:iterator:[] @TO@ MethodInvocation@@k.iterator() @AT@ 7793 @LENGTH@ 10
+---INS ExpressionStatement@@MethodInvocation:assertTrue("No first element",it.hasNext()) @TO@ MethodDeclaration@@public, void, MethodName:testAttributeKeyWithIndex,  @AT@ 7813 @LENGTH@ 45
+------INS MethodInvocation@@assertTrue("No first element",it.hasNext()) @TO@ ExpressionStatement@@MethodInvocation:assertTrue("No first element",it.hasNext()) @AT@ 7813 @LENGTH@ 44
+---------INS SimpleName@@MethodName:assertTrue:["No first element", it.hasNext()] @TO@ MethodInvocation@@assertTrue("No first element",it.hasNext()) @AT@ 7813 @LENGTH@ 44
+------------INS StringLiteral@@"No first element" @TO@ SimpleName@@MethodName:assertTrue:["No first element", it.hasNext()] @AT@ 7824 @LENGTH@ 18
+------------INS MethodInvocation@@it.hasNext() @TO@ SimpleName@@MethodName:assertTrue:["No first element", it.hasNext()] @AT@ 7844 @LENGTH@ 12
+---------------INS SimpleName@@Name:it @TO@ MethodInvocation@@it.hasNext() @AT@ 7844 @LENGTH@ 2
+---------------INS SimpleName@@MethodName:hasNext:[] @TO@ MethodInvocation@@it.hasNext() @AT@ 7847 @LENGTH@ 9
+---INS ExpressionStatement@@MethodInvocation:it.next() @TO@ MethodDeclaration@@public, void, MethodName:testAttributeKeyWithIndex,  @AT@ 7867 @LENGTH@ 10
+------INS MethodInvocation@@it.next() @TO@ ExpressionStatement@@MethodInvocation:it.next() @AT@ 7867 @LENGTH@ 9
+---------INS SimpleName@@Name:it @TO@ MethodInvocation@@it.next() @AT@ 7867 @LENGTH@ 2
+---------INS SimpleName@@MethodName:next:[] @TO@ MethodInvocation@@it.next() @AT@ 7870 @LENGTH@ 6
+---INS ExpressionStatement@@MethodInvocation:assertTrue("Index not found",it.hasIndex()) @TO@ MethodDeclaration@@public, void, MethodName:testAttributeKeyWithIndex,  @AT@ 7886 @LENGTH@ 45
+------INS MethodInvocation@@assertTrue("Index not found",it.hasIndex()) @TO@ ExpressionStatement@@MethodInvocation:assertTrue("Index not found",it.hasIndex()) @AT@ 7886 @LENGTH@ 44
+---------INS SimpleName@@MethodName:assertTrue:["Index not found", it.hasIndex()] @TO@ MethodInvocation@@assertTrue("Index not found",it.hasIndex()) @AT@ 7886 @LENGTH@ 44
+------------INS StringLiteral@@"Index not found" @TO@ SimpleName@@MethodName:assertTrue:["Index not found", it.hasIndex()] @AT@ 7897 @LENGTH@ 17
+------------INS MethodInvocation@@it.hasIndex() @TO@ SimpleName@@MethodName:assertTrue:["Index not found", it.hasIndex()] @AT@ 7916 @LENGTH@ 13
+---------------INS SimpleName@@Name:it @TO@ MethodInvocation@@it.hasIndex() @AT@ 7916 @LENGTH@ 2
+---------------INS SimpleName@@MethodName:hasIndex:[] @TO@ MethodInvocation@@it.hasIndex() @AT@ 7919 @LENGTH@ 10
+---INS ExpressionStatement@@MethodInvocation:assertEquals("Incorrect index",0,it.getIndex()) @TO@ MethodDeclaration@@public, void, MethodName:testAttributeKeyWithIndex,  @AT@ 7940 @LENGTH@ 50
+------INS MethodInvocation@@assertEquals("Incorrect index",0,it.getIndex()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals("Incorrect index",0,it.getIndex()) @AT@ 7940 @LENGTH@ 49
+---------INS SimpleName@@MethodName:assertEquals:["Incorrect index", 0, it.getIndex()] @TO@ MethodInvocation@@assertEquals("Incorrect index",0,it.getIndex()) @AT@ 7940 @LENGTH@ 49
+------------INS StringLiteral@@"Incorrect index" @TO@ SimpleName@@MethodName:assertEquals:["Incorrect index", 0, it.getIndex()] @AT@ 7953 @LENGTH@ 17
+------------INS NumberLiteral@@0 @TO@ SimpleName@@MethodName:assertEquals:["Incorrect index", 0, it.getIndex()] @AT@ 7972 @LENGTH@ 1
+------------INS MethodInvocation@@it.getIndex() @TO@ SimpleName@@MethodName:assertEquals:["Incorrect index", 0, it.getIndex()] @AT@ 7975 @LENGTH@ 13
+---------------INS SimpleName@@Name:it @TO@ MethodInvocation@@it.getIndex() @AT@ 7975 @LENGTH@ 2
+---------------INS SimpleName@@MethodName:getIndex:[] @TO@ MethodInvocation@@it.getIndex() @AT@ 7978 @LENGTH@ 10
+---INS ExpressionStatement@@MethodInvocation:assertTrue("Attribute not found",it.isAttribute()) @TO@ MethodDeclaration@@public, void, MethodName:testAttributeKeyWithIndex,  @AT@ 7999 @LENGTH@ 52
+------INS MethodInvocation@@assertTrue("Attribute not found",it.isAttribute()) @TO@ ExpressionStatement@@MethodInvocation:assertTrue("Attribute not found",it.isAttribute()) @AT@ 7999 @LENGTH@ 51
+---------INS SimpleName@@MethodName:assertTrue:["Attribute not found", it.isAttribute()] @TO@ MethodInvocation@@assertTrue("Attribute not found",it.isAttribute()) @AT@ 7999 @LENGTH@ 51
+------------INS StringLiteral@@"Attribute not found" @TO@ SimpleName@@MethodName:assertTrue:["Attribute not found", it.isAttribute()] @AT@ 8010 @LENGTH@ 21
+------------INS MethodInvocation@@it.isAttribute() @TO@ SimpleName@@MethodName:assertTrue:["Attribute not found", it.isAttribute()] @AT@ 8033 @LENGTH@ 16
+---------------INS SimpleName@@Name:it @TO@ MethodInvocation@@it.isAttribute() @AT@ 8033 @LENGTH@ 2
+---------------INS SimpleName@@MethodName:isAttribute:[] @TO@ MethodInvocation@@it.isAttribute() @AT@ 8036 @LENGTH@ 13
+---INS ExpressionStatement@@MethodInvocation:assertEquals("Wrong plain key","dataType",it.currentKey(false)) @TO@ MethodDeclaration@@public, void, MethodName:testAttributeKeyWithIndex,  @AT@ 8060 @LENGTH@ 66
+------INS MethodInvocation@@assertEquals("Wrong plain key","dataType",it.currentKey(false)) @TO@ ExpressionStatement@@MethodInvocation:assertEquals("Wrong plain key","dataType",it.currentKey(false)) @AT@ 8060 @LENGTH@ 65
+---------INS SimpleName@@MethodName:assertEquals:["Wrong plain key", "dataType", it.currentKey(false)] @TO@ MethodInvocation@@assertEquals("Wrong plain key","dataType",it.currentKey(false)) @AT@ 8060 @LENGTH@ 65
+------------INS StringLiteral@@"Wrong plain key" @TO@ SimpleName@@MethodName:assertEquals:["Wrong plain key", "dataType", it.currentKey(false)] @AT@ 8073 @LENGTH@ 17
+------------INS StringLiteral@@"dataType" @TO@ SimpleName@@MethodName:assertEquals:["Wrong plain key", "dataType", it.currentKey(false)] @AT@ 8092 @LENGTH@ 10
+------------INS MethodInvocation@@it.currentKey(false) @TO@ SimpleName@@MethodName:assertEquals:["Wrong plain key", "dataType", it.currentKey(false)] @AT@ 8104 @LENGTH@ 20
+---------------INS SimpleName@@Name:it @TO@ MethodInvocation@@it.currentKey(false) @AT@ 8104 @LENGTH@ 2
+---------------INS SimpleName@@MethodName:currentKey:[false] @TO@ MethodInvocation@@it.currentKey(false) @AT@ 8107 @LENGTH@ 17
+------------------INS BooleanLiteral@@false @TO@ SimpleName@@MethodName:currentKey:[false] @AT@ 8118 @LENGTH@ 5
+---INS ExpressionStatement@@MethodInvocation:assertEquals("Wrong decorated key",TESTATTR,it.currentKey(true)) @TO@ MethodDeclaration@@public, void, MethodName:testAttributeKeyWithIndex,  @AT@ 8135 @LENGTH@ 67
+------INS MethodInvocation@@assertEquals("Wrong decorated key",TESTATTR,it.currentKey(true)) @TO@ ExpressionStatement@@MethodInvocation:assertEquals("Wrong decorated key",TESTATTR,it.currentKey(true)) @AT@ 8135 @LENGTH@ 66
+---------INS SimpleName@@MethodName:assertEquals:["Wrong decorated key", TESTATTR, it.currentKey(true)] @TO@ MethodInvocation@@assertEquals("Wrong decorated key",TESTATTR,it.currentKey(true)) @AT@ 8135 @LENGTH@ 66
+------------INS StringLiteral@@"Wrong decorated key" @TO@ SimpleName@@MethodName:assertEquals:["Wrong decorated key", TESTATTR, it.currentKey(true)] @AT@ 8148 @LENGTH@ 21
+------------INS SimpleName@@TESTATTR @TO@ SimpleName@@MethodName:assertEquals:["Wrong decorated key", TESTATTR, it.currentKey(true)] @AT@ 8171 @LENGTH@ 8
+------------INS MethodInvocation@@it.currentKey(true) @TO@ SimpleName@@MethodName:assertEquals:["Wrong decorated key", TESTATTR, it.currentKey(true)] @AT@ 8181 @LENGTH@ 19
+---------------INS SimpleName@@Name:it @TO@ MethodInvocation@@it.currentKey(true) @AT@ 8181 @LENGTH@ 2
+---------------INS SimpleName@@MethodName:currentKey:[true] @TO@ MethodInvocation@@it.currentKey(true) @AT@ 8184 @LENGTH@ 16
+------------------INS BooleanLiteral@@true @TO@ SimpleName@@MethodName:currentKey:[true] @AT@ 8195 @LENGTH@ 4
+
+
+UPD ExpressionStatement@@MethodInvocation:authRequest.setDetails(new WebAuthenticationDetails(httpRequest)) @TO@ MethodInvocation:authRequest.setDetails(new WebAuthenticationDetails(httpRequest,false)) @AT@ 16316 @LENGTH@ 66
+---UPD MethodInvocation@@authRequest.setDetails(new WebAuthenticationDetails(httpRequest)) @TO@ authRequest.setDetails(new WebAuthenticationDetails(httpRequest,false)) @AT@ 16316 @LENGTH@ 65
+------UPD SimpleName@@MethodName:setDetails:[new WebAuthenticationDetails(httpRequest)] @TO@ MethodName:setDetails:[new WebAuthenticationDetails(httpRequest,false)] @AT@ 16328 @LENGTH@ 53
+---------UPD ClassInstanceCreation@@WebAuthenticationDetails[httpRequest] @TO@ WebAuthenticationDetails[httpRequest, false] @AT@ 16339 @LENGTH@ 41
+------------INS BooleanLiteral@@false @TO@ ClassInstanceCreation@@WebAuthenticationDetails[httpRequest] @AT@ 16382 @LENGTH@ 5
+
+
+UPD ReturnStatement@@ClassInstanceCreation:new WebAuthenticationDetails(request) @TO@ ClassInstanceCreation:new WebAuthenticationDetails(request,false) @AT@ 4549 @LENGTH@ 45
+---UPD ClassInstanceCreation@@WebAuthenticationDetails[request] @TO@ WebAuthenticationDetails[request, false] @AT@ 4556 @LENGTH@ 37
+------INS BooleanLiteral@@false @TO@ ClassInstanceCreation@@WebAuthenticationDetails[request] @AT@ 4594 @LENGTH@ 5
+
+
+MOV MethodDeclaration@@public, GrantedAuthority[], MethodName:getAuthorities,  @TO@ TypeDeclaration@@[public]MockRunAsAuthenticationToken, AbstractAuthenticationToken @AT@ 1349 @LENGTH@ 71
+
+
+UPD TryStatement@@try {  String[] args=new String[]{LdapUtils.escapeNameForFilter(username)};  NamingEnumeration results=ctx.search(searchBase,searchFilter,args,searchControls);  if (!results.hasMore()) {    throw new UsernameNotFoundException("User " + username + " not found in directory.");  }  SearchResult searchResult=(SearchResult)results.next();  if (results.hasMore()) {    throw new BadCredentialsException("Expected a single user but search returned multiple results");  }  StringBuffer userDn=new StringBuffer(searchResult.getName());  if (searchBase.length() > 0) {    userDn.append(",");    userDn.append(searchBase);  }  userDn.append(",");  userDn.append(ctx.getNameInNamespace());  return new LdapUserInfo(userDn.toString(),searchResult.getAttributes());} catch (NamingException ne) {  throw new LdapDataAccessException("User Couldn't be found due to exception",ne);} finally {  LdapUtils.closeContext(ctx);} @TO@ try {  String[] args=new String[]{LdapUtils.escapeNameForFilter(username)};  NamingEnumeration results=ctx.search(searchBase,searchFilter,args,searchControls);  if (!results.hasMore()) {    throw new UsernameNotFoundException("User " + username + " not found in directory.");  }  SearchResult searchResult=(SearchResult)results.next();  if (results.hasMore()) {    throw new BadCredentialsException("Expected a single user but search returned multiple results");  }  StringBuffer userDn=new StringBuffer(searchResult.getName());  if (searchBase.length() > 0) {    userDn.append(",");    userDn.append(searchBase);  }  String nameInNamespace=ctx.getNameInNamespace();  if (StringUtils.hasLength(nameInNamespace)) {    userDn.append(",");    userDn.append(nameInNamespace);  }  return new LdapUserInfo(userDn.toString(),searchResult.getAttributes());} catch (NamingException ne) {  throw new LdapDataAccessException("User Couldn't be found due to exception",ne);} finally {  LdapUtils.closeContext(ctx);} @AT@ 4419 @LENGTH@ 1174
+---DEL ExpressionStatement@@MethodInvocation:userDn.append(ctx.getNameInNamespace()) @AT@ 5262 @LENGTH@ 40
+---INS VariableDeclarationStatement@@String nameInNamespace=ctx.getNameInNamespace(); @TO@ TryStatement@@try {  String[] args=new String[]{LdapUtils.escapeNameForFilter(username)};  NamingEnumeration results=ctx.search(searchBase,searchFilter,args,searchControls);  if (!results.hasMore()) {    throw new UsernameNotFoundException("User " + username + " not found in directory.");  }  SearchResult searchResult=(SearchResult)results.next();  if (results.hasMore()) {    throw new BadCredentialsException("Expected a single user but search returned multiple results");  }  StringBuffer userDn=new StringBuffer(searchResult.getName());  if (searchBase.length() > 0) {    userDn.append(",");    userDn.append(searchBase);  }  userDn.append(",");  userDn.append(ctx.getNameInNamespace());  return new LdapUserInfo(userDn.toString(),searchResult.getAttributes());} catch (NamingException ne) {  throw new LdapDataAccessException("User Couldn't be found due to exception",ne);} finally {  LdapUtils.closeContext(ctx);} @AT@ 5277 @LENGTH@ 50
+------INS SimpleType@@String @TO@ VariableDeclarationStatement@@String nameInNamespace=ctx.getNameInNamespace(); @AT@ 5277 @LENGTH@ 6
+------INS VariableDeclarationFragment@@nameInNamespace=ctx.getNameInNamespace() @TO@ VariableDeclarationStatement@@String nameInNamespace=ctx.getNameInNamespace(); @AT@ 5284 @LENGTH@ 42
+---------INS SimpleName@@nameInNamespace @TO@ VariableDeclarationFragment@@nameInNamespace=ctx.getNameInNamespace() @AT@ 5284 @LENGTH@ 15
+---------INS MethodInvocation@@ctx.getNameInNamespace() @TO@ VariableDeclarationFragment@@nameInNamespace=ctx.getNameInNamespace() @AT@ 5302 @LENGTH@ 24
+------------INS SimpleName@@Name:ctx @TO@ MethodInvocation@@ctx.getNameInNamespace() @AT@ 5302 @LENGTH@ 3
+------------INS SimpleName@@MethodName:getNameInNamespace:[] @TO@ MethodInvocation@@ctx.getNameInNamespace() @AT@ 5306 @LENGTH@ 20
+---INS IfStatement@@if (StringUtils.hasLength(nameInNamespace)) {  userDn.append(",");  userDn.append(nameInNamespace);} @TO@ TryStatement@@try {  String[] args=new String[]{LdapUtils.escapeNameForFilter(username)};  NamingEnumeration results=ctx.search(searchBase,searchFilter,args,searchControls);  if (!results.hasMore()) {    throw new UsernameNotFoundException("User " + username + " not found in directory.");  }  SearchResult searchResult=(SearchResult)results.next();  if (results.hasMore()) {    throw new BadCredentialsException("Expected a single user but search returned multiple results");  }  StringBuffer userDn=new StringBuffer(searchResult.getName());  if (searchBase.length() > 0) {    userDn.append(",");    userDn.append(searchBase);  }  userDn.append(",");  userDn.append(ctx.getNameInNamespace());  return new LdapUserInfo(userDn.toString(),searchResult.getAttributes());} catch (NamingException ne) {  throw new LdapDataAccessException("User Couldn't be found due to exception",ne);} finally {  LdapUtils.closeContext(ctx);} @AT@ 5341 @LENGTH@ 142
+------INS MethodInvocation@@StringUtils.hasLength(nameInNamespace) @TO@ IfStatement@@if (StringUtils.hasLength(nameInNamespace)) {  userDn.append(",");  userDn.append(nameInNamespace);} @AT@ 5344 @LENGTH@ 38
+---------INS SimpleName@@Name:StringUtils @TO@ MethodInvocation@@StringUtils.hasLength(nameInNamespace) @AT@ 5344 @LENGTH@ 11
+---------INS SimpleName@@MethodName:hasLength:[nameInNamespace] @TO@ MethodInvocation@@StringUtils.hasLength(nameInNamespace) @AT@ 5356 @LENGTH@ 26
+------------INS SimpleName@@nameInNamespace @TO@ SimpleName@@MethodName:hasLength:[nameInNamespace] @AT@ 5366 @LENGTH@ 15
+------INS Block@@ThenBody:{  userDn.append(",");  userDn.append(nameInNamespace);} @TO@ IfStatement@@if (StringUtils.hasLength(nameInNamespace)) {  userDn.append(",");  userDn.append(nameInNamespace);} @AT@ 5384 @LENGTH@ 99
+---------MOV ExpressionStatement@@MethodInvocation:userDn.append(",") @TO@ Block@@ThenBody:{  userDn.append(",");  userDn.append(nameInNamespace);} @AT@ 5230 @LENGTH@ 19
+---------INS ExpressionStatement@@MethodInvocation:userDn.append(nameInNamespace) @TO@ Block@@ThenBody:{  userDn.append(",");  userDn.append(nameInNamespace);} @AT@ 5438 @LENGTH@ 31
+------------MOV MethodInvocation@@userDn.append(ctx.getNameInNamespace()) @TO@ ExpressionStatement@@MethodInvocation:userDn.append(nameInNamespace) @AT@ 5262 @LENGTH@ 39
+---------------UPD SimpleName@@MethodName:append:[ctx.getNameInNamespace()] @TO@ MethodName:append:[nameInNamespace] @AT@ 5269 @LENGTH@ 32
+------------------DEL MethodInvocation@@ctx.getNameInNamespace() @AT@ 5276 @LENGTH@ 24
+---------------------DEL SimpleName@@Name:ctx @AT@ 5276 @LENGTH@ 3
+---------------------DEL SimpleName@@MethodName:getNameInNamespace:[] @AT@ 5280 @LENGTH@ 20
+------------------INS SimpleName@@nameInNamespace @TO@ SimpleName@@MethodName:append:[ctx.getNameInNamespace()] @AT@ 5452 @LENGTH@ 15
+
+
+UPD MethodDeclaration@@public, static, Iterator, MethodName:lineIterator, Reader reader,  @TO@ public, static, LineIterator, MethodName:lineIterator, Reader reader,  @AT@ 18735 @LENGTH@ 99
+---UPD SimpleType@@Iterator @TO@ LineIterator @AT@ 18749 @LENGTH@ 8
+
+
+INS MethodDeclaration@@public, void, MethodName:testMultipleDnPatternsWorkOk,  @TO@ TypeDeclaration@@[public]PasswordComparisonAuthenticatorTests, AbstractLdapServerTestCase @AT@ 2550 @LENGTH@ 212
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testMultipleDnPatternsWorkOk,  @AT@ 2550 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testMultipleDnPatternsWorkOk,  @AT@ 2557 @LENGTH@ 4
+---INS SimpleName@@MethodName:testMultipleDnPatternsWorkOk @TO@ MethodDeclaration@@public, void, MethodName:testMultipleDnPatternsWorkOk,  @AT@ 2562 @LENGTH@ 28
+---INS ExpressionStatement@@MethodInvocation:authenticator.setUserDnPatterns(new String[]{"uid={0},ou=nonexistent","uid={0},ou=people"}) @TO@ MethodDeclaration@@public, void, MethodName:testMultipleDnPatternsWorkOk,  @AT@ 2603 @LENGTH@ 94
+------INS MethodInvocation@@authenticator.setUserDnPatterns(new String[]{"uid={0},ou=nonexistent","uid={0},ou=people"}) @TO@ ExpressionStatement@@MethodInvocation:authenticator.setUserDnPatterns(new String[]{"uid={0},ou=nonexistent","uid={0},ou=people"}) @AT@ 2603 @LENGTH@ 93
+---------INS SimpleName@@Name:authenticator @TO@ MethodInvocation@@authenticator.setUserDnPatterns(new String[]{"uid={0},ou=nonexistent","uid={0},ou=people"}) @AT@ 2603 @LENGTH@ 13
+---------INS SimpleName@@MethodName:setUserDnPatterns:[new String[]{"uid={0},ou=nonexistent","uid={0},ou=people"}] @TO@ MethodInvocation@@authenticator.setUserDnPatterns(new String[]{"uid={0},ou=nonexistent","uid={0},ou=people"}) @AT@ 2617 @LENGTH@ 79
+------------INS ArrayCreation@@new String[]{"uid={0},ou=nonexistent","uid={0},ou=people"} @TO@ SimpleName@@MethodName:setUserDnPatterns:[new String[]{"uid={0},ou=nonexistent","uid={0},ou=people"}] @AT@ 2635 @LENGTH@ 60
+---------------INS ArrayType@@String[] @TO@ ArrayCreation@@new String[]{"uid={0},ou=nonexistent","uid={0},ou=people"} @AT@ 2639 @LENGTH@ 8
+------------------INS SimpleType@@String @TO@ ArrayType@@String[] @AT@ 2639 @LENGTH@ 6
+---------------INS ArrayInitializer@@{"uid={0},ou=nonexistent","uid={0},ou=people"} @TO@ ArrayCreation@@new String[]{"uid={0},ou=nonexistent","uid={0},ou=people"} @AT@ 2648 @LENGTH@ 47
+------------------INS StringLiteral@@"uid={0},ou=nonexistent" @TO@ ArrayInitializer@@{"uid={0},ou=nonexistent","uid={0},ou=people"} @AT@ 2649 @LENGTH@ 24
+------------------INS StringLiteral@@"uid={0},ou=people" @TO@ ArrayInitializer@@{"uid={0},ou=nonexistent","uid={0},ou=people"} @AT@ 2675 @LENGTH@ 19
+---INS ExpressionStatement@@MethodInvocation:authenticator.authenticate("Bob","bobspassword") @TO@ MethodDeclaration@@public, void, MethodName:testMultipleDnPatternsWorkOk,  @AT@ 2706 @LENGTH@ 50
+------INS MethodInvocation@@authenticator.authenticate("Bob","bobspassword") @TO@ ExpressionStatement@@MethodInvocation:authenticator.authenticate("Bob","bobspassword") @AT@ 2706 @LENGTH@ 49
+---------INS SimpleName@@Name:authenticator @TO@ MethodInvocation@@authenticator.authenticate("Bob","bobspassword") @AT@ 2706 @LENGTH@ 13
+---------INS SimpleName@@MethodName:authenticate:["Bob", "bobspassword"] @TO@ MethodInvocation@@authenticator.authenticate("Bob","bobspassword") @AT@ 2720 @LENGTH@ 35
+------------INS StringLiteral@@"Bob" @TO@ SimpleName@@MethodName:authenticate:["Bob", "bobspassword"] @AT@ 2733 @LENGTH@ 5
+------------INS StringLiteral@@"bobspassword" @TO@ SimpleName@@MethodName:authenticate:["Bob", "bobspassword"] @AT@ 2740 @LENGTH@ 14
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 2740 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 2740 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 2762 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 2773 @LENGTH@ 25
+------------DEL New@@new @AT@ 2773 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 2777 @LENGTH@ 19
+
+
+UPD ExpressionStatement@@MethodInvocation:authRequest.setDetails(new WebAuthenticationDetails(request)) @TO@ MethodInvocation:authRequest.setDetails(new WebAuthenticationDetails(request,false)) @AT@ 3784 @LENGTH@ 62
+---UPD MethodInvocation@@authRequest.setDetails(new WebAuthenticationDetails(request)) @TO@ authRequest.setDetails(new WebAuthenticationDetails(request,false)) @AT@ 3784 @LENGTH@ 61
+------UPD SimpleName@@MethodName:setDetails:[new WebAuthenticationDetails(request)] @TO@ MethodName:setDetails:[new WebAuthenticationDetails(request,false)] @AT@ 3796 @LENGTH@ 49
+---------UPD ClassInstanceCreation@@WebAuthenticationDetails[request] @TO@ WebAuthenticationDetails[request, false] @AT@ 3807 @LENGTH@ 37
+------------INS BooleanLiteral@@false @TO@ ClassInstanceCreation@@WebAuthenticationDetails[request] @AT@ 3845 @LENGTH@ 5
+
+
+INS ExpressionStatement@@MethodInvocation:testDir.mkdirs() @TO@ MethodDeclaration@@public, static, File, MethodName:getTestDirectory,  @AT@ 1636 @LENGTH@ 17
+---INS MethodInvocation@@testDir.mkdirs() @TO@ ExpressionStatement@@MethodInvocation:testDir.mkdirs() @AT@ 1636 @LENGTH@ 16
+------INS SimpleName@@Name:testDir @TO@ MethodInvocation@@testDir.mkdirs() @AT@ 1636 @LENGTH@ 7
+------INS SimpleName@@MethodName:mkdirs:[] @TO@ MethodInvocation@@testDir.mkdirs() @AT@ 1644 @LENGTH@ 8
+
+
+INS MethodDeclaration@@public, void, MethodName:setUp,  @TO@ TypeDeclaration@@[public]CaptchaChannelProcessorTemplateTests, TestCase @AT@ 1417 @LENGTH@ 73
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:setUp,  @AT@ 1417 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:setUp,  @AT@ 1424 @LENGTH@ 4
+---INS SimpleName@@MethodName:setUp @TO@ MethodDeclaration@@public, void, MethodName:setUp,  @AT@ 1429 @LENGTH@ 5
+---INS ExpressionStatement@@MethodInvocation:SecurityContextHolder.clearContext() @TO@ MethodDeclaration@@public, void, MethodName:setUp,  @AT@ 1447 @LENGTH@ 37
+------INS MethodInvocation@@SecurityContextHolder.clearContext() @TO@ ExpressionStatement@@MethodInvocation:SecurityContextHolder.clearContext() @AT@ 1447 @LENGTH@ 36
+---------INS SimpleName@@Name:SecurityContextHolder @TO@ MethodInvocation@@SecurityContextHolder.clearContext() @AT@ 1447 @LENGTH@ 21
+---------INS SimpleName@@MethodName:clearContext:[] @TO@ MethodInvocation@@SecurityContextHolder.clearContext() @AT@ 1469 @LENGTH@ 14
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 6601 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 6601 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 6623 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 6634 @LENGTH@ 25
+------------DEL New@@new @AT@ 6634 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 6638 @LENGTH@ 19
+
+
+INS ExpressionStatement@@MethodInvocation:suite.addTest(new TestSuite(FileUtilsWaitForTestCase.class)) @TO@ MethodDeclaration@@public, static, Test, MethodName:suite,  @AT@ 2236 @LENGTH@ 61
+---INS MethodInvocation@@suite.addTest(new TestSuite(FileUtilsWaitForTestCase.class)) @TO@ ExpressionStatement@@MethodInvocation:suite.addTest(new TestSuite(FileUtilsWaitForTestCase.class)) @AT@ 2236 @LENGTH@ 60
+------INS SimpleName@@Name:suite @TO@ MethodInvocation@@suite.addTest(new TestSuite(FileUtilsWaitForTestCase.class)) @AT@ 2236 @LENGTH@ 5
+------INS SimpleName@@MethodName:addTest:[new TestSuite(FileUtilsWaitForTestCase.class)] @TO@ MethodInvocation@@suite.addTest(new TestSuite(FileUtilsWaitForTestCase.class)) @AT@ 2242 @LENGTH@ 54
+---------INS ClassInstanceCreation@@TestSuite[FileUtilsWaitForTestCase.class] @TO@ SimpleName@@MethodName:addTest:[new TestSuite(FileUtilsWaitForTestCase.class)] @AT@ 2250 @LENGTH@ 45
+------------INS New@@new @TO@ ClassInstanceCreation@@TestSuite[FileUtilsWaitForTestCase.class] @AT@ 2250 @LENGTH@ 3
+------------INS SimpleType@@TestSuite @TO@ ClassInstanceCreation@@TestSuite[FileUtilsWaitForTestCase.class] @AT@ 2254 @LENGTH@ 9
+------------INS TypeLiteral@@FileUtilsWaitForTestCase.class @TO@ ClassInstanceCreation@@TestSuite[FileUtilsWaitForTestCase.class] @AT@ 2264 @LENGTH@ 30
+
+
+INS MethodDeclaration@@public, void, MethodName:testSetURLWithParams, Exception,  @TO@ TypeDeclaration@@[public]TestFileConfiguration, TestCase @AT@ 1853 @LENGTH@ 557
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testSetURLWithParams, Exception,  @AT@ 1853 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testSetURLWithParams, Exception,  @AT@ 1860 @LENGTH@ 4
+---INS SimpleName@@MethodName:testSetURLWithParams @TO@ MethodDeclaration@@public, void, MethodName:testSetURLWithParams, Exception,  @AT@ 1865 @LENGTH@ 20
+---INS SimpleType@@Exception @TO@ MethodDeclaration@@public, void, MethodName:testSetURLWithParams, Exception,  @AT@ 1895 @LENGTH@ 9
+---INS VariableDeclarationStatement@@FileConfiguration config=new PropertiesConfiguration(); @TO@ MethodDeclaration@@public, void, MethodName:testSetURLWithParams, Exception,  @AT@ 1919 @LENGTH@ 57
+------INS SimpleType@@FileConfiguration @TO@ VariableDeclarationStatement@@FileConfiguration config=new PropertiesConfiguration(); @AT@ 1919 @LENGTH@ 17
+------INS VariableDeclarationFragment@@config=new PropertiesConfiguration() @TO@ VariableDeclarationStatement@@FileConfiguration config=new PropertiesConfiguration(); @AT@ 1937 @LENGTH@ 38
+---------INS SimpleName@@config @TO@ VariableDeclarationFragment@@config=new PropertiesConfiguration() @AT@ 1937 @LENGTH@ 6
+---------INS ClassInstanceCreation@@PropertiesConfiguration[] @TO@ VariableDeclarationFragment@@config=new PropertiesConfiguration() @AT@ 1946 @LENGTH@ 29
+------------INS New@@new @TO@ ClassInstanceCreation@@PropertiesConfiguration[] @AT@ 1946 @LENGTH@ 3
+------------INS SimpleType@@PropertiesConfiguration @TO@ ClassInstanceCreation@@PropertiesConfiguration[] @AT@ 1950 @LENGTH@ 23
+---INS VariableDeclarationStatement@@URL url=new URL("http://issues.apache.org/bugzilla/show_bug.cgi?id=37886"); @TO@ MethodDeclaration@@public, void, MethodName:testSetURLWithParams, Exception,  @AT@ 1985 @LENGTH@ 94
+------INS SimpleType@@URL @TO@ VariableDeclarationStatement@@URL url=new URL("http://issues.apache.org/bugzilla/show_bug.cgi?id=37886"); @AT@ 1985 @LENGTH@ 3
+------INS VariableDeclarationFragment@@url=new URL("http://issues.apache.org/bugzilla/show_bug.cgi?id=37886") @TO@ VariableDeclarationStatement@@URL url=new URL("http://issues.apache.org/bugzilla/show_bug.cgi?id=37886"); @AT@ 1989 @LENGTH@ 89
+---------INS SimpleName@@url @TO@ VariableDeclarationFragment@@url=new URL("http://issues.apache.org/bugzilla/show_bug.cgi?id=37886") @AT@ 1989 @LENGTH@ 3
+---------INS ClassInstanceCreation@@URL["http://issues.apache.org/bugzilla/show_bug.cgi?id=37886"] @TO@ VariableDeclarationFragment@@url=new URL("http://issues.apache.org/bugzilla/show_bug.cgi?id=37886") @AT@ 1995 @LENGTH@ 83
+------------INS New@@new @TO@ ClassInstanceCreation@@URL["http://issues.apache.org/bugzilla/show_bug.cgi?id=37886"] @AT@ 1995 @LENGTH@ 3
+------------INS SimpleType@@URL @TO@ ClassInstanceCreation@@URL["http://issues.apache.org/bugzilla/show_bug.cgi?id=37886"] @AT@ 1999 @LENGTH@ 3
+------------INS StringLiteral@@"http://issues.apache.org/bugzilla/show_bug.cgi?id=37886" @TO@ ClassInstanceCreation@@URL["http://issues.apache.org/bugzilla/show_bug.cgi?id=37886"] @AT@ 2020 @LENGTH@ 57
+---INS ExpressionStatement@@MethodInvocation:config.setURL(url) @TO@ MethodDeclaration@@public, void, MethodName:testSetURLWithParams, Exception,  @AT@ 2088 @LENGTH@ 19
+------INS MethodInvocation@@config.setURL(url) @TO@ ExpressionStatement@@MethodInvocation:config.setURL(url) @AT@ 2088 @LENGTH@ 18
+---------INS SimpleName@@Name:config @TO@ MethodInvocation@@config.setURL(url) @AT@ 2088 @LENGTH@ 6
+---------INS SimpleName@@MethodName:setURL:[url] @TO@ MethodInvocation@@config.setURL(url) @AT@ 2095 @LENGTH@ 11
+------------INS SimpleName@@url @TO@ SimpleName@@MethodName:setURL:[url] @AT@ 2102 @LENGTH@ 3
+---INS ExpressionStatement@@MethodInvocation:assertEquals("Base path incorrect","http://issues.apache.org/bugzilla/",config.getBasePath()) @TO@ MethodDeclaration@@public, void, MethodName:testSetURLWithParams, Exception,  @AT@ 2116 @LENGTH@ 112
+------INS MethodInvocation@@assertEquals("Base path incorrect","http://issues.apache.org/bugzilla/",config.getBasePath()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals("Base path incorrect","http://issues.apache.org/bugzilla/",config.getBasePath()) @AT@ 2116 @LENGTH@ 111
+---------INS SimpleName@@MethodName:assertEquals:["Base path incorrect", "http://issues.apache.org/bugzilla/", config.getBasePath()] @TO@ MethodInvocation@@assertEquals("Base path incorrect","http://issues.apache.org/bugzilla/",config.getBasePath()) @AT@ 2116 @LENGTH@ 111
+------------INS StringLiteral@@"Base path incorrect" @TO@ SimpleName@@MethodName:assertEquals:["Base path incorrect", "http://issues.apache.org/bugzilla/", config.getBasePath()] @AT@ 2129 @LENGTH@ 21
+------------INS StringLiteral@@"http://issues.apache.org/bugzilla/" @TO@ SimpleName@@MethodName:assertEquals:["Base path incorrect", "http://issues.apache.org/bugzilla/", config.getBasePath()] @AT@ 2168 @LENGTH@ 36
+------------INS MethodInvocation@@config.getBasePath() @TO@ SimpleName@@MethodName:assertEquals:["Base path incorrect", "http://issues.apache.org/bugzilla/", config.getBasePath()] @AT@ 2206 @LENGTH@ 20
+---------------INS SimpleName@@Name:config @TO@ MethodInvocation@@config.getBasePath() @AT@ 2206 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:getBasePath:[] @TO@ MethodInvocation@@config.getBasePath() @AT@ 2213 @LENGTH@ 13
+---INS ExpressionStatement@@MethodInvocation:assertEquals("File name incorrect","show_bug.cgi",config.getFileName()) @TO@ MethodDeclaration@@public, void, MethodName:testSetURLWithParams, Exception,  @AT@ 2237 @LENGTH@ 91
+------INS MethodInvocation@@assertEquals("File name incorrect","show_bug.cgi",config.getFileName()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals("File name incorrect","show_bug.cgi",config.getFileName()) @AT@ 2237 @LENGTH@ 90
+---------INS SimpleName@@MethodName:assertEquals:["File name incorrect", "show_bug.cgi", config.getFileName()] @TO@ MethodInvocation@@assertEquals("File name incorrect","show_bug.cgi",config.getFileName()) @AT@ 2237 @LENGTH@ 90
+------------INS StringLiteral@@"File name incorrect" @TO@ SimpleName@@MethodName:assertEquals:["File name incorrect", "show_bug.cgi", config.getFileName()] @AT@ 2250 @LENGTH@ 21
+------------INS StringLiteral@@"show_bug.cgi" @TO@ SimpleName@@MethodName:assertEquals:["File name incorrect", "show_bug.cgi", config.getFileName()] @AT@ 2273 @LENGTH@ 14
+------------INS MethodInvocation@@config.getFileName() @TO@ SimpleName@@MethodName:assertEquals:["File name incorrect", "show_bug.cgi", config.getFileName()] @AT@ 2289 @LENGTH@ 37
+---------------INS SimpleName@@Name:config @TO@ MethodInvocation@@config.getFileName() @AT@ 2289 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:getFileName:[] @TO@ MethodInvocation@@config.getFileName() @AT@ 2313 @LENGTH@ 13
+---INS ExpressionStatement@@MethodInvocation:assertEquals("URL was not correctly stored",url,config.getURL()) @TO@ MethodDeclaration@@public, void, MethodName:testSetURLWithParams, Exception,  @AT@ 2337 @LENGTH@ 67
+------INS MethodInvocation@@assertEquals("URL was not correctly stored",url,config.getURL()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals("URL was not correctly stored",url,config.getURL()) @AT@ 2337 @LENGTH@ 66
+---------INS SimpleName@@MethodName:assertEquals:["URL was not correctly stored", url, config.getURL()] @TO@ MethodInvocation@@assertEquals("URL was not correctly stored",url,config.getURL()) @AT@ 2337 @LENGTH@ 66
+------------INS StringLiteral@@"URL was not correctly stored" @TO@ SimpleName@@MethodName:assertEquals:["URL was not correctly stored", url, config.getURL()] @AT@ 2350 @LENGTH@ 30
+------------INS SimpleName@@url @TO@ SimpleName@@MethodName:assertEquals:["URL was not correctly stored", url, config.getURL()] @AT@ 2382 @LENGTH@ 3
+------------INS MethodInvocation@@config.getURL() @TO@ SimpleName@@MethodName:assertEquals:["URL was not correctly stored", url, config.getURL()] @AT@ 2387 @LENGTH@ 15
+---------------INS SimpleName@@Name:config @TO@ MethodInvocation@@config.getURL() @AT@ 2387 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:getURL:[] @TO@ MethodInvocation@@config.getURL() @AT@ 2394 @LENGTH@ 8
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 2580 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 2580 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 2602 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 2613 @LENGTH@ 25
+------------DEL New@@new @AT@ 2613 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 2617 @LENGTH@ 19
+
+
+UPD MethodDeclaration@@public, void, MethodName:testNoArgConstructor,  @TO@ public, void, MethodName:testNoArgConstructorDoesntExist,  @AT@ 7722 @LENGTH@ 257
+---UPD SimpleName@@MethodName:testNoArgConstructor @TO@ MethodName:testNoArgConstructorDoesntExist @AT@ 7734 @LENGTH@ 20
+---UPD TryStatement@@try {  new CasAuthenticationToken();  fail("Should have thrown IllegalArgumentException");} catch (IllegalArgumentException expected) {  assertTrue(true);} @TO@ try {  clazz.getDeclaredConstructor((Class[])null);  fail("Should have thrown NoSuchMethodException");} catch (NoSuchMethodException expected) {  assertTrue(true);} @AT@ 7767 @LENGTH@ 206
+------UPD ExpressionStatement@@ClassInstanceCreation:new CasAuthenticationToken() @TO@ MethodInvocation:clazz.getDeclaredConstructor((Class[])null) @AT@ 7785 @LENGTH@ 29
+---------DEL ClassInstanceCreation@@CasAuthenticationToken[] @AT@ 7785 @LENGTH@ 28
+------------DEL New@@new @AT@ 7785 @LENGTH@ 3
+------------DEL SimpleType@@CasAuthenticationToken @AT@ 7789 @LENGTH@ 22
+---------INS MethodInvocation@@clazz.getDeclaredConstructor((Class[])null) @TO@ ExpressionStatement@@ClassInstanceCreation:new CasAuthenticationToken() @AT@ 7849 @LENGTH@ 43
+------------INS SimpleName@@Name:clazz @TO@ MethodInvocation@@clazz.getDeclaredConstructor((Class[])null) @AT@ 7849 @LENGTH@ 5
+------------INS SimpleName@@MethodName:getDeclaredConstructor:[(Class[])null] @TO@ MethodInvocation@@clazz.getDeclaredConstructor((Class[])null) @AT@ 7855 @LENGTH@ 37
+---------------INS CastExpression@@(Class[])null @TO@ SimpleName@@MethodName:getDeclaredConstructor:[(Class[])null] @AT@ 7878 @LENGTH@ 13
+------------------INS ArrayType@@Class[] @TO@ CastExpression@@(Class[])null @AT@ 7879 @LENGTH@ 7
+---------------------INS SimpleType@@Class @TO@ ArrayType@@Class[] @AT@ 7879 @LENGTH@ 5
+------------------INS NullLiteral@@null @TO@ CastExpression@@(Class[])null @AT@ 7887 @LENGTH@ 4
+------UPD ExpressionStatement@@MethodInvocation:fail("Should have thrown IllegalArgumentException") @TO@ MethodInvocation:fail("Should have thrown NoSuchMethodException") @AT@ 7827 @LENGTH@ 52
+---------UPD MethodInvocation@@fail("Should have thrown IllegalArgumentException") @TO@ fail("Should have thrown NoSuchMethodException") @AT@ 7827 @LENGTH@ 51
+------------UPD SimpleName@@MethodName:fail:["Should have thrown IllegalArgumentException"] @TO@ MethodName:fail:["Should have thrown NoSuchMethodException"] @AT@ 7827 @LENGTH@ 51
+---------------UPD StringLiteral@@"Should have thrown IllegalArgumentException" @TO@ "Should have thrown NoSuchMethodException" @AT@ 7832 @LENGTH@ 45
+------UPD CatchClause@@catch (IllegalArgumentException expected) {  assertTrue(true);} @TO@ catch (NoSuchMethodException expected) {  assertTrue(true);} @AT@ 7890 @LENGTH@ 83
+---------UPD SingleVariableDeclaration@@IllegalArgumentException expected @TO@ NoSuchMethodException expected @AT@ 7897 @LENGTH@ 33
+------------UPD SimpleType@@IllegalArgumentException @TO@ NoSuchMethodException @AT@ 7897 @LENGTH@ 24
+---INS VariableDeclarationStatement@@Class clazz=CasAuthenticationToken.class; @TO@ MethodDeclaration@@public, void, MethodName:testNoArgConstructor,  @AT@ 7778 @LENGTH@ 43
+------INS SimpleType@@Class @TO@ VariableDeclarationStatement@@Class clazz=CasAuthenticationToken.class; @AT@ 7778 @LENGTH@ 5
+------INS VariableDeclarationFragment@@clazz=CasAuthenticationToken.class @TO@ VariableDeclarationStatement@@Class clazz=CasAuthenticationToken.class; @AT@ 7784 @LENGTH@ 36
+---------INS SimpleName@@clazz @TO@ VariableDeclarationFragment@@clazz=CasAuthenticationToken.class @AT@ 7784 @LENGTH@ 5
+---------INS TypeLiteral@@CasAuthenticationToken.class @TO@ VariableDeclarationFragment@@clazz=CasAuthenticationToken.class @AT@ 7792 @LENGTH@ 28
+
+
+INS MethodDeclaration@@public, void, MethodName:testSecureLdapUrlIsSupported,  @TO@ TypeDeclaration@@[public]DefaultInitialDirContextFactoryTests, AbstractLdapServerTestCase @AT@ 1338 @LENGTH@ 212
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testSecureLdapUrlIsSupported,  @AT@ 1338 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testSecureLdapUrlIsSupported,  @AT@ 1345 @LENGTH@ 4
+---INS SimpleName@@MethodName:testSecureLdapUrlIsSupported @TO@ MethodDeclaration@@public, void, MethodName:testSecureLdapUrlIsSupported,  @AT@ 1350 @LENGTH@ 28
+---INS ExpressionStatement@@Assignment:idf=new DefaultInitialDirContextFactory("ldaps://localhost/dc=acegisecurity,dc=org") @TO@ MethodDeclaration@@public, void, MethodName:testSecureLdapUrlIsSupported,  @AT@ 1391 @LENGTH@ 87
+------INS Assignment@@idf=new DefaultInitialDirContextFactory("ldaps://localhost/dc=acegisecurity,dc=org") @TO@ ExpressionStatement@@Assignment:idf=new DefaultInitialDirContextFactory("ldaps://localhost/dc=acegisecurity,dc=org") @AT@ 1391 @LENGTH@ 86
+---------INS SimpleName@@idf @TO@ Assignment@@idf=new DefaultInitialDirContextFactory("ldaps://localhost/dc=acegisecurity,dc=org") @AT@ 1391 @LENGTH@ 3
+---------INS Operator@@= @TO@ Assignment@@idf=new DefaultInitialDirContextFactory("ldaps://localhost/dc=acegisecurity,dc=org") @AT@ 1394 @LENGTH@ 1
+---------INS ClassInstanceCreation@@DefaultInitialDirContextFactory["ldaps://localhost/dc=acegisecurity,dc=org"] @TO@ Assignment@@idf=new DefaultInitialDirContextFactory("ldaps://localhost/dc=acegisecurity,dc=org") @AT@ 1397 @LENGTH@ 80
+------------INS New@@new @TO@ ClassInstanceCreation@@DefaultInitialDirContextFactory["ldaps://localhost/dc=acegisecurity,dc=org"] @AT@ 1397 @LENGTH@ 3
+------------INS SimpleType@@DefaultInitialDirContextFactory @TO@ ClassInstanceCreation@@DefaultInitialDirContextFactory["ldaps://localhost/dc=acegisecurity,dc=org"] @AT@ 1401 @LENGTH@ 31
+------------INS StringLiteral@@"ldaps://localhost/dc=acegisecurity,dc=org" @TO@ ClassInstanceCreation@@DefaultInitialDirContextFactory["ldaps://localhost/dc=acegisecurity,dc=org"] @AT@ 1433 @LENGTH@ 43
+---INS ExpressionStatement@@MethodInvocation:assertEquals("dc=acegisecurity,dc=org",idf.getRootDn()) @TO@ MethodDeclaration@@public, void, MethodName:testSecureLdapUrlIsSupported,  @AT@ 1487 @LENGTH@ 57
+------INS MethodInvocation@@assertEquals("dc=acegisecurity,dc=org",idf.getRootDn()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals("dc=acegisecurity,dc=org",idf.getRootDn()) @AT@ 1487 @LENGTH@ 56
+---------INS SimpleName@@MethodName:assertEquals:["dc=acegisecurity,dc=org", idf.getRootDn()] @TO@ MethodInvocation@@assertEquals("dc=acegisecurity,dc=org",idf.getRootDn()) @AT@ 1487 @LENGTH@ 56
+------------INS StringLiteral@@"dc=acegisecurity,dc=org" @TO@ SimpleName@@MethodName:assertEquals:["dc=acegisecurity,dc=org", idf.getRootDn()] @AT@ 1500 @LENGTH@ 25
+------------INS MethodInvocation@@idf.getRootDn() @TO@ SimpleName@@MethodName:assertEquals:["dc=acegisecurity,dc=org", idf.getRootDn()] @AT@ 1527 @LENGTH@ 15
+---------------INS SimpleName@@Name:idf @TO@ MethodInvocation@@idf.getRootDn() @AT@ 1527 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:getRootDn:[] @TO@ MethodInvocation@@idf.getRootDn() @AT@ 1531 @LENGTH@ 11
+
+
+UPD ExpressionStatement@@Assignment:classArgs=(Class[])list.toArray() @TO@ Assignment:classArgs=(Class[])list.toArray(new Class[]{}) @AT@ 2701 @LENGTH@ 37
+---UPD Assignment@@classArgs=(Class[])list.toArray() @TO@ classArgs=(Class[])list.toArray(new Class[]{}) @AT@ 2701 @LENGTH@ 36
+------UPD CastExpression@@(Class[])list.toArray() @TO@ (Class[])list.toArray(new Class[]{}) @AT@ 2713 @LENGTH@ 24
+---------UPD MethodInvocation@@list.toArray() @TO@ list.toArray(new Class[]{}) @AT@ 2723 @LENGTH@ 14
+------------UPD SimpleName@@MethodName:toArray:[] @TO@ MethodName:toArray:[new Class[]{}] @AT@ 2728 @LENGTH@ 9
+---------------INS ArrayCreation@@new Class[]{} @TO@ SimpleName@@MethodName:toArray:[] @AT@ 2736 @LENGTH@ 14
+------------------INS ArrayType@@Class[] @TO@ ArrayCreation@@new Class[]{} @AT@ 2740 @LENGTH@ 7
+---------------------INS SimpleType@@Class @TO@ ArrayType@@Class[] @AT@ 2740 @LENGTH@ 5
+------------------INS ArrayInitializer@@{} @TO@ ArrayCreation@@new Class[]{} @AT@ 2748 @LENGTH@ 2
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 6450 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 6450 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 6472 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 6483 @LENGTH@ 25
+------------DEL New@@new @AT@ 6483 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 6487 @LENGTH@ 19
+
+
+INS IfStatement@@if (preds.length == 0) {  return TruePredicate.INSTANCE;} @TO@ MethodDeclaration@@public, static, Predicate, MethodName:getInstance, Collection predicates,  @AT@ 2472 @LENGTH@ 77
+---INS InfixExpression@@preds.length == 0 @TO@ IfStatement@@if (preds.length == 0) {  return TruePredicate.INSTANCE;} @AT@ 2476 @LENGTH@ 17
+------INS QualifiedName@@preds.length @TO@ InfixExpression@@preds.length == 0 @AT@ 2476 @LENGTH@ 12
+---------INS SimpleName@@preds @TO@ QualifiedName@@preds.length @AT@ 2476 @LENGTH@ 5
+---------INS SimpleName@@length @TO@ QualifiedName@@preds.length @AT@ 2482 @LENGTH@ 6
+------INS Operator@@== @TO@ InfixExpression@@preds.length == 0 @AT@ 2488 @LENGTH@ 2
+------INS NumberLiteral@@0 @TO@ InfixExpression@@preds.length == 0 @AT@ 2492 @LENGTH@ 1
+---INS Block@@ThenBody:{  return TruePredicate.INSTANCE;} @TO@ IfStatement@@if (preds.length == 0) {  return TruePredicate.INSTANCE;} @AT@ 2495 @LENGTH@ 54
+------INS ReturnStatement@@QualifiedName:TruePredicate.INSTANCE @TO@ Block@@ThenBody:{  return TruePredicate.INSTANCE;} @AT@ 2509 @LENGTH@ 30
+---------INS QualifiedName@@TruePredicate.INSTANCE @TO@ ReturnStatement@@QualifiedName:TruePredicate.INSTANCE @AT@ 2516 @LENGTH@ 22
+------------INS SimpleName@@TruePredicate @TO@ QualifiedName@@TruePredicate.INSTANCE @AT@ 2516 @LENGTH@ 13
+------------INS SimpleName@@INSTANCE @TO@ QualifiedName@@TruePredicate.INSTANCE @AT@ 2530 @LENGTH@ 8
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 2589 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 2589 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 2611 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 2622 @LENGTH@ 25
+------------DEL New@@new @AT@ 2622 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 2626 @LENGTH@ 19
+
+
+UPD MethodDeclaration@@public, void, MethodName:testNoArgConstructor,  @TO@ public, void, MethodName:testNoArgConstructorDoesntExist,  @AT@ 4583 @LENGTH@ 263
+---UPD SimpleName@@MethodName:testNoArgConstructor @TO@ MethodName:testNoArgConstructorDoesntExist @AT@ 4595 @LENGTH@ 20
+---UPD TryStatement@@try {  new AnonymousAuthenticationToken();  fail("Should have thrown IllegalArgumentException");} catch (IllegalArgumentException expected) {  assertTrue(true);} @TO@ try {  clazz.getDeclaredConstructor((Class[])null);  fail("Should have thrown NoSuchMethodException");} catch (NoSuchMethodException expected) {  assertTrue(true);} @AT@ 4628 @LENGTH@ 212
+------UPD ExpressionStatement@@ClassInstanceCreation:new AnonymousAuthenticationToken() @TO@ MethodInvocation:clazz.getDeclaredConstructor((Class[])null) @AT@ 4646 @LENGTH@ 35
+---------DEL ClassInstanceCreation@@AnonymousAuthenticationToken[] @AT@ 4646 @LENGTH@ 34
+------------DEL New@@new @AT@ 4646 @LENGTH@ 3
+------------DEL SimpleType@@AnonymousAuthenticationToken @AT@ 4650 @LENGTH@ 28
+---------INS MethodInvocation@@clazz.getDeclaredConstructor((Class[])null) @TO@ ExpressionStatement@@ClassInstanceCreation:new AnonymousAuthenticationToken() @AT@ 4793 @LENGTH@ 43
+------------INS SimpleName@@Name:clazz @TO@ MethodInvocation@@clazz.getDeclaredConstructor((Class[])null) @AT@ 4793 @LENGTH@ 5
+------------INS SimpleName@@MethodName:getDeclaredConstructor:[(Class[])null] @TO@ MethodInvocation@@clazz.getDeclaredConstructor((Class[])null) @AT@ 4799 @LENGTH@ 37
+---------------INS CastExpression@@(Class[])null @TO@ SimpleName@@MethodName:getDeclaredConstructor:[(Class[])null] @AT@ 4822 @LENGTH@ 13
+------------------INS ArrayType@@Class[] @TO@ CastExpression@@(Class[])null @AT@ 4823 @LENGTH@ 7
+---------------------INS SimpleType@@Class @TO@ ArrayType@@Class[] @AT@ 4823 @LENGTH@ 5
+------------------INS NullLiteral@@null @TO@ CastExpression@@(Class[])null @AT@ 4831 @LENGTH@ 4
+------UPD ExpressionStatement@@MethodInvocation:fail("Should have thrown IllegalArgumentException") @TO@ MethodInvocation:fail("Should have thrown NoSuchMethodException") @AT@ 4694 @LENGTH@ 52
+---------UPD MethodInvocation@@fail("Should have thrown IllegalArgumentException") @TO@ fail("Should have thrown NoSuchMethodException") @AT@ 4694 @LENGTH@ 51
+------------UPD SimpleName@@MethodName:fail:["Should have thrown IllegalArgumentException"] @TO@ MethodName:fail:["Should have thrown NoSuchMethodException"] @AT@ 4694 @LENGTH@ 51
+---------------UPD StringLiteral@@"Should have thrown IllegalArgumentException" @TO@ "Should have thrown NoSuchMethodException" @AT@ 4699 @LENGTH@ 45
+------UPD CatchClause@@catch (IllegalArgumentException expected) {  assertTrue(true);} @TO@ catch (NoSuchMethodException expected) {  assertTrue(true);} @AT@ 4757 @LENGTH@ 83
+---------UPD SingleVariableDeclaration@@IllegalArgumentException expected @TO@ NoSuchMethodException expected @AT@ 4764 @LENGTH@ 33
+------------UPD SimpleType@@IllegalArgumentException @TO@ NoSuchMethodException @AT@ 4764 @LENGTH@ 24
+---INS VariableDeclarationStatement@@Class clazz=AnonymousAuthenticationToken.class; @TO@ MethodDeclaration@@public, void, MethodName:testNoArgConstructor,  @AT@ 4716 @LENGTH@ 49
+------INS SimpleType@@Class @TO@ VariableDeclarationStatement@@Class clazz=AnonymousAuthenticationToken.class; @AT@ 4716 @LENGTH@ 5
+------INS VariableDeclarationFragment@@clazz=AnonymousAuthenticationToken.class @TO@ VariableDeclarationStatement@@Class clazz=AnonymousAuthenticationToken.class; @AT@ 4722 @LENGTH@ 42
+---------INS SimpleName@@clazz @TO@ VariableDeclarationFragment@@clazz=AnonymousAuthenticationToken.class @AT@ 4722 @LENGTH@ 5
+---------INS TypeLiteral@@AnonymousAuthenticationToken.class @TO@ VariableDeclarationFragment@@clazz=AnonymousAuthenticationToken.class @AT@ 4730 @LENGTH@ 34
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 17682 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 17682 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 17704 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 17715 @LENGTH@ 25
+------------DEL New@@new @AT@ 17715 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 17719 @LENGTH@ 19
+
+
+UPD IfStatement@@if (numBytes == -1) {  break;} @TO@ if (numBytes == -1) {  Arrays.fill(m_blockBuffer,offset,offset + bytesNeeded,(byte)0);  break;} @AT@ 11874 @LENGTH@ 71
+---UPD Block@@ThenBody:{  break;} @TO@ ThenBody:{  Arrays.fill(m_blockBuffer,offset,offset + bytesNeeded,(byte)0);  break;} @AT@ 11907 @LENGTH@ 38
+------INS ExpressionStatement@@MethodInvocation:Arrays.fill(m_blockBuffer,offset,offset + bytesNeeded,(byte)0) @TO@ Block@@ThenBody:{  break;} @AT@ 12302 @LENGTH@ 67
+---------INS MethodInvocation@@Arrays.fill(m_blockBuffer,offset,offset + bytesNeeded,(byte)0) @TO@ ExpressionStatement@@MethodInvocation:Arrays.fill(m_blockBuffer,offset,offset + bytesNeeded,(byte)0) @AT@ 12302 @LENGTH@ 66
+------------INS SimpleName@@Name:Arrays @TO@ MethodInvocation@@Arrays.fill(m_blockBuffer,offset,offset + bytesNeeded,(byte)0) @AT@ 12302 @LENGTH@ 6
+------------INS SimpleName@@MethodName:fill:[m_blockBuffer, offset, offset + bytesNeeded, (byte)0] @TO@ MethodInvocation@@Arrays.fill(m_blockBuffer,offset,offset + bytesNeeded,(byte)0) @AT@ 12309 @LENGTH@ 59
+---------------INS SimpleName@@m_blockBuffer @TO@ SimpleName@@MethodName:fill:[m_blockBuffer, offset, offset + bytesNeeded, (byte)0] @AT@ 12314 @LENGTH@ 13
+---------------INS SimpleName@@offset @TO@ SimpleName@@MethodName:fill:[m_blockBuffer, offset, offset + bytesNeeded, (byte)0] @AT@ 12329 @LENGTH@ 6
+---------------INS InfixExpression@@offset + bytesNeeded @TO@ SimpleName@@MethodName:fill:[m_blockBuffer, offset, offset + bytesNeeded, (byte)0] @AT@ 12337 @LENGTH@ 20
+------------------INS SimpleName@@offset @TO@ InfixExpression@@offset + bytesNeeded @AT@ 12337 @LENGTH@ 6
+------------------INS Operator@@+ @TO@ InfixExpression@@offset + bytesNeeded @AT@ 12343 @LENGTH@ 1
+------------------INS SimpleName@@bytesNeeded @TO@ InfixExpression@@offset + bytesNeeded @AT@ 12346 @LENGTH@ 11
+---------------INS CastExpression@@(byte)0 @TO@ SimpleName@@MethodName:fill:[m_blockBuffer, offset, offset + bytesNeeded, (byte)0] @AT@ 12359 @LENGTH@ 8
+------------------INS PrimitiveType@@byte @TO@ CastExpression@@(byte)0 @AT@ 12360 @LENGTH@ 4
+------------------INS NumberLiteral@@0 @TO@ CastExpression@@(byte)0 @AT@ 12366 @LENGTH@ 1
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 2294 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 2294 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 2316 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 2327 @LENGTH@ 25
+------------DEL New@@new @AT@ 2327 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 2331 @LENGTH@ 19
+
+
+UPD MethodDeclaration@@public, void, MethodName:testNoArgsConstructor,  @TO@ public, void, MethodName:testNoArgConstructorDoesntExist,  @AT@ 2563 @LENGTH@ 250
+---UPD SimpleName@@MethodName:testNoArgsConstructor @TO@ MethodName:testNoArgConstructorDoesntExist @AT@ 2575 @LENGTH@ 21
+---UPD TryStatement@@try {  new RunAsUserToken();  fail("Should have thrown IllegalArgumentException");} catch (IllegalArgumentException expected) {  assertTrue(true);} @TO@ try {  clazz.getDeclaredConstructor((Class[])null);  fail("Should have thrown NoSuchMethodException");} catch (NoSuchMethodException expected) {  assertTrue(true);} @AT@ 2609 @LENGTH@ 198
+------UPD ExpressionStatement@@ClassInstanceCreation:new RunAsUserToken() @TO@ MethodInvocation:clazz.getDeclaredConstructor((Class[])null) @AT@ 2627 @LENGTH@ 21
+---------DEL ClassInstanceCreation@@RunAsUserToken[] @AT@ 2627 @LENGTH@ 20
+------------DEL New@@new @AT@ 2627 @LENGTH@ 3
+------------DEL SimpleType@@RunAsUserToken @AT@ 2631 @LENGTH@ 14
+---------INS MethodInvocation@@clazz.getDeclaredConstructor((Class[])null) @TO@ ExpressionStatement@@ClassInstanceCreation:new RunAsUserToken() @AT@ 2683 @LENGTH@ 43
+------------INS SimpleName@@Name:clazz @TO@ MethodInvocation@@clazz.getDeclaredConstructor((Class[])null) @AT@ 2683 @LENGTH@ 5
+------------INS SimpleName@@MethodName:getDeclaredConstructor:[(Class[])null] @TO@ MethodInvocation@@clazz.getDeclaredConstructor((Class[])null) @AT@ 2689 @LENGTH@ 37
+---------------INS CastExpression@@(Class[])null @TO@ SimpleName@@MethodName:getDeclaredConstructor:[(Class[])null] @AT@ 2712 @LENGTH@ 13
+------------------INS ArrayType@@Class[] @TO@ CastExpression@@(Class[])null @AT@ 2713 @LENGTH@ 7
+---------------------INS SimpleType@@Class @TO@ ArrayType@@Class[] @AT@ 2713 @LENGTH@ 5
+------------------INS NullLiteral@@null @TO@ CastExpression@@(Class[])null @AT@ 2721 @LENGTH@ 4
+------UPD ExpressionStatement@@MethodInvocation:fail("Should have thrown IllegalArgumentException") @TO@ MethodInvocation:fail("Should have thrown NoSuchMethodException") @AT@ 2661 @LENGTH@ 52
+---------UPD MethodInvocation@@fail("Should have thrown IllegalArgumentException") @TO@ fail("Should have thrown NoSuchMethodException") @AT@ 2661 @LENGTH@ 51
+------------UPD SimpleName@@MethodName:fail:["Should have thrown IllegalArgumentException"] @TO@ MethodName:fail:["Should have thrown NoSuchMethodException"] @AT@ 2661 @LENGTH@ 51
+---------------UPD StringLiteral@@"Should have thrown IllegalArgumentException" @TO@ "Should have thrown NoSuchMethodException" @AT@ 2666 @LENGTH@ 45
+------UPD CatchClause@@catch (IllegalArgumentException expected) {  assertTrue(true);} @TO@ catch (NoSuchMethodException expected) {  assertTrue(true);} @AT@ 2724 @LENGTH@ 83
+---------UPD SingleVariableDeclaration@@IllegalArgumentException expected @TO@ NoSuchMethodException expected @AT@ 2731 @LENGTH@ 33
+------------UPD SimpleType@@IllegalArgumentException @TO@ NoSuchMethodException @AT@ 2731 @LENGTH@ 24
+---INS VariableDeclarationStatement@@Class clazz=RunAsUserToken.class; @TO@ MethodDeclaration@@public, void, MethodName:testNoArgsConstructor,  @AT@ 2620 @LENGTH@ 35
+------INS SimpleType@@Class @TO@ VariableDeclarationStatement@@Class clazz=RunAsUserToken.class; @AT@ 2620 @LENGTH@ 5
+------INS VariableDeclarationFragment@@clazz=RunAsUserToken.class @TO@ VariableDeclarationStatement@@Class clazz=RunAsUserToken.class; @AT@ 2626 @LENGTH@ 28
+---------INS SimpleName@@clazz @TO@ VariableDeclarationFragment@@clazz=RunAsUserToken.class @AT@ 2626 @LENGTH@ 5
+---------INS TypeLiteral@@RunAsUserToken.class @TO@ VariableDeclarationFragment@@clazz=RunAsUserToken.class @AT@ 2634 @LENGTH@ 20
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 5206 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 5206 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 5228 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 5239 @LENGTH@ 25
+------------DEL New@@new @AT@ 5239 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 5243 @LENGTH@ 19
+
+
+UPD ExpressionStatement@@MethodInvocation:authRequest.setDetails(new WebAuthenticationDetails(request)) @TO@ MethodInvocation:authRequest.setDetails(new WebAuthenticationDetails(request,false)) @AT@ 3934 @LENGTH@ 62
+---UPD MethodInvocation@@authRequest.setDetails(new WebAuthenticationDetails(request)) @TO@ authRequest.setDetails(new WebAuthenticationDetails(request,false)) @AT@ 3934 @LENGTH@ 61
+------UPD SimpleName@@MethodName:setDetails:[new WebAuthenticationDetails(request)] @TO@ MethodName:setDetails:[new WebAuthenticationDetails(request,false)] @AT@ 3946 @LENGTH@ 49
+---------UPD ClassInstanceCreation@@WebAuthenticationDetails[request] @TO@ WebAuthenticationDetails[request, false] @AT@ 3957 @LENGTH@ 37
+------------INS BooleanLiteral@@false @TO@ ClassInstanceCreation@@WebAuthenticationDetails[request] @AT@ 3996 @LENGTH@ 5
+
+
+INS IfStatement@@if (predicates.length == 0) {  return TruePredicate.INSTANCE;} @TO@ MethodDeclaration@@public, static, Predicate, MethodName:getInstance, Predicate[] predicates,  @AT@ 1820 @LENGTH@ 82
+---INS InfixExpression@@predicates.length == 0 @TO@ IfStatement@@if (predicates.length == 0) {  return TruePredicate.INSTANCE;} @AT@ 1824 @LENGTH@ 22
+------INS QualifiedName@@predicates.length @TO@ InfixExpression@@predicates.length == 0 @AT@ 1824 @LENGTH@ 17
+---------INS SimpleName@@predicates @TO@ QualifiedName@@predicates.length @AT@ 1824 @LENGTH@ 10
+---------INS SimpleName@@length @TO@ QualifiedName@@predicates.length @AT@ 1835 @LENGTH@ 6
+------INS Operator@@== @TO@ InfixExpression@@predicates.length == 0 @AT@ 1841 @LENGTH@ 2
+------INS NumberLiteral@@0 @TO@ InfixExpression@@predicates.length == 0 @AT@ 1845 @LENGTH@ 1
+---INS Block@@ThenBody:{  return TruePredicate.INSTANCE;} @TO@ IfStatement@@if (predicates.length == 0) {  return TruePredicate.INSTANCE;} @AT@ 1848 @LENGTH@ 54
+------INS ReturnStatement@@QualifiedName:TruePredicate.INSTANCE @TO@ Block@@ThenBody:{  return TruePredicate.INSTANCE;} @AT@ 1862 @LENGTH@ 30
+---------INS QualifiedName@@TruePredicate.INSTANCE @TO@ ReturnStatement@@QualifiedName:TruePredicate.INSTANCE @AT@ 1869 @LENGTH@ 22
+------------INS SimpleName@@TruePredicate @TO@ QualifiedName@@TruePredicate.INSTANCE @AT@ 1869 @LENGTH@ 13
+------------INS SimpleName@@INSTANCE @TO@ QualifiedName@@TruePredicate.INSTANCE @AT@ 1883 @LENGTH@ 8
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 3162 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 3162 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 3184 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 3195 @LENGTH@ 25
+------------DEL New@@new @AT@ 3195 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 3199 @LENGTH@ 19
+
+
+UPD ExpressionStatement@@MethodInvocation:assertEquals(token.getAuthorities(),response.getAuthorities()) @TO@ MethodInvocation:assertTrue(Arrays.equals(token.getAuthorities(),response.getAuthorities())) @AT@ 2348 @LENGTH@ 64
+---UPD MethodInvocation@@assertEquals(token.getAuthorities(),response.getAuthorities()) @TO@ assertTrue(Arrays.equals(token.getAuthorities(),response.getAuthorities())) @AT@ 2348 @LENGTH@ 63
+------UPD SimpleName@@MethodName:assertEquals:[token.getAuthorities(), response.getAuthorities()] @TO@ MethodName:equals:[token.getAuthorities(), response.getAuthorities()] @AT@ 2348 @LENGTH@ 63
+------INS SimpleName@@MethodName:assertTrue:[Arrays.equals(token.getAuthorities(),response.getAuthorities())] @TO@ MethodInvocation@@assertEquals(token.getAuthorities(),response.getAuthorities()) @AT@ 2374 @LENGTH@ 76
+---------INS MethodInvocation@@Arrays.equals(token.getAuthorities(),response.getAuthorities()) @TO@ SimpleName@@MethodName:assertTrue:[Arrays.equals(token.getAuthorities(),response.getAuthorities())] @AT@ 2385 @LENGTH@ 64
+------------MOV SimpleName@@MethodName:assertEquals:[token.getAuthorities(), response.getAuthorities()] @TO@ MethodInvocation@@Arrays.equals(token.getAuthorities(),response.getAuthorities()) @AT@ 2348 @LENGTH@ 63
+------------INS SimpleName@@Name:Arrays @TO@ MethodInvocation@@Arrays.equals(token.getAuthorities(),response.getAuthorities()) @AT@ 2385 @LENGTH@ 6
+
+
+UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ MethodInvocation:SecurityContextHolder.clearContext() @AT@ 2690 @LENGTH@ 60
+---UPD MethodInvocation@@SecurityContextHolder.setContext(new SecurityContextImpl()) @TO@ SecurityContextHolder.clearContext() @AT@ 2690 @LENGTH@ 59
+------UPD SimpleName@@MethodName:setContext:[new SecurityContextImpl()] @TO@ MethodName:clearContext:[] @AT@ 2712 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@SecurityContextImpl[] @AT@ 2723 @LENGTH@ 25
+------------DEL New@@new @AT@ 2723 @LENGTH@ 3
+------------DEL SimpleType@@SecurityContextImpl @AT@ 2727 @LENGTH@ 19
+
+
+INS MethodDeclaration@@protected, LdapAuthoritiesPopulator, MethodName:getAuthoritiesPoulator,  @TO@ TypeDeclaration@@[public]LdapAuthenticationProvider, AbstractUserDetailsAuthenticationProvider @AT@ 8751 @LENGTH@ 104
+---INS Modifier@@protected @TO@ MethodDeclaration@@protected, LdapAuthoritiesPopulator, MethodName:getAuthoritiesPoulator,  @AT@ 8751 @LENGTH@ 9
+---INS SimpleType@@LdapAuthoritiesPopulator @TO@ MethodDeclaration@@protected, LdapAuthoritiesPopulator, MethodName:getAuthoritiesPoulator,  @AT@ 8761 @LENGTH@ 24
+---INS SimpleName@@MethodName:getAuthoritiesPoulator @TO@ MethodDeclaration@@protected, LdapAuthoritiesPopulator, MethodName:getAuthoritiesPoulator,  @AT@ 8786 @LENGTH@ 22
+---INS ReturnStatement@@SimpleName:authoritiesPopulator @TO@ MethodDeclaration@@protected, LdapAuthoritiesPopulator, MethodName:getAuthoritiesPoulator,  @AT@ 8821 @LENGTH@ 28
+------INS SimpleName@@authoritiesPopulator @TO@ ReturnStatement@@SimpleName:authoritiesPopulator @AT@ 8828 @LENGTH@ 20

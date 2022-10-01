@@ -1,0 +1,9 @@
+Group,Subject,Repo,GitRepo,Branch
+Apache,CAMEL,camel,https://github.com/apache/camel.git,master
+Apache,MAVEN,maven,https://github.com/apache/maven.git,master
+Apache,WICKET,wicket,https://github.com/apache/wicket.git,master
+Apache,L4J,logging-log4j2,https://github.com/apache/logging-log4j2.git,master
+Apache,FLINK,flink,https://github.com/apache/flink.git,master
+Apache,COMMONS,commons-math,https://github.com/apache/commons-math.git,master
+Apache,ACCUMULO,accumulo,https://github.com/apache/accumulo.git,master
+Apache,JACKRABBIT,jackrabbit-oak,https://github.com/apache/jackrabbit-oak.git,trunk

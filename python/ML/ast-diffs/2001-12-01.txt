@@ -1,0 +1,685 @@
+MOV ExpressionStatement@@Assignment:retval=super.put(key,value) @TO@ MethodDeclaration@@public, Object, MethodName:put, Object key, Object value,  @AT@ 5767 @LENGTH@ 30
+
+
+UPD ExpressionStatement@@Assignment:stack=(ArrayStack)makeList() @TO@ Assignment:stack=(ArrayStack)makeEmptyList() @AT@ 3654 @LENGTH@ 32
+---UPD Assignment@@stack=(ArrayStack)makeList() @TO@ stack=(ArrayStack)makeEmptyList() @AT@ 3654 @LENGTH@ 31
+------UPD CastExpression@@(ArrayStack)makeList() @TO@ (ArrayStack)makeEmptyList() @AT@ 3662 @LENGTH@ 23
+---------UPD MethodInvocation@@MethodName:makeList:[] @TO@ MethodName:makeEmptyList:[] @AT@ 3675 @LENGTH@ 10
+
+
+UPD MethodDeclaration@@public, List, MethodName:makeList,  @TO@ public, List, MethodName:makeEmptyList,  @AT@ 3757 @LENGTH@ 133
+---UPD SimpleName@@MethodName:makeList @TO@ MethodName:makeEmptyList @AT@ 3769 @LENGTH@ 8
+
+
+UPD ExpressionStatement@@Assignment:map=(HashMap)makeMap() @TO@ Assignment:map=(HashMap)makeEmptyMap() @AT@ 3827 @LENGTH@ 26
+---UPD Assignment@@map=(HashMap)makeMap() @TO@ map=(HashMap)makeEmptyMap() @AT@ 3827 @LENGTH@ 25
+------UPD CastExpression@@(HashMap)makeMap() @TO@ (HashMap)makeEmptyMap() @AT@ 3833 @LENGTH@ 19
+---------UPD MethodInvocation@@MethodName:makeMap:[] @TO@ MethodName:makeEmptyMap:[] @AT@ 3843 @LENGTH@ 9
+
+
+UPD ExpressionStatement@@Assignment:map=(HashMap)makeMap() @TO@ Assignment:map=(HashMap)makeEmptyMap() @AT@ 3802 @LENGTH@ 26
+---UPD Assignment@@map=(HashMap)makeMap() @TO@ map=(HashMap)makeEmptyMap() @AT@ 3802 @LENGTH@ 25
+------UPD CastExpression@@(HashMap)makeMap() @TO@ (HashMap)makeEmptyMap() @AT@ 3808 @LENGTH@ 19
+---------UPD MethodInvocation@@MethodName:makeMap:[] @TO@ MethodName:makeEmptyMap:[] @AT@ 3818 @LENGTH@ 9
+
+
+UPD TypeDeclaration@@[public]TestSequencedHashMap, TestMap[TestMap.SupportsPut] @TO@ [public]TestSequencedHashMap, TestMap[TestMap.SupportsPut, TestMap.EntrySetSupportsRemove] @AT@ 3349 @LENGTH@ 3808
+---INS SimpleType@@TestMap.EntrySetSupportsRemove @TO@ TypeDeclaration@@[public]TestSequencedHashMap, TestMap[TestMap.SupportsPut] @AT@ 3432 @LENGTH@ 30
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=2197433140769957051L] @TO@ TypeDeclaration@@[public]LRUMap, SequencedHashMap[Externalizable] @AT@ 8968 @LENGTH@ 66
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=2197433140769957051L] @AT@ 8968 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=2197433140769957051L] @AT@ 8976 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=2197433140769957051L] @AT@ 8983 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=2197433140769957051L] @AT@ 8989 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=2197433140769957051L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=2197433140769957051L] @AT@ 8994 @LENGTH@ 39
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=2197433140769957051L @AT@ 8994 @LENGTH@ 16
+------INS NumberLiteral@@2197433140769957051L @TO@ VariableDeclarationFragment@@serialVersionUID=2197433140769957051L @AT@ 9013 @LENGTH@ 20
+
+
+UPD IfStatement@@if (entry.equals(e)) return entry; else return null; @TO@ if (entry != null && entry.equals(e)) return entry; else return null; @AT@ 21117 @LENGTH@ 59
+---INS InfixExpression@@entry != null && entry.equals(e) @TO@ IfStatement@@if (entry.equals(e)) return entry; else return null; @AT@ 21116 @LENGTH@ 32
+------INS InfixExpression@@entry != null @TO@ InfixExpression@@entry != null && entry.equals(e) @AT@ 21116 @LENGTH@ 13
+---------INS SimpleName@@entry @TO@ InfixExpression@@entry != null @AT@ 21116 @LENGTH@ 5
+---------INS Operator@@!= @TO@ InfixExpression@@entry != null @AT@ 21121 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@entry != null @AT@ 21125 @LENGTH@ 4
+------MOV MethodInvocation@@entry.equals(e) @TO@ InfixExpression@@entry != null && entry.equals(e) @AT@ 21120 @LENGTH@ 15
+------INS Operator@@&& @TO@ InfixExpression@@entry != null && entry.equals(e) @AT@ 21129 @LENGTH@ 2
+
+
+UPD VariableDeclarationStatement@@int lastItem=size(); @TO@ int lastItem=size() - 1; @AT@ 5886 @LENGTH@ 22
+---UPD VariableDeclarationFragment@@lastItem=size() @TO@ lastItem=size() - 1 @AT@ 5890 @LENGTH@ 17
+------INS InfixExpression@@size() - 1 @TO@ VariableDeclarationFragment@@lastItem=size() @AT@ 5899 @LENGTH@ 10
+---------INS MethodInvocation@@MethodName:size:[] @TO@ InfixExpression@@size() - 1 @AT@ 5899 @LENGTH@ 6
+---------INS Operator@@- @TO@ InfixExpression@@size() - 1 @AT@ 5905 @LENGTH@ 1
+---------INS NumberLiteral@@1 @TO@ InfixExpression@@size() - 1 @AT@ 5908 @LENGTH@ 1
+------DEL MethodInvocation@@MethodName:size:[] @AT@ 5901 @LENGTH@ 6
+
+
+UPD IfStatement@@if (!setPreviousObject()) {  return false;} @TO@ if (!setPreviousObject()) {  return false;} else {  clearPreviousObject();} @AT@ 7603 @LENGTH@ 70
+---INS Block@@ElseBody:{  clearPreviousObject();} @TO@ IfStatement@@if (!setPreviousObject()) {  return false;} @AT@ 7735 @LENGTH@ 54
+------INS ExpressionStatement@@MethodInvocation:clearPreviousObject() @TO@ Block@@ElseBody:{  clearPreviousObject();} @AT@ 7753 @LENGTH@ 22
+---------INS MethodInvocation@@MethodName:clearPreviousObject:[] @TO@ ExpressionStatement@@MethodInvocation:clearPreviousObject() @AT@ 7753 @LENGTH@ 21
+
+
+INS MethodDeclaration@@public, void, MethodName:testEntrySetContains,  @TO@ TypeDeclaration@@[public, abstract]TestMap, TestObject @AT@ 7434 @LENGTH@ 618
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetContains,  @AT@ 7434 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetContains,  @AT@ 7441 @LENGTH@ 4
+---INS SimpleName@@MethodName:testEntrySetContains @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetContains,  @AT@ 7446 @LENGTH@ 20
+---INS IfStatement@@if ((this instanceof TestMap.SupportsPut) == false) {  return;} @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetContains,  @AT@ 7480 @LENGTH@ 83
+------INS InfixExpression@@(this instanceof TestMap.SupportsPut) == false @TO@ IfStatement@@if ((this instanceof TestMap.SupportsPut) == false) {  return;} @AT@ 7484 @LENGTH@ 46
+---------INS ParenthesizedExpression@@(this instanceof TestMap.SupportsPut) @TO@ InfixExpression@@(this instanceof TestMap.SupportsPut) == false @AT@ 7484 @LENGTH@ 37
+------------INS InstanceofExpression@@this instanceof TestMap.SupportsPut @TO@ ParenthesizedExpression@@(this instanceof TestMap.SupportsPut) @AT@ 7485 @LENGTH@ 35
+---------------INS ThisExpression@@this @TO@ InstanceofExpression@@this instanceof TestMap.SupportsPut @AT@ 7485 @LENGTH@ 4
+---------------INS Instanceof@@instanceof @TO@ InstanceofExpression@@this instanceof TestMap.SupportsPut @AT@ 7490 @LENGTH@ 10
+---------------INS SimpleType@@TestMap.SupportsPut @TO@ InstanceofExpression@@this instanceof TestMap.SupportsPut @AT@ 7501 @LENGTH@ 19
+---------INS Operator@@== @TO@ InfixExpression@@(this instanceof TestMap.SupportsPut) == false @AT@ 7521 @LENGTH@ 2
+---------INS BooleanLiteral@@false @TO@ InfixExpression@@(this instanceof TestMap.SupportsPut) == false @AT@ 7525 @LENGTH@ 5
+------INS Block@@ThenBody:{  return;} @TO@ IfStatement@@if ((this instanceof TestMap.SupportsPut) == false) {  return;} @AT@ 7532 @LENGTH@ 31
+---------INS ReturnStatement@@ @TO@ Block@@ThenBody:{  return;} @AT@ 7546 @LENGTH@ 7
+---INS VariableDeclarationStatement@@Map map=makeMap(); @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetContains,  @AT@ 7573 @LENGTH@ 20
+------INS SimpleType@@Map @TO@ VariableDeclarationStatement@@Map map=makeMap(); @AT@ 7573 @LENGTH@ 3
+------INS VariableDeclarationFragment@@map=makeMap() @TO@ VariableDeclarationStatement@@Map map=makeMap(); @AT@ 7577 @LENGTH@ 15
+---------INS SimpleName@@map @TO@ VariableDeclarationFragment@@map=makeMap() @AT@ 7577 @LENGTH@ 3
+---------INS MethodInvocation@@MethodName:makeMap:[] @TO@ VariableDeclarationFragment@@map=makeMap() @AT@ 7583 @LENGTH@ 9
+---INS ExpressionStatement@@MethodInvocation:map.put("1","1") @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetContains,  @AT@ 7602 @LENGTH@ 17
+------INS MethodInvocation@@map.put("1","1") @TO@ ExpressionStatement@@MethodInvocation:map.put("1","1") @AT@ 7602 @LENGTH@ 16
+---------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("1","1") @AT@ 7602 @LENGTH@ 3
+---------INS SimpleName@@MethodName:put:["1", "1"] @TO@ MethodInvocation@@map.put("1","1") @AT@ 7606 @LENGTH@ 12
+------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:put:["1", "1"] @AT@ 7610 @LENGTH@ 3
+------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:put:["1", "1"] @AT@ 7614 @LENGTH@ 3
+---INS ExpressionStatement@@MethodInvocation:map.put("2","2") @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetContains,  @AT@ 7628 @LENGTH@ 17
+------INS MethodInvocation@@map.put("2","2") @TO@ ExpressionStatement@@MethodInvocation:map.put("2","2") @AT@ 7628 @LENGTH@ 16
+---------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("2","2") @AT@ 7628 @LENGTH@ 3
+---------INS SimpleName@@MethodName:put:["2", "2"] @TO@ MethodInvocation@@map.put("2","2") @AT@ 7632 @LENGTH@ 12
+------------INS StringLiteral@@"2" @TO@ SimpleName@@MethodName:put:["2", "2"] @AT@ 7636 @LENGTH@ 3
+------------INS StringLiteral@@"2" @TO@ SimpleName@@MethodName:put:["2", "2"] @AT@ 7640 @LENGTH@ 3
+---INS ExpressionStatement@@MethodInvocation:map.put("3","3") @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetContains,  @AT@ 7654 @LENGTH@ 17
+------INS MethodInvocation@@map.put("3","3") @TO@ ExpressionStatement@@MethodInvocation:map.put("3","3") @AT@ 7654 @LENGTH@ 16
+---------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("3","3") @AT@ 7654 @LENGTH@ 3
+---------INS SimpleName@@MethodName:put:["3", "3"] @TO@ MethodInvocation@@map.put("3","3") @AT@ 7658 @LENGTH@ 12
+------------INS StringLiteral@@"3" @TO@ SimpleName@@MethodName:put:["3", "3"] @AT@ 7662 @LENGTH@ 3
+------------INS StringLiteral@@"3" @TO@ SimpleName@@MethodName:put:["3", "3"] @AT@ 7666 @LENGTH@ 3
+---INS VariableDeclarationStatement@@Set set=map.entrySet(); @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetContains,  @AT@ 7681 @LENGTH@ 25
+------INS SimpleType@@Set @TO@ VariableDeclarationStatement@@Set set=map.entrySet(); @AT@ 7681 @LENGTH@ 3
+------INS VariableDeclarationFragment@@set=map.entrySet() @TO@ VariableDeclarationStatement@@Set set=map.entrySet(); @AT@ 7685 @LENGTH@ 20
+---------INS SimpleName@@set @TO@ VariableDeclarationFragment@@set=map.entrySet() @AT@ 7685 @LENGTH@ 3
+---------INS MethodInvocation@@map.entrySet() @TO@ VariableDeclarationFragment@@set=map.entrySet() @AT@ 7691 @LENGTH@ 14
+------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.entrySet() @AT@ 7691 @LENGTH@ 3
+------------INS SimpleName@@MethodName:entrySet:[] @TO@ MethodInvocation@@map.entrySet() @AT@ 7695 @LENGTH@ 10
+---INS VariableDeclarationStatement@@Object o=set.iterator().next(); @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetContains,  @AT@ 7715 @LENGTH@ 33
+------INS SimpleType@@Object @TO@ VariableDeclarationStatement@@Object o=set.iterator().next(); @AT@ 7715 @LENGTH@ 6
+------INS VariableDeclarationFragment@@o=set.iterator().next() @TO@ VariableDeclarationStatement@@Object o=set.iterator().next(); @AT@ 7722 @LENGTH@ 25
+---------INS SimpleName@@o @TO@ VariableDeclarationFragment@@o=set.iterator().next() @AT@ 7722 @LENGTH@ 1
+---------INS MethodInvocation@@set.iterator().next() @TO@ VariableDeclarationFragment@@o=set.iterator().next() @AT@ 7726 @LENGTH@ 21
+------------INS MethodInvocation@@MethodName:iterator:[] @TO@ MethodInvocation@@set.iterator().next() @AT@ 7726 @LENGTH@ 14
+------------INS SimpleName@@Name:set @TO@ MethodInvocation@@set.iterator().next() @AT@ 7726 @LENGTH@ 3
+------------INS SimpleName@@MethodName:next:[] @TO@ MethodInvocation@@set.iterator().next() @AT@ 7741 @LENGTH@ 6
+---INS ExpressionStatement@@MethodInvocation:assertTrue("entry set should contain valid element",set.contains(o)) @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetContains,  @AT@ 7757 @LENGTH@ 69
+------INS MethodInvocation@@assertTrue("entry set should contain valid element",set.contains(o)) @TO@ ExpressionStatement@@MethodInvocation:assertTrue("entry set should contain valid element",set.contains(o)) @AT@ 7757 @LENGTH@ 68
+---------INS SimpleName@@MethodName:assertTrue:["entry set should contain valid element", set.contains(o)] @TO@ MethodInvocation@@assertTrue("entry set should contain valid element",set.contains(o)) @AT@ 7757 @LENGTH@ 68
+------------INS StringLiteral@@"entry set should contain valid element" @TO@ SimpleName@@MethodName:assertTrue:["entry set should contain valid element", set.contains(o)] @AT@ 7768 @LENGTH@ 40
+------------INS MethodInvocation@@set.contains(o) @TO@ SimpleName@@MethodName:assertTrue:["entry set should contain valid element", set.contains(o)] @AT@ 7809 @LENGTH@ 15
+---------------INS SimpleName@@Name:set @TO@ MethodInvocation@@set.contains(o) @AT@ 7809 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:contains:[o] @TO@ MethodInvocation@@set.contains(o) @AT@ 7813 @LENGTH@ 11
+------------------INS SimpleName@@o @TO@ SimpleName@@MethodName:contains:[o] @AT@ 7822 @LENGTH@ 1
+---INS VariableDeclarationStatement@@DefaultMapEntry entry=new DefaultMapEntry("4","4"); @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetContains,  @AT@ 7866 @LENGTH@ 53
+------INS SimpleType@@DefaultMapEntry @TO@ VariableDeclarationStatement@@DefaultMapEntry entry=new DefaultMapEntry("4","4"); @AT@ 7866 @LENGTH@ 15
+------INS VariableDeclarationFragment@@entry=new DefaultMapEntry("4","4") @TO@ VariableDeclarationStatement@@DefaultMapEntry entry=new DefaultMapEntry("4","4"); @AT@ 7882 @LENGTH@ 36
+---------INS SimpleName@@entry @TO@ VariableDeclarationFragment@@entry=new DefaultMapEntry("4","4") @AT@ 7882 @LENGTH@ 5
+---------INS ClassInstanceCreation@@DefaultMapEntry["4", "4"] @TO@ VariableDeclarationFragment@@entry=new DefaultMapEntry("4","4") @AT@ 7890 @LENGTH@ 28
+------------INS New@@new @TO@ ClassInstanceCreation@@DefaultMapEntry["4", "4"] @AT@ 7890 @LENGTH@ 3
+------------INS SimpleType@@DefaultMapEntry @TO@ ClassInstanceCreation@@DefaultMapEntry["4", "4"] @AT@ 7894 @LENGTH@ 15
+------------INS StringLiteral@@"4" @TO@ ClassInstanceCreation@@DefaultMapEntry["4", "4"] @AT@ 7910 @LENGTH@ 3
+------------INS StringLiteral@@"4" @TO@ ClassInstanceCreation@@DefaultMapEntry["4", "4"] @AT@ 7914 @LENGTH@ 3
+---INS ExpressionStatement@@MethodInvocation:assertTrue("entry set should not contain a bogus element",set.contains(entry) == false) @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetContains,  @AT@ 7928 @LENGTH@ 108
+------INS MethodInvocation@@assertTrue("entry set should not contain a bogus element",set.contains(entry) == false) @TO@ ExpressionStatement@@MethodInvocation:assertTrue("entry set should not contain a bogus element",set.contains(entry) == false) @AT@ 7928 @LENGTH@ 107
+---------INS SimpleName@@MethodName:assertTrue:["entry set should not contain a bogus element", set.contains(entry) == false] @TO@ MethodInvocation@@assertTrue("entry set should not contain a bogus element",set.contains(entry) == false) @AT@ 7928 @LENGTH@ 107
+------------INS StringLiteral@@"entry set should not contain a bogus element" @TO@ SimpleName@@MethodName:assertTrue:["entry set should not contain a bogus element", set.contains(entry) == false] @AT@ 7939 @LENGTH@ 46
+------------INS InfixExpression@@set.contains(entry) == false @TO@ SimpleName@@MethodName:assertTrue:["entry set should not contain a bogus element", set.contains(entry) == false] @AT@ 8006 @LENGTH@ 28
+---------------INS MethodInvocation@@set.contains(entry) @TO@ InfixExpression@@set.contains(entry) == false @AT@ 8006 @LENGTH@ 19
+------------------INS SimpleName@@Name:set @TO@ MethodInvocation@@set.contains(entry) @AT@ 8006 @LENGTH@ 3
+------------------INS SimpleName@@MethodName:contains:[entry] @TO@ MethodInvocation@@set.contains(entry) @AT@ 8010 @LENGTH@ 15
+---------------------INS SimpleName@@entry @TO@ SimpleName@@MethodName:contains:[entry] @AT@ 8019 @LENGTH@ 5
+---------------INS Operator@@== @TO@ InfixExpression@@set.contains(entry) == false @AT@ 8025 @LENGTH@ 2
+---------------INS BooleanLiteral@@false @TO@ InfixExpression@@set.contains(entry) == false @AT@ 8029 @LENGTH@ 5
+
+
+UPD IfStatement@@if (mapSize >= maximumSize) {  if (!containsKey(key)) {    removeLRU();  }  retval=super.put(key,value);} else {  retval=super.put(key,value);} @TO@ if (mapSize >= maximumSize) {  if (!containsKey(key)) {    removeLRU();  }} @AT@ 5474 @LENGTH@ 393
+---UPD Block@@ThenBody:{  if (!containsKey(key)) {    removeLRU();  }  retval=super.put(key,value);} @TO@ ThenBody:{  if (!containsKey(key)) {    removeLRU();  }} @AT@ 5504 @LENGTH@ 303
+---DEL Block@@ElseBody:{  retval=super.put(key,value);} @AT@ 5813 @LENGTH@ 54
+------DEL ExpressionStatement@@Assignment:retval=super.put(key,value) @AT@ 5827 @LENGTH@ 30
+---------DEL Assignment@@retval=super.put(key,value) @AT@ 5827 @LENGTH@ 29
+------------DEL SimpleName@@retval @AT@ 5827 @LENGTH@ 6
+------------DEL Operator@@= @AT@ 5833 @LENGTH@ 1
+------------DEL SuperMethodInvocation@@super.put(key,value) @AT@ 5836 @LENGTH@ 20
+---------------DEL SimpleName@@MethodName:put:[key, value] @AT@ 5842 @LENGTH@ 3
+---------------DEL SimpleName@@key @AT@ 5846 @LENGTH@ 3
+---------------DEL SimpleName@@value @AT@ 5850 @LENGTH@ 5
+
+
+INS MethodDeclaration@@public, void, MethodName:testClear,  @TO@ TypeDeclaration@@[public]TestBeanMap, TestMap @AT@ 8665 @LENGTH@ 146
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testClear,  @AT@ 8665 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testClear,  @AT@ 8672 @LENGTH@ 4
+---INS SimpleName@@MethodName:testClear @TO@ MethodDeclaration@@public, void, MethodName:testClear,  @AT@ 8677 @LENGTH@ 9
+
+
+UPD ExpressionStatement@@Assignment:labRat=(SequencedHashMap)makeMap() @TO@ Assignment:labRat=(SequencedHashMap)makeEmptyMap() @AT@ 4111 @LENGTH@ 38
+---UPD Assignment@@labRat=(SequencedHashMap)makeMap() @TO@ labRat=(SequencedHashMap)makeEmptyMap() @AT@ 4111 @LENGTH@ 37
+------UPD CastExpression@@(SequencedHashMap)makeMap() @TO@ (SequencedHashMap)makeEmptyMap() @AT@ 4120 @LENGTH@ 28
+---------UPD MethodInvocation@@MethodName:makeMap:[] @TO@ MethodName:makeEmptyMap:[] @AT@ 4139 @LENGTH@ 9
+
+
+UPD ExpressionStatement@@MethodInvocation:assertEquals("Both maps are same size",map.size(),getSampleKeys().length) @TO@ MethodInvocation:assertEquals("Map is the right size",map.size(),getSampleKeys().length) @AT@ 38061 @LENGTH@ 75
+---UPD MethodInvocation@@assertEquals("Both maps are same size",map.size(),getSampleKeys().length) @TO@ assertEquals("Map is the right size",map.size(),getSampleKeys().length) @AT@ 38061 @LENGTH@ 74
+------UPD SimpleName@@MethodName:assertEquals:["Both maps are same size", map.size(), getSampleKeys().length] @TO@ MethodName:assertEquals:["Map is the right size", map.size(), getSampleKeys().length] @AT@ 38061 @LENGTH@ 74
+---------UPD StringLiteral@@"Both maps are same size" @TO@ "Map is the right size" @AT@ 38074 @LENGTH@ 25
+
+
+UPD MethodDeclaration@@public, Map, MethodName:makeMap,  @TO@ public, Map, MethodName:makeEmptyMap,  @AT@ 3654 @LENGTH@ 123
+---UPD SimpleName@@MethodName:makeMap @TO@ MethodName:makeEmptyMap @AT@ 3665 @LENGTH@ 7
+
+
+UPD ExpressionStatement@@MethodInvocation:assertEquals("Both maps have the same last key",map2.getLastKey(),getSampleKeys()[0]) @TO@ MethodInvocation:assertEquals("Both maps have the same last key",map2.getLastKey(),getSampleKeys()[getSampleKeys().length - 1]) @AT@ 8158 @LENGTH@ 108
+---UPD MethodInvocation@@assertEquals("Both maps have the same last key",map2.getLastKey(),getSampleKeys()[0]) @TO@ assertEquals("Both maps have the same last key",map2.getLastKey(),getSampleKeys()[getSampleKeys().length - 1]) @AT@ 8158 @LENGTH@ 107
+------UPD SimpleName@@MethodName:assertEquals:["Both maps have the same last key", map2.getLastKey(), getSampleKeys()[0]] @TO@ MethodName:assertEquals:["Both maps have the same last key", map2.getLastKey(), getSampleKeys()[getSampleKeys().length - 1]] @AT@ 8158 @LENGTH@ 107
+---------UPD ArrayAccess@@getSampleKeys()[0] @TO@ getSampleKeys()[getSampleKeys().length - 1] @AT@ 8246 @LENGTH@ 18
+------------DEL NumberLiteral@@0 @AT@ 8262 @LENGTH@ 1
+------------INS InfixExpression@@getSampleKeys().length - 1 @TO@ ArrayAccess@@getSampleKeys()[0] @AT@ 8282 @LENGTH@ 26
+---------------INS FieldAccess@@getSampleKeys().length @TO@ InfixExpression@@getSampleKeys().length - 1 @AT@ 8282 @LENGTH@ 22
+------------------INS MethodInvocation@@MethodName:getSampleKeys:[] @TO@ FieldAccess@@getSampleKeys().length @AT@ 8282 @LENGTH@ 15
+------------------INS SimpleName@@length @TO@ FieldAccess@@getSampleKeys().length @AT@ 8298 @LENGTH@ 6
+---------------INS Operator@@- @TO@ InfixExpression@@getSampleKeys().length - 1 @AT@ 8304 @LENGTH@ 1
+---------------INS NumberLiteral@@1 @TO@ InfixExpression@@getSampleKeys().length - 1 @AT@ 8307 @LENGTH@ 1
+
+
+UPD ExpressionStatement@@MethodInvocation:assertTrue("Maps is empty",map.isEmpty() == true) @TO@ MethodInvocation:assertTrue("Map is empty",map.isEmpty() == true) @AT@ 37316 @LENGTH@ 51
+---UPD MethodInvocation@@assertTrue("Maps is empty",map.isEmpty() == true) @TO@ assertTrue("Map is empty",map.isEmpty() == true) @AT@ 37316 @LENGTH@ 50
+------UPD SimpleName@@MethodName:assertTrue:["Maps is empty", map.isEmpty() == true] @TO@ MethodName:assertTrue:["Map is empty", map.isEmpty() == true] @AT@ 37316 @LENGTH@ 50
+---------UPD StringLiteral@@"Maps is empty" @TO@ "Map is empty" @AT@ 37327 @LENGTH@ 15
+
+
+UPD MethodDeclaration@@public, Map, MethodName:makeMap,  @TO@ public, Map, MethodName:makeEmptyMap,  @AT@ 4161 @LENGTH@ 67
+---UPD SimpleName@@MethodName:makeMap @TO@ MethodName:makeEmptyMap @AT@ 4172 @LENGTH@ 7
+
+
+INS ExpressionStatement@@MethodInvocation:suite.addTest(TestLRUMap.suite()) @TO@ MethodDeclaration@@public, static, Test, MethodName:suite,  @AT@ 4356 @LENGTH@ 34
+---INS MethodInvocation@@suite.addTest(TestLRUMap.suite()) @TO@ ExpressionStatement@@MethodInvocation:suite.addTest(TestLRUMap.suite()) @AT@ 4356 @LENGTH@ 33
+------INS SimpleName@@Name:suite @TO@ MethodInvocation@@suite.addTest(TestLRUMap.suite()) @AT@ 4356 @LENGTH@ 5
+------INS SimpleName@@MethodName:addTest:[TestLRUMap.suite()] @TO@ MethodInvocation@@suite.addTest(TestLRUMap.suite()) @AT@ 4362 @LENGTH@ 27
+---------INS MethodInvocation@@TestLRUMap.suite() @TO@ SimpleName@@MethodName:addTest:[TestLRUMap.suite()] @AT@ 4370 @LENGTH@ 18
+------------INS SimpleName@@Name:TestLRUMap @TO@ MethodInvocation@@TestLRUMap.suite() @AT@ 4370 @LENGTH@ 10
+------------INS SimpleName@@MethodName:suite:[] @TO@ MethodInvocation@@TestLRUMap.suite() @AT@ 4381 @LENGTH@ 7
+
+
+DEL MethodDeclaration@@public, Map, MethodName:makeEmptyMap,  @AT@ 3556 @LENGTH@ 90
+---DEL Modifier@@public @AT@ 3556 @LENGTH@ 6
+---DEL SimpleType@@Map @AT@ 3563 @LENGTH@ 3
+---DEL SimpleName@@MethodName:makeEmptyMap @AT@ 3567 @LENGTH@ 12
+---DEL VariableDeclarationStatement@@HashMap hm=new HashMap(); @AT@ 3592 @LENGTH@ 27
+------DEL SimpleType@@HashMap @AT@ 3592 @LENGTH@ 7
+------DEL VariableDeclarationFragment@@hm=new HashMap() @AT@ 3600 @LENGTH@ 18
+---------DEL SimpleName@@hm @AT@ 3600 @LENGTH@ 2
+---------DEL ClassInstanceCreation@@HashMap[] @AT@ 3605 @LENGTH@ 13
+------------DEL New@@new @AT@ 3605 @LENGTH@ 3
+------------DEL SimpleType@@HashMap @AT@ 3609 @LENGTH@ 7
+---DEL ReturnStatement@@ParenthesizedExpression:(hm) @AT@ 3628 @LENGTH@ 12
+------DEL ParenthesizedExpression@@(hm) @AT@ 3635 @LENGTH@ 4
+---------DEL SimpleName@@hm @AT@ 3636 @LENGTH@ 2
+
+
+UPD IfStatement@@if (obj1.equals(obj2)) {  assertEquals("[2] When two objects are equal, their hashCodes should be also.",obj1.hashCode(),obj2.hashCode());} @TO@ if (obj1.equals(obj2)) {  assertEquals("[2] When two objects are equal, their hashCodes should be also.",obj1.hashCode(),obj2.hashCode());  assertTrue("When obj1.equals(obj2) is true, then obj2.equals(obj1) should also be true",obj2.equals(obj1));} @AT@ 4758 @LENGTH@ 158
+---UPD Block@@ThenBody:{  assertEquals("[2] When two objects are equal, their hashCodes should be also.",obj1.hashCode(),obj2.hashCode());} @TO@ ThenBody:{  assertEquals("[2] When two objects are equal, their hashCodes should be also.",obj1.hashCode(),obj2.hashCode());  assertTrue("When obj1.equals(obj2) is true, then obj2.equals(obj1) should also be true",obj2.equals(obj1));} @AT@ 4780 @LENGTH@ 136
+------INS ExpressionStatement@@MethodInvocation:assertTrue("When obj1.equals(obj2) is true, then obj2.equals(obj1) should also be true",obj2.equals(obj1)) @TO@ Block@@ThenBody:{  assertEquals("[2] When two objects are equal, their hashCodes should be also.",obj1.hashCode(),obj2.hashCode());} @AT@ 4913 @LENGTH@ 108
+---------INS MethodInvocation@@assertTrue("When obj1.equals(obj2) is true, then obj2.equals(obj1) should also be true",obj2.equals(obj1)) @TO@ ExpressionStatement@@MethodInvocation:assertTrue("When obj1.equals(obj2) is true, then obj2.equals(obj1) should also be true",obj2.equals(obj1)) @AT@ 4913 @LENGTH@ 107
+------------INS SimpleName@@MethodName:assertTrue:["When obj1.equals(obj2) is true, then obj2.equals(obj1) should also be true", obj2.equals(obj1)] @TO@ MethodInvocation@@assertTrue("When obj1.equals(obj2) is true, then obj2.equals(obj1) should also be true",obj2.equals(obj1)) @AT@ 4913 @LENGTH@ 107
+---------------INS StringLiteral@@"When obj1.equals(obj2) is true, then obj2.equals(obj1) should also be true" @TO@ SimpleName@@MethodName:assertTrue:["When obj1.equals(obj2) is true, then obj2.equals(obj1) should also be true", obj2.equals(obj1)] @AT@ 4924 @LENGTH@ 76
+---------------INS MethodInvocation@@obj2.equals(obj1) @TO@ SimpleName@@MethodName:assertTrue:["When obj1.equals(obj2) is true, then obj2.equals(obj1) should also be true", obj2.equals(obj1)] @AT@ 5002 @LENGTH@ 17
+------------------INS SimpleName@@Name:obj2 @TO@ MethodInvocation@@obj2.equals(obj1) @AT@ 5002 @LENGTH@ 4
+------------------INS SimpleName@@MethodName:equals:[obj1] @TO@ MethodInvocation@@obj2.equals(obj1) @AT@ 5007 @LENGTH@ 12
+---------------------INS SimpleName@@obj1 @TO@ SimpleName@@MethodName:equals:[obj1] @AT@ 5014 @LENGTH@ 4
+
+
+UPD MethodDeclaration@@public, Map, MethodName:makeMap,  @TO@ public, Map, MethodName:makeEmptyMap,  @AT@ 3681 @LENGTH@ 99
+---UPD SimpleName@@MethodName:makeMap @TO@ MethodName:makeEmptyMap @AT@ 3692 @LENGTH@ 7
+
+
+INS MethodDeclaration@@public, void, MethodName:testFailingHasNextBug,  @TO@ TypeDeclaration@@[public]TestFilterListIterator, TestCase @AT@ 12001 @LENGTH@ 441
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testFailingHasNextBug,  @AT@ 12001 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testFailingHasNextBug,  @AT@ 12008 @LENGTH@ 4
+---INS SimpleName@@MethodName:testFailingHasNextBug @TO@ MethodDeclaration@@public, void, MethodName:testFailingHasNextBug,  @AT@ 12013 @LENGTH@ 21
+---INS VariableDeclarationStatement@@FilterListIterator filtered=new FilterListIterator(list.listIterator(),fourPred); @TO@ MethodDeclaration@@public, void, MethodName:testFailingHasNextBug,  @AT@ 12047 @LENGTH@ 83
+------INS SimpleType@@FilterListIterator @TO@ VariableDeclarationStatement@@FilterListIterator filtered=new FilterListIterator(list.listIterator(),fourPred); @AT@ 12047 @LENGTH@ 18
+------INS VariableDeclarationFragment@@filtered=new FilterListIterator(list.listIterator(),fourPred) @TO@ VariableDeclarationStatement@@FilterListIterator filtered=new FilterListIterator(list.listIterator(),fourPred); @AT@ 12066 @LENGTH@ 63
+---------INS SimpleName@@filtered @TO@ VariableDeclarationFragment@@filtered=new FilterListIterator(list.listIterator(),fourPred) @AT@ 12066 @LENGTH@ 8
+---------INS ClassInstanceCreation@@FilterListIterator[list.listIterator(), fourPred] @TO@ VariableDeclarationFragment@@filtered=new FilterListIterator(list.listIterator(),fourPred) @AT@ 12077 @LENGTH@ 52
+------------INS New@@new @TO@ ClassInstanceCreation@@FilterListIterator[list.listIterator(), fourPred] @AT@ 12077 @LENGTH@ 3
+------------INS SimpleType@@FilterListIterator @TO@ ClassInstanceCreation@@FilterListIterator[list.listIterator(), fourPred] @AT@ 12081 @LENGTH@ 18
+------------INS MethodInvocation@@list.listIterator() @TO@ ClassInstanceCreation@@FilterListIterator[list.listIterator(), fourPred] @AT@ 12100 @LENGTH@ 19
+---------------INS SimpleName@@Name:list @TO@ MethodInvocation@@list.listIterator() @AT@ 12100 @LENGTH@ 4
+---------------INS SimpleName@@MethodName:listIterator:[] @TO@ MethodInvocation@@list.listIterator() @AT@ 12105 @LENGTH@ 14
+------------INS SimpleName@@fourPred @TO@ ClassInstanceCreation@@FilterListIterator[list.listIterator(), fourPred] @AT@ 12120 @LENGTH@ 8
+---INS VariableDeclarationStatement@@ListIterator expected=fours.listIterator(); @TO@ MethodDeclaration@@public, void, MethodName:testFailingHasNextBug,  @AT@ 12139 @LENGTH@ 45
+------INS SimpleType@@ListIterator @TO@ VariableDeclarationStatement@@ListIterator expected=fours.listIterator(); @AT@ 12139 @LENGTH@ 12
+------INS VariableDeclarationFragment@@expected=fours.listIterator() @TO@ VariableDeclarationStatement@@ListIterator expected=fours.listIterator(); @AT@ 12152 @LENGTH@ 31
+---------INS SimpleName@@expected @TO@ VariableDeclarationFragment@@expected=fours.listIterator() @AT@ 12152 @LENGTH@ 8
+---------INS MethodInvocation@@fours.listIterator() @TO@ VariableDeclarationFragment@@expected=fours.listIterator() @AT@ 12163 @LENGTH@ 20
+------------INS SimpleName@@Name:fours @TO@ MethodInvocation@@fours.listIterator() @AT@ 12163 @LENGTH@ 5
+------------INS SimpleName@@MethodName:listIterator:[] @TO@ MethodInvocation@@fours.listIterator() @AT@ 12169 @LENGTH@ 14
+---INS WhileStatement@@while (expected.hasNext()) {  expected.next();  filtered.next();} @TO@ MethodDeclaration@@public, void, MethodName:testFailingHasNextBug,  @AT@ 12193 @LENGTH@ 95
+------INS MethodInvocation@@expected.hasNext() @TO@ WhileStatement@@while (expected.hasNext()) {  expected.next();  filtered.next();} @AT@ 12199 @LENGTH@ 18
+---------INS SimpleName@@Name:expected @TO@ MethodInvocation@@expected.hasNext() @AT@ 12199 @LENGTH@ 8
+---------INS SimpleName@@MethodName:hasNext:[] @TO@ MethodInvocation@@expected.hasNext() @AT@ 12208 @LENGTH@ 9
+------INS Block@@WhileBody:{  expected.next();  filtered.next();} @TO@ WhileStatement@@while (expected.hasNext()) {  expected.next();  filtered.next();} @AT@ 12219 @LENGTH@ 69
+---------INS ExpressionStatement@@MethodInvocation:expected.next() @TO@ Block@@WhileBody:{  expected.next();  filtered.next();} @AT@ 12233 @LENGTH@ 16
+------------INS MethodInvocation@@expected.next() @TO@ ExpressionStatement@@MethodInvocation:expected.next() @AT@ 12233 @LENGTH@ 15
+---------------INS SimpleName@@Name:expected @TO@ MethodInvocation@@expected.next() @AT@ 12233 @LENGTH@ 8
+---------------INS SimpleName@@MethodName:next:[] @TO@ MethodInvocation@@expected.next() @AT@ 12242 @LENGTH@ 6
+---------INS ExpressionStatement@@MethodInvocation:filtered.next() @TO@ Block@@WhileBody:{  expected.next();  filtered.next();} @AT@ 12262 @LENGTH@ 16
+------------INS MethodInvocation@@filtered.next() @TO@ ExpressionStatement@@MethodInvocation:filtered.next() @AT@ 12262 @LENGTH@ 15
+---------------INS SimpleName@@Name:filtered @TO@ MethodInvocation@@filtered.next() @AT@ 12262 @LENGTH@ 8
+---------------INS SimpleName@@MethodName:next:[] @TO@ MethodInvocation@@filtered.next() @AT@ 12271 @LENGTH@ 6
+---INS ExpressionStatement@@MethodInvocation:assertTrue(filtered.hasPrevious()) @TO@ MethodDeclaration@@public, void, MethodName:testFailingHasNextBug,  @AT@ 12297 @LENGTH@ 35
+------INS MethodInvocation@@assertTrue(filtered.hasPrevious()) @TO@ ExpressionStatement@@MethodInvocation:assertTrue(filtered.hasPrevious()) @AT@ 12297 @LENGTH@ 34
+---------INS SimpleName@@MethodName:assertTrue:[filtered.hasPrevious()] @TO@ MethodInvocation@@assertTrue(filtered.hasPrevious()) @AT@ 12297 @LENGTH@ 34
+------------INS MethodInvocation@@filtered.hasPrevious() @TO@ SimpleName@@MethodName:assertTrue:[filtered.hasPrevious()] @AT@ 12308 @LENGTH@ 22
+---------------INS SimpleName@@Name:filtered @TO@ MethodInvocation@@filtered.hasPrevious() @AT@ 12308 @LENGTH@ 8
+---------------INS SimpleName@@MethodName:hasPrevious:[] @TO@ MethodInvocation@@filtered.hasPrevious() @AT@ 12317 @LENGTH@ 13
+---INS ExpressionStatement@@MethodInvocation:assertTrue(!filtered.hasNext()) @TO@ MethodDeclaration@@public, void, MethodName:testFailingHasNextBug,  @AT@ 12341 @LENGTH@ 32
+------INS MethodInvocation@@assertTrue(!filtered.hasNext()) @TO@ ExpressionStatement@@MethodInvocation:assertTrue(!filtered.hasNext()) @AT@ 12341 @LENGTH@ 31
+---------INS SimpleName@@MethodName:assertTrue:[!filtered.hasNext()] @TO@ MethodInvocation@@assertTrue(!filtered.hasNext()) @AT@ 12341 @LENGTH@ 31
+------------INS PrefixExpression@@!filtered.hasNext() @TO@ SimpleName@@MethodName:assertTrue:[!filtered.hasNext()] @AT@ 12352 @LENGTH@ 19
+---------------INS Operator@@! @TO@ PrefixExpression@@!filtered.hasNext() @AT@ 12352 @LENGTH@ 1
+---------------INS MethodInvocation@@filtered.hasNext() @TO@ PrefixExpression@@!filtered.hasNext() @AT@ 12353 @LENGTH@ 18
+------------------INS SimpleName@@Name:filtered @TO@ MethodInvocation@@filtered.hasNext() @AT@ 12353 @LENGTH@ 8
+------------------INS SimpleName@@MethodName:hasNext:[] @TO@ MethodInvocation@@filtered.hasNext() @AT@ 12362 @LENGTH@ 9
+---INS ExpressionStatement@@MethodInvocation:assertEquals(expected.previous(),filtered.previous()) @TO@ MethodDeclaration@@public, void, MethodName:testFailingHasNextBug,  @AT@ 12382 @LENGTH@ 54
+------INS MethodInvocation@@assertEquals(expected.previous(),filtered.previous()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(expected.previous(),filtered.previous()) @AT@ 12382 @LENGTH@ 53
+---------INS SimpleName@@MethodName:assertEquals:[expected.previous(), filtered.previous()] @TO@ MethodInvocation@@assertEquals(expected.previous(),filtered.previous()) @AT@ 12382 @LENGTH@ 53
+------------INS MethodInvocation@@expected.previous() @TO@ SimpleName@@MethodName:assertEquals:[expected.previous(), filtered.previous()] @AT@ 12395 @LENGTH@ 19
+---------------INS SimpleName@@Name:expected @TO@ MethodInvocation@@expected.previous() @AT@ 12395 @LENGTH@ 8
+---------------INS SimpleName@@MethodName:previous:[] @TO@ MethodInvocation@@expected.previous() @AT@ 12404 @LENGTH@ 10
+------------INS MethodInvocation@@filtered.previous() @TO@ SimpleName@@MethodName:assertEquals:[expected.previous(), filtered.previous()] @AT@ 12415 @LENGTH@ 19
+---------------INS SimpleName@@Name:filtered @TO@ MethodInvocation@@filtered.previous() @AT@ 12415 @LENGTH@ 8
+---------------INS SimpleName@@MethodName:previous:[] @TO@ MethodInvocation@@filtered.previous() @AT@ 12424 @LENGTH@ 10
+
+
+INS MethodDeclaration@@public, void, MethodName:testEntrySetRemove,  @TO@ TypeDeclaration@@[public, abstract]TestMap, TestObject @AT@ 6706 @LENGTH@ 660
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetRemove,  @AT@ 6706 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetRemove,  @AT@ 6713 @LENGTH@ 4
+---INS SimpleName@@MethodName:testEntrySetRemove @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetRemove,  @AT@ 6718 @LENGTH@ 18
+---INS IfStatement@@if ((this instanceof TestMap.EntrySetSupportsRemove) == false) {  return;} @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetRemove,  @AT@ 6750 @LENGTH@ 94
+------INS InfixExpression@@(this instanceof TestMap.EntrySetSupportsRemove) == false @TO@ IfStatement@@if ((this instanceof TestMap.EntrySetSupportsRemove) == false) {  return;} @AT@ 6754 @LENGTH@ 57
+---------INS ParenthesizedExpression@@(this instanceof TestMap.EntrySetSupportsRemove) @TO@ InfixExpression@@(this instanceof TestMap.EntrySetSupportsRemove) == false @AT@ 6754 @LENGTH@ 48
+------------INS InstanceofExpression@@this instanceof TestMap.EntrySetSupportsRemove @TO@ ParenthesizedExpression@@(this instanceof TestMap.EntrySetSupportsRemove) @AT@ 6755 @LENGTH@ 46
+---------------INS ThisExpression@@this @TO@ InstanceofExpression@@this instanceof TestMap.EntrySetSupportsRemove @AT@ 6755 @LENGTH@ 4
+---------------INS Instanceof@@instanceof @TO@ InstanceofExpression@@this instanceof TestMap.EntrySetSupportsRemove @AT@ 6760 @LENGTH@ 10
+---------------INS SimpleType@@TestMap.EntrySetSupportsRemove @TO@ InstanceofExpression@@this instanceof TestMap.EntrySetSupportsRemove @AT@ 6771 @LENGTH@ 30
+---------INS Operator@@== @TO@ InfixExpression@@(this instanceof TestMap.EntrySetSupportsRemove) == false @AT@ 6802 @LENGTH@ 2
+---------INS BooleanLiteral@@false @TO@ InfixExpression@@(this instanceof TestMap.EntrySetSupportsRemove) == false @AT@ 6806 @LENGTH@ 5
+------INS Block@@ThenBody:{  return;} @TO@ IfStatement@@if ((this instanceof TestMap.EntrySetSupportsRemove) == false) {  return;} @AT@ 6813 @LENGTH@ 31
+---------INS ReturnStatement@@ @TO@ Block@@ThenBody:{  return;} @AT@ 6827 @LENGTH@ 7
+---INS VariableDeclarationStatement@@Map map=makeMap(); @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetRemove,  @AT@ 6854 @LENGTH@ 20
+------INS SimpleType@@Map @TO@ VariableDeclarationStatement@@Map map=makeMap(); @AT@ 6854 @LENGTH@ 3
+------INS VariableDeclarationFragment@@map=makeMap() @TO@ VariableDeclarationStatement@@Map map=makeMap(); @AT@ 6858 @LENGTH@ 15
+---------INS SimpleName@@map @TO@ VariableDeclarationFragment@@map=makeMap() @AT@ 6858 @LENGTH@ 3
+---------INS MethodInvocation@@MethodName:makeMap:[] @TO@ VariableDeclarationFragment@@map=makeMap() @AT@ 6864 @LENGTH@ 9
+---INS ExpressionStatement@@MethodInvocation:map.put("1","1") @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetRemove,  @AT@ 6883 @LENGTH@ 17
+------INS MethodInvocation@@map.put("1","1") @TO@ ExpressionStatement@@MethodInvocation:map.put("1","1") @AT@ 6883 @LENGTH@ 16
+---------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("1","1") @AT@ 6883 @LENGTH@ 3
+---------INS SimpleName@@MethodName:put:["1", "1"] @TO@ MethodInvocation@@map.put("1","1") @AT@ 6887 @LENGTH@ 12
+------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:put:["1", "1"] @AT@ 6891 @LENGTH@ 3
+------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:put:["1", "1"] @AT@ 6895 @LENGTH@ 3
+---INS ExpressionStatement@@MethodInvocation:map.put("2","2") @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetRemove,  @AT@ 6909 @LENGTH@ 17
+------INS MethodInvocation@@map.put("2","2") @TO@ ExpressionStatement@@MethodInvocation:map.put("2","2") @AT@ 6909 @LENGTH@ 16
+---------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("2","2") @AT@ 6909 @LENGTH@ 3
+---------INS SimpleName@@MethodName:put:["2", "2"] @TO@ MethodInvocation@@map.put("2","2") @AT@ 6913 @LENGTH@ 12
+------------INS StringLiteral@@"2" @TO@ SimpleName@@MethodName:put:["2", "2"] @AT@ 6917 @LENGTH@ 3
+------------INS StringLiteral@@"2" @TO@ SimpleName@@MethodName:put:["2", "2"] @AT@ 6921 @LENGTH@ 3
+---INS ExpressionStatement@@MethodInvocation:map.put("3","3") @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetRemove,  @AT@ 6935 @LENGTH@ 17
+------INS MethodInvocation@@map.put("3","3") @TO@ ExpressionStatement@@MethodInvocation:map.put("3","3") @AT@ 6935 @LENGTH@ 16
+---------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("3","3") @AT@ 6935 @LENGTH@ 3
+---------INS SimpleName@@MethodName:put:["3", "3"] @TO@ MethodInvocation@@map.put("3","3") @AT@ 6939 @LENGTH@ 12
+------------INS StringLiteral@@"3" @TO@ SimpleName@@MethodName:put:["3", "3"] @AT@ 6943 @LENGTH@ 3
+------------INS StringLiteral@@"3" @TO@ SimpleName@@MethodName:put:["3", "3"] @AT@ 6947 @LENGTH@ 3
+---INS VariableDeclarationStatement@@Object o=map.entrySet().iterator().next(); @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetRemove,  @AT@ 6962 @LENGTH@ 44
+------INS SimpleType@@Object @TO@ VariableDeclarationStatement@@Object o=map.entrySet().iterator().next(); @AT@ 6962 @LENGTH@ 6
+------INS VariableDeclarationFragment@@o=map.entrySet().iterator().next() @TO@ VariableDeclarationStatement@@Object o=map.entrySet().iterator().next(); @AT@ 6969 @LENGTH@ 36
+---------INS SimpleName@@o @TO@ VariableDeclarationFragment@@o=map.entrySet().iterator().next() @AT@ 6969 @LENGTH@ 1
+---------INS MethodInvocation@@map.entrySet().iterator().next() @TO@ VariableDeclarationFragment@@o=map.entrySet().iterator().next() @AT@ 6973 @LENGTH@ 32
+------------INS MethodInvocation@@MethodName:iterator:[] @TO@ MethodInvocation@@map.entrySet().iterator().next() @AT@ 6973 @LENGTH@ 25
+------------INS MethodInvocation@@MethodName:entrySet:[] @TO@ MethodInvocation@@map.entrySet().iterator().next() @AT@ 6973 @LENGTH@ 14
+------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.entrySet().iterator().next() @AT@ 6973 @LENGTH@ 3
+------------INS SimpleName@@MethodName:next:[] @TO@ MethodInvocation@@map.entrySet().iterator().next() @AT@ 6999 @LENGTH@ 6
+---INS VariableDeclarationStatement@@Set set=map.entrySet(); @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetRemove,  @AT@ 7060 @LENGTH@ 25
+------INS SimpleType@@Set @TO@ VariableDeclarationStatement@@Set set=map.entrySet(); @AT@ 7060 @LENGTH@ 3
+------INS VariableDeclarationFragment@@set=map.entrySet() @TO@ VariableDeclarationStatement@@Set set=map.entrySet(); @AT@ 7064 @LENGTH@ 20
+---------INS SimpleName@@set @TO@ VariableDeclarationFragment@@set=map.entrySet() @AT@ 7064 @LENGTH@ 3
+---------INS MethodInvocation@@map.entrySet() @TO@ VariableDeclarationFragment@@set=map.entrySet() @AT@ 7070 @LENGTH@ 14
+------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.entrySet() @AT@ 7070 @LENGTH@ 3
+------------INS SimpleName@@MethodName:entrySet:[] @TO@ MethodInvocation@@map.entrySet() @AT@ 7074 @LENGTH@ 10
+---INS ExpressionStatement@@MethodInvocation:set.remove(o) @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetRemove,  @AT@ 7094 @LENGTH@ 14
+------INS MethodInvocation@@set.remove(o) @TO@ ExpressionStatement@@MethodInvocation:set.remove(o) @AT@ 7094 @LENGTH@ 13
+---------INS SimpleName@@Name:set @TO@ MethodInvocation@@set.remove(o) @AT@ 7094 @LENGTH@ 3
+---------INS SimpleName@@MethodName:remove:[o] @TO@ MethodInvocation@@set.remove(o) @AT@ 7098 @LENGTH@ 9
+------------INS SimpleName@@o @TO@ SimpleName@@MethodName:remove:[o] @AT@ 7105 @LENGTH@ 1
+---INS ExpressionStatement@@MethodInvocation:assertTrue(set.size() == 2) @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetRemove,  @AT@ 7117 @LENGTH@ 28
+------INS MethodInvocation@@assertTrue(set.size() == 2) @TO@ ExpressionStatement@@MethodInvocation:assertTrue(set.size() == 2) @AT@ 7117 @LENGTH@ 27
+---------INS SimpleName@@MethodName:assertTrue:[set.size() == 2] @TO@ MethodInvocation@@assertTrue(set.size() == 2) @AT@ 7117 @LENGTH@ 27
+------------INS InfixExpression@@set.size() == 2 @TO@ SimpleName@@MethodName:assertTrue:[set.size() == 2] @AT@ 7128 @LENGTH@ 15
+---------------INS MethodInvocation@@set.size() @TO@ InfixExpression@@set.size() == 2 @AT@ 7128 @LENGTH@ 10
+------------------INS SimpleName@@Name:set @TO@ MethodInvocation@@set.size() @AT@ 7128 @LENGTH@ 3
+------------------INS SimpleName@@MethodName:size:[] @TO@ MethodInvocation@@set.size() @AT@ 7132 @LENGTH@ 6
+---------------INS Operator@@== @TO@ InfixExpression@@set.size() == 2 @AT@ 7138 @LENGTH@ 2
+---------------INS NumberLiteral@@2 @TO@ InfixExpression@@set.size() == 2 @AT@ 7142 @LENGTH@ 1
+---INS ExpressionStatement@@MethodInvocation:set.remove(o) @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetRemove,  @AT@ 7257 @LENGTH@ 14
+------INS MethodInvocation@@set.remove(o) @TO@ ExpressionStatement@@MethodInvocation:set.remove(o) @AT@ 7257 @LENGTH@ 13
+---------INS SimpleName@@Name:set @TO@ MethodInvocation@@set.remove(o) @AT@ 7257 @LENGTH@ 3
+---------INS SimpleName@@MethodName:remove:[o] @TO@ MethodInvocation@@set.remove(o) @AT@ 7261 @LENGTH@ 9
+------------INS SimpleName@@o @TO@ SimpleName@@MethodName:remove:[o] @AT@ 7268 @LENGTH@ 1
+---INS ExpressionStatement@@MethodInvocation:assertTrue("size of Map should be 2, but was " + map.size(),map.size() == 2) @TO@ MethodDeclaration@@public, void, MethodName:testEntrySetRemove,  @AT@ 7281 @LENGTH@ 78
+------INS MethodInvocation@@assertTrue("size of Map should be 2, but was " + map.size(),map.size() == 2) @TO@ ExpressionStatement@@MethodInvocation:assertTrue("size of Map should be 2, but was " + map.size(),map.size() == 2) @AT@ 7281 @LENGTH@ 77
+---------INS SimpleName@@MethodName:assertTrue:["size of Map should be 2, but was " + map.size(), map.size() == 2] @TO@ MethodInvocation@@assertTrue("size of Map should be 2, but was " + map.size(),map.size() == 2) @AT@ 7281 @LENGTH@ 77
+------------INS InfixExpression@@"size of Map should be 2, but was " + map.size() @TO@ SimpleName@@MethodName:assertTrue:["size of Map should be 2, but was " + map.size(), map.size() == 2] @AT@ 7292 @LENGTH@ 48
+---------------INS StringLiteral@@"size of Map should be 2, but was " @TO@ InfixExpression@@"size of Map should be 2, but was " + map.size() @AT@ 7292 @LENGTH@ 35
+---------------INS Operator@@+ @TO@ InfixExpression@@"size of Map should be 2, but was " + map.size() @AT@ 7327 @LENGTH@ 1
+---------------INS MethodInvocation@@map.size() @TO@ InfixExpression@@"size of Map should be 2, but was " + map.size() @AT@ 7330 @LENGTH@ 10
+------------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.size() @AT@ 7330 @LENGTH@ 3
+------------------INS SimpleName@@MethodName:size:[] @TO@ MethodInvocation@@map.size() @AT@ 7334 @LENGTH@ 6
+------------INS InfixExpression@@map.size() == 2 @TO@ SimpleName@@MethodName:assertTrue:["size of Map should be 2, but was " + map.size(), map.size() == 2] @AT@ 7342 @LENGTH@ 15
+---------------INS MethodInvocation@@map.size() @TO@ InfixExpression@@map.size() == 2 @AT@ 7342 @LENGTH@ 10
+------------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.size() @AT@ 7342 @LENGTH@ 3
+------------------INS SimpleName@@MethodName:size:[] @TO@ MethodInvocation@@map.size() @AT@ 7346 @LENGTH@ 6
+---------------INS Operator@@== @TO@ InfixExpression@@map.size() == 2 @AT@ 7352 @LENGTH@ 2
+---------------INS NumberLiteral@@2 @TO@ InfixExpression@@map.size() == 2 @AT@ 7356 @LENGTH@ 1
+
+
+INS MethodDeclaration@@public, void, MethodName:testBeanMapClone,  @TO@ TypeDeclaration@@[public]TestBeanMap, TestMap @AT@ 8817 @LENGTH@ 741
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testBeanMapClone,  @AT@ 8817 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testBeanMapClone,  @AT@ 8824 @LENGTH@ 4
+---INS SimpleName@@MethodName:testBeanMapClone @TO@ MethodDeclaration@@public, void, MethodName:testBeanMapClone,  @AT@ 8829 @LENGTH@ 16
+---INS VariableDeclarationStatement@@BeanMap map=(BeanMap)makeFullMap(); @TO@ MethodDeclaration@@public, void, MethodName:testBeanMapClone,  @AT@ 8858 @LENGTH@ 37
+------INS SimpleType@@BeanMap @TO@ VariableDeclarationStatement@@BeanMap map=(BeanMap)makeFullMap(); @AT@ 8858 @LENGTH@ 7
+------INS VariableDeclarationFragment@@map=(BeanMap)makeFullMap() @TO@ VariableDeclarationStatement@@BeanMap map=(BeanMap)makeFullMap(); @AT@ 8866 @LENGTH@ 28
+---------INS SimpleName@@map @TO@ VariableDeclarationFragment@@map=(BeanMap)makeFullMap() @AT@ 8866 @LENGTH@ 3
+---------INS CastExpression@@(BeanMap)makeFullMap() @TO@ VariableDeclarationFragment@@map=(BeanMap)makeFullMap() @AT@ 8872 @LENGTH@ 22
+------------INS SimpleType@@BeanMap @TO@ CastExpression@@(BeanMap)makeFullMap() @AT@ 8873 @LENGTH@ 7
+------------INS MethodInvocation@@MethodName:makeFullMap:[] @TO@ CastExpression@@(BeanMap)makeFullMap() @AT@ 8881 @LENGTH@ 13
+---INS TryStatement@@try {  BeanMap map2=(BeanMap)((BeanMap)map).clone();  Object[] keys=getSampleKeys();  for (int i=0; i < keys.length; i++) {    assertTrue("Cloned BeanMap should contain the same keys",map2.containsKey(keys[i]));  }} catch (CloneNotSupportedException exception) {  fail("BeanMap.clone() should not throw a " + "CloneNotSupportedException when clone should succeed.");} @TO@ MethodDeclaration@@public, void, MethodName:testBeanMapClone,  @AT@ 8904 @LENGTH@ 648
+------INS VariableDeclarationStatement@@BeanMap map2=(BeanMap)((BeanMap)map).clone(); @TO@ TryStatement@@try {  BeanMap map2=(BeanMap)((BeanMap)map).clone();  Object[] keys=getSampleKeys();  for (int i=0; i < keys.length; i++) {    assertTrue("Cloned BeanMap should contain the same keys",map2.containsKey(keys[i]));  }} catch (CloneNotSupportedException exception) {  fail("BeanMap.clone() should not throw a " + "CloneNotSupportedException when clone should succeed.");} @AT@ 8922 @LENGTH@ 47
+---------INS SimpleType@@BeanMap @TO@ VariableDeclarationStatement@@BeanMap map2=(BeanMap)((BeanMap)map).clone(); @AT@ 8922 @LENGTH@ 7
+---------INS VariableDeclarationFragment@@map2=(BeanMap)((BeanMap)map).clone() @TO@ VariableDeclarationStatement@@BeanMap map2=(BeanMap)((BeanMap)map).clone(); @AT@ 8930 @LENGTH@ 38
+------------INS SimpleName@@map2 @TO@ VariableDeclarationFragment@@map2=(BeanMap)((BeanMap)map).clone() @AT@ 8930 @LENGTH@ 4
+------------INS CastExpression@@(BeanMap)((BeanMap)map).clone() @TO@ VariableDeclarationFragment@@map2=(BeanMap)((BeanMap)map).clone() @AT@ 8937 @LENGTH@ 31
+---------------INS SimpleType@@BeanMap @TO@ CastExpression@@(BeanMap)((BeanMap)map).clone() @AT@ 8938 @LENGTH@ 7
+---------------INS MethodInvocation@@((BeanMap)map).clone() @TO@ CastExpression@@(BeanMap)((BeanMap)map).clone() @AT@ 8946 @LENGTH@ 22
+------------------INS ParenthesizedExpression@@((BeanMap)map) @TO@ MethodInvocation@@((BeanMap)map).clone() @AT@ 8946 @LENGTH@ 14
+---------------------INS CastExpression@@(BeanMap)map @TO@ ParenthesizedExpression@@((BeanMap)map) @AT@ 8947 @LENGTH@ 12
+------------------------INS SimpleType@@BeanMap @TO@ CastExpression@@(BeanMap)map @AT@ 8948 @LENGTH@ 7
+------------------------INS SimpleName@@map @TO@ CastExpression@@(BeanMap)map @AT@ 8956 @LENGTH@ 3
+------------------INS SimpleName@@MethodName:clone:[] @TO@ MethodInvocation@@((BeanMap)map).clone() @AT@ 8961 @LENGTH@ 7
+------INS VariableDeclarationStatement@@Object[] keys=getSampleKeys(); @TO@ TryStatement@@try {  BeanMap map2=(BeanMap)((BeanMap)map).clone();  Object[] keys=getSampleKeys();  for (int i=0; i < keys.length; i++) {    assertTrue("Cloned BeanMap should contain the same keys",map2.containsKey(keys[i]));  }} catch (CloneNotSupportedException exception) {  fail("BeanMap.clone() should not throw a " + "CloneNotSupportedException when clone should succeed.");} @AT@ 9127 @LENGTH@ 32
+---------INS ArrayType@@Object[] @TO@ VariableDeclarationStatement@@Object[] keys=getSampleKeys(); @AT@ 9127 @LENGTH@ 8
+------------INS SimpleType@@Object @TO@ ArrayType@@Object[] @AT@ 9127 @LENGTH@ 6
+---------INS VariableDeclarationFragment@@keys=getSampleKeys() @TO@ VariableDeclarationStatement@@Object[] keys=getSampleKeys(); @AT@ 9136 @LENGTH@ 22
+------------INS SimpleName@@keys @TO@ VariableDeclarationFragment@@keys=getSampleKeys() @AT@ 9136 @LENGTH@ 4
+------------INS MethodInvocation@@MethodName:getSampleKeys:[] @TO@ VariableDeclarationFragment@@keys=getSampleKeys() @AT@ 9143 @LENGTH@ 15
+------INS ForStatement@@for (int i=0; i < keys.length; i++) {  assertTrue("Cloned BeanMap should contain the same keys",map2.containsKey(keys[i]));} @TO@ TryStatement@@try {  BeanMap map2=(BeanMap)((BeanMap)map).clone();  Object[] keys=getSampleKeys();  for (int i=0; i < keys.length; i++) {    assertTrue("Cloned BeanMap should contain the same keys",map2.containsKey(keys[i]));  }} catch (CloneNotSupportedException exception) {  fail("BeanMap.clone() should not throw a " + "CloneNotSupportedException when clone should succeed.");} @AT@ 9172 @LENGTH@ 181
+---------INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@for (int i=0; i < keys.length; i++) {  assertTrue("Cloned BeanMap should contain the same keys",map2.containsKey(keys[i]));} @AT@ 9176 @LENGTH@ 9
+------------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9176 @LENGTH@ 3
+------------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9180 @LENGTH@ 5
+---------------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 9180 @LENGTH@ 1
+---------------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 9184 @LENGTH@ 1
+---------INS InfixExpression@@i < keys.length @TO@ ForStatement@@for (int i=0; i < keys.length; i++) {  assertTrue("Cloned BeanMap should contain the same keys",map2.containsKey(keys[i]));} @AT@ 9187 @LENGTH@ 15
+------------INS SimpleName@@i @TO@ InfixExpression@@i < keys.length @AT@ 9187 @LENGTH@ 1
+------------INS Operator@@< @TO@ InfixExpression@@i < keys.length @AT@ 9188 @LENGTH@ 1
+------------INS QualifiedName@@keys.length @TO@ InfixExpression@@i < keys.length @AT@ 9191 @LENGTH@ 11
+---------------INS SimpleName@@keys @TO@ QualifiedName@@keys.length @AT@ 9191 @LENGTH@ 4
+---------------INS SimpleName@@length @TO@ QualifiedName@@keys.length @AT@ 9196 @LENGTH@ 6
+---------INS PostfixExpression@@i++ @TO@ ForStatement@@for (int i=0; i < keys.length; i++) {  assertTrue("Cloned BeanMap should contain the same keys",map2.containsKey(keys[i]));} @AT@ 9204 @LENGTH@ 3
+------------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 9204 @LENGTH@ 1
+------------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 9206 @LENGTH@ 2
+---------INS ExpressionStatement@@MethodInvocation:assertTrue("Cloned BeanMap should contain the same keys",map2.containsKey(keys[i])) @TO@ ForStatement@@for (int i=0; i < keys.length; i++) {  assertTrue("Cloned BeanMap should contain the same keys",map2.containsKey(keys[i]));} @AT@ 9227 @LENGTH@ 112
+------------INS MethodInvocation@@assertTrue("Cloned BeanMap should contain the same keys",map2.containsKey(keys[i])) @TO@ ExpressionStatement@@MethodInvocation:assertTrue("Cloned BeanMap should contain the same keys",map2.containsKey(keys[i])) @AT@ 9227 @LENGTH@ 111
+---------------INS SimpleName@@MethodName:assertTrue:["Cloned BeanMap should contain the same keys", map2.containsKey(keys[i])] @TO@ MethodInvocation@@assertTrue("Cloned BeanMap should contain the same keys",map2.containsKey(keys[i])) @AT@ 9227 @LENGTH@ 111
+------------------INS StringLiteral@@"Cloned BeanMap should contain the same keys" @TO@ SimpleName@@MethodName:assertTrue:["Cloned BeanMap should contain the same keys", map2.containsKey(keys[i])] @AT@ 9238 @LENGTH@ 45
+------------------INS MethodInvocation@@map2.containsKey(keys[i]) @TO@ SimpleName@@MethodName:assertTrue:["Cloned BeanMap should contain the same keys", map2.containsKey(keys[i])] @AT@ 9312 @LENGTH@ 25
+---------------------INS SimpleName@@Name:map2 @TO@ MethodInvocation@@map2.containsKey(keys[i]) @AT@ 9312 @LENGTH@ 4
+---------------------INS SimpleName@@MethodName:containsKey:[keys[i]] @TO@ MethodInvocation@@map2.containsKey(keys[i]) @AT@ 9317 @LENGTH@ 20
+------------------------INS ArrayAccess@@keys[i] @TO@ SimpleName@@MethodName:containsKey:[keys[i]] @AT@ 9329 @LENGTH@ 7
+---------------------------INS SimpleName@@keys @TO@ ArrayAccess@@keys[i] @AT@ 9329 @LENGTH@ 4
+---------------------------INS SimpleName@@i @TO@ ArrayAccess@@keys[i] @AT@ 9334 @LENGTH@ 1
+------INS CatchClause@@catch (CloneNotSupportedException exception) {  fail("BeanMap.clone() should not throw a " + "CloneNotSupportedException when clone should succeed.");} @TO@ TryStatement@@try {  BeanMap map2=(BeanMap)((BeanMap)map).clone();  Object[] keys=getSampleKeys();  for (int i=0; i < keys.length; i++) {    assertTrue("Cloned BeanMap should contain the same keys",map2.containsKey(keys[i]));  }} catch (CloneNotSupportedException exception) {  fail("BeanMap.clone() should not throw a " + "CloneNotSupportedException when clone should succeed.");} @AT@ 9364 @LENGTH@ 188
+---------INS SingleVariableDeclaration@@CloneNotSupportedException exception @TO@ CatchClause@@catch (CloneNotSupportedException exception) {  fail("BeanMap.clone() should not throw a " + "CloneNotSupportedException when clone should succeed.");} @AT@ 9371 @LENGTH@ 36
+------------INS SimpleType@@CloneNotSupportedException @TO@ SingleVariableDeclaration@@CloneNotSupportedException exception @AT@ 9371 @LENGTH@ 26
+------------INS SimpleName@@exception @TO@ SingleVariableDeclaration@@CloneNotSupportedException exception @AT@ 9398 @LENGTH@ 9
+---------INS ExpressionStatement@@MethodInvocation:fail("BeanMap.clone() should not throw a " + "CloneNotSupportedException when clone should succeed.") @TO@ CatchClause@@catch (CloneNotSupportedException exception) {  fail("BeanMap.clone() should not throw a " + "CloneNotSupportedException when clone should succeed.");} @AT@ 9423 @LENGTH@ 119
+------------INS MethodInvocation@@fail("BeanMap.clone() should not throw a " + "CloneNotSupportedException when clone should succeed.") @TO@ ExpressionStatement@@MethodInvocation:fail("BeanMap.clone() should not throw a " + "CloneNotSupportedException when clone should succeed.") @AT@ 9423 @LENGTH@ 118
+---------------INS SimpleName@@MethodName:fail:["BeanMap.clone() should not throw a " + "CloneNotSupportedException when clone should succeed."] @TO@ MethodInvocation@@fail("BeanMap.clone() should not throw a " + "CloneNotSupportedException when clone should succeed.") @AT@ 9423 @LENGTH@ 118
+------------------INS InfixExpression@@"BeanMap.clone() should not throw a " + "CloneNotSupportedException when clone should succeed." @TO@ SimpleName@@MethodName:fail:["BeanMap.clone() should not throw a " + "CloneNotSupportedException when clone should succeed."] @AT@ 9428 @LENGTH@ 112
+---------------------INS StringLiteral@@"BeanMap.clone() should not throw a " @TO@ InfixExpression@@"BeanMap.clone() should not throw a " + "CloneNotSupportedException when clone should succeed." @AT@ 9428 @LENGTH@ 37
+---------------------INS Operator@@+ @TO@ InfixExpression@@"BeanMap.clone() should not throw a " + "CloneNotSupportedException when clone should succeed." @AT@ 9465 @LENGTH@ 1
+---------------------INS StringLiteral@@"CloneNotSupportedException when clone should succeed." @TO@ InfixExpression@@"BeanMap.clone() should not throw a " + "CloneNotSupportedException when clone should succeed." @AT@ 9485 @LENGTH@ 55
+
+
+INS MethodDeclaration@@public, boolean, MethodName:useNullKey,  @TO@ TypeDeclaration@@[public]TestFastTreeMap, TestTreeMap @AT@ 3875 @LENGTH@ 55
+---INS Modifier@@public @TO@ MethodDeclaration@@public, boolean, MethodName:useNullKey,  @AT@ 3875 @LENGTH@ 6
+---INS PrimitiveType@@boolean @TO@ MethodDeclaration@@public, boolean, MethodName:useNullKey,  @AT@ 3882 @LENGTH@ 7
+---INS SimpleName@@MethodName:useNullKey @TO@ MethodDeclaration@@public, boolean, MethodName:useNullKey,  @AT@ 3890 @LENGTH@ 10
+---INS ReturnStatement@@BooleanLiteral:false @TO@ MethodDeclaration@@public, boolean, MethodName:useNullKey,  @AT@ 3911 @LENGTH@ 13
+------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 3918 @LENGTH@ 5
+
+
+INS IfStatement@@if (!containsKey(key)) return null; @TO@ MethodDeclaration@@public, Object, MethodName:get, Object key,  @AT@ 5397 @LENGTH@ 34
+---INS PrefixExpression@@!containsKey(key) @TO@ IfStatement@@if (!containsKey(key)) return null; @AT@ 5400 @LENGTH@ 17
+------INS Operator@@! @TO@ PrefixExpression@@!containsKey(key) @AT@ 5400 @LENGTH@ 1
+------INS MethodInvocation@@containsKey(key) @TO@ PrefixExpression@@!containsKey(key) @AT@ 5401 @LENGTH@ 16
+---------INS SimpleName@@MethodName:containsKey:[key] @TO@ MethodInvocation@@containsKey(key) @AT@ 5401 @LENGTH@ 16
+------------INS SimpleName@@key @TO@ SimpleName@@MethodName:containsKey:[key] @AT@ 5413 @LENGTH@ 3
+---INS Block@@ThenBody:return null; @TO@ IfStatement@@if (!containsKey(key)) return null; @AT@ 5419 @LENGTH@ 12
+------INS ReturnStatement@@NullLiteral:null @TO@ Block@@ThenBody:return null; @AT@ 5419 @LENGTH@ 12
+---------INS NullLiteral@@null @TO@ ReturnStatement@@NullLiteral:null @AT@ 5426 @LENGTH@ 4
+
+
+UPD IfStatement@@if (!setNextObject()) {  return false;} @TO@ if (!setNextObject()) {  return false;} else {  clearNextObject();} @AT@ 6731 @LENGTH@ 66
+---INS Block@@ElseBody:{  clearNextObject();} @TO@ IfStatement@@if (!setNextObject()) {  return false;} @AT@ 6803 @LENGTH@ 50
+------INS ExpressionStatement@@MethodInvocation:clearNextObject() @TO@ Block@@ElseBody:{  clearNextObject();} @AT@ 6821 @LENGTH@ 18
+---------INS MethodInvocation@@MethodName:clearNextObject:[] @TO@ ExpressionStatement@@MethodInvocation:clearNextObject() @AT@ 6821 @LENGTH@ 17
+
+
+UPD IfStatement@@if ((this instanceof TestMap.EntrySetSupportsRemove) == false) {  return;} @TO@ if ((this instanceof TestMap.EntrySetSupportsRemove) == false || (this instanceof TestMap.SupportsPut) == false) {  return;} @AT@ 6750 @LENGTH@ 94
+---INS InfixExpression@@(this instanceof TestMap.EntrySetSupportsRemove) == false || (this instanceof TestMap.SupportsPut) == false @TO@ IfStatement@@if ((this instanceof TestMap.EntrySetSupportsRemove) == false) {  return;} @AT@ 6754 @LENGTH@ 119
+------MOV InfixExpression@@(this instanceof TestMap.EntrySetSupportsRemove) == false @TO@ InfixExpression@@(this instanceof TestMap.EntrySetSupportsRemove) == false || (this instanceof TestMap.SupportsPut) == false @AT@ 6754 @LENGTH@ 57
+------INS Operator@@|| @TO@ InfixExpression@@(this instanceof TestMap.EntrySetSupportsRemove) == false || (this instanceof TestMap.SupportsPut) == false @AT@ 6811 @LENGTH@ 2
+------INS InfixExpression@@(this instanceof TestMap.SupportsPut) == false @TO@ InfixExpression@@(this instanceof TestMap.EntrySetSupportsRemove) == false || (this instanceof TestMap.SupportsPut) == false @AT@ 6827 @LENGTH@ 46
+---------INS ParenthesizedExpression@@(this instanceof TestMap.SupportsPut) @TO@ InfixExpression@@(this instanceof TestMap.SupportsPut) == false @AT@ 6827 @LENGTH@ 37
+------------INS InstanceofExpression@@this instanceof TestMap.SupportsPut @TO@ ParenthesizedExpression@@(this instanceof TestMap.SupportsPut) @AT@ 6828 @LENGTH@ 35
+---------------INS ThisExpression@@this @TO@ InstanceofExpression@@this instanceof TestMap.SupportsPut @AT@ 6828 @LENGTH@ 4
+---------------INS Instanceof@@instanceof @TO@ InstanceofExpression@@this instanceof TestMap.SupportsPut @AT@ 6833 @LENGTH@ 10
+---------------INS SimpleType@@TestMap.SupportsPut @TO@ InstanceofExpression@@this instanceof TestMap.SupportsPut @AT@ 6844 @LENGTH@ 19
+---------INS Operator@@== @TO@ InfixExpression@@(this instanceof TestMap.SupportsPut) == false @AT@ 6864 @LENGTH@ 2
+---------INS BooleanLiteral@@false @TO@ InfixExpression@@(this instanceof TestMap.SupportsPut) == false @AT@ 6868 @LENGTH@ 5
+
+
+DEL MethodDeclaration@@public, Map, MethodName:makeEmptyMap,  @AT@ 3550 @LENGTH@ 90
+---DEL Modifier@@public @AT@ 3550 @LENGTH@ 6
+---DEL SimpleType@@Map @AT@ 3557 @LENGTH@ 3
+---DEL SimpleName@@MethodName:makeEmptyMap @AT@ 3561 @LENGTH@ 12
+---DEL VariableDeclarationStatement@@TreeMap tm=new TreeMap(); @AT@ 3586 @LENGTH@ 27
+------DEL SimpleType@@TreeMap @AT@ 3586 @LENGTH@ 7
+------DEL VariableDeclarationFragment@@tm=new TreeMap() @AT@ 3594 @LENGTH@ 18
+---------DEL SimpleName@@tm @AT@ 3594 @LENGTH@ 2
+---------DEL ClassInstanceCreation@@TreeMap[] @AT@ 3599 @LENGTH@ 13
+------------DEL New@@new @AT@ 3599 @LENGTH@ 3
+------------DEL SimpleType@@TreeMap @AT@ 3603 @LENGTH@ 7
+---DEL ReturnStatement@@ParenthesizedExpression:(tm) @AT@ 3622 @LENGTH@ 12
+------DEL ParenthesizedExpression@@(tm) @AT@ 3629 @LENGTH@ 4
+---------DEL SimpleName@@tm @AT@ 3630 @LENGTH@ 2
+
+
+INS MethodDeclaration@@public, void, MethodName:testRemoveLRU,  @TO@ TypeDeclaration@@[public]TestLRUMap, TestHashMap @AT@ 3782 @LENGTH@ 474
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testRemoveLRU,  @AT@ 3782 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testRemoveLRU,  @AT@ 3789 @LENGTH@ 4
+---INS SimpleName@@MethodName:testRemoveLRU @TO@ MethodDeclaration@@public, void, MethodName:testRemoveLRU,  @AT@ 3794 @LENGTH@ 13
+---INS VariableDeclarationStatement@@LRUMap map2=new LRUMap(4); @TO@ MethodDeclaration@@public, void, MethodName:testRemoveLRU,  @AT@ 3820 @LENGTH@ 28
+------INS SimpleType@@LRUMap @TO@ VariableDeclarationStatement@@LRUMap map2=new LRUMap(4); @AT@ 3820 @LENGTH@ 6
+------INS VariableDeclarationFragment@@map2=new LRUMap(4) @TO@ VariableDeclarationStatement@@LRUMap map2=new LRUMap(4); @AT@ 3827 @LENGTH@ 20
+---------INS SimpleName@@map2 @TO@ VariableDeclarationFragment@@map2=new LRUMap(4) @AT@ 3827 @LENGTH@ 4
+---------INS ClassInstanceCreation@@LRUMap[4] @TO@ VariableDeclarationFragment@@map2=new LRUMap(4) @AT@ 3834 @LENGTH@ 13
+------------INS New@@new @TO@ ClassInstanceCreation@@LRUMap[4] @AT@ 3834 @LENGTH@ 3
+------------INS SimpleType@@LRUMap @TO@ ClassInstanceCreation@@LRUMap[4] @AT@ 3838 @LENGTH@ 6
+------------INS NumberLiteral@@4 @TO@ ClassInstanceCreation@@LRUMap[4] @AT@ 3845 @LENGTH@ 1
+---INS ExpressionStatement@@MethodInvocation:map2.put(new Integer(1),"foo") @TO@ MethodDeclaration@@public, void, MethodName:testRemoveLRU,  @AT@ 3857 @LENGTH@ 31
+------INS MethodInvocation@@map2.put(new Integer(1),"foo") @TO@ ExpressionStatement@@MethodInvocation:map2.put(new Integer(1),"foo") @AT@ 3857 @LENGTH@ 30
+---------INS SimpleName@@Name:map2 @TO@ MethodInvocation@@map2.put(new Integer(1),"foo") @AT@ 3857 @LENGTH@ 4
+---------INS SimpleName@@MethodName:put:[new Integer(1), "foo"] @TO@ MethodInvocation@@map2.put(new Integer(1),"foo") @AT@ 3862 @LENGTH@ 25
+------------INS ClassInstanceCreation@@Integer[1] @TO@ SimpleName@@MethodName:put:[new Integer(1), "foo"] @AT@ 3866 @LENGTH@ 14
+---------------INS New@@new @TO@ ClassInstanceCreation@@Integer[1] @AT@ 3866 @LENGTH@ 3
+---------------INS SimpleType@@Integer @TO@ ClassInstanceCreation@@Integer[1] @AT@ 3870 @LENGTH@ 7
+---------------INS NumberLiteral@@1 @TO@ ClassInstanceCreation@@Integer[1] @AT@ 3878 @LENGTH@ 1
+------------INS StringLiteral@@"foo" @TO@ SimpleName@@MethodName:put:[new Integer(1), "foo"] @AT@ 3881 @LENGTH@ 5
+---INS ExpressionStatement@@MethodInvocation:map2.put(new Integer(2),"foo") @TO@ MethodDeclaration@@public, void, MethodName:testRemoveLRU,  @AT@ 3897 @LENGTH@ 31
+------INS MethodInvocation@@map2.put(new Integer(2),"foo") @TO@ ExpressionStatement@@MethodInvocation:map2.put(new Integer(2),"foo") @AT@ 3897 @LENGTH@ 30
+---------INS SimpleName@@Name:map2 @TO@ MethodInvocation@@map2.put(new Integer(2),"foo") @AT@ 3897 @LENGTH@ 4
+---------INS SimpleName@@MethodName:put:[new Integer(2), "foo"] @TO@ MethodInvocation@@map2.put(new Integer(2),"foo") @AT@ 3902 @LENGTH@ 25
+------------INS ClassInstanceCreation@@Integer[2] @TO@ SimpleName@@MethodName:put:[new Integer(2), "foo"] @AT@ 3906 @LENGTH@ 14
+---------------INS New@@new @TO@ ClassInstanceCreation@@Integer[2] @AT@ 3906 @LENGTH@ 3
+---------------INS SimpleType@@Integer @TO@ ClassInstanceCreation@@Integer[2] @AT@ 3910 @LENGTH@ 7
+---------------INS NumberLiteral@@2 @TO@ ClassInstanceCreation@@Integer[2] @AT@ 3918 @LENGTH@ 1
+------------INS StringLiteral@@"foo" @TO@ SimpleName@@MethodName:put:[new Integer(2), "foo"] @AT@ 3921 @LENGTH@ 5
+---INS ExpressionStatement@@MethodInvocation:map2.put(new Integer(3),"foo") @TO@ MethodDeclaration@@public, void, MethodName:testRemoveLRU,  @AT@ 3937 @LENGTH@ 31
+------INS MethodInvocation@@map2.put(new Integer(3),"foo") @TO@ ExpressionStatement@@MethodInvocation:map2.put(new Integer(3),"foo") @AT@ 3937 @LENGTH@ 30
+---------INS SimpleName@@Name:map2 @TO@ MethodInvocation@@map2.put(new Integer(3),"foo") @AT@ 3937 @LENGTH@ 4
+---------INS SimpleName@@MethodName:put:[new Integer(3), "foo"] @TO@ MethodInvocation@@map2.put(new Integer(3),"foo") @AT@ 3942 @LENGTH@ 25
+------------INS ClassInstanceCreation@@Integer[3] @TO@ SimpleName@@MethodName:put:[new Integer(3), "foo"] @AT@ 3946 @LENGTH@ 14
+---------------INS New@@new @TO@ ClassInstanceCreation@@Integer[3] @AT@ 3946 @LENGTH@ 3
+---------------INS SimpleType@@Integer @TO@ ClassInstanceCreation@@Integer[3] @AT@ 3950 @LENGTH@ 7
+---------------INS NumberLiteral@@3 @TO@ ClassInstanceCreation@@Integer[3] @AT@ 3958 @LENGTH@ 1
+------------INS StringLiteral@@"foo" @TO@ SimpleName@@MethodName:put:[new Integer(3), "foo"] @AT@ 3961 @LENGTH@ 5
+---INS ExpressionStatement@@MethodInvocation:map2.put(new Integer(4),"foo") @TO@ MethodDeclaration@@public, void, MethodName:testRemoveLRU,  @AT@ 3977 @LENGTH@ 31
+------INS MethodInvocation@@map2.put(new Integer(4),"foo") @TO@ ExpressionStatement@@MethodInvocation:map2.put(new Integer(4),"foo") @AT@ 3977 @LENGTH@ 30
+---------INS SimpleName@@Name:map2 @TO@ MethodInvocation@@map2.put(new Integer(4),"foo") @AT@ 3977 @LENGTH@ 4
+---------INS SimpleName@@MethodName:put:[new Integer(4), "foo"] @TO@ MethodInvocation@@map2.put(new Integer(4),"foo") @AT@ 3982 @LENGTH@ 25
+------------INS ClassInstanceCreation@@Integer[4] @TO@ SimpleName@@MethodName:put:[new Integer(4), "foo"] @AT@ 3986 @LENGTH@ 14
+---------------INS New@@new @TO@ ClassInstanceCreation@@Integer[4] @AT@ 3986 @LENGTH@ 3
+---------------INS SimpleType@@Integer @TO@ ClassInstanceCreation@@Integer[4] @AT@ 3990 @LENGTH@ 7
+---------------INS NumberLiteral@@4 @TO@ ClassInstanceCreation@@Integer[4] @AT@ 3998 @LENGTH@ 1
+------------INS StringLiteral@@"foo" @TO@ SimpleName@@MethodName:put:[new Integer(4), "foo"] @AT@ 4001 @LENGTH@ 5
+---INS ExpressionStatement@@MethodInvocation:map2.removeLRU() @TO@ MethodDeclaration@@public, void, MethodName:testRemoveLRU,  @AT@ 4017 @LENGTH@ 17
+------INS MethodInvocation@@map2.removeLRU() @TO@ ExpressionStatement@@MethodInvocation:map2.removeLRU() @AT@ 4017 @LENGTH@ 16
+---------INS SimpleName@@Name:map2 @TO@ MethodInvocation@@map2.removeLRU() @AT@ 4017 @LENGTH@ 4
+---------INS SimpleName@@MethodName:removeLRU:[] @TO@ MethodInvocation@@map2.removeLRU() @AT@ 4022 @LENGTH@ 11
+---INS ExpressionStatement@@MethodInvocation:assertTrue("Second to last value should exist",map2.get(new Integer(3)).equals("foo")) @TO@ MethodDeclaration@@public, void, MethodName:testRemoveLRU,  @AT@ 4069 @LENGTH@ 87
+------INS MethodInvocation@@assertTrue("Second to last value should exist",map2.get(new Integer(3)).equals("foo")) @TO@ ExpressionStatement@@MethodInvocation:assertTrue("Second to last value should exist",map2.get(new Integer(3)).equals("foo")) @AT@ 4069 @LENGTH@ 86
+---------INS SimpleName@@MethodName:assertTrue:["Second to last value should exist", map2.get(new Integer(3)).equals("foo")] @TO@ MethodInvocation@@assertTrue("Second to last value should exist",map2.get(new Integer(3)).equals("foo")) @AT@ 4069 @LENGTH@ 86
+------------INS StringLiteral@@"Second to last value should exist" @TO@ SimpleName@@MethodName:assertTrue:["Second to last value should exist", map2.get(new Integer(3)).equals("foo")] @AT@ 4080 @LENGTH@ 35
+------------INS MethodInvocation@@map2.get(new Integer(3)).equals("foo") @TO@ SimpleName@@MethodName:assertTrue:["Second to last value should exist", map2.get(new Integer(3)).equals("foo")] @AT@ 4116 @LENGTH@ 38
+---------------INS MethodInvocation@@MethodName:get:[new Integer(3)] @TO@ MethodInvocation@@map2.get(new Integer(3)).equals("foo") @AT@ 4116 @LENGTH@ 24
+------------------INS ClassInstanceCreation@@Integer[3] @TO@ MethodInvocation@@MethodName:get:[new Integer(3)] @AT@ 4125 @LENGTH@ 14
+---------------------INS New@@new @TO@ ClassInstanceCreation@@Integer[3] @AT@ 4125 @LENGTH@ 3
+---------------------INS SimpleType@@Integer @TO@ ClassInstanceCreation@@Integer[3] @AT@ 4129 @LENGTH@ 7
+---------------------INS NumberLiteral@@3 @TO@ ClassInstanceCreation@@Integer[3] @AT@ 4137 @LENGTH@ 1
+---------------INS SimpleName@@Name:map2 @TO@ MethodInvocation@@map2.get(new Integer(3)).equals("foo") @AT@ 4116 @LENGTH@ 4
+---------------INS SimpleName@@MethodName:equals:["foo"] @TO@ MethodInvocation@@map2.get(new Integer(3)).equals("foo") @AT@ 4141 @LENGTH@ 13
+------------------INS StringLiteral@@"foo" @TO@ SimpleName@@MethodName:equals:["foo"] @AT@ 4148 @LENGTH@ 5
+---INS ExpressionStatement@@MethodInvocation:assertTrue("Last value inserted should not exist",map2.get(new Integer(4)) == null) @TO@ MethodDeclaration@@public, void, MethodName:testRemoveLRU,  @AT@ 4165 @LENGTH@ 85
+------INS MethodInvocation@@assertTrue("Last value inserted should not exist",map2.get(new Integer(4)) == null) @TO@ ExpressionStatement@@MethodInvocation:assertTrue("Last value inserted should not exist",map2.get(new Integer(4)) == null) @AT@ 4165 @LENGTH@ 84
+---------INS SimpleName@@MethodName:assertTrue:["Last value inserted should not exist", map2.get(new Integer(4)) == null] @TO@ MethodInvocation@@assertTrue("Last value inserted should not exist",map2.get(new Integer(4)) == null) @AT@ 4165 @LENGTH@ 84
+------------INS StringLiteral@@"Last value inserted should not exist" @TO@ SimpleName@@MethodName:assertTrue:["Last value inserted should not exist", map2.get(new Integer(4)) == null] @AT@ 4176 @LENGTH@ 38
+------------INS InfixExpression@@map2.get(new Integer(4)) == null @TO@ SimpleName@@MethodName:assertTrue:["Last value inserted should not exist", map2.get(new Integer(4)) == null] @AT@ 4216 @LENGTH@ 32
+---------------INS MethodInvocation@@map2.get(new Integer(4)) @TO@ InfixExpression@@map2.get(new Integer(4)) == null @AT@ 4216 @LENGTH@ 24
+------------------INS SimpleName@@Name:map2 @TO@ MethodInvocation@@map2.get(new Integer(4)) @AT@ 4216 @LENGTH@ 4
+------------------INS SimpleName@@MethodName:get:[new Integer(4)] @TO@ MethodInvocation@@map2.get(new Integer(4)) @AT@ 4221 @LENGTH@ 19
+---------------------INS ClassInstanceCreation@@Integer[4] @TO@ SimpleName@@MethodName:get:[new Integer(4)] @AT@ 4225 @LENGTH@ 14
+------------------------INS New@@new @TO@ ClassInstanceCreation@@Integer[4] @AT@ 4225 @LENGTH@ 3
+------------------------INS SimpleType@@Integer @TO@ ClassInstanceCreation@@Integer[4] @AT@ 4229 @LENGTH@ 7
+------------------------INS NumberLiteral@@4 @TO@ ClassInstanceCreation@@Integer[4] @AT@ 4237 @LENGTH@ 1
+---------------INS Operator@@== @TO@ InfixExpression@@map2.get(new Integer(4)) == null @AT@ 4240 @LENGTH@ 2
+---------------INS NullLiteral@@null @TO@ InfixExpression@@map2.get(new Integer(4)) == null @AT@ 4244 @LENGTH@ 4
+
+
+DEL MethodDeclaration@@public, List, MethodName:makeEmptyList,  @AT@ 3769 @LENGTH@ 100
+---DEL Modifier@@public @AT@ 3769 @LENGTH@ 6
+---DEL SimpleType@@List @AT@ 3776 @LENGTH@ 4
+---DEL SimpleName@@MethodName:makeEmptyList @AT@ 3781 @LENGTH@ 13
+---DEL VariableDeclarationStatement@@ArrayList al=new ArrayList(); @AT@ 3811 @LENGTH@ 31
+------DEL SimpleType@@ArrayList @AT@ 3811 @LENGTH@ 9
+------DEL VariableDeclarationFragment@@al=new ArrayList() @AT@ 3821 @LENGTH@ 20
+---------DEL SimpleName@@al @AT@ 3821 @LENGTH@ 2
+---------DEL ClassInstanceCreation@@ArrayList[] @AT@ 3826 @LENGTH@ 15
+------------DEL New@@new @AT@ 3826 @LENGTH@ 3
+------------DEL SimpleType@@ArrayList @AT@ 3830 @LENGTH@ 9
+---DEL ReturnStatement@@ParenthesizedExpression:(al) @AT@ 3851 @LENGTH@ 12
+------DEL ParenthesizedExpression@@(al) @AT@ 3858 @LENGTH@ 4
+---------DEL SimpleName@@al @AT@ 3859 @LENGTH@ 2
+
+
+UPD ExpressionStatement@@Assignment:map=(HashMap)makeMap() @TO@ Assignment:map=(HashMap)makeEmptyMap() @AT@ 3816 @LENGTH@ 26
+---UPD Assignment@@map=(HashMap)makeMap() @TO@ map=(HashMap)makeEmptyMap() @AT@ 3816 @LENGTH@ 25
+------UPD CastExpression@@(HashMap)makeMap() @TO@ (HashMap)makeEmptyMap() @AT@ 3822 @LENGTH@ 19
+---------UPD MethodInvocation@@MethodName:makeMap:[] @TO@ MethodName:makeEmptyMap:[] @AT@ 3832 @LENGTH@ 9
+
+
+UPD MethodDeclaration@@public, Map, MethodName:makeMap,  @TO@ public, Map, MethodName:makeEmptyMap,  @AT@ 3642 @LENGTH@ 85
+---UPD SimpleName@@MethodName:makeMap @TO@ MethodName:makeEmptyMap @AT@ 3653 @LENGTH@ 7
+
+
+INS TypeDeclaration@@[public]EntrySetSupportsRemove,  @TO@ TypeDeclaration@@[public, abstract]TestMap, TestObject @AT@ 8039 @LENGTH@ 48
+---INS Modifier@@public @TO@ TypeDeclaration@@[public]EntrySetSupportsRemove,  @AT@ 8039 @LENGTH@ 6
+---INS SimpleName@@ClassName:EntrySetSupportsRemove @TO@ TypeDeclaration@@[public]EntrySetSupportsRemove,  @AT@ 8056 @LENGTH@ 22
+
+
+DEL ExpressionStatement@@MethodInvocation:suite.addTest(TestArrayList.suite()) @AT@ 3419 @LENGTH@ 37
+---DEL MethodInvocation@@suite.addTest(TestArrayList.suite()) @AT@ 3419 @LENGTH@ 36
+------DEL SimpleName@@Name:suite @AT@ 3419 @LENGTH@ 5
+------DEL SimpleName@@MethodName:addTest:[TestArrayList.suite()] @AT@ 3425 @LENGTH@ 30
+---------DEL MethodInvocation@@TestArrayList.suite() @AT@ 3433 @LENGTH@ 21
+------------DEL SimpleName@@Name:TestArrayList @AT@ 3433 @LENGTH@ 13
+------------DEL SimpleName@@MethodName:suite:[] @AT@ 3447 @LENGTH@ 7
+
+
+DEL MethodDeclaration@@public, void, MethodName:testSequenceMap,  @AT@ 4039 @LENGTH@ 94
+---DEL Modifier@@public @AT@ 4039 @LENGTH@ 6
+---DEL PrimitiveType@@void @AT@ 4046 @LENGTH@ 4
+---DEL SimpleName@@MethodName:testSequenceMap @AT@ 4051 @LENGTH@ 15
+---DEL ExpressionStatement@@MethodInvocation:fail("trying to work out an infinite loop bug") @AT@ 4079 @LENGTH@ 48
+------DEL MethodInvocation@@fail("trying to work out an infinite loop bug") @AT@ 4079 @LENGTH@ 47
+---------DEL SimpleName@@MethodName:fail:["trying to work out an infinite loop bug"] @AT@ 4079 @LENGTH@ 47
+------------DEL StringLiteral@@"trying to work out an infinite loop bug" @AT@ 4084 @LENGTH@ 41
+
+
+UPD MethodDeclaration@@public, Map, MethodName:makeMap,  @TO@ public, Map, MethodName:makeEmptyMap,  @AT@ 3664 @LENGTH@ 123
+---UPD SimpleName@@MethodName:makeMap @TO@ MethodName:makeEmptyMap @AT@ 3675 @LENGTH@ 7
+
+
+UPD MethodDeclaration@@public, List, MethodName:makeList,  @TO@ public, List, MethodName:makeEmptyList,  @AT@ 3515 @LENGTH@ 63
+---UPD SimpleName@@MethodName:makeList @TO@ MethodName:makeEmptyList @AT@ 3527 @LENGTH@ 8
+
+
+UPD ExpressionStatement@@Assignment:map=(TreeMap)makeMap() @TO@ Assignment:map=(TreeMap)makeEmptyMap() @AT@ 3970 @LENGTH@ 26
+---UPD Assignment@@map=(TreeMap)makeMap() @TO@ map=(TreeMap)makeEmptyMap() @AT@ 3970 @LENGTH@ 25
+------UPD CastExpression@@(TreeMap)makeMap() @TO@ (TreeMap)makeEmptyMap() @AT@ 3976 @LENGTH@ 19
+---------UPD MethodInvocation@@MethodName:makeMap:[] @TO@ MethodName:makeEmptyMap:[] @AT@ 3986 @LENGTH@ 9
+
+
+UPD ExpressionStatement@@MethodInvocation:assertEquals("Both maps have the same last key",map.getLastKey(),getSampleKeys()[0]) @TO@ MethodInvocation:assertEquals("Both maps have the same last key",map.getLastKey(),getSampleKeys()[getSampleKeys().length - 1]) @AT@ 8042 @LENGTH@ 107
+---UPD MethodInvocation@@assertEquals("Both maps have the same last key",map.getLastKey(),getSampleKeys()[0]) @TO@ assertEquals("Both maps have the same last key",map.getLastKey(),getSampleKeys()[getSampleKeys().length - 1]) @AT@ 8042 @LENGTH@ 106
+------UPD SimpleName@@MethodName:assertEquals:["Both maps have the same last key", map.getLastKey(), getSampleKeys()[0]] @TO@ MethodName:assertEquals:["Both maps have the same last key", map.getLastKey(), getSampleKeys()[getSampleKeys().length - 1]] @AT@ 8042 @LENGTH@ 106
+---------UPD ArrayAccess@@getSampleKeys()[0] @TO@ getSampleKeys()[getSampleKeys().length - 1] @AT@ 8129 @LENGTH@ 18
+------------INS InfixExpression@@getSampleKeys().length - 1 @TO@ ArrayAccess@@getSampleKeys()[0] @AT@ 8140 @LENGTH@ 26
+---------------INS FieldAccess@@getSampleKeys().length @TO@ InfixExpression@@getSampleKeys().length - 1 @AT@ 8140 @LENGTH@ 22
+------------------INS MethodInvocation@@MethodName:getSampleKeys:[] @TO@ FieldAccess@@getSampleKeys().length @AT@ 8140 @LENGTH@ 15
+------------------INS SimpleName@@length @TO@ FieldAccess@@getSampleKeys().length @AT@ 8156 @LENGTH@ 6
+---------------INS Operator@@- @TO@ InfixExpression@@getSampleKeys().length - 1 @AT@ 8162 @LENGTH@ 1
+---------------INS NumberLiteral@@1 @TO@ InfixExpression@@getSampleKeys().length - 1 @AT@ 8165 @LENGTH@ 1
+------------DEL NumberLiteral@@0 @AT@ 8145 @LENGTH@ 1
+
+
+UPD TypeDeclaration@@[public]TestArrayList, TestList @TO@ [public, abstract]TestArrayList, TestList @AT@ 3250 @LENGTH@ 1283
+---INS Modifier@@abstract @TO@ TypeDeclaration@@[public]TestArrayList, TestList @AT@ 3257 @LENGTH@ 8
+
+
+UPD ExpressionStatement@@Assignment:list=(ArrayList)makeList() @TO@ Assignment:list=(ArrayList)makeEmptyList() @AT@ 3715 @LENGTH@ 30
+---UPD Assignment@@list=(ArrayList)makeList() @TO@ list=(ArrayList)makeEmptyList() @AT@ 3715 @LENGTH@ 29
+------UPD CastExpression@@(ArrayList)makeList() @TO@ (ArrayList)makeEmptyList() @AT@ 3722 @LENGTH@ 22
+---------UPD MethodInvocation@@MethodName:makeList:[] @TO@ MethodName:makeEmptyList:[] @AT@ 3734 @LENGTH@ 10

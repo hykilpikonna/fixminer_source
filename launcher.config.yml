@@ -2,4 +2,4 @@ java-home: /usr/lib/jvm/java-8-openjdk
 spinfer: /usr/local/bin/spinfer
 coccinelle: /usr/local/share/spinfer/statics
 data-repo: /workspace/EECS-Research/data-source/repos
-data-generated: /workspace/EECS-Research/data
+data-generated: /workspace/EECS-Research/data-all

@@ -24,7 +24,8 @@ if __name__ == '__main__':
     plt.ylim([0, 3500])
     plt.ylabel('Number of Patches')
     plt.xlabel('Date')
+    plt.savefig('experiments/Absolute-date-commit-data.png')
     plt.show()
 
     df = DataFrame(csv, columns=('Date', 'Number of Patches'))
-    df.to_csv('diff-absolute.csv')
+    df.to_csv('experiments/diff-patches-absolute.csv')

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import inspect
 import requests
 
@@ -33,10 +35,15 @@ def job_dataset4c():
     core()
 
 
-def job_start_redis():
-    db_dir = join(DATA_PATH, 'redis')
-    redis_shutdown(REDIS_PORT)
-    redis_start(ROOT_DIR, db_dir, REDIS_PORT)
+def job_start_redis(db_dir: str | Path | None = None, redis_port: int | None = None,
+                    root_dir: str | Path | None = None):
+    db_dir = db_dir or join(DATA_PATH, 'redis')
+    redis_port = redis_port or REDIS_PORT or 6399
+    root_dir = root_dir or Path(__file__).parent
+
+    redis_shutdown(redis_port)
+    print(db_dir)
+    redis_start(root_dir, db_dir, redis_port)
 
 
 def job_richedit():

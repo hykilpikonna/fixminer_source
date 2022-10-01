@@ -1,0 +1,582 @@
+UPD ReturnStatement@@InfixExpression:CollectionUtils.isSubCollection(a,b) && (!(CollectionUtils.isEqualCollection(a,b))) @TO@ InfixExpression:(a.size() < b.size()) && CollectionUtils.isSubCollection(a,b) @AT@ 11559 @LENGTH@ 91
+---UPD InfixExpression@@CollectionUtils.isSubCollection(a,b) && (!(CollectionUtils.isEqualCollection(a,b))) @TO@ (a.size() < b.size()) && CollectionUtils.isSubCollection(a,b) @AT@ 11566 @LENGTH@ 83
+------MOV MethodInvocation@@CollectionUtils.isSubCollection(a,b) @TO@ InfixExpression@@CollectionUtils.isSubCollection(a,b) && (!(CollectionUtils.isEqualCollection(a,b))) @AT@ 11566 @LENGTH@ 36
+------DEL Operator@@&& @AT@ 11602 @LENGTH@ 2
+------UPD ParenthesizedExpression@@(!(CollectionUtils.isEqualCollection(a,b))) @TO@ (a.size() < b.size()) @AT@ 11606 @LENGTH@ 43
+---------DEL PrefixExpression@@!(CollectionUtils.isEqualCollection(a,b)) @AT@ 11607 @LENGTH@ 41
+------------DEL Operator@@! @AT@ 11607 @LENGTH@ 1
+------------DEL ParenthesizedExpression@@(CollectionUtils.isEqualCollection(a,b)) @AT@ 11608 @LENGTH@ 40
+---------------DEL MethodInvocation@@CollectionUtils.isEqualCollection(a,b) @AT@ 11609 @LENGTH@ 38
+---------INS InfixExpression@@a.size() < b.size() @TO@ ParenthesizedExpression@@(!(CollectionUtils.isEqualCollection(a,b))) @AT@ 11812 @LENGTH@ 19
+------------INS MethodInvocation@@a.size() @TO@ InfixExpression@@a.size() < b.size() @AT@ 11812 @LENGTH@ 8
+---------------INS SimpleName@@Name:a @TO@ MethodInvocation@@a.size() @AT@ 11812 @LENGTH@ 1
+---------------INS SimpleName@@MethodName:size:[] @TO@ MethodInvocation@@a.size() @AT@ 11814 @LENGTH@ 6
+------------INS Operator@@< @TO@ InfixExpression@@a.size() < b.size() @AT@ 11820 @LENGTH@ 1
+------------INS MethodInvocation@@b.size() @TO@ InfixExpression@@a.size() < b.size() @AT@ 11823 @LENGTH@ 8
+---------------MOV SimpleName@@Name:CollectionUtils @TO@ MethodInvocation@@b.size() @AT@ 11609 @LENGTH@ 15
+---------------MOV SimpleName@@MethodName:isEqualCollection:[a, b] @TO@ MethodInvocation@@b.size() @AT@ 11625 @LENGTH@ 22
+------------------DEL SimpleName@@a @AT@ 11643 @LENGTH@ 1
+------------------DEL SimpleName@@b @AT@ 11645 @LENGTH@ 1
+------INS Operator@@&& @TO@ InfixExpression@@CollectionUtils.isSubCollection(a,b) && (!(CollectionUtils.isEqualCollection(a,b))) @AT@ 11832 @LENGTH@ 2
+
+
+UPD IfStatement@@if (last == null) {  return "MapIterator[" + getKey() + "="+ getValue()+ "]";} else {  return "MapIterator[]";} @TO@ if (last != null) {  return "MapIterator[" + getKey() + "="+ getValue()+ "]";} else {  return "MapIterator[]";} @AT@ 7459 @LENGTH@ 153
+---UPD InfixExpression@@last == null @TO@ last != null @AT@ 7463 @LENGTH@ 12
+------UPD Operator@@== @TO@ != @AT@ 7467 @LENGTH@ 2
+
+
+UPD IfStatement@@if (coll1.size() > coll2.size()) {  for (Iterator it=coll1.iterator(); it.hasNext(); ) {    if (coll2.contains(it.next())) {      return true;    }  }} else {  for (Iterator it=coll2.iterator(); it.hasNext(); ) {    if (coll1.contains(it.next())) {      return true;    }  }} @TO@ if (coll1.size() < coll2.size()) {  for (Iterator it=coll1.iterator(); it.hasNext(); ) {    if (coll2.contains(it.next())) {      return true;    }  }} else {  for (Iterator it=coll2.iterator(); it.hasNext(); ) {    if (coll1.contains(it.next())) {      return true;    }  }} @AT@ 9991 @LENGTH@ 421
+---UPD InfixExpression@@coll1.size() > coll2.size() @TO@ coll1.size() < coll2.size() @AT@ 9995 @LENGTH@ 27
+------UPD Operator@@> @TO@ < @AT@ 10007 @LENGTH@ 1
+
+
+UPD TypeDeclaration@@[public]ObjectArrayListIterator, ObjectArrayIterator[ResetableListIterator] @TO@ [public]ObjectArrayListIterator, ObjectArrayIterator[ListIterator, ResetableListIterator] @AT@ 3722 @LENGTH@ 5541
+---INS SimpleType@@ListIterator @TO@ TypeDeclaration@@[public]ObjectArrayListIterator, ObjectArrayIterator[ResetableListIterator] @AT@ 3835 @LENGTH@ 12
+
+
+INS ExpressionStatement@@MethodInvocation:suite.addTest(TestSetList.suite()) @TO@ MethodDeclaration@@public, static, Test, MethodName:suite,  @AT@ 3969 @LENGTH@ 35
+---INS MethodInvocation@@suite.addTest(TestSetList.suite()) @TO@ ExpressionStatement@@MethodInvocation:suite.addTest(TestSetList.suite()) @AT@ 3969 @LENGTH@ 34
+------INS SimpleName@@Name:suite @TO@ MethodInvocation@@suite.addTest(TestSetList.suite()) @AT@ 3969 @LENGTH@ 5
+------INS SimpleName@@MethodName:addTest:[TestSetList.suite()] @TO@ MethodInvocation@@suite.addTest(TestSetList.suite()) @AT@ 3975 @LENGTH@ 28
+---------INS MethodInvocation@@TestSetList.suite() @TO@ SimpleName@@MethodName:addTest:[TestSetList.suite()] @AT@ 3983 @LENGTH@ 19
+------------INS SimpleName@@Name:TestSetList @TO@ MethodInvocation@@TestSetList.suite() @AT@ 3983 @LENGTH@ 11
+------------INS SimpleName@@MethodName:suite:[] @TO@ MethodInvocation@@TestSetList.suite() @AT@ 3995 @LENGTH@ 7
+
+
+UPD IfStatement@@if (last == null) {  return "MapIterator[" + getKey() + "="+ getValue()+ "]";} else {  return "MapIterator[]";} @TO@ if (last != null) {  return "MapIterator[" + getKey() + "="+ getValue()+ "]";} else {  return "MapIterator[]";} @AT@ 12580 @LENGTH@ 169
+---UPD InfixExpression@@last == null @TO@ last != null @AT@ 12584 @LENGTH@ 12
+------UPD Operator@@== @TO@ != @AT@ 12588 @LENGTH@ 2
+
+
+UPD ThrowStatement@@ClassInstanceCreation:new EncoderException("Parameter supplied to " + "Soundex " + "encode is not of type "+ "java.lang.String") @TO@ ClassInstanceCreation:new EncoderException("Parameter supplied to Soundex encode is not of type java.lang.String") @AT@ 6298 @LENGTH@ 234
+---UPD ClassInstanceCreation@@EncoderException["Parameter supplied to " + "Soundex " + "encode is not of type "+ "java.lang.String"] @TO@ EncoderException["Parameter supplied to Soundex encode is not of type java.lang.String"] @AT@ 6304 @LENGTH@ 227
+------INS StringLiteral@@"Parameter supplied to Soundex encode is not of type java.lang.String" @TO@ ClassInstanceCreation@@EncoderException["Parameter supplied to " + "Soundex " + "encode is not of type "+ "java.lang.String"] @AT@ 6295 @LENGTH@ 70
+------DEL InfixExpression@@"Parameter supplied to " + "Soundex " + "encode is not of type "+ "java.lang.String" @AT@ 6325 @LENGTH@ 205
+---------DEL StringLiteral@@"Parameter supplied to " @AT@ 6325 @LENGTH@ 24
+---------DEL Operator@@+ @AT@ 6349 @LENGTH@ 1
+---------DEL StringLiteral@@"Soundex " @AT@ 6392 @LENGTH@ 10
+---------DEL StringLiteral@@"encode is not of type " @AT@ 6445 @LENGTH@ 24
+---------DEL StringLiteral@@"java.lang.String" @AT@ 6512 @LENGTH@ 18
+
+
+UPD ExpressionStatement@@MethodInvocation:assertEquals(FixedOrderComparator.UNKNOWN_BEFORE,comparator.getUnkownObjectBehavior()) @TO@ MethodInvocation:assertEquals(FixedOrderComparator.UNKNOWN_BEFORE,comparator.getUnknownObjectBehavior()) @AT@ 7778 @LENGTH@ 88
+---UPD MethodInvocation@@assertEquals(FixedOrderComparator.UNKNOWN_BEFORE,comparator.getUnkownObjectBehavior()) @TO@ assertEquals(FixedOrderComparator.UNKNOWN_BEFORE,comparator.getUnknownObjectBehavior()) @AT@ 7778 @LENGTH@ 87
+------UPD SimpleName@@MethodName:assertEquals:[FixedOrderComparator.UNKNOWN_BEFORE, comparator.getUnkownObjectBehavior()] @TO@ MethodName:assertEquals:[FixedOrderComparator.UNKNOWN_BEFORE, comparator.getUnknownObjectBehavior()] @AT@ 7778 @LENGTH@ 87
+---------UPD MethodInvocation@@comparator.getUnkownObjectBehavior() @TO@ comparator.getUnknownObjectBehavior() @AT@ 7828 @LENGTH@ 36
+------------UPD SimpleName@@MethodName:getUnkownObjectBehavior:[] @TO@ MethodName:getUnknownObjectBehavior:[] @AT@ 7839 @LENGTH@ 25
+
+
+UPD ExpressionStatement@@MethodInvocation:assertTrue(!FileUtils.contentEquals(getTestDirectory(),getTestDirectory())) @TO@ MethodInvocation:FileUtils.contentEquals(getTestDirectory(),getTestDirectory()) @AT@ 6383 @LENGTH@ 90
+
+
+UPD ReturnStatement@@ParenthesizedExpression:(metaphone(pString)) @TO@ MethodInvocation:metaphone(pString) @AT@ 14828 @LENGTH@ 28
+---DEL ParenthesizedExpression@@(metaphone(pString)) @AT@ 14835 @LENGTH@ 20
+---MOV MethodInvocation@@metaphone(pString) @TO@ ReturnStatement@@ParenthesizedExpression:(metaphone(pString)) @AT@ 14836 @LENGTH@ 18
+
+
+UPD MethodDeclaration@@public, void, MethodName:modificationOccurring, StandardModificationEvent event,  @TO@ public, void, MethodName:modificationOccurring, StandardPreModificationEvent event,  @AT@ 3791 @LENGTH@ 67
+---UPD SingleVariableDeclaration@@StandardModificationEvent event @TO@ StandardPreModificationEvent event @AT@ 3825 @LENGTH@ 31
+------UPD SimpleType@@StandardModificationEvent @TO@ StandardPreModificationEvent @AT@ 3825 @LENGTH@ 25
+
+
+UPD ReturnStatement@@InfixExpression:this.index - 1 @TO@ InfixExpression:this.index - this.startIndex - 1 @AT@ 7947 @LENGTH@ 22
+---UPD InfixExpression@@this.index - 1 @TO@ this.index - this.startIndex - 1 @AT@ 7954 @LENGTH@ 14
+------INS FieldAccess@@this.startIndex @TO@ InfixExpression@@this.index - 1 @AT@ 8004 @LENGTH@ 15
+---------INS ThisExpression@@this @TO@ FieldAccess@@this.startIndex @AT@ 8004 @LENGTH@ 4
+---------INS SimpleName@@startIndex @TO@ FieldAccess@@this.startIndex @AT@ 8009 @LENGTH@ 10
+
+
+UPD ExpressionStatement@@MethodInvocation:assertEquals(FixedOrderComparator.UNKNOWN_THROW_EXCEPTION,comparator.getUnkownObjectBehavior()) @TO@ MethodInvocation:assertEquals(FixedOrderComparator.UNKNOWN_THROW_EXCEPTION,comparator.getUnknownObjectBehavior()) @AT@ 7531 @LENGTH@ 97
+---UPD MethodInvocation@@assertEquals(FixedOrderComparator.UNKNOWN_THROW_EXCEPTION,comparator.getUnkownObjectBehavior()) @TO@ assertEquals(FixedOrderComparator.UNKNOWN_THROW_EXCEPTION,comparator.getUnknownObjectBehavior()) @AT@ 7531 @LENGTH@ 96
+------UPD SimpleName@@MethodName:assertEquals:[FixedOrderComparator.UNKNOWN_THROW_EXCEPTION, comparator.getUnkownObjectBehavior()] @TO@ MethodName:assertEquals:[FixedOrderComparator.UNKNOWN_THROW_EXCEPTION, comparator.getUnknownObjectBehavior()] @AT@ 7531 @LENGTH@ 96
+---------UPD MethodInvocation@@comparator.getUnkownObjectBehavior() @TO@ comparator.getUnknownObjectBehavior() @AT@ 7590 @LENGTH@ 36
+------------UPD SimpleName@@MethodName:getUnkownObjectBehavior:[] @TO@ MethodName:getUnknownObjectBehavior:[] @AT@ 7601 @LENGTH@ 25
+
+
+MOV ExpressionStatement@@MethodInvocation:suite.addTest(new TestSuite(FileUtilsTestCase.class)) @TO@ MethodDeclaration@@public, static, Test, MethodName:suite,  @AT@ 3443 @LENGTH@ 58
+
+
+UPD MethodDeclaration@@public, String, MethodName:decode, String pString, String charset, DecoderException, UnsupportedEncodingException,  @TO@ public, String, MethodName:decode, String pString, String encoding, DecoderException, UnsupportedEncodingException,  @AT@ 10539 @LENGTH@ 276
+---UPD SingleVariableDeclaration@@String charset @TO@ String encoding @AT@ 10576 @LENGTH@ 14
+------UPD SimpleName@@charset @TO@ encoding @AT@ 10583 @LENGTH@ 7
+---UPD ReturnStatement@@ClassInstanceCreation:new String(decode(pString.getBytes(this.getEncoding())),charset) @TO@ ClassInstanceCreation:new String(decode(pString.getBytes(this.getEncoding())),encoding) @AT@ 10736 @LENGTH@ 73
+------UPD ClassInstanceCreation@@String[decode(pString.getBytes(this.getEncoding())), charset] @TO@ String[decode(pString.getBytes(this.getEncoding())), encoding] @AT@ 10743 @LENGTH@ 65
+---------UPD SimpleName@@charset @TO@ encoding @AT@ 10800 @LENGTH@ 7
+
+
+UPD MethodDeclaration@@public, String, MethodName:encode, String pString, String charset, UnsupportedEncodingException,  @TO@ public, String, MethodName:encode, String pString, String encoding, UnsupportedEncodingException,  @AT@ 9151 @LENGTH@ 259
+---UPD SingleVariableDeclaration@@String charset @TO@ String encoding @AT@ 9188 @LENGTH@ 14
+------UPD SimpleName@@charset @TO@ encoding @AT@ 9195 @LENGTH@ 7
+---UPD ReturnStatement@@ClassInstanceCreation:new String(encode(pString.getBytes(charset)),this.getEncoding()) @TO@ ClassInstanceCreation:new String(encode(pString.getBytes(encoding)),this.getEncoding()) @AT@ 9331 @LENGTH@ 73
+------UPD ClassInstanceCreation@@String[encode(pString.getBytes(charset)), this.getEncoding()] @TO@ String[encode(pString.getBytes(encoding)), this.getEncoding()] @AT@ 9338 @LENGTH@ 65
+---------UPD MethodInvocation@@encode(pString.getBytes(charset)) @TO@ encode(pString.getBytes(encoding)) @AT@ 9349 @LENGTH@ 33
+------------UPD SimpleName@@MethodName:encode:[pString.getBytes(charset)] @TO@ MethodName:encode:[pString.getBytes(encoding)] @AT@ 9349 @LENGTH@ 33
+---------------UPD MethodInvocation@@pString.getBytes(charset) @TO@ pString.getBytes(encoding) @AT@ 9356 @LENGTH@ 25
+------------------UPD SimpleName@@MethodName:getBytes:[charset] @TO@ MethodName:getBytes:[encoding] @AT@ 9364 @LENGTH@ 17
+---------------------UPD SimpleName@@charset @TO@ encoding @AT@ 9373 @LENGTH@ 7
+
+
+INS ExpressionStatement@@MethodInvocation:assertEquals("S460",this.getEncoder().encode("Sgler")) @TO@ MethodDeclaration@@public, void, MethodName:testMaxLength, Exception,  @AT@ 11141 @LENGTH@ 56
+---INS MethodInvocation@@assertEquals("S460",this.getEncoder().encode("Sgler")) @TO@ ExpressionStatement@@MethodInvocation:assertEquals("S460",this.getEncoder().encode("Sgler")) @AT@ 11141 @LENGTH@ 55
+------INS SimpleName@@MethodName:assertEquals:["S460", this.getEncoder().encode("Sgler")] @TO@ MethodInvocation@@assertEquals("S460",this.getEncoder().encode("Sgler")) @AT@ 11141 @LENGTH@ 55
+---------INS StringLiteral@@"S460" @TO@ SimpleName@@MethodName:assertEquals:["S460", this.getEncoder().encode("Sgler")] @AT@ 11154 @LENGTH@ 6
+---------INS MethodInvocation@@this.getEncoder().encode("Sgler") @TO@ SimpleName@@MethodName:assertEquals:["S460", this.getEncoder().encode("Sgler")] @AT@ 11162 @LENGTH@ 33
+------------INS MethodInvocation@@MethodName:getEncoder:[] @TO@ MethodInvocation@@this.getEncoder().encode("Sgler") @AT@ 11162 @LENGTH@ 17
+------------INS ThisExpression@@this @TO@ MethodInvocation@@this.getEncoder().encode("Sgler") @AT@ 11162 @LENGTH@ 4
+------------INS SimpleName@@MethodName:encode:["Sgler"] @TO@ MethodInvocation@@this.getEncoder().encode("Sgler") @AT@ 11180 @LENGTH@ 15
+---------------INS StringLiteral@@"Sgler" @TO@ SimpleName@@MethodName:encode:["Sgler"] @AT@ 11187 @LENGTH@ 7
+
+
+UPD MethodDeclaration@@public, void, MethodName:modificationOccurred, StandardModificationEvent event,  @TO@ public, void, MethodName:modificationOccurred, StandardPostModificationEvent event,  @AT@ 3703 @LENGTH@ 66
+---UPD SingleVariableDeclaration@@StandardModificationEvent event @TO@ StandardPostModificationEvent event @AT@ 3736 @LENGTH@ 31
+------UPD SimpleType@@StandardModificationEvent @TO@ StandardPostModificationEvent @AT@ 3736 @LENGTH@ 25
+
+
+MOV MethodDeclaration@@protected, String[], MethodName:ignoredTests,  @TO@ TypeDeclaration@@[public, abstract]TestBidiMap, AbstractTestMap @AT@ 4969 @LENGTH@ 128
+
+
+UPD IfStatement@@if (urlsafe.get(b)) {  if (b == ' ') {    b='+';  }  buffer.write(b);} else {  buffer.write('%');  char hex1=Character.toUpperCase(Character.forDigit((b >> 4) & 0xF,16));  char hex2=Character.toUpperCase(Character.forDigit(b & 0xF,16));  buffer.write(hex1);  buffer.write(hex2);} @TO@ if (b >= 0 && urlsafe.get(b)) {  if (b == ' ') {    b='+';  }  buffer.write(b);} else {  buffer.write('%');  char hex1=Character.toUpperCase(Character.forDigit((b >> 4) & 0xF,16));  char hex2=Character.toUpperCase(Character.forDigit(b & 0xF,16));  buffer.write(hex1);  buffer.write(hex2);} @AT@ 5886 @LENGTH@ 488
+---INS InfixExpression@@b >= 0 && urlsafe.get(b) @TO@ IfStatement@@if (urlsafe.get(b)) {  if (b == ' ') {    b='+';  }  buffer.write(b);} else {  buffer.write('%');  char hex1=Character.toUpperCase(Character.forDigit((b >> 4) & 0xF,16));  char hex2=Character.toUpperCase(Character.forDigit(b & 0xF,16));  buffer.write(hex1);  buffer.write(hex2);} @AT@ 5888 @LENGTH@ 24
+------INS InfixExpression@@b >= 0 @TO@ InfixExpression@@b >= 0 && urlsafe.get(b) @AT@ 5888 @LENGTH@ 6
+---------INS SimpleName@@b @TO@ InfixExpression@@b >= 0 @AT@ 5888 @LENGTH@ 1
+---------INS Operator@@>= @TO@ InfixExpression@@b >= 0 @AT@ 5889 @LENGTH@ 2
+---------INS NumberLiteral@@0 @TO@ InfixExpression@@b >= 0 @AT@ 5893 @LENGTH@ 1
+------MOV MethodInvocation@@urlsafe.get(b) @TO@ InfixExpression@@b >= 0 && urlsafe.get(b) @AT@ 5890 @LENGTH@ 14
+------INS Operator@@&& @TO@ InfixExpression@@b >= 0 && urlsafe.get(b) @AT@ 5894 @LENGTH@ 2
+
+
+INS MethodDeclaration@@public, void, MethodName:testDebugAndVerbosePrintCasting,  @TO@ TypeDeclaration@@[public]TestMapUtils, BulkTest @AT@ 10510 @LENGTH@ 646
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testDebugAndVerbosePrintCasting,  @AT@ 10510 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testDebugAndVerbosePrintCasting,  @AT@ 10517 @LENGTH@ 4
+---INS SimpleName@@MethodName:testDebugAndVerbosePrintCasting @TO@ MethodDeclaration@@public, void, MethodName:testDebugAndVerbosePrintCasting,  @AT@ 10522 @LENGTH@ 31
+---INS VariableDeclarationStatement@@final Map inner=new HashMap(2,1); @TO@ MethodDeclaration@@public, void, MethodName:testDebugAndVerbosePrintCasting,  @AT@ 10566 @LENGTH@ 36
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final Map inner=new HashMap(2,1); @AT@ 10566 @LENGTH@ 5
+------INS SimpleType@@Map @TO@ VariableDeclarationStatement@@final Map inner=new HashMap(2,1); @AT@ 10572 @LENGTH@ 3
+------INS VariableDeclarationFragment@@inner=new HashMap(2,1) @TO@ VariableDeclarationStatement@@final Map inner=new HashMap(2,1); @AT@ 10576 @LENGTH@ 25
+---------INS SimpleName@@inner @TO@ VariableDeclarationFragment@@inner=new HashMap(2,1) @AT@ 10576 @LENGTH@ 5
+---------INS ClassInstanceCreation@@HashMap[2, 1] @TO@ VariableDeclarationFragment@@inner=new HashMap(2,1) @AT@ 10584 @LENGTH@ 17
+------------INS New@@new @TO@ ClassInstanceCreation@@HashMap[2, 1] @AT@ 10584 @LENGTH@ 3
+------------INS SimpleType@@HashMap @TO@ ClassInstanceCreation@@HashMap[2, 1] @AT@ 10588 @LENGTH@ 7
+------------INS NumberLiteral@@2 @TO@ ClassInstanceCreation@@HashMap[2, 1] @AT@ 10596 @LENGTH@ 1
+------------INS NumberLiteral@@1 @TO@ ClassInstanceCreation@@HashMap[2, 1] @AT@ 10599 @LENGTH@ 1
+---INS ExpressionStatement@@MethodInvocation:inner.put(new Integer(2),"B") @TO@ MethodDeclaration@@public, void, MethodName:testDebugAndVerbosePrintCasting,  @AT@ 10611 @LENGTH@ 34
+------INS MethodInvocation@@inner.put(new Integer(2),"B") @TO@ ExpressionStatement@@MethodInvocation:inner.put(new Integer(2),"B") @AT@ 10611 @LENGTH@ 33
+---------INS SimpleName@@Name:inner @TO@ MethodInvocation@@inner.put(new Integer(2),"B") @AT@ 10611 @LENGTH@ 5
+---------INS SimpleName@@MethodName:put:[new Integer(2), "B"] @TO@ MethodInvocation@@inner.put(new Integer(2),"B") @AT@ 10617 @LENGTH@ 27
+------------INS ClassInstanceCreation@@Integer[2] @TO@ SimpleName@@MethodName:put:[new Integer(2), "B"] @AT@ 10622 @LENGTH@ 14
+---------------INS New@@new @TO@ ClassInstanceCreation@@Integer[2] @AT@ 10622 @LENGTH@ 3
+---------------INS SimpleType@@Integer @TO@ ClassInstanceCreation@@Integer[2] @AT@ 10626 @LENGTH@ 7
+---------------INS NumberLiteral@@2 @TO@ ClassInstanceCreation@@Integer[2] @AT@ 10634 @LENGTH@ 1
+------------INS StringLiteral@@"B" @TO@ SimpleName@@MethodName:put:[new Integer(2), "B"] @AT@ 10639 @LENGTH@ 3
+---INS ExpressionStatement@@MethodInvocation:inner.put(new Integer(3),"C") @TO@ MethodDeclaration@@public, void, MethodName:testDebugAndVerbosePrintCasting,  @AT@ 10654 @LENGTH@ 34
+------INS MethodInvocation@@inner.put(new Integer(3),"C") @TO@ ExpressionStatement@@MethodInvocation:inner.put(new Integer(3),"C") @AT@ 10654 @LENGTH@ 33
+---------INS SimpleName@@Name:inner @TO@ MethodInvocation@@inner.put(new Integer(3),"C") @AT@ 10654 @LENGTH@ 5
+---------INS SimpleName@@MethodName:put:[new Integer(3), "C"] @TO@ MethodInvocation@@inner.put(new Integer(3),"C") @AT@ 10660 @LENGTH@ 27
+------------INS ClassInstanceCreation@@Integer[3] @TO@ SimpleName@@MethodName:put:[new Integer(3), "C"] @AT@ 10665 @LENGTH@ 14
+---------------INS New@@new @TO@ ClassInstanceCreation@@Integer[3] @AT@ 10665 @LENGTH@ 3
+---------------INS SimpleType@@Integer @TO@ ClassInstanceCreation@@Integer[3] @AT@ 10669 @LENGTH@ 7
+---------------INS NumberLiteral@@3 @TO@ ClassInstanceCreation@@Integer[3] @AT@ 10677 @LENGTH@ 1
+------------INS StringLiteral@@"C" @TO@ SimpleName@@MethodName:put:[new Integer(3), "C"] @AT@ 10682 @LENGTH@ 3
+---INS VariableDeclarationStatement@@final Map outer=new HashMap(2,1); @TO@ MethodDeclaration@@public, void, MethodName:testDebugAndVerbosePrintCasting,  @AT@ 10698 @LENGTH@ 36
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final Map outer=new HashMap(2,1); @AT@ 10698 @LENGTH@ 5
+------INS SimpleType@@Map @TO@ VariableDeclarationStatement@@final Map outer=new HashMap(2,1); @AT@ 10704 @LENGTH@ 3
+------INS VariableDeclarationFragment@@outer=new HashMap(2,1) @TO@ VariableDeclarationStatement@@final Map outer=new HashMap(2,1); @AT@ 10708 @LENGTH@ 25
+---------INS SimpleName@@outer @TO@ VariableDeclarationFragment@@outer=new HashMap(2,1) @AT@ 10708 @LENGTH@ 5
+---------INS ClassInstanceCreation@@HashMap[2, 1] @TO@ VariableDeclarationFragment@@outer=new HashMap(2,1) @AT@ 10716 @LENGTH@ 17
+------------INS New@@new @TO@ ClassInstanceCreation@@HashMap[2, 1] @AT@ 10716 @LENGTH@ 3
+------------INS SimpleType@@HashMap @TO@ ClassInstanceCreation@@HashMap[2, 1] @AT@ 10720 @LENGTH@ 7
+------------INS NumberLiteral@@2 @TO@ ClassInstanceCreation@@HashMap[2, 1] @AT@ 10728 @LENGTH@ 1
+------------INS NumberLiteral@@1 @TO@ ClassInstanceCreation@@HashMap[2, 1] @AT@ 10731 @LENGTH@ 1
+---INS ExpressionStatement@@MethodInvocation:outer.put(new Integer(0),inner) @TO@ MethodDeclaration@@public, void, MethodName:testDebugAndVerbosePrintCasting,  @AT@ 10743 @LENGTH@ 36
+------INS MethodInvocation@@outer.put(new Integer(0),inner) @TO@ ExpressionStatement@@MethodInvocation:outer.put(new Integer(0),inner) @AT@ 10743 @LENGTH@ 35
+---------INS SimpleName@@Name:outer @TO@ MethodInvocation@@outer.put(new Integer(0),inner) @AT@ 10743 @LENGTH@ 5
+---------INS SimpleName@@MethodName:put:[new Integer(0), inner] @TO@ MethodInvocation@@outer.put(new Integer(0),inner) @AT@ 10749 @LENGTH@ 29
+------------INS ClassInstanceCreation@@Integer[0] @TO@ SimpleName@@MethodName:put:[new Integer(0), inner] @AT@ 10754 @LENGTH@ 14
+---------------INS New@@new @TO@ ClassInstanceCreation@@Integer[0] @AT@ 10754 @LENGTH@ 3
+---------------INS SimpleType@@Integer @TO@ ClassInstanceCreation@@Integer[0] @AT@ 10758 @LENGTH@ 7
+---------------INS NumberLiteral@@0 @TO@ ClassInstanceCreation@@Integer[0] @AT@ 10766 @LENGTH@ 1
+------------INS SimpleName@@inner @TO@ SimpleName@@MethodName:put:[new Integer(0), inner] @AT@ 10771 @LENGTH@ 5
+---INS ExpressionStatement@@MethodInvocation:outer.put(new Integer(1),"A") @TO@ MethodDeclaration@@public, void, MethodName:testDebugAndVerbosePrintCasting,  @AT@ 10788 @LENGTH@ 33
+------INS MethodInvocation@@outer.put(new Integer(1),"A") @TO@ ExpressionStatement@@MethodInvocation:outer.put(new Integer(1),"A") @AT@ 10788 @LENGTH@ 32
+---------INS SimpleName@@Name:outer @TO@ MethodInvocation@@outer.put(new Integer(1),"A") @AT@ 10788 @LENGTH@ 5
+---------INS SimpleName@@MethodName:put:[new Integer(1), "A"] @TO@ MethodInvocation@@outer.put(new Integer(1),"A") @AT@ 10794 @LENGTH@ 26
+------------INS ClassInstanceCreation@@Integer[1] @TO@ SimpleName@@MethodName:put:[new Integer(1), "A"] @AT@ 10799 @LENGTH@ 14
+---------------INS New@@new @TO@ ClassInstanceCreation@@Integer[1] @AT@ 10799 @LENGTH@ 3
+---------------INS SimpleType@@Integer @TO@ ClassInstanceCreation@@Integer[1] @AT@ 10803 @LENGTH@ 7
+---------------INS NumberLiteral@@1 @TO@ ClassInstanceCreation@@Integer[1] @AT@ 10811 @LENGTH@ 1
+------------INS StringLiteral@@"A" @TO@ SimpleName@@MethodName:put:[new Integer(1), "A"] @AT@ 10816 @LENGTH@ 3
+---INS VariableDeclarationStatement@@final ByteArrayOutputStream out=new ByteArrayOutputStream(); @TO@ MethodDeclaration@@public, void, MethodName:testDebugAndVerbosePrintCasting,  @AT@ 10833 @LENGTH@ 62
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final ByteArrayOutputStream out=new ByteArrayOutputStream(); @AT@ 10833 @LENGTH@ 5
+------INS SimpleType@@ByteArrayOutputStream @TO@ VariableDeclarationStatement@@final ByteArrayOutputStream out=new ByteArrayOutputStream(); @AT@ 10839 @LENGTH@ 21
+------INS VariableDeclarationFragment@@out=new ByteArrayOutputStream() @TO@ VariableDeclarationStatement@@final ByteArrayOutputStream out=new ByteArrayOutputStream(); @AT@ 10861 @LENGTH@ 33
+---------INS SimpleName@@out @TO@ VariableDeclarationFragment@@out=new ByteArrayOutputStream() @AT@ 10861 @LENGTH@ 3
+---------INS ClassInstanceCreation@@ByteArrayOutputStream[] @TO@ VariableDeclarationFragment@@out=new ByteArrayOutputStream() @AT@ 10867 @LENGTH@ 27
+------------INS New@@new @TO@ ClassInstanceCreation@@ByteArrayOutputStream[] @AT@ 10867 @LENGTH@ 3
+------------INS SimpleType@@ByteArrayOutputStream @TO@ ClassInstanceCreation@@ByteArrayOutputStream[] @AT@ 10871 @LENGTH@ 21
+---INS VariableDeclarationStatement@@final PrintStream outPrint=new PrintStream(out); @TO@ MethodDeclaration@@public, void, MethodName:testDebugAndVerbosePrintCasting,  @AT@ 10904 @LENGTH@ 50
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final PrintStream outPrint=new PrintStream(out); @AT@ 10904 @LENGTH@ 5
+------INS SimpleType@@PrintStream @TO@ VariableDeclarationStatement@@final PrintStream outPrint=new PrintStream(out); @AT@ 10910 @LENGTH@ 11
+------INS VariableDeclarationFragment@@outPrint=new PrintStream(out) @TO@ VariableDeclarationStatement@@final PrintStream outPrint=new PrintStream(out); @AT@ 10922 @LENGTH@ 31
+---------INS SimpleName@@outPrint @TO@ VariableDeclarationFragment@@outPrint=new PrintStream(out) @AT@ 10922 @LENGTH@ 8
+---------INS ClassInstanceCreation@@PrintStream[out] @TO@ VariableDeclarationFragment@@outPrint=new PrintStream(out) @AT@ 10933 @LENGTH@ 20
+------------INS New@@new @TO@ ClassInstanceCreation@@PrintStream[out] @AT@ 10933 @LENGTH@ 3
+------------INS SimpleType@@PrintStream @TO@ ClassInstanceCreation@@PrintStream[out] @AT@ 10937 @LENGTH@ 11
+------------INS SimpleName@@out @TO@ ClassInstanceCreation@@PrintStream[out] @AT@ 10949 @LENGTH@ 3
+---INS TryStatement@@try {  MapUtils.debugPrint(outPrint,"Print Map",outer);} catch (final ClassCastException e) {  fail("No Casting should be occurring!");} @TO@ MethodDeclaration@@public, void, MethodName:testDebugAndVerbosePrintCasting,  @AT@ 10972 @LENGTH@ 178
+------INS ExpressionStatement@@MethodInvocation:MapUtils.debugPrint(outPrint,"Print Map",outer) @TO@ TryStatement@@try {  MapUtils.debugPrint(outPrint,"Print Map",outer);} catch (final ClassCastException e) {  fail("No Casting should be occurring!");} @AT@ 10990 @LENGTH@ 50
+---------INS MethodInvocation@@MapUtils.debugPrint(outPrint,"Print Map",outer) @TO@ ExpressionStatement@@MethodInvocation:MapUtils.debugPrint(outPrint,"Print Map",outer) @AT@ 10990 @LENGTH@ 49
+------------INS SimpleName@@Name:MapUtils @TO@ MethodInvocation@@MapUtils.debugPrint(outPrint,"Print Map",outer) @AT@ 10990 @LENGTH@ 8
+------------INS SimpleName@@MethodName:debugPrint:[outPrint, "Print Map", outer] @TO@ MethodInvocation@@MapUtils.debugPrint(outPrint,"Print Map",outer) @AT@ 10999 @LENGTH@ 40
+---------------INS SimpleName@@outPrint @TO@ SimpleName@@MethodName:debugPrint:[outPrint, "Print Map", outer] @AT@ 11010 @LENGTH@ 8
+---------------INS StringLiteral@@"Print Map" @TO@ SimpleName@@MethodName:debugPrint:[outPrint, "Print Map", outer] @AT@ 11020 @LENGTH@ 11
+---------------INS SimpleName@@outer @TO@ SimpleName@@MethodName:debugPrint:[outPrint, "Print Map", outer] @AT@ 11033 @LENGTH@ 5
+------INS CatchClause@@catch (final ClassCastException e) {  fail("No Casting should be occurring!");} @TO@ TryStatement@@try {  MapUtils.debugPrint(outPrint,"Print Map",outer);} catch (final ClassCastException e) {  fail("No Casting should be occurring!");} @AT@ 11051 @LENGTH@ 99
+---------INS SingleVariableDeclaration@@final ClassCastException e @TO@ CatchClause@@catch (final ClassCastException e) {  fail("No Casting should be occurring!");} @AT@ 11058 @LENGTH@ 26
+------------INS Modifier@@final @TO@ SingleVariableDeclaration@@final ClassCastException e @AT@ 11058 @LENGTH@ 5
+------------INS SimpleType@@ClassCastException @TO@ SingleVariableDeclaration@@final ClassCastException e @AT@ 11064 @LENGTH@ 18
+------------INS SimpleName@@e @TO@ SingleVariableDeclaration@@final ClassCastException e @AT@ 11083 @LENGTH@ 1
+---------INS ExpressionStatement@@MethodInvocation:fail("No Casting should be occurring!") @TO@ CatchClause@@catch (final ClassCastException e) {  fail("No Casting should be occurring!");} @AT@ 11100 @LENGTH@ 40
+------------INS MethodInvocation@@fail("No Casting should be occurring!") @TO@ ExpressionStatement@@MethodInvocation:fail("No Casting should be occurring!") @AT@ 11100 @LENGTH@ 39
+---------------INS SimpleName@@MethodName:fail:["No Casting should be occurring!"] @TO@ MethodInvocation@@fail("No Casting should be occurring!") @AT@ 11100 @LENGTH@ 39
+------------------INS StringLiteral@@"No Casting should be occurring!" @TO@ SimpleName@@MethodName:fail:["No Casting should be occurring!"] @AT@ 11105 @LENGTH@ 33
+
+
+UPD ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("The obejct and transformer map must not be null") @TO@ ClassInstanceCreation:new IllegalArgumentException("The object and transformer map must not be null") @AT@ 17305 @LENGTH@ 86
+---UPD ClassInstanceCreation@@IllegalArgumentException["The obejct and transformer map must not be null"] @TO@ IllegalArgumentException["The object and transformer map must not be null"] @AT@ 17311 @LENGTH@ 79
+------UPD StringLiteral@@"The obejct and transformer map must not be null" @TO@ "The object and transformer map must not be null" @AT@ 17340 @LENGTH@ 49
+
+
+UPD IfStatement@@if (handler.preRemove(object,nCopies)) {  result=getBag().remove(object,nCopies);  handler.postRemove(object,nCopies,result);} @TO@ if (handler.preRemoveNCopies(object,nCopies)) {  result=getBag().remove(object,nCopies);  handler.postRemoveNCopies(object,nCopies,result);} @AT@ 7930 @LENGTH@ 163
+---UPD MethodInvocation@@handler.preRemove(object,nCopies) @TO@ handler.preRemoveNCopies(object,nCopies) @AT@ 7934 @LENGTH@ 34
+------UPD SimpleName@@MethodName:preRemove:[object, nCopies] @TO@ MethodName:preRemoveNCopies:[object, nCopies] @AT@ 7942 @LENGTH@ 26
+---UPD Block@@ThenBody:{  result=getBag().remove(object,nCopies);  handler.postRemove(object,nCopies,result);} @TO@ ThenBody:{  result=getBag().remove(object,nCopies);  handler.postRemoveNCopies(object,nCopies,result);} @AT@ 7970 @LENGTH@ 123
+------UPD ExpressionStatement@@MethodInvocation:handler.postRemove(object,nCopies,result) @TO@ MethodInvocation:handler.postRemoveNCopies(object,nCopies,result) @AT@ 8039 @LENGTH@ 44
+---------UPD MethodInvocation@@handler.postRemove(object,nCopies,result) @TO@ handler.postRemoveNCopies(object,nCopies,result) @AT@ 8039 @LENGTH@ 43
+------------UPD SimpleName@@MethodName:postRemove:[object, nCopies, result] @TO@ MethodName:postRemoveNCopies:[object, nCopies, result] @AT@ 8047 @LENGTH@ 35
+
+
+UPD ReturnStatement@@FieldAccess:this.index @TO@ InfixExpression:this.index - this.startIndex @AT@ 7266 @LENGTH@ 18
+---DEL FieldAccess@@this.index @AT@ 7273 @LENGTH@ 10
+---INS InfixExpression@@this.index - this.startIndex @TO@ ReturnStatement@@FieldAccess:this.index @AT@ 7279 @LENGTH@ 28
+------INS FieldAccess@@this.index @TO@ InfixExpression@@this.index - this.startIndex @AT@ 7279 @LENGTH@ 10
+---------MOV ThisExpression@@this @TO@ FieldAccess@@this.index @AT@ 7273 @LENGTH@ 4
+---------MOV SimpleName@@index @TO@ FieldAccess@@this.index @AT@ 7278 @LENGTH@ 5
+------INS Operator@@- @TO@ InfixExpression@@this.index - this.startIndex @AT@ 7289 @LENGTH@ 1
+------INS FieldAccess@@this.startIndex @TO@ InfixExpression@@this.index - this.startIndex @AT@ 7292 @LENGTH@ 15
+---------INS ThisExpression@@this @TO@ FieldAccess@@this.startIndex @AT@ 7292 @LENGTH@ 4
+---------INS SimpleName@@startIndex @TO@ FieldAccess@@this.startIndex @AT@ 7297 @LENGTH@ 10
+
+
+INS MethodDeclaration@@public, static, void, MethodName:main, String[] args,  @TO@ TypeDeclaration@@[public]IOTestSuite,  @AT@ 3248 @LENGTH@ 79
+---INS Modifier@@public @TO@ MethodDeclaration@@public, static, void, MethodName:main, String[] args,  @AT@ 3248 @LENGTH@ 6
+---INS Modifier@@static @TO@ MethodDeclaration@@public, static, void, MethodName:main, String[] args,  @AT@ 3255 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, static, void, MethodName:main, String[] args,  @AT@ 3262 @LENGTH@ 4
+---INS SimpleName@@MethodName:main @TO@ MethodDeclaration@@public, static, void, MethodName:main, String[] args,  @AT@ 3267 @LENGTH@ 4
+---INS SingleVariableDeclaration@@String[] args @TO@ MethodDeclaration@@public, static, void, MethodName:main, String[] args,  @AT@ 3272 @LENGTH@ 13
+------INS ArrayType@@String[] @TO@ SingleVariableDeclaration@@String[] args @AT@ 3272 @LENGTH@ 8
+---------INS SimpleType@@String @TO@ ArrayType@@String[] @AT@ 3272 @LENGTH@ 6
+------INS SimpleName@@args @TO@ SingleVariableDeclaration@@String[] args @AT@ 3281 @LENGTH@ 4
+---INS ExpressionStatement@@MethodInvocation:TestRunner.run(suite()) @TO@ MethodDeclaration@@public, static, void, MethodName:main, String[] args,  @AT@ 3297 @LENGTH@ 24
+------INS MethodInvocation@@TestRunner.run(suite()) @TO@ ExpressionStatement@@MethodInvocation:TestRunner.run(suite()) @AT@ 3297 @LENGTH@ 23
+---------INS SimpleName@@Name:TestRunner @TO@ MethodInvocation@@TestRunner.run(suite()) @AT@ 3297 @LENGTH@ 10
+---------INS SimpleName@@MethodName:run:[suite()] @TO@ MethodInvocation@@TestRunner.run(suite()) @AT@ 3308 @LENGTH@ 12
+------------INS MethodInvocation@@MethodName:suite:[] @TO@ SimpleName@@MethodName:run:[suite()] @AT@ 3312 @LENGTH@ 7
+
+
+UPD MethodDeclaration@@protected, Node, MethodName:createNode, Node next, Node previous, Object element,  @TO@ protected, Node, MethodName:createNode, Node previous, Node next, Object element,  @AT@ 11061 @LENGTH@ 125
+---UPD SingleVariableDeclaration@@Node next @TO@ Node previous @AT@ 11087 @LENGTH@ 9
+------UPD SimpleName@@next @TO@ previous @AT@ 11092 @LENGTH@ 4
+---UPD SingleVariableDeclaration@@Node previous @TO@ Node next @AT@ 11098 @LENGTH@ 13
+------UPD SimpleName@@previous @TO@ next @AT@ 11103 @LENGTH@ 8
+---UPD ReturnStatement@@ClassInstanceCreation:new Node(next,previous,element) @TO@ ClassInstanceCreation:new Node(previous,next,element) @AT@ 11139 @LENGTH@ 41
+------UPD ClassInstanceCreation@@Node[next, previous, element] @TO@ Node[previous, next, element] @AT@ 11146 @LENGTH@ 33
+---------DEL SimpleName@@previous @AT@ 11161 @LENGTH@ 8
+---------INS SimpleName@@previous @TO@ ClassInstanceCreation@@Node[next, previous, element] @AT@ 11537 @LENGTH@ 8
+
+
+UPD TypeDeclaration@@[protected, static]MyMapEntry, DefaultMapEntry @TO@ [protected, static]MyMapEntry, AbstractMapEntry @AT@ 24282 @LENGTH@ 963
+---UPD SimpleType@@DefaultMapEntry @TO@ AbstractMapEntry @AT@ 24324 @LENGTH@ 15
+
+
+INS ExpressionStatement@@MethodInvocation:suite.addTest(new TestSuite(CopyUtilsTest.class)) @TO@ MethodDeclaration@@public, static, Test, MethodName:suite,  @AT@ 3443 @LENGTH@ 54
+---INS MethodInvocation@@suite.addTest(new TestSuite(CopyUtilsTest.class)) @TO@ ExpressionStatement@@MethodInvocation:suite.addTest(new TestSuite(CopyUtilsTest.class)) @AT@ 3443 @LENGTH@ 53
+------INS SimpleName@@Name:suite @TO@ MethodInvocation@@suite.addTest(new TestSuite(CopyUtilsTest.class)) @AT@ 3443 @LENGTH@ 5
+------INS SimpleName@@MethodName:addTest:[new TestSuite(CopyUtilsTest.class)] @TO@ MethodInvocation@@suite.addTest(new TestSuite(CopyUtilsTest.class)) @AT@ 3449 @LENGTH@ 47
+---------INS ClassInstanceCreation@@TestSuite[CopyUtilsTest.class] @TO@ SimpleName@@MethodName:addTest:[new TestSuite(CopyUtilsTest.class)] @AT@ 3458 @LENGTH@ 36
+------------INS New@@new @TO@ ClassInstanceCreation@@TestSuite[CopyUtilsTest.class] @AT@ 3458 @LENGTH@ 3
+------------INS SimpleType@@TestSuite @TO@ ClassInstanceCreation@@TestSuite[CopyUtilsTest.class] @AT@ 3462 @LENGTH@ 9
+------------INS TypeLiteral@@CopyUtilsTest.class @TO@ ClassInstanceCreation@@TestSuite[CopyUtilsTest.class] @AT@ 3473 @LENGTH@ 19
+
+
+UPD IfStatement@@if (entrySet != null) return entrySet; @TO@ if (entrySet != null) {  return entrySet;} @AT@ 20580 @LENGTH@ 38
+---UPD Block@@ThenBody:return entrySet; @TO@ ThenBody:{  return entrySet;} @AT@ 20602 @LENGTH@ 16
+
+
+UPD IfStatement@@if (iMap != null) {  iMap.putAll(map);} @TO@ if (iMap != null) {  iMap.putAll(map);  return;} @AT@ 12964 @LENGTH@ 59
+---UPD Block@@ThenBody:{  iMap.putAll(map);} @TO@ ThenBody:{  iMap.putAll(map);  return;} @AT@ 12982 @LENGTH@ 41
+------INS ReturnStatement@@ @TO@ Block@@ThenBody:{  iMap.putAll(map);} @AT@ 13026 @LENGTH@ 7
+
+
+INS MethodDeclaration@@public, voidMethodName:IOUtils,  @TO@ TypeDeclaration@@[public, final]IOUtils,  @AT@ 7643 @LENGTH@ 19
+---INS Modifier@@public @TO@ MethodDeclaration@@public, voidMethodName:IOUtils,  @AT@ 7643 @LENGTH@ 6
+---INS SimpleName@@MethodName:IOUtils @TO@ MethodDeclaration@@public, voidMethodName:IOUtils,  @AT@ 7650 @LENGTH@ 7
+
+
+UPD MethodDeclaration@@protected, String[], MethodName:ignoredTests,  @TO@ protected, void, MethodName:verify,  @AT@ 4969 @LENGTH@ 128
+---DEL ArrayType@@String[] @AT@ 4979 @LENGTH@ 8
+------DEL SimpleType@@String @AT@ 4979 @LENGTH@ 6
+---UPD SimpleName@@MethodName:ignoredTests @TO@ MethodName:verify @AT@ 4988 @LENGTH@ 12
+---DEL ReturnStatement@@ArrayCreation:new String[]{"TestHashBidiMap.bulkTestInverseMap.bulkTestInverseMap"} @AT@ 5013 @LENGTH@ 78
+------DEL ArrayCreation@@new String[]{"TestHashBidiMap.bulkTestInverseMap.bulkTestInverseMap"} @AT@ 5020 @LENGTH@ 70
+---------DEL ArrayType@@String[] @AT@ 5024 @LENGTH@ 8
+------------DEL SimpleType@@String @AT@ 5024 @LENGTH@ 6
+---------DEL ArrayInitializer@@{"TestHashBidiMap.bulkTestInverseMap.bulkTestInverseMap"} @AT@ 5033 @LENGTH@ 57
+------------DEL StringLiteral@@"TestHashBidiMap.bulkTestInverseMap.bulkTestInverseMap" @AT@ 5034 @LENGTH@ 55
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@protected, String[], MethodName:ignoredTests,  @AT@ 6210 @LENGTH@ 4
+---INS ExpressionStatement@@MethodInvocation:assertEquals(map.size(),((BidiMap)map).inverseBidiMap().size()) @TO@ MethodDeclaration@@protected, String[], MethodName:ignoredTests,  @AT@ 6260 @LENGTH@ 66
+------INS MethodInvocation@@assertEquals(map.size(),((BidiMap)map).inverseBidiMap().size()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(map.size(),((BidiMap)map).inverseBidiMap().size()) @AT@ 6260 @LENGTH@ 65
+---------INS SimpleName@@MethodName:assertEquals:[map.size(), ((BidiMap)map).inverseBidiMap().size()] @TO@ MethodInvocation@@assertEquals(map.size(),((BidiMap)map).inverseBidiMap().size()) @AT@ 6260 @LENGTH@ 65
+------------INS MethodInvocation@@map.size() @TO@ SimpleName@@MethodName:assertEquals:[map.size(), ((BidiMap)map).inverseBidiMap().size()] @AT@ 6273 @LENGTH@ 10
+---------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.size() @AT@ 6273 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:size:[] @TO@ MethodInvocation@@map.size() @AT@ 6277 @LENGTH@ 6
+------------INS MethodInvocation@@((BidiMap)map).inverseBidiMap().size() @TO@ SimpleName@@MethodName:assertEquals:[map.size(), ((BidiMap)map).inverseBidiMap().size()] @AT@ 6285 @LENGTH@ 39
+---------------INS MethodInvocation@@MethodName:inverseBidiMap:[] @TO@ MethodInvocation@@((BidiMap)map).inverseBidiMap().size() @AT@ 6285 @LENGTH@ 32
+---------------INS ParenthesizedExpression@@((BidiMap)map) @TO@ MethodInvocation@@((BidiMap)map).inverseBidiMap().size() @AT@ 6285 @LENGTH@ 15
+------------------INS CastExpression@@(BidiMap)map @TO@ ParenthesizedExpression@@((BidiMap)map) @AT@ 6286 @LENGTH@ 13
+---------------------INS SimpleType@@BidiMap @TO@ CastExpression@@(BidiMap)map @AT@ 6287 @LENGTH@ 7
+---------------------INS SimpleName@@map @TO@ CastExpression@@(BidiMap)map @AT@ 6296 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:size:[] @TO@ MethodInvocation@@((BidiMap)map).inverseBidiMap().size() @AT@ 6318 @LENGTH@ 6
+---INS ExpressionStatement@@SuperMethodInvocation:super.verify() @TO@ MethodDeclaration@@protected, String[], MethodName:ignoredTests,  @AT@ 6368 @LENGTH@ 15
+------INS SuperMethodInvocation@@super.verify() @TO@ ExpressionStatement@@SuperMethodInvocation:super.verify() @AT@ 6368 @LENGTH@ 14
+---------INS SimpleName@@MethodName:verify:[] @TO@ SuperMethodInvocation@@super.verify() @AT@ 6374 @LENGTH@ 6
+
+
+UPD TypeDeclaration@@[public]ArrayListIterator, ArrayIterator[ResetableListIterator] @TO@ [public]ArrayListIterator, ArrayIterator[ListIterator, ResetableListIterator] @AT@ 3864 @LENGTH@ 5805
+---INS SimpleType@@ListIterator @TO@ TypeDeclaration@@[public]ArrayListIterator, ArrayIterator[ResetableListIterator] @AT@ 3869 @LENGTH@ 12
+
+
+UPD IfStatement@@if (mtsz > 4) {  code.setLength(4);} @TO@ if (mtsz > maxCodeLen) {  code.setLength(maxCodeLen);} @AT@ 13977 @LENGTH@ 36
+---UPD InfixExpression@@mtsz > 4 @TO@ mtsz > maxCodeLen @AT@ 13981 @LENGTH@ 8
+------INS SimpleName@@maxCodeLen @TO@ InfixExpression@@mtsz > 4 @AT@ 13988 @LENGTH@ 10
+------DEL NumberLiteral@@4 @AT@ 13988 @LENGTH@ 1
+---UPD Block@@ThenBody:{  code.setLength(4);} @TO@ ThenBody:{  code.setLength(maxCodeLen);} @AT@ 13991 @LENGTH@ 22
+------UPD ExpressionStatement@@MethodInvocation:code.setLength(4) @TO@ MethodInvocation:code.setLength(maxCodeLen) @AT@ 13993 @LENGTH@ 18
+---------UPD MethodInvocation@@code.setLength(4) @TO@ code.setLength(maxCodeLen) @AT@ 13993 @LENGTH@ 17
+------------UPD SimpleName@@MethodName:setLength:[4] @TO@ MethodName:setLength:[maxCodeLen] @AT@ 13998 @LENGTH@ 12
+---------------DEL NumberLiteral@@4 @AT@ 14008 @LENGTH@ 1
+---------------INS SimpleName@@maxCodeLen @TO@ SimpleName@@MethodName:setLength:[4] @AT@ 14017 @LENGTH@ 10
+
+
+UPD IfStatement@@if (handler.preAdd(object,nCopies)) {  result=getBag().add(object,nCopies);  handler.postAdd(object,nCopies,result);} @TO@ if (handler.preAddNCopies(object,nCopies)) {  result=getBag().add(object,nCopies);  handler.postAddNCopies(object,nCopies,result);} @AT@ 7649 @LENGTH@ 154
+---UPD MethodInvocation@@handler.preAdd(object,nCopies) @TO@ handler.preAddNCopies(object,nCopies) @AT@ 7653 @LENGTH@ 31
+------UPD SimpleName@@MethodName:preAdd:[object, nCopies] @TO@ MethodName:preAddNCopies:[object, nCopies] @AT@ 7661 @LENGTH@ 23
+---UPD Block@@ThenBody:{  result=getBag().add(object,nCopies);  handler.postAdd(object,nCopies,result);} @TO@ ThenBody:{  result=getBag().add(object,nCopies);  handler.postAddNCopies(object,nCopies,result);} @AT@ 7686 @LENGTH@ 117
+------UPD ExpressionStatement@@MethodInvocation:handler.postAdd(object,nCopies,result) @TO@ MethodInvocation:handler.postAddNCopies(object,nCopies,result) @AT@ 7752 @LENGTH@ 41
+---------UPD MethodInvocation@@handler.postAdd(object,nCopies,result) @TO@ handler.postAddNCopies(object,nCopies,result) @AT@ 7752 @LENGTH@ 40
+------------UPD SimpleName@@MethodName:postAdd:[object, nCopies, result] @TO@ MethodName:postAddNCopies:[object, nCopies, result] @AT@ 7760 @LENGTH@ 32
+
+
+UPD ReturnStatement@@InfixExpression:this.index - 1 @TO@ InfixExpression:this.index - this.startIndex - 1 @AT@ 7499 @LENGTH@ 22
+---UPD InfixExpression@@this.index - 1 @TO@ this.index - this.startIndex - 1 @AT@ 7506 @LENGTH@ 14
+------INS FieldAccess@@this.startIndex @TO@ InfixExpression@@this.index - 1 @AT@ 7543 @LENGTH@ 15
+---------INS ThisExpression@@this @TO@ FieldAccess@@this.startIndex @AT@ 7543 @LENGTH@ 4
+---------INS SimpleName@@startIndex @TO@ FieldAccess@@this.startIndex @AT@ 7548 @LENGTH@ 10
+
+
+UPD ThrowStatement@@ClassInstanceCreation:new EncoderException("Parameter supplied to " + "RefinedSoundex " + "encode is not of type "+ "java.lang.String") @TO@ ClassInstanceCreation:new EncoderException("Parameter supplied to RefinedSoundex encode is not of type java.lang.String") @AT@ 6749 @LENGTH@ 241
+---UPD ClassInstanceCreation@@EncoderException["Parameter supplied to " + "RefinedSoundex " + "encode is not of type "+ "java.lang.String"] @TO@ EncoderException["Parameter supplied to RefinedSoundex encode is not of type java.lang.String"] @AT@ 6755 @LENGTH@ 234
+------DEL InfixExpression@@"Parameter supplied to " + "RefinedSoundex " + "encode is not of type "+ "java.lang.String" @AT@ 6776 @LENGTH@ 212
+---------DEL StringLiteral@@"Parameter supplied to " @AT@ 6776 @LENGTH@ 24
+---------DEL Operator@@+ @AT@ 6800 @LENGTH@ 1
+---------DEL StringLiteral@@"RefinedSoundex " @AT@ 6843 @LENGTH@ 17
+---------DEL StringLiteral@@"encode is not of type " @AT@ 6903 @LENGTH@ 24
+---------DEL StringLiteral@@"java.lang.String" @AT@ 6970 @LENGTH@ 18
+------INS StringLiteral@@"Parameter supplied to RefinedSoundex encode is not of type java.lang.String" @TO@ ClassInstanceCreation@@EncoderException["Parameter supplied to " + "RefinedSoundex " + "encode is not of type "+ "java.lang.String"] @AT@ 6777 @LENGTH@ 77
+
+
+UPD TypeDeclaration@@[public]SingletonIterator, [ResetableIterator] @TO@ [public]SingletonIterator, [Iterator, ResetableIterator] @AT@ 3314 @LENGTH@ 1813
+---INS SimpleType@@Iterator @TO@ TypeDeclaration@@[public]SingletonIterator, [ResetableIterator] @AT@ 3338 @LENGTH@ 8
+
+
+UPD ExpressionStatement@@MethodInvocation:suite.addTest(new TestSuite(org.apache.commons.io.filefilter.FileFilterTestCase.class)) @TO@ MethodInvocation:suite.addTest(new TestSuite(FileFilterTestCase.class)) @AT@ 3322 @LENGTH@ 92
+---UPD MethodInvocation@@suite.addTest(new TestSuite(org.apache.commons.io.filefilter.FileFilterTestCase.class)) @TO@ suite.addTest(new TestSuite(FileFilterTestCase.class)) @AT@ 3322 @LENGTH@ 91
+------UPD SimpleName@@MethodName:addTest:[new TestSuite(org.apache.commons.io.filefilter.FileFilterTestCase.class)] @TO@ MethodName:addTest:[new TestSuite(FileFilterTestCase.class)] @AT@ 3328 @LENGTH@ 85
+---------UPD ClassInstanceCreation@@TestSuite[org.apache.commons.io.filefilter.FileFilterTestCase.class] @TO@ TestSuite[FileFilterTestCase.class] @AT@ 3337 @LENGTH@ 74
+------------UPD TypeLiteral@@org.apache.commons.io.filefilter.FileFilterTestCase.class @TO@ FileFilterTestCase.class @AT@ 3352 @LENGTH@ 57
+
+
+UPD ReturnStatement@@ParenthesizedExpression:(doubleMetaphone(value)) @TO@ MethodInvocation:doubleMetaphone(value) @AT@ 9485 @LENGTH@ 32
+---DEL ParenthesizedExpression@@(doubleMetaphone(value)) @AT@ 9492 @LENGTH@ 24
+---MOV MethodInvocation@@doubleMetaphone(value) @TO@ ReturnStatement@@ParenthesizedExpression:(doubleMetaphone(value)) @AT@ 9493 @LENGTH@ 22
+
+
+INS IfStatement@@if (start > array.length) {  throw new ArrayIndexOutOfBoundsException("Start index must not be greater than the array length");} @TO@ MethodDeclaration@@public, voidMethodName:ObjectArrayIterator, Object array[], int start, int end,  @AT@ 6092 @LENGTH@ 148
+---INS InfixExpression@@start > array.length @TO@ IfStatement@@if (start > array.length) {  throw new ArrayIndexOutOfBoundsException("Start index must not be greater than the array length");} @AT@ 6096 @LENGTH@ 20
+------INS SimpleName@@start @TO@ InfixExpression@@start > array.length @AT@ 6096 @LENGTH@ 5
+------INS Operator@@> @TO@ InfixExpression@@start > array.length @AT@ 6101 @LENGTH@ 1
+------INS QualifiedName@@array.length @TO@ InfixExpression@@start > array.length @AT@ 6104 @LENGTH@ 12
+---------INS SimpleName@@array @TO@ QualifiedName@@array.length @AT@ 6104 @LENGTH@ 5
+---------INS SimpleName@@length @TO@ QualifiedName@@array.length @AT@ 6110 @LENGTH@ 6
+---INS Block@@ThenBody:{  throw new ArrayIndexOutOfBoundsException("Start index must not be greater than the array length");} @TO@ IfStatement@@if (start > array.length) {  throw new ArrayIndexOutOfBoundsException("Start index must not be greater than the array length");} @AT@ 6118 @LENGTH@ 122
+------INS ThrowStatement@@ClassInstanceCreation:new ArrayIndexOutOfBoundsException("Start index must not be greater than the array length") @TO@ Block@@ThenBody:{  throw new ArrayIndexOutOfBoundsException("Start index must not be greater than the array length");} @AT@ 6132 @LENGTH@ 98
+---------INS ClassInstanceCreation@@ArrayIndexOutOfBoundsException["Start index must not be greater than the array length"] @TO@ ThrowStatement@@ClassInstanceCreation:new ArrayIndexOutOfBoundsException("Start index must not be greater than the array length") @AT@ 6138 @LENGTH@ 91
+------------INS New@@new @TO@ ClassInstanceCreation@@ArrayIndexOutOfBoundsException["Start index must not be greater than the array length"] @AT@ 6138 @LENGTH@ 3
+------------INS SimpleType@@ArrayIndexOutOfBoundsException @TO@ ClassInstanceCreation@@ArrayIndexOutOfBoundsException["Start index must not be greater than the array length"] @AT@ 6142 @LENGTH@ 30
+------------INS StringLiteral@@"Start index must not be greater than the array length" @TO@ ClassInstanceCreation@@ArrayIndexOutOfBoundsException["Start index must not be greater than the array length"] @AT@ 6173 @LENGTH@ 55
+
+
+UPD ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("The obejct and closure map must not be null") @TO@ ClassInstanceCreation:new IllegalArgumentException("The object and closure map must not be null") @AT@ 17754 @LENGTH@ 82
+---UPD ClassInstanceCreation@@IllegalArgumentException["The obejct and closure map must not be null"] @TO@ IllegalArgumentException["The object and closure map must not be null"] @AT@ 17760 @LENGTH@ 75
+------UPD StringLiteral@@"The obejct and closure map must not be null" @TO@ "The object and closure map must not be null" @AT@ 17789 @LENGTH@ 45
+
+
+UPD MethodDeclaration@@protected, Node, MethodName:createNode, Node next, Node previous, Object element,  @TO@ protected, Node, MethodName:createNode, Node previous, Node next, Object element,  @AT@ 7055 @LENGTH@ 397
+---UPD SingleVariableDeclaration@@Node next @TO@ Node previous @AT@ 7081 @LENGTH@ 9
+------UPD SimpleName@@next @TO@ previous @AT@ 7086 @LENGTH@ 4
+---UPD SingleVariableDeclaration@@Node previous @TO@ Node next @AT@ 7092 @LENGTH@ 13
+------UPD SimpleName@@previous @TO@ next @AT@ 7097 @LENGTH@ 8
+---UPD IfStatement@@if (cachedNode == null) {  return super.createNode(next,previous,element);} else {  cachedNode.next=next;  cachedNode.previous=previous;  cachedNode.element=element;  return cachedNode;} @TO@ if (cachedNode == null) {  return super.createNode(previous,next,element);} else {  cachedNode.next=next;  cachedNode.previous=previous;  cachedNode.element=element;  return cachedNode;} @AT@ 7179 @LENGTH@ 267
+------UPD Block@@ThenBody:{  return super.createNode(next,previous,element);} @TO@ ThenBody:{  return super.createNode(previous,next,element);} @AT@ 7203 @LENGTH@ 73
+---------UPD ReturnStatement@@SuperMethodInvocation:super.createNode(next,previous,element) @TO@ SuperMethodInvocation:super.createNode(previous,next,element) @AT@ 7217 @LENGTH@ 49
+------------UPD SuperMethodInvocation@@super.createNode(next,previous,element) @TO@ super.createNode(previous,next,element) @AT@ 7224 @LENGTH@ 41
+---------------UPD SimpleName@@MethodName:createNode:[next, previous, element] @TO@ MethodName:createNode:[previous, next, element] @AT@ 7230 @LENGTH@ 10
+---------------DEL SimpleName@@previous @AT@ 7247 @LENGTH@ 8
+---------------INS SimpleName@@previous @TO@ SuperMethodInvocation@@super.createNode(next,previous,element) @AT@ 7457 @LENGTH@ 8
+
+
+UPD TypeDeclaration@@[public]ObjectArrayIterator, [ResetableIterator] @TO@ [public]ObjectArrayIterator, [Iterator, ResetableIterator] @AT@ 3673 @LENGTH@ 5572
+---INS SimpleType@@Iterator @TO@ TypeDeclaration@@[public]ObjectArrayIterator, [ResetableIterator] @AT@ 3624 @LENGTH@ 8
+
+
+UPD ExpressionStatement@@MethodInvocation:assertEquals("Cloned entry does not match orginal",origEntry,copiedEntry) @TO@ MethodInvocation:assertEquals("Cloned entry does not match original",origEntry,copiedEntry) @AT@ 5773 @LENGTH@ 101
+---UPD MethodInvocation@@assertEquals("Cloned entry does not match orginal",origEntry,copiedEntry) @TO@ assertEquals("Cloned entry does not match original",origEntry,copiedEntry) @AT@ 5773 @LENGTH@ 100
+------UPD SimpleName@@MethodName:assertEquals:["Cloned entry does not match orginal", origEntry, copiedEntry] @TO@ MethodName:assertEquals:["Cloned entry does not match original", origEntry, copiedEntry] @AT@ 5773 @LENGTH@ 100
+---------UPD StringLiteral@@"Cloned entry does not match orginal" @TO@ "Cloned entry does not match original" @AT@ 5786 @LENGTH@ 37
+
+
+UPD TypeDeclaration@@[public]SingletonListIterator, [ResetableListIterator] @TO@ [public]SingletonListIterator, [ListIterator, ResetableListIterator] @AT@ 3253 @LENGTH@ 3993
+---INS SimpleType@@ListIterator @TO@ TypeDeclaration@@[public]SingletonListIterator, [ResetableListIterator] @AT@ 3327 @LENGTH@ 12
+
+
+UPD ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Unrecognised value for unkown behaviour flag") @TO@ ClassInstanceCreation:new IllegalArgumentException("Unrecognised value for unknown behaviour flag") @AT@ 8240 @LENGTH@ 83
+---UPD ClassInstanceCreation@@IllegalArgumentException["Unrecognised value for unkown behaviour flag"] @TO@ IllegalArgumentException["Unrecognised value for unknown behaviour flag"] @AT@ 8246 @LENGTH@ 76
+------UPD StringLiteral@@"Unrecognised value for unkown behaviour flag" @TO@ "Unrecognised value for unknown behaviour flag" @AT@ 8275 @LENGTH@ 46
+
+
+UPD MethodDeclaration@@public, static, Map, MethodName:decorate, Map map,  @TO@ public, static, OrderedMap, MethodName:decorate, Map map,  @AT@ 4650 @LENGTH@ 83
+---UPD SimpleType@@Map @TO@ OrderedMap @AT@ 4664 @LENGTH@ 3
+
+
+UPD ThrowStatement@@ClassInstanceCreation:new EncoderException("Parameter supplied to " + "Base64 " + "encode is not a byte[]") @TO@ ClassInstanceCreation:new EncoderException("Parameter supplied to Base64 encode is not a byte[]") @AT@ 19813 @LENGTH@ 149
+---UPD ClassInstanceCreation@@EncoderException["Parameter supplied to " + "Base64 " + "encode is not a byte[]"] @TO@ EncoderException["Parameter supplied to Base64 encode is not a byte[]"] @AT@ 19819 @LENGTH@ 142
+------INS StringLiteral@@"Parameter supplied to Base64 encode is not a byte[]" @TO@ ClassInstanceCreation@@EncoderException["Parameter supplied to " + "Base64 " + "encode is not a byte[]"] @AT@ 19507 @LENGTH@ 53
+------DEL InfixExpression@@"Parameter supplied to " + "Base64 " + "encode is not a byte[]" @AT@ 19857 @LENGTH@ 103
+---------DEL StringLiteral@@"Parameter supplied to " @AT@ 19857 @LENGTH@ 24
+---------DEL Operator@@+ @AT@ 19881 @LENGTH@ 1
+---------DEL StringLiteral@@"Base64 " @AT@ 19904 @LENGTH@ 9
+---------DEL StringLiteral@@"encode is not a byte[]" @AT@ 19936 @LENGTH@ 24
+
+
+INS TryStatement@@try {  FileUtils.contentEquals(getTestDirectory(),getTestDirectory());  fail("Comparing directories should fail with an IOException");} catch (IOException ioe) {} @TO@ MethodDeclaration@@public, void, MethodName:testContentEquals, Exception,  @AT@ 6289 @LENGTH@ 226
+---MOV ExpressionStatement@@MethodInvocation:assertTrue(!FileUtils.contentEquals(getTestDirectory(),getTestDirectory())) @TO@ TryStatement@@try {  FileUtils.contentEquals(getTestDirectory(),getTestDirectory());  fail("Comparing directories should fail with an IOException");} catch (IOException ioe) {} @AT@ 6383 @LENGTH@ 90
+------MOV MethodInvocation@@FileUtils.contentEquals(getTestDirectory(),getTestDirectory()) @TO@ ExpressionStatement@@MethodInvocation:assertTrue(!FileUtils.contentEquals(getTestDirectory(),getTestDirectory())) @AT@ 6408 @LENGTH@ 63
+---INS ExpressionStatement@@MethodInvocation:fail("Comparing directories should fail with an IOException") @TO@ TryStatement@@try {  FileUtils.contentEquals(getTestDirectory(),getTestDirectory());  fail("Comparing directories should fail with an IOException");} catch (IOException ioe) {} @AT@ 6384 @LENGTH@ 62
+------INS MethodInvocation@@fail("Comparing directories should fail with an IOException") @TO@ ExpressionStatement@@MethodInvocation:fail("Comparing directories should fail with an IOException") @AT@ 6384 @LENGTH@ 61
+---------INS SimpleName@@MethodName:fail:["Comparing directories should fail with an IOException"] @TO@ MethodInvocation@@fail("Comparing directories should fail with an IOException") @AT@ 6384 @LENGTH@ 61
+------------INS StringLiteral@@"Comparing directories should fail with an IOException" @TO@ SimpleName@@MethodName:fail:["Comparing directories should fail with an IOException"] @AT@ 6389 @LENGTH@ 55
+---INS CatchClause@@catch (IOException ioe) {} @TO@ TryStatement@@try {  FileUtils.contentEquals(getTestDirectory(),getTestDirectory());  fail("Comparing directories should fail with an IOException");} catch (IOException ioe) {} @AT@ 6457 @LENGTH@ 58
+------INS SingleVariableDeclaration@@IOException ioe @TO@ CatchClause@@catch (IOException ioe) {} @AT@ 6464 @LENGTH@ 15
+---------INS SimpleType@@IOException @TO@ SingleVariableDeclaration@@IOException ioe @AT@ 6464 @LENGTH@ 11
+---------INS SimpleName@@ioe @TO@ SingleVariableDeclaration@@IOException ioe @AT@ 6476 @LENGTH@ 3
+
+
+UPD ReturnStatement@@ClassInstanceCreation:new DefaultMapEntry(key,get(key)) @TO@ ClassInstanceCreation:new MyMapEntry(BeanMap.this,key,get(key)) @AT@ 16719 @LENGTH@ 42
+---UPD ClassInstanceCreation@@DefaultMapEntry[key, get(key)] @TO@ MyMapEntry[BeanMap.this, key, get(key)] @AT@ 16726 @LENGTH@ 34
+------UPD SimpleType@@DefaultMapEntry @TO@ MyMapEntry @AT@ 16730 @LENGTH@ 15
+------INS ThisExpression@@this @TO@ ClassInstanceCreation@@DefaultMapEntry[key, get(key)] @AT@ 16809 @LENGTH@ 12
+
+
+UPD ThrowStatement@@ClassInstanceCreation:new DecoderException("Parameter supplied to " + "Base64 " + "decode is not a byte[]") @TO@ ClassInstanceCreation:new DecoderException("Parameter supplied to Base64 decode is not a byte[]") @AT@ 8382 @LENGTH@ 149
+---UPD ClassInstanceCreation@@DecoderException["Parameter supplied to " + "Base64 " + "decode is not a byte[]"] @TO@ DecoderException["Parameter supplied to Base64 decode is not a byte[]"] @AT@ 8388 @LENGTH@ 142
+------INS StringLiteral@@"Parameter supplied to Base64 decode is not a byte[]" @TO@ ClassInstanceCreation@@DecoderException["Parameter supplied to " + "Base64 " + "decode is not a byte[]"] @AT@ 8409 @LENGTH@ 53
+------DEL InfixExpression@@"Parameter supplied to " + "Base64 " + "decode is not a byte[]" @AT@ 8426 @LENGTH@ 103
+---------DEL StringLiteral@@"Parameter supplied to " @AT@ 8426 @LENGTH@ 24
+---------DEL Operator@@+ @AT@ 8450 @LENGTH@ 1
+---------DEL StringLiteral@@"Base64 " @AT@ 8473 @LENGTH@ 9
+---------DEL StringLiteral@@"decode is not a byte[]" @AT@ 8505 @LENGTH@ 24
+
+
+UPD MethodDeclaration@@protected, BidiMap, MethodName:createBidiMap, Map normalMap, Map reverseMap, BidiMap inverseMap,  @TO@ protected, BidiMap, MethodName:createBidiMap, Map normalMap, Map reverseMap, BidiMap inverseBidiMap,  @AT@ 4874 @LENGTH@ 161
+---UPD SingleVariableDeclaration@@BidiMap inverseMap @TO@ BidiMap inverseBidiMap @AT@ 4937 @LENGTH@ 18
+------UPD SimpleName@@inverseMap @TO@ inverseBidiMap @AT@ 4945 @LENGTH@ 10
+---UPD ReturnStatement@@ClassInstanceCreation:new DualHashBidiMap(normalMap,reverseMap,inverseMap) @TO@ ClassInstanceCreation:new DualHashBidiMap(normalMap,reverseMap,inverseBidiMap) @AT@ 4967 @LENGTH@ 62
+------UPD ClassInstanceCreation@@DualHashBidiMap[normalMap, reverseMap, inverseMap] @TO@ DualHashBidiMap[normalMap, reverseMap, inverseBidiMap] @AT@ 4974 @LENGTH@ 54
+---------UPD SimpleName@@inverseMap @TO@ inverseBidiMap @AT@ 5017 @LENGTH@ 10
+
+
+UPD MethodDeclaration@@public, int, MethodName:getUnkownObjectBehavior,  @TO@ public, int, MethodName:getUnknownObjectBehavior,  @AT@ 7642 @LENGTH@ 82
+---UPD SimpleName@@MethodName:getUnkownObjectBehavior @TO@ MethodName:getUnknownObjectBehavior @AT@ 7653 @LENGTH@ 23
+
+
+UPD ReturnStatement@@FieldAccess:this.index @TO@ InfixExpression:this.index - this.startIndex @AT@ 7714 @LENGTH@ 18
+---DEL FieldAccess@@this.index @AT@ 7721 @LENGTH@ 10
+---INS InfixExpression@@this.index - this.startIndex @TO@ ReturnStatement@@FieldAccess:this.index @AT@ 7740 @LENGTH@ 28
+------INS FieldAccess@@this.index @TO@ InfixExpression@@this.index - this.startIndex @AT@ 7740 @LENGTH@ 10
+---------MOV ThisExpression@@this @TO@ FieldAccess@@this.index @AT@ 7721 @LENGTH@ 4
+---------MOV SimpleName@@index @TO@ FieldAccess@@this.index @AT@ 7726 @LENGTH@ 5
+------INS Operator@@- @TO@ InfixExpression@@this.index - this.startIndex @AT@ 7750 @LENGTH@ 1
+------INS FieldAccess@@this.startIndex @TO@ InfixExpression@@this.index - this.startIndex @AT@ 7753 @LENGTH@ 15
+---------INS ThisExpression@@this @TO@ FieldAccess@@this.startIndex @AT@ 7753 @LENGTH@ 4
+---------INS SimpleName@@startIndex @TO@ FieldAccess@@this.startIndex @AT@ 7758 @LENGTH@ 10
+
+
+UPD MethodDeclaration@@public, voidMethodName:StringEncoderComparator, StringEncoder en,  @TO@ public, voidMethodName:StringEncoderComparator, StringEncoder stringEncoder,  @AT@ 3625 @LENGTH@ 89
+---UPD SingleVariableDeclaration@@StringEncoder en @TO@ StringEncoder stringEncoder @AT@ 3656 @LENGTH@ 16
+------UPD SimpleName@@en @TO@ stringEncoder @AT@ 3670 @LENGTH@ 2
+---UPD ExpressionStatement@@Assignment:this.stringEncoder=en @TO@ Assignment:this.stringEncoder=stringEncoder @AT@ 3684 @LENGTH@ 24
+------UPD Assignment@@this.stringEncoder=en @TO@ this.stringEncoder=stringEncoder @AT@ 3684 @LENGTH@ 23
+---------UPD SimpleName@@en @TO@ stringEncoder @AT@ 3705 @LENGTH@ 2
+
+
+UPD IfStatement@@if (prefixes == null) {  throw new IllegalArgumentException("The prefix must not be null");} @TO@ if (prefix == null) {  throw new IllegalArgumentException("The prefix must not be null");} @AT@ 3775 @LENGTH@ 112
+---UPD InfixExpression@@prefixes == null @TO@ prefix == null @AT@ 3779 @LENGTH@ 16
+------UPD SimpleName@@prefixes @TO@ prefix @AT@ 3779 @LENGTH@ 8
+
+
+UPD ReturnStatement@@ParenthesizedExpression:(soundex(pString)) @TO@ MethodInvocation:soundex(pString) @AT@ 5942 @LENGTH@ 26
+---DEL ParenthesizedExpression@@(soundex(pString)) @AT@ 5949 @LENGTH@ 18
+---MOV MethodInvocation@@soundex(pString) @TO@ ReturnStatement@@ParenthesizedExpression:(soundex(pString)) @AT@ 5950 @LENGTH@ 16
+
+
+UPD ExpressionStatement@@MethodInvocation:suite.addTest(TestHashBidiMap.suite()) @TO@ MethodInvocation:suite.addTest(TestDualHashBidiMap.suite()) @AT@ 4738 @LENGTH@ 39
+---UPD MethodInvocation@@suite.addTest(TestHashBidiMap.suite()) @TO@ suite.addTest(TestDualHashBidiMap.suite()) @AT@ 4738 @LENGTH@ 38
+------UPD SimpleName@@MethodName:addTest:[TestHashBidiMap.suite()] @TO@ MethodName:addTest:[TestDualHashBidiMap.suite()] @AT@ 4744 @LENGTH@ 32
+---------UPD MethodInvocation@@TestHashBidiMap.suite() @TO@ TestDualHashBidiMap.suite() @AT@ 4752 @LENGTH@ 23
+------------UPD SimpleName@@Name:TestHashBidiMap @TO@ Name:TestDualHashBidiMap @AT@ 4752 @LENGTH@ 15
+
+
+INS MethodDeclaration@@public, void, MethodName:testMaxLengthLessThan3Fix, Exception,  @TO@ TypeDeclaration@@[public]SoundexTest, StringEncoderAbstractTest @AT@ 11209 @LENGTH@ 196
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testMaxLengthLessThan3Fix, Exception,  @AT@ 11209 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testMaxLengthLessThan3Fix, Exception,  @AT@ 11216 @LENGTH@ 4
+---INS SimpleName@@MethodName:testMaxLengthLessThan3Fix @TO@ MethodDeclaration@@public, void, MethodName:testMaxLengthLessThan3Fix, Exception,  @AT@ 11221 @LENGTH@ 25
+---INS SimpleType@@Exception @TO@ MethodDeclaration@@public, void, MethodName:testMaxLengthLessThan3Fix, Exception,  @AT@ 11256 @LENGTH@ 9
+---INS VariableDeclarationStatement@@Soundex soundex=new Soundex(); @TO@ MethodDeclaration@@public, void, MethodName:testMaxLengthLessThan3Fix, Exception,  @AT@ 11276 @LENGTH@ 32
+------INS SimpleType@@Soundex @TO@ VariableDeclarationStatement@@Soundex soundex=new Soundex(); @AT@ 11276 @LENGTH@ 7
+------INS VariableDeclarationFragment@@soundex=new Soundex() @TO@ VariableDeclarationStatement@@Soundex soundex=new Soundex(); @AT@ 11284 @LENGTH@ 23
+---------INS SimpleName@@soundex @TO@ VariableDeclarationFragment@@soundex=new Soundex() @AT@ 11284 @LENGTH@ 7
+---------INS ClassInstanceCreation@@Soundex[] @TO@ VariableDeclarationFragment@@soundex=new Soundex() @AT@ 11294 @LENGTH@ 13
+------------INS New@@new @TO@ ClassInstanceCreation@@Soundex[] @AT@ 11294 @LENGTH@ 3
+------------INS SimpleType@@Soundex @TO@ ClassInstanceCreation@@Soundex[] @AT@ 11298 @LENGTH@ 7
+---INS ExpressionStatement@@MethodInvocation:soundex.setMaxLength(2) @TO@ MethodDeclaration@@public, void, MethodName:testMaxLengthLessThan3Fix, Exception,  @AT@ 11317 @LENGTH@ 24
+------INS MethodInvocation@@soundex.setMaxLength(2) @TO@ ExpressionStatement@@MethodInvocation:soundex.setMaxLength(2) @AT@ 11317 @LENGTH@ 23
+---------INS SimpleName@@Name:soundex @TO@ MethodInvocation@@soundex.setMaxLength(2) @AT@ 11317 @LENGTH@ 7
+---------INS SimpleName@@MethodName:setMaxLength:[2] @TO@ MethodInvocation@@soundex.setMaxLength(2) @AT@ 11325 @LENGTH@ 15
+------------INS NumberLiteral@@2 @TO@ SimpleName@@MethodName:setMaxLength:[2] @AT@ 11338 @LENGTH@ 1
+---INS ExpressionStatement@@MethodInvocation:assertEquals("S460",soundex.encode("SCHELLER")) @TO@ MethodDeclaration@@public, void, MethodName:testMaxLengthLessThan3Fix, Exception,  @AT@ 11350 @LENGTH@ 49
+------INS MethodInvocation@@assertEquals("S460",soundex.encode("SCHELLER")) @TO@ ExpressionStatement@@MethodInvocation:assertEquals("S460",soundex.encode("SCHELLER")) @AT@ 11350 @LENGTH@ 48
+---------INS SimpleName@@MethodName:assertEquals:["S460", soundex.encode("SCHELLER")] @TO@ MethodInvocation@@assertEquals("S460",soundex.encode("SCHELLER")) @AT@ 11350 @LENGTH@ 48
+------------INS StringLiteral@@"S460" @TO@ SimpleName@@MethodName:assertEquals:["S460", soundex.encode("SCHELLER")] @AT@ 11363 @LENGTH@ 6
+------------INS MethodInvocation@@soundex.encode("SCHELLER") @TO@ SimpleName@@MethodName:assertEquals:["S460", soundex.encode("SCHELLER")] @AT@ 11371 @LENGTH@ 26
+---------------INS SimpleName@@Name:soundex @TO@ MethodInvocation@@soundex.encode("SCHELLER") @AT@ 11371 @LENGTH@ 7
+---------------INS SimpleName@@MethodName:encode:["SCHELLER"] @TO@ MethodInvocation@@soundex.encode("SCHELLER") @AT@ 11379 @LENGTH@ 18
+------------------INS StringLiteral@@"SCHELLER" @TO@ SimpleName@@MethodName:encode:["SCHELLER"] @AT@ 11386 @LENGTH@ 10

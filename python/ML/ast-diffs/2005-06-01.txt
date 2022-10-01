@@ -1,0 +1,546 @@
+INS MethodDeclaration@@public, void, MethodName:putAll, Map map,  @TO@ TypeDeclaration@@[public]MultiValueMap, AbstractMapDecorator[MultiMap] @AT@ 8134 @LENGTH@ 559
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:putAll, Map map,  @AT@ 8134 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:putAll, Map map,  @AT@ 8141 @LENGTH@ 4
+---INS SimpleName@@MethodName:putAll @TO@ MethodDeclaration@@public, void, MethodName:putAll, Map map,  @AT@ 8146 @LENGTH@ 6
+---INS SingleVariableDeclaration@@Map map @TO@ MethodDeclaration@@public, void, MethodName:putAll, Map map,  @AT@ 8153 @LENGTH@ 7
+------INS SimpleType@@Map @TO@ SingleVariableDeclaration@@Map map @AT@ 8153 @LENGTH@ 3
+------INS SimpleName@@map @TO@ SingleVariableDeclaration@@Map map @AT@ 8157 @LENGTH@ 3
+---INS IfStatement@@if (map instanceof MultiMap) {  for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {    Map.Entry entry=(Map.Entry)it.next();    Collection coll=(Collection)entry.getValue();    putAll(entry.getKey(),coll);  }} else {  for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {    Map.Entry entry=(Map.Entry)it.next();    put(entry.getKey(),entry.getValue());  }} @TO@ MethodDeclaration@@public, void, MethodName:putAll, Map map,  @AT@ 8172 @LENGTH@ 515
+------INS InstanceofExpression@@map instanceof MultiMap @TO@ IfStatement@@if (map instanceof MultiMap) {  for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {    Map.Entry entry=(Map.Entry)it.next();    Collection coll=(Collection)entry.getValue();    putAll(entry.getKey(),coll);  }} else {  for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {    Map.Entry entry=(Map.Entry)it.next();    put(entry.getKey(),entry.getValue());  }} @AT@ 8176 @LENGTH@ 23
+---------INS SimpleName@@map @TO@ InstanceofExpression@@map instanceof MultiMap @AT@ 8176 @LENGTH@ 3
+---------INS Instanceof@@instanceof @TO@ InstanceofExpression@@map instanceof MultiMap @AT@ 8180 @LENGTH@ 10
+---------INS SimpleType@@MultiMap @TO@ InstanceofExpression@@map instanceof MultiMap @AT@ 8191 @LENGTH@ 8
+------INS Block@@ThenBody:{  for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {    Map.Entry entry=(Map.Entry)it.next();    Collection coll=(Collection)entry.getValue();    putAll(entry.getKey(),coll);  }} @TO@ IfStatement@@if (map instanceof MultiMap) {  for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {    Map.Entry entry=(Map.Entry)it.next();    Collection coll=(Collection)entry.getValue();    putAll(entry.getKey(),coll);  }} else {  for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {    Map.Entry entry=(Map.Entry)it.next();    put(entry.getKey(),entry.getValue());  }} @AT@ 8201 @LENGTH@ 268
+---------INS ForStatement@@for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {  Map.Entry entry=(Map.Entry)it.next();  Collection coll=(Collection)entry.getValue();  putAll(entry.getKey(),coll);} @TO@ Block@@ThenBody:{  for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {    Map.Entry entry=(Map.Entry)it.next();    Collection coll=(Collection)entry.getValue();    putAll(entry.getKey(),coll);  }} @AT@ 8215 @LENGTH@ 244
+------------INS VariableDeclarationExpression@@Iterator it=map.entrySet().iterator() @TO@ ForStatement@@for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {  Map.Entry entry=(Map.Entry)it.next();  Collection coll=(Collection)entry.getValue();  putAll(entry.getKey(),coll);} @AT@ 8220 @LENGTH@ 39
+---------------INS SimpleType@@Iterator @TO@ VariableDeclarationExpression@@Iterator it=map.entrySet().iterator() @AT@ 8220 @LENGTH@ 8
+---------------INS VariableDeclarationFragment@@it=map.entrySet().iterator() @TO@ VariableDeclarationExpression@@Iterator it=map.entrySet().iterator() @AT@ 8229 @LENGTH@ 30
+------------------INS SimpleName@@it @TO@ VariableDeclarationFragment@@it=map.entrySet().iterator() @AT@ 8229 @LENGTH@ 2
+------------------INS MethodInvocation@@map.entrySet().iterator() @TO@ VariableDeclarationFragment@@it=map.entrySet().iterator() @AT@ 8234 @LENGTH@ 25
+---------------------INS MethodInvocation@@MethodName:entrySet:[] @TO@ MethodInvocation@@map.entrySet().iterator() @AT@ 8234 @LENGTH@ 14
+---------------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.entrySet().iterator() @AT@ 8234 @LENGTH@ 3
+---------------------INS SimpleName@@MethodName:iterator:[] @TO@ MethodInvocation@@map.entrySet().iterator() @AT@ 8249 @LENGTH@ 10
+------------INS MethodInvocation@@it.hasNext() @TO@ ForStatement@@for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {  Map.Entry entry=(Map.Entry)it.next();  Collection coll=(Collection)entry.getValue();  putAll(entry.getKey(),coll);} @AT@ 8261 @LENGTH@ 12
+---------------INS SimpleName@@Name:it @TO@ MethodInvocation@@it.hasNext() @AT@ 8261 @LENGTH@ 2
+---------------INS SimpleName@@MethodName:hasNext:[] @TO@ MethodInvocation@@it.hasNext() @AT@ 8264 @LENGTH@ 9
+------------INS VariableDeclarationStatement@@Map.Entry entry=(Map.Entry)it.next(); @TO@ ForStatement@@for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {  Map.Entry entry=(Map.Entry)it.next();  Collection coll=(Collection)entry.getValue();  putAll(entry.getKey(),coll);} @AT@ 8294 @LENGTH@ 40
+---------------INS SimpleType@@Map.Entry @TO@ VariableDeclarationStatement@@Map.Entry entry=(Map.Entry)it.next(); @AT@ 8294 @LENGTH@ 9
+---------------INS VariableDeclarationFragment@@entry=(Map.Entry)it.next() @TO@ VariableDeclarationStatement@@Map.Entry entry=(Map.Entry)it.next(); @AT@ 8304 @LENGTH@ 29
+------------------INS SimpleName@@entry @TO@ VariableDeclarationFragment@@entry=(Map.Entry)it.next() @AT@ 8304 @LENGTH@ 5
+------------------INS CastExpression@@(Map.Entry)it.next() @TO@ VariableDeclarationFragment@@entry=(Map.Entry)it.next() @AT@ 8312 @LENGTH@ 21
+---------------------INS SimpleType@@Map.Entry @TO@ CastExpression@@(Map.Entry)it.next() @AT@ 8313 @LENGTH@ 9
+---------------------INS MethodInvocation@@it.next() @TO@ CastExpression@@(Map.Entry)it.next() @AT@ 8324 @LENGTH@ 9
+------------------------INS SimpleName@@Name:it @TO@ MethodInvocation@@it.next() @AT@ 8324 @LENGTH@ 2
+------------------------INS SimpleName@@MethodName:next:[] @TO@ MethodInvocation@@it.next() @AT@ 8327 @LENGTH@ 6
+------------INS VariableDeclarationStatement@@Collection coll=(Collection)entry.getValue(); @TO@ ForStatement@@for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {  Map.Entry entry=(Map.Entry)it.next();  Collection coll=(Collection)entry.getValue();  putAll(entry.getKey(),coll);} @AT@ 8351 @LENGTH@ 48
+---------------INS SimpleType@@Collection @TO@ VariableDeclarationStatement@@Collection coll=(Collection)entry.getValue(); @AT@ 8351 @LENGTH@ 10
+---------------INS VariableDeclarationFragment@@coll=(Collection)entry.getValue() @TO@ VariableDeclarationStatement@@Collection coll=(Collection)entry.getValue(); @AT@ 8362 @LENGTH@ 36
+------------------INS SimpleName@@coll @TO@ VariableDeclarationFragment@@coll=(Collection)entry.getValue() @AT@ 8362 @LENGTH@ 4
+------------------INS CastExpression@@(Collection)entry.getValue() @TO@ VariableDeclarationFragment@@coll=(Collection)entry.getValue() @AT@ 8369 @LENGTH@ 29
+---------------------INS SimpleType@@Collection @TO@ CastExpression@@(Collection)entry.getValue() @AT@ 8370 @LENGTH@ 10
+---------------------INS MethodInvocation@@entry.getValue() @TO@ CastExpression@@(Collection)entry.getValue() @AT@ 8382 @LENGTH@ 16
+------------------------INS SimpleName@@Name:entry @TO@ MethodInvocation@@entry.getValue() @AT@ 8382 @LENGTH@ 5
+------------------------INS SimpleName@@MethodName:getValue:[] @TO@ MethodInvocation@@entry.getValue() @AT@ 8388 @LENGTH@ 10
+------------INS ExpressionStatement@@MethodInvocation:putAll(entry.getKey(),coll) @TO@ ForStatement@@for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {  Map.Entry entry=(Map.Entry)it.next();  Collection coll=(Collection)entry.getValue();  putAll(entry.getKey(),coll);} @AT@ 8416 @LENGTH@ 29
+---------------INS MethodInvocation@@putAll(entry.getKey(),coll) @TO@ ExpressionStatement@@MethodInvocation:putAll(entry.getKey(),coll) @AT@ 8416 @LENGTH@ 28
+------------------INS SimpleName@@MethodName:putAll:[entry.getKey(), coll] @TO@ MethodInvocation@@putAll(entry.getKey(),coll) @AT@ 8416 @LENGTH@ 28
+---------------------INS MethodInvocation@@entry.getKey() @TO@ SimpleName@@MethodName:putAll:[entry.getKey(), coll] @AT@ 8423 @LENGTH@ 14
+------------------------INS SimpleName@@Name:entry @TO@ MethodInvocation@@entry.getKey() @AT@ 8423 @LENGTH@ 5
+------------------------INS SimpleName@@MethodName:getKey:[] @TO@ MethodInvocation@@entry.getKey() @AT@ 8429 @LENGTH@ 8
+---------------------INS SimpleName@@coll @TO@ SimpleName@@MethodName:putAll:[entry.getKey(), coll] @AT@ 8439 @LENGTH@ 4
+------INS Block@@ElseBody:{  for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {    Map.Entry entry=(Map.Entry)it.next();    put(entry.getKey(),entry.getValue());  }} @TO@ IfStatement@@if (map instanceof MultiMap) {  for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {    Map.Entry entry=(Map.Entry)it.next();    Collection coll=(Collection)entry.getValue();    putAll(entry.getKey(),coll);  }} else {  for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {    Map.Entry entry=(Map.Entry)it.next();    put(entry.getKey(),entry.getValue());  }} @AT@ 8475 @LENGTH@ 212
+---------INS ForStatement@@for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {  Map.Entry entry=(Map.Entry)it.next();  put(entry.getKey(),entry.getValue());} @TO@ Block@@ElseBody:{  for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {    Map.Entry entry=(Map.Entry)it.next();    put(entry.getKey(),entry.getValue());  }} @AT@ 8489 @LENGTH@ 188
+------------INS VariableDeclarationExpression@@Iterator it=map.entrySet().iterator() @TO@ ForStatement@@for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {  Map.Entry entry=(Map.Entry)it.next();  put(entry.getKey(),entry.getValue());} @AT@ 8494 @LENGTH@ 39
+---------------INS SimpleType@@Iterator @TO@ VariableDeclarationExpression@@Iterator it=map.entrySet().iterator() @AT@ 8494 @LENGTH@ 8
+---------------INS VariableDeclarationFragment@@it=map.entrySet().iterator() @TO@ VariableDeclarationExpression@@Iterator it=map.entrySet().iterator() @AT@ 8503 @LENGTH@ 30
+------------------INS SimpleName@@it @TO@ VariableDeclarationFragment@@it=map.entrySet().iterator() @AT@ 8503 @LENGTH@ 2
+------------------INS MethodInvocation@@map.entrySet().iterator() @TO@ VariableDeclarationFragment@@it=map.entrySet().iterator() @AT@ 8508 @LENGTH@ 25
+---------------------INS MethodInvocation@@MethodName:entrySet:[] @TO@ MethodInvocation@@map.entrySet().iterator() @AT@ 8508 @LENGTH@ 14
+---------------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.entrySet().iterator() @AT@ 8508 @LENGTH@ 3
+---------------------INS SimpleName@@MethodName:iterator:[] @TO@ MethodInvocation@@map.entrySet().iterator() @AT@ 8523 @LENGTH@ 10
+------------INS MethodInvocation@@it.hasNext() @TO@ ForStatement@@for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {  Map.Entry entry=(Map.Entry)it.next();  put(entry.getKey(),entry.getValue());} @AT@ 8535 @LENGTH@ 12
+---------------INS SimpleName@@Name:it @TO@ MethodInvocation@@it.hasNext() @AT@ 8535 @LENGTH@ 2
+---------------INS SimpleName@@MethodName:hasNext:[] @TO@ MethodInvocation@@it.hasNext() @AT@ 8538 @LENGTH@ 9
+------------INS VariableDeclarationStatement@@Map.Entry entry=(Map.Entry)it.next(); @TO@ ForStatement@@for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {  Map.Entry entry=(Map.Entry)it.next();  put(entry.getKey(),entry.getValue());} @AT@ 8568 @LENGTH@ 40
+---------------INS SimpleType@@Map.Entry @TO@ VariableDeclarationStatement@@Map.Entry entry=(Map.Entry)it.next(); @AT@ 8568 @LENGTH@ 9
+---------------INS VariableDeclarationFragment@@entry=(Map.Entry)it.next() @TO@ VariableDeclarationStatement@@Map.Entry entry=(Map.Entry)it.next(); @AT@ 8578 @LENGTH@ 29
+------------------INS SimpleName@@entry @TO@ VariableDeclarationFragment@@entry=(Map.Entry)it.next() @AT@ 8578 @LENGTH@ 5
+------------------INS CastExpression@@(Map.Entry)it.next() @TO@ VariableDeclarationFragment@@entry=(Map.Entry)it.next() @AT@ 8586 @LENGTH@ 21
+---------------------INS SimpleType@@Map.Entry @TO@ CastExpression@@(Map.Entry)it.next() @AT@ 8587 @LENGTH@ 9
+---------------------INS MethodInvocation@@it.next() @TO@ CastExpression@@(Map.Entry)it.next() @AT@ 8598 @LENGTH@ 9
+------------------------INS SimpleName@@Name:it @TO@ MethodInvocation@@it.next() @AT@ 8598 @LENGTH@ 2
+------------------------INS SimpleName@@MethodName:next:[] @TO@ MethodInvocation@@it.next() @AT@ 8601 @LENGTH@ 6
+------------INS ExpressionStatement@@MethodInvocation:put(entry.getKey(),entry.getValue()) @TO@ ForStatement@@for (Iterator it=map.entrySet().iterator(); it.hasNext(); ) {  Map.Entry entry=(Map.Entry)it.next();  put(entry.getKey(),entry.getValue());} @AT@ 8625 @LENGTH@ 38
+---------------INS MethodInvocation@@put(entry.getKey(),entry.getValue()) @TO@ ExpressionStatement@@MethodInvocation:put(entry.getKey(),entry.getValue()) @AT@ 8625 @LENGTH@ 37
+------------------INS SimpleName@@MethodName:put:[entry.getKey(), entry.getValue()] @TO@ MethodInvocation@@put(entry.getKey(),entry.getValue()) @AT@ 8625 @LENGTH@ 37
+---------------------INS MethodInvocation@@entry.getKey() @TO@ SimpleName@@MethodName:put:[entry.getKey(), entry.getValue()] @AT@ 8629 @LENGTH@ 14
+------------------------INS SimpleName@@Name:entry @TO@ MethodInvocation@@entry.getKey() @AT@ 8629 @LENGTH@ 5
+------------------------INS SimpleName@@MethodName:getKey:[] @TO@ MethodInvocation@@entry.getKey() @AT@ 8635 @LENGTH@ 8
+---------------------INS MethodInvocation@@entry.getValue() @TO@ SimpleName@@MethodName:put:[entry.getKey(), entry.getValue()] @AT@ 8645 @LENGTH@ 16
+------------------------INS SimpleName@@Name:entry @TO@ MethodInvocation@@entry.getValue() @AT@ 8645 @LENGTH@ 5
+------------------------INS SimpleName@@MethodName:getValue:[] @TO@ MethodInvocation@@entry.getValue() @AT@ 8651 @LENGTH@ 10
+
+
+UPD ExpressionStatement@@MethodInvocation:assertEquals("jacklord",targetAuth.getPrincipal()) @TO@ MethodInvocation:assertEquals("jacklord",((User)targetAuth.getPrincipal()).getUsername()) @AT@ 14176 @LENGTH@ 52
+---UPD MethodInvocation@@assertEquals("jacklord",targetAuth.getPrincipal()) @TO@ assertEquals("jacklord",((User)targetAuth.getPrincipal()).getUsername()) @AT@ 14176 @LENGTH@ 51
+------UPD SimpleName@@MethodName:assertEquals:["jacklord", targetAuth.getPrincipal()] @TO@ MethodName:assertEquals:["jacklord", ((User)targetAuth.getPrincipal()).getUsername()] @AT@ 14176 @LENGTH@ 51
+---------DEL MethodInvocation@@targetAuth.getPrincipal() @AT@ 14201 @LENGTH@ 25
+---------INS MethodInvocation@@((User)targetAuth.getPrincipal()).getUsername() @TO@ SimpleName@@MethodName:assertEquals:["jacklord", targetAuth.getPrincipal()] @AT@ 14271 @LENGTH@ 47
+------------INS ParenthesizedExpression@@((User)targetAuth.getPrincipal()) @TO@ MethodInvocation@@((User)targetAuth.getPrincipal()).getUsername() @AT@ 14271 @LENGTH@ 33
+---------------INS CastExpression@@(User)targetAuth.getPrincipal() @TO@ ParenthesizedExpression@@((User)targetAuth.getPrincipal()) @AT@ 14272 @LENGTH@ 31
+------------------INS SimpleType@@User @TO@ CastExpression@@(User)targetAuth.getPrincipal() @AT@ 14273 @LENGTH@ 4
+------------------INS MethodInvocation@@targetAuth.getPrincipal() @TO@ CastExpression@@(User)targetAuth.getPrincipal() @AT@ 14278 @LENGTH@ 25
+---------------------MOV SimpleName@@Name:targetAuth @TO@ MethodInvocation@@targetAuth.getPrincipal() @AT@ 14201 @LENGTH@ 10
+---------------------MOV SimpleName@@Name:targetAuth @TO@ MethodInvocation@@targetAuth.getPrincipal() @AT@ 14201 @LENGTH@ 10
+---------------------MOV SimpleName@@MethodName:getPrincipal:[] @TO@ MethodInvocation@@targetAuth.getPrincipal() @AT@ 14212 @LENGTH@ 14
+---------------------MOV SimpleName@@MethodName:getPrincipal:[] @TO@ MethodInvocation@@targetAuth.getPrincipal() @AT@ 14212 @LENGTH@ 14
+------------INS SimpleName@@MethodName:getUsername:[] @TO@ MethodInvocation@@((User)targetAuth.getPrincipal()).getUsername() @AT@ 14305 @LENGTH@ 13
+
+
+INS MethodDeclaration@@public, void, MethodName:testContextIsResetEvenIfExceptionOccurs, Exception,  @TO@ TypeDeclaration@@[public]ContextPropagatingRemoteInvocationTests, TestCase @AT@ 3456 @LENGTH@ 850
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testContextIsResetEvenIfExceptionOccurs, Exception,  @AT@ 3456 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testContextIsResetEvenIfExceptionOccurs, Exception,  @AT@ 3463 @LENGTH@ 4
+---INS SimpleName@@MethodName:testContextIsResetEvenIfExceptionOccurs @TO@ MethodDeclaration@@public, void, MethodName:testContextIsResetEvenIfExceptionOccurs, Exception,  @AT@ 3468 @LENGTH@ 39
+---INS SimpleType@@Exception @TO@ MethodDeclaration@@public, void, MethodName:testContextIsResetEvenIfExceptionOccurs, Exception,  @AT@ 3517 @LENGTH@ 9
+---INS VariableDeclarationStatement@@Authentication clientSideAuthentication=new UsernamePasswordAuthenticationToken("marissa","koala"); @TO@ MethodDeclaration@@public, void, MethodName:testContextIsResetEvenIfExceptionOccurs, Exception,  @AT@ 3574 @LENGTH@ 118
+------INS SimpleType@@Authentication @TO@ VariableDeclarationStatement@@Authentication clientSideAuthentication=new UsernamePasswordAuthenticationToken("marissa","koala"); @AT@ 3574 @LENGTH@ 14
+------INS VariableDeclarationFragment@@clientSideAuthentication=new UsernamePasswordAuthenticationToken("marissa","koala") @TO@ VariableDeclarationStatement@@Authentication clientSideAuthentication=new UsernamePasswordAuthenticationToken("marissa","koala"); @AT@ 3589 @LENGTH@ 102
+---------INS SimpleName@@clientSideAuthentication @TO@ VariableDeclarationFragment@@clientSideAuthentication=new UsernamePasswordAuthenticationToken("marissa","koala") @AT@ 3589 @LENGTH@ 24
+---------INS ClassInstanceCreation@@UsernamePasswordAuthenticationToken["marissa", "koala"] @TO@ VariableDeclarationFragment@@clientSideAuthentication=new UsernamePasswordAuthenticationToken("marissa","koala") @AT@ 3616 @LENGTH@ 75
+------------INS New@@new @TO@ ClassInstanceCreation@@UsernamePasswordAuthenticationToken["marissa", "koala"] @AT@ 3616 @LENGTH@ 3
+------------INS SimpleType@@UsernamePasswordAuthenticationToken @TO@ ClassInstanceCreation@@UsernamePasswordAuthenticationToken["marissa", "koala"] @AT@ 3620 @LENGTH@ 35
+------------INS StringLiteral@@"marissa" @TO@ ClassInstanceCreation@@UsernamePasswordAuthenticationToken["marissa", "koala"] @AT@ 3656 @LENGTH@ 9
+------------INS StringLiteral@@"koala" @TO@ ClassInstanceCreation@@UsernamePasswordAuthenticationToken["marissa", "koala"] @AT@ 3683 @LENGTH@ 7
+---INS ExpressionStatement@@MethodInvocation:SecurityContextHolder.getContext().setAuthentication(clientSideAuthentication) @TO@ MethodDeclaration@@public, void, MethodName:testContextIsResetEvenIfExceptionOccurs, Exception,  @AT@ 3701 @LENGTH@ 79
+------INS MethodInvocation@@SecurityContextHolder.getContext().setAuthentication(clientSideAuthentication) @TO@ ExpressionStatement@@MethodInvocation:SecurityContextHolder.getContext().setAuthentication(clientSideAuthentication) @AT@ 3701 @LENGTH@ 78
+---------INS MethodInvocation@@MethodName:getContext:[] @TO@ MethodInvocation@@SecurityContextHolder.getContext().setAuthentication(clientSideAuthentication) @AT@ 3701 @LENGTH@ 34
+---------INS SimpleName@@Name:SecurityContextHolder @TO@ MethodInvocation@@SecurityContextHolder.getContext().setAuthentication(clientSideAuthentication) @AT@ 3701 @LENGTH@ 21
+---------INS SimpleName@@MethodName:setAuthentication:[clientSideAuthentication] @TO@ MethodInvocation@@SecurityContextHolder.getContext().setAuthentication(clientSideAuthentication) @AT@ 3736 @LENGTH@ 43
+------------INS SimpleName@@clientSideAuthentication @TO@ SimpleName@@MethodName:setAuthentication:[clientSideAuthentication] @AT@ 3754 @LENGTH@ 24
+---INS VariableDeclarationStatement@@ContextPropagatingRemoteInvocation remoteInvocation=getRemoteInvocation(); @TO@ MethodDeclaration@@public, void, MethodName:testContextIsResetEvenIfExceptionOccurs, Exception,  @AT@ 3790 @LENGTH@ 76
+------INS SimpleType@@ContextPropagatingRemoteInvocation @TO@ VariableDeclarationStatement@@ContextPropagatingRemoteInvocation remoteInvocation=getRemoteInvocation(); @AT@ 3790 @LENGTH@ 34
+------INS VariableDeclarationFragment@@remoteInvocation=getRemoteInvocation() @TO@ VariableDeclarationStatement@@ContextPropagatingRemoteInvocation remoteInvocation=getRemoteInvocation(); @AT@ 3825 @LENGTH@ 40
+---------INS SimpleName@@remoteInvocation @TO@ VariableDeclarationFragment@@remoteInvocation=getRemoteInvocation() @AT@ 3825 @LENGTH@ 16
+---------INS MethodInvocation@@MethodName:getRemoteInvocation:[] @TO@ VariableDeclarationFragment@@remoteInvocation=getRemoteInvocation() @AT@ 3844 @LENGTH@ 21
+---INS TryStatement@@try {  remoteInvocation.setArguments(new Object[]{});  remoteInvocation.invoke(TargetObject.class.newInstance());  fail("Expected IllegalArgumentException");} catch (IllegalArgumentException e) {} @TO@ MethodDeclaration@@public, void, MethodName:testContextIsResetEvenIfExceptionOccurs, Exception,  @AT@ 3876 @LENGTH@ 314
+------INS ExpressionStatement@@MethodInvocation:remoteInvocation.setArguments(new Object[]{}) @TO@ TryStatement@@try {  remoteInvocation.setArguments(new Object[]{});  remoteInvocation.invoke(TargetObject.class.newInstance());  fail("Expected IllegalArgumentException");} catch (IllegalArgumentException e) {} @AT@ 3937 @LENGTH@ 47
+---------INS MethodInvocation@@remoteInvocation.setArguments(new Object[]{}) @TO@ ExpressionStatement@@MethodInvocation:remoteInvocation.setArguments(new Object[]{}) @AT@ 3937 @LENGTH@ 46
+------------INS SimpleName@@Name:remoteInvocation @TO@ MethodInvocation@@remoteInvocation.setArguments(new Object[]{}) @AT@ 3937 @LENGTH@ 16
+------------INS SimpleName@@MethodName:setArguments:[new Object[]{}] @TO@ MethodInvocation@@remoteInvocation.setArguments(new Object[]{}) @AT@ 3954 @LENGTH@ 29
+---------------INS ArrayCreation@@new Object[]{} @TO@ SimpleName@@MethodName:setArguments:[new Object[]{}] @AT@ 3967 @LENGTH@ 15
+------------------INS ArrayType@@Object[] @TO@ ArrayCreation@@new Object[]{} @AT@ 3971 @LENGTH@ 8
+---------------------INS SimpleType@@Object @TO@ ArrayType@@Object[] @AT@ 3971 @LENGTH@ 6
+------------------INS ArrayInitializer@@{} @TO@ ArrayCreation@@new Object[]{} @AT@ 3980 @LENGTH@ 2
+------INS ExpressionStatement@@MethodInvocation:remoteInvocation.invoke(TargetObject.class.newInstance()) @TO@ TryStatement@@try {  remoteInvocation.setArguments(new Object[]{});  remoteInvocation.invoke(TargetObject.class.newInstance());  fail("Expected IllegalArgumentException");} catch (IllegalArgumentException e) {} @AT@ 3997 @LENGTH@ 58
+---------INS MethodInvocation@@remoteInvocation.invoke(TargetObject.class.newInstance()) @TO@ ExpressionStatement@@MethodInvocation:remoteInvocation.invoke(TargetObject.class.newInstance()) @AT@ 3997 @LENGTH@ 57
+------------INS SimpleName@@Name:remoteInvocation @TO@ MethodInvocation@@remoteInvocation.invoke(TargetObject.class.newInstance()) @AT@ 3997 @LENGTH@ 16
+------------INS SimpleName@@MethodName:invoke:[TargetObject.class.newInstance()] @TO@ MethodInvocation@@remoteInvocation.invoke(TargetObject.class.newInstance()) @AT@ 4014 @LENGTH@ 40
+---------------INS MethodInvocation@@TargetObject.class.newInstance() @TO@ SimpleName@@MethodName:invoke:[TargetObject.class.newInstance()] @AT@ 4021 @LENGTH@ 32
+------------------INS TypeLiteral@@TargetObject.class @TO@ MethodInvocation@@TargetObject.class.newInstance() @AT@ 4021 @LENGTH@ 18
+------------------INS SimpleName@@MethodName:newInstance:[] @TO@ MethodInvocation@@TargetObject.class.newInstance() @AT@ 4040 @LENGTH@ 13
+------INS ExpressionStatement@@MethodInvocation:fail("Expected IllegalArgumentException") @TO@ TryStatement@@try {  remoteInvocation.setArguments(new Object[]{});  remoteInvocation.invoke(TargetObject.class.newInstance());  fail("Expected IllegalArgumentException");} catch (IllegalArgumentException e) {} @AT@ 4068 @LENGTH@ 42
+---------INS MethodInvocation@@fail("Expected IllegalArgumentException") @TO@ ExpressionStatement@@MethodInvocation:fail("Expected IllegalArgumentException") @AT@ 4068 @LENGTH@ 41
+------------INS SimpleName@@MethodName:fail:["Expected IllegalArgumentException"] @TO@ MethodInvocation@@fail("Expected IllegalArgumentException") @AT@ 4068 @LENGTH@ 41
+---------------INS StringLiteral@@"Expected IllegalArgumentException" @TO@ SimpleName@@MethodName:fail:["Expected IllegalArgumentException"] @AT@ 4073 @LENGTH@ 35
+------INS CatchClause@@catch (IllegalArgumentException e) {} @TO@ TryStatement@@try {  remoteInvocation.setArguments(new Object[]{});  remoteInvocation.invoke(TargetObject.class.newInstance());  fail("Expected IllegalArgumentException");} catch (IllegalArgumentException e) {} @AT@ 4121 @LENGTH@ 69
+---------INS SingleVariableDeclaration@@IllegalArgumentException e @TO@ CatchClause@@catch (IllegalArgumentException e) {} @AT@ 4127 @LENGTH@ 26
+------------INS SimpleType@@IllegalArgumentException @TO@ SingleVariableDeclaration@@IllegalArgumentException e @AT@ 4127 @LENGTH@ 24
+------------INS SimpleName@@e @TO@ SingleVariableDeclaration@@IllegalArgumentException e @AT@ 4152 @LENGTH@ 1
+---INS ExpressionStatement@@MethodInvocation:assertNull("Authentication must be null ",SecurityContextHolder.getContext().getAuthentication()) @TO@ MethodDeclaration@@public, void, MethodName:testContextIsResetEvenIfExceptionOccurs, Exception,  @AT@ 4200 @LENGTH@ 99
+------INS MethodInvocation@@assertNull("Authentication must be null ",SecurityContextHolder.getContext().getAuthentication()) @TO@ ExpressionStatement@@MethodInvocation:assertNull("Authentication must be null ",SecurityContextHolder.getContext().getAuthentication()) @AT@ 4200 @LENGTH@ 98
+---------INS SimpleName@@MethodName:assertNull:["Authentication must be null ", SecurityContextHolder.getContext().getAuthentication()] @TO@ MethodInvocation@@assertNull("Authentication must be null ",SecurityContextHolder.getContext().getAuthentication()) @AT@ 4200 @LENGTH@ 98
+------------INS StringLiteral@@"Authentication must be null " @TO@ SimpleName@@MethodName:assertNull:["Authentication must be null ", SecurityContextHolder.getContext().getAuthentication()] @AT@ 4211 @LENGTH@ 30
+------------INS MethodInvocation@@SecurityContextHolder.getContext().getAuthentication() @TO@ SimpleName@@MethodName:assertNull:["Authentication must be null ", SecurityContextHolder.getContext().getAuthentication()] @AT@ 4243 @LENGTH@ 54
+---------------INS MethodInvocation@@MethodName:getContext:[] @TO@ MethodInvocation@@SecurityContextHolder.getContext().getAuthentication() @AT@ 4243 @LENGTH@ 34
+---------------INS SimpleName@@Name:SecurityContextHolder @TO@ MethodInvocation@@SecurityContextHolder.getContext().getAuthentication() @AT@ 4243 @LENGTH@ 21
+---------------INS SimpleName@@MethodName:getAuthentication:[] @TO@ MethodInvocation@@SecurityContextHolder.getContext().getAuthentication() @AT@ 4278 @LENGTH@ 19
+
+
+UPD CatchClause@@catch (IllegalArgumentException expected) {  assertEquals("FilterChainProxy requires the FitlerInvocationDefinitionSource to return a non-null response to getConfigAttributeDefinitions()",expected.getMessage());} @TO@ catch (IllegalArgumentException expected) {  System.out.println(expected.getMessage());  assertEquals("Exception message mismatch","FilterChainProxy requires the FilterInvocationDefinitionSource to return a non-null response to getConfigAttributeDefinitions()",expected.getMessage());} @AT@ 2664 @LENGTH@ 249
+---INS ExpressionStatement@@MethodInvocation:System.out.println(expected.getMessage()) @TO@ CatchClause@@catch (IllegalArgumentException expected) {  assertEquals("FilterChainProxy requires the FitlerInvocationDefinitionSource to return a non-null response to getConfigAttributeDefinitions()",expected.getMessage());} @AT@ 2717 @LENGTH@ 42
+------INS MethodInvocation@@System.out.println(expected.getMessage()) @TO@ ExpressionStatement@@MethodInvocation:System.out.println(expected.getMessage()) @AT@ 2717 @LENGTH@ 41
+---------INS QualifiedName@@Name:System.out @TO@ MethodInvocation@@System.out.println(expected.getMessage()) @AT@ 2717 @LENGTH@ 10
+---------INS SimpleName@@MethodName:println:[expected.getMessage()] @TO@ MethodInvocation@@System.out.println(expected.getMessage()) @AT@ 2728 @LENGTH@ 30
+------------INS MethodInvocation@@expected.getMessage() @TO@ SimpleName@@MethodName:println:[expected.getMessage()] @AT@ 2736 @LENGTH@ 21
+---------------INS SimpleName@@Name:expected @TO@ MethodInvocation@@expected.getMessage() @AT@ 2736 @LENGTH@ 8
+---------------INS SimpleName@@MethodName:getMessage:[] @TO@ MethodInvocation@@expected.getMessage() @AT@ 2745 @LENGTH@ 12
+---UPD ExpressionStatement@@MethodInvocation:assertEquals("FilterChainProxy requires the FitlerInvocationDefinitionSource to return a non-null response to getConfigAttributeDefinitions()",expected.getMessage()) @TO@ MethodInvocation:assertEquals("Exception message mismatch","FilterChainProxy requires the FilterInvocationDefinitionSource to return a non-null response to getConfigAttributeDefinitions()",expected.getMessage()) @AT@ 2720 @LENGTH@ 183
+------UPD MethodInvocation@@assertEquals("FilterChainProxy requires the FitlerInvocationDefinitionSource to return a non-null response to getConfigAttributeDefinitions()",expected.getMessage()) @TO@ assertEquals("Exception message mismatch","FilterChainProxy requires the FilterInvocationDefinitionSource to return a non-null response to getConfigAttributeDefinitions()",expected.getMessage()) @AT@ 2720 @LENGTH@ 182
+---------UPD SimpleName@@MethodName:assertEquals:["FilterChainProxy requires the FitlerInvocationDefinitionSource to return a non-null response to getConfigAttributeDefinitions()", expected.getMessage()] @TO@ MethodName:assertEquals:["Exception message mismatch", "FilterChainProxy requires the FilterInvocationDefinitionSource to return a non-null response to getConfigAttributeDefinitions()", expected.getMessage()] @AT@ 2720 @LENGTH@ 182
+------------UPD StringLiteral@@"FilterChainProxy requires the FitlerInvocationDefinitionSource to return a non-null response to getConfigAttributeDefinitions()" @TO@ "FilterChainProxy requires the FilterInvocationDefinitionSource to return a non-null response to getConfigAttributeDefinitions()" @AT@ 2733 @LENGTH@ 129
+------------INS StringLiteral@@"Exception message mismatch" @TO@ SimpleName@@MethodName:assertEquals:["FilterChainProxy requires the FitlerInvocationDefinitionSource to return a non-null response to getConfigAttributeDefinitions()", expected.getMessage()] @AT@ 2785 @LENGTH@ 28
+
+
+UPD IfStatement@@if (SecurityContextHolder.getContext().getAuthentication() == null) {  SecurityContextHolder.getContext().setAuthentication(rememberMeServices.autoLogin(httpRequest,httpResponse));  if (logger.isDebugEnabled()) {    logger.debug("Replaced SecurityContextHolder with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");  }  if (this.context != null) {    context.publishEvent(new InteractiveAuthenticationSuccesEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));  }} else {  if (logger.isDebugEnabled()) {    logger.debug("SecurityContextHolder not replaced with remember-me token, as SecurityContextHolder already contained: '" + SecurityContextHolder.getContext().getAuthentication() + "'");  }} @TO@ if (SecurityContextHolder.getContext().getAuthentication() == null) {  Authentication rememberMeAuth=rememberMeServices.autoLogin(httpRequest,httpResponse);  if (rememberMeAuth != null) {    SecurityContextHolder.getContext().setAuthentication(rememberMeAuth);    if (logger.isDebugEnabled()) {      logger.debug("Replaced SecurityContextHolder with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");    }    if (this.context != null) {      context.publishEvent(new InteractiveAuthenticationSuccesEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));    }  }} else {  if (logger.isDebugEnabled()) {    logger.debug("SecurityContextHolder not replaced with remember-me token, as SecurityContextHolder already contained: '" + SecurityContextHolder.getContext().getAuthentication() + "'");  }} @AT@ 4376 @LENGTH@ 1110
+---UPD Block@@ThenBody:{  SecurityContextHolder.getContext().setAuthentication(rememberMeServices.autoLogin(httpRequest,httpResponse));  if (logger.isDebugEnabled()) {    logger.debug("Replaced SecurityContextHolder with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");  }  if (this.context != null) {    context.publishEvent(new InteractiveAuthenticationSuccesEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));  }} @TO@ ThenBody:{  SecurityContextHolder.getContext().setAuthentication(rememberMeAuth);  if (logger.isDebugEnabled()) {    logger.debug("Replaced SecurityContextHolder with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");  }  if (this.context != null) {    context.publishEvent(new InteractiveAuthenticationSuccesEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));  }} @AT@ 4444 @LENGTH@ 706
+---INS Block@@ThenBody:{  Authentication rememberMeAuth=rememberMeServices.autoLogin(httpRequest,httpResponse);  if (rememberMeAuth != null) {    SecurityContextHolder.getContext().setAuthentication(rememberMeAuth);    if (logger.isDebugEnabled()) {      logger.debug("Replaced SecurityContextHolder with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");    }    if (this.context != null) {      context.publishEvent(new InteractiveAuthenticationSuccesEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));    }  }} @TO@ IfStatement@@if (SecurityContextHolder.getContext().getAuthentication() == null) {  SecurityContextHolder.getContext().setAuthentication(rememberMeServices.autoLogin(httpRequest,httpResponse));  if (logger.isDebugEnabled()) {    logger.debug("Replaced SecurityContextHolder with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");  }  if (this.context != null) {    context.publishEvent(new InteractiveAuthenticationSuccesEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));  }} else {  if (logger.isDebugEnabled()) {    logger.debug("SecurityContextHolder not replaced with remember-me token, as SecurityContextHolder already contained: '" + SecurityContextHolder.getContext().getAuthentication() + "'");  }} @AT@ 4487 @LENGTH@ 877
+------INS VariableDeclarationStatement@@Authentication rememberMeAuth=rememberMeServices.autoLogin(httpRequest,httpResponse); @TO@ Block@@ThenBody:{  Authentication rememberMeAuth=rememberMeServices.autoLogin(httpRequest,httpResponse);  if (rememberMeAuth != null) {    SecurityContextHolder.getContext().setAuthentication(rememberMeAuth);    if (logger.isDebugEnabled()) {      logger.debug("Replaced SecurityContextHolder with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");    }    if (this.context != null) {      context.publishEvent(new InteractiveAuthenticationSuccesEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));    }  }} @AT@ 4501 @LENGTH@ 108
+---------INS SimpleType@@Authentication @TO@ VariableDeclarationStatement@@Authentication rememberMeAuth=rememberMeServices.autoLogin(httpRequest,httpResponse); @AT@ 4501 @LENGTH@ 14
+---------INS VariableDeclarationFragment@@rememberMeAuth=rememberMeServices.autoLogin(httpRequest,httpResponse) @TO@ VariableDeclarationStatement@@Authentication rememberMeAuth=rememberMeServices.autoLogin(httpRequest,httpResponse); @AT@ 4516 @LENGTH@ 92
+------------MOV MethodInvocation@@rememberMeServices.autoLogin(httpRequest,httpResponse) @TO@ VariableDeclarationFragment@@rememberMeAuth=rememberMeServices.autoLogin(httpRequest,httpResponse) @AT@ 4511 @LENGTH@ 72
+------------INS SimpleName@@rememberMeAuth @TO@ VariableDeclarationFragment@@rememberMeAuth=rememberMeServices.autoLogin(httpRequest,httpResponse) @AT@ 4516 @LENGTH@ 14
+------INS IfStatement@@if (rememberMeAuth != null) {  SecurityContextHolder.getContext().setAuthentication(rememberMeAuth);  if (logger.isDebugEnabled()) {    logger.debug("Replaced SecurityContextHolder with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");  }  if (this.context != null) {    context.publishEvent(new InteractiveAuthenticationSuccesEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));  }} @TO@ Block@@ThenBody:{  Authentication rememberMeAuth=rememberMeServices.autoLogin(httpRequest,httpResponse);  if (rememberMeAuth != null) {    SecurityContextHolder.getContext().setAuthentication(rememberMeAuth);    if (logger.isDebugEnabled()) {      logger.debug("Replaced SecurityContextHolder with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");    }    if (this.context != null) {      context.publishEvent(new InteractiveAuthenticationSuccesEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));    }  }} @AT@ 4623 @LENGTH@ 731
+---------MOV Block@@ThenBody:{  SecurityContextHolder.getContext().setAuthentication(rememberMeServices.autoLogin(httpRequest,httpResponse));  if (logger.isDebugEnabled()) {    logger.debug("Replaced SecurityContextHolder with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");  }  if (this.context != null) {    context.publishEvent(new InteractiveAuthenticationSuccesEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));  }} @TO@ IfStatement@@if (rememberMeAuth != null) {  SecurityContextHolder.getContext().setAuthentication(rememberMeAuth);  if (logger.isDebugEnabled()) {    logger.debug("Replaced SecurityContextHolder with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");  }  if (this.context != null) {    context.publishEvent(new InteractiveAuthenticationSuccesEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));  }} @AT@ 4444 @LENGTH@ 706
+------------UPD ExpressionStatement@@MethodInvocation:SecurityContextHolder.getContext().setAuthentication(rememberMeServices.autoLogin(httpRequest,httpResponse)) @TO@ MethodInvocation:SecurityContextHolder.getContext().setAuthentication(rememberMeAuth) @AT@ 4458 @LENGTH@ 127
+---------------UPD MethodInvocation@@SecurityContextHolder.getContext().setAuthentication(rememberMeServices.autoLogin(httpRequest,httpResponse)) @TO@ SecurityContextHolder.getContext().setAuthentication(rememberMeAuth) @AT@ 4458 @LENGTH@ 126
+------------------UPD SimpleName@@MethodName:setAuthentication:[rememberMeServices.autoLogin(httpRequest,httpResponse)] @TO@ MethodName:setAuthentication:[rememberMeAuth] @AT@ 4493 @LENGTH@ 91
+---------------------INS SimpleName@@rememberMeAuth @TO@ SimpleName@@MethodName:setAuthentication:[rememberMeServices.autoLogin(httpRequest,httpResponse)] @AT@ 4721 @LENGTH@ 14
+---------INS InfixExpression@@rememberMeAuth != null @TO@ IfStatement@@if (rememberMeAuth != null) {  SecurityContextHolder.getContext().setAuthentication(rememberMeAuth);  if (logger.isDebugEnabled()) {    logger.debug("Replaced SecurityContextHolder with remember-me token: '" + SecurityContextHolder.getContext().getAuthentication() + "'");  }  if (this.context != null) {    context.publishEvent(new InteractiveAuthenticationSuccesEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass()));  }} @AT@ 4626 @LENGTH@ 22
+------------INS SimpleName@@rememberMeAuth @TO@ InfixExpression@@rememberMeAuth != null @AT@ 4626 @LENGTH@ 14
+------------INS Operator@@!= @TO@ InfixExpression@@rememberMeAuth != null @AT@ 4640 @LENGTH@ 2
+------------INS NullLiteral@@null @TO@ InfixExpression@@rememberMeAuth != null @AT@ 4644 @LENGTH@ 4
+
+
+INS IfStatement@@if (getFileName() == null) {  return null;} else {  if (sourceURL != null) {    return ConfigurationUtils.fileFromURL(sourceURL);  } else {    return ConfigurationUtils.getFile(getBasePath(),getFileName());  }} @TO@ MethodDeclaration@@public, File, MethodName:getFile,  @AT@ 14872 @LENGTH@ 359
+---INS InfixExpression@@getFileName() == null @TO@ IfStatement@@if (getFileName() == null) {  return null;} else {  if (sourceURL != null) {    return ConfigurationUtils.fileFromURL(sourceURL);  } else {    return ConfigurationUtils.getFile(getBasePath(),getFileName());  }} @AT@ 14876 @LENGTH@ 21
+------INS MethodInvocation@@MethodName:getFileName:[] @TO@ InfixExpression@@getFileName() == null @AT@ 14876 @LENGTH@ 13
+------INS Operator@@== @TO@ InfixExpression@@getFileName() == null @AT@ 14889 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@getFileName() == null @AT@ 14893 @LENGTH@ 4
+---INS Block@@ThenBody:{  return null;} @TO@ IfStatement@@if (getFileName() == null) {  return null;} else {  if (sourceURL != null) {    return ConfigurationUtils.fileFromURL(sourceURL);  } else {    return ConfigurationUtils.getFile(getBasePath(),getFileName());  }} @AT@ 14907 @LENGTH@ 36
+------INS ReturnStatement@@NullLiteral:null @TO@ Block@@ThenBody:{  return null;} @AT@ 14921 @LENGTH@ 12
+---------INS NullLiteral@@null @TO@ ReturnStatement@@NullLiteral:null @AT@ 14928 @LENGTH@ 4
+---INS Block@@ElseBody:{  if (sourceURL != null) {    return ConfigurationUtils.fileFromURL(sourceURL);  } else {    return ConfigurationUtils.getFile(getBasePath(),getFileName());  }} @TO@ IfStatement@@if (getFileName() == null) {  return null;} else {  if (sourceURL != null) {    return ConfigurationUtils.fileFromURL(sourceURL);  } else {    return ConfigurationUtils.getFile(getBasePath(),getFileName());  }} @AT@ 14965 @LENGTH@ 266
+------INS IfStatement@@if (sourceURL != null) {  return ConfigurationUtils.fileFromURL(sourceURL);} else {  return ConfigurationUtils.getFile(getBasePath(),getFileName());} @TO@ Block@@ElseBody:{  if (sourceURL != null) {    return ConfigurationUtils.fileFromURL(sourceURL);  } else {    return ConfigurationUtils.getFile(getBasePath(),getFileName());  }} @AT@ 14979 @LENGTH@ 242
+---------INS InfixExpression@@sourceURL != null @TO@ IfStatement@@if (sourceURL != null) {  return ConfigurationUtils.fileFromURL(sourceURL);} else {  return ConfigurationUtils.getFile(getBasePath(),getFileName());} @AT@ 14983 @LENGTH@ 17
+------------INS SimpleName@@sourceURL @TO@ InfixExpression@@sourceURL != null @AT@ 14983 @LENGTH@ 9
+------------INS Operator@@!= @TO@ InfixExpression@@sourceURL != null @AT@ 14992 @LENGTH@ 2
+------------INS NullLiteral@@null @TO@ InfixExpression@@sourceURL != null @AT@ 14996 @LENGTH@ 4
+---------INS Block@@ThenBody:{  return ConfigurationUtils.fileFromURL(sourceURL);} @TO@ IfStatement@@if (sourceURL != null) {  return ConfigurationUtils.fileFromURL(sourceURL);} else {  return ConfigurationUtils.getFile(getBasePath(),getFileName());} @AT@ 15014 @LENGTH@ 81
+------------INS ReturnStatement@@MethodInvocation:ConfigurationUtils.fileFromURL(sourceURL) @TO@ Block@@ThenBody:{  return ConfigurationUtils.fileFromURL(sourceURL);} @AT@ 15032 @LENGTH@ 49
+---------------INS MethodInvocation@@ConfigurationUtils.fileFromURL(sourceURL) @TO@ ReturnStatement@@MethodInvocation:ConfigurationUtils.fileFromURL(sourceURL) @AT@ 15039 @LENGTH@ 41
+------------------INS SimpleName@@Name:ConfigurationUtils @TO@ MethodInvocation@@ConfigurationUtils.fileFromURL(sourceURL) @AT@ 15039 @LENGTH@ 18
+------------------INS SimpleName@@MethodName:fileFromURL:[sourceURL] @TO@ MethodInvocation@@ConfigurationUtils.fileFromURL(sourceURL) @AT@ 15058 @LENGTH@ 22
+---------------------INS SimpleName@@sourceURL @TO@ SimpleName@@MethodName:fileFromURL:[sourceURL] @AT@ 15070 @LENGTH@ 9
+---------INS Block@@ElseBody:{  return ConfigurationUtils.getFile(getBasePath(),getFileName());} @TO@ IfStatement@@if (sourceURL != null) {  return ConfigurationUtils.fileFromURL(sourceURL);} else {  return ConfigurationUtils.getFile(getBasePath(),getFileName());} @AT@ 15125 @LENGTH@ 96
+------------MOV ReturnStatement@@MethodInvocation:ConfigurationUtils.getFile(getBasePath(),getFileName()) @TO@ Block@@ElseBody:{  return ConfigurationUtils.getFile(getBasePath(),getFileName());} @AT@ 14847 @LENGTH@ 64
+
+
+INS MethodDeclaration@@public, void, MethodName:testGetFile, ConfigurationException,  @TO@ TypeDeclaration@@[public]TestFileConfiguration, TestCase @AT@ 11250 @LENGTH@ 388
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, ConfigurationException,  @AT@ 11250 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, ConfigurationException,  @AT@ 11257 @LENGTH@ 4
+---INS SimpleName@@MethodName:testGetFile @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, ConfigurationException,  @AT@ 11262 @LENGTH@ 11
+---INS SimpleType@@ConfigurationException @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, ConfigurationException,  @AT@ 11283 @LENGTH@ 22
+---INS VariableDeclarationStatement@@FileConfiguration config=new PropertiesConfiguration(); @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, ConfigurationException,  @AT@ 11320 @LENGTH@ 57
+------INS SimpleType@@FileConfiguration @TO@ VariableDeclarationStatement@@FileConfiguration config=new PropertiesConfiguration(); @AT@ 11320 @LENGTH@ 17
+------INS VariableDeclarationFragment@@config=new PropertiesConfiguration() @TO@ VariableDeclarationStatement@@FileConfiguration config=new PropertiesConfiguration(); @AT@ 11338 @LENGTH@ 38
+---------INS SimpleName@@config @TO@ VariableDeclarationFragment@@config=new PropertiesConfiguration() @AT@ 11338 @LENGTH@ 6
+---------INS ClassInstanceCreation@@PropertiesConfiguration[] @TO@ VariableDeclarationFragment@@config=new PropertiesConfiguration() @AT@ 11347 @LENGTH@ 29
+------------INS New@@new @TO@ ClassInstanceCreation@@PropertiesConfiguration[] @AT@ 11347 @LENGTH@ 3
+------------INS SimpleType@@PropertiesConfiguration @TO@ ClassInstanceCreation@@PropertiesConfiguration[] @AT@ 11351 @LENGTH@ 23
+---INS ExpressionStatement@@MethodInvocation:assertNull(config.getFile()) @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, ConfigurationException,  @AT@ 11386 @LENGTH@ 29
+------INS MethodInvocation@@assertNull(config.getFile()) @TO@ ExpressionStatement@@MethodInvocation:assertNull(config.getFile()) @AT@ 11386 @LENGTH@ 28
+---------INS SimpleName@@MethodName:assertNull:[config.getFile()] @TO@ MethodInvocation@@assertNull(config.getFile()) @AT@ 11386 @LENGTH@ 28
+------------INS MethodInvocation@@config.getFile() @TO@ SimpleName@@MethodName:assertNull:[config.getFile()] @AT@ 11397 @LENGTH@ 16
+---------------INS SimpleName@@Name:config @TO@ MethodInvocation@@config.getFile() @AT@ 11397 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:getFile:[] @TO@ MethodInvocation@@config.getFile() @AT@ 11404 @LENGTH@ 9
+---INS VariableDeclarationStatement@@File file=new File("conf/test.properties").getAbsoluteFile(); @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, ConfigurationException,  @AT@ 11424 @LENGTH@ 63
+------INS SimpleType@@File @TO@ VariableDeclarationStatement@@File file=new File("conf/test.properties").getAbsoluteFile(); @AT@ 11424 @LENGTH@ 4
+------INS VariableDeclarationFragment@@file=new File("conf/test.properties").getAbsoluteFile() @TO@ VariableDeclarationStatement@@File file=new File("conf/test.properties").getAbsoluteFile(); @AT@ 11429 @LENGTH@ 57
+---------INS SimpleName@@file @TO@ VariableDeclarationFragment@@file=new File("conf/test.properties").getAbsoluteFile() @AT@ 11429 @LENGTH@ 4
+---------INS MethodInvocation@@new File("conf/test.properties").getAbsoluteFile() @TO@ VariableDeclarationFragment@@file=new File("conf/test.properties").getAbsoluteFile() @AT@ 11436 @LENGTH@ 50
+------------INS ClassInstanceCreation@@File["conf/test.properties"] @TO@ MethodInvocation@@new File("conf/test.properties").getAbsoluteFile() @AT@ 11436 @LENGTH@ 32
+---------------INS New@@new @TO@ ClassInstanceCreation@@File["conf/test.properties"] @AT@ 11436 @LENGTH@ 3
+---------------INS SimpleType@@File @TO@ ClassInstanceCreation@@File["conf/test.properties"] @AT@ 11440 @LENGTH@ 4
+---------------INS StringLiteral@@"conf/test.properties" @TO@ ClassInstanceCreation@@File["conf/test.properties"] @AT@ 11445 @LENGTH@ 22
+------------INS SimpleName@@MethodName:getAbsoluteFile:[] @TO@ MethodInvocation@@new File("conf/test.properties").getAbsoluteFile() @AT@ 11469 @LENGTH@ 17
+---INS ExpressionStatement@@MethodInvocation:config.setFile(file) @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, ConfigurationException,  @AT@ 11496 @LENGTH@ 21
+------INS MethodInvocation@@config.setFile(file) @TO@ ExpressionStatement@@MethodInvocation:config.setFile(file) @AT@ 11496 @LENGTH@ 20
+---------INS SimpleName@@Name:config @TO@ MethodInvocation@@config.setFile(file) @AT@ 11496 @LENGTH@ 6
+---------INS SimpleName@@MethodName:setFile:[file] @TO@ MethodInvocation@@config.setFile(file) @AT@ 11503 @LENGTH@ 13
+------------INS SimpleName@@file @TO@ SimpleName@@MethodName:setFile:[file] @AT@ 11511 @LENGTH@ 4
+---INS ExpressionStatement@@MethodInvocation:assertEquals(file,config.getFile()) @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, ConfigurationException,  @AT@ 11526 @LENGTH@ 37
+------INS MethodInvocation@@assertEquals(file,config.getFile()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(file,config.getFile()) @AT@ 11526 @LENGTH@ 36
+---------INS SimpleName@@MethodName:assertEquals:[file, config.getFile()] @TO@ MethodInvocation@@assertEquals(file,config.getFile()) @AT@ 11526 @LENGTH@ 36
+------------INS SimpleName@@file @TO@ SimpleName@@MethodName:assertEquals:[file, config.getFile()] @AT@ 11539 @LENGTH@ 4
+------------INS MethodInvocation@@config.getFile() @TO@ SimpleName@@MethodName:assertEquals:[file, config.getFile()] @AT@ 11545 @LENGTH@ 16
+---------------INS SimpleName@@Name:config @TO@ MethodInvocation@@config.getFile() @AT@ 11545 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:getFile:[] @TO@ MethodInvocation@@config.getFile() @AT@ 11552 @LENGTH@ 9
+---INS ExpressionStatement@@MethodInvocation:config.load() @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, ConfigurationException,  @AT@ 11572 @LENGTH@ 14
+------INS MethodInvocation@@config.load() @TO@ ExpressionStatement@@MethodInvocation:config.load() @AT@ 11572 @LENGTH@ 13
+---------INS SimpleName@@Name:config @TO@ MethodInvocation@@config.load() @AT@ 11572 @LENGTH@ 6
+---------INS SimpleName@@MethodName:load:[] @TO@ MethodInvocation@@config.load() @AT@ 11579 @LENGTH@ 6
+---INS ExpressionStatement@@MethodInvocation:assertEquals(file,config.getFile()) @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, ConfigurationException,  @AT@ 11595 @LENGTH@ 37
+------INS MethodInvocation@@assertEquals(file,config.getFile()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(file,config.getFile()) @AT@ 11595 @LENGTH@ 36
+---------INS SimpleName@@MethodName:assertEquals:[file, config.getFile()] @TO@ MethodInvocation@@assertEquals(file,config.getFile()) @AT@ 11595 @LENGTH@ 36
+------------INS SimpleName@@file @TO@ SimpleName@@MethodName:assertEquals:[file, config.getFile()] @AT@ 11608 @LENGTH@ 4
+------------INS MethodInvocation@@config.getFile() @TO@ SimpleName@@MethodName:assertEquals:[file, config.getFile()] @AT@ 11614 @LENGTH@ 16
+---------------INS SimpleName@@Name:config @TO@ MethodInvocation@@config.getFile() @AT@ 11614 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:getFile:[] @TO@ MethodInvocation@@config.getFile() @AT@ 11621 @LENGTH@ 9
+
+
+INS ExpressionStatement@@MethodInvocation:SecurityContextHolder.getContext().setAuthentication(null) @TO@ MethodDeclaration@@protected, void, MethodName:sendStartAuthentication, FilterInvocation fi, AuthenticationException reason, ServletException, IOException,  @AT@ 11191 @LENGTH@ 59
+---INS MethodInvocation@@SecurityContextHolder.getContext().setAuthentication(null) @TO@ ExpressionStatement@@MethodInvocation:SecurityContextHolder.getContext().setAuthentication(null) @AT@ 11191 @LENGTH@ 58
+------INS MethodInvocation@@MethodName:getContext:[] @TO@ MethodInvocation@@SecurityContextHolder.getContext().setAuthentication(null) @AT@ 11191 @LENGTH@ 34
+------INS SimpleName@@Name:SecurityContextHolder @TO@ MethodInvocation@@SecurityContextHolder.getContext().setAuthentication(null) @AT@ 11191 @LENGTH@ 21
+------INS SimpleName@@MethodName:setAuthentication:[null] @TO@ MethodInvocation@@SecurityContextHolder.getContext().setAuthentication(null) @AT@ 11226 @LENGTH@ 23
+---------INS NullLiteral@@null @TO@ SimpleName@@MethodName:setAuthentication:[null] @AT@ 11244 @LENGTH@ 4
+
+
+UPD TypeDeclaration@@[public]IOFileFilterAbstractTestCase, TestCase @TO@ [public, abstract]IOFileFilterAbstractTestCase, TestCase @AT@ 722 @LENGTH@ 4315
+---INS Modifier@@abstract @TO@ TypeDeclaration@@[public]IOFileFilterAbstractTestCase, TestCase @AT@ 729 @LENGTH@ 8
+
+
+INS ExpressionStatement@@MethodInvocation:suite.addTest(new TestSuite(ClassLoaderObjectInputStreamTest.class)) @TO@ MethodDeclaration@@public, static, Test, MethodName:suite,  @AT@ 1079 @LENGTH@ 69
+---INS MethodInvocation@@suite.addTest(new TestSuite(ClassLoaderObjectInputStreamTest.class)) @TO@ ExpressionStatement@@MethodInvocation:suite.addTest(new TestSuite(ClassLoaderObjectInputStreamTest.class)) @AT@ 1079 @LENGTH@ 68
+------INS SimpleName@@Name:suite @TO@ MethodInvocation@@suite.addTest(new TestSuite(ClassLoaderObjectInputStreamTest.class)) @AT@ 1079 @LENGTH@ 5
+------INS SimpleName@@MethodName:addTest:[new TestSuite(ClassLoaderObjectInputStreamTest.class)] @TO@ MethodInvocation@@suite.addTest(new TestSuite(ClassLoaderObjectInputStreamTest.class)) @AT@ 1085 @LENGTH@ 62
+---------INS ClassInstanceCreation@@TestSuite[ClassLoaderObjectInputStreamTest.class] @TO@ SimpleName@@MethodName:addTest:[new TestSuite(ClassLoaderObjectInputStreamTest.class)] @AT@ 1093 @LENGTH@ 53
+------------INS New@@new @TO@ ClassInstanceCreation@@TestSuite[ClassLoaderObjectInputStreamTest.class] @AT@ 1093 @LENGTH@ 3
+------------INS SimpleType@@TestSuite @TO@ ClassInstanceCreation@@TestSuite[ClassLoaderObjectInputStreamTest.class] @AT@ 1097 @LENGTH@ 9
+------------INS TypeLiteral@@ClassLoaderObjectInputStreamTest.class @TO@ ClassInstanceCreation@@TestSuite[ClassLoaderObjectInputStreamTest.class] @AT@ 1107 @LENGTH@ 38
+
+
+UPD VariableDeclarationStatement@@String name="cn=user.two,ou=users"; @TO@ String name="cn=User Two,ou=users"; @AT@ 2297 @LENGTH@ 37
+---UPD VariableDeclarationFragment@@name="cn=user.two,ou=users" @TO@ name="cn=User Two,ou=users" @AT@ 2304 @LENGTH@ 29
+------UPD StringLiteral@@"cn=user.two,ou=users" @TO@ "cn=User Two,ou=users" @AT@ 2311 @LENGTH@ 22
+
+
+UPD ExpressionStatement@@Assignment:buffer=new Object[size] @TO@ Assignment:buffer=new Object[size + 1] @AT@ 4366 @LENGTH@ 26
+---UPD Assignment@@buffer=new Object[size] @TO@ buffer=new Object[size + 1] @AT@ 4366 @LENGTH@ 25
+------UPD ArrayCreation@@new Object[size] @TO@ new Object[size + 1] @AT@ 4375 @LENGTH@ 16
+---------INS InfixExpression@@size + 1 @TO@ ArrayCreation@@new Object[size] @AT@ 4386 @LENGTH@ 6
+------------INS SimpleName@@size @TO@ InfixExpression@@size + 1 @AT@ 4386 @LENGTH@ 4
+------------INS Operator@@+ @TO@ InfixExpression@@size + 1 @AT@ 4390 @LENGTH@ 1
+------------INS NumberLiteral@@1 @TO@ InfixExpression@@size + 1 @AT@ 4391 @LENGTH@ 1
+---------DEL SimpleName@@size @AT@ 4386 @LENGTH@ 4
+
+
+INS ExpressionStatement@@MethodInvocation:assertTrue(targetAuth.getPrincipal() instanceof UserDetails) @TO@ MethodDeclaration@@public, void, MethodName:testSwitchRequestFromDanoToJackLord, Exception,  @AT@ 14176 @LENGTH@ 61
+---INS MethodInvocation@@assertTrue(targetAuth.getPrincipal() instanceof UserDetails) @TO@ ExpressionStatement@@MethodInvocation:assertTrue(targetAuth.getPrincipal() instanceof UserDetails) @AT@ 14176 @LENGTH@ 60
+------INS SimpleName@@MethodName:assertTrue:[targetAuth.getPrincipal() instanceof UserDetails] @TO@ MethodInvocation@@assertTrue(targetAuth.getPrincipal() instanceof UserDetails) @AT@ 14176 @LENGTH@ 60
+---------INS InstanceofExpression@@targetAuth.getPrincipal() instanceof UserDetails @TO@ SimpleName@@MethodName:assertTrue:[targetAuth.getPrincipal() instanceof UserDetails] @AT@ 14187 @LENGTH@ 48
+------------INS MethodInvocation@@targetAuth.getPrincipal() @TO@ InstanceofExpression@@targetAuth.getPrincipal() instanceof UserDetails @AT@ 14187 @LENGTH@ 25
+---------------INS SimpleName@@Name:targetAuth @TO@ MethodInvocation@@targetAuth.getPrincipal() @AT@ 14187 @LENGTH@ 10
+---------------INS SimpleName@@MethodName:getPrincipal:[] @TO@ MethodInvocation@@targetAuth.getPrincipal() @AT@ 14198 @LENGTH@ 14
+------------INS Instanceof@@instanceof @TO@ InstanceofExpression@@targetAuth.getPrincipal() instanceof UserDetails @AT@ 14213 @LENGTH@ 10
+------------INS SimpleType@@UserDetails @TO@ InstanceofExpression@@targetAuth.getPrincipal() instanceof UserDetails @AT@ 14224 @LENGTH@ 11
+
+
+INS VariableDeclarationStatement@@HttpSession session=request.getSession(forceSessionCreation); @TO@ MethodDeclaration@@public, voidMethodName:WebAuthenticationDetails, HttpServletRequest request, boolean forceSessionCreation,  @AT@ 1837 @LENGTH@ 63
+---INS SimpleType@@HttpSession @TO@ VariableDeclarationStatement@@HttpSession session=request.getSession(forceSessionCreation); @AT@ 1837 @LENGTH@ 11
+---INS VariableDeclarationFragment@@session=request.getSession(forceSessionCreation) @TO@ VariableDeclarationStatement@@HttpSession session=request.getSession(forceSessionCreation); @AT@ 1849 @LENGTH@ 50
+------INS SimpleName@@session @TO@ VariableDeclarationFragment@@session=request.getSession(forceSessionCreation) @AT@ 1849 @LENGTH@ 7
+------INS MethodInvocation@@request.getSession(forceSessionCreation) @TO@ VariableDeclarationFragment@@session=request.getSession(forceSessionCreation) @AT@ 1859 @LENGTH@ 40
+---------INS SimpleName@@Name:request @TO@ MethodInvocation@@request.getSession(forceSessionCreation) @AT@ 1859 @LENGTH@ 7
+---------INS SimpleName@@MethodName:getSession:[forceSessionCreation] @TO@ MethodInvocation@@request.getSession(forceSessionCreation) @AT@ 1867 @LENGTH@ 32
+------------INS SimpleName@@forceSessionCreation @TO@ SimpleName@@MethodName:getSession:[forceSessionCreation] @AT@ 1878 @LENGTH@ 20
+
+
+UPD ExpressionStatement@@MethodInvocation:context.publishEvent(new InteractiveAuthenticationSuccesEvent(authResult,this.getClass())) @TO@ MethodInvocation:context.publishEvent(new InteractiveAuthenticationSuccessEvent(authResult,this.getClass())) @AT@ 6989 @LENGTH@ 113
+---UPD MethodInvocation@@context.publishEvent(new InteractiveAuthenticationSuccesEvent(authResult,this.getClass())) @TO@ context.publishEvent(new InteractiveAuthenticationSuccessEvent(authResult,this.getClass())) @AT@ 6989 @LENGTH@ 112
+------UPD SimpleName@@MethodName:publishEvent:[new InteractiveAuthenticationSuccesEvent(authResult,this.getClass())] @TO@ MethodName:publishEvent:[new InteractiveAuthenticationSuccessEvent(authResult,this.getClass())] @AT@ 6997 @LENGTH@ 104
+---------UPD ClassInstanceCreation@@InteractiveAuthenticationSuccesEvent[authResult, this.getClass()] @TO@ InteractiveAuthenticationSuccessEvent[authResult, this.getClass()] @AT@ 7010 @LENGTH@ 90
+------------UPD SimpleType@@InteractiveAuthenticationSuccesEvent @TO@ InteractiveAuthenticationSuccessEvent @AT@ 7014 @LENGTH@ 36
+
+
+INS ExpressionStatement@@MethodInvocation:suite.addTest(new TestSuite(FileSystemUtilsTestCase.class)) @TO@ MethodDeclaration@@public, static, Test, MethodName:suite,  @AT@ 1504 @LENGTH@ 60
+---INS MethodInvocation@@suite.addTest(new TestSuite(FileSystemUtilsTestCase.class)) @TO@ ExpressionStatement@@MethodInvocation:suite.addTest(new TestSuite(FileSystemUtilsTestCase.class)) @AT@ 1504 @LENGTH@ 59
+------INS SimpleName@@Name:suite @TO@ MethodInvocation@@suite.addTest(new TestSuite(FileSystemUtilsTestCase.class)) @AT@ 1504 @LENGTH@ 5
+------INS SimpleName@@MethodName:addTest:[new TestSuite(FileSystemUtilsTestCase.class)] @TO@ MethodInvocation@@suite.addTest(new TestSuite(FileSystemUtilsTestCase.class)) @AT@ 1510 @LENGTH@ 53
+---------INS ClassInstanceCreation@@TestSuite[FileSystemUtilsTestCase.class] @TO@ SimpleName@@MethodName:addTest:[new TestSuite(FileSystemUtilsTestCase.class)] @AT@ 1518 @LENGTH@ 44
+------------INS New@@new @TO@ ClassInstanceCreation@@TestSuite[FileSystemUtilsTestCase.class] @AT@ 1518 @LENGTH@ 3
+------------INS SimpleType@@TestSuite @TO@ ClassInstanceCreation@@TestSuite[FileSystemUtilsTestCase.class] @AT@ 1522 @LENGTH@ 9
+------------INS TypeLiteral@@FileSystemUtilsTestCase.class @TO@ ClassInstanceCreation@@TestSuite[FileSystemUtilsTestCase.class] @AT@ 1532 @LENGTH@ 29
+
+
+UPD IfStatement@@if (PROTOCOL_FILE.equals(url.getProtocol())) {  try {    return new File(URLDecoder.decode(url.getPath(),ENCODING));  } catch (  UnsupportedEncodingException uex) {    return null;  }} else {  return null;} @TO@ if (PROTOCOL_FILE.equals(url.getProtocol())) {  return new File(URLDecoder.decode(url.getPath()));} else {  return null;} @AT@ 13567 @LENGTH@ 399
+---UPD Block@@ThenBody:{  try {    return new File(URLDecoder.decode(url.getPath(),ENCODING));  } catch (  UnsupportedEncodingException uex) {    return null;  }} @TO@ ThenBody:{  return new File(URLDecoder.decode(url.getPath()));} @AT@ 13620 @LENGTH@ 288
+------INS ReturnStatement@@ClassInstanceCreation:new File(URLDecoder.decode(url.getPath())) @TO@ Block@@ThenBody:{  try {    return new File(URLDecoder.decode(url.getPath(),ENCODING));  } catch (  UnsupportedEncodingException uex) {    return null;  }} @AT@ 13533 @LENGTH@ 50
+---------MOV ClassInstanceCreation@@File[URLDecoder.decode(url.getPath(),ENCODING)] @TO@ ReturnStatement@@ClassInstanceCreation:new File(URLDecoder.decode(url.getPath())) @AT@ 13675 @LENGTH@ 52
+------DEL TryStatement@@try {  return new File(URLDecoder.decode(url.getPath(),ENCODING));} catch (UnsupportedEncodingException uex) {  return null;} @AT@ 13634 @LENGTH@ 264
+---------DEL ReturnStatement@@ClassInstanceCreation:new File(URLDecoder.decode(url.getPath(),ENCODING)) @AT@ 13668 @LENGTH@ 60
+---------DEL CatchClause@@catch (UnsupportedEncodingException uex) {  return null;} @AT@ 13755 @LENGTH@ 143
+------------DEL SingleVariableDeclaration@@UnsupportedEncodingException uex @AT@ 13762 @LENGTH@ 32
+---------------DEL SimpleType@@UnsupportedEncodingException @AT@ 13762 @LENGTH@ 28
+---------------DEL SimpleName@@uex @AT@ 13791 @LENGTH@ 3
+------------DEL ReturnStatement@@NullLiteral:null @AT@ 13872 @LENGTH@ 12
+---------------DEL NullLiteral@@null @AT@ 13879 @LENGTH@ 4
+
+
+UPD VariableDeclarationStatement@@ArrayNode node=(ArrayNode)digester.peek(); @TO@ ArrayNode node=(ArrayNode)getDigester().peek(); @AT@ 8470 @LENGTH@ 45
+---UPD VariableDeclarationFragment@@node=(ArrayNode)digester.peek() @TO@ node=(ArrayNode)getDigester().peek() @AT@ 8480 @LENGTH@ 34
+------UPD CastExpression@@(ArrayNode)digester.peek() @TO@ (ArrayNode)getDigester().peek() @AT@ 8487 @LENGTH@ 27
+---------UPD MethodInvocation@@digester.peek() @TO@ getDigester().peek() @AT@ 8499 @LENGTH@ 15
+------------INS MethodInvocation@@MethodName:getDigester:[] @TO@ MethodInvocation@@digester.peek() @AT@ 8499 @LENGTH@ 13
+------------DEL SimpleName@@Name:digester @AT@ 8499 @LENGTH@ 8
+
+
+UPD ReturnStatement@@MethodInvocation:keyBuffer.hashCode() @TO@ MethodInvocation:keyBuffer.toString().hashCode() @AT@ 8417 @LENGTH@ 28
+---UPD MethodInvocation@@keyBuffer.hashCode() @TO@ keyBuffer.toString().hashCode() @AT@ 8424 @LENGTH@ 20
+------INS MethodInvocation@@MethodName:toString:[] @TO@ MethodInvocation@@keyBuffer.hashCode() @AT@ 8424 @LENGTH@ 20
+
+
+INS IfStatement@@if (name == null) {  return null;} @TO@ MethodDeclaration@@public, static, URL, MethodName:locate, String base, String name,  @AT@ 7922 @LENGTH@ 107
+---INS InfixExpression@@name == null @TO@ IfStatement@@if (name == null) {  return null;} @AT@ 7926 @LENGTH@ 12
+------INS SimpleName@@name @TO@ InfixExpression@@name == null @AT@ 7926 @LENGTH@ 4
+------INS Operator@@== @TO@ InfixExpression@@name == null @AT@ 7930 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@name == null @AT@ 7934 @LENGTH@ 4
+---INS Block@@ThenBody:{  return null;} @TO@ IfStatement@@if (name == null) {  return null;} @AT@ 7948 @LENGTH@ 81
+------INS ReturnStatement@@NullLiteral:null @TO@ Block@@ThenBody:{  return null;} @AT@ 8007 @LENGTH@ 12
+---------INS NullLiteral@@null @TO@ ReturnStatement@@NullLiteral:null @AT@ 8014 @LENGTH@ 4
+
+
+UPD MethodDeclaration@@public, static, void, MethodName:evictIfRequired, Object daoOrServices, Collection<Object> collection,  @TO@ public, static, void, MethodName:evictIfRequired, Object daoOrServices, Collection<? extends Object> collection,  @AT@ 3564 @LENGTH@ 591
+---UPD SingleVariableDeclaration@@Collection<Object> collection @TO@ Collection<? extends Object> collection @AT@ 3629 @LENGTH@ 29
+------UPD ParameterizedType@@Collection<Object> @TO@ Collection<? extends Object> @AT@ 3629 @LENGTH@ 18
+---------INS WildcardType@@? @TO@ ParameterizedType@@Collection<Object> @AT@ 3640 @LENGTH@ 16
+---------DEL SimpleType@@Object @AT@ 3640 @LENGTH@ 6
+---UPD VariableDeclarationStatement@@Iterator<Object> iter=collection.iterator(); @TO@ Iterator<? extends Object> iter=collection.iterator(); @AT@ 3881 @LENGTH@ 46
+------UPD ParameterizedType@@Iterator<Object> @TO@ Iterator<? extends Object> @AT@ 3881 @LENGTH@ 16
+---------DEL SimpleType@@Object @AT@ 3890 @LENGTH@ 6
+---------INS WildcardType@@? @TO@ ParameterizedType@@Iterator<Object> @AT@ 3900 @LENGTH@ 16
+
+
+UPD ExpressionStatement@@MethodInvocation:context.publishEvent(new InteractiveAuthenticationSuccesEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass())) @TO@ MethodInvocation:context.publishEvent(new InteractiveAuthenticationSuccessEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass())) @AT@ 5129 @LENGTH@ 193
+---UPD MethodInvocation@@context.publishEvent(new InteractiveAuthenticationSuccesEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass())) @TO@ context.publishEvent(new InteractiveAuthenticationSuccessEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass())) @AT@ 5129 @LENGTH@ 192
+------UPD SimpleName@@MethodName:publishEvent:[new InteractiveAuthenticationSuccesEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass())] @TO@ MethodName:publishEvent:[new InteractiveAuthenticationSuccessEvent(SecurityContextHolder.getContext().getAuthentication(),this.getClass())] @AT@ 5137 @LENGTH@ 184
+---------UPD ClassInstanceCreation@@InteractiveAuthenticationSuccesEvent[SecurityContextHolder.getContext().getAuthentication(), this.getClass()] @TO@ InteractiveAuthenticationSuccessEvent[SecurityContextHolder.getContext().getAuthentication(), this.getClass()] @AT@ 5150 @LENGTH@ 170
+------------UPD SimpleType@@InteractiveAuthenticationSuccesEvent @TO@ InteractiveAuthenticationSuccessEvent @AT@ 5154 @LENGTH@ 36
+
+
+UPD ExpressionStatement@@MethodInvocation:junit.textui.TestRunner.run(MethodDefinitionSourceEditorTests.class) @TO@ MethodInvocation:junit.textui.TestRunner.run(MethodDefinitionSourceEditorTigerTests.class) @AT@ 1831 @LENGTH@ 69
+---UPD MethodInvocation@@junit.textui.TestRunner.run(MethodDefinitionSourceEditorTests.class) @TO@ junit.textui.TestRunner.run(MethodDefinitionSourceEditorTigerTests.class) @AT@ 1831 @LENGTH@ 68
+------UPD SimpleName@@MethodName:run:[MethodDefinitionSourceEditorTests.class] @TO@ MethodName:run:[MethodDefinitionSourceEditorTigerTests.class] @AT@ 1855 @LENGTH@ 44
+---------UPD TypeLiteral@@MethodDefinitionSourceEditorTests.class @TO@ MethodDefinitionSourceEditorTigerTests.class @AT@ 1859 @LENGTH@ 39
+
+
+UPD IfStatement@@if ((obj != null) && obj instanceof User) {  originalUser=(User)obj;} @TO@ if ((obj != null) && obj instanceof UserDetails) {  originalUser=(UserDetails)obj;} @AT@ 10158 @LENGTH@ 92
+---UPD InfixExpression@@(obj != null) && obj instanceof User @TO@ (obj != null) && obj instanceof UserDetails @AT@ 10162 @LENGTH@ 36
+------UPD InstanceofExpression@@obj instanceof User @TO@ obj instanceof UserDetails @AT@ 10179 @LENGTH@ 19
+---------UPD SimpleType@@User @TO@ UserDetails @AT@ 10194 @LENGTH@ 4
+---UPD Block@@ThenBody:{  originalUser=(User)obj;} @TO@ ThenBody:{  originalUser=(UserDetails)obj;} @AT@ 10200 @LENGTH@ 50
+------UPD ExpressionStatement@@Assignment:originalUser=(User)obj @TO@ Assignment:originalUser=(UserDetails)obj @AT@ 10214 @LENGTH@ 26
+---------UPD Assignment@@originalUser=(User)obj @TO@ originalUser=(UserDetails)obj @AT@ 10214 @LENGTH@ 25
+------------UPD CastExpression@@(User)obj @TO@ (UserDetails)obj @AT@ 10229 @LENGTH@ 10
+---------------UPD SimpleType@@User @TO@ UserDetails @AT@ 10230 @LENGTH@ 4
+
+
+UPD ExpressionStatement@@MethodInvocation:context.publishEvent(new InteractiveAuthenticationSuccesEvent(authResult,this.getClass())) @TO@ MethodInvocation:context.publishEvent(new InteractiveAuthenticationSuccessEvent(authResult,this.getClass())) @AT@ 15193 @LENGTH@ 113
+---UPD MethodInvocation@@context.publishEvent(new InteractiveAuthenticationSuccesEvent(authResult,this.getClass())) @TO@ context.publishEvent(new InteractiveAuthenticationSuccessEvent(authResult,this.getClass())) @AT@ 15193 @LENGTH@ 112
+------UPD SimpleName@@MethodName:publishEvent:[new InteractiveAuthenticationSuccesEvent(authResult,this.getClass())] @TO@ MethodName:publishEvent:[new InteractiveAuthenticationSuccessEvent(authResult,this.getClass())] @AT@ 15201 @LENGTH@ 104
+---------UPD ClassInstanceCreation@@InteractiveAuthenticationSuccesEvent[authResult, this.getClass()] @TO@ InteractiveAuthenticationSuccessEvent[authResult, this.getClass()] @AT@ 15214 @LENGTH@ 90
+------------UPD SimpleType@@InteractiveAuthenticationSuccesEvent @TO@ InteractiveAuthenticationSuccessEvent @AT@ 15218 @LENGTH@ 36
+
+
+UPD ExpressionStatement@@MethodInvocation:config.setURL(new URL("jar:file:/D:/data/projects/OpenSource/commons-configuration/conf/resources.jar!/test-jar.xml")) @TO@ MethodInvocation:config.setURL(new URL("jar:" + new File("conf/resources.jar").getAbsoluteFile().toURL() + "!/test-jar.xml")) @AT@ 4194 @LENGTH@ 119
+---UPD MethodInvocation@@config.setURL(new URL("jar:file:/D:/data/projects/OpenSource/commons-configuration/conf/resources.jar!/test-jar.xml")) @TO@ config.setURL(new URL("jar:" + new File("conf/resources.jar").getAbsoluteFile().toURL() + "!/test-jar.xml")) @AT@ 4194 @LENGTH@ 118
+------UPD SimpleName@@MethodName:setURL:[new URL("jar:file:/D:/data/projects/OpenSource/commons-configuration/conf/resources.jar!/test-jar.xml")] @TO@ MethodName:setURL:[new URL("jar:" + new File("conf/resources.jar").getAbsoluteFile().toURL() + "!/test-jar.xml")] @AT@ 4201 @LENGTH@ 111
+---------UPD ClassInstanceCreation@@URL["jar:file:/D:/data/projects/OpenSource/commons-configuration/conf/resources.jar!/test-jar.xml"] @TO@ URL["jar:" + new File("conf/resources.jar").getAbsoluteFile().toURL() + "!/test-jar.xml"] @AT@ 4208 @LENGTH@ 103
+------------INS InfixExpression@@"jar:" + new File("conf/resources.jar").getAbsoluteFile().toURL() + "!/test-jar.xml" @TO@ ClassInstanceCreation@@URL["jar:file:/D:/data/projects/OpenSource/commons-configuration/conf/resources.jar!/test-jar.xml"] @AT@ 4192 @LENGTH@ 84
+---------------INS StringLiteral@@"jar:" @TO@ InfixExpression@@"jar:" + new File("conf/resources.jar").getAbsoluteFile().toURL() + "!/test-jar.xml" @AT@ 4192 @LENGTH@ 6
+---------------INS Operator@@+ @TO@ InfixExpression@@"jar:" + new File("conf/resources.jar").getAbsoluteFile().toURL() + "!/test-jar.xml" @AT@ 4198 @LENGTH@ 1
+---------------INS MethodInvocation@@new File("conf/resources.jar").getAbsoluteFile().toURL() @TO@ InfixExpression@@"jar:" + new File("conf/resources.jar").getAbsoluteFile().toURL() + "!/test-jar.xml" @AT@ 4201 @LENGTH@ 56
+------------------INS MethodInvocation@@MethodName:getAbsoluteFile:[] @TO@ MethodInvocation@@new File("conf/resources.jar").getAbsoluteFile().toURL() @AT@ 4201 @LENGTH@ 48
+------------------INS ClassInstanceCreation@@File["conf/resources.jar"] @TO@ MethodInvocation@@new File("conf/resources.jar").getAbsoluteFile().toURL() @AT@ 4201 @LENGTH@ 30
+---------------------INS New@@new @TO@ ClassInstanceCreation@@File["conf/resources.jar"] @AT@ 4201 @LENGTH@ 3
+---------------------INS SimpleType@@File @TO@ ClassInstanceCreation@@File["conf/resources.jar"] @AT@ 4205 @LENGTH@ 4
+---------------------MOV StringLiteral@@"jar:file:/D:/data/projects/OpenSource/commons-configuration/conf/resources.jar!/test-jar.xml" @TO@ ClassInstanceCreation@@File["conf/resources.jar"] @AT@ 4216 @LENGTH@ 94
+------------------INS SimpleName@@MethodName:toURL:[] @TO@ MethodInvocation@@new File("conf/resources.jar").getAbsoluteFile().toURL() @AT@ 4250 @LENGTH@ 7
+---------------INS StringLiteral@@"!/test-jar.xml" @TO@ InfixExpression@@"jar:" + new File("conf/resources.jar").getAbsoluteFile().toURL() + "!/test-jar.xml" @AT@ 4260 @LENGTH@ 16
+------------UPD StringLiteral@@"jar:file:/D:/data/projects/OpenSource/commons-configuration/conf/resources.jar!/test-jar.xml" @TO@ "conf/resources.jar" @AT@ 4216 @LENGTH@ 94
+
+
+UPD ExpressionStatement@@Assignment:targetUserRequest=new UsernamePasswordAuthenticationToken(username,targetUser.getPassword(),authorities) @TO@ Assignment:targetUserRequest=new UsernamePasswordAuthenticationToken(targetUser,targetUser.getPassword(),authorities) @AT@ 17091 @LENGTH@ 125
+---UPD Assignment@@targetUserRequest=new UsernamePasswordAuthenticationToken(username,targetUser.getPassword(),authorities) @TO@ targetUserRequest=new UsernamePasswordAuthenticationToken(targetUser,targetUser.getPassword(),authorities) @AT@ 17091 @LENGTH@ 124
+------UPD ClassInstanceCreation@@UsernamePasswordAuthenticationToken[username, targetUser.getPassword(), authorities] @TO@ UsernamePasswordAuthenticationToken[targetUser, targetUser.getPassword(), authorities] @AT@ 17111 @LENGTH@ 104
+---------UPD SimpleName@@username @TO@ targetUser @AT@ 17151 @LENGTH@ 8
+
+
+UPD IfStatement@@if (isSeparator(basePath.charAt(len - 1))) {  return normalize(basePath + fullFilenameToAdd);} else {  return normalize(basePath + '/' + fullFilenameToAdd);} @TO@ if (isSeparator(ch)) {  return normalize(basePath + fullFilenameToAdd);} else {  return normalize(basePath + '/' + fullFilenameToAdd);} @AT@ 10902 @LENGTH@ 197
+---UPD MethodInvocation@@isSeparator(basePath.charAt(len - 1)) @TO@ isSeparator(ch) @AT@ 10906 @LENGTH@ 37
+------UPD SimpleName@@MethodName:isSeparator:[basePath.charAt(len - 1)] @TO@ MethodName:isSeparator:[ch] @AT@ 10906 @LENGTH@ 37
+---------DEL MethodInvocation@@basePath.charAt(len - 1) @AT@ 10918 @LENGTH@ 24
+------------DEL SimpleName@@Name:basePath @AT@ 10918 @LENGTH@ 8
+------------DEL SimpleName@@MethodName:charAt:[len - 1] @AT@ 10927 @LENGTH@ 15
+---------------DEL InfixExpression@@len - 1 @AT@ 10934 @LENGTH@ 7
+------------------DEL SimpleName@@len @AT@ 10934 @LENGTH@ 3
+------------------DEL Operator@@- @AT@ 10937 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 10940 @LENGTH@ 1
+---------INS SimpleName@@ch @TO@ SimpleName@@MethodName:isSeparator:[basePath.charAt(len - 1)] @AT@ 10918 @LENGTH@ 2
+
+
+UPD VariableDeclarationStatement@@int idx=key.indexOf(INDEX_START); @TO@ int idx=key.lastIndexOf(INDEX_START); @AT@ 16362 @LENGTH@ 35
+---UPD VariableDeclarationFragment@@idx=key.indexOf(INDEX_START) @TO@ idx=key.lastIndexOf(INDEX_START) @AT@ 16366 @LENGTH@ 30
+------UPD MethodInvocation@@key.indexOf(INDEX_START) @TO@ key.lastIndexOf(INDEX_START) @AT@ 16372 @LENGTH@ 24
+---------UPD SimpleName@@MethodName:indexOf:[INDEX_START] @TO@ MethodName:lastIndexOf:[INDEX_START] @AT@ 16376 @LENGTH@ 20
+
+
+UPD ExpressionStatement@@MethodInvocation:assertEquals(found,cis.getCount()) @TO@ MethodInvocation:assertEquals(found,count) @AT@ 2663 @LENGTH@ 38
+---UPD MethodInvocation@@assertEquals(found,cis.getCount()) @TO@ assertEquals(found,count) @AT@ 2663 @LENGTH@ 37
+------UPD SimpleName@@MethodName:assertEquals:[found, cis.getCount()] @TO@ MethodName:assertEquals:[found, count] @AT@ 2663 @LENGTH@ 37
+---------INS SimpleName@@count @TO@ SimpleName@@MethodName:assertEquals:[found, cis.getCount()] @AT@ 2659 @LENGTH@ 5
+---------DEL MethodInvocation@@cis.getCount() @AT@ 2684 @LENGTH@ 14
+------------DEL SimpleName@@Name:cis @AT@ 2684 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:getCount:[] @AT@ 2688 @LENGTH@ 10
+
+
+UPD Block@@ThenBody:{  NameCallback ncb=(NameCallback)callback;  ncb.setName(authentication.getPrincipal().toString());} @TO@ ThenBody:{  NameCallback ncb=(NameCallback)callback;  String username="";  Object principal=authentication.getPrincipal();  if (principal instanceof UserDetails) {    username=((UserDetails)principal).getUsername();  } else {    username=principal.toString();  }  ncb.setName(username);} @AT@ 2153 @LENGTH@ 134
+---UPD ExpressionStatement@@MethodInvocation:ncb.setName(authentication.getPrincipal().toString()) @TO@ MethodInvocation:ncb.setName(username) @AT@ 2223 @LENGTH@ 54
+------UPD MethodInvocation@@ncb.setName(authentication.getPrincipal().toString()) @TO@ ncb.setName(username) @AT@ 2223 @LENGTH@ 53
+---------UPD SimpleName@@MethodName:setName:[authentication.getPrincipal().toString()] @TO@ MethodName:setName:[username] @AT@ 2227 @LENGTH@ 49
+------------DEL MethodInvocation@@authentication.getPrincipal().toString() @AT@ 2235 @LENGTH@ 40
+---------------DEL MethodInvocation@@MethodName:getPrincipal:[] @AT@ 2235 @LENGTH@ 29
+---------------DEL SimpleName@@Name:authentication @AT@ 2235 @LENGTH@ 14
+---------------DEL SimpleName@@MethodName:toString:[] @AT@ 2265 @LENGTH@ 10
+------------INS SimpleName@@username @TO@ SimpleName@@MethodName:setName:[authentication.getPrincipal().toString()] @AT@ 2584 @LENGTH@ 8
+---INS VariableDeclarationStatement@@String username=""; @TO@ Block@@ThenBody:{  NameCallback ncb=(NameCallback)callback;  ncb.setName(authentication.getPrincipal().toString());} @AT@ 2270 @LENGTH@ 21
+------INS SimpleType@@String @TO@ VariableDeclarationStatement@@String username=""; @AT@ 2270 @LENGTH@ 6
+------INS VariableDeclarationFragment@@username="" @TO@ VariableDeclarationStatement@@String username=""; @AT@ 2277 @LENGTH@ 13
+---------INS SimpleName@@username @TO@ VariableDeclarationFragment@@username="" @AT@ 2277 @LENGTH@ 8
+---------INS StringLiteral@@"" @TO@ VariableDeclarationFragment@@username="" @AT@ 2288 @LENGTH@ 2
+---INS VariableDeclarationStatement@@Object principal=authentication.getPrincipal(); @TO@ Block@@ThenBody:{  NameCallback ncb=(NameCallback)callback;  ncb.setName(authentication.getPrincipal().toString());} @AT@ 2305 @LENGTH@ 49
+------INS SimpleType@@Object @TO@ VariableDeclarationStatement@@Object principal=authentication.getPrincipal(); @AT@ 2305 @LENGTH@ 6
+------INS VariableDeclarationFragment@@principal=authentication.getPrincipal() @TO@ VariableDeclarationStatement@@Object principal=authentication.getPrincipal(); @AT@ 2312 @LENGTH@ 41
+---------INS SimpleName@@principal @TO@ VariableDeclarationFragment@@principal=authentication.getPrincipal() @AT@ 2312 @LENGTH@ 9
+---------INS MethodInvocation@@authentication.getPrincipal() @TO@ VariableDeclarationFragment@@principal=authentication.getPrincipal() @AT@ 2324 @LENGTH@ 29
+------------INS SimpleName@@Name:authentication @TO@ MethodInvocation@@authentication.getPrincipal() @AT@ 2324 @LENGTH@ 14
+------------INS SimpleName@@MethodName:getPrincipal:[] @TO@ MethodInvocation@@authentication.getPrincipal() @AT@ 2339 @LENGTH@ 14
+---INS IfStatement@@if (principal instanceof UserDetails) {  username=((UserDetails)principal).getUsername();} else {  username=principal.toString();} @TO@ Block@@ThenBody:{  NameCallback ncb=(NameCallback)callback;  ncb.setName(authentication.getPrincipal().toString());} @AT@ 2367 @LENGTH@ 191
+------INS InstanceofExpression@@principal instanceof UserDetails @TO@ IfStatement@@if (principal instanceof UserDetails) {  username=((UserDetails)principal).getUsername();} else {  username=principal.toString();} @AT@ 2371 @LENGTH@ 32
+---------INS SimpleName@@principal @TO@ InstanceofExpression@@principal instanceof UserDetails @AT@ 2371 @LENGTH@ 9
+---------INS Instanceof@@instanceof @TO@ InstanceofExpression@@principal instanceof UserDetails @AT@ 2381 @LENGTH@ 10
+---------INS SimpleType@@UserDetails @TO@ InstanceofExpression@@principal instanceof UserDetails @AT@ 2392 @LENGTH@ 11
+------INS Block@@ThenBody:{  username=((UserDetails)principal).getUsername();} @TO@ IfStatement@@if (principal instanceof UserDetails) {  username=((UserDetails)principal).getUsername();} else {  username=principal.toString();} @AT@ 2405 @LENGTH@ 83
+---------INS ExpressionStatement@@Assignment:username=((UserDetails)principal).getUsername() @TO@ Block@@ThenBody:{  username=((UserDetails)principal).getUsername();} @AT@ 2423 @LENGTH@ 51
+------------INS Assignment@@username=((UserDetails)principal).getUsername() @TO@ ExpressionStatement@@Assignment:username=((UserDetails)principal).getUsername() @AT@ 2423 @LENGTH@ 50
+---------------INS SimpleName@@username @TO@ Assignment@@username=((UserDetails)principal).getUsername() @AT@ 2423 @LENGTH@ 8
+---------------INS Operator@@= @TO@ Assignment@@username=((UserDetails)principal).getUsername() @AT@ 2431 @LENGTH@ 1
+---------------INS MethodInvocation@@((UserDetails)principal).getUsername() @TO@ Assignment@@username=((UserDetails)principal).getUsername() @AT@ 2434 @LENGTH@ 39
+------------------INS ParenthesizedExpression@@((UserDetails)principal) @TO@ MethodInvocation@@((UserDetails)principal).getUsername() @AT@ 2434 @LENGTH@ 25
+---------------------INS CastExpression@@(UserDetails)principal @TO@ ParenthesizedExpression@@((UserDetails)principal) @AT@ 2435 @LENGTH@ 23
+------------------------INS SimpleType@@UserDetails @TO@ CastExpression@@(UserDetails)principal @AT@ 2436 @LENGTH@ 11
+------------------------INS SimpleName@@principal @TO@ CastExpression@@(UserDetails)principal @AT@ 2449 @LENGTH@ 9
+------------------INS SimpleName@@MethodName:getUsername:[] @TO@ MethodInvocation@@((UserDetails)principal).getUsername() @AT@ 2460 @LENGTH@ 13
+------INS Block@@ElseBody:{  username=principal.toString();} @TO@ IfStatement@@if (principal instanceof UserDetails) {  username=((UserDetails)principal).getUsername();} else {  username=principal.toString();} @AT@ 2494 @LENGTH@ 64
+---------INS ExpressionStatement@@Assignment:username=principal.toString() @TO@ Block@@ElseBody:{  username=principal.toString();} @AT@ 2512 @LENGTH@ 32
+------------INS Assignment@@username=principal.toString() @TO@ ExpressionStatement@@Assignment:username=principal.toString() @AT@ 2512 @LENGTH@ 31
+---------------INS SimpleName@@username @TO@ Assignment@@username=principal.toString() @AT@ 2512 @LENGTH@ 8
+---------------INS Operator@@= @TO@ Assignment@@username=principal.toString() @AT@ 2520 @LENGTH@ 1
+---------------INS MethodInvocation@@principal.toString() @TO@ Assignment@@username=principal.toString() @AT@ 2523 @LENGTH@ 20
+------------------INS SimpleName@@Name:principal @TO@ MethodInvocation@@principal.toString() @AT@ 2523 @LENGTH@ 9
+------------------INS SimpleName@@MethodName:toString:[] @TO@ MethodInvocation@@principal.toString() @AT@ 2533 @LENGTH@ 10
+
+
+DEL FieldDeclaration@@static, final, String, [ENCODING="UTF-8"] @AT@ 1388 @LENGTH@ 39
+---DEL Modifier@@static @AT@ 1388 @LENGTH@ 6
+---DEL Modifier@@final @AT@ 1395 @LENGTH@ 5
+---DEL SimpleType@@String @AT@ 1401 @LENGTH@ 6
+---DEL VariableDeclarationFragment@@ENCODING="UTF-8" @AT@ 1408 @LENGTH@ 18
+------DEL SimpleName@@ENCODING @AT@ 1408 @LENGTH@ 8
+------DEL StringLiteral@@"UTF-8" @AT@ 1419 @LENGTH@ 7
+
+
+UPD ExpressionStatement@@Assignment:this.sessionId=request.getSession(forceSessionCreation).getId() @TO@ Assignment:this.sessionId=session != null ? session.getId() : null @AT@ 1798 @LENGTH@ 66
+---UPD Assignment@@this.sessionId=request.getSession(forceSessionCreation).getId() @TO@ this.sessionId=session != null ? session.getId() : null @AT@ 1798 @LENGTH@ 65
+------DEL MethodInvocation@@request.getSession(forceSessionCreation).getId() @AT@ 1815 @LENGTH@ 48
+---------DEL MethodInvocation@@MethodName:getSession:[forceSessionCreation] @AT@ 1815 @LENGTH@ 40
+------------DEL SimpleName@@forceSessionCreation @AT@ 1834 @LENGTH@ 20
+------INS ConditionalExpression@@session != null ? session.getId() : null @TO@ Assignment@@this.sessionId=request.getSession(forceSessionCreation).getId() @AT@ 1926 @LENGTH@ 40
+---------INS InfixExpression@@session != null @TO@ ConditionalExpression@@session != null ? session.getId() : null @AT@ 1926 @LENGTH@ 15
+------------INS SimpleName@@session @TO@ InfixExpression@@session != null @AT@ 1926 @LENGTH@ 7
+------------INS Operator@@!= @TO@ InfixExpression@@session != null @AT@ 1933 @LENGTH@ 2
+------------INS NullLiteral@@null @TO@ InfixExpression@@session != null @AT@ 1937 @LENGTH@ 4
+---------INS MethodInvocation@@session.getId() @TO@ ConditionalExpression@@session != null ? session.getId() : null @AT@ 1944 @LENGTH@ 15
+------------MOV SimpleName@@Name:request @TO@ MethodInvocation@@session.getId() @AT@ 1815 @LENGTH@ 7
+------------MOV SimpleName@@MethodName:getId:[] @TO@ MethodInvocation@@session.getId() @AT@ 1856 @LENGTH@ 7
+---------INS NullLiteral@@null @TO@ ConditionalExpression@@session != null ? session.getId() : null @AT@ 1962 @LENGTH@ 4

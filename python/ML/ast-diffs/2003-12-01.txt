@@ -1,0 +1,908 @@
+DEL FieldDeclaration@@Log, [log=LogFactory.getLog(PropertiesConfiguration.class)] @AT@ 1832 @LENGTH@ 59
+---DEL SimpleType@@Log @AT@ 1832 @LENGTH@ 3
+---DEL VariableDeclarationFragment@@log=LogFactory.getLog(PropertiesConfiguration.class) @AT@ 1836 @LENGTH@ 54
+------DEL SimpleName@@log @AT@ 1836 @LENGTH@ 3
+------DEL MethodInvocation@@LogFactory.getLog(PropertiesConfiguration.class) @AT@ 1842 @LENGTH@ 48
+---------DEL SimpleName@@Name:LogFactory @AT@ 1842 @LENGTH@ 10
+---------DEL SimpleName@@MethodName:getLog:[PropertiesConfiguration.class] @AT@ 1853 @LENGTH@ 37
+------------DEL TypeLiteral@@PropertiesConfiguration.class @AT@ 1860 @LENGTH@ 29
+
+
+INS MethodDeclaration@@public, String[], MethodName:ignoredTests,  @TO@ TypeDeclaration@@[public]TestFastArrayList1, TestFastArrayList @AT@ 3817 @LENGTH@ 291
+---INS Modifier@@public @TO@ MethodDeclaration@@public, String[], MethodName:ignoredTests,  @AT@ 3817 @LENGTH@ 6
+---INS ArrayType@@String[] @TO@ MethodDeclaration@@public, String[], MethodName:ignoredTests,  @AT@ 3824 @LENGTH@ 8
+------INS SimpleType@@String @TO@ ArrayType@@String[] @AT@ 3824 @LENGTH@ 6
+---INS SimpleName@@MethodName:ignoredTests @TO@ MethodDeclaration@@public, String[], MethodName:ignoredTests,  @AT@ 3833 @LENGTH@ 12
+---INS ReturnStatement@@ArrayCreation:new String[]{"TestFastArrayList1.bulkTestSubList.bulkTestListIterator.testAddThenSet","TestFastArrayList1.bulkTestSubList.bulkTestListIterator.testAddThenRemove"} @TO@ MethodDeclaration@@public, String[], MethodName:ignoredTests,  @AT@ 3895 @LENGTH@ 207
+------INS ArrayCreation@@new String[]{"TestFastArrayList1.bulkTestSubList.bulkTestListIterator.testAddThenSet","TestFastArrayList1.bulkTestSubList.bulkTestListIterator.testAddThenRemove"} @TO@ ReturnStatement@@ArrayCreation:new String[]{"TestFastArrayList1.bulkTestSubList.bulkTestListIterator.testAddThenSet","TestFastArrayList1.bulkTestSubList.bulkTestListIterator.testAddThenRemove"} @AT@ 3902 @LENGTH@ 199
+---------INS ArrayType@@String[] @TO@ ArrayCreation@@new String[]{"TestFastArrayList1.bulkTestSubList.bulkTestListIterator.testAddThenSet","TestFastArrayList1.bulkTestSubList.bulkTestListIterator.testAddThenRemove"} @AT@ 3906 @LENGTH@ 8
+------------INS SimpleType@@String @TO@ ArrayType@@String[] @AT@ 3906 @LENGTH@ 6
+---------INS ArrayInitializer@@{"TestFastArrayList1.bulkTestSubList.bulkTestListIterator.testAddThenSet","TestFastArrayList1.bulkTestSubList.bulkTestListIterator.testAddThenRemove"} @TO@ ArrayCreation@@new String[]{"TestFastArrayList1.bulkTestSubList.bulkTestListIterator.testAddThenSet","TestFastArrayList1.bulkTestSubList.bulkTestListIterator.testAddThenRemove"} @AT@ 3915 @LENGTH@ 186
+------------INS StringLiteral@@"TestFastArrayList1.bulkTestSubList.bulkTestListIterator.testAddThenSet" @TO@ ArrayInitializer@@{"TestFastArrayList1.bulkTestSubList.bulkTestListIterator.testAddThenSet","TestFastArrayList1.bulkTestSubList.bulkTestListIterator.testAddThenRemove"} @AT@ 3929 @LENGTH@ 72
+------------INS StringLiteral@@"TestFastArrayList1.bulkTestSubList.bulkTestListIterator.testAddThenRemove" @TO@ ArrayInitializer@@{"TestFastArrayList1.bulkTestSubList.bulkTestListIterator.testAddThenSet","TestFastArrayList1.bulkTestSubList.bulkTestListIterator.testAddThenRemove"} @AT@ 4015 @LENGTH@ 75
+
+
+UPD MethodDeclaration@@public, boolean, MethodName:remove, Object o,  @TO@ public, boolean, MethodName:remove, Object obj,  @AT@ 19254 @LENGTH@ 475
+---UPD SingleVariableDeclaration@@Object o @TO@ Object obj @AT@ 19276 @LENGTH@ 8
+------UPD SimpleName@@o @TO@ obj @AT@ 19283 @LENGTH@ 1
+---UPD VariableDeclarationStatement@@Map.Entry entry=(Map.Entry)o; @TO@ Map.Entry entry=(Map.Entry)obj; @AT@ 19300 @LENGTH@ 31
+------UPD VariableDeclarationFragment@@entry=(Map.Entry)o @TO@ entry=(Map.Entry)obj @AT@ 19310 @LENGTH@ 20
+---------UPD CastExpression@@(Map.Entry)o @TO@ (Map.Entry)obj @AT@ 19318 @LENGTH@ 12
+------------UPD SimpleName@@o @TO@ obj @AT@ 19329 @LENGTH@ 1
+---INS IfStatement@@if (obj instanceof Map.Entry == false) {  return false;} @TO@ MethodDeclaration@@public, boolean, MethodName:remove, Object o,  @AT@ 19302 @LENGTH@ 84
+------INS InfixExpression@@obj instanceof Map.Entry == false @TO@ IfStatement@@if (obj instanceof Map.Entry == false) {  return false;} @AT@ 19306 @LENGTH@ 33
+---------INS InstanceofExpression@@obj instanceof Map.Entry @TO@ InfixExpression@@obj instanceof Map.Entry == false @AT@ 19306 @LENGTH@ 24
+------------INS SimpleName@@obj @TO@ InstanceofExpression@@obj instanceof Map.Entry @AT@ 19306 @LENGTH@ 3
+------------INS Instanceof@@instanceof @TO@ InstanceofExpression@@obj instanceof Map.Entry @AT@ 19310 @LENGTH@ 10
+------------INS SimpleType@@Map.Entry @TO@ InstanceofExpression@@obj instanceof Map.Entry @AT@ 19321 @LENGTH@ 9
+---------INS Operator@@== @TO@ InfixExpression@@obj instanceof Map.Entry == false @AT@ 19330 @LENGTH@ 2
+---------INS BooleanLiteral@@false @TO@ InfixExpression@@obj instanceof Map.Entry == false @AT@ 19334 @LENGTH@ 5
+------INS Block@@ThenBody:{  return false;} @TO@ IfStatement@@if (obj instanceof Map.Entry == false) {  return false;} @AT@ 19341 @LENGTH@ 45
+---------INS ReturnStatement@@BooleanLiteral:false @TO@ Block@@ThenBody:{  return false;} @AT@ 19359 @LENGTH@ 13
+------------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 19366 @LENGTH@ 5
+
+
+INS ExpressionStatement@@MethodInvocation:assertTrue("subset is not empty",conf.isEmpty()) @TO@ MethodDeclaration@@public, void, MethodName:testSubset,  @AT@ 9938 @LENGTH@ 50
+---INS MethodInvocation@@assertTrue("subset is not empty",conf.isEmpty()) @TO@ ExpressionStatement@@MethodInvocation:assertTrue("subset is not empty",conf.isEmpty()) @AT@ 9938 @LENGTH@ 49
+------INS SimpleName@@MethodName:assertTrue:["subset is not empty", conf.isEmpty()] @TO@ MethodInvocation@@assertTrue("subset is not empty",conf.isEmpty()) @AT@ 9938 @LENGTH@ 49
+---------INS StringLiteral@@"subset is not empty" @TO@ SimpleName@@MethodName:assertTrue:["subset is not empty", conf.isEmpty()] @AT@ 9949 @LENGTH@ 21
+---------INS MethodInvocation@@conf.isEmpty() @TO@ SimpleName@@MethodName:assertTrue:["subset is not empty", conf.isEmpty()] @AT@ 9972 @LENGTH@ 14
+------------INS SimpleName@@Name:conf @TO@ MethodInvocation@@conf.isEmpty() @AT@ 9972 @LENGTH@ 4
+------------INS SimpleName@@MethodName:isEmpty:[] @TO@ MethodInvocation@@conf.isEmpty() @AT@ 9977 @LENGTH@ 9
+
+
+INS MethodDeclaration@@public, void, MethodName:testClone,  @TO@ TypeDeclaration@@[public]TestLRUMap, AbstractTestOrderedMap @AT@ 6968 @LENGTH@ 235
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 6968 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 6975 @LENGTH@ 4
+---INS SimpleName@@MethodName:testClone @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 6980 @LENGTH@ 9
+---INS VariableDeclarationStatement@@LRUMap map=new LRUMap(10); @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 7002 @LENGTH@ 28
+------INS SimpleType@@LRUMap @TO@ VariableDeclarationStatement@@LRUMap map=new LRUMap(10); @AT@ 7002 @LENGTH@ 6
+------INS VariableDeclarationFragment@@map=new LRUMap(10) @TO@ VariableDeclarationStatement@@LRUMap map=new LRUMap(10); @AT@ 7009 @LENGTH@ 20
+---------INS SimpleName@@map @TO@ VariableDeclarationFragment@@map=new LRUMap(10) @AT@ 7009 @LENGTH@ 3
+---------INS ClassInstanceCreation@@LRUMap[10] @TO@ VariableDeclarationFragment@@map=new LRUMap(10) @AT@ 7015 @LENGTH@ 14
+------------INS New@@new @TO@ ClassInstanceCreation@@LRUMap[10] @AT@ 7015 @LENGTH@ 3
+------------INS SimpleType@@LRUMap @TO@ ClassInstanceCreation@@LRUMap[10] @AT@ 7019 @LENGTH@ 6
+------------INS NumberLiteral@@10 @TO@ ClassInstanceCreation@@LRUMap[10] @AT@ 7026 @LENGTH@ 2
+---INS ExpressionStatement@@MethodInvocation:map.put("1","1") @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 7039 @LENGTH@ 18
+------INS MethodInvocation@@map.put("1","1") @TO@ ExpressionStatement@@MethodInvocation:map.put("1","1") @AT@ 7039 @LENGTH@ 17
+---------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("1","1") @AT@ 7039 @LENGTH@ 3
+---------INS SimpleName@@MethodName:put:["1", "1"] @TO@ MethodInvocation@@map.put("1","1") @AT@ 7043 @LENGTH@ 13
+------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:put:["1", "1"] @AT@ 7047 @LENGTH@ 3
+------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:put:["1", "1"] @AT@ 7052 @LENGTH@ 3
+---INS VariableDeclarationStatement@@Map cloned=(Map)map.clone(); @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 7066 @LENGTH@ 31
+------INS SimpleType@@Map @TO@ VariableDeclarationStatement@@Map cloned=(Map)map.clone(); @AT@ 7066 @LENGTH@ 3
+------INS VariableDeclarationFragment@@cloned=(Map)map.clone() @TO@ VariableDeclarationStatement@@Map cloned=(Map)map.clone(); @AT@ 7070 @LENGTH@ 26
+---------INS SimpleName@@cloned @TO@ VariableDeclarationFragment@@cloned=(Map)map.clone() @AT@ 7070 @LENGTH@ 6
+---------INS CastExpression@@(Map)map.clone() @TO@ VariableDeclarationFragment@@cloned=(Map)map.clone() @AT@ 7079 @LENGTH@ 17
+------------INS SimpleType@@Map @TO@ CastExpression@@(Map)map.clone() @AT@ 7080 @LENGTH@ 3
+------------INS MethodInvocation@@map.clone() @TO@ CastExpression@@(Map)map.clone() @AT@ 7085 @LENGTH@ 11
+---------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.clone() @AT@ 7085 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:clone:[] @TO@ MethodInvocation@@map.clone() @AT@ 7089 @LENGTH@ 7
+---INS ExpressionStatement@@MethodInvocation:assertEquals(map.size(),cloned.size()) @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 7106 @LENGTH@ 40
+------INS MethodInvocation@@assertEquals(map.size(),cloned.size()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(map.size(),cloned.size()) @AT@ 7106 @LENGTH@ 39
+---------INS SimpleName@@MethodName:assertEquals:[map.size(), cloned.size()] @TO@ MethodInvocation@@assertEquals(map.size(),cloned.size()) @AT@ 7106 @LENGTH@ 39
+------------INS MethodInvocation@@map.size() @TO@ SimpleName@@MethodName:assertEquals:[map.size(), cloned.size()] @AT@ 7119 @LENGTH@ 10
+---------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.size() @AT@ 7119 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:size:[] @TO@ MethodInvocation@@map.size() @AT@ 7123 @LENGTH@ 6
+------------INS MethodInvocation@@cloned.size() @TO@ SimpleName@@MethodName:assertEquals:[map.size(), cloned.size()] @AT@ 7131 @LENGTH@ 13
+---------------INS SimpleName@@Name:cloned @TO@ MethodInvocation@@cloned.size() @AT@ 7131 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:size:[] @TO@ MethodInvocation@@cloned.size() @AT@ 7138 @LENGTH@ 6
+---INS ExpressionStatement@@MethodInvocation:assertSame(map.get("1"),cloned.get("1")) @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 7155 @LENGTH@ 42
+------INS MethodInvocation@@assertSame(map.get("1"),cloned.get("1")) @TO@ ExpressionStatement@@MethodInvocation:assertSame(map.get("1"),cloned.get("1")) @AT@ 7155 @LENGTH@ 41
+---------INS SimpleName@@MethodName:assertSame:[map.get("1"), cloned.get("1")] @TO@ MethodInvocation@@assertSame(map.get("1"),cloned.get("1")) @AT@ 7155 @LENGTH@ 41
+------------INS MethodInvocation@@map.get("1") @TO@ SimpleName@@MethodName:assertSame:[map.get("1"), cloned.get("1")] @AT@ 7166 @LENGTH@ 12
+---------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.get("1") @AT@ 7166 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:get:["1"] @TO@ MethodInvocation@@map.get("1") @AT@ 7170 @LENGTH@ 8
+------------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:get:["1"] @AT@ 7174 @LENGTH@ 3
+------------INS MethodInvocation@@cloned.get("1") @TO@ SimpleName@@MethodName:assertSame:[map.get("1"), cloned.get("1")] @AT@ 7180 @LENGTH@ 15
+---------------INS SimpleName@@Name:cloned @TO@ MethodInvocation@@cloned.get("1") @AT@ 7180 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:get:["1"] @TO@ MethodInvocation@@cloned.get("1") @AT@ 7187 @LENGTH@ 8
+------------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:get:["1"] @AT@ 7191 @LENGTH@ 3
+
+
+UPD VariableDeclarationStatement@@Object object=(Object)it.next(); @TO@ Object object=it.next(); @AT@ 8089 @LENGTH@ 35
+---UPD VariableDeclarationFragment@@object=(Object)it.next() @TO@ object=it.next() @AT@ 8096 @LENGTH@ 27
+------DEL CastExpression@@(Object)it.next() @AT@ 8105 @LENGTH@ 18
+---------DEL SimpleType@@Object @AT@ 8106 @LENGTH@ 6
+---------DEL MethodInvocation@@it.next() @AT@ 8114 @LENGTH@ 9
+------INS MethodInvocation@@it.next() @TO@ VariableDeclarationFragment@@object=(Object)it.next() @AT@ 8105 @LENGTH@ 9
+---------MOV SimpleName@@Name:it @TO@ MethodInvocation@@it.next() @AT@ 8114 @LENGTH@ 2
+---------MOV SimpleName@@MethodName:next:[] @TO@ MethodInvocation@@it.next() @AT@ 8117 @LENGTH@ 6
+
+
+UPD FieldDeclaration@@protected, static, String, [fileSeparator=System.getProperty("file.separator")] @TO@ protected, static, final, String, [fileSeparator=System.getProperty("file.separator")] @AT@ 1031 @LENGTH@ 77
+---INS Modifier@@final @TO@ FieldDeclaration@@protected, static, String, [fileSeparator=System.getProperty("file.separator")] @AT@ 1048 @LENGTH@ 5
+
+
+UPD TryStatement@@try {  load(getPropertyStream(fileName));} catch (IOException ioe) {  throw new ConfigurationException("Could not load from file " + fileName,ioe);} @TO@ try {  InputStream is=getPropertyStream(fileName);  load(is);  is.close();} catch (IOException ioe) {  throw new ConfigurationException("Could not load from file " + fileName,ioe);} @AT@ 3298 @LENGTH@ 174
+---UPD ExpressionStatement@@MethodInvocation:load(getPropertyStream(fileName)) @TO@ MethodInvocation:load(is) @AT@ 3310 @LENGTH@ 34
+------UPD MethodInvocation@@load(getPropertyStream(fileName)) @TO@ load(is) @AT@ 3310 @LENGTH@ 33
+---------UPD SimpleName@@MethodName:load:[getPropertyStream(fileName)] @TO@ MethodName:load:[is] @AT@ 3310 @LENGTH@ 33
+------------INS SimpleName@@is @TO@ SimpleName@@MethodName:load:[getPropertyStream(fileName)] @AT@ 3370 @LENGTH@ 2
+---INS VariableDeclarationStatement@@InputStream is=getPropertyStream(fileName); @TO@ TryStatement@@try {  load(getPropertyStream(fileName));} catch (IOException ioe) {  throw new ConfigurationException("Could not load from file " + fileName,ioe);} @AT@ 3313 @LENGTH@ 45
+------INS SimpleType@@InputStream @TO@ VariableDeclarationStatement@@InputStream is=getPropertyStream(fileName); @AT@ 3313 @LENGTH@ 11
+------INS VariableDeclarationFragment@@is=getPropertyStream(fileName) @TO@ VariableDeclarationStatement@@InputStream is=getPropertyStream(fileName); @AT@ 3325 @LENGTH@ 32
+---------MOV MethodInvocation@@getPropertyStream(fileName) @TO@ VariableDeclarationFragment@@is=getPropertyStream(fileName) @AT@ 3315 @LENGTH@ 27
+---------INS SimpleName@@is @TO@ VariableDeclarationFragment@@is=getPropertyStream(fileName) @AT@ 3325 @LENGTH@ 2
+---INS ExpressionStatement@@MethodInvocation:is.close() @TO@ TryStatement@@try {  load(getPropertyStream(fileName));} catch (IOException ioe) {  throw new ConfigurationException("Could not load from file " + fileName,ioe);} @AT@ 3381 @LENGTH@ 11
+------INS MethodInvocation@@is.close() @TO@ ExpressionStatement@@MethodInvocation:is.close() @AT@ 3381 @LENGTH@ 10
+---------INS SimpleName@@Name:is @TO@ MethodInvocation@@is.close() @AT@ 3381 @LENGTH@ 2
+---------INS SimpleName@@MethodName:close:[] @TO@ MethodInvocation@@is.close() @AT@ 3384 @LENGTH@ 7
+
+
+DEL IfStatement@@if (resourceName.startsWith("./")) {} @AT@ 3270 @LENGTH@ 125
+---DEL MethodInvocation@@resourceName.startsWith("./") @AT@ 3274 @LENGTH@ 29
+------DEL SimpleName@@Name:resourceName @AT@ 3274 @LENGTH@ 12
+------DEL SimpleName@@MethodName:startsWith:["./"] @AT@ 3287 @LENGTH@ 16
+---------DEL StringLiteral@@"./" @AT@ 3298 @LENGTH@ 4
+---DEL Block@@ThenBody:{} @AT@ 3317 @LENGTH@ 78
+
+
+UPD IfStatement@@if (null != m_currEntry && m_currEntry.isGNULongNameEntry()) {  final StringBuffer longName=new StringBuffer();  final byte[] buffer=new byte[256];  int length=0;  while ((length=read(buffer)) >= 0) {    final String str=new String(buffer,0,length);    longName.append(str);  }  getNextEntry();  m_currEntry.setName(longName.toString());} @TO@ if (null != m_currEntry && m_currEntry.isGNULongNameEntry()) {  final StringBuffer longName=new StringBuffer();  final byte[] buffer=new byte[256];  int length=0;  while ((length=read(buffer)) >= 0) {    final String str=new String(buffer,0,length);    longName.append(str);  }  getNextEntry();  if (longName.length() > 0 && longName.charAt(longName.length() - 1) == 0) {    longName.deleteCharAt(longName.length() - 1);  }  m_currEntry.setName(longName.toString());} @AT@ 5794 @LENGTH@ 528
+---UPD Block@@ThenBody:{  final StringBuffer longName=new StringBuffer();  final byte[] buffer=new byte[256];  int length=0;  while ((length=read(buffer)) >= 0) {    final String str=new String(buffer,0,length);    longName.append(str);  }  getNextEntry();  m_currEntry.setName(longName.toString());} @TO@ ThenBody:{  final StringBuffer longName=new StringBuffer();  final byte[] buffer=new byte[256];  int length=0;  while ((length=read(buffer)) >= 0) {    final String str=new String(buffer,0,length);    longName.append(str);  }  getNextEntry();  if (longName.length() > 0 && longName.charAt(longName.length() - 1) == 0) {    longName.deleteCharAt(longName.length() - 1);  }  m_currEntry.setName(longName.toString());} @AT@ 5864 @LENGTH@ 458
+------INS IfStatement@@if (longName.length() > 0 && longName.charAt(longName.length() - 1) == 0) {  longName.deleteCharAt(longName.length() - 1);} @TO@ Block@@ThenBody:{  final StringBuffer longName=new StringBuffer();  final byte[] buffer=new byte[256];  int length=0;  while ((length=read(buffer)) >= 0) {    final String str=new String(buffer,0,length);    longName.append(str);  }  getNextEntry();  m_currEntry.setName(longName.toString());} @AT@ 6317 @LENGTH@ 167
+---------INS InfixExpression@@longName.length() > 0 && longName.charAt(longName.length() - 1) == 0 @TO@ IfStatement@@if (longName.length() > 0 && longName.charAt(longName.length() - 1) == 0) {  longName.deleteCharAt(longName.length() - 1);} @AT@ 6321 @LENGTH@ 84
+------------INS InfixExpression@@longName.length() > 0 @TO@ InfixExpression@@longName.length() > 0 && longName.charAt(longName.length() - 1) == 0 @AT@ 6321 @LENGTH@ 21
+---------------INS MethodInvocation@@longName.length() @TO@ InfixExpression@@longName.length() > 0 @AT@ 6321 @LENGTH@ 17
+------------------INS SimpleName@@Name:longName @TO@ MethodInvocation@@longName.length() @AT@ 6321 @LENGTH@ 8
+------------------INS SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@longName.length() @AT@ 6330 @LENGTH@ 8
+---------------INS Operator@@> @TO@ InfixExpression@@longName.length() > 0 @AT@ 6338 @LENGTH@ 1
+---------------INS NumberLiteral@@0 @TO@ InfixExpression@@longName.length() > 0 @AT@ 6341 @LENGTH@ 1
+------------INS Operator@@&& @TO@ InfixExpression@@longName.length() > 0 && longName.charAt(longName.length() - 1) == 0 @AT@ 6342 @LENGTH@ 2
+------------INS InfixExpression@@longName.charAt(longName.length() - 1) == 0 @TO@ InfixExpression@@longName.length() > 0 && longName.charAt(longName.length() - 1) == 0 @AT@ 6362 @LENGTH@ 43
+---------------INS MethodInvocation@@longName.charAt(longName.length() - 1) @TO@ InfixExpression@@longName.charAt(longName.length() - 1) == 0 @AT@ 6362 @LENGTH@ 38
+------------------INS SimpleName@@Name:longName @TO@ MethodInvocation@@longName.charAt(longName.length() - 1) @AT@ 6362 @LENGTH@ 8
+------------------INS SimpleName@@MethodName:charAt:[longName.length() - 1] @TO@ MethodInvocation@@longName.charAt(longName.length() - 1) @AT@ 6371 @LENGTH@ 29
+---------------------INS InfixExpression@@longName.length() - 1 @TO@ SimpleName@@MethodName:charAt:[longName.length() - 1] @AT@ 6378 @LENGTH@ 21
+------------------------INS MethodInvocation@@longName.length() @TO@ InfixExpression@@longName.length() - 1 @AT@ 6378 @LENGTH@ 17
+---------------------------INS SimpleName@@Name:longName @TO@ MethodInvocation@@longName.length() @AT@ 6378 @LENGTH@ 8
+---------------------------INS SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@longName.length() @AT@ 6387 @LENGTH@ 8
+------------------------INS Operator@@- @TO@ InfixExpression@@longName.length() - 1 @AT@ 6395 @LENGTH@ 1
+------------------------INS NumberLiteral@@1 @TO@ InfixExpression@@longName.length() - 1 @AT@ 6398 @LENGTH@ 1
+---------------INS Operator@@== @TO@ InfixExpression@@longName.charAt(longName.length() - 1) == 0 @AT@ 6400 @LENGTH@ 2
+---------------INS NumberLiteral@@0 @TO@ InfixExpression@@longName.charAt(longName.length() - 1) == 0 @AT@ 6404 @LENGTH@ 1
+---------INS Block@@ThenBody:{  longName.deleteCharAt(longName.length() - 1);} @TO@ IfStatement@@if (longName.length() > 0 && longName.charAt(longName.length() - 1) == 0) {  longName.deleteCharAt(longName.length() - 1);} @AT@ 6407 @LENGTH@ 77
+------------INS ExpressionStatement@@MethodInvocation:longName.deleteCharAt(longName.length() - 1) @TO@ Block@@ThenBody:{  longName.deleteCharAt(longName.length() - 1);} @AT@ 6425 @LENGTH@ 45
+---------------INS MethodInvocation@@longName.deleteCharAt(longName.length() - 1) @TO@ ExpressionStatement@@MethodInvocation:longName.deleteCharAt(longName.length() - 1) @AT@ 6425 @LENGTH@ 44
+------------------INS SimpleName@@Name:longName @TO@ MethodInvocation@@longName.deleteCharAt(longName.length() - 1) @AT@ 6425 @LENGTH@ 8
+------------------INS SimpleName@@MethodName:deleteCharAt:[longName.length() - 1] @TO@ MethodInvocation@@longName.deleteCharAt(longName.length() - 1) @AT@ 6434 @LENGTH@ 35
+---------------------INS InfixExpression@@longName.length() - 1 @TO@ SimpleName@@MethodName:deleteCharAt:[longName.length() - 1] @AT@ 6447 @LENGTH@ 21
+------------------------INS MethodInvocation@@longName.length() @TO@ InfixExpression@@longName.length() - 1 @AT@ 6447 @LENGTH@ 17
+---------------------------INS SimpleName@@Name:longName @TO@ MethodInvocation@@longName.length() @AT@ 6447 @LENGTH@ 8
+---------------------------INS SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@longName.length() @AT@ 6456 @LENGTH@ 8
+------------------------INS Operator@@- @TO@ InfixExpression@@longName.length() - 1 @AT@ 6464 @LENGTH@ 1
+------------------------INS NumberLiteral@@1 @TO@ InfixExpression@@longName.length() - 1 @AT@ 6467 @LENGTH@ 1
+
+
+UPD IfStatement@@if (children.size() > 0) {  for (int i=0; i < children.size(); i++) {    result.getRoot().addChild((Node)children.get(i));  }} else {} @TO@ if (children.size() > 0) {  for (int i=0; i < children.size(); i++) {    result.getRoot().addChild((Node)children.get(i));  }} @AT@ 12126 @LENGTH@ 483
+---DEL Block@@ElseBody:{} @AT@ 12392 @LENGTH@ 217
+
+
+INS MethodDeclaration@@public, void, MethodName:testClone,  @TO@ TypeDeclaration@@[public]TestIdentityMap, AbstractTestObject @AT@ 4355 @LENGTH@ 245
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 4355 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 4362 @LENGTH@ 4
+---INS SimpleName@@MethodName:testClone @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 4367 @LENGTH@ 9
+---INS VariableDeclarationStatement@@IdentityMap map=new IdentityMap(10); @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 4389 @LENGTH@ 38
+------INS SimpleType@@IdentityMap @TO@ VariableDeclarationStatement@@IdentityMap map=new IdentityMap(10); @AT@ 4389 @LENGTH@ 11
+------INS VariableDeclarationFragment@@map=new IdentityMap(10) @TO@ VariableDeclarationStatement@@IdentityMap map=new IdentityMap(10); @AT@ 4401 @LENGTH@ 25
+---------INS SimpleName@@map @TO@ VariableDeclarationFragment@@map=new IdentityMap(10) @AT@ 4401 @LENGTH@ 3
+---------INS ClassInstanceCreation@@IdentityMap[10] @TO@ VariableDeclarationFragment@@map=new IdentityMap(10) @AT@ 4407 @LENGTH@ 19
+------------INS New@@new @TO@ ClassInstanceCreation@@IdentityMap[10] @AT@ 4407 @LENGTH@ 3
+------------INS SimpleType@@IdentityMap @TO@ ClassInstanceCreation@@IdentityMap[10] @AT@ 4411 @LENGTH@ 11
+------------INS NumberLiteral@@10 @TO@ ClassInstanceCreation@@IdentityMap[10] @AT@ 4423 @LENGTH@ 2
+---INS ExpressionStatement@@MethodInvocation:map.put("1","1") @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 4436 @LENGTH@ 18
+------INS MethodInvocation@@map.put("1","1") @TO@ ExpressionStatement@@MethodInvocation:map.put("1","1") @AT@ 4436 @LENGTH@ 17
+---------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("1","1") @AT@ 4436 @LENGTH@ 3
+---------INS SimpleName@@MethodName:put:["1", "1"] @TO@ MethodInvocation@@map.put("1","1") @AT@ 4440 @LENGTH@ 13
+------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:put:["1", "1"] @AT@ 4444 @LENGTH@ 3
+------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:put:["1", "1"] @AT@ 4449 @LENGTH@ 3
+---INS VariableDeclarationStatement@@Map cloned=(Map)map.clone(); @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 4463 @LENGTH@ 31
+------INS SimpleType@@Map @TO@ VariableDeclarationStatement@@Map cloned=(Map)map.clone(); @AT@ 4463 @LENGTH@ 3
+------INS VariableDeclarationFragment@@cloned=(Map)map.clone() @TO@ VariableDeclarationStatement@@Map cloned=(Map)map.clone(); @AT@ 4467 @LENGTH@ 26
+---------INS SimpleName@@cloned @TO@ VariableDeclarationFragment@@cloned=(Map)map.clone() @AT@ 4467 @LENGTH@ 6
+---------INS CastExpression@@(Map)map.clone() @TO@ VariableDeclarationFragment@@cloned=(Map)map.clone() @AT@ 4476 @LENGTH@ 17
+------------INS SimpleType@@Map @TO@ CastExpression@@(Map)map.clone() @AT@ 4477 @LENGTH@ 3
+------------INS MethodInvocation@@map.clone() @TO@ CastExpression@@(Map)map.clone() @AT@ 4482 @LENGTH@ 11
+---------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.clone() @AT@ 4482 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:clone:[] @TO@ MethodInvocation@@map.clone() @AT@ 4486 @LENGTH@ 7
+---INS ExpressionStatement@@MethodInvocation:assertEquals(map.size(),cloned.size()) @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 4503 @LENGTH@ 40
+------INS MethodInvocation@@assertEquals(map.size(),cloned.size()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(map.size(),cloned.size()) @AT@ 4503 @LENGTH@ 39
+---------INS SimpleName@@MethodName:assertEquals:[map.size(), cloned.size()] @TO@ MethodInvocation@@assertEquals(map.size(),cloned.size()) @AT@ 4503 @LENGTH@ 39
+------------INS MethodInvocation@@map.size() @TO@ SimpleName@@MethodName:assertEquals:[map.size(), cloned.size()] @AT@ 4516 @LENGTH@ 10
+---------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.size() @AT@ 4516 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:size:[] @TO@ MethodInvocation@@map.size() @AT@ 4520 @LENGTH@ 6
+------------INS MethodInvocation@@cloned.size() @TO@ SimpleName@@MethodName:assertEquals:[map.size(), cloned.size()] @AT@ 4528 @LENGTH@ 13
+---------------INS SimpleName@@Name:cloned @TO@ MethodInvocation@@cloned.size() @AT@ 4528 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:size:[] @TO@ MethodInvocation@@cloned.size() @AT@ 4535 @LENGTH@ 6
+---INS ExpressionStatement@@MethodInvocation:assertSame(map.get("1"),cloned.get("1")) @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 4552 @LENGTH@ 42
+------INS MethodInvocation@@assertSame(map.get("1"),cloned.get("1")) @TO@ ExpressionStatement@@MethodInvocation:assertSame(map.get("1"),cloned.get("1")) @AT@ 4552 @LENGTH@ 41
+---------INS SimpleName@@MethodName:assertSame:[map.get("1"), cloned.get("1")] @TO@ MethodInvocation@@assertSame(map.get("1"),cloned.get("1")) @AT@ 4552 @LENGTH@ 41
+------------INS MethodInvocation@@map.get("1") @TO@ SimpleName@@MethodName:assertSame:[map.get("1"), cloned.get("1")] @AT@ 4563 @LENGTH@ 12
+---------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.get("1") @AT@ 4563 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:get:["1"] @TO@ MethodInvocation@@map.get("1") @AT@ 4567 @LENGTH@ 8
+------------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:get:["1"] @AT@ 4571 @LENGTH@ 3
+------------INS MethodInvocation@@cloned.get("1") @TO@ SimpleName@@MethodName:assertSame:[map.get("1"), cloned.get("1")] @AT@ 4577 @LENGTH@ 15
+---------------INS SimpleName@@Name:cloned @TO@ MethodInvocation@@cloned.get("1") @AT@ 4577 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:get:["1"] @TO@ MethodInvocation@@cloned.get("1") @AT@ 4584 @LENGTH@ 8
+------------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:get:["1"] @AT@ 4588 @LENGTH@ 3
+
+
+UPD ExpressionStatement@@MethodInvocation:resetEmpty() @TO@ MethodInvocation:resetFull() @AT@ 32880 @LENGTH@ 13
+---UPD MethodInvocation@@MethodName:resetEmpty:[] @TO@ MethodName:resetFull:[] @AT@ 32880 @LENGTH@ 12
+
+
+UPD ReturnStatement@@MethodInvocation:((Comparable)o1).compareTo(o2) @TO@ MethodInvocation:o1.compareTo(o2) @AT@ 19897 @LENGTH@ 39
+---UPD MethodInvocation@@((Comparable)o1).compareTo(o2) @TO@ o1.compareTo(o2) @AT@ 19904 @LENGTH@ 31
+------DEL ParenthesizedExpression@@((Comparable)o1) @AT@ 19904 @LENGTH@ 17
+---------DEL CastExpression@@(Comparable)o1 @AT@ 19905 @LENGTH@ 15
+------------DEL SimpleType@@Comparable @AT@ 19906 @LENGTH@ 10
+------------DEL SimpleName@@o1 @AT@ 19918 @LENGTH@ 2
+------INS SimpleName@@Name:o1 @TO@ MethodInvocation@@((Comparable)o1).compareTo(o2) @AT@ 19904 @LENGTH@ 2
+
+
+INS MethodDeclaration@@public, boolean, MethodName:isSubMapViewsSerializable,  @TO@ TypeDeclaration@@[public, abstract]AbstractTestMap, AbstractTestObject @AT@ 8980 @LENGTH@ 71
+---INS Modifier@@public @TO@ MethodDeclaration@@public, boolean, MethodName:isSubMapViewsSerializable,  @AT@ 8980 @LENGTH@ 6
+---INS PrimitiveType@@boolean @TO@ MethodDeclaration@@public, boolean, MethodName:isSubMapViewsSerializable,  @AT@ 8987 @LENGTH@ 7
+---INS SimpleName@@MethodName:isSubMapViewsSerializable @TO@ MethodDeclaration@@public, boolean, MethodName:isSubMapViewsSerializable,  @AT@ 8995 @LENGTH@ 25
+---INS ReturnStatement@@BooleanLiteral:true @TO@ MethodDeclaration@@public, boolean, MethodName:isSubMapViewsSerializable,  @AT@ 9033 @LENGTH@ 12
+------INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 9040 @LENGTH@ 4
+
+
+INS MethodDeclaration@@public, void, MethodName:testDecodeBadCharacterPos0,  @TO@ TypeDeclaration@@[public]HexTest, TestCase @AT@ 1449 @LENGTH@ 280
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testDecodeBadCharacterPos0,  @AT@ 1449 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testDecodeBadCharacterPos0,  @AT@ 1456 @LENGTH@ 4
+---INS SimpleName@@MethodName:testDecodeBadCharacterPos0 @TO@ MethodDeclaration@@public, void, MethodName:testDecodeBadCharacterPos0,  @AT@ 1461 @LENGTH@ 26
+---INS TryStatement@@try {  new Hex().decode("q0");  fail("An exception wasn't thrown when trying to decode an illegal character");} catch (DecoderException e) {} @TO@ MethodDeclaration@@public, void, MethodName:testDecodeBadCharacterPos0,  @AT@ 1500 @LENGTH@ 223
+------INS ExpressionStatement@@MethodInvocation:new Hex().decode("q0") @TO@ TryStatement@@try {  new Hex().decode("q0");  fail("An exception wasn't thrown when trying to decode an illegal character");} catch (DecoderException e) {} @AT@ 1518 @LENGTH@ 23
+---------INS MethodInvocation@@new Hex().decode("q0") @TO@ ExpressionStatement@@MethodInvocation:new Hex().decode("q0") @AT@ 1518 @LENGTH@ 22
+------------INS ClassInstanceCreation@@Hex[] @TO@ MethodInvocation@@new Hex().decode("q0") @AT@ 1518 @LENGTH@ 9
+---------------INS New@@new @TO@ ClassInstanceCreation@@Hex[] @AT@ 1518 @LENGTH@ 3
+---------------INS SimpleType@@Hex @TO@ ClassInstanceCreation@@Hex[] @AT@ 1522 @LENGTH@ 3
+------------INS SimpleName@@MethodName:decode:["q0"] @TO@ MethodInvocation@@new Hex().decode("q0") @AT@ 1528 @LENGTH@ 12
+---------------INS StringLiteral@@"q0" @TO@ SimpleName@@MethodName:decode:["q0"] @AT@ 1535 @LENGTH@ 4
+------INS ExpressionStatement@@MethodInvocation:fail("An exception wasn't thrown when trying to decode an illegal character") @TO@ TryStatement@@try {  new Hex().decode("q0");  fail("An exception wasn't thrown when trying to decode an illegal character");} catch (DecoderException e) {} @AT@ 1554 @LENGTH@ 78
+---------INS MethodInvocation@@fail("An exception wasn't thrown when trying to decode an illegal character") @TO@ ExpressionStatement@@MethodInvocation:fail("An exception wasn't thrown when trying to decode an illegal character") @AT@ 1554 @LENGTH@ 77
+------------INS SimpleName@@MethodName:fail:["An exception wasn't thrown when trying to decode an illegal character"] @TO@ MethodInvocation@@fail("An exception wasn't thrown when trying to decode an illegal character") @AT@ 1554 @LENGTH@ 77
+---------------INS StringLiteral@@"An exception wasn't thrown when trying to decode an illegal character" @TO@ SimpleName@@MethodName:fail:["An exception wasn't thrown when trying to decode an illegal character"] @AT@ 1559 @LENGTH@ 71
+------INS CatchClause@@catch (DecoderException e) {} @TO@ TryStatement@@try {  new Hex().decode("q0");  fail("An exception wasn't thrown when trying to decode an illegal character");} catch (DecoderException e) {} @AT@ 1651 @LENGTH@ 72
+---------INS SingleVariableDeclaration@@DecoderException e @TO@ CatchClause@@catch (DecoderException e) {} @AT@ 1658 @LENGTH@ 18
+------------INS SimpleType@@DecoderException @TO@ SingleVariableDeclaration@@DecoderException e @AT@ 1658 @LENGTH@ 16
+------------INS SimpleName@@e @TO@ SingleVariableDeclaration@@DecoderException e @AT@ 1675 @LENGTH@ 1
+
+
+INS MethodDeclaration@@public, boolean, MethodName:isEqualsCheckable,  @TO@ TypeDeclaration@@[public, abstract]AbstractTestList, AbstractTestCollection @AT@ 3957 @LENGTH@ 63
+---INS Modifier@@public @TO@ MethodDeclaration@@public, boolean, MethodName:isEqualsCheckable,  @AT@ 3957 @LENGTH@ 6
+---INS PrimitiveType@@boolean @TO@ MethodDeclaration@@public, boolean, MethodName:isEqualsCheckable,  @AT@ 3964 @LENGTH@ 7
+---INS SimpleName@@MethodName:isEqualsCheckable @TO@ MethodDeclaration@@public, boolean, MethodName:isEqualsCheckable,  @AT@ 3972 @LENGTH@ 17
+---INS ReturnStatement@@BooleanLiteral:true @TO@ MethodDeclaration@@public, boolean, MethodName:isEqualsCheckable,  @AT@ 4002 @LENGTH@ 12
+------INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 4009 @LENGTH@ 4
+
+
+UPD ExpressionStatement@@MethodInvocation:assertTrue(reader instanceof HierarchicalConfigurationXMLReader) @TO@ MethodInvocation:assertTrue("Class of reader is " + reader.getClass().getName(),reader instanceof HierarchicalConfigurationXMLReader) @AT@ 2837 @LENGTH@ 65
+---UPD MethodInvocation@@assertTrue(reader instanceof HierarchicalConfigurationXMLReader) @TO@ assertTrue("Class of reader is " + reader.getClass().getName(),reader instanceof HierarchicalConfigurationXMLReader) @AT@ 2837 @LENGTH@ 64
+------UPD SimpleName@@MethodName:assertTrue:[reader instanceof HierarchicalConfigurationXMLReader] @TO@ MethodName:assertTrue:["Class of reader is " + reader.getClass().getName(), reader instanceof HierarchicalConfigurationXMLReader] @AT@ 2837 @LENGTH@ 64
+---------INS InfixExpression@@"Class of reader is " + reader.getClass().getName() @TO@ SimpleName@@MethodName:assertTrue:[reader instanceof HierarchicalConfigurationXMLReader] @AT@ 2848 @LENGTH@ 51
+------------INS StringLiteral@@"Class of reader is " @TO@ InfixExpression@@"Class of reader is " + reader.getClass().getName() @AT@ 2848 @LENGTH@ 21
+------------INS Operator@@+ @TO@ InfixExpression@@"Class of reader is " + reader.getClass().getName() @AT@ 2869 @LENGTH@ 1
+------------INS MethodInvocation@@reader.getClass().getName() @TO@ InfixExpression@@"Class of reader is " + reader.getClass().getName() @AT@ 2872 @LENGTH@ 27
+---------------INS MethodInvocation@@MethodName:getClass:[] @TO@ MethodInvocation@@reader.getClass().getName() @AT@ 2872 @LENGTH@ 17
+---------------INS SimpleName@@Name:reader @TO@ MethodInvocation@@reader.getClass().getName() @AT@ 2872 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:getName:[] @TO@ MethodInvocation@@reader.getClass().getName() @AT@ 2890 @LENGTH@ 9
+
+
+UPD ForStatement@@for (int i=0; i < 10000; i++) {  int j=(int)(Math.random() * 110000);  l.get(j);} @TO@ for (int i=0; i < 50000; i++) {  int j=(int)(Math.random() * 110000);  l.get(j);} @AT@ 2749 @LENGTH@ 117
+---UPD InfixExpression@@i < 10000 @TO@ i < 50000 @AT@ 2765 @LENGTH@ 9
+------UPD NumberLiteral@@10000 @TO@ 50000 @AT@ 2769 @LENGTH@ 5
+
+
+INS MethodDeclaration@@public, void, MethodName:testClone,  @TO@ TypeDeclaration@@[public]TestHashedMap, AbstractTestIterableMap @AT@ 1403 @LENGTH@ 241
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 1403 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 1410 @LENGTH@ 4
+---INS SimpleName@@MethodName:testClone @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 1415 @LENGTH@ 9
+---INS VariableDeclarationStatement@@HashedMap map=new HashedMap(10); @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 1437 @LENGTH@ 34
+------INS SimpleType@@HashedMap @TO@ VariableDeclarationStatement@@HashedMap map=new HashedMap(10); @AT@ 1437 @LENGTH@ 9
+------INS VariableDeclarationFragment@@map=new HashedMap(10) @TO@ VariableDeclarationStatement@@HashedMap map=new HashedMap(10); @AT@ 1447 @LENGTH@ 23
+---------INS SimpleName@@map @TO@ VariableDeclarationFragment@@map=new HashedMap(10) @AT@ 1447 @LENGTH@ 3
+---------INS ClassInstanceCreation@@HashedMap[10] @TO@ VariableDeclarationFragment@@map=new HashedMap(10) @AT@ 1453 @LENGTH@ 17
+------------INS New@@new @TO@ ClassInstanceCreation@@HashedMap[10] @AT@ 1453 @LENGTH@ 3
+------------INS SimpleType@@HashedMap @TO@ ClassInstanceCreation@@HashedMap[10] @AT@ 1457 @LENGTH@ 9
+------------INS NumberLiteral@@10 @TO@ ClassInstanceCreation@@HashedMap[10] @AT@ 1467 @LENGTH@ 2
+---INS ExpressionStatement@@MethodInvocation:map.put("1","1") @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 1480 @LENGTH@ 18
+------INS MethodInvocation@@map.put("1","1") @TO@ ExpressionStatement@@MethodInvocation:map.put("1","1") @AT@ 1480 @LENGTH@ 17
+---------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("1","1") @AT@ 1480 @LENGTH@ 3
+---------INS SimpleName@@MethodName:put:["1", "1"] @TO@ MethodInvocation@@map.put("1","1") @AT@ 1484 @LENGTH@ 13
+------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:put:["1", "1"] @AT@ 1488 @LENGTH@ 3
+------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:put:["1", "1"] @AT@ 1493 @LENGTH@ 3
+---INS VariableDeclarationStatement@@Map cloned=(Map)map.clone(); @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 1507 @LENGTH@ 31
+------INS SimpleType@@Map @TO@ VariableDeclarationStatement@@Map cloned=(Map)map.clone(); @AT@ 1507 @LENGTH@ 3
+------INS VariableDeclarationFragment@@cloned=(Map)map.clone() @TO@ VariableDeclarationStatement@@Map cloned=(Map)map.clone(); @AT@ 1511 @LENGTH@ 26
+---------INS SimpleName@@cloned @TO@ VariableDeclarationFragment@@cloned=(Map)map.clone() @AT@ 1511 @LENGTH@ 6
+---------INS CastExpression@@(Map)map.clone() @TO@ VariableDeclarationFragment@@cloned=(Map)map.clone() @AT@ 1520 @LENGTH@ 17
+------------INS SimpleType@@Map @TO@ CastExpression@@(Map)map.clone() @AT@ 1521 @LENGTH@ 3
+------------INS MethodInvocation@@map.clone() @TO@ CastExpression@@(Map)map.clone() @AT@ 1526 @LENGTH@ 11
+---------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.clone() @AT@ 1526 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:clone:[] @TO@ MethodInvocation@@map.clone() @AT@ 1530 @LENGTH@ 7
+---INS ExpressionStatement@@MethodInvocation:assertEquals(map.size(),cloned.size()) @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 1547 @LENGTH@ 40
+------INS MethodInvocation@@assertEquals(map.size(),cloned.size()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(map.size(),cloned.size()) @AT@ 1547 @LENGTH@ 39
+---------INS SimpleName@@MethodName:assertEquals:[map.size(), cloned.size()] @TO@ MethodInvocation@@assertEquals(map.size(),cloned.size()) @AT@ 1547 @LENGTH@ 39
+------------INS MethodInvocation@@map.size() @TO@ SimpleName@@MethodName:assertEquals:[map.size(), cloned.size()] @AT@ 1560 @LENGTH@ 10
+---------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.size() @AT@ 1560 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:size:[] @TO@ MethodInvocation@@map.size() @AT@ 1564 @LENGTH@ 6
+------------INS MethodInvocation@@cloned.size() @TO@ SimpleName@@MethodName:assertEquals:[map.size(), cloned.size()] @AT@ 1572 @LENGTH@ 13
+---------------INS SimpleName@@Name:cloned @TO@ MethodInvocation@@cloned.size() @AT@ 1572 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:size:[] @TO@ MethodInvocation@@cloned.size() @AT@ 1579 @LENGTH@ 6
+---INS ExpressionStatement@@MethodInvocation:assertSame(map.get("1"),cloned.get("1")) @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 1596 @LENGTH@ 42
+------INS MethodInvocation@@assertSame(map.get("1"),cloned.get("1")) @TO@ ExpressionStatement@@MethodInvocation:assertSame(map.get("1"),cloned.get("1")) @AT@ 1596 @LENGTH@ 41
+---------INS SimpleName@@MethodName:assertSame:[map.get("1"), cloned.get("1")] @TO@ MethodInvocation@@assertSame(map.get("1"),cloned.get("1")) @AT@ 1596 @LENGTH@ 41
+------------INS MethodInvocation@@map.get("1") @TO@ SimpleName@@MethodName:assertSame:[map.get("1"), cloned.get("1")] @AT@ 1607 @LENGTH@ 12
+---------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.get("1") @AT@ 1607 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:get:["1"] @TO@ MethodInvocation@@map.get("1") @AT@ 1611 @LENGTH@ 8
+------------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:get:["1"] @AT@ 1615 @LENGTH@ 3
+------------INS MethodInvocation@@cloned.get("1") @TO@ SimpleName@@MethodName:assertSame:[map.get("1"), cloned.get("1")] @AT@ 1621 @LENGTH@ 15
+---------------INS SimpleName@@Name:cloned @TO@ MethodInvocation@@cloned.get("1") @AT@ 1621 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:get:["1"] @TO@ MethodInvocation@@cloned.get("1") @AT@ 1628 @LENGTH@ 8
+------------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:get:["1"] @AT@ 1632 @LENGTH@ 3
+
+
+UPD MethodDeclaration@@protected, voidMethodName:AbstractHashedMap, int initialCapacity, float loadFactor, int threshhold,  @TO@ protected, voidMethodName:AbstractHashedMap, int initialCapacity, float loadFactor, int threshold,  @AT@ 6515 @LENGTH@ 250
+---UPD SingleVariableDeclaration@@int threshhold @TO@ int threshold @AT@ 6582 @LENGTH@ 14
+------UPD SimpleName@@threshhold @TO@ threshold @AT@ 6586 @LENGTH@ 10
+---UPD ExpressionStatement@@Assignment:this.threshold=threshhold @TO@ Assignment:this.threshold=threshold @AT@ 6715 @LENGTH@ 28
+------UPD Assignment@@this.threshold=threshhold @TO@ this.threshold=threshold @AT@ 6715 @LENGTH@ 27
+---------UPD SimpleName@@threshhold @TO@ threshold @AT@ 6732 @LENGTH@ 10
+
+
+UPD MethodDeclaration@@public, void, MethodName:testEmptyMapCompatibility, IOException, ClassNotFoundException,  @TO@ public, void, MethodName:testEmptyMapCompatibility, Exception,  @AT@ 26392 @LENGTH@ 691
+---UPD SimpleType@@IOException @TO@ Exception @AT@ 26439 @LENGTH@ 11
+---DEL SimpleType@@ClassNotFoundException @AT@ 26452 @LENGTH@ 22
+
+
+UPD ExpressionStatement@@MethodInvocation:init() @TO@ MethodInvocation:cloned.init() @AT@ 38317 @LENGTH@ 7
+---UPD MethodInvocation@@MethodName:init:[] @TO@ cloned.init() @AT@ 38317 @LENGTH@ 6
+------INS SimpleName@@Name:cloned @TO@ MethodInvocation@@MethodName:init:[] @AT@ 38317 @LENGTH@ 6
+------INS SimpleName@@MethodName:init:[] @TO@ MethodInvocation@@MethodName:init:[] @AT@ 38324 @LENGTH@ 6
+
+
+INS MethodDeclaration@@public, boolean, MethodName:isEqualsCheckable,  @TO@ TypeDeclaration@@[public, abstract]AbstractTestSet, AbstractTestCollection @AT@ 2704 @LENGTH@ 63
+---INS Modifier@@public @TO@ MethodDeclaration@@public, boolean, MethodName:isEqualsCheckable,  @AT@ 2704 @LENGTH@ 6
+---INS PrimitiveType@@boolean @TO@ MethodDeclaration@@public, boolean, MethodName:isEqualsCheckable,  @AT@ 2711 @LENGTH@ 7
+---INS SimpleName@@MethodName:isEqualsCheckable @TO@ MethodDeclaration@@public, boolean, MethodName:isEqualsCheckable,  @AT@ 2719 @LENGTH@ 17
+---INS ReturnStatement@@BooleanLiteral:true @TO@ MethodDeclaration@@public, boolean, MethodName:isEqualsCheckable,  @AT@ 2749 @LENGTH@ 12
+------INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 2756 @LENGTH@ 4
+
+
+MOV MethodDeclaration@@public, String[], MethodName:ignoredTests,  @TO@ TypeDeclaration@@[public]TestFixedSizeSortedMap, AbstractTestSortedMap @AT@ 1991 @LENGTH@ 911
+
+
+INS MethodDeclaration@@public, void, MethodName:testCopyToSelf, Exception,  @TO@ TypeDeclaration@@[public]FileUtilsTestCase, FileBasedTestCase @AT@ 8855 @LENGTH@ 462
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testCopyToSelf, Exception,  @AT@ 8855 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testCopyToSelf, Exception,  @AT@ 8862 @LENGTH@ 4
+---INS SimpleName@@MethodName:testCopyToSelf @TO@ MethodDeclaration@@public, void, MethodName:testCopyToSelf, Exception,  @AT@ 8867 @LENGTH@ 14
+---INS SimpleType@@Exception @TO@ MethodDeclaration@@public, void, MethodName:testCopyToSelf, Exception,  @AT@ 8891 @LENGTH@ 9
+---INS VariableDeclarationStatement@@File destination=new File(getTestDirectory(),"copy3.txt"); @TO@ MethodDeclaration@@public, void, MethodName:testCopyToSelf, Exception,  @AT@ 8911 @LENGTH@ 61
+------INS SimpleType@@File @TO@ VariableDeclarationStatement@@File destination=new File(getTestDirectory(),"copy3.txt"); @AT@ 8911 @LENGTH@ 4
+------INS VariableDeclarationFragment@@destination=new File(getTestDirectory(),"copy3.txt") @TO@ VariableDeclarationStatement@@File destination=new File(getTestDirectory(),"copy3.txt"); @AT@ 8916 @LENGTH@ 55
+---------INS SimpleName@@destination @TO@ VariableDeclarationFragment@@destination=new File(getTestDirectory(),"copy3.txt") @AT@ 8916 @LENGTH@ 11
+---------INS ClassInstanceCreation@@File[getTestDirectory(), "copy3.txt"] @TO@ VariableDeclarationFragment@@destination=new File(getTestDirectory(),"copy3.txt") @AT@ 8930 @LENGTH@ 41
+------------INS New@@new @TO@ ClassInstanceCreation@@File[getTestDirectory(), "copy3.txt"] @AT@ 8930 @LENGTH@ 3
+------------INS SimpleType@@File @TO@ ClassInstanceCreation@@File[getTestDirectory(), "copy3.txt"] @AT@ 8934 @LENGTH@ 4
+------------INS MethodInvocation@@MethodName:getTestDirectory:[] @TO@ ClassInstanceCreation@@File[getTestDirectory(), "copy3.txt"] @AT@ 8939 @LENGTH@ 18
+------------INS StringLiteral@@"copy3.txt" @TO@ ClassInstanceCreation@@File[getTestDirectory(), "copy3.txt"] @AT@ 8959 @LENGTH@ 11
+---INS ExpressionStatement@@MethodInvocation:FileUtils.copyFile(testFile1,destination) @TO@ MethodDeclaration@@public, void, MethodName:testCopyToSelf, Exception,  @AT@ 9011 @LENGTH@ 43
+------INS MethodInvocation@@FileUtils.copyFile(testFile1,destination) @TO@ ExpressionStatement@@MethodInvocation:FileUtils.copyFile(testFile1,destination) @AT@ 9011 @LENGTH@ 42
+---------INS SimpleName@@Name:FileUtils @TO@ MethodInvocation@@FileUtils.copyFile(testFile1,destination) @AT@ 9011 @LENGTH@ 9
+---------INS SimpleName@@MethodName:copyFile:[testFile1, destination] @TO@ MethodInvocation@@FileUtils.copyFile(testFile1,destination) @AT@ 9021 @LENGTH@ 32
+------------INS SimpleName@@testFile1 @TO@ SimpleName@@MethodName:copyFile:[testFile1, destination] @AT@ 9030 @LENGTH@ 9
+------------INS SimpleName@@destination @TO@ SimpleName@@MethodName:copyFile:[testFile1, destination] @AT@ 9041 @LENGTH@ 11
+---INS TryStatement@@try {  FileUtils.copyFile(destination,destination);  fail("file copy to self should not be possible");} catch (IOException ioe) {} @TO@ MethodDeclaration@@public, void, MethodName:testCopyToSelf, Exception,  @AT@ 9072 @LENGTH@ 239
+------INS ExpressionStatement@@MethodInvocation:FileUtils.copyFile(destination,destination) @TO@ TryStatement@@try {  FileUtils.copyFile(destination,destination);  fail("file copy to self should not be possible");} catch (IOException ioe) {} @AT@ 9090 @LENGTH@ 45
+---------INS MethodInvocation@@FileUtils.copyFile(destination,destination) @TO@ ExpressionStatement@@MethodInvocation:FileUtils.copyFile(destination,destination) @AT@ 9090 @LENGTH@ 44
+------------INS SimpleName@@Name:FileUtils @TO@ MethodInvocation@@FileUtils.copyFile(destination,destination) @AT@ 9090 @LENGTH@ 9
+------------INS SimpleName@@MethodName:copyFile:[destination, destination] @TO@ MethodInvocation@@FileUtils.copyFile(destination,destination) @AT@ 9100 @LENGTH@ 34
+---------------INS SimpleName@@destination @TO@ SimpleName@@MethodName:copyFile:[destination, destination] @AT@ 9109 @LENGTH@ 11
+---------------INS SimpleName@@destination @TO@ SimpleName@@MethodName:copyFile:[destination, destination] @AT@ 9122 @LENGTH@ 11
+------INS ExpressionStatement@@MethodInvocation:fail("file copy to self should not be possible") @TO@ TryStatement@@try {  FileUtils.copyFile(destination,destination);  fail("file copy to self should not be possible");} catch (IOException ioe) {} @AT@ 9148 @LENGTH@ 49
+---------INS MethodInvocation@@fail("file copy to self should not be possible") @TO@ ExpressionStatement@@MethodInvocation:fail("file copy to self should not be possible") @AT@ 9148 @LENGTH@ 48
+------------INS SimpleName@@MethodName:fail:["file copy to self should not be possible"] @TO@ MethodInvocation@@fail("file copy to self should not be possible") @AT@ 9148 @LENGTH@ 48
+---------------INS StringLiteral@@"file copy to self should not be possible" @TO@ SimpleName@@MethodName:fail:["file copy to self should not be possible"] @AT@ 9153 @LENGTH@ 42
+------INS CatchClause@@catch (IOException ioe) {} @TO@ TryStatement@@try {  FileUtils.copyFile(destination,destination);  fail("file copy to self should not be possible");} catch (IOException ioe) {} @AT@ 9208 @LENGTH@ 103
+---------INS SingleVariableDeclaration@@IOException ioe @TO@ CatchClause@@catch (IOException ioe) {} @AT@ 9215 @LENGTH@ 15
+------------INS SimpleType@@IOException @TO@ SingleVariableDeclaration@@IOException ioe @AT@ 9215 @LENGTH@ 11
+------------INS SimpleName@@ioe @TO@ SingleVariableDeclaration@@IOException ioe @AT@ 9227 @LENGTH@ 3
+
+
+UPD TryStatement@@try {  PropertiesWriter out=new PropertiesWriter(file);  out.writeComment("written by PropertiesConfiguration");  out.writeComment(new Date().toString());  for (Iterator i=this.getKeys(); i.hasNext(); ) {    String key=(String)i.next();    String value=StringUtils.join(this.getStringArray(key),", ");    out.writeProperty(key,value);  }  out.flush();  out.close();} catch (IOException ioe) {  throw new ConfigurationException("Could not save to file " + filename,ioe);} @TO@ try {  out=new PropertiesWriter(file);  out.writeComment("written by PropertiesConfiguration");  out.writeComment(new Date().toString());  for (Iterator i=this.getKeys(); i.hasNext(); ) {    String key=(String)i.next();    String value=StringUtils.join(this.getStringArray(key),", ");    out.writeProperty(key,value);  }  out.flush();  out.close();} catch (IOException ioe) {  try {    if (out != null) {      out.close();    }  } catch (  IOException ioe2) {  }  throw new ConfigurationException("Could not save to file " + filename,ioe);} @AT@ 7197 @LENGTH@ 601
+---DEL VariableDeclarationStatement@@PropertiesWriter out=new PropertiesWriter(file); @AT@ 7212 @LENGTH@ 50
+------DEL SimpleType@@PropertiesWriter @AT@ 7212 @LENGTH@ 16
+------DEL VariableDeclarationFragment@@out=new PropertiesWriter(file) @AT@ 7229 @LENGTH@ 32
+---------DEL SimpleName@@out @AT@ 7229 @LENGTH@ 3
+---------DEL ClassInstanceCreation@@PropertiesWriter[file] @AT@ 7235 @LENGTH@ 26
+---INS ExpressionStatement@@Assignment:out=new PropertiesWriter(file) @TO@ TryStatement@@try {  PropertiesWriter out=new PropertiesWriter(file);  out.writeComment("written by PropertiesConfiguration");  out.writeComment(new Date().toString());  for (Iterator i=this.getKeys(); i.hasNext(); ) {    String key=(String)i.next();    String value=StringUtils.join(this.getStringArray(key),", ");    out.writeProperty(key,value);  }  out.flush();  out.close();} catch (IOException ioe) {  throw new ConfigurationException("Could not save to file " + filename,ioe);} @AT@ 7249 @LENGTH@ 33
+------INS Assignment@@out=new PropertiesWriter(file) @TO@ ExpressionStatement@@Assignment:out=new PropertiesWriter(file) @AT@ 7249 @LENGTH@ 32
+---------INS SimpleName@@out @TO@ Assignment@@out=new PropertiesWriter(file) @AT@ 7249 @LENGTH@ 3
+---------INS Operator@@= @TO@ Assignment@@out=new PropertiesWriter(file) @AT@ 7252 @LENGTH@ 1
+---------INS ClassInstanceCreation@@PropertiesWriter[file] @TO@ Assignment@@out=new PropertiesWriter(file) @AT@ 7255 @LENGTH@ 26
+------------MOV New@@new @TO@ ClassInstanceCreation@@PropertiesWriter[file] @AT@ 7235 @LENGTH@ 3
+------------MOV SimpleType@@PropertiesWriter @TO@ ClassInstanceCreation@@PropertiesWriter[file] @AT@ 7239 @LENGTH@ 16
+------------MOV SimpleName@@file @TO@ ClassInstanceCreation@@PropertiesWriter[file] @AT@ 7256 @LENGTH@ 4
+---UPD CatchClause@@catch (IOException ioe) {  throw new ConfigurationException("Could not save to file " + filename,ioe);} @TO@ catch (IOException ioe) {  try {    if (out != null) {      out.close();    }  } catch (  IOException ioe2) {  }  throw new ConfigurationException("Could not save to file " + filename,ioe);} @AT@ 7679 @LENGTH@ 119
+------INS TryStatement@@try {  if (out != null) {    out.close();  }} catch (IOException ioe2) {} @TO@ CatchClause@@catch (IOException ioe) {  throw new ConfigurationException("Could not save to file " + filename,ioe);} @AT@ 7736 @LENGTH@ 172
+---------INS IfStatement@@if (out != null) {  out.close();} @TO@ TryStatement@@try {  if (out != null) {    out.close();  }} catch (IOException ioe2) {} @AT@ 7758 @LENGTH@ 67
+------------INS InfixExpression@@out != null @TO@ IfStatement@@if (out != null) {  out.close();} @AT@ 7762 @LENGTH@ 10
+---------------INS SimpleName@@out @TO@ InfixExpression@@out != null @AT@ 7762 @LENGTH@ 3
+---------------INS Operator@@!= @TO@ InfixExpression@@out != null @AT@ 7765 @LENGTH@ 2
+---------------INS NullLiteral@@null @TO@ InfixExpression@@out != null @AT@ 7768 @LENGTH@ 4
+------------INS Block@@ThenBody:{  out.close();} @TO@ IfStatement@@if (out != null) {  out.close();} @AT@ 7773 @LENGTH@ 52
+---------------INS ExpressionStatement@@MethodInvocation:out.close() @TO@ Block@@ThenBody:{  out.close();} @AT@ 7795 @LENGTH@ 12
+------------------INS MethodInvocation@@out.close() @TO@ ExpressionStatement@@MethodInvocation:out.close() @AT@ 7795 @LENGTH@ 11
+---------------------INS SimpleName@@Name:out @TO@ MethodInvocation@@out.close() @AT@ 7795 @LENGTH@ 3
+---------------------INS SimpleName@@MethodName:close:[] @TO@ MethodInvocation@@out.close() @AT@ 7799 @LENGTH@ 7
+---------INS CatchClause@@catch (IOException ioe2) {} @TO@ TryStatement@@try {  if (out != null) {    out.close();  }} catch (IOException ioe2) {} @AT@ 7852 @LENGTH@ 56
+------------INS SingleVariableDeclaration@@IOException ioe2 @TO@ CatchClause@@catch (IOException ioe2) {} @AT@ 7859 @LENGTH@ 16
+---------------INS SimpleType@@IOException @TO@ SingleVariableDeclaration@@IOException ioe2 @AT@ 7859 @LENGTH@ 11
+---------------INS SimpleName@@ioe2 @TO@ SingleVariableDeclaration@@IOException ioe2 @AT@ 7871 @LENGTH@ 4
+
+
+INS VariableDeclarationStatement@@PropertiesWriter out=null; @TO@ MethodDeclaration@@public, void, MethodName:save, String filename, ConfigurationException,  @AT@ 7157 @LENGTH@ 28
+---INS SimpleType@@PropertiesWriter @TO@ VariableDeclarationStatement@@PropertiesWriter out=null; @AT@ 7157 @LENGTH@ 16
+---INS VariableDeclarationFragment@@out=null @TO@ VariableDeclarationStatement@@PropertiesWriter out=null; @AT@ 7174 @LENGTH@ 10
+------INS SimpleName@@out @TO@ VariableDeclarationFragment@@out=null @AT@ 7174 @LENGTH@ 3
+------INS NullLiteral@@null @TO@ VariableDeclarationFragment@@out=null @AT@ 7180 @LENGTH@ 4
+
+
+UPD MethodDeclaration@@public, boolean, MethodName:remove, Object o,  @TO@ public, boolean, MethodName:remove, Object obj,  @AT@ 18563 @LENGTH@ 475
+---UPD SingleVariableDeclaration@@Object o @TO@ Object obj @AT@ 18585 @LENGTH@ 8
+------UPD SimpleName@@o @TO@ obj @AT@ 18592 @LENGTH@ 1
+---UPD VariableDeclarationStatement@@Map.Entry entry=(Map.Entry)o; @TO@ Map.Entry entry=(Map.Entry)obj; @AT@ 18609 @LENGTH@ 31
+------UPD VariableDeclarationFragment@@entry=(Map.Entry)o @TO@ entry=(Map.Entry)obj @AT@ 18619 @LENGTH@ 20
+---------UPD CastExpression@@(Map.Entry)o @TO@ (Map.Entry)obj @AT@ 18627 @LENGTH@ 12
+------------UPD SimpleName@@o @TO@ obj @AT@ 18638 @LENGTH@ 1
+---INS IfStatement@@if (obj instanceof Map.Entry == false) {  return false;} @TO@ MethodDeclaration@@public, boolean, MethodName:remove, Object o,  @AT@ 18611 @LENGTH@ 84
+------INS InfixExpression@@obj instanceof Map.Entry == false @TO@ IfStatement@@if (obj instanceof Map.Entry == false) {  return false;} @AT@ 18615 @LENGTH@ 33
+---------INS InstanceofExpression@@obj instanceof Map.Entry @TO@ InfixExpression@@obj instanceof Map.Entry == false @AT@ 18615 @LENGTH@ 24
+------------INS SimpleName@@obj @TO@ InstanceofExpression@@obj instanceof Map.Entry @AT@ 18615 @LENGTH@ 3
+------------INS Instanceof@@instanceof @TO@ InstanceofExpression@@obj instanceof Map.Entry @AT@ 18619 @LENGTH@ 10
+------------INS SimpleType@@Map.Entry @TO@ InstanceofExpression@@obj instanceof Map.Entry @AT@ 18630 @LENGTH@ 9
+---------INS Operator@@== @TO@ InfixExpression@@obj instanceof Map.Entry == false @AT@ 18639 @LENGTH@ 2
+---------INS BooleanLiteral@@false @TO@ InfixExpression@@obj instanceof Map.Entry == false @AT@ 18643 @LENGTH@ 5
+------INS Block@@ThenBody:{  return false;} @TO@ IfStatement@@if (obj instanceof Map.Entry == false) {  return false;} @AT@ 18650 @LENGTH@ 45
+---------INS ReturnStatement@@BooleanLiteral:false @TO@ Block@@ThenBody:{  return false;} @AT@ 18668 @LENGTH@ 13
+------------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 18675 @LENGTH@ 5
+
+
+UPD ExpressionStatement@@MethodInvocation:assertTrue("Returned object should be a TypedSortedBag.",bag instanceof PredicatedBag) @TO@ MethodInvocation:assertTrue("Returned object should be a TypedSortedBag.",bag instanceof PredicatedSortedBag) @AT@ 8926 @LENGTH@ 100
+---UPD MethodInvocation@@assertTrue("Returned object should be a TypedSortedBag.",bag instanceof PredicatedBag) @TO@ assertTrue("Returned object should be a TypedSortedBag.",bag instanceof PredicatedSortedBag) @AT@ 8926 @LENGTH@ 99
+------UPD SimpleName@@MethodName:assertTrue:["Returned object should be a TypedSortedBag.", bag instanceof PredicatedBag] @TO@ MethodName:assertTrue:["Returned object should be a TypedSortedBag.", bag instanceof PredicatedSortedBag] @AT@ 8926 @LENGTH@ 99
+---------UPD InstanceofExpression@@bag instanceof PredicatedBag @TO@ bag instanceof PredicatedSortedBag @AT@ 8996 @LENGTH@ 28
+------------UPD SimpleType@@PredicatedBag @TO@ PredicatedSortedBag @AT@ 9011 @LENGTH@ 13
+
+
+INS MethodDeclaration@@public, void, MethodName:testDecodeBadCharacterPos1,  @TO@ TypeDeclaration@@[public]HexTest, TestCase @AT@ 1735 @LENGTH@ 280
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testDecodeBadCharacterPos1,  @AT@ 1735 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testDecodeBadCharacterPos1,  @AT@ 1742 @LENGTH@ 4
+---INS SimpleName@@MethodName:testDecodeBadCharacterPos1 @TO@ MethodDeclaration@@public, void, MethodName:testDecodeBadCharacterPos1,  @AT@ 1747 @LENGTH@ 26
+---INS TryStatement@@try {  new Hex().decode("0q");  fail("An exception wasn't thrown when trying to decode an illegal character");} catch (DecoderException e) {} @TO@ MethodDeclaration@@public, void, MethodName:testDecodeBadCharacterPos1,  @AT@ 1786 @LENGTH@ 223
+------INS ExpressionStatement@@MethodInvocation:new Hex().decode("0q") @TO@ TryStatement@@try {  new Hex().decode("0q");  fail("An exception wasn't thrown when trying to decode an illegal character");} catch (DecoderException e) {} @AT@ 1804 @LENGTH@ 23
+---------INS MethodInvocation@@new Hex().decode("0q") @TO@ ExpressionStatement@@MethodInvocation:new Hex().decode("0q") @AT@ 1804 @LENGTH@ 22
+------------INS ClassInstanceCreation@@Hex[] @TO@ MethodInvocation@@new Hex().decode("0q") @AT@ 1804 @LENGTH@ 9
+---------------INS New@@new @TO@ ClassInstanceCreation@@Hex[] @AT@ 1804 @LENGTH@ 3
+---------------INS SimpleType@@Hex @TO@ ClassInstanceCreation@@Hex[] @AT@ 1808 @LENGTH@ 3
+------------INS SimpleName@@MethodName:decode:["0q"] @TO@ MethodInvocation@@new Hex().decode("0q") @AT@ 1814 @LENGTH@ 12
+---------------INS StringLiteral@@"0q" @TO@ SimpleName@@MethodName:decode:["0q"] @AT@ 1821 @LENGTH@ 4
+------INS ExpressionStatement@@MethodInvocation:fail("An exception wasn't thrown when trying to decode an illegal character") @TO@ TryStatement@@try {  new Hex().decode("0q");  fail("An exception wasn't thrown when trying to decode an illegal character");} catch (DecoderException e) {} @AT@ 1840 @LENGTH@ 78
+---------INS MethodInvocation@@fail("An exception wasn't thrown when trying to decode an illegal character") @TO@ ExpressionStatement@@MethodInvocation:fail("An exception wasn't thrown when trying to decode an illegal character") @AT@ 1840 @LENGTH@ 77
+------------INS SimpleName@@MethodName:fail:["An exception wasn't thrown when trying to decode an illegal character"] @TO@ MethodInvocation@@fail("An exception wasn't thrown when trying to decode an illegal character") @AT@ 1840 @LENGTH@ 77
+---------------INS StringLiteral@@"An exception wasn't thrown when trying to decode an illegal character" @TO@ SimpleName@@MethodName:fail:["An exception wasn't thrown when trying to decode an illegal character"] @AT@ 1845 @LENGTH@ 71
+------INS CatchClause@@catch (DecoderException e) {} @TO@ TryStatement@@try {  new Hex().decode("0q");  fail("An exception wasn't thrown when trying to decode an illegal character");} catch (DecoderException e) {} @AT@ 1937 @LENGTH@ 72
+---------INS SingleVariableDeclaration@@DecoderException e @TO@ CatchClause@@catch (DecoderException e) {} @AT@ 1944 @LENGTH@ 18
+------------INS SimpleType@@DecoderException @TO@ SingleVariableDeclaration@@DecoderException e @AT@ 1944 @LENGTH@ 16
+------------INS SimpleName@@e @TO@ SingleVariableDeclaration@@DecoderException e @AT@ 1961 @LENGTH@ 1
+
+
+UPD VariableDeclarationStatement@@Object object=(Object)it.next(); @TO@ Object object=it.next(); @AT@ 9038 @LENGTH@ 35
+---UPD VariableDeclarationFragment@@object=(Object)it.next() @TO@ object=it.next() @AT@ 9045 @LENGTH@ 27
+------INS MethodInvocation@@it.next() @TO@ VariableDeclarationFragment@@object=(Object)it.next() @AT@ 9045 @LENGTH@ 9
+---------MOV SimpleName@@Name:it @TO@ MethodInvocation@@it.next() @AT@ 9063 @LENGTH@ 2
+---------MOV SimpleName@@MethodName:next:[] @TO@ MethodInvocation@@it.next() @AT@ 9066 @LENGTH@ 6
+------DEL CastExpression@@(Object)it.next() @AT@ 9054 @LENGTH@ 18
+---------DEL SimpleType@@Object @AT@ 9055 @LENGTH@ 6
+---------DEL MethodInvocation@@it.next() @AT@ 9063 @LENGTH@ 9
+
+
+INS TryStatement@@try {  FileUtils.copyFileToDirectory(destination,directory);  fail("Should not be able to copy a file into the same directory as itself");} catch (IOException ioe) {} @TO@ MethodDeclaration@@public, void, MethodName:testCopyFile1ToDir, Exception,  @AT@ 11631 @LENGTH@ 294
+---INS ExpressionStatement@@MethodInvocation:FileUtils.copyFileToDirectory(destination,directory) @TO@ TryStatement@@try {  FileUtils.copyFileToDirectory(destination,directory);  fail("Should not be able to copy a file into the same directory as itself");} catch (IOException ioe) {} @AT@ 11649 @LENGTH@ 54
+------INS MethodInvocation@@FileUtils.copyFileToDirectory(destination,directory) @TO@ ExpressionStatement@@MethodInvocation:FileUtils.copyFileToDirectory(destination,directory) @AT@ 11649 @LENGTH@ 53
+---------INS SimpleName@@Name:FileUtils @TO@ MethodInvocation@@FileUtils.copyFileToDirectory(destination,directory) @AT@ 11649 @LENGTH@ 9
+---------INS SimpleName@@MethodName:copyFileToDirectory:[destination, directory] @TO@ MethodInvocation@@FileUtils.copyFileToDirectory(destination,directory) @AT@ 11659 @LENGTH@ 43
+------------INS SimpleName@@destination @TO@ SimpleName@@MethodName:copyFileToDirectory:[destination, directory] @AT@ 11679 @LENGTH@ 11
+------------INS SimpleName@@directory @TO@ SimpleName@@MethodName:copyFileToDirectory:[destination, directory] @AT@ 11692 @LENGTH@ 9
+---INS ExpressionStatement@@MethodInvocation:fail("Should not be able to copy a file into the same directory as itself") @TO@ TryStatement@@try {  FileUtils.copyFileToDirectory(destination,directory);  fail("Should not be able to copy a file into the same directory as itself");} catch (IOException ioe) {} @AT@ 11716 @LENGTH@ 76
+------INS MethodInvocation@@fail("Should not be able to copy a file into the same directory as itself") @TO@ ExpressionStatement@@MethodInvocation:fail("Should not be able to copy a file into the same directory as itself") @AT@ 11716 @LENGTH@ 75
+---------INS SimpleName@@MethodName:fail:["Should not be able to copy a file into the same directory as itself"] @TO@ MethodInvocation@@fail("Should not be able to copy a file into the same directory as itself") @AT@ 11716 @LENGTH@ 75
+------------INS StringLiteral@@"Should not be able to copy a file into the same directory as itself" @TO@ SimpleName@@MethodName:fail:["Should not be able to copy a file into the same directory as itself"] @AT@ 11721 @LENGTH@ 69
+---INS CatchClause@@catch (IOException ioe) {} @TO@ TryStatement@@try {  FileUtils.copyFileToDirectory(destination,directory);  fail("Should not be able to copy a file into the same directory as itself");} catch (IOException ioe) {} @AT@ 11807 @LENGTH@ 118
+------INS SingleVariableDeclaration@@IOException ioe @TO@ CatchClause@@catch (IOException ioe) {} @AT@ 11814 @LENGTH@ 15
+---------INS SimpleType@@IOException @TO@ SingleVariableDeclaration@@IOException ioe @AT@ 11814 @LENGTH@ 11
+---------INS SimpleName@@ioe @TO@ SingleVariableDeclaration@@IOException ioe @AT@ 11826 @LENGTH@ 3
+
+
+UPD ReturnStatement@@MethodInvocation:((Comparable)o1).compareTo(o2) @TO@ MethodInvocation:o1.compareTo(o2) @AT@ 26534 @LENGTH@ 39
+---UPD MethodInvocation@@((Comparable)o1).compareTo(o2) @TO@ o1.compareTo(o2) @AT@ 26541 @LENGTH@ 31
+------DEL ParenthesizedExpression@@((Comparable)o1) @AT@ 26541 @LENGTH@ 17
+---------DEL CastExpression@@(Comparable)o1 @AT@ 26542 @LENGTH@ 15
+------------DEL SimpleType@@Comparable @AT@ 26543 @LENGTH@ 10
+------------DEL SimpleName@@o1 @AT@ 26555 @LENGTH@ 2
+------INS SimpleName@@Name:o1 @TO@ MethodInvocation@@((Comparable)o1).compareTo(o2) @AT@ 26551 @LENGTH@ 2
+
+
+UPD VariableDeclarationStatement@@boolean contains=getCount(current) >= ((Bag)other).getCount(current); @TO@ boolean contains=getCount(current) >= other.getCount(current); @AT@ 7239 @LENGTH@ 72
+---UPD VariableDeclarationFragment@@contains=getCount(current) >= ((Bag)other).getCount(current) @TO@ contains=getCount(current) >= other.getCount(current) @AT@ 7247 @LENGTH@ 63
+------UPD InfixExpression@@getCount(current) >= ((Bag)other).getCount(current) @TO@ getCount(current) >= other.getCount(current) @AT@ 7258 @LENGTH@ 52
+---------UPD MethodInvocation@@((Bag)other).getCount(current) @TO@ other.getCount(current) @AT@ 7279 @LENGTH@ 31
+------------DEL ParenthesizedExpression@@((Bag)other) @AT@ 7279 @LENGTH@ 13
+---------------DEL CastExpression@@(Bag)other @AT@ 7280 @LENGTH@ 11
+------------------DEL SimpleType@@Bag @AT@ 7281 @LENGTH@ 3
+------------------DEL SimpleName@@other @AT@ 7286 @LENGTH@ 5
+------------INS SimpleName@@Name:other @TO@ MethodInvocation@@((Bag)other).getCount(current) @AT@ 7279 @LENGTH@ 5
+
+
+UPD IfStatement@@if (last == null) {  return "MapIterator[" + getKey() + "="+ getValue()+ "]";} else {  return "MapIterator[]";} @TO@ if (last != null) {  return "MapIterator[" + getKey() + "="+ getValue()+ "]";} else {  return "MapIterator[]";} @AT@ 19907 @LENGTH@ 169
+---UPD InfixExpression@@last == null @TO@ last != null @AT@ 19911 @LENGTH@ 12
+------UPD Operator@@== @TO@ != @AT@ 19915 @LENGTH@ 2
+
+
+UPD ReturnStatement@@MethodInvocation:get((String)key) @TO@ MethodInvocation:get(key) @AT@ 18236 @LENGTH@ 27
+---UPD MethodInvocation@@get((String)key) @TO@ get(key) @AT@ 18243 @LENGTH@ 19
+------UPD SimpleName@@MethodName:get:[(String)key] @TO@ MethodName:get:[key] @AT@ 18243 @LENGTH@ 19
+---------INS SimpleName@@key @TO@ SimpleName@@MethodName:get:[(String)key] @AT@ 18247 @LENGTH@ 3
+---------DEL CastExpression@@(String)key @AT@ 18248 @LENGTH@ 12
+------------DEL SimpleType@@String @AT@ 18249 @LENGTH@ 6
+------------DEL SimpleName@@key @AT@ 18257 @LENGTH@ 3
+
+
+INS MethodDeclaration@@public, Configuration, MethodName:subset, String prefix,  @TO@ TypeDeclaration@@[public]CompositeConfiguration, AbstractConfiguration @AT@ 7943 @LENGTH@ 710
+---INS Modifier@@public @TO@ MethodDeclaration@@public, Configuration, MethodName:subset, String prefix,  @AT@ 7943 @LENGTH@ 6
+---INS SimpleType@@Configuration @TO@ MethodDeclaration@@public, Configuration, MethodName:subset, String prefix,  @AT@ 7950 @LENGTH@ 13
+---INS SimpleName@@MethodName:subset @TO@ MethodDeclaration@@public, Configuration, MethodName:subset, String prefix,  @AT@ 7964 @LENGTH@ 6
+---INS SingleVariableDeclaration@@String prefix @TO@ MethodDeclaration@@public, Configuration, MethodName:subset, String prefix,  @AT@ 7971 @LENGTH@ 13
+------INS SimpleType@@String @TO@ SingleVariableDeclaration@@String prefix @AT@ 7971 @LENGTH@ 6
+------INS SimpleName@@prefix @TO@ SingleVariableDeclaration@@String prefix @AT@ 7978 @LENGTH@ 6
+---INS VariableDeclarationStatement@@CompositeConfiguration subsetCompositeConfiguration=new CompositeConfiguration(); @TO@ MethodDeclaration@@public, Configuration, MethodName:subset, String prefix,  @AT@ 8000 @LENGTH@ 95
+------INS SimpleType@@CompositeConfiguration @TO@ VariableDeclarationStatement@@CompositeConfiguration subsetCompositeConfiguration=new CompositeConfiguration(); @AT@ 8000 @LENGTH@ 22
+------INS VariableDeclarationFragment@@subsetCompositeConfiguration=new CompositeConfiguration() @TO@ VariableDeclarationStatement@@CompositeConfiguration subsetCompositeConfiguration=new CompositeConfiguration(); @AT@ 8023 @LENGTH@ 71
+---------INS SimpleName@@subsetCompositeConfiguration @TO@ VariableDeclarationFragment@@subsetCompositeConfiguration=new CompositeConfiguration() @AT@ 8023 @LENGTH@ 28
+---------INS ClassInstanceCreation@@CompositeConfiguration[] @TO@ VariableDeclarationFragment@@subsetCompositeConfiguration=new CompositeConfiguration() @AT@ 8066 @LENGTH@ 28
+------------INS New@@new @TO@ ClassInstanceCreation@@CompositeConfiguration[] @AT@ 8066 @LENGTH@ 3
+------------INS SimpleType@@CompositeConfiguration @TO@ ClassInstanceCreation@@CompositeConfiguration[] @AT@ 8070 @LENGTH@ 22
+---INS VariableDeclarationStatement@@Configuration subConf=null; @TO@ MethodDeclaration@@public, Configuration, MethodName:subset, String prefix,  @AT@ 8104 @LENGTH@ 29
+------INS SimpleType@@Configuration @TO@ VariableDeclarationStatement@@Configuration subConf=null; @AT@ 8104 @LENGTH@ 13
+------INS VariableDeclarationFragment@@subConf=null @TO@ VariableDeclarationStatement@@Configuration subConf=null; @AT@ 8118 @LENGTH@ 14
+---------INS SimpleName@@subConf @TO@ VariableDeclarationFragment@@subConf=null @AT@ 8118 @LENGTH@ 7
+---------INS NullLiteral@@null @TO@ VariableDeclarationFragment@@subConf=null @AT@ 8128 @LENGTH@ 4
+---INS VariableDeclarationStatement@@int count=0; @TO@ MethodDeclaration@@public, Configuration, MethodName:subset, String prefix,  @AT@ 8142 @LENGTH@ 14
+------INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int count=0; @AT@ 8142 @LENGTH@ 3
+------INS VariableDeclarationFragment@@count=0 @TO@ VariableDeclarationStatement@@int count=0; @AT@ 8146 @LENGTH@ 9
+---------INS SimpleName@@count @TO@ VariableDeclarationFragment@@count=0 @AT@ 8146 @LENGTH@ 5
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@count=0 @AT@ 8154 @LENGTH@ 1
+---INS ForStatement@@for (ListIterator i=configList.listIterator(); i.hasNext(); ) {  Configuration config=(Configuration)i.next();  Configuration subset=config.subset(prefix);  if (subset != null && !subset.isEmpty()) {    subsetCompositeConfiguration.addConfiguration(subset);    subConf=subset;    count++;  }} @TO@ MethodDeclaration@@public, Configuration, MethodName:subset, String prefix,  @AT@ 8165 @LENGTH@ 412
+------INS VariableDeclarationExpression@@ListIterator i=configList.listIterator() @TO@ ForStatement@@for (ListIterator i=configList.listIterator(); i.hasNext(); ) {  Configuration config=(Configuration)i.next();  Configuration subset=config.subset(prefix);  if (subset != null && !subset.isEmpty()) {    subsetCompositeConfiguration.addConfiguration(subset);    subConf=subset;    count++;  }} @AT@ 8170 @LENGTH@ 42
+---------INS SimpleType@@ListIterator @TO@ VariableDeclarationExpression@@ListIterator i=configList.listIterator() @AT@ 8170 @LENGTH@ 12
+---------INS VariableDeclarationFragment@@i=configList.listIterator() @TO@ VariableDeclarationExpression@@ListIterator i=configList.listIterator() @AT@ 8183 @LENGTH@ 29
+------------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=configList.listIterator() @AT@ 8183 @LENGTH@ 1
+------------INS MethodInvocation@@configList.listIterator() @TO@ VariableDeclarationFragment@@i=configList.listIterator() @AT@ 8187 @LENGTH@ 25
+---------------INS SimpleName@@Name:configList @TO@ MethodInvocation@@configList.listIterator() @AT@ 8187 @LENGTH@ 10
+---------------INS SimpleName@@MethodName:listIterator:[] @TO@ MethodInvocation@@configList.listIterator() @AT@ 8198 @LENGTH@ 14
+------INS MethodInvocation@@i.hasNext() @TO@ ForStatement@@for (ListIterator i=configList.listIterator(); i.hasNext(); ) {  Configuration config=(Configuration)i.next();  Configuration subset=config.subset(prefix);  if (subset != null && !subset.isEmpty()) {    subsetCompositeConfiguration.addConfiguration(subset);    subConf=subset;    count++;  }} @AT@ 8214 @LENGTH@ 11
+---------INS SimpleName@@Name:i @TO@ MethodInvocation@@i.hasNext() @AT@ 8214 @LENGTH@ 1
+---------INS SimpleName@@MethodName:hasNext:[] @TO@ MethodInvocation@@i.hasNext() @AT@ 8216 @LENGTH@ 9
+------INS VariableDeclarationStatement@@Configuration config=(Configuration)i.next(); @TO@ ForStatement@@for (ListIterator i=configList.listIterator(); i.hasNext(); ) {  Configuration config=(Configuration)i.next();  Configuration subset=config.subset(prefix);  if (subset != null && !subset.isEmpty()) {    subsetCompositeConfiguration.addConfiguration(subset);    subConf=subset;    count++;  }} @AT@ 8250 @LENGTH@ 48
+---------INS SimpleType@@Configuration @TO@ VariableDeclarationStatement@@Configuration config=(Configuration)i.next(); @AT@ 8250 @LENGTH@ 13
+---------INS VariableDeclarationFragment@@config=(Configuration)i.next() @TO@ VariableDeclarationStatement@@Configuration config=(Configuration)i.next(); @AT@ 8264 @LENGTH@ 33
+------------INS SimpleName@@config @TO@ VariableDeclarationFragment@@config=(Configuration)i.next() @AT@ 8264 @LENGTH@ 6
+------------INS CastExpression@@(Configuration)i.next() @TO@ VariableDeclarationFragment@@config=(Configuration)i.next() @AT@ 8273 @LENGTH@ 24
+---------------INS SimpleType@@Configuration @TO@ CastExpression@@(Configuration)i.next() @AT@ 8274 @LENGTH@ 13
+---------------INS MethodInvocation@@i.next() @TO@ CastExpression@@(Configuration)i.next() @AT@ 8289 @LENGTH@ 8
+------------------INS SimpleName@@Name:i @TO@ MethodInvocation@@i.next() @AT@ 8289 @LENGTH@ 1
+------------------INS SimpleName@@MethodName:next:[] @TO@ MethodInvocation@@i.next() @AT@ 8291 @LENGTH@ 6
+------INS VariableDeclarationStatement@@Configuration subset=config.subset(prefix); @TO@ ForStatement@@for (ListIterator i=configList.listIterator(); i.hasNext(); ) {  Configuration config=(Configuration)i.next();  Configuration subset=config.subset(prefix);  if (subset != null && !subset.isEmpty()) {    subsetCompositeConfiguration.addConfiguration(subset);    subConf=subset;    count++;  }} @AT@ 8311 @LENGTH@ 45
+---------INS SimpleType@@Configuration @TO@ VariableDeclarationStatement@@Configuration subset=config.subset(prefix); @AT@ 8311 @LENGTH@ 13
+---------INS VariableDeclarationFragment@@subset=config.subset(prefix) @TO@ VariableDeclarationStatement@@Configuration subset=config.subset(prefix); @AT@ 8325 @LENGTH@ 30
+------------INS SimpleName@@subset @TO@ VariableDeclarationFragment@@subset=config.subset(prefix) @AT@ 8325 @LENGTH@ 6
+------------INS MethodInvocation@@config.subset(prefix) @TO@ VariableDeclarationFragment@@subset=config.subset(prefix) @AT@ 8334 @LENGTH@ 21
+---------------INS SimpleName@@Name:config @TO@ MethodInvocation@@config.subset(prefix) @AT@ 8334 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:subset:[prefix] @TO@ MethodInvocation@@config.subset(prefix) @AT@ 8341 @LENGTH@ 14
+------------------INS SimpleName@@prefix @TO@ SimpleName@@MethodName:subset:[prefix] @AT@ 8348 @LENGTH@ 6
+------INS IfStatement@@if (subset != null && !subset.isEmpty()) {  subsetCompositeConfiguration.addConfiguration(subset);  subConf=subset;  count++;} @TO@ ForStatement@@for (ListIterator i=configList.listIterator(); i.hasNext(); ) {  Configuration config=(Configuration)i.next();  Configuration subset=config.subset(prefix);  if (subset != null && !subset.isEmpty()) {    subsetCompositeConfiguration.addConfiguration(subset);    subConf=subset;    count++;  }} @AT@ 8369 @LENGTH@ 198
+---------INS InfixExpression@@subset != null && !subset.isEmpty() @TO@ IfStatement@@if (subset != null && !subset.isEmpty()) {  subsetCompositeConfiguration.addConfiguration(subset);  subConf=subset;  count++;} @AT@ 8373 @LENGTH@ 35
+------------INS InfixExpression@@subset != null @TO@ InfixExpression@@subset != null && !subset.isEmpty() @AT@ 8373 @LENGTH@ 14
+---------------INS SimpleName@@subset @TO@ InfixExpression@@subset != null @AT@ 8373 @LENGTH@ 6
+---------------INS Operator@@!= @TO@ InfixExpression@@subset != null @AT@ 8379 @LENGTH@ 2
+---------------INS NullLiteral@@null @TO@ InfixExpression@@subset != null @AT@ 8383 @LENGTH@ 4
+------------INS Operator@@&& @TO@ InfixExpression@@subset != null && !subset.isEmpty() @AT@ 8387 @LENGTH@ 2
+------------INS PrefixExpression@@!subset.isEmpty() @TO@ InfixExpression@@subset != null && !subset.isEmpty() @AT@ 8391 @LENGTH@ 17
+---------------INS Operator@@! @TO@ PrefixExpression@@!subset.isEmpty() @AT@ 8391 @LENGTH@ 1
+---------------INS MethodInvocation@@subset.isEmpty() @TO@ PrefixExpression@@!subset.isEmpty() @AT@ 8392 @LENGTH@ 16
+------------------INS SimpleName@@Name:subset @TO@ MethodInvocation@@subset.isEmpty() @AT@ 8392 @LENGTH@ 6
+------------------INS SimpleName@@MethodName:isEmpty:[] @TO@ MethodInvocation@@subset.isEmpty() @AT@ 8399 @LENGTH@ 9
+---------INS Block@@ThenBody:{  subsetCompositeConfiguration.addConfiguration(subset);  subConf=subset;  count++;} @TO@ IfStatement@@if (subset != null && !subset.isEmpty()) {  subsetCompositeConfiguration.addConfiguration(subset);  subConf=subset;  count++;} @AT@ 8422 @LENGTH@ 145
+------------INS ExpressionStatement@@MethodInvocation:subsetCompositeConfiguration.addConfiguration(subset) @TO@ Block@@ThenBody:{  subsetCompositeConfiguration.addConfiguration(subset);  subConf=subset;  count++;} @AT@ 8440 @LENGTH@ 54
+---------------INS MethodInvocation@@subsetCompositeConfiguration.addConfiguration(subset) @TO@ ExpressionStatement@@MethodInvocation:subsetCompositeConfiguration.addConfiguration(subset) @AT@ 8440 @LENGTH@ 53
+------------------INS SimpleName@@Name:subsetCompositeConfiguration @TO@ MethodInvocation@@subsetCompositeConfiguration.addConfiguration(subset) @AT@ 8440 @LENGTH@ 28
+------------------INS SimpleName@@MethodName:addConfiguration:[subset] @TO@ MethodInvocation@@subsetCompositeConfiguration.addConfiguration(subset) @AT@ 8469 @LENGTH@ 24
+---------------------INS SimpleName@@subset @TO@ SimpleName@@MethodName:addConfiguration:[subset] @AT@ 8486 @LENGTH@ 6
+------------INS ExpressionStatement@@Assignment:subConf=subset @TO@ Block@@ThenBody:{  subsetCompositeConfiguration.addConfiguration(subset);  subConf=subset;  count++;} @AT@ 8511 @LENGTH@ 17
+---------------INS Assignment@@subConf=subset @TO@ ExpressionStatement@@Assignment:subConf=subset @AT@ 8511 @LENGTH@ 16
+------------------INS SimpleName@@subConf @TO@ Assignment@@subConf=subset @AT@ 8511 @LENGTH@ 7
+------------------INS Operator@@= @TO@ Assignment@@subConf=subset @AT@ 8518 @LENGTH@ 1
+------------------INS SimpleName@@subset @TO@ Assignment@@subConf=subset @AT@ 8521 @LENGTH@ 6
+------------INS ExpressionStatement@@PostfixExpression:count++ @TO@ Block@@ThenBody:{  subsetCompositeConfiguration.addConfiguration(subset);  subConf=subset;  count++;} @AT@ 8545 @LENGTH@ 8
+---------------INS PostfixExpression@@count++ @TO@ ExpressionStatement@@PostfixExpression:count++ @AT@ 8545 @LENGTH@ 7
+------------------INS SimpleName@@count @TO@ PostfixExpression@@count++ @AT@ 8545 @LENGTH@ 5
+------------------INS Operator@@++ @TO@ PostfixExpression@@count++ @AT@ 8551 @LENGTH@ 2
+---INS ReturnStatement@@ConditionalExpression:(count == 1) ? subConf : subsetCompositeConfiguration @TO@ MethodDeclaration@@public, Configuration, MethodName:subset, String prefix,  @AT@ 8586 @LENGTH@ 61
+------INS ConditionalExpression@@(count == 1) ? subConf : subsetCompositeConfiguration @TO@ ReturnStatement@@ConditionalExpression:(count == 1) ? subConf : subsetCompositeConfiguration @AT@ 8593 @LENGTH@ 53
+---------INS ParenthesizedExpression@@(count == 1) @TO@ ConditionalExpression@@(count == 1) ? subConf : subsetCompositeConfiguration @AT@ 8593 @LENGTH@ 12
+------------INS InfixExpression@@count == 1 @TO@ ParenthesizedExpression@@(count == 1) @AT@ 8594 @LENGTH@ 10
+---------------INS SimpleName@@count @TO@ InfixExpression@@count == 1 @AT@ 8594 @LENGTH@ 5
+---------------INS Operator@@== @TO@ InfixExpression@@count == 1 @AT@ 8599 @LENGTH@ 2
+---------------INS NumberLiteral@@1 @TO@ InfixExpression@@count == 1 @AT@ 8603 @LENGTH@ 1
+---------INS SimpleName@@subConf @TO@ ConditionalExpression@@(count == 1) ? subConf : subsetCompositeConfiguration @AT@ 8608 @LENGTH@ 7
+---------INS SimpleName@@subsetCompositeConfiguration @TO@ ConditionalExpression@@(count == 1) ? subConf : subsetCompositeConfiguration @AT@ 8618 @LENGTH@ 28
+
+
+INS MethodDeclaration@@public, void, MethodName:testClone,  @TO@ TypeDeclaration@@[public]TestCaseInsensitiveMap, AbstractTestIterableMap @AT@ 3339 @LENGTH@ 259
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 3339 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 3346 @LENGTH@ 4
+---INS SimpleName@@MethodName:testClone @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 3351 @LENGTH@ 9
+---INS VariableDeclarationStatement@@CaseInsensitiveMap map=new CaseInsensitiveMap(10); @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 3373 @LENGTH@ 52
+------INS SimpleType@@CaseInsensitiveMap @TO@ VariableDeclarationStatement@@CaseInsensitiveMap map=new CaseInsensitiveMap(10); @AT@ 3373 @LENGTH@ 18
+------INS VariableDeclarationFragment@@map=new CaseInsensitiveMap(10) @TO@ VariableDeclarationStatement@@CaseInsensitiveMap map=new CaseInsensitiveMap(10); @AT@ 3392 @LENGTH@ 32
+---------INS SimpleName@@map @TO@ VariableDeclarationFragment@@map=new CaseInsensitiveMap(10) @AT@ 3392 @LENGTH@ 3
+---------INS ClassInstanceCreation@@CaseInsensitiveMap[10] @TO@ VariableDeclarationFragment@@map=new CaseInsensitiveMap(10) @AT@ 3398 @LENGTH@ 26
+------------INS New@@new @TO@ ClassInstanceCreation@@CaseInsensitiveMap[10] @AT@ 3398 @LENGTH@ 3
+------------INS SimpleType@@CaseInsensitiveMap @TO@ ClassInstanceCreation@@CaseInsensitiveMap[10] @AT@ 3402 @LENGTH@ 18
+------------INS NumberLiteral@@10 @TO@ ClassInstanceCreation@@CaseInsensitiveMap[10] @AT@ 3421 @LENGTH@ 2
+---INS ExpressionStatement@@MethodInvocation:map.put("1","1") @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 3434 @LENGTH@ 18
+------INS MethodInvocation@@map.put("1","1") @TO@ ExpressionStatement@@MethodInvocation:map.put("1","1") @AT@ 3434 @LENGTH@ 17
+---------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("1","1") @AT@ 3434 @LENGTH@ 3
+---------INS SimpleName@@MethodName:put:["1", "1"] @TO@ MethodInvocation@@map.put("1","1") @AT@ 3438 @LENGTH@ 13
+------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:put:["1", "1"] @AT@ 3442 @LENGTH@ 3
+------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:put:["1", "1"] @AT@ 3447 @LENGTH@ 3
+---INS VariableDeclarationStatement@@Map cloned=(Map)map.clone(); @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 3461 @LENGTH@ 31
+------INS SimpleType@@Map @TO@ VariableDeclarationStatement@@Map cloned=(Map)map.clone(); @AT@ 3461 @LENGTH@ 3
+------INS VariableDeclarationFragment@@cloned=(Map)map.clone() @TO@ VariableDeclarationStatement@@Map cloned=(Map)map.clone(); @AT@ 3465 @LENGTH@ 26
+---------INS SimpleName@@cloned @TO@ VariableDeclarationFragment@@cloned=(Map)map.clone() @AT@ 3465 @LENGTH@ 6
+---------INS CastExpression@@(Map)map.clone() @TO@ VariableDeclarationFragment@@cloned=(Map)map.clone() @AT@ 3474 @LENGTH@ 17
+------------INS SimpleType@@Map @TO@ CastExpression@@(Map)map.clone() @AT@ 3475 @LENGTH@ 3
+------------INS MethodInvocation@@map.clone() @TO@ CastExpression@@(Map)map.clone() @AT@ 3480 @LENGTH@ 11
+---------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.clone() @AT@ 3480 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:clone:[] @TO@ MethodInvocation@@map.clone() @AT@ 3484 @LENGTH@ 7
+---INS ExpressionStatement@@MethodInvocation:assertEquals(map.size(),cloned.size()) @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 3501 @LENGTH@ 40
+------INS MethodInvocation@@assertEquals(map.size(),cloned.size()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(map.size(),cloned.size()) @AT@ 3501 @LENGTH@ 39
+---------INS SimpleName@@MethodName:assertEquals:[map.size(), cloned.size()] @TO@ MethodInvocation@@assertEquals(map.size(),cloned.size()) @AT@ 3501 @LENGTH@ 39
+------------INS MethodInvocation@@map.size() @TO@ SimpleName@@MethodName:assertEquals:[map.size(), cloned.size()] @AT@ 3514 @LENGTH@ 10
+---------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.size() @AT@ 3514 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:size:[] @TO@ MethodInvocation@@map.size() @AT@ 3518 @LENGTH@ 6
+------------INS MethodInvocation@@cloned.size() @TO@ SimpleName@@MethodName:assertEquals:[map.size(), cloned.size()] @AT@ 3526 @LENGTH@ 13
+---------------INS SimpleName@@Name:cloned @TO@ MethodInvocation@@cloned.size() @AT@ 3526 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:size:[] @TO@ MethodInvocation@@cloned.size() @AT@ 3533 @LENGTH@ 6
+---INS ExpressionStatement@@MethodInvocation:assertSame(map.get("1"),cloned.get("1")) @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 3550 @LENGTH@ 42
+------INS MethodInvocation@@assertSame(map.get("1"),cloned.get("1")) @TO@ ExpressionStatement@@MethodInvocation:assertSame(map.get("1"),cloned.get("1")) @AT@ 3550 @LENGTH@ 41
+---------INS SimpleName@@MethodName:assertSame:[map.get("1"), cloned.get("1")] @TO@ MethodInvocation@@assertSame(map.get("1"),cloned.get("1")) @AT@ 3550 @LENGTH@ 41
+------------INS MethodInvocation@@map.get("1") @TO@ SimpleName@@MethodName:assertSame:[map.get("1"), cloned.get("1")] @AT@ 3561 @LENGTH@ 12
+---------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.get("1") @AT@ 3561 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:get:["1"] @TO@ MethodInvocation@@map.get("1") @AT@ 3565 @LENGTH@ 8
+------------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:get:["1"] @AT@ 3569 @LENGTH@ 3
+------------INS MethodInvocation@@cloned.get("1") @TO@ SimpleName@@MethodName:assertSame:[map.get("1"), cloned.get("1")] @AT@ 3575 @LENGTH@ 15
+---------------INS SimpleName@@Name:cloned @TO@ MethodInvocation@@cloned.get("1") @AT@ 3575 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:get:["1"] @TO@ MethodInvocation@@cloned.get("1") @AT@ 3582 @LENGTH@ 8
+------------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:get:["1"] @AT@ 3586 @LENGTH@ 3
+
+
+UPD ExpressionStatement@@MethodInvocation:resetEmpty() @TO@ MethodInvocation:resetFull() @AT@ 32305 @LENGTH@ 13
+---UPD MethodInvocation@@MethodName:resetEmpty:[] @TO@ MethodName:resetFull:[] @AT@ 32305 @LENGTH@ 12
+
+
+INS MethodDeclaration@@public, void, MethodName:testAlwaysReturnsUnauthorizedIfNoUserFound, JspException,  @TO@ TypeDeclaration@@[public]AuthorizeTagTests, TestCase @AT@ 1487 @LENGTH@ 309
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testAlwaysReturnsUnauthorizedIfNoUserFound, JspException,  @AT@ 1487 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testAlwaysReturnsUnauthorizedIfNoUserFound, JspException,  @AT@ 1494 @LENGTH@ 4
+---INS SimpleName@@MethodName:testAlwaysReturnsUnauthorizedIfNoUserFound @TO@ MethodDeclaration@@public, void, MethodName:testAlwaysReturnsUnauthorizedIfNoUserFound, JspException,  @AT@ 1499 @LENGTH@ 42
+---INS SimpleType@@JspException @TO@ MethodDeclaration@@public, void, MethodName:testAlwaysReturnsUnauthorizedIfNoUserFound, JspException,  @AT@ 1559 @LENGTH@ 12
+---INS ExpressionStatement@@MethodInvocation:context.setAuthentication(null) @TO@ MethodDeclaration@@public, void, MethodName:testAlwaysReturnsUnauthorizedIfNoUserFound, JspException,  @AT@ 1582 @LENGTH@ 32
+------INS MethodInvocation@@context.setAuthentication(null) @TO@ ExpressionStatement@@MethodInvocation:context.setAuthentication(null) @AT@ 1582 @LENGTH@ 31
+---------INS SimpleName@@Name:context @TO@ MethodInvocation@@context.setAuthentication(null) @AT@ 1582 @LENGTH@ 7
+---------INS SimpleName@@MethodName:setAuthentication:[null] @TO@ MethodInvocation@@context.setAuthentication(null) @AT@ 1590 @LENGTH@ 23
+------------INS NullLiteral@@null @TO@ SimpleName@@MethodName:setAuthentication:[null] @AT@ 1608 @LENGTH@ 4
+---INS ExpressionStatement@@MethodInvocation:authorizeTag.setIfAllGranted("ROLE_TELLER") @TO@ MethodDeclaration@@public, void, MethodName:testAlwaysReturnsUnauthorizedIfNoUserFound, JspException,  @AT@ 1624 @LENGTH@ 44
+------INS MethodInvocation@@authorizeTag.setIfAllGranted("ROLE_TELLER") @TO@ ExpressionStatement@@MethodInvocation:authorizeTag.setIfAllGranted("ROLE_TELLER") @AT@ 1624 @LENGTH@ 43
+---------INS SimpleName@@Name:authorizeTag @TO@ MethodInvocation@@authorizeTag.setIfAllGranted("ROLE_TELLER") @AT@ 1624 @LENGTH@ 12
+---------INS SimpleName@@MethodName:setIfAllGranted:["ROLE_TELLER"] @TO@ MethodInvocation@@authorizeTag.setIfAllGranted("ROLE_TELLER") @AT@ 1637 @LENGTH@ 30
+------------INS StringLiteral@@"ROLE_TELLER" @TO@ SimpleName@@MethodName:setIfAllGranted:["ROLE_TELLER"] @AT@ 1653 @LENGTH@ 13
+---INS ExpressionStatement@@MethodInvocation:assertEquals("prevents request - no principal in Context",Tag.SKIP_BODY,authorizeTag.doStartTag()) @TO@ MethodDeclaration@@public, void, MethodName:testAlwaysReturnsUnauthorizedIfNoUserFound, JspException,  @AT@ 1677 @LENGTH@ 113
+------INS MethodInvocation@@assertEquals("prevents request - no principal in Context",Tag.SKIP_BODY,authorizeTag.doStartTag()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals("prevents request - no principal in Context",Tag.SKIP_BODY,authorizeTag.doStartTag()) @AT@ 1677 @LENGTH@ 112
+---------INS SimpleName@@MethodName:assertEquals:["prevents request - no principal in Context", Tag.SKIP_BODY, authorizeTag.doStartTag()] @TO@ MethodInvocation@@assertEquals("prevents request - no principal in Context",Tag.SKIP_BODY,authorizeTag.doStartTag()) @AT@ 1677 @LENGTH@ 112
+------------INS StringLiteral@@"prevents request - no principal in Context" @TO@ SimpleName@@MethodName:assertEquals:["prevents request - no principal in Context", Tag.SKIP_BODY, authorizeTag.doStartTag()] @AT@ 1690 @LENGTH@ 44
+------------INS QualifiedName@@Tag.SKIP_BODY @TO@ SimpleName@@MethodName:assertEquals:["prevents request - no principal in Context", Tag.SKIP_BODY, authorizeTag.doStartTag()] @AT@ 1748 @LENGTH@ 13
+---------------INS SimpleName@@Tag @TO@ QualifiedName@@Tag.SKIP_BODY @AT@ 1748 @LENGTH@ 3
+---------------INS SimpleName@@SKIP_BODY @TO@ QualifiedName@@Tag.SKIP_BODY @AT@ 1752 @LENGTH@ 9
+------------INS MethodInvocation@@authorizeTag.doStartTag() @TO@ SimpleName@@MethodName:assertEquals:["prevents request - no principal in Context", Tag.SKIP_BODY, authorizeTag.doStartTag()] @AT@ 1763 @LENGTH@ 25
+---------------INS SimpleName@@Name:authorizeTag @TO@ MethodInvocation@@authorizeTag.doStartTag() @AT@ 1763 @LENGTH@ 12
+---------------INS SimpleName@@MethodName:doStartTag:[] @TO@ MethodInvocation@@authorizeTag.doStartTag() @AT@ 1776 @LENGTH@ 12
+
+
+INS MethodDeclaration@@private, voidMethodName:FunctorUtils,  @TO@ TypeDeclaration@@FunctorUtils,  @AT@ 3390 @LENGTH@ 30
+---INS Modifier@@private @TO@ MethodDeclaration@@private, voidMethodName:FunctorUtils,  @AT@ 3390 @LENGTH@ 7
+---INS SimpleName@@MethodName:FunctorUtils @TO@ MethodDeclaration@@private, voidMethodName:FunctorUtils,  @AT@ 3398 @LENGTH@ 12
+
+
+INS IfStatement@@if (source.getCanonicalPath().equals(destination.getCanonicalPath())) {  String message="Unable to write file " + source + " on itself.";  throw new IOException(message);} @TO@ MethodDeclaration@@public, static, void, MethodName:copyFile, File source, File destination, boolean preserveFileDate, IOException,  @AT@ 16010 @LENGTH@ 220
+---INS MethodInvocation@@source.getCanonicalPath().equals(destination.getCanonicalPath()) @TO@ IfStatement@@if (source.getCanonicalPath().equals(destination.getCanonicalPath())) {  String message="Unable to write file " + source + " on itself.";  throw new IOException(message);} @AT@ 16014 @LENGTH@ 64
+------INS MethodInvocation@@MethodName:getCanonicalPath:[] @TO@ MethodInvocation@@source.getCanonicalPath().equals(destination.getCanonicalPath()) @AT@ 16014 @LENGTH@ 25
+------INS SimpleName@@Name:source @TO@ MethodInvocation@@source.getCanonicalPath().equals(destination.getCanonicalPath()) @AT@ 16014 @LENGTH@ 6
+------INS SimpleName@@MethodName:equals:[destination.getCanonicalPath()] @TO@ MethodInvocation@@source.getCanonicalPath().equals(destination.getCanonicalPath()) @AT@ 16040 @LENGTH@ 38
+---------INS MethodInvocation@@destination.getCanonicalPath() @TO@ SimpleName@@MethodName:equals:[destination.getCanonicalPath()] @AT@ 16047 @LENGTH@ 30
+------------INS SimpleName@@Name:destination @TO@ MethodInvocation@@destination.getCanonicalPath() @AT@ 16047 @LENGTH@ 11
+------------INS SimpleName@@MethodName:getCanonicalPath:[] @TO@ MethodInvocation@@destination.getCanonicalPath() @AT@ 16059 @LENGTH@ 18
+---INS Block@@ThenBody:{  String message="Unable to write file " + source + " on itself.";  throw new IOException(message);} @TO@ IfStatement@@if (source.getCanonicalPath().equals(destination.getCanonicalPath())) {  String message="Unable to write file " + source + " on itself.";  throw new IOException(message);} @AT@ 16080 @LENGTH@ 150
+------INS VariableDeclarationStatement@@String message="Unable to write file " + source + " on itself."; @TO@ Block@@ThenBody:{  String message="Unable to write file " + source + " on itself.";  throw new IOException(message);} @AT@ 16094 @LENGTH@ 82
+---------INS SimpleType@@String @TO@ VariableDeclarationStatement@@String message="Unable to write file " + source + " on itself."; @AT@ 16094 @LENGTH@ 6
+---------INS VariableDeclarationFragment@@message="Unable to write file " + source + " on itself." @TO@ VariableDeclarationStatement@@String message="Unable to write file " + source + " on itself."; @AT@ 16101 @LENGTH@ 74
+------------INS SimpleName@@message @TO@ VariableDeclarationFragment@@message="Unable to write file " + source + " on itself." @AT@ 16101 @LENGTH@ 7
+------------INS InfixExpression@@"Unable to write file " + source + " on itself." @TO@ VariableDeclarationFragment@@message="Unable to write file " + source + " on itself." @AT@ 16127 @LENGTH@ 48
+---------------INS StringLiteral@@"Unable to write file " @TO@ InfixExpression@@"Unable to write file " + source + " on itself." @AT@ 16127 @LENGTH@ 23
+---------------INS Operator@@+ @TO@ InfixExpression@@"Unable to write file " + source + " on itself." @AT@ 16150 @LENGTH@ 1
+---------------INS SimpleName@@source @TO@ InfixExpression@@"Unable to write file " + source + " on itself." @AT@ 16153 @LENGTH@ 6
+---------------INS StringLiteral@@" on itself." @TO@ InfixExpression@@"Unable to write file " + source + " on itself." @AT@ 16162 @LENGTH@ 13
+------INS ThrowStatement@@ClassInstanceCreation:new IOException(message) @TO@ Block@@ThenBody:{  String message="Unable to write file " + source + " on itself.";  throw new IOException(message);} @AT@ 16189 @LENGTH@ 31
+---------INS ClassInstanceCreation@@IOException[message] @TO@ ThrowStatement@@ClassInstanceCreation:new IOException(message) @AT@ 16195 @LENGTH@ 24
+------------INS New@@new @TO@ ClassInstanceCreation@@IOException[message] @AT@ 16195 @LENGTH@ 3
+------------INS SimpleType@@IOException @TO@ ClassInstanceCreation@@IOException[message] @AT@ 16199 @LENGTH@ 11
+------------INS SimpleName@@message @TO@ ClassInstanceCreation@@IOException[message] @AT@ 16211 @LENGTH@ 7
+
+
+INS ExpressionStatement@@Assignment:conf=config.subset("tables.table.fields.field.name") @TO@ MethodDeclaration@@public, void, MethodName:testSubset,  @AT@ 9874 @LENGTH@ 55
+---INS Assignment@@conf=config.subset("tables.table.fields.field.name") @TO@ ExpressionStatement@@Assignment:conf=config.subset("tables.table.fields.field.name") @AT@ 9874 @LENGTH@ 54
+------INS SimpleName@@conf @TO@ Assignment@@conf=config.subset("tables.table.fields.field.name") @AT@ 9874 @LENGTH@ 4
+------INS Operator@@= @TO@ Assignment@@conf=config.subset("tables.table.fields.field.name") @AT@ 9878 @LENGTH@ 1
+------INS MethodInvocation@@config.subset("tables.table.fields.field.name") @TO@ Assignment@@conf=config.subset("tables.table.fields.field.name") @AT@ 9881 @LENGTH@ 47
+---------INS SimpleName@@Name:config @TO@ MethodInvocation@@config.subset("tables.table.fields.field.name") @AT@ 9881 @LENGTH@ 6
+---------INS SimpleName@@MethodName:subset:["tables.table.fields.field.name"] @TO@ MethodInvocation@@config.subset("tables.table.fields.field.name") @AT@ 9888 @LENGTH@ 40
+------------INS StringLiteral@@"tables.table.fields.field.name" @TO@ SimpleName@@MethodName:subset:["tables.table.fields.field.name"] @AT@ 9895 @LENGTH@ 32
+
+
+UPD ExpressionStatement@@MethodInvocation:assertEquals("Map must contain old value",true,map.containsValue(newValue)) @TO@ MethodInvocation:assertEquals("Map must contain new value",true,map.containsValue(newValue)) @AT@ 9492 @LENGTH@ 78
+---UPD MethodInvocation@@assertEquals("Map must contain old value",true,map.containsValue(newValue)) @TO@ assertEquals("Map must contain new value",true,map.containsValue(newValue)) @AT@ 9492 @LENGTH@ 77
+------UPD SimpleName@@MethodName:assertEquals:["Map must contain old value", true, map.containsValue(newValue)] @TO@ MethodName:assertEquals:["Map must contain new value", true, map.containsValue(newValue)] @AT@ 9492 @LENGTH@ 77
+---------UPD StringLiteral@@"Map must contain old value" @TO@ "Map must contain new value" @AT@ 9505 @LENGTH@ 28
+
+
+UPD MethodDeclaration@@public, void, MethodName:testFullMapCompatibility, IOException, ClassNotFoundException,  @TO@ public, void, MethodName:testFullMapCompatibility, Exception,  @AT@ 27204 @LENGTH@ 716
+---UPD SimpleType@@IOException @TO@ Exception @AT@ 27250 @LENGTH@ 11
+---DEL SimpleType@@ClassNotFoundException @AT@ 27263 @LENGTH@ 22
+
+
+UPD MethodDeclaration@@protected, voidMethodName:AbstractLinkedMap, int initialCapacity, float loadFactor, int threshhold,  @TO@ protected, voidMethodName:AbstractLinkedMap, int initialCapacity, float loadFactor, int threshold,  @AT@ 5618 @LENGTH@ 146
+---UPD SingleVariableDeclaration@@int threshhold @TO@ int threshold @AT@ 5685 @LENGTH@ 14
+------UPD SimpleName@@threshhold @TO@ threshold @AT@ 5689 @LENGTH@ 10
+---UPD SuperConstructorInvocation@@super(initialCapacity,loadFactor,threshhold);
+ @TO@ super(initialCapacity,loadFactor,threshold);
+ @AT@ 5711 @LENGTH@ 47
+------UPD SimpleName@@threshhold @TO@ threshold @AT@ 5746 @LENGTH@ 10
+
+
+INS MethodDeclaration@@public, void, MethodName:testClone,  @TO@ TypeDeclaration@@[public]TestLinkedMap, AbstractTestOrderedMap @AT@ 7763 @LENGTH@ 241
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 7763 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 7770 @LENGTH@ 4
+---INS SimpleName@@MethodName:testClone @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 7775 @LENGTH@ 9
+---INS VariableDeclarationStatement@@LinkedMap map=new LinkedMap(10); @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 7797 @LENGTH@ 34
+------INS SimpleType@@LinkedMap @TO@ VariableDeclarationStatement@@LinkedMap map=new LinkedMap(10); @AT@ 7797 @LENGTH@ 9
+------INS VariableDeclarationFragment@@map=new LinkedMap(10) @TO@ VariableDeclarationStatement@@LinkedMap map=new LinkedMap(10); @AT@ 7807 @LENGTH@ 23
+---------INS SimpleName@@map @TO@ VariableDeclarationFragment@@map=new LinkedMap(10) @AT@ 7807 @LENGTH@ 3
+---------INS ClassInstanceCreation@@LinkedMap[10] @TO@ VariableDeclarationFragment@@map=new LinkedMap(10) @AT@ 7813 @LENGTH@ 17
+------------INS New@@new @TO@ ClassInstanceCreation@@LinkedMap[10] @AT@ 7813 @LENGTH@ 3
+------------INS SimpleType@@LinkedMap @TO@ ClassInstanceCreation@@LinkedMap[10] @AT@ 7817 @LENGTH@ 9
+------------INS NumberLiteral@@10 @TO@ ClassInstanceCreation@@LinkedMap[10] @AT@ 7827 @LENGTH@ 2
+---INS ExpressionStatement@@MethodInvocation:map.put("1","1") @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 7840 @LENGTH@ 18
+------INS MethodInvocation@@map.put("1","1") @TO@ ExpressionStatement@@MethodInvocation:map.put("1","1") @AT@ 7840 @LENGTH@ 17
+---------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("1","1") @AT@ 7840 @LENGTH@ 3
+---------INS SimpleName@@MethodName:put:["1", "1"] @TO@ MethodInvocation@@map.put("1","1") @AT@ 7844 @LENGTH@ 13
+------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:put:["1", "1"] @AT@ 7848 @LENGTH@ 3
+------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:put:["1", "1"] @AT@ 7853 @LENGTH@ 3
+---INS VariableDeclarationStatement@@Map cloned=(Map)map.clone(); @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 7867 @LENGTH@ 31
+------INS SimpleType@@Map @TO@ VariableDeclarationStatement@@Map cloned=(Map)map.clone(); @AT@ 7867 @LENGTH@ 3
+------INS VariableDeclarationFragment@@cloned=(Map)map.clone() @TO@ VariableDeclarationStatement@@Map cloned=(Map)map.clone(); @AT@ 7871 @LENGTH@ 26
+---------INS SimpleName@@cloned @TO@ VariableDeclarationFragment@@cloned=(Map)map.clone() @AT@ 7871 @LENGTH@ 6
+---------INS CastExpression@@(Map)map.clone() @TO@ VariableDeclarationFragment@@cloned=(Map)map.clone() @AT@ 7880 @LENGTH@ 17
+------------INS SimpleType@@Map @TO@ CastExpression@@(Map)map.clone() @AT@ 7881 @LENGTH@ 3
+------------INS MethodInvocation@@map.clone() @TO@ CastExpression@@(Map)map.clone() @AT@ 7886 @LENGTH@ 11
+---------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.clone() @AT@ 7886 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:clone:[] @TO@ MethodInvocation@@map.clone() @AT@ 7890 @LENGTH@ 7
+---INS ExpressionStatement@@MethodInvocation:assertEquals(map.size(),cloned.size()) @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 7907 @LENGTH@ 40
+------INS MethodInvocation@@assertEquals(map.size(),cloned.size()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(map.size(),cloned.size()) @AT@ 7907 @LENGTH@ 39
+---------INS SimpleName@@MethodName:assertEquals:[map.size(), cloned.size()] @TO@ MethodInvocation@@assertEquals(map.size(),cloned.size()) @AT@ 7907 @LENGTH@ 39
+------------INS MethodInvocation@@map.size() @TO@ SimpleName@@MethodName:assertEquals:[map.size(), cloned.size()] @AT@ 7920 @LENGTH@ 10
+---------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.size() @AT@ 7920 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:size:[] @TO@ MethodInvocation@@map.size() @AT@ 7924 @LENGTH@ 6
+------------INS MethodInvocation@@cloned.size() @TO@ SimpleName@@MethodName:assertEquals:[map.size(), cloned.size()] @AT@ 7932 @LENGTH@ 13
+---------------INS SimpleName@@Name:cloned @TO@ MethodInvocation@@cloned.size() @AT@ 7932 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:size:[] @TO@ MethodInvocation@@cloned.size() @AT@ 7939 @LENGTH@ 6
+---INS ExpressionStatement@@MethodInvocation:assertSame(map.get("1"),cloned.get("1")) @TO@ MethodDeclaration@@public, void, MethodName:testClone,  @AT@ 7956 @LENGTH@ 42
+------INS MethodInvocation@@assertSame(map.get("1"),cloned.get("1")) @TO@ ExpressionStatement@@MethodInvocation:assertSame(map.get("1"),cloned.get("1")) @AT@ 7956 @LENGTH@ 41
+---------INS SimpleName@@MethodName:assertSame:[map.get("1"), cloned.get("1")] @TO@ MethodInvocation@@assertSame(map.get("1"),cloned.get("1")) @AT@ 7956 @LENGTH@ 41
+------------INS MethodInvocation@@map.get("1") @TO@ SimpleName@@MethodName:assertSame:[map.get("1"), cloned.get("1")] @AT@ 7967 @LENGTH@ 12
+---------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.get("1") @AT@ 7967 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:get:["1"] @TO@ MethodInvocation@@map.get("1") @AT@ 7971 @LENGTH@ 8
+------------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:get:["1"] @AT@ 7975 @LENGTH@ 3
+------------INS MethodInvocation@@cloned.get("1") @TO@ SimpleName@@MethodName:assertSame:[map.get("1"), cloned.get("1")] @AT@ 7981 @LENGTH@ 15
+---------------INS SimpleName@@Name:cloned @TO@ MethodInvocation@@cloned.get("1") @AT@ 7981 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:get:["1"] @TO@ MethodInvocation@@cloned.get("1") @AT@ 7988 @LENGTH@ 8
+------------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:get:["1"] @AT@ 7992 @LENGTH@ 3
+
+
+INS ExpressionStatement@@MethodInvocation:setupDigesterInstance(digester,matchString + "hierarchicalDom4j",new BasePathConfigurationFactory(HierarchicalDOM4JConfiguration.class),METH_LOAD,additional) @TO@ MethodDeclaration@@protected, void, MethodName:initDigesterSectionRules, Digester digester, String matchString, boolean additional,  @AT@ 10994 @LENGTH@ 184
+---INS MethodInvocation@@setupDigesterInstance(digester,matchString + "hierarchicalDom4j",new BasePathConfigurationFactory(HierarchicalDOM4JConfiguration.class),METH_LOAD,additional) @TO@ ExpressionStatement@@MethodInvocation:setupDigesterInstance(digester,matchString + "hierarchicalDom4j",new BasePathConfigurationFactory(HierarchicalDOM4JConfiguration.class),METH_LOAD,additional) @AT@ 10994 @LENGTH@ 183
+------INS SimpleName@@MethodName:setupDigesterInstance:[digester, matchString + "hierarchicalDom4j", new BasePathConfigurationFactory(HierarchicalDOM4JConfiguration.class), METH_LOAD, additional] @TO@ MethodInvocation@@setupDigesterInstance(digester,matchString + "hierarchicalDom4j",new BasePathConfigurationFactory(HierarchicalDOM4JConfiguration.class),METH_LOAD,additional) @AT@ 10994 @LENGTH@ 183
+---------INS SimpleName@@digester @TO@ SimpleName@@MethodName:setupDigesterInstance:[digester, matchString + "hierarchicalDom4j", new BasePathConfigurationFactory(HierarchicalDOM4JConfiguration.class), METH_LOAD, additional] @AT@ 11026 @LENGTH@ 8
+---------INS InfixExpression@@matchString + "hierarchicalDom4j" @TO@ SimpleName@@MethodName:setupDigesterInstance:[digester, matchString + "hierarchicalDom4j", new BasePathConfigurationFactory(HierarchicalDOM4JConfiguration.class), METH_LOAD, additional] @AT@ 11039 @LENGTH@ 33
+------------INS SimpleName@@matchString @TO@ InfixExpression@@matchString + "hierarchicalDom4j" @AT@ 11039 @LENGTH@ 11
+------------INS Operator@@+ @TO@ InfixExpression@@matchString + "hierarchicalDom4j" @AT@ 11050 @LENGTH@ 1
+------------INS StringLiteral@@"hierarchicalDom4j" @TO@ InfixExpression@@matchString + "hierarchicalDom4j" @AT@ 11053 @LENGTH@ 19
+---------INS ClassInstanceCreation@@BasePathConfigurationFactory[HierarchicalDOM4JConfiguration.class] @TO@ SimpleName@@MethodName:setupDigesterInstance:[digester, matchString + "hierarchicalDom4j", new BasePathConfigurationFactory(HierarchicalDOM4JConfiguration.class), METH_LOAD, additional] @AT@ 11077 @LENGTH@ 70
+------------INS New@@new @TO@ ClassInstanceCreation@@BasePathConfigurationFactory[HierarchicalDOM4JConfiguration.class] @AT@ 11077 @LENGTH@ 3
+------------INS SimpleType@@BasePathConfigurationFactory @TO@ ClassInstanceCreation@@BasePathConfigurationFactory[HierarchicalDOM4JConfiguration.class] @AT@ 11081 @LENGTH@ 28
+------------INS TypeLiteral@@HierarchicalDOM4JConfiguration.class @TO@ ClassInstanceCreation@@BasePathConfigurationFactory[HierarchicalDOM4JConfiguration.class] @AT@ 11110 @LENGTH@ 36
+---------INS SimpleName@@METH_LOAD @TO@ SimpleName@@MethodName:setupDigesterInstance:[digester, matchString + "hierarchicalDom4j", new BasePathConfigurationFactory(HierarchicalDOM4JConfiguration.class), METH_LOAD, additional] @AT@ 11152 @LENGTH@ 9
+---------INS SimpleName@@additional @TO@ SimpleName@@MethodName:setupDigesterInstance:[digester, matchString + "hierarchicalDom4j", new BasePathConfigurationFactory(HierarchicalDOM4JConfiguration.class), METH_LOAD, additional] @AT@ 11166 @LENGTH@ 10
+
+
+UPD MethodDeclaration@@public, String[], MethodName:ignoredTests,  @TO@ public, boolean, MethodName:isSubMapViewsSerializable,  @AT@ 1991 @LENGTH@ 911
+---INS PrimitiveType@@boolean @TO@ MethodDeclaration@@public, String[], MethodName:ignoredTests,  @AT@ 1857 @LENGTH@ 7
+---DEL ArrayType@@String[] @AT@ 1998 @LENGTH@ 8
+------DEL SimpleType@@String @AT@ 1998 @LENGTH@ 6
+---UPD SimpleName@@MethodName:ignoredTests @TO@ MethodName:isSubMapViewsSerializable @AT@ 2007 @LENGTH@ 12
+---UPD ReturnStatement@@ArrayCreation:new String[]{"TestFixedSizeSortedMap.bulkTestHeadMap.testEmptyMapCompatibility","TestFixedSizeSortedMap.bulkTestHeadMap.testFullMapCompatibility","TestFixedSizeSortedMap.bulkTestHeadMap.testSerializeDeserializeThenCompare","TestFixedSizeSortedMap.bulkTestTailMap.testEmptyMapCompatibility","TestFixedSizeSortedMap.bulkTestTailMap.testFullMapCompatibility","TestFixedSizeSortedMap.bulkTestTailMap.testSerializeDeserializeThenCompare","TestFixedSizeSortedMap.bulkTestSubMap.testEmptyMapCompatibility","TestFixedSizeSortedMap.bulkTestSubMap.testFullMapCompatibility","TestFixedSizeSortedMap.bulkTestSubMap.testSerializeDeserializeThenCompare"} @TO@ BooleanLiteral:false @AT@ 2119 @LENGTH@ 777
+------INS BooleanLiteral@@false @TO@ ReturnStatement@@ArrayCreation:new String[]{"TestFixedSizeSortedMap.bulkTestHeadMap.testEmptyMapCompatibility","TestFixedSizeSortedMap.bulkTestHeadMap.testFullMapCompatibility","TestFixedSizeSortedMap.bulkTestHeadMap.testSerializeDeserializeThenCompare","TestFixedSizeSortedMap.bulkTestTailMap.testEmptyMapCompatibility","TestFixedSizeSortedMap.bulkTestTailMap.testFullMapCompatibility","TestFixedSizeSortedMap.bulkTestTailMap.testSerializeDeserializeThenCompare","TestFixedSizeSortedMap.bulkTestSubMap.testEmptyMapCompatibility","TestFixedSizeSortedMap.bulkTestSubMap.testFullMapCompatibility","TestFixedSizeSortedMap.bulkTestSubMap.testSerializeDeserializeThenCompare"} @AT@ 1974 @LENGTH@ 5
+------DEL ArrayCreation@@new String[]{"TestFixedSizeSortedMap.bulkTestHeadMap.testEmptyMapCompatibility","TestFixedSizeSortedMap.bulkTestHeadMap.testFullMapCompatibility","TestFixedSizeSortedMap.bulkTestHeadMap.testSerializeDeserializeThenCompare","TestFixedSizeSortedMap.bulkTestTailMap.testEmptyMapCompatibility","TestFixedSizeSortedMap.bulkTestTailMap.testFullMapCompatibility","TestFixedSizeSortedMap.bulkTestTailMap.testSerializeDeserializeThenCompare","TestFixedSizeSortedMap.bulkTestSubMap.testEmptyMapCompatibility","TestFixedSizeSortedMap.bulkTestSubMap.testFullMapCompatibility","TestFixedSizeSortedMap.bulkTestSubMap.testSerializeDeserializeThenCompare"} @AT@ 2126 @LENGTH@ 769
+---------DEL ArrayType@@String[] @AT@ 2130 @LENGTH@ 9
+------------DEL SimpleType@@String @AT@ 2130 @LENGTH@ 6
+---------DEL ArrayInitializer@@{"TestFixedSizeSortedMap.bulkTestHeadMap.testEmptyMapCompatibility","TestFixedSizeSortedMap.bulkTestHeadMap.testFullMapCompatibility","TestFixedSizeSortedMap.bulkTestHeadMap.testSerializeDeserializeThenCompare","TestFixedSizeSortedMap.bulkTestTailMap.testEmptyMapCompatibility","TestFixedSizeSortedMap.bulkTestTailMap.testFullMapCompatibility","TestFixedSizeSortedMap.bulkTestTailMap.testSerializeDeserializeThenCompare","TestFixedSizeSortedMap.bulkTestSubMap.testEmptyMapCompatibility","TestFixedSizeSortedMap.bulkTestSubMap.testFullMapCompatibility","TestFixedSizeSortedMap.bulkTestSubMap.testSerializeDeserializeThenCompare"} @AT@ 2140 @LENGTH@ 755
+------------DEL StringLiteral@@"TestFixedSizeSortedMap.bulkTestHeadMap.testEmptyMapCompatibility" @AT@ 2154 @LENGTH@ 66
+------------DEL StringLiteral@@"TestFixedSizeSortedMap.bulkTestHeadMap.testFullMapCompatibility" @AT@ 2234 @LENGTH@ 65
+------------DEL StringLiteral@@"TestFixedSizeSortedMap.bulkTestHeadMap.testSerializeDeserializeThenCompare" @AT@ 2313 @LENGTH@ 76
+------------DEL StringLiteral@@"TestFixedSizeSortedMap.bulkTestTailMap.testEmptyMapCompatibility" @AT@ 2403 @LENGTH@ 66
+------------DEL StringLiteral@@"TestFixedSizeSortedMap.bulkTestTailMap.testFullMapCompatibility" @AT@ 2483 @LENGTH@ 65
+------------DEL StringLiteral@@"TestFixedSizeSortedMap.bulkTestTailMap.testSerializeDeserializeThenCompare" @AT@ 2562 @LENGTH@ 76
+------------DEL StringLiteral@@"TestFixedSizeSortedMap.bulkTestSubMap.testEmptyMapCompatibility" @AT@ 2652 @LENGTH@ 65
+------------DEL StringLiteral@@"TestFixedSizeSortedMap.bulkTestSubMap.testFullMapCompatibility" @AT@ 2731 @LENGTH@ 64
+------------DEL StringLiteral@@"TestFixedSizeSortedMap.bulkTestSubMap.testSerializeDeserializeThenCompare" @AT@ 2809 @LENGTH@ 75
+
+
+UPD VariableDeclarationStatement@@boolean contains=getCount(current) >= ((Bag)other).getCount(current); @TO@ boolean contains=getCount(current) >= other.getCount(current); @AT@ 7086 @LENGTH@ 72
+---UPD VariableDeclarationFragment@@contains=getCount(current) >= ((Bag)other).getCount(current) @TO@ contains=getCount(current) >= other.getCount(current) @AT@ 7094 @LENGTH@ 63
+------UPD InfixExpression@@getCount(current) >= ((Bag)other).getCount(current) @TO@ getCount(current) >= other.getCount(current) @AT@ 7105 @LENGTH@ 52
+---------UPD MethodInvocation@@((Bag)other).getCount(current) @TO@ other.getCount(current) @AT@ 7126 @LENGTH@ 31
+------------DEL ParenthesizedExpression@@((Bag)other) @AT@ 7126 @LENGTH@ 13
+---------------DEL CastExpression@@(Bag)other @AT@ 7127 @LENGTH@ 11
+------------------DEL SimpleType@@Bag @AT@ 7128 @LENGTH@ 3
+------------------DEL SimpleName@@other @AT@ 7133 @LENGTH@ 5
+------------INS SimpleName@@Name:other @TO@ MethodInvocation@@((Bag)other).getCount(current) @AT@ 7130 @LENGTH@ 5
+
+
+UPD ExpressionStatement@@Assignment:lastReturnedIndex=1 @TO@ Assignment:lastReturnedIndex=-1 @AT@ 38418 @LENGTH@ 22
+---UPD Assignment@@lastReturnedIndex=1 @TO@ lastReturnedIndex=-1 @AT@ 38418 @LENGTH@ 21
+------INS PrefixExpression@@-1 @TO@ Assignment@@lastReturnedIndex=1 @AT@ 38438 @LENGTH@ 2
+---------INS Operator@@- @TO@ PrefixExpression@@-1 @AT@ 38438 @LENGTH@ 1
+---------INS NumberLiteral@@1 @TO@ PrefixExpression@@-1 @AT@ 38439 @LENGTH@ 1
+------DEL NumberLiteral@@1 @AT@ 38438 @LENGTH@ 1
+
+
+INS IfStatement@@if (null == currentUser) {  return Collections.EMPTY_LIST;} @TO@ MethodDeclaration@@private, Collection, MethodName:getPrincipalAuthorities,  @AT@ 3531 @LENGTH@ 79
+---INS InfixExpression@@null == currentUser @TO@ IfStatement@@if (null == currentUser) {  return Collections.EMPTY_LIST;} @AT@ 3535 @LENGTH@ 19
+------INS NullLiteral@@null @TO@ InfixExpression@@null == currentUser @AT@ 3535 @LENGTH@ 4
+------INS Operator@@== @TO@ InfixExpression@@null == currentUser @AT@ 3539 @LENGTH@ 2
+------INS SimpleName@@currentUser @TO@ InfixExpression@@null == currentUser @AT@ 3543 @LENGTH@ 11
+---INS Block@@ThenBody:{  return Collections.EMPTY_LIST;} @TO@ IfStatement@@if (null == currentUser) {  return Collections.EMPTY_LIST;} @AT@ 3556 @LENGTH@ 54
+------INS ReturnStatement@@QualifiedName:Collections.EMPTY_LIST @TO@ Block@@ThenBody:{  return Collections.EMPTY_LIST;} @AT@ 3570 @LENGTH@ 30
+---------INS QualifiedName@@Collections.EMPTY_LIST @TO@ ReturnStatement@@QualifiedName:Collections.EMPTY_LIST @AT@ 3577 @LENGTH@ 22
+------------INS SimpleName@@Collections @TO@ QualifiedName@@Collections.EMPTY_LIST @AT@ 3577 @LENGTH@ 11
+------------INS SimpleName@@EMPTY_LIST @TO@ QualifiedName@@Collections.EMPTY_LIST @AT@ 3589 @LENGTH@ 10

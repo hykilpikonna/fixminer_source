@@ -1,0 +1,761 @@
+INS MethodDeclaration@@public, void, MethodName:testSaveWithBasePath, Exception,  @TO@ TypeDeclaration@@[public]TestPropertiesConfiguration, TestCase @AT@ 4926 @LENGTH@ 512
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testSaveWithBasePath, Exception,  @AT@ 4926 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testSaveWithBasePath, Exception,  @AT@ 4933 @LENGTH@ 4
+---INS SimpleName@@MethodName:testSaveWithBasePath @TO@ MethodDeclaration@@public, void, MethodName:testSaveWithBasePath, Exception,  @AT@ 4938 @LENGTH@ 20
+---INS SimpleType@@Exception @TO@ MethodDeclaration@@public, void, MethodName:testSaveWithBasePath, Exception,  @AT@ 4968 @LENGTH@ 9
+---INS IfStatement@@if (testSavePropertiesFile.exists()) {  assertTrue(testSavePropertiesFile.delete());} @TO@ MethodDeclaration@@public, void, MethodName:testSaveWithBasePath, Exception,  @AT@ 5049 @LENGTH@ 113
+------INS MethodInvocation@@testSavePropertiesFile.exists() @TO@ IfStatement@@if (testSavePropertiesFile.exists()) {  assertTrue(testSavePropertiesFile.delete());} @AT@ 5053 @LENGTH@ 31
+---------INS SimpleName@@Name:testSavePropertiesFile @TO@ MethodInvocation@@testSavePropertiesFile.exists() @AT@ 5053 @LENGTH@ 22
+---------INS SimpleName@@MethodName:exists:[] @TO@ MethodInvocation@@testSavePropertiesFile.exists() @AT@ 5076 @LENGTH@ 8
+------INS Block@@ThenBody:{  assertTrue(testSavePropertiesFile.delete());} @TO@ IfStatement@@if (testSavePropertiesFile.exists()) {  assertTrue(testSavePropertiesFile.delete());} @AT@ 5094 @LENGTH@ 68
+---------INS ExpressionStatement@@MethodInvocation:assertTrue(testSavePropertiesFile.delete()) @TO@ Block@@ThenBody:{  assertTrue(testSavePropertiesFile.delete());} @AT@ 5108 @LENGTH@ 44
+------------INS MethodInvocation@@assertTrue(testSavePropertiesFile.delete()) @TO@ ExpressionStatement@@MethodInvocation:assertTrue(testSavePropertiesFile.delete()) @AT@ 5108 @LENGTH@ 43
+---------------INS SimpleName@@MethodName:assertTrue:[testSavePropertiesFile.delete()] @TO@ MethodInvocation@@assertTrue(testSavePropertiesFile.delete()) @AT@ 5108 @LENGTH@ 43
+------------------INS MethodInvocation@@testSavePropertiesFile.delete() @TO@ SimpleName@@MethodName:assertTrue:[testSavePropertiesFile.delete()] @AT@ 5119 @LENGTH@ 31
+---------------------INS SimpleName@@Name:testSavePropertiesFile @TO@ MethodInvocation@@testSavePropertiesFile.delete() @AT@ 5119 @LENGTH@ 22
+---------------------INS SimpleName@@MethodName:delete:[] @TO@ MethodInvocation@@testSavePropertiesFile.delete() @AT@ 5142 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:conf.setProperty("test","true") @TO@ MethodDeclaration@@public, void, MethodName:testSaveWithBasePath, Exception,  @AT@ 5180 @LENGTH@ 33
+------INS MethodInvocation@@conf.setProperty("test","true") @TO@ ExpressionStatement@@MethodInvocation:conf.setProperty("test","true") @AT@ 5180 @LENGTH@ 32
+---------INS SimpleName@@Name:conf @TO@ MethodInvocation@@conf.setProperty("test","true") @AT@ 5180 @LENGTH@ 4
+---------INS SimpleName@@MethodName:setProperty:["test", "true"] @TO@ MethodInvocation@@conf.setProperty("test","true") @AT@ 5185 @LENGTH@ 27
+------------INS StringLiteral@@"test" @TO@ SimpleName@@MethodName:setProperty:["test", "true"] @AT@ 5197 @LENGTH@ 6
+------------INS StringLiteral@@"true" @TO@ SimpleName@@MethodName:setProperty:["test", "true"] @AT@ 5205 @LENGTH@ 6
+---INS ExpressionStatement@@MethodInvocation:conf.setBasePath(testSavePropertiesFile.getParentFile().toURL().toString()) @TO@ MethodDeclaration@@public, void, MethodName:testSaveWithBasePath, Exception,  @AT@ 5222 @LENGTH@ 76
+------INS MethodInvocation@@conf.setBasePath(testSavePropertiesFile.getParentFile().toURL().toString()) @TO@ ExpressionStatement@@MethodInvocation:conf.setBasePath(testSavePropertiesFile.getParentFile().toURL().toString()) @AT@ 5222 @LENGTH@ 75
+---------INS SimpleName@@Name:conf @TO@ MethodInvocation@@conf.setBasePath(testSavePropertiesFile.getParentFile().toURL().toString()) @AT@ 5222 @LENGTH@ 4
+---------INS SimpleName@@MethodName:setBasePath:[testSavePropertiesFile.getParentFile().toURL().toString()] @TO@ MethodInvocation@@conf.setBasePath(testSavePropertiesFile.getParentFile().toURL().toString()) @AT@ 5227 @LENGTH@ 70
+------------INS MethodInvocation@@testSavePropertiesFile.getParentFile().toURL().toString() @TO@ SimpleName@@MethodName:setBasePath:[testSavePropertiesFile.getParentFile().toURL().toString()] @AT@ 5239 @LENGTH@ 57
+---------------INS MethodInvocation@@MethodName:toURL:[] @TO@ MethodInvocation@@testSavePropertiesFile.getParentFile().toURL().toString() @AT@ 5239 @LENGTH@ 46
+---------------INS MethodInvocation@@MethodName:getParentFile:[] @TO@ MethodInvocation@@testSavePropertiesFile.getParentFile().toURL().toString() @AT@ 5239 @LENGTH@ 38
+---------------INS SimpleName@@Name:testSavePropertiesFile @TO@ MethodInvocation@@testSavePropertiesFile.getParentFile().toURL().toString() @AT@ 5239 @LENGTH@ 22
+---------------INS SimpleName@@MethodName:toString:[] @TO@ MethodInvocation@@testSavePropertiesFile.getParentFile().toURL().toString() @AT@ 5286 @LENGTH@ 10
+---INS ExpressionStatement@@MethodInvocation:conf.setFileName(testSavePropertiesFile.getName()) @TO@ MethodDeclaration@@public, void, MethodName:testSaveWithBasePath, Exception,  @AT@ 5307 @LENGTH@ 51
+------INS MethodInvocation@@conf.setFileName(testSavePropertiesFile.getName()) @TO@ ExpressionStatement@@MethodInvocation:conf.setFileName(testSavePropertiesFile.getName()) @AT@ 5307 @LENGTH@ 50
+---------INS SimpleName@@Name:conf @TO@ MethodInvocation@@conf.setFileName(testSavePropertiesFile.getName()) @AT@ 5307 @LENGTH@ 4
+---------INS SimpleName@@MethodName:setFileName:[testSavePropertiesFile.getName()] @TO@ MethodInvocation@@conf.setFileName(testSavePropertiesFile.getName()) @AT@ 5312 @LENGTH@ 45
+------------INS MethodInvocation@@testSavePropertiesFile.getName() @TO@ SimpleName@@MethodName:setFileName:[testSavePropertiesFile.getName()] @AT@ 5324 @LENGTH@ 32
+---------------INS SimpleName@@Name:testSavePropertiesFile @TO@ MethodInvocation@@testSavePropertiesFile.getName() @AT@ 5324 @LENGTH@ 22
+---------------INS SimpleName@@MethodName:getName:[] @TO@ MethodInvocation@@testSavePropertiesFile.getName() @AT@ 5347 @LENGTH@ 9
+---INS ExpressionStatement@@MethodInvocation:conf.save() @TO@ MethodDeclaration@@public, void, MethodName:testSaveWithBasePath, Exception,  @AT@ 5367 @LENGTH@ 12
+------INS MethodInvocation@@conf.save() @TO@ ExpressionStatement@@MethodInvocation:conf.save() @AT@ 5367 @LENGTH@ 11
+---------INS SimpleName@@Name:conf @TO@ MethodInvocation@@conf.save() @AT@ 5367 @LENGTH@ 4
+---------INS SimpleName@@MethodName:save:[] @TO@ MethodInvocation@@conf.save() @AT@ 5372 @LENGTH@ 6
+---INS ExpressionStatement@@MethodInvocation:assertTrue(testSavePropertiesFile.exists()) @TO@ MethodDeclaration@@public, void, MethodName:testSaveWithBasePath, Exception,  @AT@ 5388 @LENGTH@ 44
+------INS MethodInvocation@@assertTrue(testSavePropertiesFile.exists()) @TO@ ExpressionStatement@@MethodInvocation:assertTrue(testSavePropertiesFile.exists()) @AT@ 5388 @LENGTH@ 43
+---------INS SimpleName@@MethodName:assertTrue:[testSavePropertiesFile.exists()] @TO@ MethodInvocation@@assertTrue(testSavePropertiesFile.exists()) @AT@ 5388 @LENGTH@ 43
+------------INS MethodInvocation@@testSavePropertiesFile.exists() @TO@ SimpleName@@MethodName:assertTrue:[testSavePropertiesFile.exists()] @AT@ 5399 @LENGTH@ 31
+---------------INS SimpleName@@Name:testSavePropertiesFile @TO@ MethodInvocation@@testSavePropertiesFile.exists() @AT@ 5399 @LENGTH@ 22
+---------------INS SimpleName@@MethodName:exists:[] @TO@ MethodInvocation@@testSavePropertiesFile.exists() @AT@ 5422 @LENGTH@ 8
+
+
+INS MethodDeclaration@@public, void, MethodName:clearTree, String key,  @TO@ TypeDeclaration@@[public]XMLConfiguration, HierarchicalConfiguration[FileConfiguration] @AT@ 6589 @LENGTH@ 108
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:clearTree, String key,  @AT@ 6589 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:clearTree, String key,  @AT@ 6596 @LENGTH@ 4
+---INS SimpleName@@MethodName:clearTree @TO@ MethodDeclaration@@public, void, MethodName:clearTree, String key,  @AT@ 6601 @LENGTH@ 9
+---INS SingleVariableDeclaration@@String key @TO@ MethodDeclaration@@public, void, MethodName:clearTree, String key,  @AT@ 6611 @LENGTH@ 10
+------INS SimpleType@@String @TO@ SingleVariableDeclaration@@String key @AT@ 6611 @LENGTH@ 6
+------INS SimpleName@@key @TO@ SingleVariableDeclaration@@String key @AT@ 6618 @LENGTH@ 3
+---INS ExpressionStatement@@SuperMethodInvocation:super.clearTree(key) @TO@ MethodDeclaration@@public, void, MethodName:clearTree, String key,  @AT@ 6637 @LENGTH@ 21
+------INS SuperMethodInvocation@@super.clearTree(key) @TO@ ExpressionStatement@@SuperMethodInvocation:super.clearTree(key) @AT@ 6637 @LENGTH@ 20
+---------INS SimpleName@@MethodName:clearTree:[key] @TO@ SuperMethodInvocation@@super.clearTree(key) @AT@ 6643 @LENGTH@ 9
+---------INS SimpleName@@key @TO@ SuperMethodInvocation@@super.clearTree(key) @AT@ 6653 @LENGTH@ 3
+---INS ExpressionStatement@@MethodInvocation:delegate.possiblySave() @TO@ MethodDeclaration@@public, void, MethodName:clearTree, String key,  @AT@ 6667 @LENGTH@ 24
+------INS MethodInvocation@@delegate.possiblySave() @TO@ ExpressionStatement@@MethodInvocation:delegate.possiblySave() @AT@ 6667 @LENGTH@ 23
+---------INS SimpleName@@Name:delegate @TO@ MethodInvocation@@delegate.possiblySave() @AT@ 6667 @LENGTH@ 8
+---------INS SimpleName@@MethodName:possiblySave:[] @TO@ MethodInvocation@@delegate.possiblySave() @AT@ 6676 @LENGTH@ 14
+
+
+INS ExpressionStatement@@MethodInvocation:map.put("list","value1, value2") @TO@ MethodDeclaration@@protected, AbstractConfiguration, MethodName:getConfiguration,  @AT@ 1054 @LENGTH@ 34
+---INS MethodInvocation@@map.put("list","value1, value2") @TO@ ExpressionStatement@@MethodInvocation:map.put("list","value1, value2") @AT@ 1054 @LENGTH@ 33
+------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("list","value1, value2") @AT@ 1054 @LENGTH@ 3
+------INS SimpleName@@MethodName:put:["list", "value1, value2"] @TO@ MethodInvocation@@map.put("list","value1, value2") @AT@ 1058 @LENGTH@ 29
+---------INS StringLiteral@@"list" @TO@ SimpleName@@MethodName:put:["list", "value1, value2"] @AT@ 1062 @LENGTH@ 6
+---------INS StringLiteral@@"value1, value2" @TO@ SimpleName@@MethodName:put:["list", "value1, value2"] @AT@ 1070 @LENGTH@ 16
+
+
+UPD ForStatement@@for (Iterator it=newNodes.iterator(); it.hasNext(); ) {  Node insertNode=(Node)it.next();  Object ref=insert(insertNode,node,sibling1,sibling2);  if (ref != null) {    insertNode.setReference(ref);  }} @TO@ for (Iterator it=newNodes.iterator(); it.hasNext(); ) {  Node insertNode=(Node)it.next();  if (insertNode.getReference() == null) {    Object ref=insert(insertNode,node,sibling1,sibling2);    if (ref != null) {      insertNode.setReference(ref);    }  }} @AT@ 41504 @LENGTH@ 392
+---INS IfStatement@@if (insertNode.getReference() == null) {  Object ref=insert(insertNode,node,sibling1,sibling2);  if (ref != null) {    insertNode.setReference(ref);  }} @TO@ ForStatement@@for (Iterator it=newNodes.iterator(); it.hasNext(); ) {  Node insertNode=(Node)it.next();  Object ref=insert(insertNode,node,sibling1,sibling2);  if (ref != null) {    insertNode.setReference(ref);  }} @AT@ 41598 @LENGTH@ 344
+------INS InfixExpression@@insertNode.getReference() == null @TO@ IfStatement@@if (insertNode.getReference() == null) {  Object ref=insert(insertNode,node,sibling1,sibling2);  if (ref != null) {    insertNode.setReference(ref);  }} @AT@ 41602 @LENGTH@ 33
+---------INS MethodInvocation@@insertNode.getReference() @TO@ InfixExpression@@insertNode.getReference() == null @AT@ 41602 @LENGTH@ 25
+------------INS SimpleName@@Name:insertNode @TO@ MethodInvocation@@insertNode.getReference() @AT@ 41602 @LENGTH@ 10
+------------INS SimpleName@@MethodName:getReference:[] @TO@ MethodInvocation@@insertNode.getReference() @AT@ 41613 @LENGTH@ 14
+---------INS Operator@@== @TO@ InfixExpression@@insertNode.getReference() == null @AT@ 41627 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@insertNode.getReference() == null @AT@ 41631 @LENGTH@ 4
+------INS Block@@ThenBody:{  Object ref=insert(insertNode,node,sibling1,sibling2);  if (ref != null) {    insertNode.setReference(ref);  }} @TO@ IfStatement@@if (insertNode.getReference() == null) {  Object ref=insert(insertNode,node,sibling1,sibling2);  if (ref != null) {    insertNode.setReference(ref);  }} @AT@ 41661 @LENGTH@ 281
+---------MOV VariableDeclarationStatement@@Object ref=insert(insertNode,node,sibling1,sibling2); @TO@ Block@@ThenBody:{  Object ref=insert(insertNode,node,sibling1,sibling2);  if (ref != null) {    insertNode.setReference(ref);  }} @AT@ 41665 @LENGTH@ 58
+---------MOV IfStatement@@if (ref != null) {  insertNode.setReference(ref);} @TO@ Block@@ThenBody:{  Object ref=insert(insertNode,node,sibling1,sibling2);  if (ref != null) {    insertNode.setReference(ref);  }} @AT@ 41748 @LENGTH@ 126
+
+
+UPD ReturnStatement@@ArrayCreation:new String[][]{{"key1","String",""},{"key2","String",""}} @TO@ ArrayCreation:new String[][]{{"key1","String",""},{"key2","String",""},{"list","String[]",""}} @AT@ 1551 @LENGTH@ 145
+---UPD ArrayCreation@@new String[][]{{"key1","String",""},{"key2","String",""}} @TO@ new String[][]{{"key1","String",""},{"key2","String",""},{"list","String[]",""}} @AT@ 1558 @LENGTH@ 137
+------UPD ArrayInitializer@@{{"key1","String",""},{"key2","String",""}} @TO@ {{"key1","String",""},{"key2","String",""},{"list","String[]",""}} @AT@ 1589 @LENGTH@ 106
+---------INS ArrayInitializer@@{"list","String[]",""} @TO@ ArrayInitializer@@{{"key1","String",""},{"key2","String",""}} @AT@ 1735 @LENGTH@ 24
+------------INS StringLiteral@@"list" @TO@ ArrayInitializer@@{"list","String[]",""} @AT@ 1736 @LENGTH@ 6
+------------INS StringLiteral@@"String[]" @TO@ ArrayInitializer@@{"list","String[]",""} @AT@ 1744 @LENGTH@ 10
+------------INS StringLiteral@@"" @TO@ ArrayInitializer@@{"list","String[]",""} @AT@ 1756 @LENGTH@ 2
+
+
+INS ReturnStatement@@BooleanLiteral:true @TO@ MethodDeclaration@@public, boolean, MethodName:isRequestedSessionIdValid,  @AT@ 8194 @LENGTH@ 12
+---INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 8201 @LENGTH@ 4
+
+
+INS MethodDeclaration@@public, static, InputStream, MethodName:toInputStream, String input, String encoding, IOException,  @TO@ TypeDeclaration@@[public]IOUtils,  @AT@ 15232 @LENGTH@ 232
+---INS Modifier@@public @TO@ MethodDeclaration@@public, static, InputStream, MethodName:toInputStream, String input, String encoding, IOException,  @AT@ 15232 @LENGTH@ 6
+---INS Modifier@@static @TO@ MethodDeclaration@@public, static, InputStream, MethodName:toInputStream, String input, String encoding, IOException,  @AT@ 15239 @LENGTH@ 6
+---INS SimpleType@@InputStream @TO@ MethodDeclaration@@public, static, InputStream, MethodName:toInputStream, String input, String encoding, IOException,  @AT@ 15246 @LENGTH@ 11
+---INS SimpleName@@MethodName:toInputStream @TO@ MethodDeclaration@@public, static, InputStream, MethodName:toInputStream, String input, String encoding, IOException,  @AT@ 15258 @LENGTH@ 13
+---INS SingleVariableDeclaration@@String input @TO@ MethodDeclaration@@public, static, InputStream, MethodName:toInputStream, String input, String encoding, IOException,  @AT@ 15272 @LENGTH@ 12
+------INS SimpleType@@String @TO@ SingleVariableDeclaration@@String input @AT@ 15272 @LENGTH@ 6
+------INS SimpleName@@input @TO@ SingleVariableDeclaration@@String input @AT@ 15279 @LENGTH@ 5
+---INS SingleVariableDeclaration@@String encoding @TO@ MethodDeclaration@@public, static, InputStream, MethodName:toInputStream, String input, String encoding, IOException,  @AT@ 15286 @LENGTH@ 15
+------INS SimpleType@@String @TO@ SingleVariableDeclaration@@String encoding @AT@ 15286 @LENGTH@ 6
+------INS SimpleName@@encoding @TO@ SingleVariableDeclaration@@String encoding @AT@ 15293 @LENGTH@ 8
+---INS SimpleType@@IOException @TO@ MethodDeclaration@@public, static, InputStream, MethodName:toInputStream, String input, String encoding, IOException,  @AT@ 15310 @LENGTH@ 11
+---INS VariableDeclarationStatement@@byte[] bytes=encoding != null ? input.getBytes(encoding) : input.getBytes(); @TO@ MethodDeclaration@@public, static, InputStream, MethodName:toInputStream, String input, String encoding, IOException,  @AT@ 15332 @LENGTH@ 78
+------INS ArrayType@@byte[] @TO@ VariableDeclarationStatement@@byte[] bytes=encoding != null ? input.getBytes(encoding) : input.getBytes(); @AT@ 15332 @LENGTH@ 6
+---------INS PrimitiveType@@byte @TO@ ArrayType@@byte[] @AT@ 15332 @LENGTH@ 4
+------INS VariableDeclarationFragment@@bytes=encoding != null ? input.getBytes(encoding) : input.getBytes() @TO@ VariableDeclarationStatement@@byte[] bytes=encoding != null ? input.getBytes(encoding) : input.getBytes(); @AT@ 15339 @LENGTH@ 70
+---------INS SimpleName@@bytes @TO@ VariableDeclarationFragment@@bytes=encoding != null ? input.getBytes(encoding) : input.getBytes() @AT@ 15339 @LENGTH@ 5
+---------INS ConditionalExpression@@encoding != null ? input.getBytes(encoding) : input.getBytes() @TO@ VariableDeclarationFragment@@bytes=encoding != null ? input.getBytes(encoding) : input.getBytes() @AT@ 15347 @LENGTH@ 62
+------------INS InfixExpression@@encoding != null @TO@ ConditionalExpression@@encoding != null ? input.getBytes(encoding) : input.getBytes() @AT@ 15347 @LENGTH@ 16
+---------------INS SimpleName@@encoding @TO@ InfixExpression@@encoding != null @AT@ 15347 @LENGTH@ 8
+---------------INS Operator@@!= @TO@ InfixExpression@@encoding != null @AT@ 15355 @LENGTH@ 2
+---------------INS NullLiteral@@null @TO@ InfixExpression@@encoding != null @AT@ 15359 @LENGTH@ 4
+------------INS MethodInvocation@@input.getBytes(encoding) @TO@ ConditionalExpression@@encoding != null ? input.getBytes(encoding) : input.getBytes() @AT@ 15366 @LENGTH@ 24
+---------------INS SimpleName@@Name:input @TO@ MethodInvocation@@input.getBytes(encoding) @AT@ 15366 @LENGTH@ 5
+---------------INS SimpleName@@MethodName:getBytes:[encoding] @TO@ MethodInvocation@@input.getBytes(encoding) @AT@ 15372 @LENGTH@ 18
+------------------INS SimpleName@@encoding @TO@ SimpleName@@MethodName:getBytes:[encoding] @AT@ 15381 @LENGTH@ 8
+------------INS MethodInvocation@@input.getBytes() @TO@ ConditionalExpression@@encoding != null ? input.getBytes(encoding) : input.getBytes() @AT@ 15393 @LENGTH@ 16
+---------------INS SimpleName@@Name:input @TO@ MethodInvocation@@input.getBytes() @AT@ 15393 @LENGTH@ 5
+---------------INS SimpleName@@MethodName:getBytes:[] @TO@ MethodInvocation@@input.getBytes() @AT@ 15399 @LENGTH@ 10
+---INS ReturnStatement@@ClassInstanceCreation:new ByteArrayInputStream(bytes) @TO@ MethodDeclaration@@public, static, InputStream, MethodName:toInputStream, String input, String encoding, IOException,  @AT@ 15419 @LENGTH@ 39
+------INS ClassInstanceCreation@@ByteArrayInputStream[bytes] @TO@ ReturnStatement@@ClassInstanceCreation:new ByteArrayInputStream(bytes) @AT@ 15426 @LENGTH@ 31
+---------INS New@@new @TO@ ClassInstanceCreation@@ByteArrayInputStream[bytes] @AT@ 15426 @LENGTH@ 3
+---------INS SimpleType@@ByteArrayInputStream @TO@ ClassInstanceCreation@@ByteArrayInputStream[bytes] @AT@ 15430 @LENGTH@ 20
+---------INS SimpleName@@bytes @TO@ ClassInstanceCreation@@ByteArrayInputStream[bytes] @AT@ 15451 @LENGTH@ 5
+
+
+INS MethodDeclaration@@public, void, MethodName:testStringToInputStream, Exception,  @TO@ TypeDeclaration@@[public]IOUtilsTestCase, FileBasedTestCase @AT@ 8509 @LENGTH@ 573
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testStringToInputStream, Exception,  @AT@ 8509 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testStringToInputStream, Exception,  @AT@ 8516 @LENGTH@ 4
+---INS SimpleName@@MethodName:testStringToInputStream @TO@ MethodDeclaration@@public, void, MethodName:testStringToInputStream, Exception,  @AT@ 8521 @LENGTH@ 23
+---INS SimpleType@@Exception @TO@ MethodDeclaration@@public, void, MethodName:testStringToInputStream, Exception,  @AT@ 8554 @LENGTH@ 9
+---INS VariableDeclarationStatement@@String str="Abc123Xyz!"; @TO@ MethodDeclaration@@public, void, MethodName:testStringToInputStream, Exception,  @AT@ 8574 @LENGTH@ 26
+------INS SimpleType@@String @TO@ VariableDeclarationStatement@@String str="Abc123Xyz!"; @AT@ 8574 @LENGTH@ 6
+------INS VariableDeclarationFragment@@str="Abc123Xyz!" @TO@ VariableDeclarationStatement@@String str="Abc123Xyz!"; @AT@ 8581 @LENGTH@ 18
+---------INS SimpleName@@str @TO@ VariableDeclarationFragment@@str="Abc123Xyz!" @AT@ 8581 @LENGTH@ 3
+---------INS StringLiteral@@"Abc123Xyz!" @TO@ VariableDeclarationFragment@@str="Abc123Xyz!" @AT@ 8587 @LENGTH@ 12
+---INS VariableDeclarationStatement@@InputStream inStream=IOUtils.toInputStream(str); @TO@ MethodDeclaration@@public, void, MethodName:testStringToInputStream, Exception,  @AT@ 8609 @LENGTH@ 50
+------INS SimpleType@@InputStream @TO@ VariableDeclarationStatement@@InputStream inStream=IOUtils.toInputStream(str); @AT@ 8609 @LENGTH@ 11
+------INS VariableDeclarationFragment@@inStream=IOUtils.toInputStream(str) @TO@ VariableDeclarationStatement@@InputStream inStream=IOUtils.toInputStream(str); @AT@ 8621 @LENGTH@ 37
+---------INS SimpleName@@inStream @TO@ VariableDeclarationFragment@@inStream=IOUtils.toInputStream(str) @AT@ 8621 @LENGTH@ 8
+---------INS MethodInvocation@@IOUtils.toInputStream(str) @TO@ VariableDeclarationFragment@@inStream=IOUtils.toInputStream(str) @AT@ 8632 @LENGTH@ 26
+------------INS SimpleName@@Name:IOUtils @TO@ MethodInvocation@@IOUtils.toInputStream(str) @AT@ 8632 @LENGTH@ 7
+------------INS SimpleName@@MethodName:toInputStream:[str] @TO@ MethodInvocation@@IOUtils.toInputStream(str) @AT@ 8640 @LENGTH@ 18
+---------------INS SimpleName@@str @TO@ SimpleName@@MethodName:toInputStream:[str] @AT@ 8654 @LENGTH@ 3
+---INS VariableDeclarationStatement@@byte[] bytes=IOUtils.toByteArray(inStream); @TO@ MethodDeclaration@@public, void, MethodName:testStringToInputStream, Exception,  @AT@ 8668 @LENGTH@ 45
+------INS ArrayType@@byte[] @TO@ VariableDeclarationStatement@@byte[] bytes=IOUtils.toByteArray(inStream); @AT@ 8668 @LENGTH@ 6
+---------INS PrimitiveType@@byte @TO@ ArrayType@@byte[] @AT@ 8668 @LENGTH@ 4
+------INS VariableDeclarationFragment@@bytes=IOUtils.toByteArray(inStream) @TO@ VariableDeclarationStatement@@byte[] bytes=IOUtils.toByteArray(inStream); @AT@ 8675 @LENGTH@ 37
+---------INS SimpleName@@bytes @TO@ VariableDeclarationFragment@@bytes=IOUtils.toByteArray(inStream) @AT@ 8675 @LENGTH@ 5
+---------INS MethodInvocation@@IOUtils.toByteArray(inStream) @TO@ VariableDeclarationFragment@@bytes=IOUtils.toByteArray(inStream) @AT@ 8683 @LENGTH@ 29
+------------INS SimpleName@@Name:IOUtils @TO@ MethodInvocation@@IOUtils.toByteArray(inStream) @AT@ 8683 @LENGTH@ 7
+------------INS SimpleName@@MethodName:toByteArray:[inStream] @TO@ MethodInvocation@@IOUtils.toByteArray(inStream) @AT@ 8691 @LENGTH@ 21
+---------------INS SimpleName@@inStream @TO@ SimpleName@@MethodName:toByteArray:[inStream] @AT@ 8703 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:assertEqualContent(str.getBytes(),bytes) @TO@ MethodDeclaration@@public, void, MethodName:testStringToInputStream, Exception,  @AT@ 8722 @LENGTH@ 42
+------INS MethodInvocation@@assertEqualContent(str.getBytes(),bytes) @TO@ ExpressionStatement@@MethodInvocation:assertEqualContent(str.getBytes(),bytes) @AT@ 8722 @LENGTH@ 41
+---------INS SimpleName@@MethodName:assertEqualContent:[str.getBytes(), bytes] @TO@ MethodInvocation@@assertEqualContent(str.getBytes(),bytes) @AT@ 8722 @LENGTH@ 41
+------------INS MethodInvocation@@str.getBytes() @TO@ SimpleName@@MethodName:assertEqualContent:[str.getBytes(), bytes] @AT@ 8741 @LENGTH@ 14
+---------------INS SimpleName@@Name:str @TO@ MethodInvocation@@str.getBytes() @AT@ 8741 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:getBytes:[] @TO@ MethodInvocation@@str.getBytes() @AT@ 8745 @LENGTH@ 10
+------------INS SimpleName@@bytes @TO@ SimpleName@@MethodName:assertEqualContent:[str.getBytes(), bytes] @AT@ 8757 @LENGTH@ 5
+---INS ExpressionStatement@@Assignment:inStream=IOUtils.toInputStream(str,null) @TO@ MethodDeclaration@@public, void, MethodName:testStringToInputStream, Exception,  @AT@ 8773 @LENGTH@ 44
+------INS Assignment@@inStream=IOUtils.toInputStream(str,null) @TO@ ExpressionStatement@@Assignment:inStream=IOUtils.toInputStream(str,null) @AT@ 8773 @LENGTH@ 43
+---------INS SimpleName@@inStream @TO@ Assignment@@inStream=IOUtils.toInputStream(str,null) @AT@ 8773 @LENGTH@ 8
+---------INS Operator@@= @TO@ Assignment@@inStream=IOUtils.toInputStream(str,null) @AT@ 8781 @LENGTH@ 1
+---------INS MethodInvocation@@IOUtils.toInputStream(str,null) @TO@ Assignment@@inStream=IOUtils.toInputStream(str,null) @AT@ 8784 @LENGTH@ 32
+------------INS SimpleName@@Name:IOUtils @TO@ MethodInvocation@@IOUtils.toInputStream(str,null) @AT@ 8784 @LENGTH@ 7
+------------INS SimpleName@@MethodName:toInputStream:[str, null] @TO@ MethodInvocation@@IOUtils.toInputStream(str,null) @AT@ 8792 @LENGTH@ 24
+---------------INS SimpleName@@str @TO@ SimpleName@@MethodName:toInputStream:[str, null] @AT@ 8806 @LENGTH@ 3
+---------------INS NullLiteral@@null @TO@ SimpleName@@MethodName:toInputStream:[str, null] @AT@ 8811 @LENGTH@ 4
+---INS ExpressionStatement@@Assignment:bytes=IOUtils.toByteArray(inStream) @TO@ MethodDeclaration@@public, void, MethodName:testStringToInputStream, Exception,  @AT@ 8826 @LENGTH@ 38
+------INS Assignment@@bytes=IOUtils.toByteArray(inStream) @TO@ ExpressionStatement@@Assignment:bytes=IOUtils.toByteArray(inStream) @AT@ 8826 @LENGTH@ 37
+---------INS SimpleName@@bytes @TO@ Assignment@@bytes=IOUtils.toByteArray(inStream) @AT@ 8826 @LENGTH@ 5
+---------INS Operator@@= @TO@ Assignment@@bytes=IOUtils.toByteArray(inStream) @AT@ 8831 @LENGTH@ 1
+---------INS MethodInvocation@@IOUtils.toByteArray(inStream) @TO@ Assignment@@bytes=IOUtils.toByteArray(inStream) @AT@ 8834 @LENGTH@ 29
+------------INS SimpleName@@Name:IOUtils @TO@ MethodInvocation@@IOUtils.toByteArray(inStream) @AT@ 8834 @LENGTH@ 7
+------------INS SimpleName@@MethodName:toByteArray:[inStream] @TO@ MethodInvocation@@IOUtils.toByteArray(inStream) @AT@ 8842 @LENGTH@ 21
+---------------INS SimpleName@@inStream @TO@ SimpleName@@MethodName:toByteArray:[inStream] @AT@ 8854 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:assertEqualContent(str.getBytes(),bytes) @TO@ MethodDeclaration@@public, void, MethodName:testStringToInputStream, Exception,  @AT@ 8873 @LENGTH@ 42
+------INS MethodInvocation@@assertEqualContent(str.getBytes(),bytes) @TO@ ExpressionStatement@@MethodInvocation:assertEqualContent(str.getBytes(),bytes) @AT@ 8873 @LENGTH@ 41
+---------INS SimpleName@@MethodName:assertEqualContent:[str.getBytes(), bytes] @TO@ MethodInvocation@@assertEqualContent(str.getBytes(),bytes) @AT@ 8873 @LENGTH@ 41
+------------INS MethodInvocation@@str.getBytes() @TO@ SimpleName@@MethodName:assertEqualContent:[str.getBytes(), bytes] @AT@ 8892 @LENGTH@ 14
+---------------INS SimpleName@@Name:str @TO@ MethodInvocation@@str.getBytes() @AT@ 8892 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:getBytes:[] @TO@ MethodInvocation@@str.getBytes() @AT@ 8896 @LENGTH@ 10
+------------INS SimpleName@@bytes @TO@ SimpleName@@MethodName:assertEqualContent:[str.getBytes(), bytes] @AT@ 8908 @LENGTH@ 5
+---INS ExpressionStatement@@Assignment:inStream=IOUtils.toInputStream(str,"UTF-8") @TO@ MethodDeclaration@@public, void, MethodName:testStringToInputStream, Exception,  @AT@ 8924 @LENGTH@ 47
+------INS Assignment@@inStream=IOUtils.toInputStream(str,"UTF-8") @TO@ ExpressionStatement@@Assignment:inStream=IOUtils.toInputStream(str,"UTF-8") @AT@ 8924 @LENGTH@ 46
+---------INS SimpleName@@inStream @TO@ Assignment@@inStream=IOUtils.toInputStream(str,"UTF-8") @AT@ 8924 @LENGTH@ 8
+---------INS Operator@@= @TO@ Assignment@@inStream=IOUtils.toInputStream(str,"UTF-8") @AT@ 8932 @LENGTH@ 1
+---------INS MethodInvocation@@IOUtils.toInputStream(str,"UTF-8") @TO@ Assignment@@inStream=IOUtils.toInputStream(str,"UTF-8") @AT@ 8935 @LENGTH@ 35
+------------INS SimpleName@@Name:IOUtils @TO@ MethodInvocation@@IOUtils.toInputStream(str,"UTF-8") @AT@ 8935 @LENGTH@ 7
+------------INS SimpleName@@MethodName:toInputStream:[str, "UTF-8"] @TO@ MethodInvocation@@IOUtils.toInputStream(str,"UTF-8") @AT@ 8943 @LENGTH@ 27
+---------------INS SimpleName@@str @TO@ SimpleName@@MethodName:toInputStream:[str, "UTF-8"] @AT@ 8957 @LENGTH@ 3
+---------------INS StringLiteral@@"UTF-8" @TO@ SimpleName@@MethodName:toInputStream:[str, "UTF-8"] @AT@ 8962 @LENGTH@ 7
+---INS ExpressionStatement@@Assignment:bytes=IOUtils.toByteArray(inStream) @TO@ MethodDeclaration@@public, void, MethodName:testStringToInputStream, Exception,  @AT@ 8980 @LENGTH@ 38
+------INS Assignment@@bytes=IOUtils.toByteArray(inStream) @TO@ ExpressionStatement@@Assignment:bytes=IOUtils.toByteArray(inStream) @AT@ 8980 @LENGTH@ 37
+---------INS SimpleName@@bytes @TO@ Assignment@@bytes=IOUtils.toByteArray(inStream) @AT@ 8980 @LENGTH@ 5
+---------INS Operator@@= @TO@ Assignment@@bytes=IOUtils.toByteArray(inStream) @AT@ 8985 @LENGTH@ 1
+---------INS MethodInvocation@@IOUtils.toByteArray(inStream) @TO@ Assignment@@bytes=IOUtils.toByteArray(inStream) @AT@ 8988 @LENGTH@ 29
+------------INS SimpleName@@Name:IOUtils @TO@ MethodInvocation@@IOUtils.toByteArray(inStream) @AT@ 8988 @LENGTH@ 7
+------------INS SimpleName@@MethodName:toByteArray:[inStream] @TO@ MethodInvocation@@IOUtils.toByteArray(inStream) @AT@ 8996 @LENGTH@ 21
+---------------INS SimpleName@@inStream @TO@ SimpleName@@MethodName:toByteArray:[inStream] @AT@ 9008 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:assertEqualContent(str.getBytes("UTF-8"),bytes) @TO@ MethodDeclaration@@public, void, MethodName:testStringToInputStream, Exception,  @AT@ 9027 @LENGTH@ 49
+------INS MethodInvocation@@assertEqualContent(str.getBytes("UTF-8"),bytes) @TO@ ExpressionStatement@@MethodInvocation:assertEqualContent(str.getBytes("UTF-8"),bytes) @AT@ 9027 @LENGTH@ 48
+---------INS SimpleName@@MethodName:assertEqualContent:[str.getBytes("UTF-8"), bytes] @TO@ MethodInvocation@@assertEqualContent(str.getBytes("UTF-8"),bytes) @AT@ 9027 @LENGTH@ 48
+------------INS MethodInvocation@@str.getBytes("UTF-8") @TO@ SimpleName@@MethodName:assertEqualContent:[str.getBytes("UTF-8"), bytes] @AT@ 9046 @LENGTH@ 21
+---------------INS SimpleName@@Name:str @TO@ MethodInvocation@@str.getBytes("UTF-8") @AT@ 9046 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:getBytes:["UTF-8"] @TO@ MethodInvocation@@str.getBytes("UTF-8") @AT@ 9050 @LENGTH@ 17
+------------------INS StringLiteral@@"UTF-8" @TO@ SimpleName@@MethodName:getBytes:["UTF-8"] @AT@ 9059 @LENGTH@ 7
+------------INS SimpleName@@bytes @TO@ SimpleName@@MethodName:assertEqualContent:[str.getBytes("UTF-8"), bytes] @AT@ 9069 @LENGTH@ 5
+
+
+INS ExpressionStatement@@MethodInvocation:parameters.setProperty("list","value1, value2") @TO@ MethodDeclaration@@protected, AbstractConfiguration, MethodName:getConfiguration,  @AT@ 1278 @LENGTH@ 49
+---INS MethodInvocation@@parameters.setProperty("list","value1, value2") @TO@ ExpressionStatement@@MethodInvocation:parameters.setProperty("list","value1, value2") @AT@ 1278 @LENGTH@ 48
+------INS SimpleName@@Name:parameters @TO@ MethodInvocation@@parameters.setProperty("list","value1, value2") @AT@ 1278 @LENGTH@ 10
+------INS SimpleName@@MethodName:setProperty:["list", "value1, value2"] @TO@ MethodInvocation@@parameters.setProperty("list","value1, value2") @AT@ 1289 @LENGTH@ 37
+---------INS StringLiteral@@"list" @TO@ SimpleName@@MethodName:setProperty:["list", "value1, value2"] @AT@ 1301 @LENGTH@ 6
+---------INS StringLiteral@@"value1, value2" @TO@ SimpleName@@MethodName:setProperty:["list", "value1, value2"] @AT@ 1309 @LENGTH@ 16
+
+
+UPD MethodDeclaration@@public, synchronized, void, MethodName:write, byte[] b, int off, int len,  @TO@ public, void, MethodName:write, byte[] b, int off, int len,  @AT@ 1077 @LENGTH@ 89
+---DEL Modifier@@synchronized @AT@ 1084 @LENGTH@ 12
+
+
+INS IfStatement@@if (currentIterator == null) {  updateCurrentIterator();} @TO@ MethodDeclaration@@public, void, MethodName:remove,  @AT@ 9501 @LENGTH@ 78
+---INS InfixExpression@@currentIterator == null @TO@ IfStatement@@if (currentIterator == null) {  updateCurrentIterator();} @AT@ 9505 @LENGTH@ 23
+------INS SimpleName@@currentIterator @TO@ InfixExpression@@currentIterator == null @AT@ 9505 @LENGTH@ 15
+------INS Operator@@== @TO@ InfixExpression@@currentIterator == null @AT@ 9520 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@currentIterator == null @AT@ 9524 @LENGTH@ 4
+---INS Block@@ThenBody:{  updateCurrentIterator();} @TO@ IfStatement@@if (currentIterator == null) {  updateCurrentIterator();} @AT@ 9531 @LENGTH@ 48
+------INS ExpressionStatement@@MethodInvocation:updateCurrentIterator() @TO@ Block@@ThenBody:{  updateCurrentIterator();} @AT@ 9545 @LENGTH@ 24
+---------MOV MethodInvocation@@MethodName:updateCurrentIterator:[] @TO@ ExpressionStatement@@MethodInvocation:updateCurrentIterator() @AT@ 9522 @LENGTH@ 23
+
+
+UPD MethodDeclaration@@static, List, MethodName:split, String s, char delimiter,  @TO@ public, static, List, MethodName:split, String s, char delimiter,  @AT@ 13089 @LENGTH@ 1263
+---INS Modifier@@public @TO@ MethodDeclaration@@static, List, MethodName:split, String s, char delimiter,  @AT@ 13067 @LENGTH@ 6
+
+
+UPD ExpressionStatement@@Assignment:iter=get().listIterator(previousIndex()) @TO@ Assignment:iter=get().listIterator(lastReturnedIndex) @AT@ 35245 @LENGTH@ 43
+---UPD Assignment@@iter=get().listIterator(previousIndex()) @TO@ iter=get().listIterator(lastReturnedIndex) @AT@ 35245 @LENGTH@ 42
+------UPD MethodInvocation@@get().listIterator(previousIndex()) @TO@ get().listIterator(lastReturnedIndex) @AT@ 35252 @LENGTH@ 35
+---------UPD SimpleName@@MethodName:listIterator:[previousIndex()] @TO@ MethodName:listIterator:[lastReturnedIndex] @AT@ 35258 @LENGTH@ 29
+------------INS SimpleName@@lastReturnedIndex @TO@ SimpleName@@MethodName:listIterator:[previousIndex()] @AT@ 35271 @LENGTH@ 17
+------------DEL MethodInvocation@@MethodName:previousIndex:[] @AT@ 35271 @LENGTH@ 15
+
+
+UPD TryStatement@@try {  Context lc=this.getLookupContext();  if (lc == null) {    if (super.logger.isWarnEnabled()) {      super.logger.warn("Could not obtain a Context to perform lookup");    }    return null;  }  Object result=lc.lookup("java:comp/env/security/subject");  if (result instanceof Subject) {    subject=(Subject)result;  }} catch (NamingException ne) {  if (super.logger.isWarnEnabled()) {    super.logger.warn("Lookup on Subject failed " + ne.getLocalizedMessage());  }} @TO@ try {  Context lc=this.getLookupContext();  if (lc == null) {    if (logger.isWarnEnabled()) {      logger.warn("Could not obtain a Context to perform lookup");    }    return null;  }  Object result=lc.lookup("java:comp/env/security/subject");  if (result instanceof Subject) {    subject=(Subject)result;  }} catch (NamingException ne) {  if (logger.isWarnEnabled()) {    logger.warn("Lookup on Subject failed " + ne.getLocalizedMessage());  }} @AT@ 1778 @LENGTH@ 712
+---UPD IfStatement@@if (lc == null) {  if (super.logger.isWarnEnabled()) {    super.logger.warn("Could not obtain a Context to perform lookup");  }  return null;} @TO@ if (lc == null) {  if (logger.isWarnEnabled()) {    logger.warn("Could not obtain a Context to perform lookup");  }  return null;} @AT@ 1847 @LENGTH@ 243
+------UPD Block@@ThenBody:{  if (super.logger.isWarnEnabled()) {    super.logger.warn("Could not obtain a Context to perform lookup");  }  return null;} @TO@ ThenBody:{  if (logger.isWarnEnabled()) {    logger.warn("Could not obtain a Context to perform lookup");  }  return null;} @AT@ 1863 @LENGTH@ 227
+---------UPD IfStatement@@if (super.logger.isWarnEnabled()) {  super.logger.warn("Could not obtain a Context to perform lookup");} @TO@ if (logger.isWarnEnabled()) {  logger.warn("Could not obtain a Context to perform lookup");} @AT@ 1881 @LENGTH@ 165
+------------UPD MethodInvocation@@super.logger.isWarnEnabled() @TO@ logger.isWarnEnabled() @AT@ 1885 @LENGTH@ 28
+---------------DEL SuperFieldAccess@@super.logger @AT@ 1885 @LENGTH@ 12
+------------------DEL SimpleName@@logger @AT@ 1891 @LENGTH@ 6
+---------------INS SimpleName@@Name:logger @TO@ MethodInvocation@@super.logger.isWarnEnabled() @AT@ 1885 @LENGTH@ 6
+------------UPD Block@@ThenBody:{  super.logger.warn("Could not obtain a Context to perform lookup");} @TO@ ThenBody:{  logger.warn("Could not obtain a Context to perform lookup");} @AT@ 1915 @LENGTH@ 131
+---------------UPD ExpressionStatement@@MethodInvocation:super.logger.warn("Could not obtain a Context to perform lookup") @TO@ MethodInvocation:logger.warn("Could not obtain a Context to perform lookup") @AT@ 1937 @LENGTH@ 91
+------------------UPD MethodInvocation@@super.logger.warn("Could not obtain a Context to perform lookup") @TO@ logger.warn("Could not obtain a Context to perform lookup") @AT@ 1937 @LENGTH@ 90
+---------------------INS SimpleName@@Name:logger @TO@ MethodInvocation@@super.logger.warn("Could not obtain a Context to perform lookup") @AT@ 1931 @LENGTH@ 6
+---------------------DEL SuperFieldAccess@@super.logger @AT@ 1937 @LENGTH@ 12
+------------------------DEL SimpleName@@logger @AT@ 1943 @LENGTH@ 6
+---UPD CatchClause@@catch (NamingException ne) {  if (super.logger.isWarnEnabled()) {    super.logger.warn("Lookup on Subject failed " + ne.getLocalizedMessage());  }} @TO@ catch (NamingException ne) {  if (logger.isWarnEnabled()) {    logger.warn("Lookup on Subject failed " + ne.getLocalizedMessage());  }} @AT@ 2279 @LENGTH@ 211
+------UPD IfStatement@@if (super.logger.isWarnEnabled()) {  super.logger.warn("Lookup on Subject failed " + ne.getLocalizedMessage());} @TO@ if (logger.isWarnEnabled()) {  logger.warn("Lookup on Subject failed " + ne.getLocalizedMessage());} @AT@ 2320 @LENGTH@ 160
+---------UPD MethodInvocation@@super.logger.isWarnEnabled() @TO@ logger.isWarnEnabled() @AT@ 2324 @LENGTH@ 28
+------------INS SimpleName@@Name:logger @TO@ MethodInvocation@@super.logger.isWarnEnabled() @AT@ 2287 @LENGTH@ 6
+------------DEL SuperFieldAccess@@super.logger @AT@ 2324 @LENGTH@ 12
+---------------DEL SimpleName@@logger @AT@ 2330 @LENGTH@ 6
+---------UPD Block@@ThenBody:{  super.logger.warn("Lookup on Subject failed " + ne.getLocalizedMessage());} @TO@ ThenBody:{  logger.warn("Lookup on Subject failed " + ne.getLocalizedMessage());} @AT@ 2354 @LENGTH@ 126
+------------UPD ExpressionStatement@@MethodInvocation:super.logger.warn("Lookup on Subject failed " + ne.getLocalizedMessage()) @TO@ MethodInvocation:logger.warn("Lookup on Subject failed " + ne.getLocalizedMessage()) @AT@ 2372 @LENGTH@ 94
+---------------UPD MethodInvocation@@super.logger.warn("Lookup on Subject failed " + ne.getLocalizedMessage()) @TO@ logger.warn("Lookup on Subject failed " + ne.getLocalizedMessage()) @AT@ 2372 @LENGTH@ 93
+------------------INS SimpleName@@Name:logger @TO@ MethodInvocation@@super.logger.warn("Lookup on Subject failed " + ne.getLocalizedMessage()) @AT@ 2329 @LENGTH@ 6
+------------------DEL SuperFieldAccess@@super.logger @AT@ 2372 @LENGTH@ 12
+---------------------DEL SimpleName@@logger @AT@ 2378 @LENGTH@ 6
+
+
+INS ExpressionStatement@@MethodInvocation:config.setInitParameter("list","value1, value2") @TO@ MethodDeclaration@@protected, AbstractConfiguration, MethodName:getConfiguration,  @AT@ 1391 @LENGTH@ 50
+---INS MethodInvocation@@config.setInitParameter("list","value1, value2") @TO@ ExpressionStatement@@MethodInvocation:config.setInitParameter("list","value1, value2") @AT@ 1391 @LENGTH@ 49
+------INS SimpleName@@Name:config @TO@ MethodInvocation@@config.setInitParameter("list","value1, value2") @AT@ 1391 @LENGTH@ 6
+------INS SimpleName@@MethodName:setInitParameter:["list", "value1, value2"] @TO@ MethodInvocation@@config.setInitParameter("list","value1, value2") @AT@ 1398 @LENGTH@ 42
+---------INS StringLiteral@@"list" @TO@ SimpleName@@MethodName:setInitParameter:["list", "value1, value2"] @AT@ 1415 @LENGTH@ 6
+---------INS StringLiteral@@"value1, value2" @TO@ SimpleName@@MethodName:setInitParameter:["list", "value1, value2"] @AT@ 1423 @LENGTH@ 16
+
+
+UPD IfStatement@@if (!url.getProtocol().equals("file")) {  return null;} else {  String filename=url.getFile().replace('/',File.separatorChar);  return new File(filename);} @TO@ if (url == null || !url.getProtocol().equals("file")) {  return null;} else {  String filename=url.getFile().replace('/',File.separatorChar);  int pos=0;  while ((pos=filename.indexOf('%',pos)) >= 0) {    if (pos + 2 < filename.length()) {      String hexStr=filename.substring(pos + 1,pos + 3);      char ch=(char)Integer.parseInt(hexStr,16);      filename=filename.substring(0,pos) + ch + filename.substring(pos + 3);    }  }  return new File(filename);} @AT@ 11381 @LENGTH@ 225
+---UPD Block@@ElseBody:{  String filename=url.getFile().replace('/',File.separatorChar);  return new File(filename);} @TO@ ElseBody:{  String filename=url.getFile().replace('/',File.separatorChar);  int pos=0;  while ((pos=filename.indexOf('%',pos)) >= 0) {    if (pos + 2 < filename.length()) {      String hexStr=filename.substring(pos + 1,pos + 3);      char ch=(char)Integer.parseInt(hexStr,16);      filename=filename.substring(0,pos) + ch + filename.substring(pos + 3);    }  }  return new File(filename);} @AT@ 11462 @LENGTH@ 144
+------INS VariableDeclarationStatement@@int pos=0; @TO@ Block@@ElseBody:{  String filename=url.getFile().replace('/',File.separatorChar);  return new File(filename);} @AT@ 11836 @LENGTH@ 11
+---------INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int pos=0; @AT@ 11836 @LENGTH@ 3
+---------INS VariableDeclarationFragment@@pos=0 @TO@ VariableDeclarationStatement@@int pos=0; @AT@ 11840 @LENGTH@ 6
+------------INS SimpleName@@pos @TO@ VariableDeclarationFragment@@pos=0 @AT@ 11840 @LENGTH@ 3
+------------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@pos=0 @AT@ 11845 @LENGTH@ 1
+------INS WhileStatement@@while ((pos=filename.indexOf('%',pos)) >= 0) {  if (pos + 2 < filename.length()) {    String hexStr=filename.substring(pos + 1,pos + 3);    char ch=(char)Integer.parseInt(hexStr,16);    filename=filename.substring(0,pos) + ch + filename.substring(pos + 3);  }} @TO@ Block@@ElseBody:{  String filename=url.getFile().replace('/',File.separatorChar);  return new File(filename);} @AT@ 11860 @LENGTH@ 367
+---------INS InfixExpression@@(pos=filename.indexOf('%',pos)) >= 0 @TO@ WhileStatement@@while ((pos=filename.indexOf('%',pos)) >= 0) {  if (pos + 2 < filename.length()) {    String hexStr=filename.substring(pos + 1,pos + 3);    char ch=(char)Integer.parseInt(hexStr,16);    filename=filename.substring(0,pos) + ch + filename.substring(pos + 3);  }} @AT@ 11867 @LENGTH@ 39
+------------INS ParenthesizedExpression@@(pos=filename.indexOf('%',pos)) @TO@ InfixExpression@@(pos=filename.indexOf('%',pos)) >= 0 @AT@ 11867 @LENGTH@ 34
+---------------INS Assignment@@pos=filename.indexOf('%',pos) @TO@ ParenthesizedExpression@@(pos=filename.indexOf('%',pos)) @AT@ 11868 @LENGTH@ 32
+------------------INS SimpleName@@pos @TO@ Assignment@@pos=filename.indexOf('%',pos) @AT@ 11868 @LENGTH@ 3
+------------------INS Operator@@= @TO@ Assignment@@pos=filename.indexOf('%',pos) @AT@ 11871 @LENGTH@ 1
+------------------INS MethodInvocation@@filename.indexOf('%',pos) @TO@ Assignment@@pos=filename.indexOf('%',pos) @AT@ 11874 @LENGTH@ 26
+---------------------INS SimpleName@@Name:filename @TO@ MethodInvocation@@filename.indexOf('%',pos) @AT@ 11874 @LENGTH@ 8
+---------------------INS SimpleName@@MethodName:indexOf:['%', pos] @TO@ MethodInvocation@@filename.indexOf('%',pos) @AT@ 11883 @LENGTH@ 17
+------------------------INS CharacterLiteral@@'%' @TO@ SimpleName@@MethodName:indexOf:['%', pos] @AT@ 11891 @LENGTH@ 3
+------------------------INS SimpleName@@pos @TO@ SimpleName@@MethodName:indexOf:['%', pos] @AT@ 11896 @LENGTH@ 3
+------------INS Operator@@>= @TO@ InfixExpression@@(pos=filename.indexOf('%',pos)) >= 0 @AT@ 11901 @LENGTH@ 2
+------------INS NumberLiteral@@0 @TO@ InfixExpression@@(pos=filename.indexOf('%',pos)) >= 0 @AT@ 11905 @LENGTH@ 1
+---------INS Block@@WhileBody:{  if (pos + 2 < filename.length()) {    String hexStr=filename.substring(pos + 1,pos + 3);    char ch=(char)Integer.parseInt(hexStr,16);    filename=filename.substring(0,pos) + ch + filename.substring(pos + 3);  }} @TO@ WhileStatement@@while ((pos=filename.indexOf('%',pos)) >= 0) {  if (pos + 2 < filename.length()) {    String hexStr=filename.substring(pos + 1,pos + 3);    char ch=(char)Integer.parseInt(hexStr,16);    filename=filename.substring(0,pos) + ch + filename.substring(pos + 3);  }} @AT@ 11908 @LENGTH@ 319
+------------INS IfStatement@@if (pos + 2 < filename.length()) {  String hexStr=filename.substring(pos + 1,pos + 3);  char ch=(char)Integer.parseInt(hexStr,16);  filename=filename.substring(0,pos) + ch + filename.substring(pos + 3);} @TO@ Block@@WhileBody:{  if (pos + 2 < filename.length()) {    String hexStr=filename.substring(pos + 1,pos + 3);    char ch=(char)Integer.parseInt(hexStr,16);    filename=filename.substring(0,pos) + ch + filename.substring(pos + 3);  }} @AT@ 11926 @LENGTH@ 287
+---------------INS InfixExpression@@pos + 2 < filename.length() @TO@ IfStatement@@if (pos + 2 < filename.length()) {  String hexStr=filename.substring(pos + 1,pos + 3);  char ch=(char)Integer.parseInt(hexStr,16);  filename=filename.substring(0,pos) + ch + filename.substring(pos + 3);} @AT@ 11930 @LENGTH@ 27
+------------------INS InfixExpression@@pos + 2 @TO@ InfixExpression@@pos + 2 < filename.length() @AT@ 11930 @LENGTH@ 7
+---------------------INS SimpleName@@pos @TO@ InfixExpression@@pos + 2 @AT@ 11930 @LENGTH@ 3
+---------------------INS Operator@@+ @TO@ InfixExpression@@pos + 2 @AT@ 11933 @LENGTH@ 1
+---------------------INS NumberLiteral@@2 @TO@ InfixExpression@@pos + 2 @AT@ 11936 @LENGTH@ 1
+------------------INS Operator@@< @TO@ InfixExpression@@pos + 2 < filename.length() @AT@ 11937 @LENGTH@ 1
+------------------INS MethodInvocation@@filename.length() @TO@ InfixExpression@@pos + 2 < filename.length() @AT@ 11940 @LENGTH@ 17
+---------------------INS SimpleName@@Name:filename @TO@ MethodInvocation@@filename.length() @AT@ 11940 @LENGTH@ 8
+---------------------INS SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@filename.length() @AT@ 11949 @LENGTH@ 8
+---------------INS Block@@ThenBody:{  String hexStr=filename.substring(pos + 1,pos + 3);  char ch=(char)Integer.parseInt(hexStr,16);  filename=filename.substring(0,pos) + ch + filename.substring(pos + 3);} @TO@ IfStatement@@if (pos + 2 < filename.length()) {  String hexStr=filename.substring(pos + 1,pos + 3);  char ch=(char)Integer.parseInt(hexStr,16);  filename=filename.substring(0,pos) + ch + filename.substring(pos + 3);} @AT@ 11959 @LENGTH@ 254
+------------------INS VariableDeclarationStatement@@String hexStr=filename.substring(pos + 1,pos + 3); @TO@ Block@@ThenBody:{  String hexStr=filename.substring(pos + 1,pos + 3);  char ch=(char)Integer.parseInt(hexStr,16);  filename=filename.substring(0,pos) + ch + filename.substring(pos + 3);} @AT@ 11981 @LENGTH@ 53
+---------------------INS SimpleType@@String @TO@ VariableDeclarationStatement@@String hexStr=filename.substring(pos + 1,pos + 3); @AT@ 11981 @LENGTH@ 6
+---------------------INS VariableDeclarationFragment@@hexStr=filename.substring(pos + 1,pos + 3) @TO@ VariableDeclarationStatement@@String hexStr=filename.substring(pos + 1,pos + 3); @AT@ 11988 @LENGTH@ 45
+------------------------INS SimpleName@@hexStr @TO@ VariableDeclarationFragment@@hexStr=filename.substring(pos + 1,pos + 3) @AT@ 11988 @LENGTH@ 6
+------------------------INS MethodInvocation@@filename.substring(pos + 1,pos + 3) @TO@ VariableDeclarationFragment@@hexStr=filename.substring(pos + 1,pos + 3) @AT@ 11997 @LENGTH@ 36
+---------------------------INS SimpleName@@Name:filename @TO@ MethodInvocation@@filename.substring(pos + 1,pos + 3) @AT@ 11997 @LENGTH@ 8
+---------------------------INS SimpleName@@MethodName:substring:[pos + 1, pos + 3] @TO@ MethodInvocation@@filename.substring(pos + 1,pos + 3) @AT@ 12006 @LENGTH@ 27
+------------------------------INS InfixExpression@@pos + 1 @TO@ SimpleName@@MethodName:substring:[pos + 1, pos + 3] @AT@ 12016 @LENGTH@ 7
+---------------------------------INS SimpleName@@pos @TO@ InfixExpression@@pos + 1 @AT@ 12016 @LENGTH@ 3
+---------------------------------INS Operator@@+ @TO@ InfixExpression@@pos + 1 @AT@ 12019 @LENGTH@ 1
+---------------------------------INS NumberLiteral@@1 @TO@ InfixExpression@@pos + 1 @AT@ 12022 @LENGTH@ 1
+------------------------------INS InfixExpression@@pos + 3 @TO@ SimpleName@@MethodName:substring:[pos + 1, pos + 3] @AT@ 12025 @LENGTH@ 7
+---------------------------------INS SimpleName@@pos @TO@ InfixExpression@@pos + 3 @AT@ 12025 @LENGTH@ 3
+---------------------------------INS Operator@@+ @TO@ InfixExpression@@pos + 3 @AT@ 12028 @LENGTH@ 1
+---------------------------------INS NumberLiteral@@3 @TO@ InfixExpression@@pos + 3 @AT@ 12031 @LENGTH@ 1
+------------------INS VariableDeclarationStatement@@char ch=(char)Integer.parseInt(hexStr,16); @TO@ Block@@ThenBody:{  String hexStr=filename.substring(pos + 1,pos + 3);  char ch=(char)Integer.parseInt(hexStr,16);  filename=filename.substring(0,pos) + ch + filename.substring(pos + 3);} @AT@ 12055 @LENGTH@ 46
+---------------------INS PrimitiveType@@char @TO@ VariableDeclarationStatement@@char ch=(char)Integer.parseInt(hexStr,16); @AT@ 12055 @LENGTH@ 4
+---------------------INS VariableDeclarationFragment@@ch=(char)Integer.parseInt(hexStr,16) @TO@ VariableDeclarationStatement@@char ch=(char)Integer.parseInt(hexStr,16); @AT@ 12060 @LENGTH@ 40
+------------------------INS SimpleName@@ch @TO@ VariableDeclarationFragment@@ch=(char)Integer.parseInt(hexStr,16) @AT@ 12060 @LENGTH@ 2
+------------------------INS CastExpression@@(char)Integer.parseInt(hexStr,16) @TO@ VariableDeclarationFragment@@ch=(char)Integer.parseInt(hexStr,16) @AT@ 12065 @LENGTH@ 35
+---------------------------INS PrimitiveType@@char @TO@ CastExpression@@(char)Integer.parseInt(hexStr,16) @AT@ 12066 @LENGTH@ 4
+---------------------------INS MethodInvocation@@Integer.parseInt(hexStr,16) @TO@ CastExpression@@(char)Integer.parseInt(hexStr,16) @AT@ 12072 @LENGTH@ 28
+------------------------------INS SimpleName@@Name:Integer @TO@ MethodInvocation@@Integer.parseInt(hexStr,16) @AT@ 12072 @LENGTH@ 7
+------------------------------INS SimpleName@@MethodName:parseInt:[hexStr, 16] @TO@ MethodInvocation@@Integer.parseInt(hexStr,16) @AT@ 12080 @LENGTH@ 20
+---------------------------------INS SimpleName@@hexStr @TO@ SimpleName@@MethodName:parseInt:[hexStr, 16] @AT@ 12089 @LENGTH@ 6
+---------------------------------INS NumberLiteral@@16 @TO@ SimpleName@@MethodName:parseInt:[hexStr, 16] @AT@ 12097 @LENGTH@ 2
+------------------INS ExpressionStatement@@Assignment:filename=filename.substring(0,pos) + ch + filename.substring(pos + 3) @TO@ Block@@ThenBody:{  String hexStr=filename.substring(pos + 1,pos + 3);  char ch=(char)Integer.parseInt(hexStr,16);  filename=filename.substring(0,pos) + ch + filename.substring(pos + 3);} @AT@ 12122 @LENGTH@ 73
+---------------------INS Assignment@@filename=filename.substring(0,pos) + ch + filename.substring(pos + 3) @TO@ ExpressionStatement@@Assignment:filename=filename.substring(0,pos) + ch + filename.substring(pos + 3) @AT@ 12122 @LENGTH@ 72
+------------------------INS SimpleName@@filename @TO@ Assignment@@filename=filename.substring(0,pos) + ch + filename.substring(pos + 3) @AT@ 12122 @LENGTH@ 8
+------------------------INS Operator@@= @TO@ Assignment@@filename=filename.substring(0,pos) + ch + filename.substring(pos + 3) @AT@ 12130 @LENGTH@ 1
+------------------------INS InfixExpression@@filename.substring(0,pos) + ch + filename.substring(pos + 3) @TO@ Assignment@@filename=filename.substring(0,pos) + ch + filename.substring(pos + 3) @AT@ 12133 @LENGTH@ 61
+---------------------------INS MethodInvocation@@filename.substring(0,pos) @TO@ InfixExpression@@filename.substring(0,pos) + ch + filename.substring(pos + 3) @AT@ 12133 @LENGTH@ 26
+------------------------------INS SimpleName@@Name:filename @TO@ MethodInvocation@@filename.substring(0,pos) @AT@ 12133 @LENGTH@ 8
+------------------------------INS SimpleName@@MethodName:substring:[0, pos] @TO@ MethodInvocation@@filename.substring(0,pos) @AT@ 12142 @LENGTH@ 17
+---------------------------------INS NumberLiteral@@0 @TO@ SimpleName@@MethodName:substring:[0, pos] @AT@ 12152 @LENGTH@ 1
+---------------------------------INS SimpleName@@pos @TO@ SimpleName@@MethodName:substring:[0, pos] @AT@ 12155 @LENGTH@ 3
+---------------------------INS Operator@@+ @TO@ InfixExpression@@filename.substring(0,pos) + ch + filename.substring(pos + 3) @AT@ 12159 @LENGTH@ 1
+---------------------------INS SimpleName@@ch @TO@ InfixExpression@@filename.substring(0,pos) + ch + filename.substring(pos + 3) @AT@ 12162 @LENGTH@ 2
+---------------------------INS MethodInvocation@@filename.substring(pos + 3) @TO@ InfixExpression@@filename.substring(0,pos) + ch + filename.substring(pos + 3) @AT@ 12167 @LENGTH@ 27
+------------------------------INS SimpleName@@Name:filename @TO@ MethodInvocation@@filename.substring(pos + 3) @AT@ 12167 @LENGTH@ 8
+------------------------------INS SimpleName@@MethodName:substring:[pos + 3] @TO@ MethodInvocation@@filename.substring(pos + 3) @AT@ 12176 @LENGTH@ 18
+---------------------------------INS InfixExpression@@pos + 3 @TO@ SimpleName@@MethodName:substring:[pos + 3] @AT@ 12186 @LENGTH@ 7
+------------------------------------INS SimpleName@@pos @TO@ InfixExpression@@pos + 3 @AT@ 12186 @LENGTH@ 3
+------------------------------------INS Operator@@+ @TO@ InfixExpression@@pos + 3 @AT@ 12189 @LENGTH@ 1
+------------------------------------INS NumberLiteral@@3 @TO@ InfixExpression@@pos + 3 @AT@ 12192 @LENGTH@ 1
+---INS InfixExpression@@url == null || !url.getProtocol().equals("file") @TO@ IfStatement@@if (!url.getProtocol().equals("file")) {  return null;} else {  String filename=url.getFile().replace('/',File.separatorChar);  return new File(filename);} @AT@ 11652 @LENGTH@ 48
+------MOV PrefixExpression@@!url.getProtocol().equals("file") @TO@ InfixExpression@@url == null || !url.getProtocol().equals("file") @AT@ 11385 @LENGTH@ 33
+------INS InfixExpression@@url == null @TO@ InfixExpression@@url == null || !url.getProtocol().equals("file") @AT@ 11652 @LENGTH@ 11
+---------INS SimpleName@@url @TO@ InfixExpression@@url == null @AT@ 11652 @LENGTH@ 3
+---------INS Operator@@== @TO@ InfixExpression@@url == null @AT@ 11655 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@url == null @AT@ 11659 @LENGTH@ 4
+------INS Operator@@|| @TO@ InfixExpression@@url == null || !url.getProtocol().equals("file") @AT@ 11663 @LENGTH@ 2
+
+
+MOV MethodDeclaration@@public, UserDetails, MethodName:getUserFromCache, X509Certificate userCert,  @TO@ TypeDeclaration@@[public]EhCacheBasedX509UserCache, [X509UserCache, InitializingBean] @AT@ 1852 @LENGTH@ 624
+
+
+UPD ExpressionStatement@@MethodInvocation:this.removeUserFromCache(userCert) @TO@ MethodInvocation:cache.remove(userCert) @AT@ 3071 @LENGTH@ 35
+---UPD MethodInvocation@@this.removeUserFromCache(userCert) @TO@ cache.remove(userCert) @AT@ 3071 @LENGTH@ 34
+------INS SimpleName@@Name:cache @TO@ MethodInvocation@@this.removeUserFromCache(userCert) @AT@ 3071 @LENGTH@ 5
+------DEL ThisExpression@@this @AT@ 3071 @LENGTH@ 4
+------UPD SimpleName@@MethodName:removeUserFromCache:[userCert] @TO@ MethodName:remove:[userCert] @AT@ 3076 @LENGTH@ 29
+
+
+UPD MethodDeclaration@@public, static, Map, MethodName:unmodifiableMapCopy, final Map map,  @TO@ public, static, Map, MethodName:unmodifiableMapCopy, Map map,  @AT@ 45894 @LENGTH@ 249
+---UPD SingleVariableDeclaration@@final Map map @TO@ Map map @AT@ 45932 @LENGTH@ 13
+------DEL Modifier@@final @AT@ 45932 @LENGTH@ 5
+---UPD VariableDeclarationStatement@@final Map copy=new HashMap(map.size(),1.0f); @TO@ Map copy=new HashMap(map.size(),1.0f); @AT@ 46032 @LENGTH@ 47
+------DEL Modifier@@final @AT@ 46032 @LENGTH@ 5
+
+
+INS ExpressionStatement@@MethodInvocation:config.setInitParameter("list","value1, value2") @TO@ MethodDeclaration@@protected, AbstractConfiguration, MethodName:getConfiguration,  @AT@ 1371 @LENGTH@ 50
+---INS MethodInvocation@@config.setInitParameter("list","value1, value2") @TO@ ExpressionStatement@@MethodInvocation:config.setInitParameter("list","value1, value2") @AT@ 1371 @LENGTH@ 49
+------INS SimpleName@@Name:config @TO@ MethodInvocation@@config.setInitParameter("list","value1, value2") @AT@ 1371 @LENGTH@ 6
+------INS SimpleName@@MethodName:setInitParameter:["list", "value1, value2"] @TO@ MethodInvocation@@config.setInitParameter("list","value1, value2") @AT@ 1378 @LENGTH@ 42
+---------INS StringLiteral@@"list" @TO@ SimpleName@@MethodName:setInitParameter:["list", "value1, value2"] @AT@ 1395 @LENGTH@ 6
+---------INS StringLiteral@@"value1, value2" @TO@ SimpleName@@MethodName:setInitParameter:["list", "value1, value2"] @AT@ 1403 @LENGTH@ 16
+
+
+DEL ThrowStatement@@ClassInstanceCreation:new UnsupportedOperationException("mock method not implemented") @AT@ 8194 @LENGTH@ 71
+---DEL ClassInstanceCreation@@UnsupportedOperationException["mock method not implemented"] @AT@ 8200 @LENGTH@ 64
+------DEL New@@new @AT@ 8200 @LENGTH@ 3
+------DEL SimpleType@@UnsupportedOperationException @AT@ 8204 @LENGTH@ 29
+------DEL StringLiteral@@"mock method not implemented" @AT@ 8234 @LENGTH@ 29
+
+
+UPD ExpressionStatement@@MethodInvocation:Thread.sleep(500) @TO@ MethodInvocation:Thread.sleep(5000) @AT@ 1731 @LENGTH@ 18
+---UPD MethodInvocation@@Thread.sleep(500) @TO@ Thread.sleep(5000) @AT@ 1731 @LENGTH@ 17
+------UPD SimpleName@@MethodName:sleep:[500] @TO@ MethodName:sleep:[5000] @AT@ 1738 @LENGTH@ 10
+---------UPD NumberLiteral@@500 @TO@ 5000 @AT@ 1744 @LENGTH@ 3
+
+
+MOV MethodDeclaration@@public, void, MethodName:afterPropertiesSet, Exception,  @TO@ TypeDeclaration@@[public]EhCacheBasedX509UserCache, [X509UserCache, InitializingBean] @AT@ 1852 @LENGTH@ 110
+
+
+DEL VariableDeclarationStatement@@byte[] data=memoryOutputStream.toByteArray(); @AT@ 3811 @LENGTH@ 47
+---DEL ArrayType@@byte[] @AT@ 3811 @LENGTH@ 6
+------DEL PrimitiveType@@byte @AT@ 3811 @LENGTH@ 4
+---DEL VariableDeclarationFragment@@data=memoryOutputStream.toByteArray() @AT@ 3818 @LENGTH@ 39
+------DEL SimpleName@@data @AT@ 3818 @LENGTH@ 4
+------DEL MethodInvocation@@memoryOutputStream.toByteArray() @AT@ 3825 @LENGTH@ 32
+---------DEL SimpleName@@Name:memoryOutputStream @AT@ 3825 @LENGTH@ 18
+---------DEL SimpleName@@MethodName:toByteArray:[] @AT@ 3844 @LENGTH@ 13
+
+
+UPD ExpressionStatement@@MethodInvocation:fos.write(data) @TO@ MethodInvocation:memoryOutputStream.writeTo(fos) @AT@ 3932 @LENGTH@ 16
+---UPD MethodInvocation@@fos.write(data) @TO@ memoryOutputStream.writeTo(fos) @AT@ 3932 @LENGTH@ 15
+------UPD SimpleName@@Name:fos @TO@ Name:memoryOutputStream @AT@ 3932 @LENGTH@ 3
+------UPD SimpleName@@MethodName:write:[data] @TO@ MethodName:writeTo:[fos] @AT@ 3936 @LENGTH@ 11
+---------UPD SimpleName@@data @TO@ fos @AT@ 3942 @LENGTH@ 4
+
+
+UPD IfStatement@@if (children != null) {  for (Iterator it=children.values().iterator(); it.hasNext(); ) {    nodesRemoved((Collection)it.next());  }  children=null;} @TO@ if (children != null) {  Iterator it=children.values().iterator();  children=null;  while (it.hasNext()) {    nodesRemoved((Collection)it.next());  }} @AT@ 29260 @LENGTH@ 256
+---UPD Block@@ThenBody:{  for (Iterator it=children.values().iterator(); it.hasNext(); ) {    nodesRemoved((Collection)it.next());  }  children=null;} @TO@ ThenBody:{  Iterator it=children.values().iterator();  children=null;  while (it.hasNext()) {    nodesRemoved((Collection)it.next());  }} @AT@ 29294 @LENGTH@ 222
+------INS VariableDeclarationStatement@@Iterator it=children.values().iterator(); @TO@ Block@@ThenBody:{  for (Iterator it=children.values().iterator(); it.hasNext(); ) {    nodesRemoved((Collection)it.next());  }  children=null;} @AT@ 29252 @LENGTH@ 43
+---------INS SimpleType@@Iterator @TO@ VariableDeclarationStatement@@Iterator it=children.values().iterator(); @AT@ 29252 @LENGTH@ 8
+---------MOV VariableDeclarationFragment@@it=children.values().iterator() @TO@ VariableDeclarationStatement@@Iterator it=children.values().iterator(); @AT@ 29326 @LENGTH@ 33
+------DEL ForStatement@@for (Iterator it=children.values().iterator(); it.hasNext(); ) {  nodesRemoved((Collection)it.next());} @AT@ 29312 @LENGTH@ 157
+---------DEL VariableDeclarationExpression@@Iterator it=children.values().iterator() @AT@ 29317 @LENGTH@ 42
+------------DEL SimpleType@@Iterator @AT@ 29317 @LENGTH@ 8
+---------DEL MethodInvocation@@it.hasNext() @AT@ 29361 @LENGTH@ 12
+------INS WhileStatement@@while (it.hasNext()) {  nodesRemoved((Collection)it.next());} @TO@ Block@@ThenBody:{  for (Iterator it=children.values().iterator(); it.hasNext(); ) {    nodesRemoved((Collection)it.next());  }  children=null;} @AT@ 29345 @LENGTH@ 114
+---------INS MethodInvocation@@it.hasNext() @TO@ WhileStatement@@while (it.hasNext()) {  nodesRemoved((Collection)it.next());} @AT@ 29352 @LENGTH@ 12
+------------MOV SimpleName@@Name:it @TO@ MethodInvocation@@it.hasNext() @AT@ 29361 @LENGTH@ 2
+------------MOV SimpleName@@MethodName:hasNext:[] @TO@ MethodInvocation@@it.hasNext() @AT@ 29364 @LENGTH@ 9
+---------INS Block@@WhileBody:{  nodesRemoved((Collection)it.next());} @TO@ WhileStatement@@while (it.hasNext()) {  nodesRemoved((Collection)it.next());} @AT@ 29382 @LENGTH@ 77
+------------MOV ExpressionStatement@@MethodInvocation:nodesRemoved((Collection)it.next()) @TO@ Block@@WhileBody:{  nodesRemoved((Collection)it.next());} @AT@ 29414 @LENGTH@ 37
+
+
+UPD VariableDeclarationStatement@@final MultiValueMap map=new MultiValueMap(new HashMap(),collectionClass); @TO@ final MultiValueMap map=MultiValueMap.decorate(new HashMap(),collectionClass); @AT@ 3368 @LENGTH@ 76
+---UPD VariableDeclarationFragment@@map=new MultiValueMap(new HashMap(),collectionClass) @TO@ map=MultiValueMap.decorate(new HashMap(),collectionClass) @AT@ 3388 @LENGTH@ 55
+------INS MethodInvocation@@MultiValueMap.decorate(new HashMap(),collectionClass) @TO@ VariableDeclarationFragment@@map=new MultiValueMap(new HashMap(),collectionClass) @AT@ 3390 @LENGTH@ 54
+---------INS SimpleName@@Name:MultiValueMap @TO@ MethodInvocation@@MultiValueMap.decorate(new HashMap(),collectionClass) @AT@ 3390 @LENGTH@ 13
+---------INS SimpleName@@MethodName:decorate:[new HashMap(), collectionClass] @TO@ MethodInvocation@@MultiValueMap.decorate(new HashMap(),collectionClass) @AT@ 3404 @LENGTH@ 40
+------------INS ClassInstanceCreation@@HashMap[] @TO@ SimpleName@@MethodName:decorate:[new HashMap(), collectionClass] @AT@ 3413 @LENGTH@ 13
+---------------MOV New@@new @TO@ ClassInstanceCreation@@HashMap[] @AT@ 3412 @LENGTH@ 3
+---------------MOV SimpleType@@HashMap @TO@ ClassInstanceCreation@@HashMap[] @AT@ 3416 @LENGTH@ 7
+------------INS SimpleName@@collectionClass @TO@ SimpleName@@MethodName:decorate:[new HashMap(), collectionClass] @AT@ 3428 @LENGTH@ 15
+------DEL ClassInstanceCreation@@MultiValueMap[new HashMap(), collectionClass] @AT@ 3394 @LENGTH@ 49
+---------DEL New@@new @AT@ 3394 @LENGTH@ 3
+---------DEL SimpleType@@MultiValueMap @AT@ 3398 @LENGTH@ 13
+---------DEL ClassInstanceCreation@@HashMap[] @AT@ 3412 @LENGTH@ 13
+---------DEL SimpleName@@collectionClass @AT@ 3427 @LENGTH@ 15
+
+
+UPD Block@@ThenBody:{  logger.debug("X.509 Cache hit. SubjectDN: " + userCert.getSubjectDN());} @TO@ ThenBody:{  String subjectDN="unknown";  if ((userCert != null) && (userCert.getSubjectDN() != null)) {    subjectDN=userCert.getSubjectDN().toString();  }  logger.debug("X.509 Cache hit. SubjectDN: " + subjectDN);} @AT@ 2338 @LENGTH@ 111
+---INS VariableDeclarationStatement@@String subjectDN="unknown"; @TO@ Block@@ThenBody:{  logger.debug("X.509 Cache hit. SubjectDN: " + userCert.getSubjectDN());} @AT@ 2267 @LENGTH@ 29
+------INS SimpleType@@String @TO@ VariableDeclarationStatement@@String subjectDN="unknown"; @AT@ 2267 @LENGTH@ 6
+------INS VariableDeclarationFragment@@subjectDN="unknown" @TO@ VariableDeclarationStatement@@String subjectDN="unknown"; @AT@ 2274 @LENGTH@ 21
+---------INS SimpleName@@subjectDN @TO@ VariableDeclarationFragment@@subjectDN="unknown" @AT@ 2274 @LENGTH@ 9
+---------INS StringLiteral@@"unknown" @TO@ VariableDeclarationFragment@@subjectDN="unknown" @AT@ 2286 @LENGTH@ 9
+---INS IfStatement@@if ((userCert != null) && (userCert.getSubjectDN() != null)) {  subjectDN=userCert.getSubjectDN().toString();} @TO@ Block@@ThenBody:{  logger.debug("X.509 Cache hit. SubjectDN: " + userCert.getSubjectDN());} @AT@ 2310 @LENGTH@ 140
+------INS InfixExpression@@(userCert != null) && (userCert.getSubjectDN() != null) @TO@ IfStatement@@if ((userCert != null) && (userCert.getSubjectDN() != null)) {  subjectDN=userCert.getSubjectDN().toString();} @AT@ 2314 @LENGTH@ 55
+---------INS ParenthesizedExpression@@(userCert != null) @TO@ InfixExpression@@(userCert != null) && (userCert.getSubjectDN() != null) @AT@ 2314 @LENGTH@ 18
+------------INS InfixExpression@@userCert != null @TO@ ParenthesizedExpression@@(userCert != null) @AT@ 2315 @LENGTH@ 16
+---------------INS SimpleName@@userCert @TO@ InfixExpression@@userCert != null @AT@ 2315 @LENGTH@ 8
+---------------INS Operator@@!= @TO@ InfixExpression@@userCert != null @AT@ 2323 @LENGTH@ 2
+---------------INS NullLiteral@@null @TO@ InfixExpression@@userCert != null @AT@ 2327 @LENGTH@ 4
+---------INS Operator@@&& @TO@ InfixExpression@@(userCert != null) && (userCert.getSubjectDN() != null) @AT@ 2332 @LENGTH@ 2
+---------INS ParenthesizedExpression@@(userCert.getSubjectDN() != null) @TO@ InfixExpression@@(userCert != null) && (userCert.getSubjectDN() != null) @AT@ 2336 @LENGTH@ 33
+------------INS InfixExpression@@userCert.getSubjectDN() != null @TO@ ParenthesizedExpression@@(userCert.getSubjectDN() != null) @AT@ 2337 @LENGTH@ 31
+---------------INS MethodInvocation@@userCert.getSubjectDN() @TO@ InfixExpression@@userCert.getSubjectDN() != null @AT@ 2337 @LENGTH@ 23
+------------------INS SimpleName@@Name:userCert @TO@ MethodInvocation@@userCert.getSubjectDN() @AT@ 2337 @LENGTH@ 8
+------------------INS SimpleName@@MethodName:getSubjectDN:[] @TO@ MethodInvocation@@userCert.getSubjectDN() @AT@ 2346 @LENGTH@ 14
+---------------INS Operator@@!= @TO@ InfixExpression@@userCert.getSubjectDN() != null @AT@ 2360 @LENGTH@ 2
+---------------INS NullLiteral@@null @TO@ InfixExpression@@userCert.getSubjectDN() != null @AT@ 2364 @LENGTH@ 4
+------INS Block@@ThenBody:{  subjectDN=userCert.getSubjectDN().toString();} @TO@ IfStatement@@if ((userCert != null) && (userCert.getSubjectDN() != null)) {  subjectDN=userCert.getSubjectDN().toString();} @AT@ 2371 @LENGTH@ 79
+---------INS ExpressionStatement@@Assignment:subjectDN=userCert.getSubjectDN().toString() @TO@ Block@@ThenBody:{  subjectDN=userCert.getSubjectDN().toString();} @AT@ 2389 @LENGTH@ 47
+------------INS Assignment@@subjectDN=userCert.getSubjectDN().toString() @TO@ ExpressionStatement@@Assignment:subjectDN=userCert.getSubjectDN().toString() @AT@ 2389 @LENGTH@ 46
+---------------INS SimpleName@@subjectDN @TO@ Assignment@@subjectDN=userCert.getSubjectDN().toString() @AT@ 2389 @LENGTH@ 9
+---------------INS Operator@@= @TO@ Assignment@@subjectDN=userCert.getSubjectDN().toString() @AT@ 2398 @LENGTH@ 1
+---------------INS MethodInvocation@@userCert.getSubjectDN().toString() @TO@ Assignment@@subjectDN=userCert.getSubjectDN().toString() @AT@ 2401 @LENGTH@ 34
+------------------INS MethodInvocation@@MethodName:getSubjectDN:[] @TO@ MethodInvocation@@userCert.getSubjectDN().toString() @AT@ 2401 @LENGTH@ 23
+------------------INS SimpleName@@Name:userCert @TO@ MethodInvocation@@userCert.getSubjectDN().toString() @AT@ 2401 @LENGTH@ 8
+------------------INS SimpleName@@MethodName:toString:[] @TO@ MethodInvocation@@userCert.getSubjectDN().toString() @AT@ 2425 @LENGTH@ 10
+---UPD ExpressionStatement@@MethodInvocation:logger.debug("X.509 Cache hit. SubjectDN: " + userCert.getSubjectDN()) @TO@ MethodInvocation:logger.debug("X.509 Cache hit. SubjectDN: " + subjectDN) @AT@ 2352 @LENGTH@ 87
+------UPD MethodInvocation@@logger.debug("X.509 Cache hit. SubjectDN: " + userCert.getSubjectDN()) @TO@ logger.debug("X.509 Cache hit. SubjectDN: " + subjectDN) @AT@ 2352 @LENGTH@ 86
+---------UPD SimpleName@@MethodName:debug:["X.509 Cache hit. SubjectDN: " + userCert.getSubjectDN()] @TO@ MethodName:debug:["X.509 Cache hit. SubjectDN: " + subjectDN] @AT@ 2359 @LENGTH@ 79
+------------UPD InfixExpression@@"X.509 Cache hit. SubjectDN: " + userCert.getSubjectDN() @TO@ "X.509 Cache hit. SubjectDN: " + subjectDN @AT@ 2365 @LENGTH@ 72
+---------------DEL MethodInvocation@@userCert.getSubjectDN() @AT@ 2414 @LENGTH@ 23
+------------------DEL SimpleName@@Name:userCert @AT@ 2414 @LENGTH@ 8
+------------------DEL SimpleName@@MethodName:getSubjectDN:[] @AT@ 2423 @LENGTH@ 14
+---------------INS SimpleName@@subjectDN @TO@ InfixExpression@@"X.509 Cache hit. SubjectDN: " + userCert.getSubjectDN() @AT@ 2510 @LENGTH@ 9
+
+
+INS MethodDeclaration@@public, void, MethodName:testGetFile, Exception,  @TO@ TypeDeclaration@@[public]TestConfigurationUtils, TestCase @AT@ 6679 @LENGTH@ 732
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, Exception,  @AT@ 6679 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, Exception,  @AT@ 6686 @LENGTH@ 4
+---INS SimpleName@@MethodName:testGetFile @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, Exception,  @AT@ 6691 @LENGTH@ 11
+---INS SimpleType@@Exception @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, Exception,  @AT@ 6712 @LENGTH@ 9
+---INS VariableDeclarationStatement@@File directory=new File("target"); @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, Exception,  @AT@ 6736 @LENGTH@ 36
+------INS SimpleType@@File @TO@ VariableDeclarationStatement@@File directory=new File("target"); @AT@ 6736 @LENGTH@ 4
+------INS VariableDeclarationFragment@@directory=new File("target") @TO@ VariableDeclarationStatement@@File directory=new File("target"); @AT@ 6741 @LENGTH@ 30
+---------INS SimpleName@@directory @TO@ VariableDeclarationFragment@@directory=new File("target") @AT@ 6741 @LENGTH@ 9
+---------INS ClassInstanceCreation@@File["target"] @TO@ VariableDeclarationFragment@@directory=new File("target") @AT@ 6753 @LENGTH@ 18
+------------INS New@@new @TO@ ClassInstanceCreation@@File["target"] @AT@ 6753 @LENGTH@ 3
+------------INS SimpleType@@File @TO@ ClassInstanceCreation@@File["target"] @AT@ 6757 @LENGTH@ 4
+------------INS StringLiteral@@"target" @TO@ ClassInstanceCreation@@File["target"] @AT@ 6762 @LENGTH@ 8
+---INS VariableDeclarationStatement@@File reference=new File(directory,"test.txt").getAbsoluteFile(); @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, Exception,  @AT@ 6781 @LENGTH@ 67
+------INS SimpleType@@File @TO@ VariableDeclarationStatement@@File reference=new File(directory,"test.txt").getAbsoluteFile(); @AT@ 6781 @LENGTH@ 4
+------INS VariableDeclarationFragment@@reference=new File(directory,"test.txt").getAbsoluteFile() @TO@ VariableDeclarationStatement@@File reference=new File(directory,"test.txt").getAbsoluteFile(); @AT@ 6786 @LENGTH@ 61
+---------INS SimpleName@@reference @TO@ VariableDeclarationFragment@@reference=new File(directory,"test.txt").getAbsoluteFile() @AT@ 6786 @LENGTH@ 9
+---------INS MethodInvocation@@new File(directory,"test.txt").getAbsoluteFile() @TO@ VariableDeclarationFragment@@reference=new File(directory,"test.txt").getAbsoluteFile() @AT@ 6798 @LENGTH@ 49
+------------INS ClassInstanceCreation@@File[directory, "test.txt"] @TO@ MethodInvocation@@new File(directory,"test.txt").getAbsoluteFile() @AT@ 6798 @LENGTH@ 31
+---------------INS New@@new @TO@ ClassInstanceCreation@@File[directory, "test.txt"] @AT@ 6798 @LENGTH@ 3
+---------------INS SimpleType@@File @TO@ ClassInstanceCreation@@File[directory, "test.txt"] @AT@ 6802 @LENGTH@ 4
+---------------INS SimpleName@@directory @TO@ ClassInstanceCreation@@File[directory, "test.txt"] @AT@ 6807 @LENGTH@ 9
+---------------INS StringLiteral@@"test.txt" @TO@ ClassInstanceCreation@@File[directory, "test.txt"] @AT@ 6818 @LENGTH@ 10
+------------INS SimpleName@@MethodName:getAbsoluteFile:[] @TO@ MethodInvocation@@new File(directory,"test.txt").getAbsoluteFile() @AT@ 6830 @LENGTH@ 17
+---INS ExpressionStatement@@MethodInvocation:assertEquals(reference,ConfigurationUtils.getFile(null,reference.getAbsolutePath())) @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, Exception,  @AT@ 6866 @LENGTH@ 87
+------INS MethodInvocation@@assertEquals(reference,ConfigurationUtils.getFile(null,reference.getAbsolutePath())) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(reference,ConfigurationUtils.getFile(null,reference.getAbsolutePath())) @AT@ 6866 @LENGTH@ 86
+---------INS SimpleName@@MethodName:assertEquals:[reference, ConfigurationUtils.getFile(null,reference.getAbsolutePath())] @TO@ MethodInvocation@@assertEquals(reference,ConfigurationUtils.getFile(null,reference.getAbsolutePath())) @AT@ 6866 @LENGTH@ 86
+------------INS SimpleName@@reference @TO@ SimpleName@@MethodName:assertEquals:[reference, ConfigurationUtils.getFile(null,reference.getAbsolutePath())] @AT@ 6879 @LENGTH@ 9
+------------INS MethodInvocation@@ConfigurationUtils.getFile(null,reference.getAbsolutePath()) @TO@ SimpleName@@MethodName:assertEquals:[reference, ConfigurationUtils.getFile(null,reference.getAbsolutePath())] @AT@ 6890 @LENGTH@ 61
+---------------INS SimpleName@@Name:ConfigurationUtils @TO@ MethodInvocation@@ConfigurationUtils.getFile(null,reference.getAbsolutePath()) @AT@ 6890 @LENGTH@ 18
+---------------INS SimpleName@@MethodName:getFile:[null, reference.getAbsolutePath()] @TO@ MethodInvocation@@ConfigurationUtils.getFile(null,reference.getAbsolutePath()) @AT@ 6909 @LENGTH@ 42
+------------------INS NullLiteral@@null @TO@ SimpleName@@MethodName:getFile:[null, reference.getAbsolutePath()] @AT@ 6917 @LENGTH@ 4
+------------------INS MethodInvocation@@reference.getAbsolutePath() @TO@ SimpleName@@MethodName:getFile:[null, reference.getAbsolutePath()] @AT@ 6923 @LENGTH@ 27
+---------------------INS SimpleName@@Name:reference @TO@ MethodInvocation@@reference.getAbsolutePath() @AT@ 6923 @LENGTH@ 9
+---------------------INS SimpleName@@MethodName:getAbsolutePath:[] @TO@ MethodInvocation@@reference.getAbsolutePath() @AT@ 6933 @LENGTH@ 17
+---INS ExpressionStatement@@MethodInvocation:assertEquals(reference,ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getAbsolutePath())) @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, Exception,  @AT@ 6962 @LENGTH@ 110
+------INS MethodInvocation@@assertEquals(reference,ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getAbsolutePath())) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(reference,ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getAbsolutePath())) @AT@ 6962 @LENGTH@ 109
+---------INS SimpleName@@MethodName:assertEquals:[reference, ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getAbsolutePath())] @TO@ MethodInvocation@@assertEquals(reference,ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getAbsolutePath())) @AT@ 6962 @LENGTH@ 109
+------------INS SimpleName@@reference @TO@ SimpleName@@MethodName:assertEquals:[reference, ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getAbsolutePath())] @AT@ 6975 @LENGTH@ 9
+------------INS MethodInvocation@@ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getAbsolutePath()) @TO@ SimpleName@@MethodName:assertEquals:[reference, ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getAbsolutePath())] @AT@ 6986 @LENGTH@ 84
+---------------INS SimpleName@@Name:ConfigurationUtils @TO@ MethodInvocation@@ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getAbsolutePath()) @AT@ 6986 @LENGTH@ 18
+---------------INS SimpleName@@MethodName:getFile:[directory.getAbsolutePath(), reference.getAbsolutePath()] @TO@ MethodInvocation@@ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getAbsolutePath()) @AT@ 7005 @LENGTH@ 65
+------------------INS MethodInvocation@@directory.getAbsolutePath() @TO@ SimpleName@@MethodName:getFile:[directory.getAbsolutePath(), reference.getAbsolutePath()] @AT@ 7013 @LENGTH@ 27
+---------------------INS SimpleName@@Name:directory @TO@ MethodInvocation@@directory.getAbsolutePath() @AT@ 7013 @LENGTH@ 9
+---------------------INS SimpleName@@MethodName:getAbsolutePath:[] @TO@ MethodInvocation@@directory.getAbsolutePath() @AT@ 7023 @LENGTH@ 17
+------------------INS MethodInvocation@@reference.getAbsolutePath() @TO@ SimpleName@@MethodName:getFile:[directory.getAbsolutePath(), reference.getAbsolutePath()] @AT@ 7042 @LENGTH@ 27
+---------------------INS SimpleName@@Name:reference @TO@ MethodInvocation@@reference.getAbsolutePath() @AT@ 7042 @LENGTH@ 9
+---------------------INS SimpleName@@MethodName:getAbsolutePath:[] @TO@ MethodInvocation@@reference.getAbsolutePath() @AT@ 7052 @LENGTH@ 17
+---INS ExpressionStatement@@MethodInvocation:assertEquals(reference,ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getName())) @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, Exception,  @AT@ 7081 @LENGTH@ 102
+------INS MethodInvocation@@assertEquals(reference,ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getName())) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(reference,ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getName())) @AT@ 7081 @LENGTH@ 101
+---------INS SimpleName@@MethodName:assertEquals:[reference, ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getName())] @TO@ MethodInvocation@@assertEquals(reference,ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getName())) @AT@ 7081 @LENGTH@ 101
+------------INS SimpleName@@reference @TO@ SimpleName@@MethodName:assertEquals:[reference, ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getName())] @AT@ 7094 @LENGTH@ 9
+------------INS MethodInvocation@@ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getName()) @TO@ SimpleName@@MethodName:assertEquals:[reference, ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getName())] @AT@ 7105 @LENGTH@ 76
+---------------INS SimpleName@@Name:ConfigurationUtils @TO@ MethodInvocation@@ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getName()) @AT@ 7105 @LENGTH@ 18
+---------------INS SimpleName@@MethodName:getFile:[directory.getAbsolutePath(), reference.getName()] @TO@ MethodInvocation@@ConfigurationUtils.getFile(directory.getAbsolutePath(),reference.getName()) @AT@ 7124 @LENGTH@ 57
+------------------INS MethodInvocation@@directory.getAbsolutePath() @TO@ SimpleName@@MethodName:getFile:[directory.getAbsolutePath(), reference.getName()] @AT@ 7132 @LENGTH@ 27
+---------------------INS SimpleName@@Name:directory @TO@ MethodInvocation@@directory.getAbsolutePath() @AT@ 7132 @LENGTH@ 9
+---------------------INS SimpleName@@MethodName:getAbsolutePath:[] @TO@ MethodInvocation@@directory.getAbsolutePath() @AT@ 7142 @LENGTH@ 17
+------------------INS MethodInvocation@@reference.getName() @TO@ SimpleName@@MethodName:getFile:[directory.getAbsolutePath(), reference.getName()] @AT@ 7161 @LENGTH@ 19
+---------------------INS SimpleName@@Name:reference @TO@ MethodInvocation@@reference.getName() @AT@ 7161 @LENGTH@ 9
+---------------------INS SimpleName@@MethodName:getName:[] @TO@ MethodInvocation@@reference.getName() @AT@ 7171 @LENGTH@ 9
+---INS ExpressionStatement@@MethodInvocation:assertEquals(reference,ConfigurationUtils.getFile(directory.toURL().toString(),reference.getName())) @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, Exception,  @AT@ 7200 @LENGTH@ 103
+------INS MethodInvocation@@assertEquals(reference,ConfigurationUtils.getFile(directory.toURL().toString(),reference.getName())) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(reference,ConfigurationUtils.getFile(directory.toURL().toString(),reference.getName())) @AT@ 7200 @LENGTH@ 102
+---------INS SimpleName@@MethodName:assertEquals:[reference, ConfigurationUtils.getFile(directory.toURL().toString(),reference.getName())] @TO@ MethodInvocation@@assertEquals(reference,ConfigurationUtils.getFile(directory.toURL().toString(),reference.getName())) @AT@ 7200 @LENGTH@ 102
+------------INS SimpleName@@reference @TO@ SimpleName@@MethodName:assertEquals:[reference, ConfigurationUtils.getFile(directory.toURL().toString(),reference.getName())] @AT@ 7213 @LENGTH@ 9
+------------INS MethodInvocation@@ConfigurationUtils.getFile(directory.toURL().toString(),reference.getName()) @TO@ SimpleName@@MethodName:assertEquals:[reference, ConfigurationUtils.getFile(directory.toURL().toString(),reference.getName())] @AT@ 7224 @LENGTH@ 77
+---------------INS SimpleName@@Name:ConfigurationUtils @TO@ MethodInvocation@@ConfigurationUtils.getFile(directory.toURL().toString(),reference.getName()) @AT@ 7224 @LENGTH@ 18
+---------------INS SimpleName@@MethodName:getFile:[directory.toURL().toString(), reference.getName()] @TO@ MethodInvocation@@ConfigurationUtils.getFile(directory.toURL().toString(),reference.getName()) @AT@ 7243 @LENGTH@ 58
+------------------INS MethodInvocation@@directory.toURL().toString() @TO@ SimpleName@@MethodName:getFile:[directory.toURL().toString(), reference.getName()] @AT@ 7251 @LENGTH@ 28
+---------------------INS MethodInvocation@@MethodName:toURL:[] @TO@ MethodInvocation@@directory.toURL().toString() @AT@ 7251 @LENGTH@ 17
+---------------------INS SimpleName@@Name:directory @TO@ MethodInvocation@@directory.toURL().toString() @AT@ 7251 @LENGTH@ 9
+---------------------INS SimpleName@@MethodName:toString:[] @TO@ MethodInvocation@@directory.toURL().toString() @AT@ 7269 @LENGTH@ 10
+------------------INS MethodInvocation@@reference.getName() @TO@ SimpleName@@MethodName:getFile:[directory.toURL().toString(), reference.getName()] @AT@ 7281 @LENGTH@ 19
+---------------------INS SimpleName@@Name:reference @TO@ MethodInvocation@@reference.getName() @AT@ 7281 @LENGTH@ 9
+---------------------INS SimpleName@@MethodName:getName:[] @TO@ MethodInvocation@@reference.getName() @AT@ 7291 @LENGTH@ 9
+---INS ExpressionStatement@@MethodInvocation:assertEquals(reference,ConfigurationUtils.getFile("invalid",reference.toURL().toString())) @TO@ MethodDeclaration@@public, void, MethodName:testGetFile, Exception,  @AT@ 7312 @LENGTH@ 93
+------INS MethodInvocation@@assertEquals(reference,ConfigurationUtils.getFile("invalid",reference.toURL().toString())) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(reference,ConfigurationUtils.getFile("invalid",reference.toURL().toString())) @AT@ 7312 @LENGTH@ 92
+---------INS SimpleName@@MethodName:assertEquals:[reference, ConfigurationUtils.getFile("invalid",reference.toURL().toString())] @TO@ MethodInvocation@@assertEquals(reference,ConfigurationUtils.getFile("invalid",reference.toURL().toString())) @AT@ 7312 @LENGTH@ 92
+------------INS SimpleName@@reference @TO@ SimpleName@@MethodName:assertEquals:[reference, ConfigurationUtils.getFile("invalid",reference.toURL().toString())] @AT@ 7325 @LENGTH@ 9
+------------INS MethodInvocation@@ConfigurationUtils.getFile("invalid",reference.toURL().toString()) @TO@ SimpleName@@MethodName:assertEquals:[reference, ConfigurationUtils.getFile("invalid",reference.toURL().toString())] @AT@ 7336 @LENGTH@ 67
+---------------INS SimpleName@@Name:ConfigurationUtils @TO@ MethodInvocation@@ConfigurationUtils.getFile("invalid",reference.toURL().toString()) @AT@ 7336 @LENGTH@ 18
+---------------INS SimpleName@@MethodName:getFile:["invalid", reference.toURL().toString()] @TO@ MethodInvocation@@ConfigurationUtils.getFile("invalid",reference.toURL().toString()) @AT@ 7355 @LENGTH@ 48
+------------------INS StringLiteral@@"invalid" @TO@ SimpleName@@MethodName:getFile:["invalid", reference.toURL().toString()] @AT@ 7363 @LENGTH@ 9
+------------------INS MethodInvocation@@reference.toURL().toString() @TO@ SimpleName@@MethodName:getFile:["invalid", reference.toURL().toString()] @AT@ 7374 @LENGTH@ 28
+---------------------INS MethodInvocation@@MethodName:toURL:[] @TO@ MethodInvocation@@reference.toURL().toString() @AT@ 7374 @LENGTH@ 17
+---------------------INS SimpleName@@Name:reference @TO@ MethodInvocation@@reference.toURL().toString() @AT@ 7374 @LENGTH@ 9
+---------------------INS SimpleName@@MethodName:toString:[] @TO@ MethodInvocation@@reference.toURL().toString() @AT@ 7392 @LENGTH@ 10
+
+
+UPD IfStatement@@if (request instanceof HttpServletRequest) {  HttpSession httpSession=((HttpServletRequest)request).getSession();  if (httpSession != null) {    httpSession.setAttribute(ACEGI_SECURITY_AUTHENTICATION_KEY,authentication);    updateOtherLocations(httpSession,authentication);  }} @TO@ if (request instanceof HttpServletRequest && ((HttpServletRequest)request).isRequestedSessionIdValid()) {  HttpSession httpSession=((HttpServletRequest)request).getSession();  if (httpSession != null) {    httpSession.setAttribute(ACEGI_SECURITY_AUTHENTICATION_KEY,authentication);    updateOtherLocations(httpSession,authentication);  }} @AT@ 3436 @LENGTH@ 371
+---INS InfixExpression@@request instanceof HttpServletRequest && ((HttpServletRequest)request).isRequestedSessionIdValid() @TO@ IfStatement@@if (request instanceof HttpServletRequest) {  HttpSession httpSession=((HttpServletRequest)request).getSession();  if (httpSession != null) {    httpSession.setAttribute(ACEGI_SECURITY_AUTHENTICATION_KEY,authentication);    updateOtherLocations(httpSession,authentication);  }} @AT@ 3440 @LENGTH@ 111
+------INS InstanceofExpression@@request instanceof HttpServletRequest @TO@ InfixExpression@@request instanceof HttpServletRequest && ((HttpServletRequest)request).isRequestedSessionIdValid() @AT@ 3440 @LENGTH@ 37
+---------MOV SimpleName@@request @TO@ InstanceofExpression@@request instanceof HttpServletRequest @AT@ 3440 @LENGTH@ 7
+---------MOV Instanceof@@instanceof @TO@ InstanceofExpression@@request instanceof HttpServletRequest @AT@ 3448 @LENGTH@ 10
+---------MOV SimpleType@@HttpServletRequest @TO@ InstanceofExpression@@request instanceof HttpServletRequest @AT@ 3459 @LENGTH@ 18
+------INS Operator@@&& @TO@ InfixExpression@@request instanceof HttpServletRequest && ((HttpServletRequest)request).isRequestedSessionIdValid() @AT@ 3477 @LENGTH@ 2
+------INS MethodInvocation@@((HttpServletRequest)request).isRequestedSessionIdValid() @TO@ InfixExpression@@request instanceof HttpServletRequest && ((HttpServletRequest)request).isRequestedSessionIdValid() @AT@ 3493 @LENGTH@ 58
+---------INS ParenthesizedExpression@@((HttpServletRequest)request) @TO@ MethodInvocation@@((HttpServletRequest)request).isRequestedSessionIdValid() @AT@ 3493 @LENGTH@ 30
+------------INS CastExpression@@(HttpServletRequest)request @TO@ ParenthesizedExpression@@((HttpServletRequest)request) @AT@ 3494 @LENGTH@ 28
+---------------INS SimpleType@@HttpServletRequest @TO@ CastExpression@@(HttpServletRequest)request @AT@ 3495 @LENGTH@ 18
+---------------INS SimpleName@@request @TO@ CastExpression@@(HttpServletRequest)request @AT@ 3515 @LENGTH@ 7
+---------INS SimpleName@@MethodName:isRequestedSessionIdValid:[] @TO@ MethodInvocation@@((HttpServletRequest)request).isRequestedSessionIdValid() @AT@ 3524 @LENGTH@ 27
+---DEL InstanceofExpression@@request instanceof HttpServletRequest @AT@ 3440 @LENGTH@ 37
+
+
+INS MethodDeclaration@@public, static, InputStream, MethodName:toInputStream, String input,  @TO@ TypeDeclaration@@[public]IOUtils,  @AT@ 14601 @LENGTH@ 150
+---INS Modifier@@public @TO@ MethodDeclaration@@public, static, InputStream, MethodName:toInputStream, String input,  @AT@ 14601 @LENGTH@ 6
+---INS Modifier@@static @TO@ MethodDeclaration@@public, static, InputStream, MethodName:toInputStream, String input,  @AT@ 14608 @LENGTH@ 6
+---INS SimpleType@@InputStream @TO@ MethodDeclaration@@public, static, InputStream, MethodName:toInputStream, String input,  @AT@ 14615 @LENGTH@ 11
+---INS SimpleName@@MethodName:toInputStream @TO@ MethodDeclaration@@public, static, InputStream, MethodName:toInputStream, String input,  @AT@ 14627 @LENGTH@ 13
+---INS SingleVariableDeclaration@@String input @TO@ MethodDeclaration@@public, static, InputStream, MethodName:toInputStream, String input,  @AT@ 14641 @LENGTH@ 12
+------INS SimpleType@@String @TO@ SingleVariableDeclaration@@String input @AT@ 14641 @LENGTH@ 6
+------INS SimpleName@@input @TO@ SingleVariableDeclaration@@String input @AT@ 14648 @LENGTH@ 5
+---INS VariableDeclarationStatement@@byte[] bytes=input.getBytes(); @TO@ MethodDeclaration@@public, static, InputStream, MethodName:toInputStream, String input,  @AT@ 14665 @LENGTH@ 32
+------INS ArrayType@@byte[] @TO@ VariableDeclarationStatement@@byte[] bytes=input.getBytes(); @AT@ 14665 @LENGTH@ 6
+---------INS PrimitiveType@@byte @TO@ ArrayType@@byte[] @AT@ 14665 @LENGTH@ 4
+------INS VariableDeclarationFragment@@bytes=input.getBytes() @TO@ VariableDeclarationStatement@@byte[] bytes=input.getBytes(); @AT@ 14672 @LENGTH@ 24
+---------INS SimpleName@@bytes @TO@ VariableDeclarationFragment@@bytes=input.getBytes() @AT@ 14672 @LENGTH@ 5
+---------INS MethodInvocation@@input.getBytes() @TO@ VariableDeclarationFragment@@bytes=input.getBytes() @AT@ 14680 @LENGTH@ 16
+------------INS SimpleName@@Name:input @TO@ MethodInvocation@@input.getBytes() @AT@ 14680 @LENGTH@ 5
+------------INS SimpleName@@MethodName:getBytes:[] @TO@ MethodInvocation@@input.getBytes() @AT@ 14686 @LENGTH@ 10
+---INS ReturnStatement@@ClassInstanceCreation:new ByteArrayInputStream(bytes) @TO@ MethodDeclaration@@public, static, InputStream, MethodName:toInputStream, String input,  @AT@ 14706 @LENGTH@ 39
+------INS ClassInstanceCreation@@ByteArrayInputStream[bytes] @TO@ ReturnStatement@@ClassInstanceCreation:new ByteArrayInputStream(bytes) @AT@ 14713 @LENGTH@ 31
+---------INS New@@new @TO@ ClassInstanceCreation@@ByteArrayInputStream[bytes] @AT@ 14713 @LENGTH@ 3
+---------INS SimpleType@@ByteArrayInputStream @TO@ ClassInstanceCreation@@ByteArrayInputStream[bytes] @AT@ 14717 @LENGTH@ 20
+---------INS SimpleName@@bytes @TO@ ClassInstanceCreation@@ByteArrayInputStream[bytes] @AT@ 14738 @LENGTH@ 5
+
+
+INS MethodDeclaration@@public, void, MethodName:testToLong,  @TO@ TypeDeclaration@@[public]TestPropertyConverter, TestCase @AT@ 2218 @LENGTH@ 148
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testToLong,  @AT@ 2218 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testToLong,  @AT@ 2225 @LENGTH@ 4
+---INS SimpleName@@MethodName:testToLong @TO@ MethodDeclaration@@public, void, MethodName:testToLong,  @AT@ 2230 @LENGTH@ 10
+---INS ExpressionStatement@@MethodInvocation:assertEquals("81008931800 to long",81008931800L,PropertyConverter.toLong("81008931800").longValue()) @TO@ MethodDeclaration@@public, void, MethodName:testToLong,  @AT@ 2257 @LENGTH@ 103
+------INS MethodInvocation@@assertEquals("81008931800 to long",81008931800L,PropertyConverter.toLong("81008931800").longValue()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals("81008931800 to long",81008931800L,PropertyConverter.toLong("81008931800").longValue()) @AT@ 2257 @LENGTH@ 102
+---------INS SimpleName@@MethodName:assertEquals:["81008931800 to long", 81008931800L, PropertyConverter.toLong("81008931800").longValue()] @TO@ MethodInvocation@@assertEquals("81008931800 to long",81008931800L,PropertyConverter.toLong("81008931800").longValue()) @AT@ 2257 @LENGTH@ 102
+------------INS StringLiteral@@"81008931800 to long" @TO@ SimpleName@@MethodName:assertEquals:["81008931800 to long", 81008931800L, PropertyConverter.toLong("81008931800").longValue()] @AT@ 2270 @LENGTH@ 21
+------------INS NumberLiteral@@81008931800L @TO@ SimpleName@@MethodName:assertEquals:["81008931800 to long", 81008931800L, PropertyConverter.toLong("81008931800").longValue()] @AT@ 2293 @LENGTH@ 12
+------------INS MethodInvocation@@PropertyConverter.toLong("81008931800").longValue() @TO@ SimpleName@@MethodName:assertEquals:["81008931800 to long", 81008931800L, PropertyConverter.toLong("81008931800").longValue()] @AT@ 2307 @LENGTH@ 51
+---------------INS MethodInvocation@@MethodName:toLong:["81008931800"] @TO@ MethodInvocation@@PropertyConverter.toLong("81008931800").longValue() @AT@ 2307 @LENGTH@ 39
+------------------INS StringLiteral@@"81008931800" @TO@ MethodInvocation@@MethodName:toLong:["81008931800"] @AT@ 2332 @LENGTH@ 13
+---------------INS SimpleName@@Name:PropertyConverter @TO@ MethodInvocation@@PropertyConverter.toLong("81008931800").longValue() @AT@ 2307 @LENGTH@ 17
+---------------INS SimpleName@@MethodName:longValue:[] @TO@ MethodInvocation@@PropertyConverter.toLong("81008931800").longValue() @AT@ 2347 @LENGTH@ 11
+
+
+INS ExpressionStatement@@MethodInvocation:parameters.setProperty("list","value1, value2") @TO@ MethodDeclaration@@protected, AbstractConfiguration, MethodName:getConfiguration,  @AT@ 1540 @LENGTH@ 49
+---INS MethodInvocation@@parameters.setProperty("list","value1, value2") @TO@ ExpressionStatement@@MethodInvocation:parameters.setProperty("list","value1, value2") @AT@ 1540 @LENGTH@ 48
+------INS SimpleName@@Name:parameters @TO@ MethodInvocation@@parameters.setProperty("list","value1, value2") @AT@ 1540 @LENGTH@ 10
+------INS SimpleName@@MethodName:setProperty:["list", "value1, value2"] @TO@ MethodInvocation@@parameters.setProperty("list","value1, value2") @AT@ 1551 @LENGTH@ 37
+---------INS StringLiteral@@"list" @TO@ SimpleName@@MethodName:setProperty:["list", "value1, value2"] @AT@ 1563 @LENGTH@ 6
+---------INS StringLiteral@@"value1, value2" @TO@ SimpleName@@MethodName:setProperty:["list", "value1, value2"] @AT@ 1571 @LENGTH@ 16
+
+
+UPD TryStatement@@try {  save(ConfigurationUtils.getFile(basePath,fileName));} catch (ConfigurationException e) {  throw e;}catch (Exception e) {  throw new ConfigurationException(e.getMessage(),e);} @TO@ try {  File file=ConfigurationUtils.getFile(basePath,fileName);  if (file == null) {    throw new ConfigurationException("Invalid file name for save: " + fileName);  }  save(file);} catch (ConfigurationException e) {  throw e;}catch (Exception e) {  throw new ConfigurationException(e.getMessage(),e);} @AT@ 8885 @LENGTH@ 317
+---INS VariableDeclarationStatement@@File file=ConfigurationUtils.getFile(basePath,fileName); @TO@ TryStatement@@try {  save(ConfigurationUtils.getFile(basePath,fileName));} catch (ConfigurationException e) {  throw e;}catch (Exception e) {  throw new ConfigurationException(e.getMessage(),e);} @AT@ 8911 @LENGTH@ 59
+------INS SimpleType@@File @TO@ VariableDeclarationStatement@@File file=ConfigurationUtils.getFile(basePath,fileName); @AT@ 8911 @LENGTH@ 4
+------INS VariableDeclarationFragment@@file=ConfigurationUtils.getFile(basePath,fileName) @TO@ VariableDeclarationStatement@@File file=ConfigurationUtils.getFile(basePath,fileName); @AT@ 8916 @LENGTH@ 53
+---------INS SimpleName@@file @TO@ VariableDeclarationFragment@@file=ConfigurationUtils.getFile(basePath,fileName) @AT@ 8916 @LENGTH@ 4
+---------MOV MethodInvocation@@ConfigurationUtils.getFile(basePath,fileName) @TO@ VariableDeclarationFragment@@file=ConfigurationUtils.getFile(basePath,fileName) @AT@ 8949 @LENGTH@ 46
+---UPD ExpressionStatement@@MethodInvocation:save(ConfigurationUtils.getFile(basePath,fileName)) @TO@ MethodInvocation:save(file) @AT@ 8944 @LENGTH@ 53
+------UPD MethodInvocation@@save(ConfigurationUtils.getFile(basePath,fileName)) @TO@ save(file) @AT@ 8944 @LENGTH@ 52
+---------UPD SimpleName@@MethodName:save:[ConfigurationUtils.getFile(basePath,fileName)] @TO@ MethodName:save:[file] @AT@ 8944 @LENGTH@ 52
+------------INS SimpleName@@file @TO@ SimpleName@@MethodName:save:[ConfigurationUtils.getFile(basePath,fileName)] @AT@ 9139 @LENGTH@ 4
+---INS IfStatement@@if (file == null) {  throw new ConfigurationException("Invalid file name for save: " + fileName);} @TO@ TryStatement@@try {  save(ConfigurationUtils.getFile(basePath,fileName));} catch (ConfigurationException e) {  throw e;}catch (Exception e) {  throw new ConfigurationException(e.getMessage(),e);} @AT@ 8983 @LENGTH@ 138
+------INS InfixExpression@@file == null @TO@ IfStatement@@if (file == null) {  throw new ConfigurationException("Invalid file name for save: " + fileName);} @AT@ 8987 @LENGTH@ 12
+---------INS SimpleName@@file @TO@ InfixExpression@@file == null @AT@ 8987 @LENGTH@ 4
+---------INS Operator@@== @TO@ InfixExpression@@file == null @AT@ 8991 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@file == null @AT@ 8995 @LENGTH@ 4
+------INS Block@@ThenBody:{  throw new ConfigurationException("Invalid file name for save: " + fileName);} @TO@ IfStatement@@if (file == null) {  throw new ConfigurationException("Invalid file name for save: " + fileName);} @AT@ 9013 @LENGTH@ 108
+---------INS ThrowStatement@@ClassInstanceCreation:new ConfigurationException("Invalid file name for save: " + fileName) @TO@ Block@@ThenBody:{  throw new ConfigurationException("Invalid file name for save: " + fileName);} @AT@ 9031 @LENGTH@ 76
+------------INS ClassInstanceCreation@@ConfigurationException["Invalid file name for save: " + fileName] @TO@ ThrowStatement@@ClassInstanceCreation:new ConfigurationException("Invalid file name for save: " + fileName) @AT@ 9037 @LENGTH@ 69
+---------------INS New@@new @TO@ ClassInstanceCreation@@ConfigurationException["Invalid file name for save: " + fileName] @AT@ 9037 @LENGTH@ 3
+---------------INS SimpleType@@ConfigurationException @TO@ ClassInstanceCreation@@ConfigurationException["Invalid file name for save: " + fileName] @AT@ 9041 @LENGTH@ 22
+---------------INS InfixExpression@@"Invalid file name for save: " + fileName @TO@ ClassInstanceCreation@@ConfigurationException["Invalid file name for save: " + fileName] @AT@ 9064 @LENGTH@ 41
+------------------INS StringLiteral@@"Invalid file name for save: " @TO@ InfixExpression@@"Invalid file name for save: " + fileName @AT@ 9064 @LENGTH@ 30
+------------------INS Operator@@+ @TO@ InfixExpression@@"Invalid file name for save: " + fileName @AT@ 9094 @LENGTH@ 1
+------------------INS SimpleName@@fileName @TO@ InfixExpression@@"Invalid file name for save: " + fileName @AT@ 9097 @LENGTH@ 8
+
+
+UPD IfStatement@@if (getIncludesAllowed() && url != null) {  String[] files=StringUtils.split(value,getDelimiter());  for (int i=0; i < files.length; i++) {    load(ConfigurationUtils.locate(getBasePath(),files[i].trim()));  }} @TO@ if (getIncludesAllowed()) {  String[] files=StringUtils.split(value,getDelimiter());  for (int i=0; i < files.length; i++) {    load(ConfigurationUtils.locate(getBasePath(),files[i].trim()));  }} @AT@ 9394 @LENGTH@ 404
+---DEL InfixExpression@@getIncludesAllowed() && url != null @AT@ 9398 @LENGTH@ 35
+------DEL MethodInvocation@@MethodName:getIncludesAllowed:[] @AT@ 9398 @LENGTH@ 20
+------DEL Operator@@&& @AT@ 9418 @LENGTH@ 2
+------DEL InfixExpression@@url != null @AT@ 9422 @LENGTH@ 11
+---------DEL SimpleName@@url @AT@ 9422 @LENGTH@ 3
+---------DEL Operator@@!= @AT@ 9425 @LENGTH@ 2
+---------DEL NullLiteral@@null @AT@ 9429 @LENGTH@ 4
+---INS MethodInvocation@@MethodName:getIncludesAllowed:[] @TO@ IfStatement@@if (getIncludesAllowed() && url != null) {  String[] files=StringUtils.split(value,getDelimiter());  for (int i=0; i < files.length; i++) {    load(ConfigurationUtils.locate(getBasePath(),files[i].trim()));  }} @AT@ 9398 @LENGTH@ 20
+
+
+UPD ForStatement@@for (Iterator iter=mappedClasses.iterator(); iter.hasNext(); ) {  this.validationRegistryManager.findValidator((Class)iter.next());} @TO@ for (Iterator iter=mappedClasses.iterator(); iter.hasNext(); ) {  String className=(String)iter.next();  this.validationRegistryManager.findValidator(Class.forName(className));} @AT@ 3351 @LENGTH@ 154
+---UPD ExpressionStatement@@MethodInvocation:this.validationRegistryManager.findValidator((Class)iter.next()) @TO@ MethodInvocation:this.validationRegistryManager.findValidator(Class.forName(className)) @AT@ 3429 @LENGTH@ 66
+------UPD MethodInvocation@@this.validationRegistryManager.findValidator((Class)iter.next()) @TO@ this.validationRegistryManager.findValidator(Class.forName(className)) @AT@ 3429 @LENGTH@ 65
+---------UPD SimpleName@@MethodName:findValidator:[(Class)iter.next()] @TO@ MethodName:findValidator:[Class.forName(className)] @AT@ 3460 @LENGTH@ 34
+------------DEL CastExpression@@(Class)iter.next() @AT@ 3474 @LENGTH@ 19
+---------------DEL SimpleType@@Class @AT@ 3475 @LENGTH@ 5
+---------------DEL MethodInvocation@@iter.next() @AT@ 3482 @LENGTH@ 11
+------------INS MethodInvocation@@Class.forName(className) @TO@ SimpleName@@MethodName:findValidator:[(Class)iter.next()] @AT@ 3527 @LENGTH@ 45
+---------------MOV SimpleName@@Name:iter @TO@ MethodInvocation@@Class.forName(className) @AT@ 3482 @LENGTH@ 4
+---------------MOV SimpleName@@MethodName:next:[] @TO@ MethodInvocation@@Class.forName(className) @AT@ 3487 @LENGTH@ 6
+------------------INS SimpleName@@className @TO@ SimpleName@@MethodName:next:[] @AT@ 3562 @LENGTH@ 9
+---INS VariableDeclarationStatement@@String className=(String)iter.next(); @TO@ ForStatement@@for (Iterator iter=mappedClasses.iterator(); iter.hasNext(); ) {  this.validationRegistryManager.findValidator((Class)iter.next());} @AT@ 3429 @LENGTH@ 40
+------INS SimpleType@@String @TO@ VariableDeclarationStatement@@String className=(String)iter.next(); @AT@ 3429 @LENGTH@ 6
+------INS VariableDeclarationFragment@@className=(String)iter.next() @TO@ VariableDeclarationStatement@@String className=(String)iter.next(); @AT@ 3436 @LENGTH@ 32
+---------INS SimpleName@@className @TO@ VariableDeclarationFragment@@className=(String)iter.next() @AT@ 3436 @LENGTH@ 9
+---------INS CastExpression@@(String)iter.next() @TO@ VariableDeclarationFragment@@className=(String)iter.next() @AT@ 3448 @LENGTH@ 20
+------------INS SimpleType@@String @TO@ CastExpression@@(String)iter.next() @AT@ 3449 @LENGTH@ 6
+------------INS MethodInvocation@@iter.next() @TO@ CastExpression@@(String)iter.next() @AT@ 3457 @LENGTH@ 11
+---------------INS SimpleName@@Name:iter @TO@ MethodInvocation@@iter.next() @AT@ 3457 @LENGTH@ 4
+---------------INS SimpleName@@MethodName:next:[] @TO@ MethodInvocation@@iter.next() @AT@ 3462 @LENGTH@ 6
+
+
+UPD MethodDeclaration@@public, synchronized, void, MethodName:write, int b,  @TO@ public, void, MethodName:write, int b,  @AT@ 1232 @LENGTH@ 68
+---DEL Modifier@@synchronized @AT@ 1239 @LENGTH@ 12
+
+
+INS IfStatement@@if (map.isEmpty()) {  return map;} @TO@ MethodDeclaration@@protected, Map, MethodName:transformMap, Map map,  @AT@ 5235 @LENGTH@ 54
+---INS MethodInvocation@@map.isEmpty() @TO@ IfStatement@@if (map.isEmpty()) {  return map;} @AT@ 5239 @LENGTH@ 13
+------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.isEmpty() @AT@ 5239 @LENGTH@ 3
+------INS SimpleName@@MethodName:isEmpty:[] @TO@ MethodInvocation@@map.isEmpty() @AT@ 5243 @LENGTH@ 9
+---INS Block@@ThenBody:{  return map;} @TO@ IfStatement@@if (map.isEmpty()) {  return map;} @AT@ 5254 @LENGTH@ 35
+------INS ReturnStatement@@SimpleName:map @TO@ Block@@ThenBody:{  return map;} @AT@ 5268 @LENGTH@ 11
+---------INS SimpleName@@map @TO@ ReturnStatement@@SimpleName:map @AT@ 5275 @LENGTH@ 3
+
+
+UPD IfStatement@@if (url != null) {  File result=fileFromURL(url);  if (result != null) {    return result;  }} @TO@ if (url != null) {  return fileFromURL(url);} @AT@ 12579 @LENGTH@ 171
+---DEL Block@@ThenBody:{  File result=fileFromURL(url);  if (result != null) {    return result;  }} @AT@ 12604 @LENGTH@ 146
+------DEL VariableDeclarationStatement@@File result=fileFromURL(url); @AT@ 12618 @LENGTH@ 31
+---------DEL SimpleType@@File @AT@ 12618 @LENGTH@ 4
+---------DEL VariableDeclarationFragment@@result=fileFromURL(url) @AT@ 12623 @LENGTH@ 25
+------------DEL SimpleName@@result @AT@ 12623 @LENGTH@ 6
+------DEL IfStatement@@if (result != null) {  return result;} @AT@ 12662 @LENGTH@ 78
+---------DEL InfixExpression@@result != null @AT@ 12666 @LENGTH@ 14
+------------DEL SimpleName@@result @AT@ 12666 @LENGTH@ 6
+------------DEL Operator@@!= @AT@ 12672 @LENGTH@ 2
+------------DEL NullLiteral@@null @AT@ 12676 @LENGTH@ 4
+---MOV Block@@ThenBody:{  return result;} @TO@ IfStatement@@if (url != null) {  File result=fileFromURL(url);  if (result != null) {    return result;  }} @AT@ 12694 @LENGTH@ 46
+------UPD ReturnStatement@@SimpleName:result @TO@ MethodInvocation:fileFromURL(url) @AT@ 12712 @LENGTH@ 14
+---------MOV MethodInvocation@@fileFromURL(url) @TO@ ReturnStatement@@SimpleName:result @AT@ 12632 @LENGTH@ 16
+---------DEL SimpleName@@result @AT@ 12719 @LENGTH@ 6
+
+
+INS MethodDeclaration@@public, void, MethodName:testGetApplicationContext, Exception,  @TO@ TypeDeclaration@@[public]JaasAuthenticationProviderTests, TestCase @AT@ 8019 @LENGTH@ 125
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testGetApplicationContext, Exception,  @AT@ 8019 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testGetApplicationContext, Exception,  @AT@ 8026 @LENGTH@ 4
+---INS SimpleName@@MethodName:testGetApplicationContext @TO@ MethodDeclaration@@public, void, MethodName:testGetApplicationContext, Exception,  @AT@ 8031 @LENGTH@ 25
+---INS SimpleType@@Exception @TO@ MethodDeclaration@@public, void, MethodName:testGetApplicationContext, Exception,  @AT@ 8066 @LENGTH@ 9
+---INS ExpressionStatement@@MethodInvocation:assertNotNull(jaasProvider.getApplicationContext()) @TO@ MethodDeclaration@@public, void, MethodName:testGetApplicationContext, Exception,  @AT@ 8086 @LENGTH@ 52
+------INS MethodInvocation@@assertNotNull(jaasProvider.getApplicationContext()) @TO@ ExpressionStatement@@MethodInvocation:assertNotNull(jaasProvider.getApplicationContext()) @AT@ 8086 @LENGTH@ 51
+---------INS SimpleName@@MethodName:assertNotNull:[jaasProvider.getApplicationContext()] @TO@ MethodInvocation@@assertNotNull(jaasProvider.getApplicationContext()) @AT@ 8086 @LENGTH@ 51
+------------INS MethodInvocation@@jaasProvider.getApplicationContext() @TO@ SimpleName@@MethodName:assertNotNull:[jaasProvider.getApplicationContext()] @AT@ 8100 @LENGTH@ 36
+---------------INS SimpleName@@Name:jaasProvider @TO@ MethodInvocation@@jaasProvider.getApplicationContext() @AT@ 8100 @LENGTH@ 12
+---------------INS SimpleName@@MethodName:getApplicationContext:[] @TO@ MethodInvocation@@jaasProvider.getApplicationContext() @AT@ 8113 @LENGTH@ 23

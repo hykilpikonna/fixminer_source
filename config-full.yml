@@ -22,7 +22,7 @@ fixminer:
     hunkLimit : 2
     patchSize : 50
 
-    projectList : fuse
+    projectList : fuse,commons-weaver
     inputPath : /workspace/EECS-Research/data/full/patches
     redisPath : /workspace/EECS-Research/data/full/redis
     srcMLPath :  /usr/bin/srcml

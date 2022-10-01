@@ -1,0 +1,1328 @@
+UPD VariableDeclarationStatement@@OutputStream out=new java.io.FileOutputStream(file); @TO@ OutputStream out=new java.io.FileOutputStream(file,true); @AT@ 4213 @LENGTH@ 54
+---UPD VariableDeclarationFragment@@out=new java.io.FileOutputStream(file) @TO@ out=new java.io.FileOutputStream(file,true) @AT@ 4226 @LENGTH@ 40
+------UPD ClassInstanceCreation@@java.io.FileOutputStream[file] @TO@ java.io.FileOutputStream[file, true] @AT@ 4232 @LENGTH@ 34
+---------INS BooleanLiteral@@true @TO@ ClassInstanceCreation@@java.io.FileOutputStream[file] @AT@ 4269 @LENGTH@ 4
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=722374056718497858L] @TO@ TypeDeclaration@@[public]SynchronizedSortedBag, SynchronizedBag[SortedBag] @AT@ 1374 @LENGTH@ 65
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=722374056718497858L] @AT@ 1374 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=722374056718497858L] @AT@ 1382 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=722374056718497858L] @AT@ 1389 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=722374056718497858L] @AT@ 1395 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=722374056718497858L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=722374056718497858L] @AT@ 1400 @LENGTH@ 38
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=722374056718497858L @AT@ 1400 @LENGTH@ 16
+------INS NumberLiteral@@722374056718497858L @TO@ VariableDeclarationFragment@@serialVersionUID=722374056718497858L @AT@ 1419 @LENGTH@ 19
+
+
+UPD ExpressionStatement@@Assignment:conf=(Configuration)cc @TO@ Assignment:conf=cc @AT@ 1281 @LENGTH@ 26
+---UPD Assignment@@conf=(Configuration)cc @TO@ conf=cc @AT@ 1281 @LENGTH@ 25
+------DEL CastExpression@@(Configuration)cc @AT@ 1288 @LENGTH@ 18
+---------DEL SimpleType@@Configuration @AT@ 1289 @LENGTH@ 13
+---------DEL SimpleName@@cc @AT@ 1304 @LENGTH@ 2
+------INS SimpleName@@cc @TO@ Assignment@@conf=(Configuration)cc @AT@ 1289 @LENGTH@ 2
+
+
+INS MethodDeclaration@@public, void, MethodName:testLoadUnexistingFile,  @TO@ TypeDeclaration@@[public]TestPropertiesConfiguration, TestCase @AT@ 6621 @LENGTH@ 278
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testLoadUnexistingFile,  @AT@ 6621 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testLoadUnexistingFile,  @AT@ 6628 @LENGTH@ 4
+---INS SimpleName@@MethodName:testLoadUnexistingFile @TO@ MethodDeclaration@@public, void, MethodName:testLoadUnexistingFile,  @AT@ 6633 @LENGTH@ 22
+---INS TryStatement@@try {  conf=new PropertiesConfiguration("Unexisting file");  fail("Unexisting file was loaded.");} catch (ConfigurationException cex) {} @TO@ MethodDeclaration@@public, void, MethodName:testLoadUnexistingFile,  @AT@ 6672 @LENGTH@ 221
+------INS ExpressionStatement@@Assignment:conf=new PropertiesConfiguration("Unexisting file") @TO@ TryStatement@@try {  conf=new PropertiesConfiguration("Unexisting file");  fail("Unexisting file was loaded.");} catch (ConfigurationException cex) {} @AT@ 6698 @LENGTH@ 54
+---------INS Assignment@@conf=new PropertiesConfiguration("Unexisting file") @TO@ ExpressionStatement@@Assignment:conf=new PropertiesConfiguration("Unexisting file") @AT@ 6698 @LENGTH@ 53
+------------INS SimpleName@@conf @TO@ Assignment@@conf=new PropertiesConfiguration("Unexisting file") @AT@ 6698 @LENGTH@ 4
+------------INS Operator@@= @TO@ Assignment@@conf=new PropertiesConfiguration("Unexisting file") @AT@ 6702 @LENGTH@ 1
+------------INS ClassInstanceCreation@@PropertiesConfiguration["Unexisting file"] @TO@ Assignment@@conf=new PropertiesConfiguration("Unexisting file") @AT@ 6705 @LENGTH@ 46
+---------------INS New@@new @TO@ ClassInstanceCreation@@PropertiesConfiguration["Unexisting file"] @AT@ 6705 @LENGTH@ 3
+---------------INS SimpleType@@PropertiesConfiguration @TO@ ClassInstanceCreation@@PropertiesConfiguration["Unexisting file"] @AT@ 6709 @LENGTH@ 23
+---------------INS StringLiteral@@"Unexisting file" @TO@ ClassInstanceCreation@@PropertiesConfiguration["Unexisting file"] @AT@ 6733 @LENGTH@ 17
+------INS ExpressionStatement@@MethodInvocation:fail("Unexisting file was loaded.") @TO@ TryStatement@@try {  conf=new PropertiesConfiguration("Unexisting file");  fail("Unexisting file was loaded.");} catch (ConfigurationException cex) {} @AT@ 6765 @LENGTH@ 36
+---------INS MethodInvocation@@fail("Unexisting file was loaded.") @TO@ ExpressionStatement@@MethodInvocation:fail("Unexisting file was loaded.") @AT@ 6765 @LENGTH@ 35
+------------INS SimpleName@@MethodName:fail:["Unexisting file was loaded."] @TO@ MethodInvocation@@fail("Unexisting file was loaded.") @AT@ 6765 @LENGTH@ 35
+---------------INS StringLiteral@@"Unexisting file was loaded." @TO@ SimpleName@@MethodName:fail:["Unexisting file was loaded."] @AT@ 6770 @LENGTH@ 29
+------INS CatchClause@@catch (ConfigurationException cex) {} @TO@ TryStatement@@try {  conf=new PropertiesConfiguration("Unexisting file");  fail("Unexisting file was loaded.");} catch (ConfigurationException cex) {} @AT@ 6820 @LENGTH@ 73
+---------INS SingleVariableDeclaration@@ConfigurationException cex @TO@ CatchClause@@catch (ConfigurationException cex) {} @AT@ 6826 @LENGTH@ 26
+------------INS SimpleType@@ConfigurationException @TO@ SingleVariableDeclaration@@ConfigurationException cex @AT@ 6826 @LENGTH@ 22
+------------INS SimpleName@@cex @TO@ SingleVariableDeclaration@@ConfigurationException cex @AT@ 6849 @LENGTH@ 3
+
+
+UPD VariableDeclarationStatement@@Configuration config=(Configuration)new BaseConfiguration(); @TO@ Configuration config=new BaseConfiguration(); @AT@ 1975 @LENGTH@ 63
+---UPD VariableDeclarationFragment@@config=(Configuration)new BaseConfiguration() @TO@ config=new BaseConfiguration() @AT@ 1989 @LENGTH@ 48
+------INS ClassInstanceCreation@@BaseConfiguration[] @TO@ VariableDeclarationFragment@@config=(Configuration)new BaseConfiguration() @AT@ 1983 @LENGTH@ 23
+---------MOV New@@new @TO@ ClassInstanceCreation@@BaseConfiguration[] @AT@ 2014 @LENGTH@ 3
+---------MOV SimpleType@@BaseConfiguration @TO@ ClassInstanceCreation@@BaseConfiguration[] @AT@ 2018 @LENGTH@ 17
+------DEL CastExpression@@(Configuration)new BaseConfiguration() @AT@ 1998 @LENGTH@ 39
+---------DEL SimpleType@@Configuration @AT@ 1999 @LENGTH@ 13
+---------DEL ClassInstanceCreation@@BaseConfiguration[] @AT@ 2014 @LENGTH@ 23
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=2307609000539943581L] @TO@ TypeDeclaration@@[public]PredicatedBuffer, PredicatedCollection[Buffer] @AT@ 1700 @LENGTH@ 66
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=2307609000539943581L] @AT@ 1700 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=2307609000539943581L] @AT@ 1708 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=2307609000539943581L] @AT@ 1715 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=2307609000539943581L] @AT@ 1721 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=2307609000539943581L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=2307609000539943581L] @AT@ 1726 @LENGTH@ 39
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=2307609000539943581L @AT@ 1726 @LENGTH@ 16
+------INS NumberLiteral@@2307609000539943581L @TO@ VariableDeclarationFragment@@serialVersionUID=2307609000539943581L @AT@ 1745 @LENGTH@ 20
+
+
+UPD MethodDeclaration@@voidMethodName:BulkTestSubList, AbstractTestList outer,  @TO@ public, voidMethodName:BulkTestSubList, AbstractTestList outer,  @AT@ 32500 @LENGTH@ 103
+---INS Modifier@@public @TO@ MethodDeclaration@@voidMethodName:BulkTestSubList, AbstractTestList outer,  @AT@ 32501 @LENGTH@ 6
+
+
+UPD IfStatement@@if (SYSTEM_SEPARATOR == WINDOWS_SEPARATOR) {  char ch0=filename.charAt(0);  if (len == 1) {    return (isSeparator(ch0) ? 1 : 0);  } else {    char ch1=filename.charAt(1);    if (ch1 == ':') {      ch0=Character.toUpperCase(ch0);      if (ch0 < 'A' || ch0 > 'Z' || len == 2 || isSeparator(filename.charAt(2)) == false) {        return -1;      }      return 3;    } else     if (isSeparator(ch0) && isSeparator(ch1)) {      int posUnix=filename.indexOf(UNIX_SEPARATOR,2);      int posWin=filename.indexOf(WINDOWS_SEPARATOR,2);      if ((posUnix == -1 && posWin == -1) || posUnix == 2 || posWin == 2) {        return -1;      }      posUnix=(posUnix == -1 ? posWin : posUnix);      posWin=(posWin == -1 ? posUnix : posWin);      return Math.min(posUnix,posWin) + 1;    } else {      return (isSeparator(ch0) ? 1 : 0);    }  }} else {  char ch0=filename.charAt(0);  char ch1=filename.charAt(1);  if (ch0 == '~') {    if (len == 1) {      return -1;    }    int posUnix=filename.indexOf(UNIX_SEPARATOR,1);    int posWin=filename.indexOf(WINDOWS_SEPARATOR,1);    if (posUnix == -1 && posWin == -1) {      return -1;    }    posUnix=(posUnix == -1 ? posWin : posUnix);    posWin=(posWin == -1 ? posUnix : posWin);    return Math.min(posUnix,posWin) + 1;  } else {    return (isSeparator(ch0) ? 1 : 0);  }} @TO@ if (SYSTEM_SEPARATOR == WINDOWS_SEPARATOR) {  char ch0=filename.charAt(0);  if (len == 1) {    return (isSeparator(ch0) ? 1 : 0);  } else {    char ch1=filename.charAt(1);    if (ch1 == ':') {      ch0=Character.toUpperCase(ch0);      if (ch0 < 'A' || ch0 > 'Z' || len == 2 || isSeparator(filename.charAt(2)) == false) {        return -1;      }      return 3;    } else     if (isSeparator(ch0) && isSeparator(ch1)) {      int posUnix=filename.indexOf(UNIX_SEPARATOR,2);      int posWin=filename.indexOf(WINDOWS_SEPARATOR,2);      if ((posUnix == -1 && posWin == -1) || posUnix == 2 || posWin == 2) {        return -1;      }      posUnix=(posUnix == -1 ? posWin : posUnix);      posWin=(posWin == -1 ? posUnix : posWin);      return Math.min(posUnix,posWin) + 1;    } else {      return (isSeparator(ch0) ? 1 : 0);    }  }} else {  char ch0=filename.charAt(0);  if (ch0 == '~') {    if (len == 1) {      return -1;    }    int posUnix=filename.indexOf(UNIX_SEPARATOR,1);    int posWin=filename.indexOf(WINDOWS_SEPARATOR,1);    if (posUnix == -1 && posWin == -1) {      return -1;    }    posUnix=(posUnix == -1 ? posWin : posUnix);    posWin=(posWin == -1 ? posUnix : posWin);    return Math.min(posUnix,posWin) + 1;  } else {    return (isSeparator(ch0) ? 1 : 0);  }} @AT@ 13487 @LENGTH@ 1897
+---UPD Block@@ElseBody:{  char ch0=filename.charAt(0);  char ch1=filename.charAt(1);  if (ch0 == '~') {    if (len == 1) {      return -1;    }    int posUnix=filename.indexOf(UNIX_SEPARATOR,1);    int posWin=filename.indexOf(WINDOWS_SEPARATOR,1);    if (posUnix == -1 && posWin == -1) {      return -1;    }    posUnix=(posUnix == -1 ? posWin : posUnix);    posWin=(posWin == -1 ? posUnix : posWin);    return Math.min(posUnix,posWin) + 1;  } else {    return (isSeparator(ch0) ? 1 : 0);  }} @TO@ ElseBody:{  char ch0=filename.charAt(0);  if (ch0 == '~') {    if (len == 1) {      return -1;    }    int posUnix=filename.indexOf(UNIX_SEPARATOR,1);    int posWin=filename.indexOf(WINDOWS_SEPARATOR,1);    if (posUnix == -1 && posWin == -1) {      return -1;    }    posUnix=(posUnix == -1 ? posWin : posUnix);    posWin=(posWin == -1 ? posUnix : posWin);    return Math.min(posUnix,posWin) + 1;  } else {    return (isSeparator(ch0) ? 1 : 0);  }} @AT@ 14676 @LENGTH@ 708
+------DEL VariableDeclarationStatement@@char ch1=filename.charAt(1); @AT@ 14733 @LENGTH@ 30
+---------DEL PrimitiveType@@char @AT@ 14733 @LENGTH@ 4
+---------DEL VariableDeclarationFragment@@ch1=filename.charAt(1) @AT@ 14738 @LENGTH@ 24
+------------DEL SimpleName@@ch1 @AT@ 14738 @LENGTH@ 3
+------------DEL MethodInvocation@@filename.charAt(1) @AT@ 14744 @LENGTH@ 18
+---------------DEL SimpleName@@Name:filename @AT@ 14744 @LENGTH@ 8
+---------------DEL SimpleName@@MethodName:charAt:[1] @AT@ 14753 @LENGTH@ 9
+------------------DEL NumberLiteral@@1 @AT@ 14760 @LENGTH@ 1
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=1719328905017860541L] @TO@ TypeDeclaration@@[public]BlockingBuffer, SynchronizedBuffer @AT@ 1855 @LENGTH@ 66
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=1719328905017860541L] @AT@ 1855 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=1719328905017860541L] @AT@ 1863 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=1719328905017860541L] @AT@ 1870 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=1719328905017860541L] @AT@ 1876 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=1719328905017860541L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=1719328905017860541L] @AT@ 1881 @LENGTH@ 39
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=1719328905017860541L @AT@ 1881 @LENGTH@ 16
+------INS NumberLiteral@@1719328905017860541L @TO@ VariableDeclarationFragment@@serialVersionUID=1719328905017860541L @AT@ 1900 @LENGTH@ 20
+
+
+UPD IfStatement@@if (mapToCopy instanceof MultiMap) {  for (Iterator it=entrySet().iterator(); it.hasNext(); ) {    Map.Entry entry=(Map.Entry)it.next();    Collection coll=(Collection)entry.getValue();    Collection newColl=createCollection(coll);    entry.setValue(newColl);  }} @TO@ if (mapToCopy instanceof MultiMap) {  for (Iterator it=mapToCopy.entrySet().iterator(); it.hasNext(); ) {    Map.Entry entry=(Map.Entry)it.next();    Collection coll=(Collection)entry.getValue();    Collection newColl=createCollection(coll);    super.put(entry.getKey(),newColl);  }} else {  putAll(mapToCopy);} @AT@ 3719 @LENGTH@ 355
+---UPD Block@@ThenBody:{  for (Iterator it=entrySet().iterator(); it.hasNext(); ) {    Map.Entry entry=(Map.Entry)it.next();    Collection coll=(Collection)entry.getValue();    Collection newColl=createCollection(coll);    entry.setValue(newColl);  }} @TO@ ThenBody:{  for (Iterator it=mapToCopy.entrySet().iterator(); it.hasNext(); ) {    Map.Entry entry=(Map.Entry)it.next();    Collection coll=(Collection)entry.getValue();    Collection newColl=createCollection(coll);    super.put(entry.getKey(),newColl);  }} @AT@ 3754 @LENGTH@ 320
+------UPD ForStatement@@for (Iterator it=entrySet().iterator(); it.hasNext(); ) {  Map.Entry entry=(Map.Entry)it.next();  Collection coll=(Collection)entry.getValue();  Collection newColl=createCollection(coll);  entry.setValue(newColl);} @TO@ for (Iterator it=mapToCopy.entrySet().iterator(); it.hasNext(); ) {  Map.Entry entry=(Map.Entry)it.next();  Collection coll=(Collection)entry.getValue();  Collection newColl=createCollection(coll);  super.put(entry.getKey(),newColl);} @AT@ 3768 @LENGTH@ 296
+---------UPD VariableDeclarationExpression@@Iterator it=entrySet().iterator() @TO@ Iterator it=mapToCopy.entrySet().iterator() @AT@ 3773 @LENGTH@ 35
+------------UPD VariableDeclarationFragment@@it=entrySet().iterator() @TO@ it=mapToCopy.entrySet().iterator() @AT@ 3782 @LENGTH@ 26
+---------------UPD MethodInvocation@@entrySet().iterator() @TO@ mapToCopy.entrySet().iterator() @AT@ 3787 @LENGTH@ 21
+------------------INS SimpleName@@Name:mapToCopy @TO@ MethodInvocation@@entrySet().iterator() @AT@ 3861 @LENGTH@ 9
+---------UPD ExpressionStatement@@MethodInvocation:entry.setValue(newColl) @TO@ SuperMethodInvocation:super.put(entry.getKey(),newColl) @AT@ 4026 @LENGTH@ 24
+------------DEL MethodInvocation@@entry.setValue(newColl) @AT@ 4026 @LENGTH@ 23
+------------INS SuperMethodInvocation@@super.put(entry.getKey(),newColl) @TO@ ExpressionStatement@@MethodInvocation:entry.setValue(newColl) @AT@ 4110 @LENGTH@ 34
+---------------INS SimpleName@@MethodName:put:[entry.getKey(), newColl] @TO@ SuperMethodInvocation@@super.put(entry.getKey(),newColl) @AT@ 4116 @LENGTH@ 3
+---------------INS MethodInvocation@@entry.getKey() @TO@ SuperMethodInvocation@@super.put(entry.getKey(),newColl) @AT@ 4120 @LENGTH@ 14
+------------------MOV SimpleName@@Name:entry @TO@ MethodInvocation@@entry.getKey() @AT@ 4026 @LENGTH@ 5
+------------------MOV SimpleName@@MethodName:setValue:[newColl] @TO@ MethodInvocation@@entry.getKey() @AT@ 4032 @LENGTH@ 17
+---------------------DEL SimpleName@@newColl @AT@ 4041 @LENGTH@ 7
+---------------INS SimpleName@@newColl @TO@ SuperMethodInvocation@@super.put(entry.getKey(),newColl) @AT@ 4136 @LENGTH@ 7
+---INS Block@@ElseBody:{  putAll(mapToCopy);} @TO@ IfStatement@@if (mapToCopy instanceof MultiMap) {  for (Iterator it=entrySet().iterator(); it.hasNext(); ) {    Map.Entry entry=(Map.Entry)it.next();    Collection coll=(Collection)entry.getValue();    Collection newColl=createCollection(coll);    entry.setValue(newColl);  }} @AT@ 4175 @LENGTH@ 42
+------INS ExpressionStatement@@MethodInvocation:putAll(mapToCopy) @TO@ Block@@ElseBody:{  putAll(mapToCopy);} @AT@ 4189 @LENGTH@ 18
+---------INS MethodInvocation@@putAll(mapToCopy) @TO@ ExpressionStatement@@MethodInvocation:putAll(mapToCopy) @AT@ 4189 @LENGTH@ 17
+------------INS SimpleName@@MethodName:putAll:[mapToCopy] @TO@ MethodInvocation@@putAll(mapToCopy) @AT@ 4189 @LENGTH@ 17
+---------------INS SimpleName@@mapToCopy @TO@ SimpleName@@MethodName:putAll:[mapToCopy] @AT@ 4196 @LENGTH@ 9
+
+
+UPD IfStatement@@if (this.context != null) {  context.publishEvent(new AuthenticationFailureUsernameNotFoundEvent(authentication,new User(username,"*****",false,new GrantedAuthority[0])));} @TO@ if (this.context != null) {  if ((username == null) || "".equals(username)) {    username="NONE_PROVIDED";  }  context.publishEvent(new AuthenticationFailureUsernameNotFoundEvent(authentication,new User(username,"*****",false,new GrantedAuthority[0])));} @AT@ 7592 @LENGTH@ 301
+---UPD Block@@ThenBody:{  context.publishEvent(new AuthenticationFailureUsernameNotFoundEvent(authentication,new User(username,"*****",false,new GrantedAuthority[0])));} @TO@ ThenBody:{  if ((username == null) || "".equals(username)) {    username="NONE_PROVIDED";  }  context.publishEvent(new AuthenticationFailureUsernameNotFoundEvent(authentication,new User(username,"*****",false,new GrantedAuthority[0])));} @AT@ 7618 @LENGTH@ 275
+------INS IfStatement@@if ((username == null) || "".equals(username)) {  username="NONE_PROVIDED";} @TO@ Block@@ThenBody:{  context.publishEvent(new AuthenticationFailureUsernameNotFoundEvent(authentication,new User(username,"*****",false,new GrantedAuthority[0])));} @AT@ 7640 @LENGTH@ 122
+---------INS InfixExpression@@(username == null) || "".equals(username) @TO@ IfStatement@@if ((username == null) || "".equals(username)) {  username="NONE_PROVIDED";} @AT@ 7644 @LENGTH@ 41
+------------INS ParenthesizedExpression@@(username == null) @TO@ InfixExpression@@(username == null) || "".equals(username) @AT@ 7644 @LENGTH@ 18
+---------------INS InfixExpression@@username == null @TO@ ParenthesizedExpression@@(username == null) @AT@ 7645 @LENGTH@ 16
+------------------INS SimpleName@@username @TO@ InfixExpression@@username == null @AT@ 7645 @LENGTH@ 8
+------------------INS Operator@@== @TO@ InfixExpression@@username == null @AT@ 7653 @LENGTH@ 2
+------------------INS NullLiteral@@null @TO@ InfixExpression@@username == null @AT@ 7657 @LENGTH@ 4
+------------INS Operator@@|| @TO@ InfixExpression@@(username == null) || "".equals(username) @AT@ 7662 @LENGTH@ 2
+------------INS MethodInvocation@@"".equals(username) @TO@ InfixExpression@@(username == null) || "".equals(username) @AT@ 7666 @LENGTH@ 19
+---------------INS StringLiteral@@"" @TO@ MethodInvocation@@"".equals(username) @AT@ 7666 @LENGTH@ 2
+---------------INS SimpleName@@MethodName:equals:[username] @TO@ MethodInvocation@@"".equals(username) @AT@ 7669 @LENGTH@ 16
+------------------INS SimpleName@@username @TO@ SimpleName@@MethodName:equals:[username] @AT@ 7676 @LENGTH@ 8
+---------INS Block@@ThenBody:{  username="NONE_PROVIDED";} @TO@ IfStatement@@if ((username == null) || "".equals(username)) {  username="NONE_PROVIDED";} @AT@ 7687 @LENGTH@ 75
+------------INS ExpressionStatement@@Assignment:username="NONE_PROVIDED" @TO@ Block@@ThenBody:{  username="NONE_PROVIDED";} @AT@ 7713 @LENGTH@ 27
+---------------INS Assignment@@username="NONE_PROVIDED" @TO@ ExpressionStatement@@Assignment:username="NONE_PROVIDED" @AT@ 7713 @LENGTH@ 26
+------------------INS SimpleName@@username @TO@ Assignment@@username="NONE_PROVIDED" @AT@ 7713 @LENGTH@ 8
+------------------INS Operator@@= @TO@ Assignment@@username="NONE_PROVIDED" @AT@ 7721 @LENGTH@ 1
+------------------INS StringLiteral@@"NONE_PROVIDED" @TO@ Assignment@@username="NONE_PROVIDED" @AT@ 7724 @LENGTH@ 15
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=-228664372470420141L] @TO@ TypeDeclaration@@[public]ListOrderedSet, AbstractSerializableSetDecorator[Set] @AT@ 2118 @LENGTH@ 66
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-228664372470420141L] @AT@ 2118 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-228664372470420141L] @AT@ 2126 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-228664372470420141L] @AT@ 2133 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-228664372470420141L] @AT@ 2139 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=-228664372470420141L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-228664372470420141L] @AT@ 2144 @LENGTH@ 39
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=-228664372470420141L @AT@ 2144 @LENGTH@ 16
+------INS PrefixExpression@@-228664372470420141L @TO@ VariableDeclarationFragment@@serialVersionUID=-228664372470420141L @AT@ 2163 @LENGTH@ 20
+---------INS Operator@@- @TO@ PrefixExpression@@-228664372470420141L @AT@ 2163 @LENGTH@ 1
+---------INS NumberLiteral@@228664372470420141L @TO@ PrefixExpression@@-228664372470420141L @AT@ 2164 @LENGTH@ 19
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=5421170911299074185L] @TO@ TypeDeclaration@@[public]TransformedBag, TransformedCollection[Bag] @AT@ 1574 @LENGTH@ 66
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=5421170911299074185L] @AT@ 1574 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=5421170911299074185L] @AT@ 1582 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=5421170911299074185L] @AT@ 1589 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=5421170911299074185L] @AT@ 1595 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=5421170911299074185L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=5421170911299074185L] @AT@ 1600 @LENGTH@ 39
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=5421170911299074185L @AT@ 1600 @LENGTH@ 16
+------INS NumberLiteral@@5421170911299074185L @TO@ VariableDeclarationFragment@@serialVersionUID=5421170911299074185L @AT@ 1619 @LENGTH@ 20
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=-251737742649401930L] @TO@ TypeDeclaration@@[public]TransformedSortedBag, TransformedBag[SortedBag] @AT@ 1468 @LENGTH@ 66
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-251737742649401930L] @AT@ 1468 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-251737742649401930L] @AT@ 1476 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-251737742649401930L] @AT@ 1483 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-251737742649401930L] @AT@ 1489 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=-251737742649401930L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-251737742649401930L] @AT@ 1494 @LENGTH@ 39
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=-251737742649401930L @AT@ 1494 @LENGTH@ 16
+------INS PrefixExpression@@-251737742649401930L @TO@ VariableDeclarationFragment@@serialVersionUID=-251737742649401930L @AT@ 1513 @LENGTH@ 20
+---------INS Operator@@- @TO@ PrefixExpression@@-251737742649401930L @AT@ 1513 @LENGTH@ 1
+---------INS NumberLiteral@@251737742649401930L @TO@ PrefixExpression@@-251737742649401930L @AT@ 1514 @LENGTH@ 19
+
+
+INS MethodDeclaration@@public, static, ResettableIterator, MethodName:loopingListIterator, List list,  @TO@ TypeDeclaration@@[public]IteratorUtils,  @AT@ 28976 @LENGTH@ 224
+---INS Modifier@@public @TO@ MethodDeclaration@@public, static, ResettableIterator, MethodName:loopingListIterator, List list,  @AT@ 28976 @LENGTH@ 6
+---INS Modifier@@static @TO@ MethodDeclaration@@public, static, ResettableIterator, MethodName:loopingListIterator, List list,  @AT@ 28983 @LENGTH@ 6
+---INS SimpleType@@ResettableIterator @TO@ MethodDeclaration@@public, static, ResettableIterator, MethodName:loopingListIterator, List list,  @AT@ 28990 @LENGTH@ 18
+---INS SimpleName@@MethodName:loopingListIterator @TO@ MethodDeclaration@@public, static, ResettableIterator, MethodName:loopingListIterator, List list,  @AT@ 29009 @LENGTH@ 19
+---INS SingleVariableDeclaration@@List list @TO@ MethodDeclaration@@public, static, ResettableIterator, MethodName:loopingListIterator, List list,  @AT@ 29029 @LENGTH@ 9
+------INS SimpleType@@List @TO@ SingleVariableDeclaration@@List list @AT@ 29029 @LENGTH@ 4
+------INS SimpleName@@list @TO@ SingleVariableDeclaration@@List list @AT@ 29034 @LENGTH@ 4
+---INS IfStatement@@if (list == null) {  throw new NullPointerException("List must not be null");} @TO@ MethodDeclaration@@public, static, ResettableIterator, MethodName:loopingListIterator, List list,  @AT@ 29050 @LENGTH@ 98
+------INS InfixExpression@@list == null @TO@ IfStatement@@if (list == null) {  throw new NullPointerException("List must not be null");} @AT@ 29054 @LENGTH@ 12
+---------INS SimpleName@@list @TO@ InfixExpression@@list == null @AT@ 29054 @LENGTH@ 4
+---------INS Operator@@== @TO@ InfixExpression@@list == null @AT@ 29058 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@list == null @AT@ 29062 @LENGTH@ 4
+------INS Block@@ThenBody:{  throw new NullPointerException("List must not be null");} @TO@ IfStatement@@if (list == null) {  throw new NullPointerException("List must not be null");} @AT@ 29068 @LENGTH@ 80
+---------INS ThrowStatement@@ClassInstanceCreation:new NullPointerException("List must not be null") @TO@ Block@@ThenBody:{  throw new NullPointerException("List must not be null");} @AT@ 29082 @LENGTH@ 56
+------------INS ClassInstanceCreation@@NullPointerException["List must not be null"] @TO@ ThrowStatement@@ClassInstanceCreation:new NullPointerException("List must not be null") @AT@ 29088 @LENGTH@ 49
+---------------INS New@@new @TO@ ClassInstanceCreation@@NullPointerException["List must not be null"] @AT@ 29088 @LENGTH@ 3
+---------------INS SimpleType@@NullPointerException @TO@ ClassInstanceCreation@@NullPointerException["List must not be null"] @AT@ 29092 @LENGTH@ 20
+---------------INS StringLiteral@@"List must not be null" @TO@ ClassInstanceCreation@@NullPointerException["List must not be null"] @AT@ 29113 @LENGTH@ 23
+---INS ReturnStatement@@ClassInstanceCreation:new LoopingListIterator(list) @TO@ MethodDeclaration@@public, static, ResettableIterator, MethodName:loopingListIterator, List list,  @AT@ 29157 @LENGTH@ 37
+------INS ClassInstanceCreation@@LoopingListIterator[list] @TO@ ReturnStatement@@ClassInstanceCreation:new LoopingListIterator(list) @AT@ 29164 @LENGTH@ 29
+---------INS New@@new @TO@ ClassInstanceCreation@@LoopingListIterator[list] @AT@ 29164 @LENGTH@ 3
+---------INS SimpleType@@LoopingListIterator @TO@ ClassInstanceCreation@@LoopingListIterator[list] @AT@ 29168 @LENGTH@ 19
+---------INS SimpleName@@list @TO@ ClassInstanceCreation@@LoopingListIterator[list] @AT@ 29188 @LENGTH@ 4
+
+
+UPD ExpressionStatement@@MethodInvocation:values.add(expected[i]) @TO@ MethodInvocation:values.add(prefix + "." + expected[i]) @AT@ 11621 @LENGTH@ 24
+---UPD MethodInvocation@@values.add(expected[i]) @TO@ values.add(prefix + "." + expected[i]) @AT@ 11621 @LENGTH@ 23
+------UPD SimpleName@@MethodName:add:[expected[i]] @TO@ MethodName:add:[prefix + "." + expected[i]] @AT@ 11628 @LENGTH@ 16
+---------INS InfixExpression@@prefix + "." + expected[i] @TO@ SimpleName@@MethodName:add:[expected[i]] @AT@ 11632 @LENGTH@ 26
+------------INS SimpleName@@prefix @TO@ InfixExpression@@prefix + "." + expected[i] @AT@ 11632 @LENGTH@ 6
+------------INS Operator@@+ @TO@ InfixExpression@@prefix + "." + expected[i] @AT@ 11638 @LENGTH@ 1
+------------INS StringLiteral@@"." @TO@ InfixExpression@@prefix + "." + expected[i] @AT@ 11641 @LENGTH@ 3
+------------INS ArrayAccess@@expected[i] @TO@ InfixExpression@@prefix + "." + expected[i] @AT@ 11647 @LENGTH@ 11
+---------------MOV SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 11632 @LENGTH@ 8
+---------------MOV SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 11641 @LENGTH@ 1
+---------DEL ArrayAccess@@expected[i] @AT@ 11632 @LENGTH@ 11
+
+
+INS MethodDeclaration@@public, void, MethodName:testNullIsReturnedByMethodDefinitionSourceWhenMethodInvocationNotDefined, Exception,  @TO@ TypeDeclaration@@[public]MethodDefinitionSourceEditorTests, TestCase @AT@ 6230 @LENGTH@ 657
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testNullIsReturnedByMethodDefinitionSourceWhenMethodInvocationNotDefined, Exception,  @AT@ 6230 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testNullIsReturnedByMethodDefinitionSourceWhenMethodInvocationNotDefined, Exception,  @AT@ 6237 @LENGTH@ 4
+---INS SimpleName@@MethodName:testNullIsReturnedByMethodDefinitionSourceWhenMethodInvocationNotDefined @TO@ MethodDeclaration@@public, void, MethodName:testNullIsReturnedByMethodDefinitionSourceWhenMethodInvocationNotDefined, Exception,  @AT@ 6242 @LENGTH@ 72
+---INS SimpleType@@Exception @TO@ MethodDeclaration@@public, void, MethodName:testNullIsReturnedByMethodDefinitionSourceWhenMethodInvocationNotDefined, Exception,  @AT@ 6332 @LENGTH@ 9
+---INS VariableDeclarationStatement@@MethodDefinitionSourceEditor editor=new MethodDefinitionSourceEditor(); @TO@ MethodDeclaration@@public, void, MethodName:testNullIsReturnedByMethodDefinitionSourceWhenMethodInvocationNotDefined, Exception,  @AT@ 6352 @LENGTH@ 73
+------INS SimpleType@@MethodDefinitionSourceEditor @TO@ VariableDeclarationStatement@@MethodDefinitionSourceEditor editor=new MethodDefinitionSourceEditor(); @AT@ 6352 @LENGTH@ 28
+------INS VariableDeclarationFragment@@editor=new MethodDefinitionSourceEditor() @TO@ VariableDeclarationStatement@@MethodDefinitionSourceEditor editor=new MethodDefinitionSourceEditor(); @AT@ 6381 @LENGTH@ 43
+---------INS SimpleName@@editor @TO@ VariableDeclarationFragment@@editor=new MethodDefinitionSourceEditor() @AT@ 6381 @LENGTH@ 6
+---------INS ClassInstanceCreation@@MethodDefinitionSourceEditor[] @TO@ VariableDeclarationFragment@@editor=new MethodDefinitionSourceEditor() @AT@ 6390 @LENGTH@ 34
+------------INS New@@new @TO@ ClassInstanceCreation@@MethodDefinitionSourceEditor[] @AT@ 6390 @LENGTH@ 3
+------------INS SimpleType@@MethodDefinitionSourceEditor @TO@ ClassInstanceCreation@@MethodDefinitionSourceEditor[] @AT@ 6394 @LENGTH@ 28
+---INS ExpressionStatement@@MethodInvocation:editor.setAsText("net.sf.acegisecurity.TargetObject.countLength=ROLE_ONE,ROLE_TWO,RUN_AS_ENTRY") @TO@ MethodDeclaration@@public, void, MethodName:testNullIsReturnedByMethodDefinitionSourceWhenMethodInvocationNotDefined, Exception,  @AT@ 6434 @LENGTH@ 110
+------INS MethodInvocation@@editor.setAsText("net.sf.acegisecurity.TargetObject.countLength=ROLE_ONE,ROLE_TWO,RUN_AS_ENTRY") @TO@ ExpressionStatement@@MethodInvocation:editor.setAsText("net.sf.acegisecurity.TargetObject.countLength=ROLE_ONE,ROLE_TWO,RUN_AS_ENTRY") @AT@ 6434 @LENGTH@ 109
+---------INS SimpleName@@Name:editor @TO@ MethodInvocation@@editor.setAsText("net.sf.acegisecurity.TargetObject.countLength=ROLE_ONE,ROLE_TWO,RUN_AS_ENTRY") @AT@ 6434 @LENGTH@ 6
+---------INS SimpleName@@MethodName:setAsText:["net.sf.acegisecurity.TargetObject.countLength=ROLE_ONE,ROLE_TWO,RUN_AS_ENTRY"] @TO@ MethodInvocation@@editor.setAsText("net.sf.acegisecurity.TargetObject.countLength=ROLE_ONE,ROLE_TWO,RUN_AS_ENTRY") @AT@ 6441 @LENGTH@ 102
+------------INS StringLiteral@@"net.sf.acegisecurity.TargetObject.countLength=ROLE_ONE,ROLE_TWO,RUN_AS_ENTRY" @TO@ SimpleName@@MethodName:setAsText:["net.sf.acegisecurity.TargetObject.countLength=ROLE_ONE,ROLE_TWO,RUN_AS_ENTRY"] @AT@ 6464 @LENGTH@ 78
+---INS VariableDeclarationStatement@@MethodDefinitionMap map=(MethodDefinitionMap)editor.getValue(); @TO@ MethodDeclaration@@public, void, MethodName:testNullIsReturnedByMethodDefinitionSourceWhenMethodInvocationNotDefined, Exception,  @AT@ 6554 @LENGTH@ 66
+------INS SimpleType@@MethodDefinitionMap @TO@ VariableDeclarationStatement@@MethodDefinitionMap map=(MethodDefinitionMap)editor.getValue(); @AT@ 6554 @LENGTH@ 19
+------INS VariableDeclarationFragment@@map=(MethodDefinitionMap)editor.getValue() @TO@ VariableDeclarationStatement@@MethodDefinitionMap map=(MethodDefinitionMap)editor.getValue(); @AT@ 6574 @LENGTH@ 45
+---------INS SimpleName@@map @TO@ VariableDeclarationFragment@@map=(MethodDefinitionMap)editor.getValue() @AT@ 6574 @LENGTH@ 3
+---------INS CastExpression@@(MethodDefinitionMap)editor.getValue() @TO@ VariableDeclarationFragment@@map=(MethodDefinitionMap)editor.getValue() @AT@ 6580 @LENGTH@ 39
+------------INS SimpleType@@MethodDefinitionMap @TO@ CastExpression@@(MethodDefinitionMap)editor.getValue() @AT@ 6581 @LENGTH@ 19
+------------INS MethodInvocation@@editor.getValue() @TO@ CastExpression@@(MethodDefinitionMap)editor.getValue() @AT@ 6602 @LENGTH@ 17
+---------------INS SimpleName@@Name:editor @TO@ MethodInvocation@@editor.getValue() @AT@ 6602 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:getValue:[] @TO@ MethodInvocation@@editor.getValue() @AT@ 6609 @LENGTH@ 10
+---INS VariableDeclarationStatement@@ConfigAttributeDefinition configAttributeDefinition=map.getAttributes(new MockMethodInvocation(TargetObject.class,"makeLowerCase",new Class[]{String.class})); @TO@ MethodDeclaration@@public, void, MethodName:testNullIsReturnedByMethodDefinitionSourceWhenMethodInvocationNotDefined, Exception,  @AT@ 6630 @LENGTH@ 204
+------INS SimpleType@@ConfigAttributeDefinition @TO@ VariableDeclarationStatement@@ConfigAttributeDefinition configAttributeDefinition=map.getAttributes(new MockMethodInvocation(TargetObject.class,"makeLowerCase",new Class[]{String.class})); @AT@ 6630 @LENGTH@ 25
+------INS VariableDeclarationFragment@@configAttributeDefinition=map.getAttributes(new MockMethodInvocation(TargetObject.class,"makeLowerCase",new Class[]{String.class})) @TO@ VariableDeclarationStatement@@ConfigAttributeDefinition configAttributeDefinition=map.getAttributes(new MockMethodInvocation(TargetObject.class,"makeLowerCase",new Class[]{String.class})); @AT@ 6656 @LENGTH@ 177
+---------INS SimpleName@@configAttributeDefinition @TO@ VariableDeclarationFragment@@configAttributeDefinition=map.getAttributes(new MockMethodInvocation(TargetObject.class,"makeLowerCase",new Class[]{String.class})) @AT@ 6656 @LENGTH@ 25
+---------INS MethodInvocation@@map.getAttributes(new MockMethodInvocation(TargetObject.class,"makeLowerCase",new Class[]{String.class})) @TO@ VariableDeclarationFragment@@configAttributeDefinition=map.getAttributes(new MockMethodInvocation(TargetObject.class,"makeLowerCase",new Class[]{String.class})) @AT@ 6684 @LENGTH@ 149
+------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.getAttributes(new MockMethodInvocation(TargetObject.class,"makeLowerCase",new Class[]{String.class})) @AT@ 6684 @LENGTH@ 3
+------------INS SimpleName@@MethodName:getAttributes:[new MockMethodInvocation(TargetObject.class,"makeLowerCase",new Class[]{String.class})] @TO@ MethodInvocation@@map.getAttributes(new MockMethodInvocation(TargetObject.class,"makeLowerCase",new Class[]{String.class})) @AT@ 6688 @LENGTH@ 145
+---------------INS ClassInstanceCreation@@MockMethodInvocation[TargetObject.class, "makeLowerCase", new Class[]{String.class}] @TO@ SimpleName@@MethodName:getAttributes:[new MockMethodInvocation(TargetObject.class,"makeLowerCase",new Class[]{String.class})] @AT@ 6702 @LENGTH@ 130
+------------------INS New@@new @TO@ ClassInstanceCreation@@MockMethodInvocation[TargetObject.class, "makeLowerCase", new Class[]{String.class}] @AT@ 6702 @LENGTH@ 3
+------------------INS SimpleType@@MockMethodInvocation @TO@ ClassInstanceCreation@@MockMethodInvocation[TargetObject.class, "makeLowerCase", new Class[]{String.class}] @AT@ 6706 @LENGTH@ 20
+------------------INS TypeLiteral@@TargetObject.class @TO@ ClassInstanceCreation@@MockMethodInvocation[TargetObject.class, "makeLowerCase", new Class[]{String.class}] @AT@ 6748 @LENGTH@ 18
+------------------INS StringLiteral@@"makeLowerCase" @TO@ ClassInstanceCreation@@MockMethodInvocation[TargetObject.class, "makeLowerCase", new Class[]{String.class}] @AT@ 6768 @LENGTH@ 15
+------------------INS ArrayCreation@@new Class[]{String.class} @TO@ ClassInstanceCreation@@MockMethodInvocation[TargetObject.class, "makeLowerCase", new Class[]{String.class}] @AT@ 6805 @LENGTH@ 26
+---------------------INS ArrayType@@Class[] @TO@ ArrayCreation@@new Class[]{String.class} @AT@ 6809 @LENGTH@ 7
+------------------------INS SimpleType@@Class @TO@ ArrayType@@Class[] @AT@ 6809 @LENGTH@ 5
+---------------------INS ArrayInitializer@@{String.class} @TO@ ArrayCreation@@new Class[]{String.class} @AT@ 6817 @LENGTH@ 14
+------------------------INS TypeLiteral@@String.class @TO@ ArrayInitializer@@{String.class} @AT@ 6818 @LENGTH@ 12
+---INS ExpressionStatement@@MethodInvocation:assertNull(configAttributeDefinition) @TO@ MethodDeclaration@@public, void, MethodName:testNullIsReturnedByMethodDefinitionSourceWhenMethodInvocationNotDefined, Exception,  @AT@ 6843 @LENGTH@ 38
+------INS MethodInvocation@@assertNull(configAttributeDefinition) @TO@ ExpressionStatement@@MethodInvocation:assertNull(configAttributeDefinition) @AT@ 6843 @LENGTH@ 37
+---------INS SimpleName@@MethodName:assertNull:[configAttributeDefinition] @TO@ MethodInvocation@@assertNull(configAttributeDefinition) @AT@ 6843 @LENGTH@ 37
+------------INS SimpleName@@configAttributeDefinition @TO@ SimpleName@@MethodName:assertNull:[configAttributeDefinition] @AT@ 6854 @LENGTH@ 25
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=-2218010673611160319L] @TO@ TypeDeclaration@@[public]FixedSizeList, AbstractSerializableListDecorator[BoundedCollection] @AT@ 1589 @LENGTH@ 67
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-2218010673611160319L] @AT@ 1589 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-2218010673611160319L] @AT@ 1597 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-2218010673611160319L] @AT@ 1604 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-2218010673611160319L] @AT@ 1610 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=-2218010673611160319L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-2218010673611160319L] @AT@ 1615 @LENGTH@ 40
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=-2218010673611160319L @AT@ 1615 @LENGTH@ 16
+------INS PrefixExpression@@-2218010673611160319L @TO@ VariableDeclarationFragment@@serialVersionUID=-2218010673611160319L @AT@ 1634 @LENGTH@ 21
+---------INS Operator@@- @TO@ PrefixExpression@@-2218010673611160319L @AT@ 1634 @LENGTH@ 1
+---------INS NumberLiteral@@2218010673611160319L @TO@ PrefixExpression@@-2218010673611160319L @AT@ 1635 @LENGTH@ 20
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=8084674570753837109L] @TO@ TypeDeclaration@@[public]SynchronizedBag, SynchronizedCollection[Bag] @AT@ 1439 @LENGTH@ 66
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=8084674570753837109L] @AT@ 1439 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=8084674570753837109L] @AT@ 1447 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=8084674570753837109L] @AT@ 1454 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=8084674570753837109L] @AT@ 1460 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=8084674570753837109L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=8084674570753837109L] @AT@ 1465 @LENGTH@ 39
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=8084674570753837109L @AT@ 1465 @LENGTH@ 16
+------INS NumberLiteral@@8084674570753837109L @TO@ VariableDeclarationFragment@@serialVersionUID=8084674570753837109L @AT@ 1484 @LENGTH@ 20
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=-239892006883819945L] @TO@ TypeDeclaration@@[public, final]UnmodifiableCollection, AbstractSerializableCollectionDecorator[Unmodifiable] @AT@ 1311 @LENGTH@ 66
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-239892006883819945L] @AT@ 1311 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-239892006883819945L] @AT@ 1319 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-239892006883819945L] @AT@ 1326 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-239892006883819945L] @AT@ 1332 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=-239892006883819945L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-239892006883819945L] @AT@ 1337 @LENGTH@ 39
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=-239892006883819945L @AT@ 1337 @LENGTH@ 16
+------INS PrefixExpression@@-239892006883819945L @TO@ VariableDeclarationFragment@@serialVersionUID=-239892006883819945L @AT@ 1356 @LENGTH@ 20
+---------INS Operator@@- @TO@ PrefixExpression@@-239892006883819945L @AT@ 1356 @LENGTH@ 1
+---------INS NumberLiteral@@239892006883819945L @TO@ PrefixExpression@@-239892006883819945L @AT@ 1357 @LENGTH@ 19
+
+
+UPD CatchClause@@catch (IOException ioe2) {} @TO@ catch (IOException ioe2) {  throw new ConfigurationException("Could not close writer while saving to file " + filename,ioe2);} @AT@ 8735 @LENGTH@ 28
+---INS ThrowStatement@@ClassInstanceCreation:new ConfigurationException("Could not close writer while saving to file " + filename,ioe2) @TO@ CatchClause@@catch (IOException ioe2) {} @AT@ 8778 @LENGTH@ 97
+------INS ClassInstanceCreation@@ConfigurationException["Could not close writer while saving to file " + filename, ioe2] @TO@ ThrowStatement@@ClassInstanceCreation:new ConfigurationException("Could not close writer while saving to file " + filename,ioe2) @AT@ 8784 @LENGTH@ 90
+---------INS New@@new @TO@ ClassInstanceCreation@@ConfigurationException["Could not close writer while saving to file " + filename, ioe2] @AT@ 8784 @LENGTH@ 3
+---------INS SimpleType@@ConfigurationException @TO@ ClassInstanceCreation@@ConfigurationException["Could not close writer while saving to file " + filename, ioe2] @AT@ 8788 @LENGTH@ 22
+---------INS InfixExpression@@"Could not close writer while saving to file " + filename @TO@ ClassInstanceCreation@@ConfigurationException["Could not close writer while saving to file " + filename, ioe2] @AT@ 8811 @LENGTH@ 57
+------------INS StringLiteral@@"Could not close writer while saving to file " @TO@ InfixExpression@@"Could not close writer while saving to file " + filename @AT@ 8811 @LENGTH@ 46
+------------INS Operator@@+ @TO@ InfixExpression@@"Could not close writer while saving to file " + filename @AT@ 8857 @LENGTH@ 1
+------------INS SimpleName@@filename @TO@ InfixExpression@@"Could not close writer while saving to file " + filename @AT@ 8860 @LENGTH@ 8
+---------INS SimpleName@@ioe2 @TO@ ClassInstanceCreation@@ConfigurationException["Could not close writer while saving to file " + filename, ioe2] @AT@ 8869 @LENGTH@ 4
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=6595182819922443652L] @TO@ TypeDeclaration@@[public, final]UnmodifiableList, AbstractSerializableListDecorator[Unmodifiable] @AT@ 1415 @LENGTH@ 66
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=6595182819922443652L] @AT@ 1415 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=6595182819922443652L] @AT@ 1423 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=6595182819922443652L] @AT@ 1430 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=6595182819922443652L] @AT@ 1436 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=6595182819922443652L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=6595182819922443652L] @AT@ 1441 @LENGTH@ 39
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=6595182819922443652L @AT@ 1441 @LENGTH@ 16
+------INS NumberLiteral@@6595182819922443652L @TO@ VariableDeclarationFragment@@serialVersionUID=6595182819922443652L @AT@ 1460 @LENGTH@ 20
+
+
+UPD IfStatement@@if (base64Alphabet[octect] == -1) {  return false;} else {  return true;} @TO@ if (octect < 0 || base64Alphabet[octect] == -1) {  return false;} else {  return true;} @AT@ 4859 @LENGTH@ 113
+---INS InfixExpression@@octect < 0 || base64Alphabet[octect] == -1 @TO@ IfStatement@@if (base64Alphabet[octect] == -1) {  return false;} else {  return true;} @AT@ 5124 @LENGTH@ 42
+------MOV InfixExpression@@base64Alphabet[octect] == -1 @TO@ InfixExpression@@octect < 0 || base64Alphabet[octect] == -1 @AT@ 4863 @LENGTH@ 28
+------MOV InfixExpression@@base64Alphabet[octect] == -1 @TO@ InfixExpression@@octect < 0 || base64Alphabet[octect] == -1 @AT@ 4863 @LENGTH@ 28
+------INS InfixExpression@@octect < 0 @TO@ InfixExpression@@octect < 0 || base64Alphabet[octect] == -1 @AT@ 5124 @LENGTH@ 10
+---------INS SimpleName@@octect @TO@ InfixExpression@@octect < 0 @AT@ 5124 @LENGTH@ 6
+---------INS Operator@@< @TO@ InfixExpression@@octect < 0 @AT@ 5130 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ InfixExpression@@octect < 0 @AT@ 5133 @LENGTH@ 1
+------INS Operator@@|| @TO@ InfixExpression@@octect < 0 || base64Alphabet[octect] == -1 @AT@ 5134 @LENGTH@ 2
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=-7901091318986132033L] @TO@ TypeDeclaration@@[public]TransformedBuffer, TransformedCollection[Buffer] @AT@ 1500 @LENGTH@ 67
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-7901091318986132033L] @AT@ 1500 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-7901091318986132033L] @AT@ 1508 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-7901091318986132033L] @AT@ 1515 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-7901091318986132033L] @AT@ 1521 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=-7901091318986132033L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-7901091318986132033L] @AT@ 1526 @LENGTH@ 40
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=-7901091318986132033L @AT@ 1526 @LENGTH@ 16
+------INS PrefixExpression@@-7901091318986132033L @TO@ VariableDeclarationFragment@@serialVersionUID=-7901091318986132033L @AT@ 1545 @LENGTH@ 21
+---------INS Operator@@- @TO@ PrefixExpression@@-7901091318986132033L @AT@ 1545 @LENGTH@ 1
+---------INS NumberLiteral@@7901091318986132033L @TO@ PrefixExpression@@-7901091318986132033L @AT@ 1546 @LENGTH@ 20
+
+
+INS MethodDeclaration@@public, void, MethodName:testTouch, IOException,  @TO@ TypeDeclaration@@[public]FileUtilsTestCase, FileBasedTestCase @AT@ 15230 @LENGTH@ 770
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testTouch, IOException,  @AT@ 15230 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testTouch, IOException,  @AT@ 15237 @LENGTH@ 4
+---INS SimpleName@@MethodName:testTouch @TO@ MethodDeclaration@@public, void, MethodName:testTouch, IOException,  @AT@ 15242 @LENGTH@ 9
+---INS SimpleType@@IOException @TO@ MethodDeclaration@@public, void, MethodName:testTouch, IOException,  @AT@ 15261 @LENGTH@ 11
+---INS VariableDeclarationStatement@@File file=new File(getTestDirectory(),"touch.txt"); @TO@ MethodDeclaration@@public, void, MethodName:testTouch, IOException,  @AT@ 15283 @LENGTH@ 55
+------INS SimpleType@@File @TO@ VariableDeclarationStatement@@File file=new File(getTestDirectory(),"touch.txt"); @AT@ 15283 @LENGTH@ 4
+------INS VariableDeclarationFragment@@file=new File(getTestDirectory(),"touch.txt") @TO@ VariableDeclarationStatement@@File file=new File(getTestDirectory(),"touch.txt"); @AT@ 15288 @LENGTH@ 48
+---------INS SimpleName@@file @TO@ VariableDeclarationFragment@@file=new File(getTestDirectory(),"touch.txt") @AT@ 15288 @LENGTH@ 4
+---------INS ClassInstanceCreation@@File[getTestDirectory(), "touch.txt"] @TO@ VariableDeclarationFragment@@file=new File(getTestDirectory(),"touch.txt") @AT@ 15295 @LENGTH@ 41
+------------INS New@@new @TO@ ClassInstanceCreation@@File[getTestDirectory(), "touch.txt"] @AT@ 15295 @LENGTH@ 3
+------------INS SimpleType@@File @TO@ ClassInstanceCreation@@File[getTestDirectory(), "touch.txt"] @AT@ 15299 @LENGTH@ 4
+------------INS MethodInvocation@@MethodName:getTestDirectory:[] @TO@ ClassInstanceCreation@@File[getTestDirectory(), "touch.txt"] @AT@ 15304 @LENGTH@ 18
+------------INS StringLiteral@@"touch.txt" @TO@ ClassInstanceCreation@@File[getTestDirectory(), "touch.txt"] @AT@ 15324 @LENGTH@ 11
+---INS ExpressionStatement@@MethodInvocation:FileUtils.touch(file) @TO@ MethodDeclaration@@public, void, MethodName:testTouch, IOException,  @AT@ 15347 @LENGTH@ 22
+------INS MethodInvocation@@FileUtils.touch(file) @TO@ ExpressionStatement@@MethodInvocation:FileUtils.touch(file) @AT@ 15347 @LENGTH@ 21
+---------INS SimpleName@@Name:FileUtils @TO@ MethodInvocation@@FileUtils.touch(file) @AT@ 15347 @LENGTH@ 9
+---------INS SimpleName@@MethodName:touch:[file] @TO@ MethodInvocation@@FileUtils.touch(file) @AT@ 15357 @LENGTH@ 11
+------------INS SimpleName@@file @TO@ SimpleName@@MethodName:touch:[file] @AT@ 15363 @LENGTH@ 4
+---INS ExpressionStatement@@MethodInvocation:assertTrue("FileUtils.touch() created file.",file.exists()) @TO@ MethodDeclaration@@public, void, MethodName:testTouch, IOException,  @AT@ 15378 @LENGTH@ 61
+------INS MethodInvocation@@assertTrue("FileUtils.touch() created file.",file.exists()) @TO@ ExpressionStatement@@MethodInvocation:assertTrue("FileUtils.touch() created file.",file.exists()) @AT@ 15378 @LENGTH@ 60
+---------INS SimpleName@@MethodName:assertTrue:["FileUtils.touch() created file.", file.exists()] @TO@ MethodInvocation@@assertTrue("FileUtils.touch() created file.",file.exists()) @AT@ 15378 @LENGTH@ 60
+------------INS StringLiteral@@"FileUtils.touch() created file." @TO@ SimpleName@@MethodName:assertTrue:["FileUtils.touch() created file.", file.exists()] @AT@ 15389 @LENGTH@ 33
+------------INS MethodInvocation@@file.exists() @TO@ SimpleName@@MethodName:assertTrue:["FileUtils.touch() created file.", file.exists()] @AT@ 15424 @LENGTH@ 13
+---------------INS SimpleName@@Name:file @TO@ MethodInvocation@@file.exists() @AT@ 15424 @LENGTH@ 4
+---------------INS SimpleName@@MethodName:exists:[] @TO@ MethodInvocation@@file.exists() @AT@ 15429 @LENGTH@ 8
+---INS VariableDeclarationStatement@@FileOutputStream out=new FileOutputStream(file); @TO@ MethodDeclaration@@public, void, MethodName:testTouch, IOException,  @AT@ 15448 @LENGTH@ 51
+------INS SimpleType@@FileOutputStream @TO@ VariableDeclarationStatement@@FileOutputStream out=new FileOutputStream(file); @AT@ 15448 @LENGTH@ 16
+------INS VariableDeclarationFragment@@out=new FileOutputStream(file) @TO@ VariableDeclarationStatement@@FileOutputStream out=new FileOutputStream(file); @AT@ 15465 @LENGTH@ 32
+---------INS SimpleName@@out @TO@ VariableDeclarationFragment@@out=new FileOutputStream(file) @AT@ 15465 @LENGTH@ 3
+---------INS ClassInstanceCreation@@FileOutputStream[file] @TO@ VariableDeclarationFragment@@out=new FileOutputStream(file) @AT@ 15471 @LENGTH@ 26
+------------INS New@@new @TO@ ClassInstanceCreation@@FileOutputStream[file] @AT@ 15471 @LENGTH@ 3
+------------INS SimpleType@@FileOutputStream @TO@ ClassInstanceCreation@@FileOutputStream[file] @AT@ 15475 @LENGTH@ 16
+------------INS SimpleName@@file @TO@ ClassInstanceCreation@@FileOutputStream[file] @AT@ 15492 @LENGTH@ 4
+---INS ExpressionStatement@@MethodInvocation:assertEquals("Created empty file.",0,file.length()) @TO@ MethodDeclaration@@public, void, MethodName:testTouch, IOException,  @AT@ 15508 @LENGTH@ 54
+------INS MethodInvocation@@assertEquals("Created empty file.",0,file.length()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals("Created empty file.",0,file.length()) @AT@ 15508 @LENGTH@ 53
+---------INS SimpleName@@MethodName:assertEquals:["Created empty file.", 0, file.length()] @TO@ MethodInvocation@@assertEquals("Created empty file.",0,file.length()) @AT@ 15508 @LENGTH@ 53
+------------INS StringLiteral@@"Created empty file." @TO@ SimpleName@@MethodName:assertEquals:["Created empty file.", 0, file.length()] @AT@ 15521 @LENGTH@ 21
+------------INS NumberLiteral@@0 @TO@ SimpleName@@MethodName:assertEquals:["Created empty file.", 0, file.length()] @AT@ 15544 @LENGTH@ 1
+------------INS MethodInvocation@@file.length() @TO@ SimpleName@@MethodName:assertEquals:["Created empty file.", 0, file.length()] @AT@ 15547 @LENGTH@ 13
+---------------INS SimpleName@@Name:file @TO@ MethodInvocation@@file.length() @AT@ 15547 @LENGTH@ 4
+---------------INS SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@file.length() @AT@ 15552 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:out.write(0) @TO@ MethodDeclaration@@public, void, MethodName:testTouch, IOException,  @AT@ 15571 @LENGTH@ 14
+------INS MethodInvocation@@out.write(0) @TO@ ExpressionStatement@@MethodInvocation:out.write(0) @AT@ 15571 @LENGTH@ 12
+---------INS SimpleName@@Name:out @TO@ MethodInvocation@@out.write(0) @AT@ 15571 @LENGTH@ 3
+---------INS SimpleName@@MethodName:write:[0] @TO@ MethodInvocation@@out.write(0) @AT@ 15575 @LENGTH@ 8
+------------INS NumberLiteral@@0 @TO@ SimpleName@@MethodName:write:[0] @AT@ 15581 @LENGTH@ 1
+---INS ExpressionStatement@@MethodInvocation:out.close() @TO@ MethodDeclaration@@public, void, MethodName:testTouch, IOException,  @AT@ 15594 @LENGTH@ 12
+------INS MethodInvocation@@out.close() @TO@ ExpressionStatement@@MethodInvocation:out.close() @AT@ 15594 @LENGTH@ 11
+---------INS SimpleName@@Name:out @TO@ MethodInvocation@@out.close() @AT@ 15594 @LENGTH@ 3
+---------INS SimpleName@@MethodName:close:[] @TO@ MethodInvocation@@out.close() @AT@ 15598 @LENGTH@ 7
+---INS ExpressionStatement@@MethodInvocation:assertEquals("Wrote one byte to file.",1,file.length()) @TO@ MethodDeclaration@@public, void, MethodName:testTouch, IOException,  @AT@ 15615 @LENGTH@ 58
+------INS MethodInvocation@@assertEquals("Wrote one byte to file.",1,file.length()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals("Wrote one byte to file.",1,file.length()) @AT@ 15615 @LENGTH@ 57
+---------INS SimpleName@@MethodName:assertEquals:["Wrote one byte to file.", 1, file.length()] @TO@ MethodInvocation@@assertEquals("Wrote one byte to file.",1,file.length()) @AT@ 15615 @LENGTH@ 57
+------------INS StringLiteral@@"Wrote one byte to file." @TO@ SimpleName@@MethodName:assertEquals:["Wrote one byte to file.", 1, file.length()] @AT@ 15628 @LENGTH@ 25
+------------INS NumberLiteral@@1 @TO@ SimpleName@@MethodName:assertEquals:["Wrote one byte to file.", 1, file.length()] @AT@ 15655 @LENGTH@ 1
+------------INS MethodInvocation@@file.length() @TO@ SimpleName@@MethodName:assertEquals:["Wrote one byte to file.", 1, file.length()] @AT@ 15658 @LENGTH@ 13
+---------------INS SimpleName@@Name:file @TO@ MethodInvocation@@file.length() @AT@ 15658 @LENGTH@ 4
+---------------INS SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@file.length() @AT@ 15663 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:file.setLastModified(0) @TO@ MethodDeclaration@@public, void, MethodName:testTouch, IOException,  @AT@ 15682 @LENGTH@ 25
+------INS MethodInvocation@@file.setLastModified(0) @TO@ ExpressionStatement@@MethodInvocation:file.setLastModified(0) @AT@ 15682 @LENGTH@ 23
+---------INS SimpleName@@Name:file @TO@ MethodInvocation@@file.setLastModified(0) @AT@ 15682 @LENGTH@ 4
+---------INS SimpleName@@MethodName:setLastModified:[0] @TO@ MethodInvocation@@file.setLastModified(0) @AT@ 15687 @LENGTH@ 18
+------------INS NumberLiteral@@0 @TO@ SimpleName@@MethodName:setLastModified:[0] @AT@ 15703 @LENGTH@ 1
+---INS ExpressionStatement@@MethodInvocation:assertEquals("Set lastModified to 0.",0,file.lastModified()) @TO@ MethodDeclaration@@public, void, MethodName:testTouch, IOException,  @AT@ 15716 @LENGTH@ 63
+------INS MethodInvocation@@assertEquals("Set lastModified to 0.",0,file.lastModified()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals("Set lastModified to 0.",0,file.lastModified()) @AT@ 15716 @LENGTH@ 62
+---------INS SimpleName@@MethodName:assertEquals:["Set lastModified to 0.", 0, file.lastModified()] @TO@ MethodInvocation@@assertEquals("Set lastModified to 0.",0,file.lastModified()) @AT@ 15716 @LENGTH@ 62
+------------INS StringLiteral@@"Set lastModified to 0." @TO@ SimpleName@@MethodName:assertEquals:["Set lastModified to 0.", 0, file.lastModified()] @AT@ 15729 @LENGTH@ 24
+------------INS NumberLiteral@@0 @TO@ SimpleName@@MethodName:assertEquals:["Set lastModified to 0.", 0, file.lastModified()] @AT@ 15755 @LENGTH@ 1
+------------INS MethodInvocation@@file.lastModified() @TO@ SimpleName@@MethodName:assertEquals:["Set lastModified to 0.", 0, file.lastModified()] @AT@ 15758 @LENGTH@ 19
+---------------INS SimpleName@@Name:file @TO@ MethodInvocation@@file.lastModified() @AT@ 15758 @LENGTH@ 4
+---------------INS SimpleName@@MethodName:lastModified:[] @TO@ MethodInvocation@@file.lastModified() @AT@ 15763 @LENGTH@ 14
+---INS ExpressionStatement@@MethodInvocation:FileUtils.touch(file) @TO@ MethodDeclaration@@public, void, MethodName:testTouch, IOException,  @AT@ 15788 @LENGTH@ 23
+------INS MethodInvocation@@FileUtils.touch(file) @TO@ ExpressionStatement@@MethodInvocation:FileUtils.touch(file) @AT@ 15788 @LENGTH@ 21
+---------INS SimpleName@@Name:FileUtils @TO@ MethodInvocation@@FileUtils.touch(file) @AT@ 15788 @LENGTH@ 9
+---------INS SimpleName@@MethodName:touch:[file] @TO@ MethodInvocation@@FileUtils.touch(file) @AT@ 15798 @LENGTH@ 11
+------------INS SimpleName@@file @TO@ SimpleName@@MethodName:touch:[file] @AT@ 15804 @LENGTH@ 4
+---INS ExpressionStatement@@MethodInvocation:assertEquals("FileUtils.touch() didn't empty the file.",1,file.length()) @TO@ MethodDeclaration@@public, void, MethodName:testTouch, IOException,  @AT@ 15820 @LENGTH@ 75
+------INS MethodInvocation@@assertEquals("FileUtils.touch() didn't empty the file.",1,file.length()) @TO@ ExpressionStatement@@MethodInvocation:assertEquals("FileUtils.touch() didn't empty the file.",1,file.length()) @AT@ 15820 @LENGTH@ 74
+---------INS SimpleName@@MethodName:assertEquals:["FileUtils.touch() didn't empty the file.", 1, file.length()] @TO@ MethodInvocation@@assertEquals("FileUtils.touch() didn't empty the file.",1,file.length()) @AT@ 15820 @LENGTH@ 74
+------------INS StringLiteral@@"FileUtils.touch() didn't empty the file." @TO@ SimpleName@@MethodName:assertEquals:["FileUtils.touch() didn't empty the file.", 1, file.length()] @AT@ 15833 @LENGTH@ 42
+------------INS NumberLiteral@@1 @TO@ SimpleName@@MethodName:assertEquals:["FileUtils.touch() didn't empty the file.", 1, file.length()] @AT@ 15877 @LENGTH@ 1
+------------INS MethodInvocation@@file.length() @TO@ SimpleName@@MethodName:assertEquals:["FileUtils.touch() didn't empty the file.", 1, file.length()] @AT@ 15880 @LENGTH@ 13
+---------------INS SimpleName@@Name:file @TO@ MethodInvocation@@file.length() @AT@ 15880 @LENGTH@ 4
+---------------INS SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@file.length() @AT@ 15885 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:assertFalse("FileUtils.touch() changed lastModified.",0 == file.lastModified()) @TO@ MethodDeclaration@@public, void, MethodName:testTouch, IOException,  @AT@ 15904 @LENGTH@ 82
+------INS MethodInvocation@@assertFalse("FileUtils.touch() changed lastModified.",0 == file.lastModified()) @TO@ ExpressionStatement@@MethodInvocation:assertFalse("FileUtils.touch() changed lastModified.",0 == file.lastModified()) @AT@ 15904 @LENGTH@ 80
+---------INS SimpleName@@MethodName:assertFalse:["FileUtils.touch() changed lastModified.", 0 == file.lastModified()] @TO@ MethodInvocation@@assertFalse("FileUtils.touch() changed lastModified.",0 == file.lastModified()) @AT@ 15904 @LENGTH@ 80
+------------INS StringLiteral@@"FileUtils.touch() changed lastModified." @TO@ SimpleName@@MethodName:assertFalse:["FileUtils.touch() changed lastModified.", 0 == file.lastModified()] @AT@ 15916 @LENGTH@ 41
+------------INS InfixExpression@@0 == file.lastModified() @TO@ SimpleName@@MethodName:assertFalse:["FileUtils.touch() changed lastModified.", 0 == file.lastModified()] @AT@ 15959 @LENGTH@ 24
+---------------INS NumberLiteral@@0 @TO@ InfixExpression@@0 == file.lastModified() @AT@ 15959 @LENGTH@ 1
+---------------INS Operator@@== @TO@ InfixExpression@@0 == file.lastModified() @AT@ 15960 @LENGTH@ 2
+---------------INS MethodInvocation@@file.lastModified() @TO@ InfixExpression@@0 == file.lastModified() @AT@ 15964 @LENGTH@ 19
+------------------INS SimpleName@@Name:file @TO@ MethodInvocation@@file.lastModified() @AT@ 15964 @LENGTH@ 4
+------------------INS SimpleName@@MethodName:lastModified:[] @TO@ MethodInvocation@@file.lastModified() @AT@ 15969 @LENGTH@ 14
+
+
+INS MethodDeclaration@@public, void, MethodName:testNullReturnedIfZeroAttributesDefinedForMethodInvocation, Exception,  @TO@ TypeDeclaration@@[public]MethodDefinitionAttributesTests, TestCase @AT@ 8863 @LENGTH@ 369
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testNullReturnedIfZeroAttributesDefinedForMethodInvocation, Exception,  @AT@ 8863 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testNullReturnedIfZeroAttributesDefinedForMethodInvocation, Exception,  @AT@ 8870 @LENGTH@ 4
+---INS SimpleName@@MethodName:testNullReturnedIfZeroAttributesDefinedForMethodInvocation @TO@ MethodDeclaration@@public, void, MethodName:testNullReturnedIfZeroAttributesDefinedForMethodInvocation, Exception,  @AT@ 8875 @LENGTH@ 58
+---INS SimpleType@@Exception @TO@ MethodDeclaration@@public, void, MethodName:testNullReturnedIfZeroAttributesDefinedForMethodInvocation, Exception,  @AT@ 8951 @LENGTH@ 9
+---INS VariableDeclarationStatement@@ConfigAttributeDefinition def=getConfigAttributeDefinition(SomeDomain.class,"getId",null); @TO@ MethodDeclaration@@public, void, MethodName:testNullReturnedIfZeroAttributesDefinedForMethodInvocation, Exception,  @AT@ 9091 @LENGTH@ 110
+------INS SimpleType@@ConfigAttributeDefinition @TO@ VariableDeclarationStatement@@ConfigAttributeDefinition def=getConfigAttributeDefinition(SomeDomain.class,"getId",null); @AT@ 9091 @LENGTH@ 25
+------INS VariableDeclarationFragment@@def=getConfigAttributeDefinition(SomeDomain.class,"getId",null) @TO@ VariableDeclarationStatement@@ConfigAttributeDefinition def=getConfigAttributeDefinition(SomeDomain.class,"getId",null); @AT@ 9117 @LENGTH@ 83
+---------INS SimpleName@@def @TO@ VariableDeclarationFragment@@def=getConfigAttributeDefinition(SomeDomain.class,"getId",null) @AT@ 9117 @LENGTH@ 3
+---------INS MethodInvocation@@getConfigAttributeDefinition(SomeDomain.class,"getId",null) @TO@ VariableDeclarationFragment@@def=getConfigAttributeDefinition(SomeDomain.class,"getId",null) @AT@ 9123 @LENGTH@ 77
+------------INS SimpleName@@MethodName:getConfigAttributeDefinition:[SomeDomain.class, "getId", null] @TO@ MethodInvocation@@getConfigAttributeDefinition(SomeDomain.class,"getId",null) @AT@ 9123 @LENGTH@ 77
+---------------INS TypeLiteral@@SomeDomain.class @TO@ SimpleName@@MethodName:getConfigAttributeDefinition:[SomeDomain.class, "getId", null] @AT@ 9152 @LENGTH@ 16
+---------------INS StringLiteral@@"getId" @TO@ SimpleName@@MethodName:getConfigAttributeDefinition:[SomeDomain.class, "getId", null] @AT@ 9186 @LENGTH@ 7
+---------------INS NullLiteral@@null @TO@ SimpleName@@MethodName:getConfigAttributeDefinition:[SomeDomain.class, "getId", null] @AT@ 9195 @LENGTH@ 4
+---INS ExpressionStatement@@MethodInvocation:assertNull(def) @TO@ MethodDeclaration@@public, void, MethodName:testNullReturnedIfZeroAttributesDefinedForMethodInvocation, Exception,  @AT@ 9210 @LENGTH@ 16
+------INS MethodInvocation@@assertNull(def) @TO@ ExpressionStatement@@MethodInvocation:assertNull(def) @AT@ 9210 @LENGTH@ 15
+---------INS SimpleName@@MethodName:assertNull:[def] @TO@ MethodInvocation@@assertNull(def) @AT@ 9210 @LENGTH@ 15
+------------INS SimpleName@@def @TO@ SimpleName@@MethodName:assertNull:[def] @AT@ 9221 @LENGTH@ 3
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=6499119872185240161L] @TO@ TypeDeclaration@@[public, final]UnmodifiableSet, AbstractSerializableSetDecorator[Unmodifiable] @AT@ 1305 @LENGTH@ 66
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=6499119872185240161L] @AT@ 1305 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=6499119872185240161L] @AT@ 1313 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=6499119872185240161L] @AT@ 1320 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=6499119872185240161L] @AT@ 1326 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=6499119872185240161L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=6499119872185240161L] @AT@ 1331 @LENGTH@ 39
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=6499119872185240161L @AT@ 1331 @LENGTH@ 16
+------INS NumberLiteral@@6499119872185240161L @TO@ VariableDeclarationFragment@@serialVersionUID=6499119872185240161L @AT@ 1350 @LENGTH@ 20
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=-2575833140344736876L] @TO@ TypeDeclaration@@[public]PredicatedBag, PredicatedCollection[Bag] @AT@ 1680 @LENGTH@ 67
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-2575833140344736876L] @AT@ 1680 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-2575833140344736876L] @AT@ 1688 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-2575833140344736876L] @AT@ 1695 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-2575833140344736876L] @AT@ 1701 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=-2575833140344736876L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-2575833140344736876L] @AT@ 1706 @LENGTH@ 40
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=-2575833140344736876L @AT@ 1706 @LENGTH@ 16
+------INS PrefixExpression@@-2575833140344736876L @TO@ VariableDeclarationFragment@@serialVersionUID=-2575833140344736876L @AT@ 1725 @LENGTH@ 21
+---------INS Operator@@- @TO@ PrefixExpression@@-2575833140344736876L @AT@ 1725 @LENGTH@ 1
+---------INS NumberLiteral@@2575833140344736876L @TO@ PrefixExpression@@-2575833140344736876L @AT@ 1726 @LENGTH@ 20
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=-8423413834657610406L] @TO@ TypeDeclaration@@[public]CircularFifoBuffer, BoundedFifoBuffer @AT@ 1875 @LENGTH@ 67
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-8423413834657610406L] @AT@ 1875 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-8423413834657610406L] @AT@ 1883 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-8423413834657610406L] @AT@ 1890 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-8423413834657610406L] @AT@ 1896 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=-8423413834657610406L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-8423413834657610406L] @AT@ 1901 @LENGTH@ 40
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=-8423413834657610406L @AT@ 1901 @LENGTH@ 16
+------INS PrefixExpression@@-8423413834657610406L @TO@ VariableDeclarationFragment@@serialVersionUID=-8423413834657610406L @AT@ 1920 @LENGTH@ 21
+---------INS Operator@@- @TO@ PrefixExpression@@-8423413834657610406L @AT@ 1920 @LENGTH@ 1
+---------INS NumberLiteral@@8423413834657610406L @TO@ PrefixExpression@@-8423413834657610406L @AT@ 1921 @LENGTH@ 20
+
+
+INS MethodDeclaration@@private, void, MethodName:assertMatch, String text, String wildcard, boolean expected,  @TO@ TypeDeclaration@@[public]WildcardUtilsTest, TestCase @AT@ 2849 @LENGTH@ 172
+---INS Modifier@@private @TO@ MethodDeclaration@@private, void, MethodName:assertMatch, String text, String wildcard, boolean expected,  @AT@ 2849 @LENGTH@ 7
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, void, MethodName:assertMatch, String text, String wildcard, boolean expected,  @AT@ 2857 @LENGTH@ 4
+---INS SimpleName@@MethodName:assertMatch @TO@ MethodDeclaration@@private, void, MethodName:assertMatch, String text, String wildcard, boolean expected,  @AT@ 2862 @LENGTH@ 11
+---INS SingleVariableDeclaration@@String text @TO@ MethodDeclaration@@private, void, MethodName:assertMatch, String text, String wildcard, boolean expected,  @AT@ 2874 @LENGTH@ 11
+------INS SimpleType@@String @TO@ SingleVariableDeclaration@@String text @AT@ 2874 @LENGTH@ 6
+------INS SimpleName@@text @TO@ SingleVariableDeclaration@@String text @AT@ 2881 @LENGTH@ 4
+---INS SingleVariableDeclaration@@String wildcard @TO@ MethodDeclaration@@private, void, MethodName:assertMatch, String text, String wildcard, boolean expected,  @AT@ 2887 @LENGTH@ 15
+------INS SimpleType@@String @TO@ SingleVariableDeclaration@@String wildcard @AT@ 2887 @LENGTH@ 6
+------INS SimpleName@@wildcard @TO@ SingleVariableDeclaration@@String wildcard @AT@ 2894 @LENGTH@ 8
+---INS SingleVariableDeclaration@@boolean expected @TO@ MethodDeclaration@@private, void, MethodName:assertMatch, String text, String wildcard, boolean expected,  @AT@ 2904 @LENGTH@ 16
+------INS PrimitiveType@@boolean @TO@ SingleVariableDeclaration@@boolean expected @AT@ 2904 @LENGTH@ 7
+------INS SimpleName@@expected @TO@ SingleVariableDeclaration@@boolean expected @AT@ 2912 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:assertEquals(text + " " + wildcard,expected,WildcardUtils.match(text,wildcard)) @TO@ MethodDeclaration@@private, void, MethodName:assertMatch, String text, String wildcard, boolean expected,  @AT@ 2932 @LENGTH@ 83
+------INS MethodInvocation@@assertEquals(text + " " + wildcard,expected,WildcardUtils.match(text,wildcard)) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(text + " " + wildcard,expected,WildcardUtils.match(text,wildcard)) @AT@ 2932 @LENGTH@ 82
+---------INS SimpleName@@MethodName:assertEquals:[text + " " + wildcard, expected, WildcardUtils.match(text,wildcard)] @TO@ MethodInvocation@@assertEquals(text + " " + wildcard,expected,WildcardUtils.match(text,wildcard)) @AT@ 2932 @LENGTH@ 82
+------------INS InfixExpression@@text + " " + wildcard @TO@ SimpleName@@MethodName:assertEquals:[text + " " + wildcard, expected, WildcardUtils.match(text,wildcard)] @AT@ 2945 @LENGTH@ 21
+---------------INS SimpleName@@text @TO@ InfixExpression@@text + " " + wildcard @AT@ 2945 @LENGTH@ 4
+---------------INS Operator@@+ @TO@ InfixExpression@@text + " " + wildcard @AT@ 2949 @LENGTH@ 1
+---------------INS StringLiteral@@" " @TO@ InfixExpression@@text + " " + wildcard @AT@ 2952 @LENGTH@ 3
+---------------INS SimpleName@@wildcard @TO@ InfixExpression@@text + " " + wildcard @AT@ 2958 @LENGTH@ 8
+------------INS SimpleName@@expected @TO@ SimpleName@@MethodName:assertEquals:[text + " " + wildcard, expected, WildcardUtils.match(text,wildcard)] @AT@ 2968 @LENGTH@ 8
+------------INS MethodInvocation@@WildcardUtils.match(text,wildcard) @TO@ SimpleName@@MethodName:assertEquals:[text + " " + wildcard, expected, WildcardUtils.match(text,wildcard)] @AT@ 2978 @LENGTH@ 35
+---------------INS SimpleName@@Name:WildcardUtils @TO@ MethodInvocation@@WildcardUtils.match(text,wildcard) @AT@ 2978 @LENGTH@ 13
+---------------INS SimpleName@@MethodName:match:[text, wildcard] @TO@ MethodInvocation@@WildcardUtils.match(text,wildcard) @AT@ 2992 @LENGTH@ 21
+------------------INS SimpleName@@text @TO@ SimpleName@@MethodName:match:[text, wildcard] @AT@ 2998 @LENGTH@ 4
+------------------INS SimpleName@@wildcard @TO@ SimpleName@@MethodName:match:[text, wildcard] @AT@ 3004 @LENGTH@ 8
+
+
+UPD MethodDeclaration@@public, void, MethodName:testConstructor,  @TO@ public, void, MethodName:testConstructorCopy1,  @AT@ 12098 @LENGTH@ 800
+---UPD SimpleName@@MethodName:testConstructor @TO@ MethodName:testConstructorCopy1 @AT@ 12110 @LENGTH@ 15
+
+
+UPD ExpressionStatement@@Assignment:configuration=(Configuration)compositeConfiguration @TO@ Assignment:configuration=compositeConfiguration @AT@ 5726 @LENGTH@ 55
+---UPD Assignment@@configuration=(Configuration)compositeConfiguration @TO@ configuration=compositeConfiguration @AT@ 5726 @LENGTH@ 54
+------INS SimpleName@@compositeConfiguration @TO@ Assignment@@configuration=(Configuration)compositeConfiguration @AT@ 5727 @LENGTH@ 22
+------DEL CastExpression@@(Configuration)compositeConfiguration @AT@ 5742 @LENGTH@ 38
+---------DEL SimpleType@@Configuration @AT@ 5743 @LENGTH@ 13
+---------DEL SimpleName@@compositeConfiguration @AT@ 5758 @LENGTH@ 22
+
+
+UPD SuperConstructorInvocation@@super(mapToCopy);
+ @TO@ super((int)(mapToCopy.size() * 1.4f));
+ @AT@ 3693 @LENGTH@ 17
+---DEL SimpleName@@mapToCopy @AT@ 3699 @LENGTH@ 9
+---INS CastExpression@@(int)(mapToCopy.size() * 1.4f) @TO@ SuperConstructorInvocation@@super(mapToCopy);
+ @AT@ 3751 @LENGTH@ 31
+------INS PrimitiveType@@int @TO@ CastExpression@@(int)(mapToCopy.size() * 1.4f) @AT@ 3752 @LENGTH@ 3
+------INS ParenthesizedExpression@@(mapToCopy.size() * 1.4f) @TO@ CastExpression@@(int)(mapToCopy.size() * 1.4f) @AT@ 3757 @LENGTH@ 25
+---------INS InfixExpression@@mapToCopy.size() * 1.4f @TO@ ParenthesizedExpression@@(mapToCopy.size() * 1.4f) @AT@ 3758 @LENGTH@ 23
+------------INS MethodInvocation@@mapToCopy.size() @TO@ InfixExpression@@mapToCopy.size() * 1.4f @AT@ 3758 @LENGTH@ 16
+---------------INS SimpleName@@Name:mapToCopy @TO@ MethodInvocation@@mapToCopy.size() @AT@ 3758 @LENGTH@ 9
+---------------INS SimpleName@@MethodName:size:[] @TO@ MethodInvocation@@mapToCopy.size() @AT@ 3768 @LENGTH@ 6
+------------INS Operator@@* @TO@ InfixExpression@@mapToCopy.size() * 1.4f @AT@ 3774 @LENGTH@ 1
+------------INS NumberLiteral@@1.4f @TO@ InfixExpression@@mapToCopy.size() * 1.4f @AT@ 3777 @LENGTH@ 4
+
+
+UPD TryStatement@@try {  file=new File(getBasePath(),getFileName());  DocumentBuilder builder=DocumentBuilderFactory.newInstance().newDocumentBuilder();  document=builder.parse(file);} catch (IOException de) {  throw new ConfigurationException("Could not load from " + file.getAbsolutePath());}catch (ParserConfigurationException ex) {  throw new ConfigurationException("Could not configure parser");}catch (FactoryConfigurationError ex) {  throw new ConfigurationException("Could not create parser");}catch (SAXException ex) {  throw new ConfigurationException("Error parsing file " + file.getAbsolutePath());} @TO@ try {  URL url=ConfigurationUtils.getURL(getBasePath(),getFileName());  file=new File(url.getFile());  DocumentBuilder builder=DocumentBuilderFactory.newInstance().newDocumentBuilder();  document=builder.parse(file);} catch (IOException de) {  throw new ConfigurationException("Could not load from " + file.getAbsolutePath());}catch (ParserConfigurationException ex) {  throw new ConfigurationException("Could not configure parser");}catch (FactoryConfigurationError ex) {  throw new ConfigurationException("Could not create parser");}catch (SAXException ex) {  throw new ConfigurationException("Error parsing file " + file.getAbsolutePath());} @AT@ 3391 @LENGTH@ 801
+---INS VariableDeclarationStatement@@URL url=ConfigurationUtils.getURL(getBasePath(),getFileName()); @TO@ TryStatement@@try {  file=new File(getBasePath(),getFileName());  DocumentBuilder builder=DocumentBuilderFactory.newInstance().newDocumentBuilder();  document=builder.parse(file);} catch (IOException de) {  throw new ConfigurationException("Could not load from " + file.getAbsolutePath());}catch (ParserConfigurationException ex) {  throw new ConfigurationException("Could not configure parser");}catch (FactoryConfigurationError ex) {  throw new ConfigurationException("Could not create parser");}catch (SAXException ex) {  throw new ConfigurationException("Error parsing file " + file.getAbsolutePath());} @AT@ 3417 @LENGTH@ 66
+------INS SimpleType@@URL @TO@ VariableDeclarationStatement@@URL url=ConfigurationUtils.getURL(getBasePath(),getFileName()); @AT@ 3417 @LENGTH@ 3
+------INS VariableDeclarationFragment@@url=ConfigurationUtils.getURL(getBasePath(),getFileName()) @TO@ VariableDeclarationStatement@@URL url=ConfigurationUtils.getURL(getBasePath(),getFileName()); @AT@ 3421 @LENGTH@ 61
+---------INS SimpleName@@url @TO@ VariableDeclarationFragment@@url=ConfigurationUtils.getURL(getBasePath(),getFileName()) @AT@ 3421 @LENGTH@ 3
+---------INS MethodInvocation@@ConfigurationUtils.getURL(getBasePath(),getFileName()) @TO@ VariableDeclarationFragment@@url=ConfigurationUtils.getURL(getBasePath(),getFileName()) @AT@ 3427 @LENGTH@ 55
+------------INS SimpleName@@Name:ConfigurationUtils @TO@ MethodInvocation@@ConfigurationUtils.getURL(getBasePath(),getFileName()) @AT@ 3427 @LENGTH@ 18
+------------INS SimpleName@@MethodName:getURL:[getBasePath(), getFileName()] @TO@ MethodInvocation@@ConfigurationUtils.getURL(getBasePath(),getFileName()) @AT@ 3446 @LENGTH@ 36
+---------------INS MethodInvocation@@MethodName:getBasePath:[] @TO@ SimpleName@@MethodName:getURL:[getBasePath(), getFileName()] @AT@ 3453 @LENGTH@ 13
+---------------INS MethodInvocation@@MethodName:getFileName:[] @TO@ SimpleName@@MethodName:getURL:[getBasePath(), getFileName()] @AT@ 3468 @LENGTH@ 13
+---UPD ExpressionStatement@@Assignment:file=new File(getBasePath(),getFileName()) @TO@ Assignment:file=new File(url.getFile()) @AT@ 3417 @LENGTH@ 46
+------UPD Assignment@@file=new File(getBasePath(),getFileName()) @TO@ file=new File(url.getFile()) @AT@ 3417 @LENGTH@ 45
+---------UPD ClassInstanceCreation@@File[getBasePath(), getFileName()] @TO@ File[url.getFile()] @AT@ 3424 @LENGTH@ 38
+------------DEL MethodInvocation@@MethodName:getBasePath:[] @AT@ 3433 @LENGTH@ 13
+------------UPD MethodInvocation@@MethodName:getFileName:[] @TO@ url.getFile() @AT@ 3448 @LENGTH@ 13
+---------------INS SimpleName@@Name:url @TO@ MethodInvocation@@MethodName:getFileName:[] @AT@ 3512 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:getFile:[] @TO@ MethodInvocation@@MethodName:getFileName:[] @AT@ 3516 @LENGTH@ 9
+
+
+UPD VariableDeclarationStatement@@FileSystemXmlApplicationContext ctx=new FileSystemXmlApplicationContext("file://" + xml.getAbsolutePath()); @TO@ FileSystemXmlApplicationContext ctx=new FileSystemXmlApplicationContext("file:" + xml.getAbsolutePath()); @AT@ 6992 @LENGTH@ 126
+---UPD VariableDeclarationFragment@@ctx=new FileSystemXmlApplicationContext("file://" + xml.getAbsolutePath()) @TO@ ctx=new FileSystemXmlApplicationContext("file:" + xml.getAbsolutePath()) @AT@ 7024 @LENGTH@ 93
+------UPD ClassInstanceCreation@@FileSystemXmlApplicationContext["file://" + xml.getAbsolutePath()] @TO@ FileSystemXmlApplicationContext["file:" + xml.getAbsolutePath()] @AT@ 7030 @LENGTH@ 87
+---------UPD InfixExpression@@"file://" + xml.getAbsolutePath() @TO@ "file:" + xml.getAbsolutePath() @AT@ 7083 @LENGTH@ 33
+------------UPD StringLiteral@@"file://" @TO@ "file:" @AT@ 7083 @LENGTH@ 9
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=-9110948148132275052L] @TO@ TypeDeclaration@@[public]PredicatedSortedSet, PredicatedSet[SortedSet] @AT@ 1620 @LENGTH@ 67
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-9110948148132275052L] @AT@ 1620 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-9110948148132275052L] @AT@ 1628 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-9110948148132275052L] @AT@ 1635 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-9110948148132275052L] @AT@ 1641 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=-9110948148132275052L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-9110948148132275052L] @AT@ 1646 @LENGTH@ 40
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=-9110948148132275052L @AT@ 1646 @LENGTH@ 16
+------INS PrefixExpression@@-9110948148132275052L @TO@ VariableDeclarationFragment@@serialVersionUID=-9110948148132275052L @AT@ 1665 @LENGTH@ 21
+---------INS Operator@@- @TO@ PrefixExpression@@-9110948148132275052L @AT@ 1665 @LENGTH@ 1
+---------INS NumberLiteral@@9110948148132275052L @TO@ PrefixExpression@@-9110948148132275052L @AT@ 1666 @LENGTH@ 20
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=-1403835447328619437L] @TO@ TypeDeclaration@@[public]SynchronizedList, SynchronizedCollection[List] @AT@ 1334 @LENGTH@ 67
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-1403835447328619437L] @AT@ 1334 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-1403835447328619437L] @AT@ 1342 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-1403835447328619437L] @AT@ 1349 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-1403835447328619437L] @AT@ 1355 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=-1403835447328619437L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-1403835447328619437L] @AT@ 1360 @LENGTH@ 40
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=-1403835447328619437L @AT@ 1360 @LENGTH@ 16
+------INS PrefixExpression@@-1403835447328619437L @TO@ VariableDeclarationFragment@@serialVersionUID=-1403835447328619437L @AT@ 1379 @LENGTH@ 21
+---------INS Operator@@- @TO@ PrefixExpression@@-1403835447328619437L @AT@ 1379 @LENGTH@ 1
+---------INS NumberLiteral@@1403835447328619437L @TO@ PrefixExpression@@-1403835447328619437L @AT@ 1380 @LENGTH@ 20
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=-684521469108685117L] @TO@ TypeDeclaration@@[public]PredicatedSet, PredicatedCollection[Set] @AT@ 1633 @LENGTH@ 66
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-684521469108685117L] @AT@ 1633 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-684521469108685117L] @AT@ 1641 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-684521469108685117L] @AT@ 1648 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-684521469108685117L] @AT@ 1654 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=-684521469108685117L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-684521469108685117L] @AT@ 1659 @LENGTH@ 39
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=-684521469108685117L @AT@ 1659 @LENGTH@ 16
+------INS PrefixExpression@@-684521469108685117L @TO@ VariableDeclarationFragment@@serialVersionUID=-684521469108685117L @AT@ 1678 @LENGTH@ 20
+---------INS Operator@@- @TO@ PrefixExpression@@-684521469108685117L @AT@ 1678 @LENGTH@ 1
+---------INS NumberLiteral@@684521469108685117L @TO@ PrefixExpression@@-684521469108685117L @AT@ 1679 @LENGTH@ 19
+
+
+UPD IfStatement@@if ((this.secureContext == null) || (!this.secureContext.isAssignableFrom(SecureContext.class))) {  throw new IllegalArgumentException("secureContext must be defined and implement SecureContext");} @TO@ if ((this.secureContext == null) || (!SecureContext.class.isAssignableFrom(this.secureContext))) {  throw new IllegalArgumentException("secureContext must be defined and implement SecureContext");} @AT@ 3571 @LENGTH@ 246
+---UPD InfixExpression@@(this.secureContext == null) || (!this.secureContext.isAssignableFrom(SecureContext.class)) @TO@ (this.secureContext == null) || (!SecureContext.class.isAssignableFrom(this.secureContext)) @AT@ 3575 @LENGTH@ 103
+------UPD ParenthesizedExpression@@(!this.secureContext.isAssignableFrom(SecureContext.class)) @TO@ (!SecureContext.class.isAssignableFrom(this.secureContext)) @AT@ 3619 @LENGTH@ 59
+---------UPD PrefixExpression@@!this.secureContext.isAssignableFrom(SecureContext.class) @TO@ !SecureContext.class.isAssignableFrom(this.secureContext) @AT@ 3620 @LENGTH@ 57
+------------UPD MethodInvocation@@this.secureContext.isAssignableFrom(SecureContext.class) @TO@ SecureContext.class.isAssignableFrom(this.secureContext) @AT@ 3621 @LENGTH@ 56
+---------------INS TypeLiteral@@SecureContext.class @TO@ MethodInvocation@@this.secureContext.isAssignableFrom(SecureContext.class) @AT@ 3621 @LENGTH@ 19
+---------------DEL FieldAccess@@this.secureContext @AT@ 3621 @LENGTH@ 18
+---------------DEL SimpleName@@MethodName:isAssignableFrom:[SecureContext.class] @AT@ 3640 @LENGTH@ 37
+------------------DEL TypeLiteral@@SecureContext.class @AT@ 3657 @LENGTH@ 19
+---------------INS SimpleName@@MethodName:isAssignableFrom:[this.secureContext] @TO@ MethodInvocation@@this.secureContext.isAssignableFrom(SecureContext.class) @AT@ 3641 @LENGTH@ 36
+------------------INS FieldAccess@@this.secureContext @TO@ SimpleName@@MethodName:isAssignableFrom:[this.secureContext] @AT@ 3658 @LENGTH@ 18
+---------------------MOV ThisExpression@@this @TO@ FieldAccess@@this.secureContext @AT@ 3621 @LENGTH@ 4
+---------------------MOV SimpleName@@secureContext @TO@ FieldAccess@@this.secureContext @AT@ 3626 @LENGTH@ 13
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=-5722039223898659102L] @TO@ TypeDeclaration@@[public]PredicatedList, PredicatedCollection[List] @AT@ 1814 @LENGTH@ 67
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-5722039223898659102L] @AT@ 1814 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-5722039223898659102L] @AT@ 1822 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-5722039223898659102L] @AT@ 1829 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-5722039223898659102L] @AT@ 1835 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=-5722039223898659102L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-5722039223898659102L] @AT@ 1840 @LENGTH@ 40
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=-5722039223898659102L @AT@ 1840 @LENGTH@ 16
+------INS PrefixExpression@@-5722039223898659102L @TO@ VariableDeclarationFragment@@serialVersionUID=-5722039223898659102L @AT@ 1859 @LENGTH@ 21
+---------INS Operator@@- @TO@ PrefixExpression@@-5722039223898659102L @AT@ 1859 @LENGTH@ 1
+---------INS NumberLiteral@@5722039223898659102L @TO@ PrefixExpression@@-5722039223898659102L @AT@ 1860 @LENGTH@ 20
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=7196982186153478694L] @TO@ TypeDeclaration@@[public]SetUniqueList, AbstractSerializableListDecorator @AT@ 2002 @LENGTH@ 66
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=7196982186153478694L] @AT@ 2002 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=7196982186153478694L] @AT@ 2010 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=7196982186153478694L] @AT@ 2017 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=7196982186153478694L] @AT@ 2023 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=7196982186153478694L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=7196982186153478694L] @AT@ 2028 @LENGTH@ 39
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=7196982186153478694L @AT@ 2028 @LENGTH@ 16
+------INS NumberLiteral@@7196982186153478694L @TO@ VariableDeclarationFragment@@serialVersionUID=7196982186153478694L @AT@ 2047 @LENGTH@ 20
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=-7112672385450340330L] @TO@ TypeDeclaration@@[public, final]UnmodifiableBoundedCollection, AbstractSerializableCollectionDecorator[BoundedCollection] @AT@ 1686 @LENGTH@ 67
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-7112672385450340330L] @AT@ 1686 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-7112672385450340330L] @AT@ 1694 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-7112672385450340330L] @AT@ 1701 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-7112672385450340330L] @AT@ 1707 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=-7112672385450340330L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-7112672385450340330L] @AT@ 1712 @LENGTH@ 40
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=-7112672385450340330L @AT@ 1712 @LENGTH@ 16
+------INS PrefixExpression@@-7112672385450340330L @TO@ VariableDeclarationFragment@@serialVersionUID=-7112672385450340330L @AT@ 1731 @LENGTH@ 21
+---------INS Operator@@- @TO@ PrefixExpression@@-7112672385450340330L @AT@ 1731 @LENGTH@ 1
+---------INS NumberLiteral@@7112672385450340330L @TO@ PrefixExpression@@-7112672385450340330L @AT@ 1732 @LENGTH@ 20
+
+
+UPD ReturnStatement@@MethodInvocation:getBoolean(key,new Boolean(defaultValue)).booleanValue() @TO@ MethodInvocation:getBoolean(key,Boolean.valueOf(defaultValue)).booleanValue() @AT@ 11752 @LENGTH@ 65
+---UPD MethodInvocation@@getBoolean(key,new Boolean(defaultValue)).booleanValue() @TO@ getBoolean(key,Boolean.valueOf(defaultValue)).booleanValue() @AT@ 11759 @LENGTH@ 57
+------UPD MethodInvocation@@MethodName:getBoolean:[key, new Boolean(defaultValue)] @TO@ MethodName:getBoolean:[key, Boolean.valueOf(defaultValue)] @AT@ 11759 @LENGTH@ 42
+---------INS MethodInvocation@@Boolean.valueOf(defaultValue) @TO@ MethodInvocation@@MethodName:getBoolean:[key, new Boolean(defaultValue)] @AT@ 11774 @LENGTH@ 29
+------------INS SimpleName@@Name:Boolean @TO@ MethodInvocation@@Boolean.valueOf(defaultValue) @AT@ 11774 @LENGTH@ 7
+------------INS SimpleName@@MethodName:valueOf:[defaultValue] @TO@ MethodInvocation@@Boolean.valueOf(defaultValue) @AT@ 11782 @LENGTH@ 21
+---------------INS SimpleName@@defaultValue @TO@ SimpleName@@MethodName:valueOf:[defaultValue] @AT@ 11790 @LENGTH@ 12
+---------DEL ClassInstanceCreation@@Boolean[defaultValue] @AT@ 11775 @LENGTH@ 25
+------------DEL New@@new @AT@ 11775 @LENGTH@ 3
+------------DEL SimpleType@@Boolean @AT@ 11779 @LENGTH@ 7
+------------DEL SimpleName@@defaultValue @AT@ 11787 @LENGTH@ 12
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=1077193035000013141L] @TO@ TypeDeclaration@@[public]TransformedList, TransformedCollection[List] @AT@ 1617 @LENGTH@ 66
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=1077193035000013141L] @AT@ 1617 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=1077193035000013141L] @AT@ 1625 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=1077193035000013141L] @AT@ 1632 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=1077193035000013141L] @AT@ 1638 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=1077193035000013141L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=1077193035000013141L] @AT@ 1643 @LENGTH@ 39
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=1077193035000013141L @AT@ 1643 @LENGTH@ 16
+------INS NumberLiteral@@1077193035000013141L @TO@ VariableDeclarationFragment@@serialVersionUID=1077193035000013141L @AT@ 1662 @LENGTH@ 20
+
+
+UPD VariableDeclarationStatement@@Configuration config=(Configuration)new BaseConfiguration(); @TO@ Configuration config=new BaseConfiguration(); @AT@ 1418 @LENGTH@ 63
+---UPD VariableDeclarationFragment@@config=(Configuration)new BaseConfiguration() @TO@ config=new BaseConfiguration() @AT@ 1432 @LENGTH@ 48
+------DEL CastExpression@@(Configuration)new BaseConfiguration() @AT@ 1441 @LENGTH@ 39
+---------DEL SimpleType@@Configuration @AT@ 1442 @LENGTH@ 13
+---------DEL ClassInstanceCreation@@BaseConfiguration[] @AT@ 1457 @LENGTH@ 23
+------INS ClassInstanceCreation@@BaseConfiguration[] @TO@ VariableDeclarationFragment@@config=(Configuration)new BaseConfiguration() @AT@ 1442 @LENGTH@ 23
+---------MOV New@@new @TO@ ClassInstanceCreation@@BaseConfiguration[] @AT@ 1457 @LENGTH@ 3
+---------MOV SimpleType@@BaseConfiguration @TO@ ClassInstanceCreation@@BaseConfiguration[] @AT@ 1461 @LENGTH@ 17
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=306127383500410386L] @TO@ TypeDeclaration@@[public]TransformedSet, TransformedCollection[Set] @AT@ 1466 @LENGTH@ 65
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=306127383500410386L] @AT@ 1466 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=306127383500410386L] @AT@ 1474 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=306127383500410386L] @AT@ 1481 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=306127383500410386L] @AT@ 1487 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=306127383500410386L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=306127383500410386L] @AT@ 1492 @LENGTH@ 38
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=306127383500410386L @AT@ 1492 @LENGTH@ 16
+------INS NumberLiteral@@306127383500410386L @TO@ VariableDeclarationFragment@@serialVersionUID=306127383500410386L @AT@ 1511 @LENGTH@ 19
+
+
+INS ExpressionStatement@@MethodInvocation:conf.setProperty("name1","value1") @TO@ MethodDeclaration@@public, void, MethodName:testSetAttribute,  @AT@ 7627 @LENGTH@ 35
+---INS MethodInvocation@@conf.setProperty("name1","value1") @TO@ ExpressionStatement@@MethodInvocation:conf.setProperty("name1","value1") @AT@ 7627 @LENGTH@ 34
+------INS SimpleName@@Name:conf @TO@ MethodInvocation@@conf.setProperty("name1","value1") @AT@ 7627 @LENGTH@ 4
+------INS SimpleName@@MethodName:setProperty:["name1", "value1"] @TO@ MethodInvocation@@conf.setProperty("name1","value1") @AT@ 7632 @LENGTH@ 29
+---------INS StringLiteral@@"name1" @TO@ SimpleName@@MethodName:setProperty:["name1", "value1"] @AT@ 7644 @LENGTH@ 7
+---------INS StringLiteral@@"value1" @TO@ SimpleName@@MethodName:setProperty:["name1", "value1"] @AT@ 7652 @LENGTH@ 8
+
+
+UPD FieldDeclaration@@private, static, final, int, [_shifts[]={28,24,20,16,12,8,4,0}] @TO@ private, static, final, int[], [_shifts={28,24,20,16,12,8,4,0}] @AT@ 3914 @LENGTH@ 109
+---INS ArrayType@@int[] @TO@ FieldDeclaration@@private, static, final, int, [_shifts[]={28,24,20,16,12,8,4,0}] @AT@ 3933 @LENGTH@ 5
+------INS PrimitiveType@@int @TO@ ArrayType@@int[] @AT@ 3933 @LENGTH@ 3
+---DEL PrimitiveType@@int @AT@ 3935 @LENGTH@ 3
+---UPD VariableDeclarationFragment@@_shifts[]={28,24,20,16,12,8,4,0} @TO@ _shifts={28,24,20,16,12,8,4,0} @AT@ 3939 @LENGTH@ 83
+
+
+INS MethodDeclaration@@public, void, MethodName:testRejectsInvalidSecureContextClass, Exception,  @TO@ TypeDeclaration@@[public]AbstractIntegrationFilterTests, TestCase @AT@ 5616 @LENGTH@ 970
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testRejectsInvalidSecureContextClass, Exception,  @AT@ 5616 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testRejectsInvalidSecureContextClass, Exception,  @AT@ 5623 @LENGTH@ 4
+---INS SimpleName@@MethodName:testRejectsInvalidSecureContextClass @TO@ MethodDeclaration@@public, void, MethodName:testRejectsInvalidSecureContextClass, Exception,  @AT@ 5628 @LENGTH@ 36
+---INS SimpleType@@Exception @TO@ MethodDeclaration@@public, void, MethodName:testRejectsInvalidSecureContextClass, Exception,  @AT@ 5682 @LENGTH@ 9
+---INS VariableDeclarationStatement@@MockAbstractIntegrationFilterImpl filter=new MockAbstractIntegrationFilterImpl(null); @TO@ MethodDeclaration@@public, void, MethodName:testRejectsInvalidSecureContextClass, Exception,  @AT@ 5702 @LENGTH@ 87
+------INS SimpleType@@MockAbstractIntegrationFilterImpl @TO@ VariableDeclarationStatement@@MockAbstractIntegrationFilterImpl filter=new MockAbstractIntegrationFilterImpl(null); @AT@ 5702 @LENGTH@ 33
+------INS VariableDeclarationFragment@@filter=new MockAbstractIntegrationFilterImpl(null) @TO@ VariableDeclarationStatement@@MockAbstractIntegrationFilterImpl filter=new MockAbstractIntegrationFilterImpl(null); @AT@ 5736 @LENGTH@ 52
+---------INS SimpleName@@filter @TO@ VariableDeclarationFragment@@filter=new MockAbstractIntegrationFilterImpl(null) @AT@ 5736 @LENGTH@ 6
+---------INS ClassInstanceCreation@@MockAbstractIntegrationFilterImpl[null] @TO@ VariableDeclarationFragment@@filter=new MockAbstractIntegrationFilterImpl(null) @AT@ 5745 @LENGTH@ 43
+------------INS New@@new @TO@ ClassInstanceCreation@@MockAbstractIntegrationFilterImpl[null] @AT@ 5745 @LENGTH@ 3
+------------INS SimpleType@@MockAbstractIntegrationFilterImpl @TO@ ClassInstanceCreation@@MockAbstractIntegrationFilterImpl[null] @AT@ 5749 @LENGTH@ 33
+------------INS NullLiteral@@null @TO@ ClassInstanceCreation@@MockAbstractIntegrationFilterImpl[null] @AT@ 5783 @LENGTH@ 4
+---INS ExpressionStatement@@MethodInvocation:filter.setSecureContext(String.class) @TO@ MethodDeclaration@@public, void, MethodName:testRejectsInvalidSecureContextClass, Exception,  @AT@ 5862 @LENGTH@ 38
+------INS MethodInvocation@@filter.setSecureContext(String.class) @TO@ ExpressionStatement@@MethodInvocation:filter.setSecureContext(String.class) @AT@ 5862 @LENGTH@ 37
+---------INS SimpleName@@Name:filter @TO@ MethodInvocation@@filter.setSecureContext(String.class) @AT@ 5862 @LENGTH@ 6
+---------INS SimpleName@@MethodName:setSecureContext:[String.class] @TO@ MethodInvocation@@filter.setSecureContext(String.class) @AT@ 5869 @LENGTH@ 30
+------------INS TypeLiteral@@String.class @TO@ SimpleName@@MethodName:setSecureContext:[String.class] @AT@ 5886 @LENGTH@ 12
+---MOV TryStatement@@try {  filter.afterPropertiesSet();  fail("Should have thrown IllegalArgumentException");} catch (IllegalArgumentException expected) {  assertTrue(true);} @TO@ MethodDeclaration@@public, void, MethodName:testRejectsInvalidSecureContextClass, Exception,  @AT@ 5969 @LENGTH@ 205
+---INS ExpressionStatement@@MethodInvocation:filter.setSecureContext(SecureContextImpl.class) @TO@ MethodDeclaration@@public, void, MethodName:testRejectsInvalidSecureContextClass, Exception,  @AT@ 6184 @LENGTH@ 49
+------INS MethodInvocation@@filter.setSecureContext(SecureContextImpl.class) @TO@ ExpressionStatement@@MethodInvocation:filter.setSecureContext(SecureContextImpl.class) @AT@ 6184 @LENGTH@ 48
+---------INS SimpleName@@Name:filter @TO@ MethodInvocation@@filter.setSecureContext(SecureContextImpl.class) @AT@ 6184 @LENGTH@ 6
+---------INS SimpleName@@MethodName:setSecureContext:[SecureContextImpl.class] @TO@ MethodInvocation@@filter.setSecureContext(SecureContextImpl.class) @AT@ 6191 @LENGTH@ 41
+------------INS TypeLiteral@@SecureContextImpl.class @TO@ SimpleName@@MethodName:setSecureContext:[SecureContextImpl.class] @AT@ 6208 @LENGTH@ 23
+---INS ExpressionStatement@@MethodInvocation:filter.afterPropertiesSet() @TO@ MethodDeclaration@@public, void, MethodName:testRejectsInvalidSecureContextClass, Exception,  @AT@ 6242 @LENGTH@ 28
+------INS MethodInvocation@@filter.afterPropertiesSet() @TO@ ExpressionStatement@@MethodInvocation:filter.afterPropertiesSet() @AT@ 6242 @LENGTH@ 27
+---------INS SimpleName@@Name:filter @TO@ MethodInvocation@@filter.afterPropertiesSet() @AT@ 6242 @LENGTH@ 6
+---------INS SimpleName@@MethodName:afterPropertiesSet:[] @TO@ MethodInvocation@@filter.afterPropertiesSet() @AT@ 6249 @LENGTH@ 20
+---INS ExpressionStatement@@MethodInvocation:assertTrue(true) @TO@ MethodDeclaration@@public, void, MethodName:testRejectsInvalidSecureContextClass, Exception,  @AT@ 6279 @LENGTH@ 17
+------INS MethodInvocation@@assertTrue(true) @TO@ ExpressionStatement@@MethodInvocation:assertTrue(true) @AT@ 6279 @LENGTH@ 16
+---------INS SimpleName@@MethodName:assertTrue:[true] @TO@ MethodInvocation@@assertTrue(true) @AT@ 6279 @LENGTH@ 16
+------------INS BooleanLiteral@@true @TO@ SimpleName@@MethodName:assertTrue:[true] @AT@ 6290 @LENGTH@ 4
+---INS ExpressionStatement@@MethodInvocation:filter.setSecureContext(null) @TO@ MethodDeclaration@@public, void, MethodName:testRejectsInvalidSecureContextClass, Exception,  @AT@ 6335 @LENGTH@ 30
+------INS MethodInvocation@@filter.setSecureContext(null) @TO@ ExpressionStatement@@MethodInvocation:filter.setSecureContext(null) @AT@ 6335 @LENGTH@ 29
+---------INS SimpleName@@Name:filter @TO@ MethodInvocation@@filter.setSecureContext(null) @AT@ 6335 @LENGTH@ 6
+---------INS SimpleName@@MethodName:setSecureContext:[null] @TO@ MethodInvocation@@filter.setSecureContext(null) @AT@ 6342 @LENGTH@ 22
+------------INS NullLiteral@@null @TO@ SimpleName@@MethodName:setSecureContext:[null] @AT@ 6359 @LENGTH@ 4
+---INS TryStatement@@try {  filter.afterPropertiesSet();  fail("Should have thrown IllegalArgumentException");} catch (IllegalArgumentException expected) {  assertTrue(true);} @TO@ MethodDeclaration@@public, void, MethodName:testRejectsInvalidSecureContextClass, Exception,  @AT@ 6375 @LENGTH@ 205
+------INS ExpressionStatement@@MethodInvocation:filter.afterPropertiesSet() @TO@ TryStatement@@try {  filter.afterPropertiesSet();  fail("Should have thrown IllegalArgumentException");} catch (IllegalArgumentException expected) {  assertTrue(true);} @AT@ 6393 @LENGTH@ 28
+---------INS MethodInvocation@@filter.afterPropertiesSet() @TO@ ExpressionStatement@@MethodInvocation:filter.afterPropertiesSet() @AT@ 6393 @LENGTH@ 27
+------------INS SimpleName@@Name:filter @TO@ MethodInvocation@@filter.afterPropertiesSet() @AT@ 6393 @LENGTH@ 6
+------------INS SimpleName@@MethodName:afterPropertiesSet:[] @TO@ MethodInvocation@@filter.afterPropertiesSet() @AT@ 6400 @LENGTH@ 20
+------INS ExpressionStatement@@MethodInvocation:fail("Should have thrown IllegalArgumentException") @TO@ TryStatement@@try {  filter.afterPropertiesSet();  fail("Should have thrown IllegalArgumentException");} catch (IllegalArgumentException expected) {  assertTrue(true);} @AT@ 6434 @LENGTH@ 52
+---------INS MethodInvocation@@fail("Should have thrown IllegalArgumentException") @TO@ ExpressionStatement@@MethodInvocation:fail("Should have thrown IllegalArgumentException") @AT@ 6434 @LENGTH@ 51
+------------INS SimpleName@@MethodName:fail:["Should have thrown IllegalArgumentException"] @TO@ MethodInvocation@@fail("Should have thrown IllegalArgumentException") @AT@ 6434 @LENGTH@ 51
+---------------INS StringLiteral@@"Should have thrown IllegalArgumentException" @TO@ SimpleName@@MethodName:fail:["Should have thrown IllegalArgumentException"] @AT@ 6439 @LENGTH@ 45
+------INS CatchClause@@catch (IllegalArgumentException expected) {  assertTrue(true);} @TO@ TryStatement@@try {  filter.afterPropertiesSet();  fail("Should have thrown IllegalArgumentException");} catch (IllegalArgumentException expected) {  assertTrue(true);} @AT@ 6497 @LENGTH@ 83
+---------INS SingleVariableDeclaration@@IllegalArgumentException expected @TO@ CatchClause@@catch (IllegalArgumentException expected) {  assertTrue(true);} @AT@ 6504 @LENGTH@ 33
+------------INS SimpleType@@IllegalArgumentException @TO@ SingleVariableDeclaration@@IllegalArgumentException expected @AT@ 6504 @LENGTH@ 24
+------------INS SimpleName@@expected @TO@ SingleVariableDeclaration@@IllegalArgumentException expected @AT@ 6529 @LENGTH@ 8
+---------INS ExpressionStatement@@MethodInvocation:assertTrue(true) @TO@ CatchClause@@catch (IllegalArgumentException expected) {  assertTrue(true);} @AT@ 6553 @LENGTH@ 17
+------------INS MethodInvocation@@assertTrue(true) @TO@ ExpressionStatement@@MethodInvocation:assertTrue(true) @AT@ 6553 @LENGTH@ 16
+---------------INS SimpleName@@MethodName:assertTrue:[true] @TO@ MethodInvocation@@assertTrue(true) @AT@ 6553 @LENGTH@ 16
+------------------INS BooleanLiteral@@true @TO@ SimpleName@@MethodName:assertTrue:[true] @AT@ 6564 @LENGTH@ 4
+
+
+INS ExpressionStatement@@MethodInvocation:assertNull(filter.getSecureContext()) @TO@ MethodDeclaration@@public, void, MethodName:testSecureContextSettersGetters, Exception,  @AT@ 6933 @LENGTH@ 38
+---INS MethodInvocation@@assertNull(filter.getSecureContext()) @TO@ ExpressionStatement@@MethodInvocation:assertNull(filter.getSecureContext()) @AT@ 6933 @LENGTH@ 37
+------INS SimpleName@@MethodName:assertNull:[filter.getSecureContext()] @TO@ MethodInvocation@@assertNull(filter.getSecureContext()) @AT@ 6933 @LENGTH@ 37
+---------INS MethodInvocation@@filter.getSecureContext() @TO@ SimpleName@@MethodName:assertNull:[filter.getSecureContext()] @AT@ 6944 @LENGTH@ 25
+------------INS SimpleName@@Name:filter @TO@ MethodInvocation@@filter.getSecureContext() @AT@ 6944 @LENGTH@ 6
+------------INS SimpleName@@MethodName:getSecureContext:[] @TO@ MethodInvocation@@filter.getSecureContext() @AT@ 6951 @LENGTH@ 18
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=-6859936183953626253L] @TO@ TypeDeclaration@@[public]SynchronizedBuffer, SynchronizedCollection[Buffer] @AT@ 1305 @LENGTH@ 67
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-6859936183953626253L] @AT@ 1305 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-6859936183953626253L] @AT@ 1313 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-6859936183953626253L] @AT@ 1320 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-6859936183953626253L] @AT@ 1326 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=-6859936183953626253L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-6859936183953626253L] @AT@ 1331 @LENGTH@ 40
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=-6859936183953626253L @AT@ 1331 @LENGTH@ 16
+------INS PrefixExpression@@-6859936183953626253L @TO@ VariableDeclarationFragment@@serialVersionUID=-6859936183953626253L @AT@ 1350 @LENGTH@ 21
+---------INS Operator@@- @TO@ PrefixExpression@@-6859936183953626253L @AT@ 1350 @LENGTH@ 1
+---------INS NumberLiteral@@6859936183953626253L @TO@ PrefixExpression@@-6859936183953626253L @AT@ 1351 @LENGTH@ 20
+
+
+INS MethodDeclaration@@protected, void, MethodName:assertEqualContent, char[] c0, File file, IOException,  @TO@ TypeDeclaration@@[public, abstract]FileBasedTestCase, TestCase @AT@ 5646 @LENGTH@ 597
+---INS Modifier@@protected @TO@ MethodDeclaration@@protected, void, MethodName:assertEqualContent, char[] c0, File file, IOException,  @AT@ 5646 @LENGTH@ 9
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@protected, void, MethodName:assertEqualContent, char[] c0, File file, IOException,  @AT@ 5656 @LENGTH@ 4
+---INS SimpleName@@MethodName:assertEqualContent @TO@ MethodDeclaration@@protected, void, MethodName:assertEqualContent, char[] c0, File file, IOException,  @AT@ 5661 @LENGTH@ 18
+---INS SingleVariableDeclaration@@char[] c0 @TO@ MethodDeclaration@@protected, void, MethodName:assertEqualContent, char[] c0, File file, IOException,  @AT@ 5681 @LENGTH@ 9
+------INS ArrayType@@char[] @TO@ SingleVariableDeclaration@@char[] c0 @AT@ 5681 @LENGTH@ 6
+---------INS PrimitiveType@@char @TO@ ArrayType@@char[] @AT@ 5681 @LENGTH@ 4
+------INS SimpleName@@c0 @TO@ SingleVariableDeclaration@@char[] c0 @AT@ 5688 @LENGTH@ 2
+---INS SingleVariableDeclaration@@File file @TO@ MethodDeclaration@@protected, void, MethodName:assertEqualContent, char[] c0, File file, IOException,  @AT@ 5692 @LENGTH@ 9
+------INS SimpleType@@File @TO@ SingleVariableDeclaration@@File file @AT@ 5692 @LENGTH@ 4
+------INS SimpleName@@file @TO@ SingleVariableDeclaration@@File file @AT@ 5697 @LENGTH@ 4
+---INS SimpleType@@IOException @TO@ MethodDeclaration@@protected, void, MethodName:assertEqualContent, char[] c0, File file, IOException,  @AT@ 5719 @LENGTH@ 11
+---INS VariableDeclarationStatement@@Reader ir=new java.io.FileReader(file); @TO@ MethodDeclaration@@protected, void, MethodName:assertEqualContent, char[] c0, File file, IOException,  @AT@ 5745 @LENGTH@ 43
+------INS SimpleType@@Reader @TO@ VariableDeclarationStatement@@Reader ir=new java.io.FileReader(file); @AT@ 5745 @LENGTH@ 6
+------INS VariableDeclarationFragment@@ir=new java.io.FileReader(file) @TO@ VariableDeclarationStatement@@Reader ir=new java.io.FileReader(file); @AT@ 5752 @LENGTH@ 35
+---------INS SimpleName@@ir @TO@ VariableDeclarationFragment@@ir=new java.io.FileReader(file) @AT@ 5752 @LENGTH@ 2
+---------INS ClassInstanceCreation@@java.io.FileReader[file] @TO@ VariableDeclarationFragment@@ir=new java.io.FileReader(file) @AT@ 5757 @LENGTH@ 30
+------------INS New@@new @TO@ ClassInstanceCreation@@java.io.FileReader[file] @AT@ 5757 @LENGTH@ 3
+------------INS SimpleType@@java.io.FileReader @TO@ ClassInstanceCreation@@java.io.FileReader[file] @AT@ 5761 @LENGTH@ 18
+------------INS SimpleName@@file @TO@ ClassInstanceCreation@@java.io.FileReader[file] @AT@ 5781 @LENGTH@ 4
+---INS TryStatement@@try {  char[] c1=new char[c0.length];  int numRead=ir.read(c1);  assertTrue("Different number of bytes",numRead == c0.length);  for (int i=0; i < numRead; assertTrue("Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")",c0[i] == c1[i]), i++)   ;}  finally {  ir.close();} @TO@ MethodDeclaration@@protected, void, MethodName:assertEqualContent, char[] c0, File file, IOException,  @AT@ 5797 @LENGTH@ 440
+------INS VariableDeclarationStatement@@char[] c1=new char[c0.length]; @TO@ TryStatement@@try {  char[] c1=new char[c0.length];  int numRead=ir.read(c1);  assertTrue("Different number of bytes",numRead == c0.length);  for (int i=0; i < numRead; assertTrue("Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")",c0[i] == c1[i]), i++)   ;}  finally {  ir.close();} @AT@ 5815 @LENGTH@ 34
+---------INS ArrayType@@char[] @TO@ VariableDeclarationStatement@@char[] c1=new char[c0.length]; @AT@ 5815 @LENGTH@ 6
+------------INS PrimitiveType@@char @TO@ ArrayType@@char[] @AT@ 5815 @LENGTH@ 4
+---------INS VariableDeclarationFragment@@c1=new char[c0.length] @TO@ VariableDeclarationStatement@@char[] c1=new char[c0.length]; @AT@ 5822 @LENGTH@ 26
+------------INS SimpleName@@c1 @TO@ VariableDeclarationFragment@@c1=new char[c0.length] @AT@ 5822 @LENGTH@ 2
+------------INS ArrayCreation@@new char[c0.length] @TO@ VariableDeclarationFragment@@c1=new char[c0.length] @AT@ 5827 @LENGTH@ 21
+---------------INS ArrayType@@char[] @TO@ ArrayCreation@@new char[c0.length] @AT@ 5831 @LENGTH@ 17
+------------------INS PrimitiveType@@char @TO@ ArrayType@@char[] @AT@ 5831 @LENGTH@ 4
+---------------INS QualifiedName@@c0.length @TO@ ArrayCreation@@new char[c0.length] @AT@ 5837 @LENGTH@ 9
+------------------INS SimpleName@@c0 @TO@ QualifiedName@@c0.length @AT@ 5837 @LENGTH@ 2
+------------------INS SimpleName@@length @TO@ QualifiedName@@c0.length @AT@ 5840 @LENGTH@ 6
+------INS VariableDeclarationStatement@@int numRead=ir.read(c1); @TO@ TryStatement@@try {  char[] c1=new char[c0.length];  int numRead=ir.read(c1);  assertTrue("Different number of bytes",numRead == c0.length);  for (int i=0; i < numRead; assertTrue("Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")",c0[i] == c1[i]), i++)   ;}  finally {  ir.close();} @AT@ 5862 @LENGTH@ 28
+---------INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int numRead=ir.read(c1); @AT@ 5862 @LENGTH@ 3
+---------INS VariableDeclarationFragment@@numRead=ir.read(c1) @TO@ VariableDeclarationStatement@@int numRead=ir.read(c1); @AT@ 5866 @LENGTH@ 23
+------------INS SimpleName@@numRead @TO@ VariableDeclarationFragment@@numRead=ir.read(c1) @AT@ 5866 @LENGTH@ 7
+------------INS MethodInvocation@@ir.read(c1) @TO@ VariableDeclarationFragment@@numRead=ir.read(c1) @AT@ 5876 @LENGTH@ 13
+---------------INS SimpleName@@Name:ir @TO@ MethodInvocation@@ir.read(c1) @AT@ 5876 @LENGTH@ 2
+---------------INS SimpleName@@MethodName:read:[c1] @TO@ MethodInvocation@@ir.read(c1) @AT@ 5879 @LENGTH@ 10
+------------------INS SimpleName@@c1 @TO@ SimpleName@@MethodName:read:[c1] @AT@ 5885 @LENGTH@ 2
+------INS ExpressionStatement@@MethodInvocation:assertTrue("Different number of bytes",numRead == c0.length) @TO@ TryStatement@@try {  char[] c1=new char[c0.length];  int numRead=ir.read(c1);  assertTrue("Different number of bytes",numRead == c0.length);  for (int i=0; i < numRead; assertTrue("Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")",c0[i] == c1[i]), i++)   ;}  finally {  ir.close();} @AT@ 5903 @LENGTH@ 64
+---------INS MethodInvocation@@assertTrue("Different number of bytes",numRead == c0.length) @TO@ ExpressionStatement@@MethodInvocation:assertTrue("Different number of bytes",numRead == c0.length) @AT@ 5903 @LENGTH@ 63
+------------INS SimpleName@@MethodName:assertTrue:["Different number of bytes", numRead == c0.length] @TO@ MethodInvocation@@assertTrue("Different number of bytes",numRead == c0.length) @AT@ 5903 @LENGTH@ 63
+---------------INS StringLiteral@@"Different number of bytes" @TO@ SimpleName@@MethodName:assertTrue:["Different number of bytes", numRead == c0.length] @AT@ 5915 @LENGTH@ 27
+---------------INS InfixExpression@@numRead == c0.length @TO@ SimpleName@@MethodName:assertTrue:["Different number of bytes", numRead == c0.length] @AT@ 5944 @LENGTH@ 20
+------------------INS SimpleName@@numRead @TO@ InfixExpression@@numRead == c0.length @AT@ 5944 @LENGTH@ 7
+------------------INS Operator@@== @TO@ InfixExpression@@numRead == c0.length @AT@ 5951 @LENGTH@ 2
+------------------INS QualifiedName@@c0.length @TO@ InfixExpression@@numRead == c0.length @AT@ 5955 @LENGTH@ 9
+---------------------INS SimpleName@@c0 @TO@ QualifiedName@@c0.length @AT@ 5955 @LENGTH@ 2
+---------------------INS SimpleName@@length @TO@ QualifiedName@@c0.length @AT@ 5958 @LENGTH@ 6
+------INS ForStatement@@for (int i=0; i < numRead; assertTrue("Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")",c0[i] == c1[i]), i++) ; @TO@ TryStatement@@try {  char[] c1=new char[c0.length];  int numRead=ir.read(c1);  assertTrue("Different number of bytes",numRead == c0.length);  for (int i=0; i < numRead; assertTrue("Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")",c0[i] == c1[i]), i++)   ;}  finally {  ir.close();} @AT@ 5980 @LENGTH@ 203
+---------INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@for (int i=0; i < numRead; assertTrue("Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")",c0[i] == c1[i]), i++) ; @AT@ 5985 @LENGTH@ 9
+------------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 5985 @LENGTH@ 3
+------------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 5989 @LENGTH@ 5
+---------------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 5989 @LENGTH@ 1
+---------------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 5993 @LENGTH@ 1
+---------INS InfixExpression@@i < numRead @TO@ ForStatement@@for (int i=0; i < numRead; assertTrue("Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")",c0[i] == c1[i]), i++) ; @AT@ 6013 @LENGTH@ 11
+------------INS SimpleName@@i @TO@ InfixExpression@@i < numRead @AT@ 6013 @LENGTH@ 1
+------------INS Operator@@< @TO@ InfixExpression@@i < numRead @AT@ 6014 @LENGTH@ 1
+------------INS SimpleName@@numRead @TO@ InfixExpression@@i < numRead @AT@ 6017 @LENGTH@ 7
+---------INS MethodInvocation@@assertTrue("Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")",c0[i] == c1[i]) @TO@ ForStatement@@for (int i=0; i < numRead; assertTrue("Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")",c0[i] == c1[i]), i++) ; @AT@ 6043 @LENGTH@ 116
+------------INS SimpleName@@MethodName:assertTrue:["Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")", c0[i] == c1[i]] @TO@ MethodInvocation@@assertTrue("Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")",c0[i] == c1[i]) @AT@ 6043 @LENGTH@ 116
+---------------INS InfixExpression@@"Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")" @TO@ SimpleName@@MethodName:assertTrue:["Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")", c0[i] == c1[i]] @AT@ 6055 @LENGTH@ 61
+------------------INS StringLiteral@@"Byte " @TO@ InfixExpression@@"Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")" @AT@ 6055 @LENGTH@ 7
+------------------INS Operator@@+ @TO@ InfixExpression@@"Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")" @AT@ 6062 @LENGTH@ 1
+------------------INS SimpleName@@i @TO@ InfixExpression@@"Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")" @AT@ 6065 @LENGTH@ 1
+------------------INS StringLiteral@@" differs (" @TO@ InfixExpression@@"Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")" @AT@ 6069 @LENGTH@ 12
+------------------INS ArrayAccess@@c0[i] @TO@ InfixExpression@@"Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")" @AT@ 6084 @LENGTH@ 7
+---------------------INS SimpleName@@c0 @TO@ ArrayAccess@@c0[i] @AT@ 6084 @LENGTH@ 2
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@c0[i] @AT@ 6088 @LENGTH@ 1
+------------------INS StringLiteral@@" != " @TO@ InfixExpression@@"Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")" @AT@ 6094 @LENGTH@ 6
+------------------INS ArrayAccess@@c1[i] @TO@ InfixExpression@@"Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")" @AT@ 6103 @LENGTH@ 7
+---------------------INS SimpleName@@c1 @TO@ ArrayAccess@@c1[i] @AT@ 6103 @LENGTH@ 2
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@c1[i] @AT@ 6107 @LENGTH@ 1
+------------------INS StringLiteral@@")" @TO@ InfixExpression@@"Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")" @AT@ 6113 @LENGTH@ 3
+---------------INS InfixExpression@@c0[i] == c1[i] @TO@ SimpleName@@MethodName:assertTrue:["Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")", c0[i] == c1[i]] @AT@ 6139 @LENGTH@ 18
+------------------INS ArrayAccess@@c0[i] @TO@ InfixExpression@@c0[i] == c1[i] @AT@ 6139 @LENGTH@ 7
+---------------------INS SimpleName@@c0 @TO@ ArrayAccess@@c0[i] @AT@ 6139 @LENGTH@ 2
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@c0[i] @AT@ 6143 @LENGTH@ 1
+------------------INS Operator@@== @TO@ InfixExpression@@c0[i] == c1[i] @AT@ 6146 @LENGTH@ 2
+------------------INS ArrayAccess@@c1[i] @TO@ InfixExpression@@c0[i] == c1[i] @AT@ 6150 @LENGTH@ 7
+---------------------INS SimpleName@@c1 @TO@ ArrayAccess@@c1[i] @AT@ 6150 @LENGTH@ 2
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@c1[i] @AT@ 6154 @LENGTH@ 1
+---------INS PostfixExpression@@i++ @TO@ ForStatement@@for (int i=0; i < numRead; assertTrue("Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")",c0[i] == c1[i]), i++) ; @AT@ 6161 @LENGTH@ 3
+------------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 6161 @LENGTH@ 1
+------------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 6163 @LENGTH@ 2
+------INS Block@@FinallyBody:{  ir.close();} @TO@ TryStatement@@try {  char[] c1=new char[c0.length];  int numRead=ir.read(c1);  assertTrue("Different number of bytes",numRead == c0.length);  for (int i=0; i < numRead; assertTrue("Byte " + i + " differs ("+ c0[i]+ " != "+ c1[i]+ ")",c0[i] == c1[i]), i++)   ;}  finally {  ir.close();} @AT@ 6202 @LENGTH@ 35
+---------INS ExpressionStatement@@MethodInvocation:ir.close() @TO@ Block@@FinallyBody:{  ir.close();} @AT@ 6216 @LENGTH@ 11
+------------INS MethodInvocation@@ir.close() @TO@ ExpressionStatement@@MethodInvocation:ir.close() @AT@ 6216 @LENGTH@ 10
+---------------INS SimpleName@@Name:ir @TO@ MethodInvocation@@ir.close() @AT@ 6216 @LENGTH@ 2
+---------------INS SimpleName@@MethodName:close:[] @TO@ MethodInvocation@@ir.close() @AT@ 6219 @LENGTH@ 7
+
+
+INS IfStatement@@if (definition.size() == 0) {  return null;} else {  return definition;} @TO@ MethodDeclaration@@protected, ConfigAttributeDefinition, MethodName:lookupAttributes, MethodInvocation invocation,  @AT@ 3390 @LENGTH@ 112
+---INS InfixExpression@@definition.size() == 0 @TO@ IfStatement@@if (definition.size() == 0) {  return null;} else {  return definition;} @AT@ 3394 @LENGTH@ 22
+------INS MethodInvocation@@definition.size() @TO@ InfixExpression@@definition.size() == 0 @AT@ 3394 @LENGTH@ 17
+---------INS SimpleName@@Name:definition @TO@ MethodInvocation@@definition.size() @AT@ 3394 @LENGTH@ 10
+---------INS SimpleName@@MethodName:size:[] @TO@ MethodInvocation@@definition.size() @AT@ 3405 @LENGTH@ 6
+------INS Operator@@== @TO@ InfixExpression@@definition.size() == 0 @AT@ 3411 @LENGTH@ 2
+------INS NumberLiteral@@0 @TO@ InfixExpression@@definition.size() == 0 @AT@ 3415 @LENGTH@ 1
+---INS Block@@ThenBody:{  return null;} @TO@ IfStatement@@if (definition.size() == 0) {  return null;} else {  return definition;} @AT@ 3418 @LENGTH@ 36
+------INS ReturnStatement@@NullLiteral:null @TO@ Block@@ThenBody:{  return null;} @AT@ 3432 @LENGTH@ 12
+---------INS NullLiteral@@null @TO@ ReturnStatement@@NullLiteral:null @AT@ 3439 @LENGTH@ 4
+---INS Block@@ElseBody:{  return definition;} @TO@ IfStatement@@if (definition.size() == 0) {  return null;} else {  return definition;} @AT@ 3460 @LENGTH@ 42
+------INS ReturnStatement@@SimpleName:definition @TO@ Block@@ElseBody:{  return definition;} @AT@ 3474 @LENGTH@ 18
+---------MOV SimpleName@@definition @TO@ ReturnStatement@@SimpleName:definition @AT@ 3397 @LENGTH@ 10
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=-8304417378626543635L] @TO@ TypeDeclaration@@[public]SynchronizedSet, SynchronizedCollection[Set] @AT@ 1267 @LENGTH@ 67
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-8304417378626543635L] @AT@ 1267 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-8304417378626543635L] @AT@ 1275 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-8304417378626543635L] @AT@ 1282 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-8304417378626543635L] @AT@ 1288 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=-8304417378626543635L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-8304417378626543635L] @AT@ 1293 @LENGTH@ 40
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=-8304417378626543635L @AT@ 1293 @LENGTH@ 16
+------INS PrefixExpression@@-8304417378626543635L @TO@ VariableDeclarationFragment@@serialVersionUID=-8304417378626543635L @AT@ 1312 @LENGTH@ 21
+---------INS Operator@@- @TO@ PrefixExpression@@-8304417378626543635L @AT@ 1312 @LENGTH@ 1
+---------INS NumberLiteral@@8304417378626543635L @TO@ PrefixExpression@@-8304417378626543635L @AT@ 1313 @LENGTH@ 20
+
+
+UPD ExpressionStatement@@Assignment:url=loginUrl + "?service=" + serviceProperties.getService() @TO@ Assignment:url=loginUrl + "?service=" + URLEncoder.encode(serviceProperties.getService(),"UTF-8") @AT@ 3272 @LENGTH@ 62
+---UPD Assignment@@url=loginUrl + "?service=" + serviceProperties.getService() @TO@ url=loginUrl + "?service=" + URLEncoder.encode(serviceProperties.getService(),"UTF-8") @AT@ 3272 @LENGTH@ 61
+------UPD InfixExpression@@loginUrl + "?service=" + serviceProperties.getService() @TO@ loginUrl + "?service=" + URLEncoder.encode(serviceProperties.getService(),"UTF-8") @AT@ 3278 @LENGTH@ 55
+---------DEL MethodInvocation@@serviceProperties.getService() @AT@ 3303 @LENGTH@ 30
+---------INS MethodInvocation@@URLEncoder.encode(serviceProperties.getService(),"UTF-8") @TO@ InfixExpression@@loginUrl + "?service=" + serviceProperties.getService() @AT@ 3348 @LENGTH@ 58
+------------INS SimpleName@@Name:URLEncoder @TO@ MethodInvocation@@URLEncoder.encode(serviceProperties.getService(),"UTF-8") @AT@ 3348 @LENGTH@ 10
+------------INS SimpleName@@MethodName:encode:[serviceProperties.getService(), "UTF-8"] @TO@ MethodInvocation@@URLEncoder.encode(serviceProperties.getService(),"UTF-8") @AT@ 3359 @LENGTH@ 47
+---------------INS MethodInvocation@@serviceProperties.getService() @TO@ SimpleName@@MethodName:encode:[serviceProperties.getService(), "UTF-8"] @AT@ 3366 @LENGTH@ 30
+------------------MOV SimpleName@@Name:serviceProperties @TO@ MethodInvocation@@serviceProperties.getService() @AT@ 3303 @LENGTH@ 17
+------------------MOV SimpleName@@MethodName:getService:[] @TO@ MethodInvocation@@serviceProperties.getService() @AT@ 3321 @LENGTH@ 12
+---------------INS StringLiteral@@"UTF-8" @TO@ SimpleName@@MethodName:encode:[serviceProperties.getService(), "UTF-8"] @AT@ 3398 @LENGTH@ 7
+
+
+UPD FieldDeclaration@@private, static, final, char, [_hexcodes[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'}] @TO@ private, static, final, char[], [_hexcodes={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'}] @AT@ 3730 @LENGTH@ 179
+---INS ArrayType@@char[] @TO@ FieldDeclaration@@private, static, final, char, [_hexcodes[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'}] @AT@ 3749 @LENGTH@ 6
+------INS PrimitiveType@@char @TO@ ArrayType@@char[] @AT@ 3749 @LENGTH@ 4
+---DEL PrimitiveType@@char @AT@ 3751 @LENGTH@ 4
+---UPD VariableDeclarationFragment@@_hexcodes[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'} @TO@ _hexcodes={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'} @AT@ 3756 @LENGTH@ 152
+
+
+INS MethodDeclaration@@public, void, MethodName:testSetProperty, Exception,  @TO@ TypeDeclaration@@[public]TestXMLConfiguration, TestCase @AT@ 11346 @LENGTH@ 298
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testSetProperty, Exception,  @AT@ 11346 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testSetProperty, Exception,  @AT@ 11353 @LENGTH@ 4
+---INS SimpleName@@MethodName:testSetProperty @TO@ MethodDeclaration@@public, void, MethodName:testSetProperty, Exception,  @AT@ 11358 @LENGTH@ 15
+---INS SimpleType@@Exception @TO@ MethodDeclaration@@public, void, MethodName:testSetProperty, Exception,  @AT@ 11383 @LENGTH@ 9
+---INS ExpressionStatement@@MethodInvocation:conf.setProperty("element.string","hello") @TO@ MethodDeclaration@@public, void, MethodName:testSetProperty, Exception,  @AT@ 11407 @LENGTH@ 44
+------INS MethodInvocation@@conf.setProperty("element.string","hello") @TO@ ExpressionStatement@@MethodInvocation:conf.setProperty("element.string","hello") @AT@ 11407 @LENGTH@ 43
+---------INS SimpleName@@Name:conf @TO@ MethodInvocation@@conf.setProperty("element.string","hello") @AT@ 11407 @LENGTH@ 4
+---------INS SimpleName@@MethodName:setProperty:["element.string", "hello"] @TO@ MethodInvocation@@conf.setProperty("element.string","hello") @AT@ 11412 @LENGTH@ 38
+------------INS StringLiteral@@"element.string" @TO@ SimpleName@@MethodName:setProperty:["element.string", "hello"] @AT@ 11424 @LENGTH@ 16
+------------INS StringLiteral@@"hello" @TO@ SimpleName@@MethodName:setProperty:["element.string", "hello"] @AT@ 11442 @LENGTH@ 7
+---INS ExpressionStatement@@MethodInvocation:assertEquals("'element.string'","hello",conf.getString("element.string")) @TO@ MethodDeclaration@@public, void, MethodName:testSetProperty, Exception,  @AT@ 11461 @LENGTH@ 76
+------INS MethodInvocation@@assertEquals("'element.string'","hello",conf.getString("element.string")) @TO@ ExpressionStatement@@MethodInvocation:assertEquals("'element.string'","hello",conf.getString("element.string")) @AT@ 11461 @LENGTH@ 75
+---------INS SimpleName@@MethodName:assertEquals:["'element.string'", "hello", conf.getString("element.string")] @TO@ MethodInvocation@@assertEquals("'element.string'","hello",conf.getString("element.string")) @AT@ 11461 @LENGTH@ 75
+------------INS StringLiteral@@"'element.string'" @TO@ SimpleName@@MethodName:assertEquals:["'element.string'", "hello", conf.getString("element.string")] @AT@ 11474 @LENGTH@ 18
+------------INS StringLiteral@@"hello" @TO@ SimpleName@@MethodName:assertEquals:["'element.string'", "hello", conf.getString("element.string")] @AT@ 11494 @LENGTH@ 7
+------------INS MethodInvocation@@conf.getString("element.string") @TO@ SimpleName@@MethodName:assertEquals:["'element.string'", "hello", conf.getString("element.string")] @AT@ 11503 @LENGTH@ 32
+---------------INS SimpleName@@Name:conf @TO@ MethodInvocation@@conf.getString("element.string") @AT@ 11503 @LENGTH@ 4
+---------------INS SimpleName@@MethodName:getString:["element.string"] @TO@ MethodInvocation@@conf.getString("element.string") @AT@ 11508 @LENGTH@ 27
+------------------INS StringLiteral@@"element.string" @TO@ SimpleName@@MethodName:getString:["element.string"] @AT@ 11518 @LENGTH@ 16
+---INS ExpressionStatement@@MethodInvocation:assertEquals("XML value of element.string","hello",conf.getXmlProperty("element.string")) @TO@ MethodDeclaration@@public, void, MethodName:testSetProperty, Exception,  @AT@ 11546 @LENGTH@ 92
+------INS MethodInvocation@@assertEquals("XML value of element.string","hello",conf.getXmlProperty("element.string")) @TO@ ExpressionStatement@@MethodInvocation:assertEquals("XML value of element.string","hello",conf.getXmlProperty("element.string")) @AT@ 11546 @LENGTH@ 91
+---------INS SimpleName@@MethodName:assertEquals:["XML value of element.string", "hello", conf.getXmlProperty("element.string")] @TO@ MethodInvocation@@assertEquals("XML value of element.string","hello",conf.getXmlProperty("element.string")) @AT@ 11546 @LENGTH@ 91
+------------INS StringLiteral@@"XML value of element.string" @TO@ SimpleName@@MethodName:assertEquals:["XML value of element.string", "hello", conf.getXmlProperty("element.string")] @AT@ 11559 @LENGTH@ 29
+------------INS StringLiteral@@"hello" @TO@ SimpleName@@MethodName:assertEquals:["XML value of element.string", "hello", conf.getXmlProperty("element.string")] @AT@ 11590 @LENGTH@ 7
+------------INS MethodInvocation@@conf.getXmlProperty("element.string") @TO@ SimpleName@@MethodName:assertEquals:["XML value of element.string", "hello", conf.getXmlProperty("element.string")] @AT@ 11599 @LENGTH@ 37
+---------------INS SimpleName@@Name:conf @TO@ MethodInvocation@@conf.getXmlProperty("element.string") @AT@ 11599 @LENGTH@ 4
+---------------INS SimpleName@@MethodName:getXmlProperty:["element.string"] @TO@ MethodInvocation@@conf.getXmlProperty("element.string") @AT@ 11604 @LENGTH@ 32
+------------------INS StringLiteral@@"element.string" @TO@ SimpleName@@MethodName:getXmlProperty:["element.string"] @AT@ 11619 @LENGTH@ 16
+
+
+UPD FieldDeclaration@@protected, static, String, [include="include"] @TO@ static, String, [include="include"] @AT@ 4706 @LENGTH@ 44
+---DEL Modifier@@protected @AT@ 4706 @LENGTH@ 9
+
+
+INS ExpressionStatement@@MethodInvocation:assertEquals("value1",conf.getProperty("name1")) @TO@ MethodDeclaration@@public, void, MethodName:testSetAttribute,  @AT@ 7671 @LENGTH@ 49
+---INS MethodInvocation@@assertEquals("value1",conf.getProperty("name1")) @TO@ ExpressionStatement@@MethodInvocation:assertEquals("value1",conf.getProperty("name1")) @AT@ 7671 @LENGTH@ 48
+------INS SimpleName@@MethodName:assertEquals:["value1", conf.getProperty("name1")] @TO@ MethodInvocation@@assertEquals("value1",conf.getProperty("name1")) @AT@ 7671 @LENGTH@ 48
+---------INS StringLiteral@@"value1" @TO@ SimpleName@@MethodName:assertEquals:["value1", conf.getProperty("name1")] @AT@ 7684 @LENGTH@ 8
+---------INS MethodInvocation@@conf.getProperty("name1") @TO@ SimpleName@@MethodName:assertEquals:["value1", conf.getProperty("name1")] @AT@ 7693 @LENGTH@ 25
+------------INS SimpleName@@Name:conf @TO@ MethodInvocation@@conf.getProperty("name1") @AT@ 7693 @LENGTH@ 4
+------------INS SimpleName@@MethodName:getProperty:["name1"] @TO@ MethodInvocation@@conf.getProperty("name1") @AT@ 7698 @LENGTH@ 20
+---------------INS StringLiteral@@"name1" @TO@ SimpleName@@MethodName:getProperty:["name1"] @AT@ 7710 @LENGTH@ 7
+
+
+INS ExpressionStatement@@MethodInvocation:file.setLastModified(System.currentTimeMillis()) @TO@ MethodDeclaration@@public, static, void, MethodName:touch, File file, IOException,  @AT@ 4319 @LENGTH@ 49
+---INS MethodInvocation@@file.setLastModified(System.currentTimeMillis()) @TO@ ExpressionStatement@@MethodInvocation:file.setLastModified(System.currentTimeMillis()) @AT@ 4319 @LENGTH@ 48
+------INS SimpleName@@Name:file @TO@ MethodInvocation@@file.setLastModified(System.currentTimeMillis()) @AT@ 4319 @LENGTH@ 4
+------INS SimpleName@@MethodName:setLastModified:[System.currentTimeMillis()] @TO@ MethodInvocation@@file.setLastModified(System.currentTimeMillis()) @AT@ 4324 @LENGTH@ 43
+---------INS MethodInvocation@@System.currentTimeMillis() @TO@ SimpleName@@MethodName:setLastModified:[System.currentTimeMillis()] @AT@ 4340 @LENGTH@ 26
+------------INS SimpleName@@Name:System @TO@ MethodInvocation@@System.currentTimeMillis() @AT@ 4340 @LENGTH@ 6
+------------INS SimpleName@@MethodName:currentTimeMillis:[] @TO@ MethodInvocation@@System.currentTimeMillis() @AT@ 4347 @LENGTH@ 19
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=2775582861954500111L] @TO@ TypeDeclaration@@[public]SynchronizedSortedSet, SynchronizedCollection[SortedSet] @AT@ 1320 @LENGTH@ 66
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=2775582861954500111L] @AT@ 1320 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=2775582861954500111L] @AT@ 1328 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=2775582861954500111L] @AT@ 1335 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=2775582861954500111L] @AT@ 1341 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=2775582861954500111L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=2775582861954500111L] @AT@ 1346 @LENGTH@ 39
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=2775582861954500111L @AT@ 1346 @LENGTH@ 16
+------INS NumberLiteral@@2775582861954500111L @TO@ VariableDeclarationFragment@@serialVersionUID=2775582861954500111L @AT@ 1365 @LENGTH@ 20
+
+
+UPD ExpressionStatement@@MethodInvocation:element.setAttribute(attName,(String)value) @TO@ MethodInvocation:element.setAttribute(attName,String.valueOf(value)) @AT@ 12385 @LENGTH@ 46
+---UPD MethodInvocation@@element.setAttribute(attName,(String)value) @TO@ element.setAttribute(attName,String.valueOf(value)) @AT@ 12385 @LENGTH@ 45
+------UPD SimpleName@@MethodName:setAttribute:[attName, (String)value] @TO@ MethodName:setAttribute:[attName, String.valueOf(value)] @AT@ 12393 @LENGTH@ 37
+---------INS MethodInvocation@@String.valueOf(value) @TO@ SimpleName@@MethodName:setAttribute:[attName, (String)value] @AT@ 12415 @LENGTH@ 21
+------------INS SimpleName@@Name:String @TO@ MethodInvocation@@String.valueOf(value) @AT@ 12415 @LENGTH@ 6
+------------INS SimpleName@@MethodName:valueOf:[value] @TO@ MethodInvocation@@String.valueOf(value) @AT@ 12422 @LENGTH@ 14
+---------------INS SimpleName@@value @TO@ SimpleName@@MethodName:valueOf:[value] @AT@ 12430 @LENGTH@ 5
+---------DEL CastExpression@@(String)value @AT@ 12415 @LENGTH@ 14
+------------DEL SimpleType@@String @AT@ 12416 @LENGTH@ 6
+------------DEL SimpleName@@value @AT@ 12424 @LENGTH@ 5
+
+
+UPD IfStatement@@if (w3cNode instanceof CharacterData) {  CharacterData data=(CharacterData)w3cNode;  buffer.append(data.getData());} @TO@ if (w3cNode instanceof Text) {  Text data=(Text)w3cNode;  buffer.append(data.getData());} @AT@ 4923 @LENGTH@ 174
+---UPD InstanceofExpression@@w3cNode instanceof CharacterData @TO@ w3cNode instanceof Text @AT@ 4927 @LENGTH@ 32
+------UPD SimpleType@@CharacterData @TO@ Text @AT@ 4946 @LENGTH@ 13
+---UPD Block@@ThenBody:{  CharacterData data=(CharacterData)w3cNode;  buffer.append(data.getData());} @TO@ ThenBody:{  Text data=(Text)w3cNode;  buffer.append(data.getData());} @AT@ 4973 @LENGTH@ 124
+------UPD VariableDeclarationStatement@@CharacterData data=(CharacterData)w3cNode; @TO@ Text data=(Text)w3cNode; @AT@ 4991 @LENGTH@ 45
+---------UPD SimpleType@@CharacterData @TO@ Text @AT@ 4991 @LENGTH@ 13
+---------UPD VariableDeclarationFragment@@data=(CharacterData)w3cNode @TO@ data=(Text)w3cNode @AT@ 5005 @LENGTH@ 30
+------------UPD CastExpression@@(CharacterData)w3cNode @TO@ (Text)w3cNode @AT@ 5012 @LENGTH@ 23
+---------------UPD SimpleType@@CharacterData @TO@ Text @AT@ 5013 @LENGTH@ 13
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=-5259182142076705162L] @TO@ TypeDeclaration@@[public]PredicatedCollection, AbstractSerializableCollectionDecorator @AT@ 1669 @LENGTH@ 67
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-5259182142076705162L] @AT@ 1669 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-5259182142076705162L] @AT@ 1677 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-5259182142076705162L] @AT@ 1684 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-5259182142076705162L] @AT@ 1690 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=-5259182142076705162L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-5259182142076705162L] @AT@ 1695 @LENGTH@ 40
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=-5259182142076705162L @AT@ 1695 @LENGTH@ 16
+------INS PrefixExpression@@-5259182142076705162L @TO@ VariableDeclarationFragment@@serialVersionUID=-5259182142076705162L @AT@ 1714 @LENGTH@ 21
+---------INS Operator@@- @TO@ PrefixExpression@@-5259182142076705162L @AT@ 1714 @LENGTH@ 1
+---------INS NumberLiteral@@5259182142076705162L @TO@ PrefixExpression@@-5259182142076705162L @AT@ 1715 @LENGTH@ 20
+
+
+UPD VariableDeclarationStatement@@String[][] testsWithPaths={{File.separator + "tmp" + File.separator+ "foo"+ File.separator+ "filename.ext","ext"},{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "filename.ext","ext"},{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "README",""},{".." + File.separator + "filename.ext","ext"}}; @TO@ String[][] testsWithPaths={{"/tmp/foo/filename.ext","ext"},{"C:\\temp\\foo\\filename.ext","ext"},{"/tmp/foo.bar/filename.ext","ext"},{"C:\\temp\\foo.bar\\filename.ext","ext"},{"/tmp/foo.bar/README",""},{"C:\\temp\\foo.bar\\README",""},{"../filename.ext","ext"}}; @AT@ 6935 @LENGTH@ 610
+---UPD VariableDeclarationFragment@@testsWithPaths={{File.separator + "tmp" + File.separator+ "foo"+ File.separator+ "filename.ext","ext"},{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "filename.ext","ext"},{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "README",""},{".." + File.separator + "filename.ext","ext"}} @TO@ testsWithPaths={{"/tmp/foo/filename.ext","ext"},{"C:\\temp\\foo\\filename.ext","ext"},{"/tmp/foo.bar/filename.ext","ext"},{"C:\\temp\\foo.bar\\filename.ext","ext"},{"/tmp/foo.bar/README",""},{"C:\\temp\\foo.bar\\README",""},{"../filename.ext","ext"}} @AT@ 6946 @LENGTH@ 598
+------UPD ArrayInitializer@@{{File.separator + "tmp" + File.separator+ "foo"+ File.separator+ "filename.ext","ext"},{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "filename.ext","ext"},{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "README",""},{".." + File.separator + "filename.ext","ext"}} @TO@ {{"/tmp/foo/filename.ext","ext"},{"C:\\temp\\foo\\filename.ext","ext"},{"/tmp/foo.bar/filename.ext","ext"},{"C:\\temp\\foo.bar\\filename.ext","ext"},{"/tmp/foo.bar/README",""},{"C:\\temp\\foo.bar\\README",""},{"../filename.ext","ext"}} @AT@ 6975 @LENGTH@ 569
+---------DEL ArrayInitializer@@{File.separator + "tmp" + File.separator+ "foo"+ File.separator+ "filename.ext","ext"} @AT@ 6977 @LENGTH@ 92
+------------DEL InfixExpression@@File.separator + "tmp" + File.separator+ "foo"+ File.separator+ "filename.ext" @AT@ 6979 @LENGTH@ 81
+---------------DEL QualifiedName@@File.separator @AT@ 6979 @LENGTH@ 14
+------------------DEL SimpleName@@File @AT@ 6979 @LENGTH@ 4
+------------------DEL SimpleName@@separator @AT@ 6984 @LENGTH@ 9
+---------------DEL Operator@@+ @AT@ 6993 @LENGTH@ 1
+---------------DEL StringLiteral@@"tmp" @AT@ 6996 @LENGTH@ 5
+---------------DEL QualifiedName@@File.separator @AT@ 7004 @LENGTH@ 14
+------------------DEL SimpleName@@File @AT@ 7004 @LENGTH@ 4
+------------------DEL SimpleName@@separator @AT@ 7009 @LENGTH@ 9
+---------------DEL StringLiteral@@"foo" @AT@ 7021 @LENGTH@ 5
+---------------DEL QualifiedName@@File.separator @AT@ 7029 @LENGTH@ 14
+------------------DEL SimpleName@@File @AT@ 7029 @LENGTH@ 4
+------------------DEL SimpleName@@separator @AT@ 7034 @LENGTH@ 9
+---------------DEL StringLiteral@@"filename.ext" @AT@ 7046 @LENGTH@ 14
+---------INS ArrayInitializer@@{"/tmp/foo/filename.ext","ext"} @TO@ ArrayInitializer@@{{File.separator + "tmp" + File.separator+ "foo"+ File.separator+ "filename.ext","ext"},{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "filename.ext","ext"},{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "README",""},{".." + File.separator + "filename.ext","ext"}} @AT@ 7002 @LENGTH@ 34
+------------INS StringLiteral@@"/tmp/foo/filename.ext" @TO@ ArrayInitializer@@{"/tmp/foo/filename.ext","ext"} @AT@ 7004 @LENGTH@ 23
+------------INS StringLiteral@@"ext" @TO@ ArrayInitializer@@{"/tmp/foo/filename.ext","ext"} @AT@ 7029 @LENGTH@ 5
+---------INS ArrayInitializer@@{"C:\\temp\\foo\\filename.ext","ext"} @TO@ ArrayInitializer@@{{File.separator + "tmp" + File.separator+ "foo"+ File.separator+ "filename.ext","ext"},{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "filename.ext","ext"},{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "README",""},{".." + File.separator + "filename.ext","ext"}} @AT@ 7038 @LENGTH@ 56
+------------INS StringLiteral@@"C:\\temp\\foo\\filename.ext" @TO@ ArrayInitializer@@{"C:\\temp\\foo\\filename.ext","ext"} @AT@ 7056 @LENGTH@ 29
+------------MOV StringLiteral@@"ext" @TO@ ArrayInitializer@@{"C:\\temp\\foo\\filename.ext","ext"} @AT@ 7062 @LENGTH@ 5
+---------DEL ArrayInitializer@@{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "filename.ext","ext"} @AT@ 7071 @LENGTH@ 172
+------------DEL InfixExpression@@File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "filename.ext" @AT@ 7149 @LENGTH@ 85
+---------------DEL QualifiedName@@File.separator @AT@ 7149 @LENGTH@ 14
+------------------DEL SimpleName@@File @AT@ 7149 @LENGTH@ 4
+------------------DEL SimpleName@@separator @AT@ 7154 @LENGTH@ 9
+---------------DEL Operator@@+ @AT@ 7163 @LENGTH@ 1
+---------------DEL StringLiteral@@"tmp" @AT@ 7166 @LENGTH@ 5
+---------------DEL QualifiedName@@File.separator @AT@ 7174 @LENGTH@ 14
+------------------DEL SimpleName@@File @AT@ 7174 @LENGTH@ 4
+------------------DEL SimpleName@@separator @AT@ 7179 @LENGTH@ 9
+---------------DEL StringLiteral@@"foo.bar" @AT@ 7191 @LENGTH@ 9
+---------------DEL QualifiedName@@File.separator @AT@ 7203 @LENGTH@ 14
+------------------DEL SimpleName@@File @AT@ 7203 @LENGTH@ 4
+------------------DEL SimpleName@@separator @AT@ 7208 @LENGTH@ 9
+---------------DEL StringLiteral@@"filename.ext" @AT@ 7220 @LENGTH@ 14
+---------INS ArrayInitializer@@{"/tmp/foo.bar/filename.ext","ext"} @TO@ ArrayInitializer@@{{File.separator + "tmp" + File.separator+ "foo"+ File.separator+ "filename.ext","ext"},{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "filename.ext","ext"},{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "README",""},{".." + File.separator + "filename.ext","ext"}} @AT@ 7096 @LENGTH@ 54
+------------INS StringLiteral@@"/tmp/foo.bar/filename.ext" @TO@ ArrayInitializer@@{"/tmp/foo.bar/filename.ext","ext"} @AT@ 7114 @LENGTH@ 27
+------------INS StringLiteral@@"ext" @TO@ ArrayInitializer@@{"/tmp/foo.bar/filename.ext","ext"} @AT@ 7143 @LENGTH@ 5
+---------INS ArrayInitializer@@{"C:\\temp\\foo.bar\\filename.ext","ext"} @TO@ ArrayInitializer@@{{File.separator + "tmp" + File.separator+ "foo"+ File.separator+ "filename.ext","ext"},{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "filename.ext","ext"},{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "README",""},{".." + File.separator + "filename.ext","ext"}} @AT@ 7152 @LENGTH@ 60
+------------INS StringLiteral@@"C:\\temp\\foo.bar\\filename.ext" @TO@ ArrayInitializer@@{"C:\\temp\\foo.bar\\filename.ext","ext"} @AT@ 7170 @LENGTH@ 33
+------------MOV StringLiteral@@"ext" @TO@ ArrayInitializer@@{"C:\\temp\\foo.bar\\filename.ext","ext"} @AT@ 7236 @LENGTH@ 5
+---------INS ArrayInitializer@@{"/tmp/foo.bar/README",""} @TO@ ArrayInitializer@@{{File.separator + "tmp" + File.separator+ "foo"+ File.separator+ "filename.ext","ext"},{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "filename.ext","ext"},{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "README",""},{".." + File.separator + "filename.ext","ext"}} @AT@ 7214 @LENGTH@ 45
+------------INS StringLiteral@@"/tmp/foo.bar/README" @TO@ ArrayInitializer@@{"/tmp/foo.bar/README",""} @AT@ 7232 @LENGTH@ 21
+------------INS StringLiteral@@"" @TO@ ArrayInitializer@@{"/tmp/foo.bar/README",""} @AT@ 7255 @LENGTH@ 2
+---------DEL ArrayInitializer@@{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "README",""} @AT@ 7245 @LENGTH@ 167
+------------DEL InfixExpression@@File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "README" @AT@ 7327 @LENGTH@ 79
+---------------DEL QualifiedName@@File.separator @AT@ 7327 @LENGTH@ 14
+------------------DEL SimpleName@@File @AT@ 7327 @LENGTH@ 4
+------------------DEL SimpleName@@separator @AT@ 7332 @LENGTH@ 9
+---------------DEL Operator@@+ @AT@ 7341 @LENGTH@ 1
+---------------DEL StringLiteral@@"tmp" @AT@ 7344 @LENGTH@ 5
+---------------DEL QualifiedName@@File.separator @AT@ 7352 @LENGTH@ 14
+------------------DEL SimpleName@@File @AT@ 7352 @LENGTH@ 4
+------------------DEL SimpleName@@separator @AT@ 7357 @LENGTH@ 9
+---------------DEL StringLiteral@@"foo.bar" @AT@ 7369 @LENGTH@ 9
+---------------DEL QualifiedName@@File.separator @AT@ 7381 @LENGTH@ 14
+------------------DEL SimpleName@@File @AT@ 7381 @LENGTH@ 4
+------------------DEL SimpleName@@separator @AT@ 7386 @LENGTH@ 9
+---------------DEL StringLiteral@@"README" @AT@ 7398 @LENGTH@ 8
+---------INS ArrayInitializer@@{"C:\\temp\\foo.bar\\README",""} @TO@ ArrayInitializer@@{{File.separator + "tmp" + File.separator+ "foo"+ File.separator+ "filename.ext","ext"},{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "filename.ext","ext"},{File.separator + "tmp" + File.separator+ "foo.bar"+ File.separator+ "README",""},{".." + File.separator + "filename.ext","ext"}} @AT@ 7261 @LENGTH@ 51
+------------INS StringLiteral@@"C:\\temp\\foo.bar\\README" @TO@ ArrayInitializer@@{"C:\\temp\\foo.bar\\README",""} @AT@ 7279 @LENGTH@ 27
+------------MOV StringLiteral@@"" @TO@ ArrayInitializer@@{"C:\\temp\\foo.bar\\README",""} @AT@ 7408 @LENGTH@ 2
+---------UPD ArrayInitializer@@{".." + File.separator + "filename.ext","ext"} @TO@ {"../filename.ext","ext"} @AT@ 7414 @LENGTH@ 120
+------------INS StringLiteral@@"../filename.ext" @TO@ ArrayInitializer@@{".." + File.separator + "filename.ext","ext"} @AT@ 7332 @LENGTH@ 17
+------------DEL InfixExpression@@".." + File.separator + "filename.ext" @AT@ 7487 @LENGTH@ 38
+---------------DEL StringLiteral@@".." @AT@ 7487 @LENGTH@ 4
+---------------DEL Operator@@+ @AT@ 7491 @LENGTH@ 1
+---------------DEL QualifiedName@@File.separator @AT@ 7494 @LENGTH@ 14
+------------------DEL SimpleName@@File @AT@ 7494 @LENGTH@ 4
+------------------DEL SimpleName@@separator @AT@ 7499 @LENGTH@ 9
+---------------DEL StringLiteral@@"filename.ext" @AT@ 7511 @LENGTH@ 14
+
+
+INS MethodDeclaration@@public, void, MethodName:testTransformedCollection_2,  @TO@ TypeDeclaration@@[public]TestCollectionUtils, TestCase @AT@ 45392 @LENGTH@ 454
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testTransformedCollection_2,  @AT@ 45392 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testTransformedCollection_2,  @AT@ 45399 @LENGTH@ 4
+---INS SimpleName@@MethodName:testTransformedCollection_2 @TO@ MethodDeclaration@@public, void, MethodName:testTransformedCollection_2,  @AT@ 45404 @LENGTH@ 27
+---INS VariableDeclarationStatement@@List list=new ArrayList(); @TO@ MethodDeclaration@@public, void, MethodName:testTransformedCollection_2,  @AT@ 45444 @LENGTH@ 28
+------INS SimpleType@@List @TO@ VariableDeclarationStatement@@List list=new ArrayList(); @AT@ 45444 @LENGTH@ 4
+------INS VariableDeclarationFragment@@list=new ArrayList() @TO@ VariableDeclarationStatement@@List list=new ArrayList(); @AT@ 45449 @LENGTH@ 22
+---------INS SimpleName@@list @TO@ VariableDeclarationFragment@@list=new ArrayList() @AT@ 45449 @LENGTH@ 4
+---------INS ClassInstanceCreation@@ArrayList[] @TO@ VariableDeclarationFragment@@list=new ArrayList() @AT@ 45456 @LENGTH@ 15
+------------INS New@@new @TO@ ClassInstanceCreation@@ArrayList[] @AT@ 45456 @LENGTH@ 3
+------------INS SimpleType@@ArrayList @TO@ ClassInstanceCreation@@ArrayList[] @AT@ 45460 @LENGTH@ 9
+---INS ExpressionStatement@@MethodInvocation:list.add("1") @TO@ MethodDeclaration@@public, void, MethodName:testTransformedCollection_2,  @AT@ 45481 @LENGTH@ 14
+------INS MethodInvocation@@list.add("1") @TO@ ExpressionStatement@@MethodInvocation:list.add("1") @AT@ 45481 @LENGTH@ 13
+---------INS SimpleName@@Name:list @TO@ MethodInvocation@@list.add("1") @AT@ 45481 @LENGTH@ 4
+---------INS SimpleName@@MethodName:add:["1"] @TO@ MethodInvocation@@list.add("1") @AT@ 45486 @LENGTH@ 8
+------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:add:["1"] @AT@ 45490 @LENGTH@ 3
+---INS ExpressionStatement@@MethodInvocation:list.add("2") @TO@ MethodDeclaration@@public, void, MethodName:testTransformedCollection_2,  @AT@ 45504 @LENGTH@ 14
+------INS MethodInvocation@@list.add("2") @TO@ ExpressionStatement@@MethodInvocation:list.add("2") @AT@ 45504 @LENGTH@ 13
+---------INS SimpleName@@Name:list @TO@ MethodInvocation@@list.add("2") @AT@ 45504 @LENGTH@ 4
+---------INS SimpleName@@MethodName:add:["2"] @TO@ MethodInvocation@@list.add("2") @AT@ 45509 @LENGTH@ 8
+------------INS StringLiteral@@"2" @TO@ SimpleName@@MethodName:add:["2"] @AT@ 45513 @LENGTH@ 3
+---INS ExpressionStatement@@MethodInvocation:list.add("3") @TO@ MethodDeclaration@@public, void, MethodName:testTransformedCollection_2,  @AT@ 45527 @LENGTH@ 14
+------INS MethodInvocation@@list.add("3") @TO@ ExpressionStatement@@MethodInvocation:list.add("3") @AT@ 45527 @LENGTH@ 13
+---------INS SimpleName@@Name:list @TO@ MethodInvocation@@list.add("3") @AT@ 45527 @LENGTH@ 4
+---------INS SimpleName@@MethodName:add:["3"] @TO@ MethodInvocation@@list.add("3") @AT@ 45532 @LENGTH@ 8
+------------INS StringLiteral@@"3" @TO@ SimpleName@@MethodName:add:["3"] @AT@ 45536 @LENGTH@ 3
+---INS VariableDeclarationStatement@@Collection result=CollectionUtils.transformedCollection(list,TRANSFORM_TO_INTEGER); @TO@ MethodDeclaration@@public, void, MethodName:testTransformedCollection_2,  @AT@ 45550 @LENGTH@ 86
+------INS SimpleType@@Collection @TO@ VariableDeclarationStatement@@Collection result=CollectionUtils.transformedCollection(list,TRANSFORM_TO_INTEGER); @AT@ 45550 @LENGTH@ 10
+------INS VariableDeclarationFragment@@result=CollectionUtils.transformedCollection(list,TRANSFORM_TO_INTEGER) @TO@ VariableDeclarationStatement@@Collection result=CollectionUtils.transformedCollection(list,TRANSFORM_TO_INTEGER); @AT@ 45561 @LENGTH@ 74
+---------INS SimpleName@@result @TO@ VariableDeclarationFragment@@result=CollectionUtils.transformedCollection(list,TRANSFORM_TO_INTEGER) @AT@ 45561 @LENGTH@ 6
+---------INS MethodInvocation@@CollectionUtils.transformedCollection(list,TRANSFORM_TO_INTEGER) @TO@ VariableDeclarationFragment@@result=CollectionUtils.transformedCollection(list,TRANSFORM_TO_INTEGER) @AT@ 45570 @LENGTH@ 65
+------------INS SimpleName@@Name:CollectionUtils @TO@ MethodInvocation@@CollectionUtils.transformedCollection(list,TRANSFORM_TO_INTEGER) @AT@ 45570 @LENGTH@ 15
+------------INS SimpleName@@MethodName:transformedCollection:[list, TRANSFORM_TO_INTEGER] @TO@ MethodInvocation@@CollectionUtils.transformedCollection(list,TRANSFORM_TO_INTEGER) @AT@ 45586 @LENGTH@ 49
+---------------INS SimpleName@@list @TO@ SimpleName@@MethodName:transformedCollection:[list, TRANSFORM_TO_INTEGER] @AT@ 45608 @LENGTH@ 4
+---------------INS SimpleName@@TRANSFORM_TO_INTEGER @TO@ SimpleName@@MethodName:transformedCollection:[list, TRANSFORM_TO_INTEGER] @AT@ 45614 @LENGTH@ 20
+---INS ExpressionStatement@@MethodInvocation:assertEquals(true,result.contains("1")) @TO@ MethodDeclaration@@public, void, MethodName:testTransformedCollection_2,  @AT@ 45645 @LENGTH@ 41
+------INS MethodInvocation@@assertEquals(true,result.contains("1")) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(true,result.contains("1")) @AT@ 45645 @LENGTH@ 40
+---------INS SimpleName@@MethodName:assertEquals:[true, result.contains("1")] @TO@ MethodInvocation@@assertEquals(true,result.contains("1")) @AT@ 45645 @LENGTH@ 40
+------------INS BooleanLiteral@@true @TO@ SimpleName@@MethodName:assertEquals:[true, result.contains("1")] @AT@ 45658 @LENGTH@ 4
+------------INS MethodInvocation@@result.contains("1") @TO@ SimpleName@@MethodName:assertEquals:[true, result.contains("1")] @AT@ 45664 @LENGTH@ 20
+---------------INS SimpleName@@Name:result @TO@ MethodInvocation@@result.contains("1") @AT@ 45664 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:contains:["1"] @TO@ MethodInvocation@@result.contains("1") @AT@ 45671 @LENGTH@ 13
+------------------INS StringLiteral@@"1" @TO@ SimpleName@@MethodName:contains:["1"] @AT@ 45680 @LENGTH@ 3
+---INS ExpressionStatement@@MethodInvocation:assertEquals(true,result.contains("2")) @TO@ MethodDeclaration@@public, void, MethodName:testTransformedCollection_2,  @AT@ 45713 @LENGTH@ 41
+------INS MethodInvocation@@assertEquals(true,result.contains("2")) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(true,result.contains("2")) @AT@ 45713 @LENGTH@ 40
+---------INS SimpleName@@MethodName:assertEquals:[true, result.contains("2")] @TO@ MethodInvocation@@assertEquals(true,result.contains("2")) @AT@ 45713 @LENGTH@ 40
+------------INS BooleanLiteral@@true @TO@ SimpleName@@MethodName:assertEquals:[true, result.contains("2")] @AT@ 45726 @LENGTH@ 4
+------------INS MethodInvocation@@result.contains("2") @TO@ SimpleName@@MethodName:assertEquals:[true, result.contains("2")] @AT@ 45732 @LENGTH@ 20
+---------------INS SimpleName@@Name:result @TO@ MethodInvocation@@result.contains("2") @AT@ 45732 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:contains:["2"] @TO@ MethodInvocation@@result.contains("2") @AT@ 45739 @LENGTH@ 13
+------------------INS StringLiteral@@"2" @TO@ SimpleName@@MethodName:contains:["2"] @AT@ 45748 @LENGTH@ 3
+---INS ExpressionStatement@@MethodInvocation:assertEquals(true,result.contains("3")) @TO@ MethodDeclaration@@public, void, MethodName:testTransformedCollection_2,  @AT@ 45781 @LENGTH@ 41
+------INS MethodInvocation@@assertEquals(true,result.contains("3")) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(true,result.contains("3")) @AT@ 45781 @LENGTH@ 40
+---------INS SimpleName@@MethodName:assertEquals:[true, result.contains("3")] @TO@ MethodInvocation@@assertEquals(true,result.contains("3")) @AT@ 45781 @LENGTH@ 40
+------------INS BooleanLiteral@@true @TO@ SimpleName@@MethodName:assertEquals:[true, result.contains("3")] @AT@ 45794 @LENGTH@ 4
+------------INS MethodInvocation@@result.contains("3") @TO@ SimpleName@@MethodName:assertEquals:[true, result.contains("3")] @AT@ 45800 @LENGTH@ 20
+---------------INS SimpleName@@Name:result @TO@ MethodInvocation@@result.contains("3") @AT@ 45800 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:contains:["3"] @TO@ MethodInvocation@@result.contains("3") @AT@ 45807 @LENGTH@ 13
+------------------INS StringLiteral@@"3" @TO@ SimpleName@@MethodName:contains:["3"] @AT@ 45816 @LENGTH@ 3
+
+
+INS IfStatement@@if (url == null) {  throw new ConfigurationException(fileName + " could not be found!");} @TO@ MethodDeclaration@@public, voidMethodName:AbstractFileConfiguration, String fileName, ConfigurationException,  @AT@ 2626 @LENGTH@ 116
+---INS InfixExpression@@url == null @TO@ IfStatement@@if (url == null) {  throw new ConfigurationException(fileName + " could not be found!");} @AT@ 2629 @LENGTH@ 11
+------INS SimpleName@@url @TO@ InfixExpression@@url == null @AT@ 2629 @LENGTH@ 3
+------INS Operator@@== @TO@ InfixExpression@@url == null @AT@ 2632 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@url == null @AT@ 2636 @LENGTH@ 4
+---INS Block@@ThenBody:{  throw new ConfigurationException(fileName + " could not be found!");} @TO@ IfStatement@@if (url == null) {  throw new ConfigurationException(fileName + " could not be found!");} @AT@ 2650 @LENGTH@ 92
+------INS ThrowStatement@@ClassInstanceCreation:new ConfigurationException(fileName + " could not be found!") @TO@ Block@@ThenBody:{  throw new ConfigurationException(fileName + " could not be found!");} @AT@ 2664 @LENGTH@ 68
+---------INS ClassInstanceCreation@@ConfigurationException[fileName + " could not be found!"] @TO@ ThrowStatement@@ClassInstanceCreation:new ConfigurationException(fileName + " could not be found!") @AT@ 2670 @LENGTH@ 61
+------------INS New@@new @TO@ ClassInstanceCreation@@ConfigurationException[fileName + " could not be found!"] @AT@ 2670 @LENGTH@ 3
+------------INS SimpleType@@ConfigurationException @TO@ ClassInstanceCreation@@ConfigurationException[fileName + " could not be found!"] @AT@ 2674 @LENGTH@ 22
+------------INS InfixExpression@@fileName + " could not be found!" @TO@ ClassInstanceCreation@@ConfigurationException[fileName + " could not be found!"] @AT@ 2697 @LENGTH@ 33
+---------------INS SimpleName@@fileName @TO@ InfixExpression@@fileName + " could not be found!" @AT@ 2697 @LENGTH@ 8
+---------------INS Operator@@+ @TO@ InfixExpression@@fileName + " could not be found!" @AT@ 2705 @LENGTH@ 1
+---------------INS StringLiteral@@" could not be found!" @TO@ InfixExpression@@fileName + " could not be found!" @AT@ 2708 @LENGTH@ 22
+
+
+UPD VariableDeclarationStatement@@URL url=ClassLoader.getSystemResource("net/sf/acegisecurity/adapters/" + fileName); @TO@ URL url=Thread.currentThread().getContextClassLoader().getResource("net/sf/acegisecurity/adapters/" + fileName); @AT@ 9685 @LENGTH@ 102
+---UPD VariableDeclarationFragment@@url=ClassLoader.getSystemResource("net/sf/acegisecurity/adapters/" + fileName) @TO@ url=Thread.currentThread().getContextClassLoader().getResource("net/sf/acegisecurity/adapters/" + fileName) @AT@ 9689 @LENGTH@ 97
+------UPD MethodInvocation@@ClassLoader.getSystemResource("net/sf/acegisecurity/adapters/" + fileName) @TO@ Thread.currentThread().getContextClassLoader().getResource("net/sf/acegisecurity/adapters/" + fileName) @AT@ 9695 @LENGTH@ 91
+---------INS MethodInvocation@@MethodName:getContextClassLoader:[] @TO@ MethodInvocation@@ClassLoader.getSystemResource("net/sf/acegisecurity/adapters/" + fileName) @AT@ 9695 @LENGTH@ 46
+---------INS MethodInvocation@@MethodName:currentThread:[] @TO@ MethodInvocation@@ClassLoader.getSystemResource("net/sf/acegisecurity/adapters/" + fileName) @AT@ 9695 @LENGTH@ 22
+---------UPD SimpleName@@Name:ClassLoader @TO@ Name:Thread @AT@ 9695 @LENGTH@ 11
+---------UPD SimpleName@@MethodName:getSystemResource:["net/sf/acegisecurity/adapters/" + fileName] @TO@ MethodName:getResource:["net/sf/acegisecurity/adapters/" + fileName] @AT@ 9707 @LENGTH@ 79
+
+
+UPD ExpressionStatement@@Assignment:configuration=(Configuration)compositeConfiguration @TO@ Assignment:configuration=compositeConfiguration @AT@ 3679 @LENGTH@ 55
+---UPD Assignment@@configuration=(Configuration)compositeConfiguration @TO@ configuration=compositeConfiguration @AT@ 3679 @LENGTH@ 54
+------DEL CastExpression@@(Configuration)compositeConfiguration @AT@ 3695 @LENGTH@ 38
+---------DEL SimpleType@@Configuration @AT@ 3696 @LENGTH@ 13
+---------DEL SimpleName@@compositeConfiguration @AT@ 3711 @LENGTH@ 22
+------INS SimpleName@@compositeConfiguration @TO@ Assignment@@configuration=(Configuration)compositeConfiguration @AT@ 3696 @LENGTH@ 22
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=-1708388017160694542L] @TO@ TypeDeclaration@@[public]LazyList, AbstractSerializableListDecorator @AT@ 2089 @LENGTH@ 67
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-1708388017160694542L] @AT@ 2089 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-1708388017160694542L] @AT@ 2097 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-1708388017160694542L] @AT@ 2104 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-1708388017160694542L] @AT@ 2110 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=-1708388017160694542L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-1708388017160694542L] @AT@ 2115 @LENGTH@ 40
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=-1708388017160694542L @AT@ 2115 @LENGTH@ 16
+------INS PrefixExpression@@-1708388017160694542L @TO@ VariableDeclarationFragment@@serialVersionUID=-1708388017160694542L @AT@ 2134 @LENGTH@ 21
+---------INS Operator@@- @TO@ PrefixExpression@@-1708388017160694542L @AT@ 2134 @LENGTH@ 1
+---------INS NumberLiteral@@1708388017160694542L @TO@ PrefixExpression@@-1708388017160694542L @AT@ 2135 @LENGTH@ 20
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=-1675486811351124386L] @TO@ TypeDeclaration@@[public]TransformedSortedSet, TransformedSet[SortedSet] @AT@ 1440 @LENGTH@ 67
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-1675486811351124386L] @AT@ 1440 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-1675486811351124386L] @AT@ 1448 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-1675486811351124386L] @AT@ 1455 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-1675486811351124386L] @AT@ 1461 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=-1675486811351124386L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=-1675486811351124386L] @AT@ 1466 @LENGTH@ 40
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=-1675486811351124386L @AT@ 1466 @LENGTH@ 16
+------INS PrefixExpression@@-1675486811351124386L @TO@ VariableDeclarationFragment@@serialVersionUID=-1675486811351124386L @AT@ 1485 @LENGTH@ 21
+---------INS Operator@@- @TO@ PrefixExpression@@-1675486811351124386L @AT@ 1485 @LENGTH@ 1
+---------INS NumberLiteral@@1675486811351124386L @TO@ PrefixExpression@@-1675486811351124386L @AT@ 1486 @LENGTH@ 20
+
+
+INS MethodDeclaration@@public, void, MethodName:testDecodeInvalidContent, UnsupportedEncodingException, DecoderException,  @TO@ TypeDeclaration@@[public]URLCodecTest, TestCase @AT@ 4979 @LENGTH@ 511
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testDecodeInvalidContent, UnsupportedEncodingException, DecoderException,  @AT@ 4979 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testDecodeInvalidContent, UnsupportedEncodingException, DecoderException,  @AT@ 4986 @LENGTH@ 4
+---INS SimpleName@@MethodName:testDecodeInvalidContent @TO@ MethodDeclaration@@public, void, MethodName:testDecodeInvalidContent, UnsupportedEncodingException, DecoderException,  @AT@ 4991 @LENGTH@ 24
+---INS SimpleType@@UnsupportedEncodingException @TO@ MethodDeclaration@@public, void, MethodName:testDecodeInvalidContent, UnsupportedEncodingException, DecoderException,  @AT@ 5025 @LENGTH@ 28
+---INS SimpleType@@DecoderException @TO@ MethodDeclaration@@public, void, MethodName:testDecodeInvalidContent, UnsupportedEncodingException, DecoderException,  @AT@ 5055 @LENGTH@ 16
+---INS VariableDeclarationStatement@@String ch_msg=constructString(SWISS_GERMAN_STUFF_UNICODE); @TO@ MethodDeclaration@@public, void, MethodName:testDecodeInvalidContent, UnsupportedEncodingException, DecoderException,  @AT@ 5082 @LENGTH@ 60
+------INS SimpleType@@String @TO@ VariableDeclarationStatement@@String ch_msg=constructString(SWISS_GERMAN_STUFF_UNICODE); @AT@ 5082 @LENGTH@ 6
+------INS VariableDeclarationFragment@@ch_msg=constructString(SWISS_GERMAN_STUFF_UNICODE) @TO@ VariableDeclarationStatement@@String ch_msg=constructString(SWISS_GERMAN_STUFF_UNICODE); @AT@ 5089 @LENGTH@ 52
+---------INS SimpleName@@ch_msg @TO@ VariableDeclarationFragment@@ch_msg=constructString(SWISS_GERMAN_STUFF_UNICODE) @AT@ 5089 @LENGTH@ 6
+---------INS MethodInvocation@@constructString(SWISS_GERMAN_STUFF_UNICODE) @TO@ VariableDeclarationFragment@@ch_msg=constructString(SWISS_GERMAN_STUFF_UNICODE) @AT@ 5098 @LENGTH@ 43
+------------INS SimpleName@@MethodName:constructString:[SWISS_GERMAN_STUFF_UNICODE] @TO@ MethodInvocation@@constructString(SWISS_GERMAN_STUFF_UNICODE) @AT@ 5098 @LENGTH@ 43
+---------------INS SimpleName@@SWISS_GERMAN_STUFF_UNICODE @TO@ SimpleName@@MethodName:constructString:[SWISS_GERMAN_STUFF_UNICODE] @AT@ 5114 @LENGTH@ 26
+---INS VariableDeclarationStatement@@URLCodec urlCodec=new URLCodec(); @TO@ MethodDeclaration@@public, void, MethodName:testDecodeInvalidContent, UnsupportedEncodingException, DecoderException,  @AT@ 5152 @LENGTH@ 35
+------INS SimpleType@@URLCodec @TO@ VariableDeclarationStatement@@URLCodec urlCodec=new URLCodec(); @AT@ 5152 @LENGTH@ 8
+------INS VariableDeclarationFragment@@urlCodec=new URLCodec() @TO@ VariableDeclarationStatement@@URLCodec urlCodec=new URLCodec(); @AT@ 5161 @LENGTH@ 25
+---------INS SimpleName@@urlCodec @TO@ VariableDeclarationFragment@@urlCodec=new URLCodec() @AT@ 5161 @LENGTH@ 8
+---------INS ClassInstanceCreation@@URLCodec[] @TO@ VariableDeclarationFragment@@urlCodec=new URLCodec() @AT@ 5172 @LENGTH@ 14
+------------INS New@@new @TO@ ClassInstanceCreation@@URLCodec[] @AT@ 5172 @LENGTH@ 3
+------------INS SimpleType@@URLCodec @TO@ ClassInstanceCreation@@URLCodec[] @AT@ 5176 @LENGTH@ 8
+---INS VariableDeclarationStatement@@byte[] input=ch_msg.getBytes("ISO-8859-1"); @TO@ MethodDeclaration@@public, void, MethodName:testDecodeInvalidContent, UnsupportedEncodingException, DecoderException,  @AT@ 5196 @LENGTH@ 45
+------INS ArrayType@@byte[] @TO@ VariableDeclarationStatement@@byte[] input=ch_msg.getBytes("ISO-8859-1"); @AT@ 5196 @LENGTH@ 6
+---------INS PrimitiveType@@byte @TO@ ArrayType@@byte[] @AT@ 5196 @LENGTH@ 4
+------INS VariableDeclarationFragment@@input=ch_msg.getBytes("ISO-8859-1") @TO@ VariableDeclarationStatement@@byte[] input=ch_msg.getBytes("ISO-8859-1"); @AT@ 5203 @LENGTH@ 37
+---------INS SimpleName@@input @TO@ VariableDeclarationFragment@@input=ch_msg.getBytes("ISO-8859-1") @AT@ 5203 @LENGTH@ 5
+---------INS MethodInvocation@@ch_msg.getBytes("ISO-8859-1") @TO@ VariableDeclarationFragment@@input=ch_msg.getBytes("ISO-8859-1") @AT@ 5211 @LENGTH@ 29
+------------INS SimpleName@@Name:ch_msg @TO@ MethodInvocation@@ch_msg.getBytes("ISO-8859-1") @AT@ 5211 @LENGTH@ 6
+------------INS SimpleName@@MethodName:getBytes:["ISO-8859-1"] @TO@ MethodInvocation@@ch_msg.getBytes("ISO-8859-1") @AT@ 5218 @LENGTH@ 22
+---------------INS StringLiteral@@"ISO-8859-1" @TO@ SimpleName@@MethodName:getBytes:["ISO-8859-1"] @AT@ 5227 @LENGTH@ 12
+---INS VariableDeclarationStatement@@byte[] output=urlCodec.decode(input); @TO@ MethodDeclaration@@public, void, MethodName:testDecodeInvalidContent, UnsupportedEncodingException, DecoderException,  @AT@ 5250 @LENGTH@ 39
+------INS ArrayType@@byte[] @TO@ VariableDeclarationStatement@@byte[] output=urlCodec.decode(input); @AT@ 5250 @LENGTH@ 6
+---------INS PrimitiveType@@byte @TO@ ArrayType@@byte[] @AT@ 5250 @LENGTH@ 4
+------INS VariableDeclarationFragment@@output=urlCodec.decode(input) @TO@ VariableDeclarationStatement@@byte[] output=urlCodec.decode(input); @AT@ 5257 @LENGTH@ 31
+---------INS SimpleName@@output @TO@ VariableDeclarationFragment@@output=urlCodec.decode(input) @AT@ 5257 @LENGTH@ 6
+---------INS MethodInvocation@@urlCodec.decode(input) @TO@ VariableDeclarationFragment@@output=urlCodec.decode(input) @AT@ 5266 @LENGTH@ 22
+------------INS SimpleName@@Name:urlCodec @TO@ MethodInvocation@@urlCodec.decode(input) @AT@ 5266 @LENGTH@ 8
+------------INS SimpleName@@MethodName:decode:[input] @TO@ MethodInvocation@@urlCodec.decode(input) @AT@ 5275 @LENGTH@ 13
+---------------INS SimpleName@@input @TO@ SimpleName@@MethodName:decode:[input] @AT@ 5282 @LENGTH@ 5
+---INS ExpressionStatement@@MethodInvocation:assertEquals(input.length,output.length) @TO@ MethodDeclaration@@public, void, MethodName:testDecodeInvalidContent, UnsupportedEncodingException, DecoderException,  @AT@ 5298 @LENGTH@ 42
+------INS MethodInvocation@@assertEquals(input.length,output.length) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(input.length,output.length) @AT@ 5298 @LENGTH@ 41
+---------INS SimpleName@@MethodName:assertEquals:[input.length, output.length] @TO@ MethodInvocation@@assertEquals(input.length,output.length) @AT@ 5298 @LENGTH@ 41
+------------INS QualifiedName@@input.length @TO@ SimpleName@@MethodName:assertEquals:[input.length, output.length] @AT@ 5311 @LENGTH@ 12
+---------------INS SimpleName@@input @TO@ QualifiedName@@input.length @AT@ 5311 @LENGTH@ 5
+---------------INS SimpleName@@length @TO@ QualifiedName@@input.length @AT@ 5317 @LENGTH@ 6
+------------INS QualifiedName@@output.length @TO@ SimpleName@@MethodName:assertEquals:[input.length, output.length] @AT@ 5325 @LENGTH@ 13
+---------------INS SimpleName@@output @TO@ QualifiedName@@output.length @AT@ 5325 @LENGTH@ 6
+---------------INS SimpleName@@length @TO@ QualifiedName@@output.length @AT@ 5332 @LENGTH@ 6
+---INS ForStatement@@for (int i=0; i < input.length; i++) {  assertEquals(input[i],output[i]);} @TO@ MethodDeclaration@@public, void, MethodName:testDecodeInvalidContent, UnsupportedEncodingException, DecoderException,  @AT@ 5349 @LENGTH@ 97
+------INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@for (int i=0; i < input.length; i++) {  assertEquals(input[i],output[i]);} @AT@ 5354 @LENGTH@ 9
+---------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 5354 @LENGTH@ 3
+---------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 5358 @LENGTH@ 5
+------------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 5358 @LENGTH@ 1
+------------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 5362 @LENGTH@ 1
+------INS InfixExpression@@i < input.length @TO@ ForStatement@@for (int i=0; i < input.length; i++) {  assertEquals(input[i],output[i]);} @AT@ 5365 @LENGTH@ 16
+---------INS SimpleName@@i @TO@ InfixExpression@@i < input.length @AT@ 5365 @LENGTH@ 1
+---------INS Operator@@< @TO@ InfixExpression@@i < input.length @AT@ 5366 @LENGTH@ 1
+---------INS QualifiedName@@input.length @TO@ InfixExpression@@i < input.length @AT@ 5369 @LENGTH@ 12
+------------INS SimpleName@@input @TO@ QualifiedName@@input.length @AT@ 5369 @LENGTH@ 5
+------------INS SimpleName@@length @TO@ QualifiedName@@input.length @AT@ 5375 @LENGTH@ 6
+------INS PostfixExpression@@i++ @TO@ ForStatement@@for (int i=0; i < input.length; i++) {  assertEquals(input[i],output[i]);} @AT@ 5383 @LENGTH@ 3
+---------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 5383 @LENGTH@ 1
+---------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 5385 @LENGTH@ 2
+------INS ExpressionStatement@@MethodInvocation:assertEquals(input[i],output[i]) @TO@ ForStatement@@for (int i=0; i < input.length; i++) {  assertEquals(input[i],output[i]);} @AT@ 5402 @LENGTH@ 34
+---------INS MethodInvocation@@assertEquals(input[i],output[i]) @TO@ ExpressionStatement@@MethodInvocation:assertEquals(input[i],output[i]) @AT@ 5402 @LENGTH@ 33
+------------INS SimpleName@@MethodName:assertEquals:[input[i], output[i]] @TO@ MethodInvocation@@assertEquals(input[i],output[i]) @AT@ 5402 @LENGTH@ 33
+---------------INS ArrayAccess@@input[i] @TO@ SimpleName@@MethodName:assertEquals:[input[i], output[i]] @AT@ 5415 @LENGTH@ 8
+------------------INS SimpleName@@input @TO@ ArrayAccess@@input[i] @AT@ 5415 @LENGTH@ 5
+------------------INS SimpleName@@i @TO@ ArrayAccess@@input[i] @AT@ 5421 @LENGTH@ 1
+---------------INS ArrayAccess@@output[i] @TO@ SimpleName@@MethodName:assertEquals:[input[i], output[i]] @AT@ 5425 @LENGTH@ 9
+------------------INS SimpleName@@output @TO@ ArrayAccess@@output[i] @AT@ 5425 @LENGTH@ 6
+------------------INS SimpleName@@i @TO@ ArrayAccess@@output[i] @AT@ 5432 @LENGTH@ 1
+---INS ExpressionStatement@@MethodInvocation:this.validateState(urlCodec) @TO@ MethodDeclaration@@public, void, MethodName:testDecodeInvalidContent, UnsupportedEncodingException, DecoderException,  @AT@ 5455 @LENGTH@ 29
+------INS MethodInvocation@@this.validateState(urlCodec) @TO@ ExpressionStatement@@MethodInvocation:this.validateState(urlCodec) @AT@ 5455 @LENGTH@ 28
+---------INS ThisExpression@@this @TO@ MethodInvocation@@this.validateState(urlCodec) @AT@ 5455 @LENGTH@ 4
+---------INS SimpleName@@MethodName:validateState:[urlCodec] @TO@ MethodInvocation@@this.validateState(urlCodec) @AT@ 5460 @LENGTH@ 23
+------------INS SimpleName@@urlCodec @TO@ SimpleName@@MethodName:validateState:[urlCodec] @AT@ 5474 @LENGTH@ 8
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=3448581314086406616L] @TO@ TypeDeclaration@@[public]PredicatedSortedBag, PredicatedBag[SortedBag] @AT@ 1645 @LENGTH@ 66
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=3448581314086406616L] @AT@ 1645 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=3448581314086406616L] @AT@ 1653 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=3448581314086406616L] @AT@ 1660 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=3448581314086406616L] @AT@ 1666 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=3448581314086406616L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=3448581314086406616L] @AT@ 1671 @LENGTH@ 39
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=3448581314086406616L @AT@ 1671 @LENGTH@ 16
+------INS NumberLiteral@@3448581314086406616L @TO@ VariableDeclarationFragment@@serialVersionUID=3448581314086406616L @AT@ 1690 @LENGTH@ 20
+
+
+UPD ExpressionStatement@@Assignment:memoryOutputStream=new ByteArrayOutputStream(threshold) @TO@ Assignment:memoryOutputStream=new ByteArrayOutputStream() @AT@ 2943 @LENGTH@ 58
+---UPD Assignment@@memoryOutputStream=new ByteArrayOutputStream(threshold) @TO@ memoryOutputStream=new ByteArrayOutputStream() @AT@ 2943 @LENGTH@ 57
+------UPD ClassInstanceCreation@@ByteArrayOutputStream[threshold] @TO@ ByteArrayOutputStream[] @AT@ 2964 @LENGTH@ 36
+---------DEL SimpleName@@threshold @AT@ 2990 @LENGTH@ 9
+
+
+INS FieldDeclaration@@private, static, final, long, [serialVersionUID=8692300188161871514L] @TO@ TypeDeclaration@@[public]TransformedCollection, AbstractSerializableCollectionDecorator @AT@ 1502 @LENGTH@ 66
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=8692300188161871514L] @AT@ 1502 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=8692300188161871514L] @AT@ 1510 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=8692300188161871514L] @AT@ 1517 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=8692300188161871514L] @AT@ 1523 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=8692300188161871514L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=8692300188161871514L] @AT@ 1528 @LENGTH@ 39
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=8692300188161871514L @AT@ 1528 @LENGTH@ 16
+------INS NumberLiteral@@8692300188161871514L @TO@ VariableDeclarationFragment@@serialVersionUID=8692300188161871514L @AT@ 1547 @LENGTH@ 20

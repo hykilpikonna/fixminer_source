@@ -60,7 +60,7 @@ def create_dataset(cfg: dict, project_list: str = PROJECT_LIST):
     Path(COMMIT_DFS).mkdir(exist_ok=True, parents=True)
 
     # Find project repo urls in dataset.csv
-    dataset: DataFrame = pd.read_csv(join(ROOT_DIR, 'data', 'dataset.csv'))
+    dataset: DataFrame = pd.read_csv(join(ROOT_DIR, 'data', 'dataset-all.csv'))
     if pj_list == ['ALL']:
         repos = dataset[['Repo', 'GitRepo', 'Branch']].values.tolist()
     else:
@@ -88,22 +88,23 @@ def create_dataset(cfg: dict, project_list: str = PROJECT_LIST):
         print(f'> Project {repo} last commit at {latest_commit}')
 
         # Commit time limiting
-        limit_rel = cfg.get('limitCommitsBeforeDays')
-        limit_abs = cfg.get('limitCommitsAbsoluteDate')
+        limit_rel = cfg['fixminer'].get('limitCommitsBeforeDays')
+        limit_abs = cfg['fixminer'].get('limitCommitsAbsoluteDate')
         assert not (limit_rel and limit_abs), 'In the config, you should not define both limitCommitsBeforeDays and limitCommitsAbsoluteDate'
 
         end_date = None
-        if limit_rel:
+        if limit_rel is not None:
             print("> Using relative date")
             end_date = latest_commit - datetime.timedelta(days=int(limit_rel))
 
-        elif limit_abs:
+        if limit_abs:
             print("> Using absolute date")
             end_date = datetime.datetime.strptime(limit_abs, '%Y-%m-%d')
-
+            end_date = end_date.replace(tzinfo=commits.commitDate.iloc[0].tzinfo)
         if end_date:
             print(f'> Has {len(commits)} commits before filtering for date < {end_date}')
             commits = commits[commits.commitDate <= end_date]
+
             print(f'> Has {len(commits)} commits after filtering for date')
 
         commits = commits[commits.commit.isin(fixes)]
@@ -113,4 +114,4 @@ def create_dataset(cfg: dict, project_list: str = PROJECT_LIST):
 
 
 def commit_stats():
-
+    return 0

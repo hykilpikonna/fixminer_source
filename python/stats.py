@@ -329,7 +329,7 @@ def defects4jStats(isFixminer=False):
 
 
         clustersDF['defects4j'] = clustersDF.members.apply(lambda x: getDefects4JID(x))
-        p
+
         save_zipped_pickle(clustersDF, join(DATA_PATH, 'defects4jcluster.pickle'))
     else:
         clustersDF = load_zipped_pickle(join(DATA_PATH, 'defects4jcluster.pickle'))
@@ -466,11 +466,17 @@ def exportAbstractPatterns():
         isJava = True
     for id, members in df[['cid','members']].values.tolist():
 
+        try:
+            dKey = '/'.join(id[0].split('-')[:-1]) + "/" + members[0]
+            lines = redis_db.hget("dump",dKey )
+            cid = id[0].replace("-",'#')
+            abstractPattern(cid,lines.decode(),isJava,members)
+         #   print(f'Error! {id}, {members}!')
+         #   exit(0)
 
-        dKey = '/'.join(id[0].split('-')[:-1]) + "/" + members[0]
-        lines = redis_db.hget("dump",dKey )
-        cid = id[0].replace("-",'#')
-        abstractPattern(cid,lines.decode(),isJava,members)
+        except IndexError as e:
+            print(f'Error! {id}, {members}!')
+
 
 def abstractPattern(cid,lines,isJava,cMembers):
 

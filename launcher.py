@@ -27,9 +27,9 @@ if __name__ == '__main__':
     with open('launcher.config.yml') as f:
         cfg = yaml.safe_load(f)
 
+    if_days = (args.d is None) != (args.a is None)
+    assert if_days, 'Must specify either -d or -a'
     days = args.d or args.a
-    assert days, 'Must specify either -d or -a'
-
     def run(days: str):
         data = Path(cfg['data-generated']).with_suffix('.absolute' if args.a else '.relative')
         day_path = data / days
@@ -85,16 +85,16 @@ if __name__ == '__main__':
 
     # Relative Days
     try:
-        if args.d:
-            days = int(days)
+        if args.d is not None:
+            days = int(args.d)
             while True:
-                run(str(days))
+                run(str(args.d))
                 days += 90
         if args.a:
             days = datetime.strptime(days, '%Y-%m-%d')
             while True:
                 run(days.strftime('%Y-%m-%d'))
-                days -= relativedelta(months=3)
+                days -= relativedelta(months=6)
 
     except KeyboardInterrupt as e:
         log_tg(f'Interrupted. Before interrupt, it was processing {days}')

@@ -1,0 +1,173 @@
+,Time,Number of Patches,Mean,Median,Max
+0,2001-06-01,1,"0    19.0
+dtype: float64","0    19.0
+dtype: float64","0    19
+dtype: int64"
+1,2001-06-01,1,"0    19.0
+dtype: float64","0    19.0
+dtype: float64","0    19
+dtype: int64"
+2,2001-12-01,1,"0    19.0
+dtype: float64","0    19.0
+dtype: float64","0    19
+dtype: int64"
+3,2002-06-01,6,"0    7.833333
+dtype: float64","0    4.0
+dtype: float64","0    19
+dtype: int64"
+4,2002-12-01,12,"0    6.416667
+dtype: float64","0    4.0
+dtype: float64","0    19
+dtype: int64"
+5,2003-06-01,15,"0    6.066667
+dtype: float64","0    4.0
+dtype: float64","0    19
+dtype: int64"
+6,2003-12-01,28,"0    5.464286
+dtype: float64","0    4.0
+dtype: float64","0    19
+dtype: int64"
+7,2004-06-01,37,"0    7.243243
+dtype: float64","0    5.0
+dtype: float64","0    47
+dtype: int64"
+8,2004-12-01,42,"0    7.809524
+dtype: float64","0    5.0
+dtype: float64","0    47
+dtype: int64"
+9,2005-06-01,45,"0    7.511111
+dtype: float64","0    5.0
+dtype: float64","0    47
+dtype: int64"
+10,2005-12-01,48,"0    7.354167
+dtype: float64","0    5.0
+dtype: float64","0    47
+dtype: int64"
+11,2006-06-01,54,"0    7.166667
+dtype: float64","0    5.0
+dtype: float64","0    47
+dtype: int64"
+12,2006-12-01,57,"0    7.614035
+dtype: float64","0    6.0
+dtype: float64","0    47
+dtype: int64"
+13,2007-06-01,84,"0    7.25
+dtype: float64","0    6.0
+dtype: float64","0    47
+dtype: int64"
+14,2007-12-01,118,"0    7.847458
+dtype: float64","0    6.0
+dtype: float64","0    74
+dtype: int64"
+15,2008-06-01,168,"0    7.375
+dtype: float64","0    5.5
+dtype: float64","0    74
+dtype: int64"
+16,2008-12-01,224,"0    7.125
+dtype: float64","0    6.0
+dtype: float64","0    74
+dtype: int64"
+17,2009-06-01,298,"0    7.536913
+dtype: float64","0    6.0
+dtype: float64","0    74
+dtype: int64"
+18,2009-12-01,368,"0    8.078804
+dtype: float64","0    6.0
+dtype: float64","0    93
+dtype: int64"
+19,2010-06-01,407,"0    8.058968
+dtype: float64","0    6.0
+dtype: float64","0    93
+dtype: int64"
+20,2010-12-01,503,"0    8.353877
+dtype: float64","0    6.0
+dtype: float64","0    93
+dtype: int64"
+21,2011-06-01,753,"0    9.548473
+dtype: float64","0    7.0
+dtype: float64","0    93
+dtype: int64"
+22,2011-12-01,1056,"0    10.768939
+dtype: float64","0    7.0
+dtype: float64","0    97
+dtype: int64"
+23,2012-06-01,1268,"0    11.057571
+dtype: float64","0    8.0
+dtype: float64","0    97
+dtype: int64"
+24,2012-12-01,1428,"0    11.42437
+dtype: float64","0    8.0
+dtype: float64","0    97
+dtype: int64"
+25,2013-06-01,1558,"0    11.480103
+dtype: float64","0    8.0
+dtype: float64","0    97
+dtype: int64"
+26,2013-12-01,1728,"0    11.697338
+dtype: float64","0    8.0
+dtype: float64","0    97
+dtype: int64"
+27,2014-06-01,1847,"0    11.671359
+dtype: float64","0    8.0
+dtype: float64","0    98
+dtype: int64"
+28,2014-12-01,1948,"0    11.646817
+dtype: float64","0    8.0
+dtype: float64","0    98
+dtype: int64"
+29,2015-06-01,2029,"0    11.593396
+dtype: float64","0    8.0
+dtype: float64","0    98
+dtype: int64"
+30,2015-12-01,2103,"0    11.618165
+dtype: float64","0    8.0
+dtype: float64","0    98
+dtype: int64"
+31,2016-06-01,2175,"0    11.602759
+dtype: float64","0    8.0
+dtype: float64","0    98
+dtype: int64"
+32,2016-12-01,2247,"0    11.577214
+dtype: float64","0    8.0
+dtype: float64","0    98
+dtype: int64"
+33,2017-06-01,2326,"0    11.625967
+dtype: float64","0    8.0
+dtype: float64","0    98
+dtype: int64"
+34,2017-12-01,2441,"0    11.571897
+dtype: float64","0    8.0
+dtype: float64","0    98
+dtype: int64"
+35,2018-06-01,2490,"0    11.54739
+dtype: float64","0    8.0
+dtype: float64","0    98
+dtype: int64"
+36,2018-12-01,2601,"0    11.503652
+dtype: float64","0    8.0
+dtype: float64","0    98
+dtype: int64"
+37,2019-06-01,2676,"0    11.523543
+dtype: float64","0    8.0
+dtype: float64","0    98
+dtype: int64"
+38,2019-12-01,2761,"0    11.530605
+dtype: float64","0    8.0
+dtype: float64","0    98
+dtype: int64"
+39,2020-06-01,2839,"0    11.609017
+dtype: float64","0    8.0
+dtype: float64","0    98
+dtype: int64"
+40,2020-12-01,2930,"0    11.631741
+dtype: float64","0    8.0
+dtype: float64","0    98
+dtype: int64"
+41,2021-06-01,2984,"0    11.591153
+dtype: float64","0    8.0
+dtype: float64","0    98
+dtype: int64"
+42,2021-12-01,3083,"0    11.639961
+dtype: float64","0    8.0
+dtype: float64","0    98
+dtype: int64"

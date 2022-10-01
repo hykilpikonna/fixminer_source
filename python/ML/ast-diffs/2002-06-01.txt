@@ -1,0 +1,530 @@
+UPD TypeDeclaration@@[public]TestSoftRefHashMap, TestHashMap @TO@ [public]TestSoftRefHashMap, TestMap @AT@ 3266 @LENGTH@ 591
+---UPD SimpleType@@TestHashMap @TO@ TestMap @AT@ 3306 @LENGTH@ 11
+
+
+UPD ReturnStatement@@ClassInstanceCreation:new TestSuite(TestSequencedHashMap.class) @TO@ MethodInvocation:BulkTest.makeSuite(TestSequencedHashMap.class) @AT@ 3668 @LENGTH@ 49
+---INS MethodInvocation@@BulkTest.makeSuite(TestSequencedHashMap.class) @TO@ ReturnStatement@@ClassInstanceCreation:new TestSuite(TestSequencedHashMap.class) @AT@ 3675 @LENGTH@ 46
+------INS SimpleName@@Name:BulkTest @TO@ MethodInvocation@@BulkTest.makeSuite(TestSequencedHashMap.class) @AT@ 3675 @LENGTH@ 8
+------INS SimpleName@@MethodName:makeSuite:[TestSequencedHashMap.class] @TO@ MethodInvocation@@BulkTest.makeSuite(TestSequencedHashMap.class) @AT@ 3684 @LENGTH@ 37
+---------INS TypeLiteral@@TestSequencedHashMap.class @TO@ SimpleName@@MethodName:makeSuite:[TestSequencedHashMap.class] @AT@ 3694 @LENGTH@ 26
+---DEL ClassInstanceCreation@@TestSuite[TestSequencedHashMap.class] @AT@ 3675 @LENGTH@ 41
+------DEL New@@new @AT@ 3675 @LENGTH@ 3
+------DEL SimpleType@@TestSuite @AT@ 3679 @LENGTH@ 9
+------DEL TypeLiteral@@TestSequencedHashMap.class @AT@ 3689 @LENGTH@ 26
+
+
+UPD MethodDeclaration@@public, boolean, MethodName:equals, Object map,  @TO@ public, boolean, MethodName:equals, Object m,  @AT@ 4432 @LENGTH@ 73
+---UPD SingleVariableDeclaration@@Object map @TO@ Object m @AT@ 4454 @LENGTH@ 10
+------UPD SimpleName@@map @TO@ m @AT@ 4461 @LENGTH@ 3
+---UPD ReturnStatement@@MethodInvocation:map.equals(map) @TO@ MethodInvocation:map.equals(m) @AT@ 4476 @LENGTH@ 23
+------UPD MethodInvocation@@map.equals(map) @TO@ map.equals(m) @AT@ 4483 @LENGTH@ 15
+---------UPD SimpleName@@MethodName:equals:[map] @TO@ MethodName:equals:[m] @AT@ 4487 @LENGTH@ 11
+------------UPD SimpleName@@map @TO@ m @AT@ 4494 @LENGTH@ 3
+
+
+UPD ReturnStatement@@ClassInstanceCreation:new TestSuite(TestDoubleOrderedMap.class) @TO@ MethodInvocation:BulkTest.makeSuite(TestDoubleOrderedMap.class) @AT@ 3653 @LENGTH@ 49
+---INS MethodInvocation@@BulkTest.makeSuite(TestDoubleOrderedMap.class) @TO@ ReturnStatement@@ClassInstanceCreation:new TestSuite(TestDoubleOrderedMap.class) @AT@ 3660 @LENGTH@ 46
+------INS SimpleName@@Name:BulkTest @TO@ MethodInvocation@@BulkTest.makeSuite(TestDoubleOrderedMap.class) @AT@ 3660 @LENGTH@ 8
+------INS SimpleName@@MethodName:makeSuite:[TestDoubleOrderedMap.class] @TO@ MethodInvocation@@BulkTest.makeSuite(TestDoubleOrderedMap.class) @AT@ 3669 @LENGTH@ 37
+---------INS TypeLiteral@@TestDoubleOrderedMap.class @TO@ SimpleName@@MethodName:makeSuite:[TestDoubleOrderedMap.class] @AT@ 3679 @LENGTH@ 26
+---DEL ClassInstanceCreation@@TestSuite[TestDoubleOrderedMap.class] @AT@ 3660 @LENGTH@ 41
+------DEL New@@new @AT@ 3660 @LENGTH@ 3
+------DEL SimpleType@@TestSuite @AT@ 3664 @LENGTH@ 9
+------DEL TypeLiteral@@TestDoubleOrderedMap.class @AT@ 3674 @LENGTH@ 26
+
+
+INS MethodDeclaration@@public, void, MethodName:testValuesRemovedFromValuesCollectionAreRemovedFromMap,  @TO@ TypeDeclaration@@[public, abstract]TestMap, TestObject @AT@ 28708 @LENGTH@ 794
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testValuesRemovedFromValuesCollectionAreRemovedFromMap,  @AT@ 28708 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testValuesRemovedFromValuesCollectionAreRemovedFromMap,  @AT@ 28715 @LENGTH@ 4
+---INS SimpleName@@MethodName:testValuesRemovedFromValuesCollectionAreRemovedFromMap @TO@ MethodDeclaration@@public, void, MethodName:testValuesRemovedFromValuesCollectionAreRemovedFromMap,  @AT@ 28720 @LENGTH@ 54
+---INS ExpressionStatement@@MethodInvocation:resetFull() @TO@ MethodDeclaration@@public, void, MethodName:testValuesRemovedFromValuesCollectionAreRemovedFromMap,  @AT@ 28787 @LENGTH@ 12
+------INS MethodInvocation@@MethodName:resetFull:[] @TO@ ExpressionStatement@@MethodInvocation:resetFull() @AT@ 28787 @LENGTH@ 11
+---INS VariableDeclarationStatement@@Object[] sampleValues=getSampleValues(); @TO@ MethodDeclaration@@public, void, MethodName:testValuesRemovedFromValuesCollectionAreRemovedFromMap,  @AT@ 28808 @LENGTH@ 42
+------INS ArrayType@@Object[] @TO@ VariableDeclarationStatement@@Object[] sampleValues=getSampleValues(); @AT@ 28808 @LENGTH@ 8
+---------INS SimpleType@@Object @TO@ ArrayType@@Object[] @AT@ 28808 @LENGTH@ 6
+------INS VariableDeclarationFragment@@sampleValues=getSampleValues() @TO@ VariableDeclarationStatement@@Object[] sampleValues=getSampleValues(); @AT@ 28817 @LENGTH@ 32
+---------INS SimpleName@@sampleValues @TO@ VariableDeclarationFragment@@sampleValues=getSampleValues() @AT@ 28817 @LENGTH@ 12
+---------INS MethodInvocation@@MethodName:getSampleValues:[] @TO@ VariableDeclarationFragment@@sampleValues=getSampleValues() @AT@ 28832 @LENGTH@ 17
+---INS VariableDeclarationStatement@@Collection values=map.values(); @TO@ MethodDeclaration@@public, void, MethodName:testValuesRemovedFromValuesCollectionAreRemovedFromMap,  @AT@ 28859 @LENGTH@ 33
+------INS SimpleType@@Collection @TO@ VariableDeclarationStatement@@Collection values=map.values(); @AT@ 28859 @LENGTH@ 10
+------INS VariableDeclarationFragment@@values=map.values() @TO@ VariableDeclarationStatement@@Collection values=map.values(); @AT@ 28870 @LENGTH@ 21
+---------INS SimpleName@@values @TO@ VariableDeclarationFragment@@values=map.values() @AT@ 28870 @LENGTH@ 6
+---------INS MethodInvocation@@map.values() @TO@ VariableDeclarationFragment@@values=map.values() @AT@ 28879 @LENGTH@ 12
+------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.values() @AT@ 28879 @LENGTH@ 3
+------------INS SimpleName@@MethodName:values:[] @TO@ MethodInvocation@@map.values() @AT@ 28883 @LENGTH@ 8
+---INS ForStatement@@for (int i=0; i < sampleValues.length; i++) {  if (map.containsValue(sampleValues[i])) {    while (values.contains(sampleValues[i])) {      try {        values.remove(sampleValues[i]);      } catch (      UnsupportedOperationException e) {        return;      }    }    assertTrue("Value should have been removed from the underlying map.",!map.containsValue(sampleValues[i]));  }} @TO@ MethodDeclaration@@public, void, MethodName:testValuesRemovedFromValuesCollectionAreRemovedFromMap,  @AT@ 28901 @LENGTH@ 595
+------INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@for (int i=0; i < sampleValues.length; i++) {  if (map.containsValue(sampleValues[i])) {    while (values.contains(sampleValues[i])) {      try {        values.remove(sampleValues[i]);      } catch (      UnsupportedOperationException e) {        return;      }    }    assertTrue("Value should have been removed from the underlying map.",!map.containsValue(sampleValues[i]));  }} @AT@ 28905 @LENGTH@ 7
+---------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 28905 @LENGTH@ 3
+---------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 28909 @LENGTH@ 3
+------------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 28909 @LENGTH@ 1
+------------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 28911 @LENGTH@ 1
+------INS InfixExpression@@i < sampleValues.length @TO@ ForStatement@@for (int i=0; i < sampleValues.length; i++) {  if (map.containsValue(sampleValues[i])) {    while (values.contains(sampleValues[i])) {      try {        values.remove(sampleValues[i]);      } catch (      UnsupportedOperationException e) {        return;      }    }    assertTrue("Value should have been removed from the underlying map.",!map.containsValue(sampleValues[i]));  }} @AT@ 28913 @LENGTH@ 21
+---------INS SimpleName@@i @TO@ InfixExpression@@i < sampleValues.length @AT@ 28913 @LENGTH@ 1
+---------INS Operator@@< @TO@ InfixExpression@@i < sampleValues.length @AT@ 28914 @LENGTH@ 1
+---------INS QualifiedName@@sampleValues.length @TO@ InfixExpression@@i < sampleValues.length @AT@ 28915 @LENGTH@ 19
+------------INS SimpleName@@sampleValues @TO@ QualifiedName@@sampleValues.length @AT@ 28915 @LENGTH@ 12
+------------INS SimpleName@@length @TO@ QualifiedName@@sampleValues.length @AT@ 28928 @LENGTH@ 6
+------INS PostfixExpression@@i++ @TO@ ForStatement@@for (int i=0; i < sampleValues.length; i++) {  if (map.containsValue(sampleValues[i])) {    while (values.contains(sampleValues[i])) {      try {        values.remove(sampleValues[i]);      } catch (      UnsupportedOperationException e) {        return;      }    }    assertTrue("Value should have been removed from the underlying map.",!map.containsValue(sampleValues[i]));  }} @AT@ 28935 @LENGTH@ 3
+---------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 28935 @LENGTH@ 1
+---------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 28937 @LENGTH@ 2
+------INS IfStatement@@if (map.containsValue(sampleValues[i])) {  while (values.contains(sampleValues[i])) {    try {      values.remove(sampleValues[i]);    } catch (    UnsupportedOperationException e) {      return;    }  }  assertTrue("Value should have been removed from the underlying map.",!map.containsValue(sampleValues[i]));} @TO@ ForStatement@@for (int i=0; i < sampleValues.length; i++) {  if (map.containsValue(sampleValues[i])) {    while (values.contains(sampleValues[i])) {      try {        values.remove(sampleValues[i]);      } catch (      UnsupportedOperationException e) {        return;      }    }    assertTrue("Value should have been removed from the underlying map.",!map.containsValue(sampleValues[i]));  }} @AT@ 28954 @LENGTH@ 532
+---------INS MethodInvocation@@map.containsValue(sampleValues[i]) @TO@ IfStatement@@if (map.containsValue(sampleValues[i])) {  while (values.contains(sampleValues[i])) {    try {      values.remove(sampleValues[i]);    } catch (    UnsupportedOperationException e) {      return;    }  }  assertTrue("Value should have been removed from the underlying map.",!map.containsValue(sampleValues[i]));} @AT@ 28957 @LENGTH@ 34
+------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.containsValue(sampleValues[i]) @AT@ 28957 @LENGTH@ 3
+------------INS SimpleName@@MethodName:containsValue:[sampleValues[i]] @TO@ MethodInvocation@@map.containsValue(sampleValues[i]) @AT@ 28961 @LENGTH@ 30
+---------------INS ArrayAccess@@sampleValues[i] @TO@ SimpleName@@MethodName:containsValue:[sampleValues[i]] @AT@ 28975 @LENGTH@ 15
+------------------INS SimpleName@@sampleValues @TO@ ArrayAccess@@sampleValues[i] @AT@ 28975 @LENGTH@ 12
+------------------INS SimpleName@@i @TO@ ArrayAccess@@sampleValues[i] @AT@ 28988 @LENGTH@ 1
+---------INS Block@@ThenBody:{  while (values.contains(sampleValues[i])) {    try {      values.remove(sampleValues[i]);    } catch (    UnsupportedOperationException e) {      return;    }  }  assertTrue("Value should have been removed from the underlying map.",!map.containsValue(sampleValues[i]));} @TO@ IfStatement@@if (map.containsValue(sampleValues[i])) {  while (values.contains(sampleValues[i])) {    try {      values.remove(sampleValues[i]);    } catch (    UnsupportedOperationException e) {      return;    }  }  assertTrue("Value should have been removed from the underlying map.",!map.containsValue(sampleValues[i]));} @AT@ 28993 @LENGTH@ 493
+------------INS WhileStatement@@while (values.contains(sampleValues[i])) {  try {    values.remove(sampleValues[i]);  } catch (  UnsupportedOperationException e) {    return;  }} @TO@ Block@@ThenBody:{  while (values.contains(sampleValues[i])) {    try {      values.remove(sampleValues[i]);    } catch (    UnsupportedOperationException e) {      return;    }  }  assertTrue("Value should have been removed from the underlying map.",!map.containsValue(sampleValues[i]));} @AT@ 29011 @LENGTH@ 338
+---------------INS MethodInvocation@@values.contains(sampleValues[i]) @TO@ WhileStatement@@while (values.contains(sampleValues[i])) {  try {    values.remove(sampleValues[i]);  } catch (  UnsupportedOperationException e) {    return;  }} @AT@ 29017 @LENGTH@ 32
+------------------INS SimpleName@@Name:values @TO@ MethodInvocation@@values.contains(sampleValues[i]) @AT@ 29017 @LENGTH@ 6
+------------------INS SimpleName@@MethodName:contains:[sampleValues[i]] @TO@ MethodInvocation@@values.contains(sampleValues[i]) @AT@ 29024 @LENGTH@ 25
+---------------------INS ArrayAccess@@sampleValues[i] @TO@ SimpleName@@MethodName:contains:[sampleValues[i]] @AT@ 29033 @LENGTH@ 15
+------------------------INS SimpleName@@sampleValues @TO@ ArrayAccess@@sampleValues[i] @AT@ 29033 @LENGTH@ 12
+------------------------INS SimpleName@@i @TO@ ArrayAccess@@sampleValues[i] @AT@ 29046 @LENGTH@ 1
+---------------INS Block@@WhileBody:{  try {    values.remove(sampleValues[i]);  } catch (  UnsupportedOperationException e) {    return;  }} @TO@ WhileStatement@@while (values.contains(sampleValues[i])) {  try {    values.remove(sampleValues[i]);  } catch (  UnsupportedOperationException e) {    return;  }} @AT@ 29051 @LENGTH@ 298
+------------------INS TryStatement@@try {  values.remove(sampleValues[i]);} catch (UnsupportedOperationException e) {  return;} @TO@ Block@@WhileBody:{  try {    values.remove(sampleValues[i]);  } catch (  UnsupportedOperationException e) {    return;  }} @AT@ 29073 @LENGTH@ 258
+---------------------INS ExpressionStatement@@MethodInvocation:values.remove(sampleValues[i]) @TO@ TryStatement@@try {  values.remove(sampleValues[i]);} catch (UnsupportedOperationException e) {  return;} @AT@ 29103 @LENGTH@ 31
+------------------------INS MethodInvocation@@values.remove(sampleValues[i]) @TO@ ExpressionStatement@@MethodInvocation:values.remove(sampleValues[i]) @AT@ 29103 @LENGTH@ 30
+---------------------------INS SimpleName@@Name:values @TO@ MethodInvocation@@values.remove(sampleValues[i]) @AT@ 29103 @LENGTH@ 6
+---------------------------INS SimpleName@@MethodName:remove:[sampleValues[i]] @TO@ MethodInvocation@@values.remove(sampleValues[i]) @AT@ 29110 @LENGTH@ 23
+------------------------------INS ArrayAccess@@sampleValues[i] @TO@ SimpleName@@MethodName:remove:[sampleValues[i]] @AT@ 29117 @LENGTH@ 15
+---------------------------------INS SimpleName@@sampleValues @TO@ ArrayAccess@@sampleValues[i] @AT@ 29117 @LENGTH@ 12
+---------------------------------INS SimpleName@@i @TO@ ArrayAccess@@sampleValues[i] @AT@ 29130 @LENGTH@ 1
+---------------------INS CatchClause@@catch (UnsupportedOperationException e) {  return;} @TO@ TryStatement@@try {  values.remove(sampleValues[i]);} catch (UnsupportedOperationException e) {  return;} @AT@ 29157 @LENGTH@ 174
+------------------------INS SingleVariableDeclaration@@UnsupportedOperationException e @TO@ CatchClause@@catch (UnsupportedOperationException e) {  return;} @AT@ 29163 @LENGTH@ 31
+---------------------------INS SimpleType@@UnsupportedOperationException @TO@ SingleVariableDeclaration@@UnsupportedOperationException e @AT@ 29163 @LENGTH@ 29
+---------------------------INS SimpleName@@e @TO@ SingleVariableDeclaration@@UnsupportedOperationException e @AT@ 29193 @LENGTH@ 1
+------------------------INS ReturnStatement@@ @TO@ CatchClause@@catch (UnsupportedOperationException e) {  return;} @AT@ 29302 @LENGTH@ 7
+------------INS ExpressionStatement@@MethodInvocation:assertTrue("Value should have been removed from the underlying map.",!map.containsValue(sampleValues[i])) @TO@ Block@@ThenBody:{  while (values.contains(sampleValues[i])) {    try {      values.remove(sampleValues[i]);    } catch (    UnsupportedOperationException e) {      return;    }  }  assertTrue("Value should have been removed from the underlying map.",!map.containsValue(sampleValues[i]));} @AT@ 29366 @LENGTH@ 106
+---------------INS MethodInvocation@@assertTrue("Value should have been removed from the underlying map.",!map.containsValue(sampleValues[i])) @TO@ ExpressionStatement@@MethodInvocation:assertTrue("Value should have been removed from the underlying map.",!map.containsValue(sampleValues[i])) @AT@ 29366 @LENGTH@ 105
+------------------INS SimpleName@@MethodName:assertTrue:["Value should have been removed from the underlying map.", !map.containsValue(sampleValues[i])] @TO@ MethodInvocation@@assertTrue("Value should have been removed from the underlying map.",!map.containsValue(sampleValues[i])) @AT@ 29366 @LENGTH@ 105
+---------------------INS StringLiteral@@"Value should have been removed from the underlying map." @TO@ SimpleName@@MethodName:assertTrue:["Value should have been removed from the underlying map.", !map.containsValue(sampleValues[i])] @AT@ 29377 @LENGTH@ 57
+---------------------INS PrefixExpression@@!map.containsValue(sampleValues[i]) @TO@ SimpleName@@MethodName:assertTrue:["Value should have been removed from the underlying map.", !map.containsValue(sampleValues[i])] @AT@ 29435 @LENGTH@ 35
+------------------------INS Operator@@! @TO@ PrefixExpression@@!map.containsValue(sampleValues[i]) @AT@ 29435 @LENGTH@ 1
+------------------------INS MethodInvocation@@map.containsValue(sampleValues[i]) @TO@ PrefixExpression@@!map.containsValue(sampleValues[i]) @AT@ 29436 @LENGTH@ 34
+---------------------------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.containsValue(sampleValues[i]) @AT@ 29436 @LENGTH@ 3
+---------------------------INS SimpleName@@MethodName:containsValue:[sampleValues[i]] @TO@ MethodInvocation@@map.containsValue(sampleValues[i]) @AT@ 29440 @LENGTH@ 30
+------------------------------INS ArrayAccess@@sampleValues[i] @TO@ SimpleName@@MethodName:containsValue:[sampleValues[i]] @AT@ 29454 @LENGTH@ 15
+---------------------------------INS SimpleName@@sampleValues @TO@ ArrayAccess@@sampleValues[i] @AT@ 29454 @LENGTH@ 12
+---------------------------------INS SimpleName@@i @TO@ ArrayAccess@@sampleValues[i] @AT@ 29467 @LENGTH@ 1
+
+
+UPD TypeDeclaration@@[public]TestSequencedHashMap, TestMap[TestMap.SupportsPut] @TO@ [public]TestSequencedHashMap, TestMap @AT@ 3406 @LENGTH@ 5311
+---DEL SimpleType@@TestMap.SupportsPut @AT@ 3468 @LENGTH@ 19
+
+
+UPD ReturnStatement@@ClassInstanceCreation:new TestSuite(TestFastHashMap.class) @TO@ MethodInvocation:BulkTest.makeSuite(TestFastHashMap.class) @AT@ 3429 @LENGTH@ 44
+---INS MethodInvocation@@BulkTest.makeSuite(TestFastHashMap.class) @TO@ ReturnStatement@@ClassInstanceCreation:new TestSuite(TestFastHashMap.class) @AT@ 3428 @LENGTH@ 41
+------INS SimpleName@@Name:BulkTest @TO@ MethodInvocation@@BulkTest.makeSuite(TestFastHashMap.class) @AT@ 3428 @LENGTH@ 8
+------INS SimpleName@@MethodName:makeSuite:[TestFastHashMap.class] @TO@ MethodInvocation@@BulkTest.makeSuite(TestFastHashMap.class) @AT@ 3437 @LENGTH@ 32
+---------INS TypeLiteral@@TestFastHashMap.class @TO@ SimpleName@@MethodName:makeSuite:[TestFastHashMap.class] @AT@ 3447 @LENGTH@ 21
+---DEL ClassInstanceCreation@@TestSuite[TestFastHashMap.class] @AT@ 3436 @LENGTH@ 36
+------DEL New@@new @AT@ 3436 @LENGTH@ 3
+------DEL SimpleType@@TestSuite @AT@ 3440 @LENGTH@ 9
+------DEL TypeLiteral@@TestFastHashMap.class @AT@ 3450 @LENGTH@ 21
+
+
+DEL MethodDeclaration@@public, void, MethodName:setUp,  @AT@ 3787 @LENGTH@ 67
+---DEL Modifier@@public @AT@ 3787 @LENGTH@ 6
+---DEL PrimitiveType@@void @AT@ 3794 @LENGTH@ 4
+---DEL SimpleName@@MethodName:setUp @AT@ 3799 @LENGTH@ 5
+---DEL ExpressionStatement@@Assignment:map=(HashMap)makeEmptyMap() @AT@ 3817 @LENGTH@ 31
+------DEL Assignment@@map=(HashMap)makeEmptyMap() @AT@ 3817 @LENGTH@ 30
+---------DEL SimpleName@@map @AT@ 3817 @LENGTH@ 3
+---------DEL Operator@@= @AT@ 3820 @LENGTH@ 1
+---------DEL CastExpression@@(HashMap)makeEmptyMap() @AT@ 3823 @LENGTH@ 24
+------------DEL SimpleType@@HashMap @AT@ 3824 @LENGTH@ 7
+------------DEL MethodInvocation@@MethodName:makeEmptyMap:[] @AT@ 3833 @LENGTH@ 14
+
+
+UPD MethodDeclaration@@public, void, MethodName:tearDown,  @TO@ public, void, MethodName:tearDown, Exception,  @AT@ 3730 @LENGTH@ 55
+---INS SimpleType@@Exception @TO@ MethodDeclaration@@public, void, MethodName:tearDown,  @AT@ 3758 @LENGTH@ 9
+
+
+INS ExpressionStatement@@MethodInvocation:suite.addTest(TestStaticBucketMap.suite()) @TO@ MethodDeclaration@@public, static, Test, MethodName:suite,  @AT@ 4776 @LENGTH@ 43
+---INS MethodInvocation@@suite.addTest(TestStaticBucketMap.suite()) @TO@ ExpressionStatement@@MethodInvocation:suite.addTest(TestStaticBucketMap.suite()) @AT@ 4776 @LENGTH@ 42
+------INS SimpleName@@Name:suite @TO@ MethodInvocation@@suite.addTest(TestStaticBucketMap.suite()) @AT@ 4776 @LENGTH@ 5
+------INS SimpleName@@MethodName:addTest:[TestStaticBucketMap.suite()] @TO@ MethodInvocation@@suite.addTest(TestStaticBucketMap.suite()) @AT@ 4782 @LENGTH@ 36
+---------INS MethodInvocation@@TestStaticBucketMap.suite() @TO@ SimpleName@@MethodName:addTest:[TestStaticBucketMap.suite()] @AT@ 4790 @LENGTH@ 27
+------------INS SimpleName@@Name:TestStaticBucketMap @TO@ MethodInvocation@@TestStaticBucketMap.suite() @AT@ 4790 @LENGTH@ 19
+------------INS SimpleName@@MethodName:suite:[] @TO@ MethodInvocation@@TestStaticBucketMap.suite() @AT@ 4810 @LENGTH@ 7
+
+
+INS MethodDeclaration@@public, boolean, MethodName:useNullValue,  @TO@ TypeDeclaration@@[public]TestFastHashMap, TestMap @AT@ 3932 @LENGTH@ 59
+---INS Modifier@@public @TO@ MethodDeclaration@@public, boolean, MethodName:useNullValue,  @AT@ 3932 @LENGTH@ 6
+---INS PrimitiveType@@boolean @TO@ MethodDeclaration@@public, boolean, MethodName:useNullValue,  @AT@ 3939 @LENGTH@ 7
+---INS SimpleName@@MethodName:useNullValue @TO@ MethodDeclaration@@public, boolean, MethodName:useNullValue,  @AT@ 3947 @LENGTH@ 12
+---INS ReturnStatement@@BooleanLiteral:false @TO@ MethodDeclaration@@public, boolean, MethodName:useNullValue,  @AT@ 3972 @LENGTH@ 13
+------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 3979 @LENGTH@ 5
+
+
+INS MethodDeclaration@@public, boolean, MethodName:useNullValue,  @TO@ TypeDeclaration@@[public]TestFastTreeMap, TestTreeMap @AT@ 4087 @LENGTH@ 58
+---INS Modifier@@public @TO@ MethodDeclaration@@public, boolean, MethodName:useNullValue,  @AT@ 4087 @LENGTH@ 6
+---INS PrimitiveType@@boolean @TO@ MethodDeclaration@@public, boolean, MethodName:useNullValue,  @AT@ 4094 @LENGTH@ 7
+---INS SimpleName@@MethodName:useNullValue @TO@ MethodDeclaration@@public, boolean, MethodName:useNullValue,  @AT@ 4102 @LENGTH@ 12
+---INS ReturnStatement@@BooleanLiteral:false @TO@ MethodDeclaration@@public, boolean, MethodName:useNullValue,  @AT@ 4126 @LENGTH@ 13
+------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 4133 @LENGTH@ 5
+
+
+UPD MethodDeclaration@@protected, void, MethodName:tearDown,  @TO@ protected, void, MethodName:tearDown, Exception,  @AT@ 8565 @LENGTH@ 56
+---INS SimpleType@@Exception @TO@ MethodDeclaration@@protected, void, MethodName:tearDown,  @AT@ 8603 @LENGTH@ 9
+
+
+UPD IfStatement@@if (o.equals(elt.value())) {  removeListable(elt);  return true;} @TO@ if (o != null && o.equals(elt.value())) {  removeListable(elt);  return true;} @AT@ 20583 @LENGTH@ 107
+---INS InfixExpression@@o != null && o.equals(elt.value()) @TO@ IfStatement@@if (o.equals(elt.value())) {  removeListable(elt);  return true;} @AT@ 20615 @LENGTH@ 34
+------MOV MethodInvocation@@o.equals(elt.value()) @TO@ InfixExpression@@o != null && o.equals(elt.value()) @AT@ 20586 @LENGTH@ 21
+------MOV MethodInvocation@@o.equals(elt.value()) @TO@ InfixExpression@@o != null && o.equals(elt.value()) @AT@ 20586 @LENGTH@ 21
+------INS InfixExpression@@o != null @TO@ InfixExpression@@o != null && o.equals(elt.value()) @AT@ 20615 @LENGTH@ 9
+---------INS SimpleName@@o @TO@ InfixExpression@@o != null @AT@ 20615 @LENGTH@ 1
+---------INS Operator@@!= @TO@ InfixExpression@@o != null @AT@ 20616 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@o != null @AT@ 20620 @LENGTH@ 4
+------INS Operator@@&& @TO@ InfixExpression@@o != null && o.equals(elt.value()) @AT@ 20624 @LENGTH@ 2
+
+
+UPD IfStatement@@if ((null == o && null == elt.value()) || (o.equals(elt.value()))) {  return true;} @TO@ if ((null == o && null == elt.value()) || (o != null && o.equals(elt.value()))) {  return true;} @AT@ 10822 @LENGTH@ 110
+---UPD InfixExpression@@(null == o && null == elt.value()) || (o.equals(elt.value())) @TO@ (null == o && null == elt.value()) || (o != null && o.equals(elt.value())) @AT@ 10825 @LENGTH@ 61
+------UPD ParenthesizedExpression@@(o.equals(elt.value())) @TO@ (o != null && o.equals(elt.value())) @AT@ 10863 @LENGTH@ 23
+---------INS InfixExpression@@o != null && o.equals(elt.value()) @TO@ ParenthesizedExpression@@(o.equals(elt.value())) @AT@ 10880 @LENGTH@ 34
+------------MOV MethodInvocation@@o.equals(elt.value()) @TO@ InfixExpression@@o != null && o.equals(elt.value()) @AT@ 10864 @LENGTH@ 21
+------------INS InfixExpression@@o != null @TO@ InfixExpression@@o != null && o.equals(elt.value()) @AT@ 10880 @LENGTH@ 9
+---------------INS SimpleName@@o @TO@ InfixExpression@@o != null @AT@ 10880 @LENGTH@ 1
+---------------INS Operator@@!= @TO@ InfixExpression@@o != null @AT@ 10881 @LENGTH@ 2
+---------------INS NullLiteral@@null @TO@ InfixExpression@@o != null @AT@ 10885 @LENGTH@ 4
+------------INS Operator@@&& @TO@ InfixExpression@@o != null && o.equals(elt.value()) @AT@ 10889 @LENGTH@ 2
+
+
+INS MethodDeclaration@@public, String[], MethodName:ignoredSimpleTests,  @TO@ TypeDeclaration@@[public]TestBeanMap, TestMap @AT@ 10532 @LENGTH@ 744
+---INS Modifier@@public @TO@ MethodDeclaration@@public, String[], MethodName:ignoredSimpleTests,  @AT@ 10532 @LENGTH@ 6
+---INS ArrayType@@String[] @TO@ MethodDeclaration@@public, String[], MethodName:ignoredSimpleTests,  @AT@ 10539 @LENGTH@ 8
+------INS SimpleType@@String @TO@ ArrayType@@String[] @AT@ 10539 @LENGTH@ 6
+---INS SimpleName@@MethodName:ignoredSimpleTests @TO@ MethodDeclaration@@public, String[], MethodName:ignoredSimpleTests,  @AT@ 10548 @LENGTH@ 18
+---INS ReturnStatement@@ArrayCreation:new String[]{"TestBeanMap.bulkTestMapEntrySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapEntrySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapEntrySet.testSimpleSerialization","TestBeanMap.bulkTestMapKeySet.testSimpleSerialization"} @TO@ MethodDeclaration@@public, String[], MethodName:ignoredSimpleTests,  @AT@ 10642 @LENGTH@ 628
+------INS ArrayCreation@@new String[]{"TestBeanMap.bulkTestMapEntrySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapEntrySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapEntrySet.testSimpleSerialization","TestBeanMap.bulkTestMapKeySet.testSimpleSerialization"} @TO@ ReturnStatement@@ArrayCreation:new String[]{"TestBeanMap.bulkTestMapEntrySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapEntrySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapEntrySet.testSimpleSerialization","TestBeanMap.bulkTestMapKeySet.testSimpleSerialization"} @AT@ 10649 @LENGTH@ 620
+---------INS ArrayType@@String[] @TO@ ArrayCreation@@new String[]{"TestBeanMap.bulkTestMapEntrySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapEntrySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapEntrySet.testSimpleSerialization","TestBeanMap.bulkTestMapKeySet.testSimpleSerialization"} @AT@ 10653 @LENGTH@ 8
+------------INS SimpleType@@String @TO@ ArrayType@@String[] @AT@ 10653 @LENGTH@ 6
+---------INS ArrayInitializer@@{"TestBeanMap.bulkTestMapEntrySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapEntrySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapEntrySet.testSimpleSerialization","TestBeanMap.bulkTestMapKeySet.testSimpleSerialization"} @TO@ ArrayCreation@@new String[]{"TestBeanMap.bulkTestMapEntrySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapEntrySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapEntrySet.testSimpleSerialization","TestBeanMap.bulkTestMapKeySet.testSimpleSerialization"} @AT@ 10662 @LENGTH@ 607
+------------INS StringLiteral@@"TestBeanMap.bulkTestMapEntrySet.testCanonicalEmptyCollectionExists" @TO@ ArrayInitializer@@{"TestBeanMap.bulkTestMapEntrySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapEntrySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapEntrySet.testSimpleSerialization","TestBeanMap.bulkTestMapKeySet.testSimpleSerialization"} @AT@ 10673 @LENGTH@ 68
+------------INS StringLiteral@@"TestBeanMap.bulkTestMapEntrySet.testCanonicalFullCollectionExists" @TO@ ArrayInitializer@@{"TestBeanMap.bulkTestMapEntrySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapEntrySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapEntrySet.testSimpleSerialization","TestBeanMap.bulkTestMapKeySet.testSimpleSerialization"} @AT@ 10752 @LENGTH@ 67
+------------INS StringLiteral@@"TestBeanMap.bulkTestMapKeySet.testCanonicalEmptyCollectionExists" @TO@ ArrayInitializer@@{"TestBeanMap.bulkTestMapEntrySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapEntrySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapEntrySet.testSimpleSerialization","TestBeanMap.bulkTestMapKeySet.testSimpleSerialization"} @AT@ 10830 @LENGTH@ 66
+------------INS StringLiteral@@"TestBeanMap.bulkTestMapKeySet.testCanonicalFullCollectionExists" @TO@ ArrayInitializer@@{"TestBeanMap.bulkTestMapEntrySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapEntrySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapEntrySet.testSimpleSerialization","TestBeanMap.bulkTestMapKeySet.testSimpleSerialization"} @AT@ 10907 @LENGTH@ 65
+------------INS StringLiteral@@"TestBeanMap.bulkTestMapValues.testCanonicalEmptyCollectionExists" @TO@ ArrayInitializer@@{"TestBeanMap.bulkTestMapEntrySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapEntrySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapEntrySet.testSimpleSerialization","TestBeanMap.bulkTestMapKeySet.testSimpleSerialization"} @AT@ 10983 @LENGTH@ 66
+------------INS StringLiteral@@"TestBeanMap.bulkTestMapValues.testCanonicalFullCollectionExists" @TO@ ArrayInitializer@@{"TestBeanMap.bulkTestMapEntrySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapEntrySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapEntrySet.testSimpleSerialization","TestBeanMap.bulkTestMapKeySet.testSimpleSerialization"} @AT@ 11060 @LENGTH@ 65
+------------INS StringLiteral@@"TestBeanMap.bulkTestMapEntrySet.testSimpleSerialization" @TO@ ArrayInitializer@@{"TestBeanMap.bulkTestMapEntrySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapEntrySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapEntrySet.testSimpleSerialization","TestBeanMap.bulkTestMapKeySet.testSimpleSerialization"} @AT@ 11136 @LENGTH@ 57
+------------INS StringLiteral@@"TestBeanMap.bulkTestMapKeySet.testSimpleSerialization" @TO@ ArrayInitializer@@{"TestBeanMap.bulkTestMapEntrySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapEntrySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapKeySet.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalEmptyCollectionExists","TestBeanMap.bulkTestMapValues.testCanonicalFullCollectionExists","TestBeanMap.bulkTestMapEntrySet.testSimpleSerialization","TestBeanMap.bulkTestMapKeySet.testSimpleSerialization"} @AT@ 11204 @LENGTH@ 55
+
+
+UPD ReturnStatement@@ClassInstanceCreation:new TestSuite(TestCursorableLinkedList.class) @TO@ MethodInvocation:BulkTest.makeSuite(TestCursorableLinkedList.class) @AT@ 3318 @LENGTH@ 53
+---INS MethodInvocation@@BulkTest.makeSuite(TestCursorableLinkedList.class) @TO@ ReturnStatement@@ClassInstanceCreation:new TestSuite(TestCursorableLinkedList.class) @AT@ 3317 @LENGTH@ 50
+------INS SimpleName@@Name:BulkTest @TO@ MethodInvocation@@BulkTest.makeSuite(TestCursorableLinkedList.class) @AT@ 3317 @LENGTH@ 8
+------INS SimpleName@@MethodName:makeSuite:[TestCursorableLinkedList.class] @TO@ MethodInvocation@@BulkTest.makeSuite(TestCursorableLinkedList.class) @AT@ 3326 @LENGTH@ 41
+---------INS TypeLiteral@@TestCursorableLinkedList.class @TO@ SimpleName@@MethodName:makeSuite:[TestCursorableLinkedList.class] @AT@ 3336 @LENGTH@ 30
+---DEL ClassInstanceCreation@@TestSuite[TestCursorableLinkedList.class] @AT@ 3325 @LENGTH@ 45
+------DEL New@@new @AT@ 3325 @LENGTH@ 3
+------DEL SimpleType@@TestSuite @AT@ 3329 @LENGTH@ 9
+------DEL TypeLiteral@@TestCursorableLinkedList.class @AT@ 3339 @LENGTH@ 30
+
+
+UPD ReturnStatement@@ClassInstanceCreation:new TestSuite(TestFastHashMap1.class) @TO@ MethodInvocation:BulkTest.makeSuite(TestFastHashMap1.class) @AT@ 3483 @LENGTH@ 45
+---INS MethodInvocation@@BulkTest.makeSuite(TestFastHashMap1.class) @TO@ ReturnStatement@@ClassInstanceCreation:new TestSuite(TestFastHashMap1.class) @AT@ 3490 @LENGTH@ 42
+------INS SimpleName@@Name:BulkTest @TO@ MethodInvocation@@BulkTest.makeSuite(TestFastHashMap1.class) @AT@ 3490 @LENGTH@ 8
+------INS SimpleName@@MethodName:makeSuite:[TestFastHashMap1.class] @TO@ MethodInvocation@@BulkTest.makeSuite(TestFastHashMap1.class) @AT@ 3499 @LENGTH@ 33
+---------INS TypeLiteral@@TestFastHashMap1.class @TO@ SimpleName@@MethodName:makeSuite:[TestFastHashMap1.class] @AT@ 3509 @LENGTH@ 22
+---DEL ClassInstanceCreation@@TestSuite[TestFastHashMap1.class] @AT@ 3490 @LENGTH@ 37
+------DEL New@@new @AT@ 3490 @LENGTH@ 3
+------DEL SimpleType@@TestSuite @AT@ 3494 @LENGTH@ 9
+------DEL TypeLiteral@@TestFastHashMap1.class @AT@ 3504 @LENGTH@ 22
+
+
+UPD ExpressionStatement@@MethodInvocation:map.remove(key) @TO@ MethodInvocation:i.remove() @AT@ 4789 @LENGTH@ 18
+---UPD MethodInvocation@@map.remove(key) @TO@ i.remove() @AT@ 4789 @LENGTH@ 17
+------UPD SimpleName@@Name:map @TO@ Name:i @AT@ 4789 @LENGTH@ 3
+------UPD SimpleName@@MethodName:remove:[key] @TO@ MethodName:remove:[] @AT@ 4793 @LENGTH@ 13
+---------DEL SimpleName@@key @AT@ 4801 @LENGTH@ 3
+
+
+INS MethodDeclaration@@public, void, MethodName:testValuesRemovedFromValuesCollectionAreRemovedFromMap,  @TO@ TypeDeclaration@@[public]TestMultiHashMap, TestMap @AT@ 8900 @LENGTH@ 195
+---INS Modifier@@public @TO@ MethodDeclaration@@public, void, MethodName:testValuesRemovedFromValuesCollectionAreRemovedFromMap,  @AT@ 8900 @LENGTH@ 6
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@public, void, MethodName:testValuesRemovedFromValuesCollectionAreRemovedFromMap,  @AT@ 8907 @LENGTH@ 4
+---INS SimpleName@@MethodName:testValuesRemovedFromValuesCollectionAreRemovedFromMap @TO@ MethodDeclaration@@public, void, MethodName:testValuesRemovedFromValuesCollectionAreRemovedFromMap,  @AT@ 8912 @LENGTH@ 54
+
+
+INS MethodDeclaration@@public, BulkTest, MethodName:bulkTestPredicatedCollection1,  @TO@ TypeDeclaration@@[public]TestCollectionUtils, TestCase @AT@ 13275 @LENGTH@ 1265
+---INS Modifier@@public @TO@ MethodDeclaration@@public, BulkTest, MethodName:bulkTestPredicatedCollection1,  @AT@ 13275 @LENGTH@ 6
+---INS SimpleType@@BulkTest @TO@ MethodDeclaration@@public, BulkTest, MethodName:bulkTestPredicatedCollection1,  @AT@ 13282 @LENGTH@ 8
+---INS SimpleName@@MethodName:bulkTestPredicatedCollection1 @TO@ MethodDeclaration@@public, BulkTest, MethodName:bulkTestPredicatedCollection1,  @AT@ 13291 @LENGTH@ 29
+---INS ReturnStatement@@ClassInstanceCreation:new TestPredicatedCollection(""){
+  public Collection predicatedCollection(){
+    Predicate p=getPredicate();
+    return CollectionUtils.predicatedCollection(new ArrayList(),p);
+  }
+  public BulkTest bulkTestAll(){
+    return new TestCollection(""){
+      public Collection makeCollection(){
+        return predicatedCollection();
+      }
+      public Collection makeConfirmedCollection(){
+        return new ArrayList();
+      }
+      public Collection makeConfirmedFullCollection(){
+        ArrayList list=new ArrayList();
+        list.addAll(java.util.Arrays.asList(getFullElements()));
+        return list;
+      }
+      public Object[] getFullElements(){
+        return getFullNonNullStringElements();
+      }
+      public Object[] getOtherElements(){
+        return getOtherNonNullStringElements();
+      }
+    }
+;
+  }
+}
+ @TO@ MethodDeclaration@@public, BulkTest, MethodName:bulkTestPredicatedCollection1,  @AT@ 13333 @LENGTH@ 1201
+------INS ClassInstanceCreation@@TestPredicatedCollection[""] @TO@ ReturnStatement@@ClassInstanceCreation:new TestPredicatedCollection(""){
+  public Collection predicatedCollection(){
+    Predicate p=getPredicate();
+    return CollectionUtils.predicatedCollection(new ArrayList(),p);
+  }
+  public BulkTest bulkTestAll(){
+    return new TestCollection(""){
+      public Collection makeCollection(){
+        return predicatedCollection();
+      }
+      public Collection makeConfirmedCollection(){
+        return new ArrayList();
+      }
+      public Collection makeConfirmedFullCollection(){
+        ArrayList list=new ArrayList();
+        list.addAll(java.util.Arrays.asList(getFullElements()));
+        return list;
+      }
+      public Object[] getFullElements(){
+        return getFullNonNullStringElements();
+      }
+      public Object[] getOtherElements(){
+        return getOtherNonNullStringElements();
+      }
+    }
+;
+  }
+}
+ @AT@ 13340 @LENGTH@ 1193
+---------INS New@@new @TO@ ClassInstanceCreation@@TestPredicatedCollection[""] @AT@ 13340 @LENGTH@ 3
+---------INS SimpleType@@TestPredicatedCollection @TO@ ClassInstanceCreation@@TestPredicatedCollection[""] @AT@ 13344 @LENGTH@ 24
+---------INS StringLiteral@@"" @TO@ ClassInstanceCreation@@TestPredicatedCollection[""] @AT@ 13369 @LENGTH@ 2
+---------INS AnonymousClassDeclaration@@AnonymousClass @TO@ ClassInstanceCreation@@TestPredicatedCollection[""] @AT@ 13373 @LENGTH@ 1160
+------------INS MethodDeclaration@@public, Collection, MethodName:predicatedCollection,  @TO@ AnonymousClassDeclaration@@AnonymousClass @AT@ 13387 @LENGTH@ 183
+---------------INS Modifier@@public @TO@ MethodDeclaration@@public, Collection, MethodName:predicatedCollection,  @AT@ 13387 @LENGTH@ 6
+---------------INS SimpleType@@Collection @TO@ MethodDeclaration@@public, Collection, MethodName:predicatedCollection,  @AT@ 13394 @LENGTH@ 10
+---------------INS SimpleName@@MethodName:predicatedCollection @TO@ MethodDeclaration@@public, Collection, MethodName:predicatedCollection,  @AT@ 13405 @LENGTH@ 20
+---------------INS VariableDeclarationStatement@@Predicate p=getPredicate(); @TO@ MethodDeclaration@@public, Collection, MethodName:predicatedCollection,  @AT@ 13446 @LENGTH@ 29
+------------------INS SimpleType@@Predicate @TO@ VariableDeclarationStatement@@Predicate p=getPredicate(); @AT@ 13446 @LENGTH@ 9
+------------------INS VariableDeclarationFragment@@p=getPredicate() @TO@ VariableDeclarationStatement@@Predicate p=getPredicate(); @AT@ 13456 @LENGTH@ 18
+---------------------INS SimpleName@@p @TO@ VariableDeclarationFragment@@p=getPredicate() @AT@ 13456 @LENGTH@ 1
+---------------------INS MethodInvocation@@MethodName:getPredicate:[] @TO@ VariableDeclarationFragment@@p=getPredicate() @AT@ 13460 @LENGTH@ 14
+---------------INS ReturnStatement@@MethodInvocation:CollectionUtils.predicatedCollection(new ArrayList(),p) @TO@ MethodDeclaration@@public, Collection, MethodName:predicatedCollection,  @AT@ 13492 @LENGTH@ 64
+------------------INS MethodInvocation@@CollectionUtils.predicatedCollection(new ArrayList(),p) @TO@ ReturnStatement@@MethodInvocation:CollectionUtils.predicatedCollection(new ArrayList(),p) @AT@ 13499 @LENGTH@ 56
+---------------------INS SimpleName@@Name:CollectionUtils @TO@ MethodInvocation@@CollectionUtils.predicatedCollection(new ArrayList(),p) @AT@ 13499 @LENGTH@ 15
+---------------------INS SimpleName@@MethodName:predicatedCollection:[new ArrayList(), p] @TO@ MethodInvocation@@CollectionUtils.predicatedCollection(new ArrayList(),p) @AT@ 13515 @LENGTH@ 40
+------------------------INS ClassInstanceCreation@@ArrayList[] @TO@ SimpleName@@MethodName:predicatedCollection:[new ArrayList(), p] @AT@ 13536 @LENGTH@ 15
+---------------------------INS New@@new @TO@ ClassInstanceCreation@@ArrayList[] @AT@ 13536 @LENGTH@ 3
+---------------------------INS SimpleType@@ArrayList @TO@ ClassInstanceCreation@@ArrayList[] @AT@ 13540 @LENGTH@ 9
+------------------------INS SimpleName@@p @TO@ SimpleName@@MethodName:predicatedCollection:[new ArrayList(), p] @AT@ 13553 @LENGTH@ 1
+------------INS MethodDeclaration@@public, BulkTest, MethodName:bulkTestAll,  @TO@ AnonymousClassDeclaration@@AnonymousClass @AT@ 13584 @LENGTH@ 939
+---------------INS Modifier@@public @TO@ MethodDeclaration@@public, BulkTest, MethodName:bulkTestAll,  @AT@ 13584 @LENGTH@ 6
+---------------INS SimpleType@@BulkTest @TO@ MethodDeclaration@@public, BulkTest, MethodName:bulkTestAll,  @AT@ 13591 @LENGTH@ 8
+---------------INS SimpleName@@MethodName:bulkTestAll @TO@ MethodDeclaration@@public, BulkTest, MethodName:bulkTestAll,  @AT@ 13600 @LENGTH@ 11
+---------------INS ReturnStatement@@ClassInstanceCreation:new TestCollection(""){
+  public Collection makeCollection(){
+    return predicatedCollection();
+  }
+  public Collection makeConfirmedCollection(){
+    return new ArrayList();
+  }
+  public Collection makeConfirmedFullCollection(){
+    ArrayList list=new ArrayList();
+    list.addAll(java.util.Arrays.asList(getFullElements()));
+    return list;
+  }
+  public Object[] getFullElements(){
+    return getFullNonNullStringElements();
+  }
+  public Object[] getOtherElements(){
+    return getOtherNonNullStringElements();
+  }
+}
+ @TO@ MethodDeclaration@@public, BulkTest, MethodName:bulkTestAll,  @AT@ 13632 @LENGTH@ 877
+------------------INS ClassInstanceCreation@@TestCollection[""] @TO@ ReturnStatement@@ClassInstanceCreation:new TestCollection(""){
+  public Collection makeCollection(){
+    return predicatedCollection();
+  }
+  public Collection makeConfirmedCollection(){
+    return new ArrayList();
+  }
+  public Collection makeConfirmedFullCollection(){
+    ArrayList list=new ArrayList();
+    list.addAll(java.util.Arrays.asList(getFullElements()));
+    return list;
+  }
+  public Object[] getFullElements(){
+    return getFullNonNullStringElements();
+  }
+  public Object[] getOtherElements(){
+    return getOtherNonNullStringElements();
+  }
+}
+ @AT@ 13639 @LENGTH@ 869
+---------------------INS New@@new @TO@ ClassInstanceCreation@@TestCollection[""] @AT@ 13639 @LENGTH@ 3
+---------------------INS SimpleType@@TestCollection @TO@ ClassInstanceCreation@@TestCollection[""] @AT@ 13643 @LENGTH@ 14
+---------------------INS StringLiteral@@"" @TO@ ClassInstanceCreation@@TestCollection[""] @AT@ 13658 @LENGTH@ 2
+---------------------INS AnonymousClassDeclaration@@AnonymousClass @TO@ ClassInstanceCreation@@TestCollection[""] @AT@ 13662 @LENGTH@ 846
+------------------------INS MethodDeclaration@@public, Collection, MethodName:makeCollection,  @TO@ AnonymousClassDeclaration@@AnonymousClass @AT@ 13684 @LENGTH@ 113
+---------------------------INS Modifier@@public @TO@ MethodDeclaration@@public, Collection, MethodName:makeCollection,  @AT@ 13684 @LENGTH@ 6
+---------------------------INS SimpleType@@Collection @TO@ MethodDeclaration@@public, Collection, MethodName:makeCollection,  @AT@ 13691 @LENGTH@ 10
+---------------------------INS SimpleName@@MethodName:makeCollection @TO@ MethodDeclaration@@public, Collection, MethodName:makeCollection,  @AT@ 13702 @LENGTH@ 14
+---------------------------INS ReturnStatement@@MethodInvocation:predicatedCollection() @TO@ MethodDeclaration@@public, Collection, MethodName:makeCollection,  @AT@ 13745 @LENGTH@ 30
+------------------------------INS MethodInvocation@@MethodName:predicatedCollection:[] @TO@ ReturnStatement@@MethodInvocation:predicatedCollection() @AT@ 13752 @LENGTH@ 22
+------------------------INS MethodDeclaration@@public, Collection, MethodName:makeConfirmedCollection,  @TO@ AnonymousClassDeclaration@@AnonymousClass @AT@ 13819 @LENGTH@ 115
+---------------------------INS Modifier@@public @TO@ MethodDeclaration@@public, Collection, MethodName:makeConfirmedCollection,  @AT@ 13819 @LENGTH@ 6
+---------------------------INS SimpleType@@Collection @TO@ MethodDeclaration@@public, Collection, MethodName:makeConfirmedCollection,  @AT@ 13826 @LENGTH@ 10
+---------------------------INS SimpleName@@MethodName:makeConfirmedCollection @TO@ MethodDeclaration@@public, Collection, MethodName:makeConfirmedCollection,  @AT@ 13837 @LENGTH@ 23
+---------------------------INS ReturnStatement@@ClassInstanceCreation:new ArrayList() @TO@ MethodDeclaration@@public, Collection, MethodName:makeConfirmedCollection,  @AT@ 13889 @LENGTH@ 23
+------------------------------INS ClassInstanceCreation@@ArrayList[] @TO@ ReturnStatement@@ClassInstanceCreation:new ArrayList() @AT@ 13896 @LENGTH@ 15
+---------------------------------INS New@@new @TO@ ClassInstanceCreation@@ArrayList[] @AT@ 13896 @LENGTH@ 3
+---------------------------------INS SimpleType@@ArrayList @TO@ ClassInstanceCreation@@ArrayList[] @AT@ 13900 @LENGTH@ 9
+------------------------INS MethodDeclaration@@public, Collection, MethodName:makeConfirmedFullCollection,  @TO@ AnonymousClassDeclaration@@AnonymousClass @AT@ 13956 @LENGTH@ 247
+---------------------------INS Modifier@@public @TO@ MethodDeclaration@@public, Collection, MethodName:makeConfirmedFullCollection,  @AT@ 13956 @LENGTH@ 6
+---------------------------INS SimpleType@@Collection @TO@ MethodDeclaration@@public, Collection, MethodName:makeConfirmedFullCollection,  @AT@ 13963 @LENGTH@ 10
+---------------------------INS SimpleName@@MethodName:makeConfirmedFullCollection @TO@ MethodDeclaration@@public, Collection, MethodName:makeConfirmedFullCollection,  @AT@ 13974 @LENGTH@ 27
+---------------------------INS VariableDeclarationStatement@@ArrayList list=new ArrayList(); @TO@ MethodDeclaration@@public, Collection, MethodName:makeConfirmedFullCollection,  @AT@ 14030 @LENGTH@ 33
+------------------------------INS SimpleType@@ArrayList @TO@ VariableDeclarationStatement@@ArrayList list=new ArrayList(); @AT@ 14030 @LENGTH@ 9
+------------------------------INS VariableDeclarationFragment@@list=new ArrayList() @TO@ VariableDeclarationStatement@@ArrayList list=new ArrayList(); @AT@ 14040 @LENGTH@ 22
+---------------------------------INS SimpleName@@list @TO@ VariableDeclarationFragment@@list=new ArrayList() @AT@ 14040 @LENGTH@ 4
+---------------------------------INS ClassInstanceCreation@@ArrayList[] @TO@ VariableDeclarationFragment@@list=new ArrayList() @AT@ 14047 @LENGTH@ 15
+------------------------------------INS New@@new @TO@ ClassInstanceCreation@@ArrayList[] @AT@ 14047 @LENGTH@ 3
+------------------------------------INS SimpleType@@ArrayList @TO@ ClassInstanceCreation@@ArrayList[] @AT@ 14051 @LENGTH@ 9
+---------------------------INS ExpressionStatement@@MethodInvocation:list.addAll(java.util.Arrays.asList(getFullElements())) @TO@ MethodDeclaration@@public, Collection, MethodName:makeConfirmedFullCollection,  @AT@ 14088 @LENGTH@ 56
+------------------------------INS MethodInvocation@@list.addAll(java.util.Arrays.asList(getFullElements())) @TO@ ExpressionStatement@@MethodInvocation:list.addAll(java.util.Arrays.asList(getFullElements())) @AT@ 14088 @LENGTH@ 55
+---------------------------------INS SimpleName@@Name:list @TO@ MethodInvocation@@list.addAll(java.util.Arrays.asList(getFullElements())) @AT@ 14088 @LENGTH@ 4
+---------------------------------INS SimpleName@@MethodName:addAll:[java.util.Arrays.asList(getFullElements())] @TO@ MethodInvocation@@list.addAll(java.util.Arrays.asList(getFullElements())) @AT@ 14093 @LENGTH@ 50
+------------------------------------INS MethodInvocation@@java.util.Arrays.asList(getFullElements()) @TO@ SimpleName@@MethodName:addAll:[java.util.Arrays.asList(getFullElements())] @AT@ 14100 @LENGTH@ 42
+---------------------------------------INS QualifiedName@@Name:java.util.Arrays @TO@ MethodInvocation@@java.util.Arrays.asList(getFullElements()) @AT@ 14100 @LENGTH@ 16
+---------------------------------------INS SimpleName@@MethodName:asList:[getFullElements()] @TO@ MethodInvocation@@java.util.Arrays.asList(getFullElements()) @AT@ 14117 @LENGTH@ 25
+------------------------------------------INS MethodInvocation@@MethodName:getFullElements:[] @TO@ SimpleName@@MethodName:asList:[getFullElements()] @AT@ 14124 @LENGTH@ 17
+---------------------------INS ReturnStatement@@SimpleName:list @TO@ MethodDeclaration@@public, Collection, MethodName:makeConfirmedFullCollection,  @AT@ 14169 @LENGTH@ 12
+------------------------------INS SimpleName@@list @TO@ ReturnStatement@@SimpleName:list @AT@ 14176 @LENGTH@ 4
+------------------------INS MethodDeclaration@@public, Object[], MethodName:getFullElements,  @TO@ AnonymousClassDeclaration@@AnonymousClass @AT@ 14225 @LENGTH@ 120
+---------------------------INS Modifier@@public @TO@ MethodDeclaration@@public, Object[], MethodName:getFullElements,  @AT@ 14225 @LENGTH@ 6
+---------------------------INS ArrayType@@Object[] @TO@ MethodDeclaration@@public, Object[], MethodName:getFullElements,  @AT@ 14232 @LENGTH@ 8
+------------------------------INS SimpleType@@Object @TO@ ArrayType@@Object[] @AT@ 14232 @LENGTH@ 6
+---------------------------INS SimpleName@@MethodName:getFullElements @TO@ MethodDeclaration@@public, Object[], MethodName:getFullElements,  @AT@ 14241 @LENGTH@ 15
+---------------------------INS ReturnStatement@@MethodInvocation:getFullNonNullStringElements() @TO@ MethodDeclaration@@public, Object[], MethodName:getFullElements,  @AT@ 14285 @LENGTH@ 38
+------------------------------INS MethodInvocation@@MethodName:getFullNonNullStringElements:[] @TO@ ReturnStatement@@MethodInvocation:getFullNonNullStringElements() @AT@ 14292 @LENGTH@ 30
+------------------------INS MethodDeclaration@@public, Object[], MethodName:getOtherElements,  @TO@ AnonymousClassDeclaration@@AnonymousClass @AT@ 14367 @LENGTH@ 122
+---------------------------INS Modifier@@public @TO@ MethodDeclaration@@public, Object[], MethodName:getOtherElements,  @AT@ 14367 @LENGTH@ 6
+---------------------------INS ArrayType@@Object[] @TO@ MethodDeclaration@@public, Object[], MethodName:getOtherElements,  @AT@ 14374 @LENGTH@ 8
+------------------------------INS SimpleType@@Object @TO@ ArrayType@@Object[] @AT@ 14374 @LENGTH@ 6
+---------------------------INS SimpleName@@MethodName:getOtherElements @TO@ MethodDeclaration@@public, Object[], MethodName:getOtherElements,  @AT@ 14383 @LENGTH@ 16
+---------------------------INS ReturnStatement@@MethodInvocation:getOtherNonNullStringElements() @TO@ MethodDeclaration@@public, Object[], MethodName:getOtherElements,  @AT@ 14428 @LENGTH@ 39
+------------------------------INS MethodInvocation@@MethodName:getOtherNonNullStringElements:[] @TO@ ReturnStatement@@MethodInvocation:getOtherNonNullStringElements() @AT@ 14435 @LENGTH@ 31
+
+
+UPD MethodDeclaration@@public, void, MethodName:tearDown,  @TO@ public, void, MethodName:tearDown, Exception,  @AT@ 5798 @LENGTH@ 312
+---INS SimpleType@@Exception @TO@ MethodDeclaration@@public, void, MethodName:tearDown,  @AT@ 5826 @LENGTH@ 9
+
+
+UPD IfStatement@@if (getFullElements().length < 10) return null; @TO@ if (getFullElements().length - 6 < 10) return null; @AT@ 30221 @LENGTH@ 47
+---UPD InfixExpression@@getFullElements().length < 10 @TO@ getFullElements().length - 6 < 10 @AT@ 30225 @LENGTH@ 29
+------INS InfixExpression@@getFullElements().length - 6 @TO@ InfixExpression@@getFullElements().length < 10 @AT@ 30229 @LENGTH@ 28
+---------MOV FieldAccess@@getFullElements().length @TO@ InfixExpression@@getFullElements().length - 6 @AT@ 30225 @LENGTH@ 24
+---------INS Operator@@- @TO@ InfixExpression@@getFullElements().length - 6 @AT@ 30253 @LENGTH@ 1
+---------INS NumberLiteral@@6 @TO@ InfixExpression@@getFullElements().length - 6 @AT@ 30256 @LENGTH@ 1
+
+
+UPD IfStatement@@if (currentIterator == null) {  currentIterator=(Iterator)iteratorChain.get(0);  lastUsedIterator=currentIterator;  return;} @TO@ if (currentIterator == null) {  currentIterator=(Iterator)iteratorChain.get(0);  lastUsedIterator=currentIterator;} @AT@ 9758 @LENGTH@ 321
+---UPD Block@@ThenBody:{  currentIterator=(Iterator)iteratorChain.get(0);  lastUsedIterator=currentIterator;  return;} @TO@ ThenBody:{  currentIterator=(Iterator)iteratorChain.get(0);  lastUsedIterator=currentIterator;} @AT@ 9787 @LENGTH@ 292
+------DEL ReturnStatement@@ @AT@ 10062 @LENGTH@ 7
+
+
+UPD ReturnStatement@@ClassInstanceCreation:new TestSuite(TestBeanMap.class) @TO@ MethodInvocation:BulkTest.makeSuite(TestBeanMap.class) @AT@ 3262 @LENGTH@ 40
+---INS MethodInvocation@@BulkTest.makeSuite(TestBeanMap.class) @TO@ ReturnStatement@@ClassInstanceCreation:new TestSuite(TestBeanMap.class) @AT@ 3269 @LENGTH@ 37
+------INS SimpleName@@Name:BulkTest @TO@ MethodInvocation@@BulkTest.makeSuite(TestBeanMap.class) @AT@ 3269 @LENGTH@ 8
+------INS SimpleName@@MethodName:makeSuite:[TestBeanMap.class] @TO@ MethodInvocation@@BulkTest.makeSuite(TestBeanMap.class) @AT@ 3278 @LENGTH@ 28
+---------INS TypeLiteral@@TestBeanMap.class @TO@ SimpleName@@MethodName:makeSuite:[TestBeanMap.class] @AT@ 3288 @LENGTH@ 17
+---DEL ClassInstanceCreation@@TestSuite[TestBeanMap.class] @AT@ 3269 @LENGTH@ 32
+------DEL New@@new @AT@ 3269 @LENGTH@ 3
+------DEL SimpleType@@TestSuite @AT@ 3273 @LENGTH@ 9
+------DEL TypeLiteral@@TestBeanMap.class @AT@ 3283 @LENGTH@ 17
+
+
+UPD TypeDeclaration@@[public]TestSequencedHashMap, TestMap[TestMap.SupportsPut, TestMap.EntrySetSupportsRemove] @TO@ [public]TestSequencedHashMap, TestMap[TestMap.SupportsPut] @AT@ 3406 @LENGTH@ 5343
+---DEL SimpleType@@TestMap.EntrySetSupportsRemove @AT@ 3489 @LENGTH@ 30
+
+
+DEL MethodDeclaration@@public, void, MethodName:testValuesRemovedFromValuesCollectionAreRemovedFromMap,  @AT@ 8900 @LENGTH@ 195
+---DEL Modifier@@public @AT@ 8900 @LENGTH@ 6
+---DEL PrimitiveType@@void @AT@ 8907 @LENGTH@ 4
+---DEL SimpleName@@MethodName:testValuesRemovedFromValuesCollectionAreRemovedFromMap @AT@ 8912 @LENGTH@ 54
+
+
+INS TryStatement@@try {  if (2 != args.length) {    System.out.println("java Bzip2Uncompress <input> <output>");    System.exit(1);  }  final File source=new File(args[0]);  final File destination=new File(args[1]);  final FileOutputStream output=new FileOutputStream(destination);  final CBZip2InputStream input=new CBZip2InputStream(new FileInputStream(source));  copy(input,output);  input.close();  output.close();} catch (Exception e) {  e.printStackTrace();  System.exit(1);} @TO@ MethodDeclaration@@public, static, void, MethodName:main, final String[] args,  @AT@ 856 @LENGTH@ 639
+---MOV IfStatement@@if (2 != args.length) {  System.out.println("java Bzip2Uncompress <input> <output>");  System.exit(1);} @TO@ TryStatement@@try {  if (2 != args.length) {    System.out.println("java Bzip2Uncompress <input> <output>");    System.exit(1);  }  final File source=new File(args[0]);  final File destination=new File(args[1]);  final FileOutputStream output=new FileOutputStream(destination);  final CBZip2InputStream input=new CBZip2InputStream(new FileInputStream(source));  copy(input,output);  input.close();  output.close();} catch (Exception e) {  e.printStackTrace();  System.exit(1);} @AT@ 839 @LENGTH@ 147
+---MOV VariableDeclarationStatement@@final File source=new File(args[0]); @TO@ TryStatement@@try {  if (2 != args.length) {    System.out.println("java Bzip2Uncompress <input> <output>");    System.exit(1);  }  final File source=new File(args[0]);  final File destination=new File(args[1]);  final FileOutputStream output=new FileOutputStream(destination);  final CBZip2InputStream input=new CBZip2InputStream(new FileInputStream(source));  copy(input,output);  input.close();  output.close();} catch (Exception e) {  e.printStackTrace();  System.exit(1);} @AT@ 995 @LENGTH@ 42
+---MOV VariableDeclarationStatement@@final File destination=new File(args[1]); @TO@ TryStatement@@try {  if (2 != args.length) {    System.out.println("java Bzip2Uncompress <input> <output>");    System.exit(1);  }  final File source=new File(args[0]);  final File destination=new File(args[1]);  final FileOutputStream output=new FileOutputStream(destination);  final CBZip2InputStream input=new CBZip2InputStream(new FileInputStream(source));  copy(input,output);  input.close();  output.close();} catch (Exception e) {  e.printStackTrace();  System.exit(1);} @AT@ 1046 @LENGTH@ 47
+---MOV VariableDeclarationStatement@@final FileOutputStream output=new FileOutputStream(destination); @TO@ TryStatement@@try {  if (2 != args.length) {    System.out.println("java Bzip2Uncompress <input> <output>");    System.exit(1);  }  final File source=new File(args[0]);  final File destination=new File(args[1]);  final FileOutputStream output=new FileOutputStream(destination);  final CBZip2InputStream input=new CBZip2InputStream(new FileInputStream(source));  copy(input,output);  input.close();  output.close();} catch (Exception e) {  e.printStackTrace();  System.exit(1);} @AT@ 1102 @LENGTH@ 80
+---MOV VariableDeclarationStatement@@final CBZip2InputStream input=new CBZip2InputStream(new FileInputStream(source)); @TO@ TryStatement@@try {  if (2 != args.length) {    System.out.println("java Bzip2Uncompress <input> <output>");    System.exit(1);  }  final File source=new File(args[0]);  final File destination=new File(args[1]);  final FileOutputStream output=new FileOutputStream(destination);  final CBZip2InputStream input=new CBZip2InputStream(new FileInputStream(source));  copy(input,output);  input.close();  output.close();} catch (Exception e) {  e.printStackTrace();  System.exit(1);} @AT@ 1191 @LENGTH@ 87
+---MOV ExpressionStatement@@MethodInvocation:copy(input,output) @TO@ TryStatement@@try {  if (2 != args.length) {    System.out.println("java Bzip2Uncompress <input> <output>");    System.exit(1);  }  final File source=new File(args[0]);  final File destination=new File(args[1]);  final FileOutputStream output=new FileOutputStream(destination);  final CBZip2InputStream input=new CBZip2InputStream(new FileInputStream(source));  copy(input,output);  input.close();  output.close();} catch (Exception e) {  e.printStackTrace();  System.exit(1);} @AT@ 1287 @LENGTH@ 22
+---MOV ExpressionStatement@@MethodInvocation:input.close() @TO@ TryStatement@@try {  if (2 != args.length) {    System.out.println("java Bzip2Uncompress <input> <output>");    System.exit(1);  }  final File source=new File(args[0]);  final File destination=new File(args[1]);  final FileOutputStream output=new FileOutputStream(destination);  final CBZip2InputStream input=new CBZip2InputStream(new FileInputStream(source));  copy(input,output);  input.close();  output.close();} catch (Exception e) {  e.printStackTrace();  System.exit(1);} @AT@ 1318 @LENGTH@ 14
+---MOV ExpressionStatement@@MethodInvocation:output.close() @TO@ TryStatement@@try {  if (2 != args.length) {    System.out.println("java Bzip2Uncompress <input> <output>");    System.exit(1);  }  final File source=new File(args[0]);  final File destination=new File(args[1]);  final FileOutputStream output=new FileOutputStream(destination);  final CBZip2InputStream input=new CBZip2InputStream(new FileInputStream(source));  copy(input,output);  input.close();  output.close();} catch (Exception e) {  e.printStackTrace();  System.exit(1);} @AT@ 1341 @LENGTH@ 15
+---INS CatchClause@@catch (Exception e) {  e.printStackTrace();  System.exit(1);} @TO@ TryStatement@@try {  if (2 != args.length) {    System.out.println("java Bzip2Uncompress <input> <output>");    System.exit(1);  }  final File source=new File(args[0]);  final File destination=new File(args[1]);  final FileOutputStream output=new FileOutputStream(destination);  final CBZip2InputStream input=new CBZip2InputStream(new FileInputStream(source));  copy(input,output);  input.close();  output.close();} catch (Exception e) {  e.printStackTrace();  System.exit(1);} @AT@ 1401 @LENGTH@ 94
+------INS SingleVariableDeclaration@@Exception e @TO@ CatchClause@@catch (Exception e) {  e.printStackTrace();  System.exit(1);} @AT@ 1407 @LENGTH@ 11
+---------INS SimpleType@@Exception @TO@ SingleVariableDeclaration@@Exception e @AT@ 1407 @LENGTH@ 9
+---------INS SimpleName@@e @TO@ SingleVariableDeclaration@@Exception e @AT@ 1417 @LENGTH@ 1
+------INS ExpressionStatement@@MethodInvocation:e.printStackTrace() @TO@ CatchClause@@catch (Exception e) {  e.printStackTrace();  System.exit(1);} @AT@ 1429 @LENGTH@ 20
+---------INS MethodInvocation@@e.printStackTrace() @TO@ ExpressionStatement@@MethodInvocation:e.printStackTrace() @AT@ 1429 @LENGTH@ 19
+------------INS SimpleName@@Name:e @TO@ MethodInvocation@@e.printStackTrace() @AT@ 1429 @LENGTH@ 1
+------------INS SimpleName@@MethodName:printStackTrace:[] @TO@ MethodInvocation@@e.printStackTrace() @AT@ 1431 @LENGTH@ 17
+------INS ExpressionStatement@@MethodInvocation:System.exit(1) @TO@ CatchClause@@catch (Exception e) {  e.printStackTrace();  System.exit(1);} @AT@ 1458 @LENGTH@ 15
+---------INS MethodInvocation@@System.exit(1) @TO@ ExpressionStatement@@MethodInvocation:System.exit(1) @AT@ 1458 @LENGTH@ 14
+------------INS SimpleName@@Name:System @TO@ MethodInvocation@@System.exit(1) @AT@ 1458 @LENGTH@ 6
+------------INS SimpleName@@MethodName:exit:[1] @TO@ MethodInvocation@@System.exit(1) @AT@ 1465 @LENGTH@ 7
+---------------INS NumberLiteral@@1 @TO@ SimpleName@@MethodName:exit:[1] @AT@ 1470 @LENGTH@ 1
+
+
+UPD ReturnStatement@@ClassInstanceCreation:new TestSuite(TestLRUMap.class) @TO@ MethodInvocation:BulkTest.makeSuite(TestLRUMap.class) @AT@ 3558 @LENGTH@ 39
+---INS MethodInvocation@@BulkTest.makeSuite(TestLRUMap.class) @TO@ ReturnStatement@@ClassInstanceCreation:new TestSuite(TestLRUMap.class) @AT@ 3565 @LENGTH@ 36
+------INS SimpleName@@Name:BulkTest @TO@ MethodInvocation@@BulkTest.makeSuite(TestLRUMap.class) @AT@ 3565 @LENGTH@ 8
+------INS SimpleName@@MethodName:makeSuite:[TestLRUMap.class] @TO@ MethodInvocation@@BulkTest.makeSuite(TestLRUMap.class) @AT@ 3574 @LENGTH@ 27
+---------INS TypeLiteral@@TestLRUMap.class @TO@ SimpleName@@MethodName:makeSuite:[TestLRUMap.class] @AT@ 3584 @LENGTH@ 16
+---DEL ClassInstanceCreation@@TestSuite[TestLRUMap.class] @AT@ 3565 @LENGTH@ 31
+------DEL New@@new @AT@ 3565 @LENGTH@ 3
+------DEL SimpleType@@TestSuite @AT@ 3569 @LENGTH@ 9
+------DEL TypeLiteral@@TestLRUMap.class @AT@ 3579 @LENGTH@ 16
+
+
+UPD ReturnStatement@@ClassInstanceCreation:new TestSuite(TestFastTreeMap.class) @TO@ MethodInvocation:BulkTest.makeSuite(TestFastTreeMap.class) @AT@ 3429 @LENGTH@ 44
+---INS MethodInvocation@@BulkTest.makeSuite(TestFastTreeMap.class) @TO@ ReturnStatement@@ClassInstanceCreation:new TestSuite(TestFastTreeMap.class) @AT@ 3428 @LENGTH@ 41
+------INS SimpleName@@Name:BulkTest @TO@ MethodInvocation@@BulkTest.makeSuite(TestFastTreeMap.class) @AT@ 3428 @LENGTH@ 8
+------INS SimpleName@@MethodName:makeSuite:[TestFastTreeMap.class] @TO@ MethodInvocation@@BulkTest.makeSuite(TestFastTreeMap.class) @AT@ 3437 @LENGTH@ 32
+---------INS TypeLiteral@@TestFastTreeMap.class @TO@ SimpleName@@MethodName:makeSuite:[TestFastTreeMap.class] @AT@ 3447 @LENGTH@ 21
+---DEL ClassInstanceCreation@@TestSuite[TestFastTreeMap.class] @AT@ 3436 @LENGTH@ 36
+------DEL New@@new @AT@ 3436 @LENGTH@ 3
+------DEL SimpleType@@TestSuite @AT@ 3440 @LENGTH@ 9
+------DEL TypeLiteral@@TestFastTreeMap.class @AT@ 3450 @LENGTH@ 21
+
+
+UPD MethodDeclaration@@protected, void, MethodName:tearDown,  @TO@ protected, void, MethodName:tearDown, Exception,  @AT@ 40031 @LENGTH@ 150
+---INS SimpleType@@Exception @TO@ MethodDeclaration@@protected, void, MethodName:tearDown,  @AT@ 40046 @LENGTH@ 9
+
+
+UPD ReturnStatement@@ClassInstanceCreation:new TestSuite(TestFastTreeMap1.class) @TO@ MethodInvocation:BulkTest.makeSuite(TestFastTreeMap1.class) @AT@ 3483 @LENGTH@ 45
+---INS MethodInvocation@@BulkTest.makeSuite(TestFastTreeMap1.class) @TO@ ReturnStatement@@ClassInstanceCreation:new TestSuite(TestFastTreeMap1.class) @AT@ 3490 @LENGTH@ 42
+------INS SimpleName@@Name:BulkTest @TO@ MethodInvocation@@BulkTest.makeSuite(TestFastTreeMap1.class) @AT@ 3490 @LENGTH@ 8
+------INS SimpleName@@MethodName:makeSuite:[TestFastTreeMap1.class] @TO@ MethodInvocation@@BulkTest.makeSuite(TestFastTreeMap1.class) @AT@ 3499 @LENGTH@ 33
+---------INS TypeLiteral@@TestFastTreeMap1.class @TO@ SimpleName@@MethodName:makeSuite:[TestFastTreeMap1.class] @AT@ 3509 @LENGTH@ 22
+---DEL ClassInstanceCreation@@TestSuite[TestFastTreeMap1.class] @AT@ 3490 @LENGTH@ 37
+------DEL New@@new @AT@ 3490 @LENGTH@ 3
+------DEL SimpleType@@TestSuite @AT@ 3494 @LENGTH@ 9
+------DEL TypeLiteral@@TestFastTreeMap1.class @AT@ 3504 @LENGTH@ 22

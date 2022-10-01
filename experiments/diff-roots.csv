@@ -1,0 +1,43 @@
+,Time,Number of Patches,Numbers of added,Numbers of removed,Patches Added,Patches Removed,New Pattern
+0,2001-12-01,1,1,0,[' UPD IfStatement \n'],[],True
+1,2002-06-01,4,3,0,"[' DEL MethodDeclaration \n', ' UPD ExpressionStatement \n', ' UPD MethodDeclaration \n']",[],True
+2,2002-12-01,8,4,0,"[' INS ExpressionStatement TO MethodDeclaration \n', ' INS MethodDeclaration TO TypeDeclaration \n', ' UPD ReturnStatement \n', ' UPD TypeDeclaration \n']",[],True
+3,2003-06-01,10,2,0,"[' DEL ExpressionStatement \n', ' UPD ForStatement \n']",[],True
+4,2003-12-01,11,1,0,[' UPD ThrowStatement \n'],[],True
+5,2004-06-01,12,1,0,[' UPD VariableDeclarationStatement \n'],[],True
+6,2004-12-01,14,2,0,"[' INS FieldDeclaration TO TypeDeclaration \n', ' UPD FieldDeclaration \n']",[],True
+7,2005-06-01,14,0,0,[],[],False
+8,2005-12-01,14,0,0,[],[],False
+9,2006-06-01,15,1,0,[' INS IfStatement TO MethodDeclaration \n'],[],True
+10,2006-12-01,15,1,1,[' INS TryStatement TO MethodDeclaration \n'],[' INS IfStatement TO MethodDeclaration \n'],True
+11,2007-06-01,17,2,0,"[' INS IfStatement TO MethodDeclaration \n', ' INS VariableDeclarationStatement TO MethodDeclaration \n']",[],True
+12,2007-12-01,20,3,0,"[' DEL ThrowStatement \n', ' DEL VariableDeclarationStatement \n', ' UPD EnhancedForStatement \n']",[],True
+13,2008-06-01,23,3,0,"[' DEL EnhancedForStatement \n', ' INS ExpressionStatement TO Initializer \n', ' UPD TryStatement \n']",[],True
+14,2008-12-01,23,0,0,[],[],False
+15,2009-06-01,26,3,0,"[' DEL FieldDeclaration \n', ' DEL IfStatement \n', ' UPD WhileStatement \n']",[],True
+16,2009-12-01,27,1,0,[' UPD CatchClause \n'],[],True
+17,2010-06-01,27,0,0,[],[],False
+18,2010-12-01,32,5,0,"[' DEL TryStatement \n', ' INS EnhancedForStatement TO MethodDeclaration \n', ' INS MethodDeclaration TO AnonymousClassDeclaration \n', ' UPD Block \n', ' UPD SwitchStatement \n']",[],True
+19,2011-06-01,38,6,0,"[' DEL ForStatement \n', ' DEL TypeDeclaration \n', ' INS FieldDeclaration TO EnumDeclaration \n', ' INS ReturnStatement TO MethodDeclaration \n', ' MOV MethodDeclaration TO TypeDeclaration \n', ' UPD SuperConstructorInvocation \n']",[],True
+20,2011-12-01,41,3,0,"[' INS ForStatement TO MethodDeclaration \n', ' INS MethodDeclaration TO EnumDeclaration \n', ' INS SuperConstructorInvocation TO MethodDeclaration \n']",[],True
+21,2012-06-01,42,1,0,[' UPD AssertStatement \n'],[],True
+22,2012-12-01,43,1,0,[' INS IfStatement TO Initializer \n'],[],True
+23,2013-06-01,43,0,0,[],[],False
+24,2013-12-01,44,1,0,[' INS SynchronizedStatement TO MethodDeclaration \n'],[],True
+25,2014-06-01,45,1,0,[' DEL WhileStatement \n'],[],True
+26,2014-12-01,46,1,0,[' UPD SwitchCase \n'],[],True
+27,2015-06-01,46,0,0,[],[],False
+28,2015-12-01,47,1,0,[' DEL ReturnStatement \n'],[],True
+29,2016-06-01,48,1,0,[' UPD EnumDeclaration \n'],[],True
+30,2016-12-01,48,0,0,[],[],False
+31,2017-06-01,49,1,0,[' INS TypeDeclaration TO TypeDeclaration \n'],[],True
+32,2017-12-01,50,1,0,[' UPD ConstructorInvocation \n'],[],True
+33,2018-06-01,50,0,0,[],[],False
+34,2018-12-01,51,1,0,[' UPD LambdaExpression \n'],[],True
+35,2019-06-01,51,0,0,[],[],False
+36,2019-12-01,51,0,0,[],[],False
+37,2020-06-01,51,0,0,[],[],False
+38,2020-12-01,51,0,0,[],[],False
+39,2021-06-01,51,0,0,[],[],False
+40,2021-12-01,51,0,0,[],[],False
+41,2022-06-01,51,0,0,[],[],False
